@@ -67,6 +67,7 @@ jobs:
           path: |
             out/**/video.mp4
             out/**/*.json
+            out/*.txt
             out/**/*.srt
             out/**/thumbnail_*.png
           retention-days: 14
