@@ -12,8 +12,15 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    "expected_goals", "passes_pct", "corner_kicks".
                                                    Only keys that exist for both teams in the pack.
 - {"type": "key_number", "value": str, "label": str}  -> one big number taken from the pack
+- {"type": "halftime_fulltime"}                 -> half-time score, then full-time score
+- {"type": "table_snapshot"}                    -> both teams' league position, points, W-D-L, goals
+                                                   (only if the pack has home_position / away_position)
+- {"type": "form_compare"}                      -> both teams' record in their previous 5 matches
+                                                   (only if the pack has *_last5_* facts)
 - {"type": "events_timeline"}                   -> goals and red cards on a 90-minute line
+                                                   (only if the pack has event_ facts)
 - {"type": "formations"}                        -> both formations on a pitch
+                                                   (only if the pack has *_formation facts)
 - {"type": "text_card", "heading": str, "lines": [str, ...]}  -> max 3 short lines
 - {"type": "lesson_list", "items": [str, str, str]}
 """
@@ -39,7 +46,7 @@ Return ONLY JSON with this shape:
 {{
   "title_options": [str, str, str],          // under 70 characters, accurate, curiosity without lying
   "thumbnail_texts": [str, str, str],        // 2-4 words each
-  "description": str,                        // 2 short paragraphs + "Data: API-Football." line
+  "description": str,                        // 2 short paragraphs + a "Data: <source>." line
   "tags": [str, ...],
   "scenes": [{{"id": int, "beat": str, "visual": {{...}}, "on_screen": str, "narration": str,
               "fact_ids": [str, ...]}}]

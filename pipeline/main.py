@@ -36,6 +36,9 @@ def run(dry_run: bool, upload: bool) -> int:
     cfg = load_config()
     if dry_run:
         pack = read_json(SAMPLES_DIR / "sample_pack.json")  # fictional match, same shape as a real pack
+    elif cfg.get("data_source", "football-data") == "football-data":
+        from .fdorg import scout
+        pack = scout(cfg)
     else:
         from .scout import scout
         pack = scout(cfg)

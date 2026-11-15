@@ -30,9 +30,9 @@ def _fig(w=W, h=H):
     return fig, ax
 
 
-def _footer(ax, cfg):
+def _footer(ax, cfg, pack):
     ax.text(3, 4, cfg["channel"]["name"].upper(), color=MUTED, fontsize=13, fontweight="bold")
-    ax.text(97, 4, "Data: API-Football", color=MUTED, fontsize=12, ha="right")
+    ax.text(97, 4, f"Data: {pack.get('source', 'API-Football')}", color=MUTED, fontsize=12, ha="right")
 
 
 def _save(fig, path: Path):
@@ -175,7 +175,52 @@ def lesson_list(ax, vis, pack, cfg):
         ax.text(15, y, _wrap(item, 55), color=TEXT, fontsize=30, va="center")
 
 
+def halftime_fulltime(ax, vis, pack, cfg):
+    f = _facts(pack)
+    ax.text(28, 88, pack["home"], color=HOME, fontsize=30, fontweight="bold", ha="center")
+    ax.text(72, 88, pack["away"], color=AWAY, fontsize=30, fontweight="bold", ha="center")
+    for y, label, h, a in ((62, "HALF TIME", f.get("ht_home"), f.get("ht_away")),
+                           (32, "FULL TIME", f.get("score_home"), f.get("score_away"))):
+        ax.text(50, y + 13, label, color=MUTED, fontsize=20, ha="center")
+        ax.text(50, y, f"{h} – {a}", color=ACCENT if label == "FULL TIME" else TEXT,
+                fontsize=72, fontweight="bold", ha="center", va="center")
+
+
+def _table_grid(ax, title, cols, rows, pack):
+    ax.text(50, 86, title, color=TEXT, fontsize=32, fontweight="bold", ha="center")
+    xs = [12] + [38 + i * (54 / max(1, len(cols) - 1)) for i in range(len(cols))]
+    for x, c in zip(xs[1:], cols):
+        ax.text(x, 70, c, color=MUTED, fontsize=20, ha="center")
+    for r, (name, color, values) in enumerate(rows):
+        y = 55 - r * 18
+        ax.add_patch(plt.Rectangle((6, y - 6), 88, 12, color=PANEL, zorder=0))
+        ax.text(xs[0] - 4, y, name, color=color, fontsize=26, fontweight="bold", va="center")
+        for x, v in zip(xs[1:], values):
+            ax.text(x, y, "–" if v is None else str(v), color=TEXT, fontsize=28,
+                    fontweight="bold", ha="center", va="center")
+
+
+def table_snapshot(ax, vis, pack, cfg):
+    f = _facts(pack)
+    keys = [("Pos", "position"), ("Pts", "points"), ("P", "played_games"), ("W", "won"),
+            ("D", "draw"), ("L", "lost"), ("GF", "goals_for"), ("GA", "goals_against")]
+    rows = [(pack[s], c, [f.get(f"{s}_{k}") for _, k in keys])
+            for s, c in (("home", HOME), ("away", AWAY))]
+    _table_grid(ax, "The league table", [k for k, _ in keys], rows, pack)
+
+
+def form_compare(ax, vis, pack, cfg):
+    f = _facts(pack)
+    keys = [("W", "wins"), ("D", "draws"), ("L", "losses"), ("Scored", "goals_for"),
+            ("Conceded", "goals_against")]
+    rows = [(pack[s], c, [f.get(f"{s}_last5_{k}") for _, k in keys])
+            for s, c in (("home", HOME), ("away", AWAY))]
+    _table_grid(ax, "Form: the 5 matches before this one", [k for k, _ in keys], rows, pack)
+
+
 RENDERERS = {
+    "halftime_fulltime": halftime_fulltime, "table_snapshot": table_snapshot,
+    "form_compare": form_compare,
     "title_card": title_card, "scoreline": scoreline, "stat_bars": stat_bars,
     "key_number": key_number, "events_timeline": events_timeline, "formations": formations,
     "text_card": text_card, "lesson_list": lesson_list,
@@ -194,7 +239,7 @@ def render_scene(scene: dict, pack: dict, cfg: dict, path: Path) -> None:
     if scene.get("on_screen") and kind not in ("title_card", "text_card", "key_number"):
         ax.text(50, 10, _wrap(scene["on_screen"], 90), color=TEXT, fontsize=20, ha="center",
                 bbox=dict(boxstyle="round,pad=0.5", fc=PANEL, ec="none"))
-    _footer(ax, cfg)
+    _footer(ax, cfg, pack)
     _save(fig, path)
 
 

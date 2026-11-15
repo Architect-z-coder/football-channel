@@ -5,17 +5,24 @@ channel:
   tagline: "Modern football, explained."
   language: en
 
-# Competitions the Scout watches. IDs are API-Football league IDs.
-# Season = the year the season started (2026 for 2026/27).
-competitions:
-  - { id: 39,  name: "Premier League",   season: 2026, weight: 1.0 }
-  - { id: 2,   name: "Champions League", season: 2026, weight: 1.0 }
-  - { id: 140, name: "La Liga",          season: 2026, weight: 0.8 }
-  - { id: 135, name: "Serie A",          season: 2026, weight: 0.7 }
-  - { id: 78,  name: "Bundesliga",       season: 2026, weight: 0.7 }
-  - { id: 61,  name: "Ligue 1",          season: 2026, weight: 0.7 }
+# Where match data comes from:
+#   football-data   = football-data.org free tier (current season; scores, tables, form)
+#   api-football    = API-Football (needs the paid Pro plan for the current season; adds
+#                     possession, shots, lineups, goal events)
+data_source: football-data
 
-# National teams always considered when they play (searched by name).
+# Competitions the Scout watches.
+#   code = football-data.org code; id/season = API-Football league ID and season start year.
+competitions:
+  - { code: PL,  id: 39,  name: "Premier League",   season: 2026, weight: 1.0 }
+  - { code: CL,  id: 2,   name: "Champions League", season: 2026, weight: 1.0, has_table: true }
+  - { code: PD,  id: 140, name: "La Liga",          season: 2026, weight: 0.8 }
+  - { code: SA,  id: 135, name: "Serie A",          season: 2026, weight: 0.7 }
+  - { code: BL1, id: 78,  name: "Bundesliga",       season: 2026, weight: 0.7 }
+  - { code: FL1, id: 61,  name: "Ligue 1",          season: 2026, weight: 0.7 }
+
+# National teams always considered when they play (API-Football only; national-team
+# friendlies and qualifiers are not in football-data.org's free tier).
 priority_teams:
   - { name: "Algeria", bonus: 1.5 }
 

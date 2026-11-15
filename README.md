@@ -30,7 +30,8 @@ charge, which protects monetisation.
 | `ANTHROPIC_API_KEY` | console.anthropic.com → API keys |
 | `ELEVENLABS_API_KEY` | elevenlabs.io → Profile → API key (Creator plan for ~100 min/month) |
 | `ELEVENLABS_VOICE_ID` | Record 2–3 minutes of your voice → Voices → Instant clone → copy the voice ID |
-| `API_FOOTBALL_KEY` | dashboard.api-football.com (free plan: 100 requests/day) |
+| `FOOTBALL_DATA_KEY` | football-data.org/client/register (free; the key arrives by email) |
+| `API_FOOTBALL_KEY` | Optional. dashboard.api-football.com: only useful on the paid Pro plan, which covers the current season |
 | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | Run `scripts/get_youtube_token.py` once on your computer (instructions inside the file) |
 | `TELEGRAM_BOT_TOKEN` | In Telegram, message @BotFather → /newbot |
 | `TELEGRAM_CHAT_ID` | Message your new bot once, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id` |
