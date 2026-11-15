@@ -39,10 +39,12 @@ HARD RULES
    (scoreline and shapes), key 1, key 2, key 3 (each: claim, number, why it matters, one-line recap),
    the lesson (what a player or coach can learn), close (answer the question, then invite viewers to
    the next breakdown). Put a short subscribe line at the end of key 1.
-6. Each scene: 20-60 words of narration. Change the visual every scene.
+6. Exactly 9 scenes, one per Match Lens beat. Each scene: 40-110 words of narration.
+   Change the visual every scene.
 7. For each scene list the fact ids you used in "fact_ids".
 {VISUAL_TYPES}
-Return ONLY JSON with this shape:
+Return ONLY the JSON object: no thinking, notes or text before or after it, no comments inside it.
+Keep the whole reply under 2,500 words. Shape:
 {{
   "title_options": [str, str, str],          // under 70 characters, accurate, curiosity without lying
   "thumbnail_texts": [str, str, str],        // 2-4 words each

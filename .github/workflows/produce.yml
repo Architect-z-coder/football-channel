@@ -59,6 +59,15 @@ jobs:
           elif [ "$MODE" = "no-upload" ]; then python -m pipeline.main --no-upload
           else python -m pipeline.main; fi
 
+      - name: Show the model's reply if the run failed
+        if: failure()
+        run: |
+          if [ -f out/last_llm_reply.txt ]; then
+            echo "Length: $(wc -c < out/last_llm_reply.txt) characters"
+            echo "----- START -----"; head -c 3000 out/last_llm_reply.txt
+            echo; echo "----- END -----"; tail -c 1500 out/last_llm_reply.txt
+          fi
+
       - name: Keep the files for 14 days (video, script, thumbnails, fact-check)
         if: always()
         uses: actions/upload-artifact@v4
