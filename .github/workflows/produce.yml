@@ -10,6 +10,10 @@ on:
         default: "full"
         type: choice
         options: [full, no-upload, dry-run]
+      look_back_days:
+        description: "How many days back to look for matches (empty = value in config.yaml)"
+        default: ""
+        type: string
 
 permissions:
   contents: write   # to save data/history.json (which matches were already covered)
@@ -48,6 +52,7 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          LOOK_BACK_DAYS: ${{ github.event.inputs.look_back_days }}
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
           if [ "$MODE" = "dry-run" ]; then python -m pipeline.main --dry-run

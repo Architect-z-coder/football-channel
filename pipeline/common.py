@@ -23,7 +23,11 @@ class StopPipeline(Exception):
 
 def load_config() -> dict:
     with open(ROOT / "config.yaml", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    override = os.environ.get("LOOK_BACK_DAYS", "").strip()
+    if override.isdigit():  # e.g. to test during an international break
+        cfg["scout"]["look_back_days"] = int(override)
+    return cfg
 
 
 def secret(name: str, required: bool = False) -> str | None:
