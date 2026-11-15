@@ -91,7 +91,9 @@ def find_best(cfg: dict, api: FootballData) -> tuple[dict, dict, str]:
 
 
 def _last5(api: FootballData, team_id: int, before: str) -> list[dict]:
-    data = api.get(f"teams/{team_id}/matches", status="FINISHED", dateTo=before[:10], limit=6)
+    end = date.fromisoformat(before[:10])
+    data = api.get(f"teams/{team_id}/matches", status="FINISHED",
+                   dateFrom=(end - timedelta(days=75)).isoformat(), dateTo=end.isoformat())
     ms = [m for m in data.get("matches", []) if m["utcDate"] < before]
     return sorted(ms, key=lambda m: m["utcDate"])[-5:]
 
