@@ -1,0 +1,32 @@
+{
+  "fixture_id": 0,
+  "competition": "Demo League (fictional test match)",
+  "home": "Northbridge FC",
+  "away": "Harbour City",
+  "facts": [
+    {"id": "score_home", "label": "Northbridge FC goals", "value": 2},
+    {"id": "score_away", "label": "Harbour City goals", "value": 1},
+    {"id": "date", "label": "Match date", "value": "2026-11-14"},
+    {"id": "venue", "label": "Venue", "value": "Demo Stadium"},
+    {"id": "round", "label": "Round", "value": "Regular Season - 12"},
+    {"id": "home_ball_possession", "label": "Northbridge FC: Ball Possession", "value": "38%"},
+    {"id": "away_ball_possession", "label": "Harbour City: Ball Possession", "value": "62%"},
+    {"id": "home_total_shots", "label": "Northbridge FC: Total Shots", "value": 9},
+    {"id": "away_total_shots", "label": "Harbour City: Total Shots", "value": 17},
+    {"id": "home_shots_on_goal", "label": "Northbridge FC: Shots on Goal", "value": 5},
+    {"id": "away_shots_on_goal", "label": "Harbour City: Shots on Goal", "value": 4},
+    {"id": "home_expected_goals", "label": "Northbridge FC: expected_goals", "value": "1.42"},
+    {"id": "away_expected_goals", "label": "Harbour City: expected_goals", "value": "1.10"},
+    {"id": "home_passes_pct", "label": "Northbridge FC: Passes %", "value": "79%"},
+    {"id": "away_passes_pct", "label": "Harbour City: Passes %", "value": "88%"},
+    {"id": "home_corner_kicks", "label": "Northbridge FC: Corner Kicks", "value": 3},
+    {"id": "away_corner_kicks", "label": "Harbour City: Corner Kicks", "value": 8},
+    {"id": "event_0", "label": "Harbour City Goal (Normal Goal)", "value": {"minute": 23, "extra": null, "player": "A. Moreno", "assist": "K. Laine"}},
+    {"id": "event_1", "label": "Northbridge FC Goal (Normal Goal)", "value": {"minute": 51, "extra": null, "player": "J. Okafor", "assist": null}},
+    {"id": "event_2", "label": "Northbridge FC Goal (Normal Goal)", "value": {"minute": 78, "extra": null, "player": "L. Brandt", "assist": "J. Okafor"}},
+    {"id": "home_formation", "label": "Northbridge FC formation", "value": "4-4-2"},
+    {"id": "away_formation", "label": "Harbour City formation", "value": "4-3-3"},
+    {"id": "home_coach", "label": "Northbridge FC coach", "value": "R. Vidal"},
+    {"id": "away_coach", "label": "Harbour City coach", "value": "M. Sato"}
+  ]
+}
