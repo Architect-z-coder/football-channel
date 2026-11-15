@@ -67,6 +67,11 @@ def run(dry_run: bool, upload: bool) -> int:
             "fixture_id": pack["fixture_id"]}
     write_json(workdir / "metadata.json", meta)
 
+    has_voice = bool(secret("ELEVENLABS_API_KEY") and secret("ELEVENLABS_VOICE_ID"))
+    if upload and not dry_run and not has_voice:
+        notify.send(f"Video made with silent audio (no voice keys yet), so it was NOT uploaded. "
+                    f"Files: {workdir.name}")
+        upload = False
     if upload and not dry_run:
         from .publish import upload as yt_upload
         vid = yt_upload(cfg, script, video, srt, thumbs)
