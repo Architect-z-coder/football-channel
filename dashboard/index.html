@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Match Lens Control Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* One visual world: the channel's own pitch-green and gold, same as the videos.
+   Layout: status strip on top, then actions, then matches / queue / last video as stacked panels. */
+:root {
+  --bg: #07110C;
+  --panel: #0E1D15;
+  --line: #1F3528;
+  --text: #E8EDF2;
+  --muted: #8FA597;
+  --accent: #F2C14E;
+  --away: #4FB3BF;
+  --ok: #5BC98A;
+  --warn: #F2C14E;
+  --bad: #EF6A5B;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); font-size: 15px; line-height: 1.45; }
+a { color: var(--accent); }
+.wrap { max-width: 980px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+h1 { font-family: var(--display); font-weight: 400; font-size: 30px; letter-spacing: .5px; margin: 0; text-transform: uppercase; }
+h1 span { color: var(--accent); }
+h2 { font-family: var(--display); font-weight: 400; font-size: 20px; letter-spacing: .4px; margin: 0; text-transform: uppercase; text-wrap: balance; }
+.sub { color: var(--muted); font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+.panel-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.status { border-left: 4px solid var(--muted); }
+.status[data-state="running"], .status[data-state="waiting"] { border-left-color: var(--warn); }
+.status[data-state="done"] { border-left-color: var(--ok); }
+.status[data-state="failed"] { border-left-color: var(--bad); }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; padding: 3px 10px; border-radius: 99px; background: var(--line); color: var(--muted); white-space: nowrap; }
+.pill.running, .pill.waiting { background: rgba(242,193,78,.15); color: var(--warn); }
+.pill.done { background: rgba(91,201,138,.15); color: var(--ok); }
+.pill.failed { background: rgba(239,106,91,.15); color: var(--bad); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.pill.running .dot, .pill.waiting .dot { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .pill .dot { animation: none !important; } }
+.kv { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+.kv b { color: var(--muted); font-weight: 500; margin-right: 4px; }
+.reason { white-space: pre-wrap; font-family: var(--mono); font-size: 12.5px; color: var(--bad); background: rgba(239,106,91,.07); border-radius: 6px; padding: 8px 10px; margin: 0; }
+.actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; }
+.action { border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: grid; gap: 10px; align-content: start; }
+.action h3 { margin: 0; font-size: 15px; }
+.action p { margin: 0; color: var(--muted); font-size: 13px; }
+label { font-size: 12.5px; color: var(--muted); display: grid; gap: 4px; }
+input, select { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; width: 100%; }
+input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; }
+.row > label { flex: 1 1 140px; }
+button { font: inherit; font-weight: 600; font-size: 14px; border-radius: 6px; padding: 8px 14px; cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: #1A1505; }
+button.ghost { background: transparent; color: var(--text); border-color: var(--line); font-weight: 500; }
+button.ghost:hover { border-color: var(--accent); }
+button.small { padding: 4px 9px; font-size: 12.5px; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.matches { display: grid; gap: 8px; }
+.match { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; align-items: center; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.match.done { opacity: .6; }
+.m-top { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: var(--muted); }
+.m-score { font-size: 16px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.m-score .num { font-family: var(--mono); color: var(--accent); }
+.m-score .away { color: var(--away); }
+.m-btns { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.chip { font-size: 11px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.chip.hot { border-color: var(--accent); color: var(--accent); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.queue { display: grid; gap: 6px; padding: 0; margin: 0; list-style: none; counter-reset: q; }
+.queue li { display: flex; gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+.queue li::before { counter-increment: q; content: counter(q); font-family: var(--mono); color: var(--accent); min-width: 1.2em; }
+.queue li span { flex: 1; }
+.empty { color: var(--muted); font-size: 14px; margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 16px; font-size: 13px; margin: 0; }
+.facts div { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed var(--line); padding: 3px 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--mono); text-align: right; }
+details summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.titles { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.note { font-size: 13px; color: var(--muted); }
+.msg { font-size: 13.5px; padding: 8px 10px; border-radius: 6px; background: var(--line); }
+.msg.bad { background: rgba(239,106,91,.12); color: var(--bad); }
+.msg.ok { background: rgba(91,201,138,.12); color: var(--ok); }
+.confirm { border: 1px solid var(--accent); border-radius: 8px; padding: 12px; display: grid; gap: 10px; background: rgba(242,193,78,.06); }
+.confirm[hidden], [hidden] { display: none !important; }
+@media (max-width: 560px) {
+  .match { grid-template-columns: 1fr; }
+  .m-btns { justify-content: flex-start; }
+  h1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Match Lens <span>Control Room</span></h1>
+    <span class="sub">Repo: Architect-z-coder/football-channel · videos always upload as Private</span>
+  </header>
+
+  <div id="pageMsg" class="msg" hidden></div>
+
+  <section class="panel status" id="statusPanel" data-state="idle" aria-live="polite">
+    <div class="panel-head">
+      <h2>Pipeline status</h2>
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">Loading</span></span>
+    </div>
+    <div class="kv" id="statusKv"><span class="sub">Reading status from GitHub…</span></div>
+    <pre class="reason" id="statusReason" hidden></pre>
+    <div class="row">
+      <button class="ghost small" id="refreshBtn" type="button">Refresh now</button>
+      <span class="sub" id="lastRead"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Run something</h2>
+    <div class="actions">
+      <form class="action" id="listForm">
+        <h3>1 · Find matches</h3>
+        <p>Lists finished matches from the 6 leagues, most interesting first. Takes about 1 minute.</p>
+        <div class="row">
+          <label for="listDays">Days back<input id="listDays" type="number" min="1" max="30" value="7"></label>
+          <button type="submit">Find matches</button>
+        </div>
+      </form>
+      <form class="action" id="makeForm">
+        <h3>2 · Make a video</h3>
+        <p>Match number from the list, or two team names. Empty = first match in the queue.</p>
+        <label for="makeMatch">Match<input id="makeMatch" type="text" placeholder="e.g. 560639 or Arsenal Chelsea" autocomplete="off"></label>
+        <div class="row">
+          <label for="makeMode">What to do
+            <select id="makeMode">
+              <option value="full">Make video + upload as Private</option>
+              <option value="no-upload">Make video files only (no upload)</option>
+              <option value="data-only">Only show the match data</option>
+              <option value="dry-run">Test run with the sample match</option>
+            </select>
+          </label>
+          <button type="submit">Start</button>
+        </div>
+      </form>
+    </div>
+    <div class="confirm" id="confirmBox" hidden>
+      <div id="confirmText"></div>
+      <div class="row">
+        <button type="button" id="confirmYes">Yes, start it</button>
+        <button type="button" class="ghost" id="confirmNo">Cancel</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="matchesPanel">
+    <div class="panel-head">
+      <h2>Matches to choose from</h2>
+      <span class="sub" id="matchesMeta"></span>
+    </div>
+    <div class="matches" id="matches"><p class="empty">Loading…</p></div>
+  </section>
+
+  <section class="panel" id="dataPanel" hidden>
+    <div class="panel-head">
+      <h2 id="dataTitle">Match data</h2>
+      <span class="sub" id="dataMeta"></span>
+    </div>
+    <dl class="facts" id="dataFacts"></dl>
+    <details id="shotsBox"><summary id="shotsSummary">Shots</summary><div class="mono sub" id="shotsList"></div></details>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Queue</h2>
+      <span class="sub">The Monday and Thursday runs take the first match.</span>
+    </div>
+    <ol class="queue" id="queue"></ol>
+    <p class="empty" id="queueEmpty" hidden>The queue is empty, so the scheduled runs will make nothing.</p>
+    <form class="row" id="queueForm">
+      <label for="queueAdd">Add a match<input id="queueAdd" type="text" placeholder="Match number or two team names" autocomplete="off"></label>
+      <button type="submit" class="ghost">Add to queue</button>
+    </form>
+  </section>
+
+  <section class="panel" id="videoPanel">
+    <div class="panel-head">
+      <h2>Last video</h2>
+      <span class="sub" id="videoMeta"></span>
+    </div>
+    <div id="video"><p class="empty">Loading…</p></div>
+  </section>
+
+  <p class="note">This page talks to GitHub through your <b>github</b> connector. A button writes a small request file to the repo, and GitHub starts the run about 20 to 40 seconds later. While a run is going, this page checks again every 20 seconds.</p>
+</div>
+
+<script>
+const OWNER = "Architect-z-coder", REPO = "football-channel", BRANCH = "main", SERVER = "github";
+const P = {
+  status: "data/dashboard/status.json", request: "data/dashboard/request.json",
+  matches: "data/dashboard/matches.json", data: "data/dashboard/match_data.json",
+  video: "data/dashboard/last_video.json", queue: "data/queue.txt"
+};
+const MODE_LABEL = { list: "Find matches", "data-only": "Show match data", full: "Make video + upload (Private)",
+  "no-upload": "Make video files only", "dry-run": "Test run (sample match)" };
+let mcp = null, pending = null, pollTimer = null, queueState = { lines: [], sha: null };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ago = iso => { if (!iso) return ""; const s = (Date.now() - Date.parse(iso)) / 1000;
+  if (s < 90) return "just now"; if (s < 5400) return Math.round(s / 60) + " min ago";
+  if (s < 129600) return Math.round(s / 3600) + " h ago"; return Math.round(s / 86400) + " days ago"; };
+
+function showMsg(text, kind) { const m = $("pageMsg"); m.hidden = !text; m.className = "msg" + (kind ? " " + kind : ""); m.innerHTML = text || ""; }
+
+function errText(e) {
+  const c = e && e.code;
+  if (c === "needs_reauth") return "Your github connector needs to be reconnected: claude.ai → Settings → Connectors → github.";
+  if (c === "server_not_connected" || c === "selection_required") return "Add or choose the <b>github</b> connector in claude.ai → Settings → Connectors, then reload this page.";
+  if (c === "not_in_manifest" || c === "approval_required") return "This page needs your OK to use the github connector. Press Refresh now and allow it when asked.";
+  if (c === "blocked_by_policy") return "Your account settings block this connector tool for pages.";
+  if (c === "server_unavailable" || c === "upstream_error") return "GitHub did not answer just now. Try Refresh now in a moment.";
+  return "GitHub said: " + esc((e && e.message) || "unknown error");
+}
+const isNotFound = e => e && e.code === "tool_error" && /404|not found/i.test(e.message || "");
+
+// get_file_contents returns the file as a resource block and the SHA in a text block.
+async function readFile(path) {
+  try {
+    const r = await mcp.callTool(SERVER, "get_file_contents", { owner: OWNER, repo: REPO, path, ref: "refs/heads/" + BRANCH }, { cache: false });
+    let text = null, sha = null;
+    for (const b of r.content || []) {
+      if (b.type === "resource" && b.resource && typeof b.resource.text === "string") text = b.resource.text;
+      if (b.type === "text") { const m = /SHA:\s*([0-9a-f]{40})/i.exec(b.text); if (m) sha = m[1]; else if (text === null && !/successfully downloaded/i.test(b.text)) text = b.text; }
+    }
+    return { text, sha };
+  } catch (e) { if (isNotFound(e)) return null; throw e; }
+}
+async function readJson(path) { const f = await readFile(path); if (!f || f.text == null) return null; try { return JSON.parse(f.text); } catch { return null; } }
+
+async function writeFile(path, content, message) {
+  const attempt = async () => {
+    const cur = await readFile(path);
+    const input = { owner: OWNER, repo: REPO, branch: BRANCH, path, content, message };
+    if (cur && cur.sha) input.sha = cur.sha;
+    return mcp.callTool(SERVER, "create_or_update_file", input);
+  };
+  try { return await attempt(); }
+  catch (e) { // a stale SHA means nothing was written, so one more try is safe
+    if (e && e.code === "tool_error" && /sha|409|422|conflict/i.test(e.message || "")) return attempt();
+    throw e;
+  }
+}
+
+/* ---------- status ---------- */
+function renderStatus(st) {
+  let state = st ? st.state : "idle";
+  if (pending && (!st || st.request_id !== pending.id)) state = "waiting";
+  const label = { idle: "Idle", waiting: "Waiting for GitHub", running: "Running", done: "Finished", failed: "Failed" }[state] || state;
+  $("statusPanel").dataset.state = state;
+  $("statusPill").className = "pill " + state;
+  $("statusText").textContent = label;
+  const kv = [];
+  if (state === "waiting") {
+    kv.push(`<span><b>Request</b>${esc(MODE_LABEL[pending.mode] || pending.mode)}${pending.match ? " · " + esc(pending.match) : ""}</span>`);
+    kv.push(`<span><b>Sent</b>${ago(pending.at)}</span>`);
+  } else if (st) {
+    kv.push(`<span><b>Last run</b>${esc(MODE_LABEL[st.mode] || st.mode || "—")}${st.match ? " · " + esc(st.match) : ""}</span>`);
+    kv.push(`<span><b>Started</b>${ago(st.started)}</span>`);
+    if (st.finished) kv.push(`<span><b>Ended</b>${ago(st.finished)}</span>`);
+    if (st.trigger === "schedule") kv.push(`<span><b>Started by</b>schedule</span>`);
+    if (st.run_url) kv.push(`<span><a href="${esc(st.run_url)}" target="_blank" rel="noopener">Open run log and files</a></span>`);
+  } else kv.push(`<span class="sub">No run from the dashboard yet.</span>`);
+  $("statusKv").innerHTML = kv.join("");
+  const r = $("statusReason"); r.hidden = !(st && state === "failed" && st.reason); r.textContent = (st && st.reason) || "";
+  const busy = state === "running" || state === "waiting";
+  document.querySelectorAll("form button[type=submit]:not(#queueForm button)").forEach(b => b.disabled = busy);
+  document.querySelectorAll("[data-run]").forEach(b => b.disabled = busy);
+  return busy;
+}
+
+/* ---------- matches ---------- */
+function renderMatches(m) {
+  const box = $("matches");
+  if (!m || !m.matches) { box.innerHTML = `<p class="empty">No list yet. Press <b>Find matches</b>.</p>`; $("matchesMeta").textContent = ""; return; }
+  $("matchesMeta").textContent = `Last ${m.look_back_days} days · updated ${ago(m.updated)}`;
+  if (!m.matches.length) { box.innerHTML = `<p class="empty">No finished matches in that window. Try more days back.</p>`; return; }
+  box.innerHTML = m.matches.map(x => `
+    <div class="match${x.done ? " done" : ""}">
+      <div>
+        <div class="m-top"><span class="mono">${esc(x.id)}</span><span>${esc(x.date)}</span><span>${esc(x.competition)}</span>
+          <span class="chip${x.interest >= 3 ? " hot" : ""}">interest ${esc(x.interest)}</span>${x.done ? `<span class="chip">already covered</span>` : ""}</div>
+        <div class="m-score"><span>${esc(x.home)}</span><span class="num">${esc(x.score)}</span><span class="away">${esc(x.away)}</span>
+          ${x.half_time && x.half_time !== "None-None" ? `<span class="sub">HT ${esc(x.half_time)}</span>` : ""}</div>
+      </div>
+      <div class="m-btns">
+        <button class="ghost small" data-run="data-only" data-id="${esc(x.id)}" data-name="${esc(x.home + " v " + x.away)}">Data</button>
+        <button class="ghost small" data-queue="${esc(x.id)}" data-name="${esc(x.home + " v " + x.away)}">Queue</button>
+        <button class="small" data-run="full" data-id="${esc(x.id)}" data-name="${esc(x.home + " v " + x.away)}">Make video</button>
+      </div>
+    </div>`).join("");
+}
+
+/* ---------- match data ---------- */
+function renderData(d) {
+  if (!d || !d.facts) { $("dataPanel").hidden = true; return; }
+  $("dataPanel").hidden = false;
+  $("dataTitle").textContent = `${d.home} v ${d.away}`;
+  $("dataMeta").textContent = `${d.competition} · ${d.source || ""} · ${ago(d.updated)}`;
+  $("dataFacts").innerHTML = d.facts.map(f => `<div><dt>${esc(f.id.replace(/_/g, " "))}</dt><dd>${esc(f.value)}</dd></div>`).join("");
+  const shots = d.shots || [];
+  $("shotsSummary").textContent = shots.length ? `Shots from Understat (${shots.length})` : "No shot data (Understat had nothing for this match)";
+  $("shotsList").innerHTML = shots.map(s => `${esc(s.minute)}' ${esc(s.side)} ${esc(s.player)} · xG ${esc(s.xg)} · ${esc(s.result)}`).join("<br>");
+}
+
+/* ---------- queue ---------- */
+function parseQueue(text) {
+  const all = (text || "").split("\n");
+  return { all, items: all.map((l, i) => ({ l: l.trim(), i })).filter(x => x.l && !x.l.startsWith("#")) };
+}
+function renderQueue(f) {
+  queueState = { all: f ? f.text.split("\n") : [], sha: f && f.sha };
+  const items = parseQueue(f ? f.text : "").items;
+  $("queue").innerHTML = items.map((x, n) => `<li><span>${esc(x.l)}</span>
+     ${n > 0 ? `<button class="ghost small" data-up="${x.i}" aria-label="Move up">Move up</button>` : ""}
+     <button class="ghost small" data-remove="${x.i}" aria-label="Remove ${esc(x.l)}">Remove</button></li>`).join("");
+  $("queueEmpty").hidden = items.length > 0;
+}
+async function saveQueue(lines, message) {
+  const text = lines.join("\n").replace(/\n*$/, "\n");
+  await writeFile(P.queue, text, message);
+  renderQueue(await readFile(P.queue));
+}
+
+/* ---------- last video ---------- */
+function renderVideo(v, st) {
+  if (!v) { $("video").innerHTML = `<p class="empty">No video made from a real match yet.</p>`; $("videoMeta").textContent = ""; return; }
+  $("videoMeta").textContent = `${v.minutes} min · made ${ago(v.updated)}`;
+  $("video").innerHTML = `
+    <div class="m-score"><span>${esc(v.home)}</span><span class="sub">v</span><span class="away">${esc(v.away)}</span><span class="sub">${esc(v.competition)}</span></div>
+    <ol class="titles">${(v.titles || []).map(t => `<li>${esc(t)}</li>`).join("")}</ol>
+    <div class="kv">
+      ${v.uploaded && v.youtube ? `<span><a href="${esc(v.youtube)}" target="_blank" rel="noopener">Review in YouTube Studio (Private)</a></span>` : `<span><b>Upload</b>not uploaded (files only)</span>`}
+      ${st && st.run_url ? `<span><a href="${esc(st.run_url)}" target="_blank" rel="noopener">Download files from the run</a></span>` : ""}
+    </div>`;
+}
+
+/* ---------- loading ---------- */
+async function loadAll() {
+  $("refreshBtn").disabled = true;
+  try {
+    const [st, m, d, v, q] = await Promise.all([readJson(P.status), readJson(P.matches), readJson(P.data), readJson(P.video), readFile(P.queue)]);
+    if (pending && st && st.request_id === pending.id && st.state !== "running") pending = null;
+    if (pending && st && st.request_id === pending.id) { /* started: keep polling */ }
+    const busy = renderStatus(st);
+    renderMatches(m); renderData(d); renderQueue(q); renderVideo(v, st);
+    $("lastRead").textContent = "Checked " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    showMsg("");
+    schedulePoll(busy);
+  } catch (e) {
+    showMsg(errText(e), "bad");
+    if (e && e.retryable) schedulePoll(true);
+  } finally { $("refreshBtn").disabled = false; }
+}
+function schedulePoll(on) {
+  clearTimeout(pollTimer);
+  if (on) pollTimer = setTimeout(() => { if (document.visibilityState === "visible") loadAll(); else schedulePoll(true); }, 20000);
+}
+
+/* ---------- requests ---------- */
+let confirmJob = null;
+function askConfirm(html, job) { confirmJob = job; $("confirmText").innerHTML = html; $("confirmBox").hidden = false; $("confirmYes").focus(); }
+$("confirmNo").onclick = () => { confirmJob = null; $("confirmBox").hidden = true; };
+$("confirmYes").onclick = async () => { const j = confirmJob; confirmJob = null; $("confirmBox").hidden = true; if (j) await j(); };
+
+async function sendRequest(mode, match, days) {
+  const req = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), mode, match: match || "",
+    look_back_days: days || "", requested_at: new Date().toISOString() };
+  showMsg("Sending the request to GitHub…");
+  try {
+    await writeFile(P.request, JSON.stringify(req, null, 2) + "\n", `Dashboard request: ${mode}${match ? " " + match : ""}`);
+    pending = { id: req.id, mode, match, at: req.requested_at };
+    showMsg(`Request sent: <b>${esc(MODE_LABEL[mode])}</b>${match ? " for " + esc(match) : ""}. GitHub usually starts within a minute.`, "ok");
+    renderStatus(null); schedulePoll(true);
+  } catch (e) {
+    showMsg(errText(e) + " The request may not have been sent: press Refresh now before trying again.", "bad");
+  }
+}
+function confirmRun(mode, match, name) {
+  const what = name ? `<b>${esc(name)}</b>` : match ? `<b>${esc(match)}</b>` : "the <b>first match in the queue</b>";
+  const cost = mode === "full" ? " It uses Claude and ElevenLabs credits and takes 20 to 40 minutes. The video uploads as <b>Private</b> for you to review."
+    : mode === "no-upload" ? " It uses Claude and ElevenLabs credits and takes 20 to 40 minutes. Nothing is uploaded." : "";
+  askConfirm(`${esc(MODE_LABEL[mode])} for ${what}?${cost}`, () => sendRequest(mode, match, ""));
+}
+
+$("listForm").onsubmit = e => { e.preventDefault(); const d = Math.max(1, Math.min(30, parseInt($("listDays").value, 10) || 7)); sendRequest("list", "", String(d)); };
+$("makeForm").onsubmit = e => {
+  e.preventDefault(); const mode = $("makeMode").value, match = $("makeMatch").value.trim();
+  if (mode === "data-only" || mode === "dry-run") { if (mode === "data-only" && !match) return showMsg("Type a match number or two team names first.", "bad"); return sendRequest(mode, match, ""); }
+  confirmRun(mode, match, "");
+};
+$("refreshBtn").onclick = () => loadAll();
+document.addEventListener("click", async e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.run) {
+    if (b.dataset.run === "data-only") return sendRequest("data-only", b.dataset.id, "");
+    return confirmRun(b.dataset.run, b.dataset.id, b.dataset.name);
+  }
+  if (b.dataset.queue || b.dataset.remove || b.dataset.up) {
+    b.disabled = true;
+    try {
+      const f = await readFile(P.queue); const lines = f ? f.text.replace(/\n$/, "").split("\n") : [];
+      if (b.dataset.queue) {
+        if (parseQueue(lines.join("\n")).items.some(x => x.l === b.dataset.queue)) { showMsg(`${esc(b.dataset.name)} is already in the queue.`); renderQueue(f); return; }
+        lines.push(b.dataset.queue); await saveQueue(lines, `Queue: add ${b.dataset.queue}`);
+        showMsg(`Added ${esc(b.dataset.name)} to the queue.`, "ok");
+      } else {
+        const i = +(b.dataset.remove || b.dataset.up); const items = parseQueue(lines.join("\n")).items;
+        const pos = items.findIndex(x => x.i === i); if (pos < 0) { renderQueue(f); return; }
+        if (b.dataset.remove) { const gone = lines.splice(i, 1)[0]; await saveQueue(lines, `Queue: remove ${gone.trim()}`); }
+        else { const prev = items[pos - 1].i; [lines[prev], lines[i]] = [lines[i], lines[prev]]; await saveQueue(lines, "Queue: reorder"); }
+      }
+    } catch (err) { showMsg(errText(err), "bad"); }
+    finally { b.disabled = false; }
+  }
+});
+$("queueForm").onsubmit = async e => {
+  e.preventDefault(); const v = $("queueAdd").value.replace(/\s+/g, " ").trim(); if (!v) return;
+  const btn = e.submitter || $("queueForm").querySelector("button"); btn.disabled = true;
+  try { const f = await readFile(P.queue); const lines = f ? f.text.replace(/\n$/, "").split("\n") : [];
+    lines.push(v); await saveQueue(lines, `Queue: add ${v}`); $("queueAdd").value = ""; showMsg(`Added “${esc(v)}” to the queue.`, "ok"); }
+  catch (err) { showMsg(errText(err), "bad"); } finally { btn.disabled = false; }
+};
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && pending) loadAll(); });
+
+(async () => {
+  try { mcp = await window.claude.use("mcp"); } catch { mcp = null; }
+  if (!mcp) {
+    showMsg("This page can't reach your github connector here. Open it on claude.ai (web or app) while signed in, with the github connector added.", "bad");
+    ["statusKv"].forEach(id => $(id).innerHTML = `<span class="sub">Not connected.</span>`);
+    $("matches").innerHTML = $("video").innerHTML = `<p class="empty">Not connected.</p>`;
+    $("statusText").textContent = "Offline";
+    return;
+  }
+  loadAll();
+})();
+</script>
+</body>
+</html>
