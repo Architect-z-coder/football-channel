@@ -1,782 +1,597 @@
 {
-  "updated": "2026-11-16T20:48:37Z",
-  "fixture_id": 560639,
-  "home": "Man United",
-  "away": "Aston Villa",
-  "competition": "Premier League",
-  "source": "football-data.org + FotMob",
+  "updated": "2026-11-16T22:58:33Z",
+  "fixture_id": "fotmob-5181835",
+  "home": "Germany",
+  "away": "Netherlands",
+  "competition": "UEFA Nations League A Grp. 2",
+  "source": "FotMob",
   "facts": [
     {
       "id": "score_home",
-      "label": "Manchester United FC goals",
-      "value": 4
+      "label": "Germany goals",
+      "value": 5
     },
     {
       "id": "score_away",
-      "label": "Aston Villa FC goals",
-      "value": 4
+      "label": "Netherlands goals",
+      "value": 0
     },
     {
       "id": "ht_home",
-      "label": "Manchester United FC goals at half time",
-      "value": 2
+      "label": "Germany goals at half time",
+      "value": 1
     },
     {
       "id": "ht_away",
-      "label": "Aston Villa FC goals at half time",
-      "value": 2
+      "label": "Netherlands goals at half time",
+      "value": 0
     },
     {
       "id": "date",
       "label": "Match date",
-      "value": "2026-11-08"
+      "value": "2026-11-16"
     },
     {
-      "id": "matchday",
-      "label": "Matchday",
-      "value": 10
+      "id": "competition_round",
+      "label": "Round",
+      "value": "6"
     },
     {
-      "id": "stage",
-      "label": "Stage",
-      "value": "REGULAR_SEASON"
+      "id": "goal_1",
+      "label": "Goal 1",
+      "value": {
+        "team": "Germany",
+        "player": "Derry Scherhant",
+        "minute": 41,
+        "added_time": null,
+        "type": "open play",
+        "assist": "Joshua Kimmich",
+        "score_after": [
+          1,
+          0
+        ]
+      }
     },
     {
-      "id": "home_position",
-      "label": "Manchester United FC league table (after this round): position",
-      "value": 18
+      "id": "goal_2",
+      "label": "Goal 2",
+      "value": {
+        "team": "Germany",
+        "player": "Florian Wirtz",
+        "minute": 60,
+        "added_time": null,
+        "type": "open play",
+        "assist": null,
+        "score_after": [
+          2,
+          0
+        ]
+      }
     },
     {
-      "id": "home_points",
-      "label": "Manchester United FC league table (after this round): points",
-      "value": 8
+      "id": "goal_3",
+      "label": "Goal 3",
+      "value": {
+        "team": "Germany",
+        "player": "Nico Schlotterbeck",
+        "minute": 65,
+        "added_time": null,
+        "type": "Header",
+        "assist": "Brajan Gruda",
+        "score_after": [
+          3,
+          0
+        ]
+      }
     },
     {
-      "id": "home_played_games",
-      "label": "Manchester United FC league table (after this round): playedGames",
-      "value": 10
+      "id": "goal_4",
+      "label": "Goal 4",
+      "value": {
+        "team": "Germany",
+        "player": "Florian Wirtz",
+        "minute": 71,
+        "added_time": null,
+        "type": "open play",
+        "assist": "Brajan Gruda",
+        "score_after": [
+          4,
+          0
+        ]
+      }
     },
     {
-      "id": "home_won",
-      "label": "Manchester United FC league table (after this round): won",
-      "value": 1
-    },
-    {
-      "id": "home_draw",
-      "label": "Manchester United FC league table (after this round): draw",
-      "value": 5
-    },
-    {
-      "id": "home_lost",
-      "label": "Manchester United FC league table (after this round): lost",
-      "value": 4
-    },
-    {
-      "id": "home_goals_for",
-      "label": "Manchester United FC league table (after this round): goalsFor",
-      "value": 14
-    },
-    {
-      "id": "home_goals_against",
-      "label": "Manchester United FC league table (after this round): goalsAgainst",
-      "value": 19
-    },
-    {
-      "id": "home_goal_difference",
-      "label": "Manchester United FC league table (after this round): goalDifference",
-      "value": -5
-    },
-    {
-      "id": "home_last5_played",
-      "label": "Manchester United FC in the 5 matches before this one: played",
-      "value": 5
-    },
-    {
-      "id": "home_last5_wins",
-      "label": "Manchester United FC in the 5 matches before this one: wins",
-      "value": 1
-    },
-    {
-      "id": "home_last5_draws",
-      "label": "Manchester United FC in the 5 matches before this one: draws",
-      "value": 1
-    },
-    {
-      "id": "home_last5_losses",
-      "label": "Manchester United FC in the 5 matches before this one: losses",
-      "value": 3
-    },
-    {
-      "id": "home_last5_goals_for",
-      "label": "Manchester United FC in the 5 matches before this one: goals_for",
-      "value": 5
-    },
-    {
-      "id": "home_last5_goals_against",
-      "label": "Manchester United FC in the 5 matches before this one: goals_against",
-      "value": 12
-    },
-    {
-      "id": "away_position",
-      "label": "Aston Villa FC league table (after this round): position",
-      "value": 10
-    },
-    {
-      "id": "away_points",
-      "label": "Aston Villa FC league table (after this round): points",
-      "value": 13
-    },
-    {
-      "id": "away_played_games",
-      "label": "Aston Villa FC league table (after this round): playedGames",
-      "value": 10
-    },
-    {
-      "id": "away_won",
-      "label": "Aston Villa FC league table (after this round): won",
-      "value": 3
-    },
-    {
-      "id": "away_draw",
-      "label": "Aston Villa FC league table (after this round): draw",
-      "value": 4
-    },
-    {
-      "id": "away_lost",
-      "label": "Aston Villa FC league table (after this round): lost",
-      "value": 3
-    },
-    {
-      "id": "away_goals_for",
-      "label": "Aston Villa FC league table (after this round): goalsFor",
-      "value": 14
-    },
-    {
-      "id": "away_goals_against",
-      "label": "Aston Villa FC league table (after this round): goalsAgainst",
-      "value": 17
-    },
-    {
-      "id": "away_goal_difference",
-      "label": "Aston Villa FC league table (after this round): goalDifference",
-      "value": -3
-    },
-    {
-      "id": "away_last5_played",
-      "label": "Aston Villa FC in the 5 matches before this one: played",
-      "value": 5
-    },
-    {
-      "id": "away_last5_wins",
-      "label": "Aston Villa FC in the 5 matches before this one: wins",
-      "value": 3
-    },
-    {
-      "id": "away_last5_draws",
-      "label": "Aston Villa FC in the 5 matches before this one: draws",
-      "value": 1
-    },
-    {
-      "id": "away_last5_losses",
-      "label": "Aston Villa FC in the 5 matches before this one: losses",
-      "value": 1
-    },
-    {
-      "id": "away_last5_goals_for",
-      "label": "Aston Villa FC in the 5 matches before this one: goals_for",
-      "value": 7
-    },
-    {
-      "id": "away_last5_goals_against",
-      "label": "Aston Villa FC in the 5 matches before this one: goals_against",
-      "value": 6
+      "id": "goal_5",
+      "label": "Goal 5",
+      "value": {
+        "team": "Germany",
+        "player": "Brajan Gruda",
+        "minute": 78,
+        "added_time": null,
+        "type": "open play",
+        "assist": null,
+        "score_after": [
+          5,
+          0
+        ]
+      }
     },
     {
       "id": "home_possession",
-      "label": "Man United possession, percent (FotMob)",
+      "label": "Germany possession, percent (FotMob)",
       "value": 56
     },
     {
       "id": "away_possession",
-      "label": "Aston Villa possession, percent (FotMob)",
+      "label": "Netherlands possession, percent (FotMob)",
       "value": 44
     },
     {
       "id": "home_xg",
-      "label": "Man United expected goals (FotMob) (FotMob)",
-      "value": 3.55
+      "label": "Germany expected goals (FotMob) (FotMob)",
+      "value": 1.52
     },
     {
       "id": "away_xg",
-      "label": "Aston Villa expected goals (FotMob) (FotMob)",
-      "value": 2.88
+      "label": "Netherlands expected goals (FotMob) (FotMob)",
+      "value": 1.16
     },
     {
       "id": "home_shots",
-      "label": "Man United shots (FotMob)",
-      "value": 26
-    },
-    {
-      "id": "away_shots",
-      "label": "Aston Villa shots (FotMob)",
-      "value": 12
-    },
-    {
-      "id": "home_shots_on_target",
-      "label": "Man United shots on target (FotMob)",
-      "value": 9
-    },
-    {
-      "id": "away_shots_on_target",
-      "label": "Aston Villa shots on target (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "home_box_touches",
-      "label": "Man United touches in the opposition box (FotMob)",
-      "value": 48
-    },
-    {
-      "id": "away_box_touches",
-      "label": "Aston Villa touches in the opposition box (FotMob)",
+      "label": "Germany shots (FotMob)",
       "value": 18
     },
     {
+      "id": "away_shots",
+      "label": "Netherlands shots (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "home_shots_on_target",
+      "label": "Germany shots on target (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "away_shots_on_target",
+      "label": "Netherlands shots on target (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_box_touches",
+      "label": "Germany touches in the opposition box (FotMob)",
+      "value": 50
+    },
+    {
+      "id": "away_box_touches",
+      "label": "Netherlands touches in the opposition box (FotMob)",
+      "value": 19
+    },
+    {
       "id": "home_big_chances",
-      "label": "Man United big chances (FotMob)",
-      "value": 6
+      "label": "Germany big chances (FotMob)",
+      "value": 4
     },
     {
       "id": "away_big_chances",
-      "label": "Aston Villa big chances (FotMob)",
-      "value": 5
+      "label": "Netherlands big chances (FotMob)",
+      "value": 2
     },
     {
       "id": "home_big_chances_missed",
-      "label": "Man United big chances missed (FotMob)",
-      "value": 3
+      "label": "Germany big chances missed (FotMob)",
+      "value": 1
     },
     {
       "id": "away_big_chances_missed",
-      "label": "Aston Villa big chances missed (FotMob)",
+      "label": "Netherlands big chances missed (FotMob)",
       "value": 2
     },
     {
       "id": "home_accurate_passes",
-      "label": "Man United accurate passes (FotMob)",
-      "value": 438
+      "label": "Germany accurate passes (FotMob)",
+      "value": 429
     },
     {
       "id": "home_accurate_passes_pct",
-      "label": "Man United accurate passes, percent (FotMob)",
-      "value": 87
+      "label": "Germany accurate passes, percent (FotMob)",
+      "value": 86
     },
     {
       "id": "away_accurate_passes",
-      "label": "Aston Villa accurate passes (FotMob)",
-      "value": 347
+      "label": "Netherlands accurate passes (FotMob)",
+      "value": 314
     },
     {
       "id": "away_accurate_passes_pct",
-      "label": "Aston Villa accurate passes, percent (FotMob)",
-      "value": 85
+      "label": "Netherlands accurate passes, percent (FotMob)",
+      "value": 80
     },
     {
       "id": "home_corners",
-      "label": "Man United corners (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "away_corners",
-      "label": "Aston Villa corners (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "home_tackles",
-      "label": "Man United tackles (FotMob)",
-      "value": 26
-    },
-    {
-      "id": "away_tackles",
-      "label": "Aston Villa tackles (FotMob)",
-      "value": 11
-    },
-    {
-      "id": "home_interceptions",
-      "label": "Man United interceptions (FotMob)",
-      "value": 12
-    },
-    {
-      "id": "away_interceptions",
-      "label": "Aston Villa interceptions (FotMob)",
-      "value": 12
-    },
-    {
-      "id": "home_saves",
-      "label": "Man United goalkeeper saves (FotMob)",
+      "label": "Germany corners (FotMob)",
       "value": 3
     },
     {
+      "id": "away_corners",
+      "label": "Netherlands corners (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_tackles",
+      "label": "Germany tackles (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "away_tackles",
+      "label": "Netherlands tackles (FotMob)",
+      "value": 22
+    },
+    {
+      "id": "home_interceptions",
+      "label": "Germany interceptions (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_interceptions",
+      "label": "Netherlands interceptions (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "home_saves",
+      "label": "Germany goalkeeper saves (FotMob)",
+      "value": 1
+    },
+    {
       "id": "away_saves",
-      "label": "Aston Villa goalkeeper saves (FotMob)",
+      "label": "Netherlands goalkeeper saves (FotMob)",
       "value": 5
     },
     {
       "id": "home_duels_won",
-      "label": "Man United duels won (FotMob)",
-      "value": 52
+      "label": "Germany duels won (FotMob)",
+      "value": 37
     },
     {
       "id": "away_duels_won",
-      "label": "Aston Villa duels won (FotMob)",
-      "value": 50
+      "label": "Netherlands duels won (FotMob)",
+      "value": 55
     },
     {
       "id": "home_fouls",
-      "label": "Man United fouls committed (FotMob)",
-      "value": 18
-    },
-    {
-      "id": "away_fouls",
-      "label": "Aston Villa fouls committed (FotMob)",
+      "label": "Germany fouls committed (FotMob)",
       "value": 9
     },
     {
+      "id": "away_fouls",
+      "label": "Netherlands fouls committed (FotMob)",
+      "value": 15
+    },
+    {
       "id": "home_formation",
-      "label": "Man United formation",
+      "label": "Germany formation",
       "value": "4-2-3-1"
     },
     {
       "id": "home_top_rated",
-      "label": "Man United highest FotMob player rating",
+      "label": "Germany highest FotMob player rating",
       "value": {
-        "player": "Bruno Fernandes",
-        "rating": 8.7
+        "player": "Brajan Gruda",
+        "rating": 9.2
       }
     },
     {
       "id": "away_formation",
-      "label": "Aston Villa formation",
+      "label": "Netherlands formation",
       "value": "4-2-3-1"
     },
     {
       "id": "away_top_rated",
-      "label": "Aston Villa highest FotMob player rating",
+      "label": "Netherlands highest FotMob player rating",
       "value": {
-        "player": "John McGinn",
-        "rating": 8.4
+        "player": "Crysencio Summerville",
+        "rating": 6.8
       }
     },
     {
       "id": "player_of_the_match",
       "label": "Player of the match (FotMob)",
       "value": {
-        "player": "Bruno Fernandes",
-        "team": "Manchester United",
-        "rating": "8.7"
+        "player": "Brajan Gruda",
+        "team": "Germany",
+        "rating": "9.2"
       }
     },
     {
       "id": "home_best_chance",
-      "label": "Man United best single chance (FotMob)",
+      "label": "Germany best single chance (FotMob)",
       "value": {
-        "player": "Bruno Fernandes",
-        "minute": 16,
-        "xg": 0.79,
+        "player": "Brajan Gruda",
+        "minute": 77,
+        "xg": 0.37,
         "result": "Goal"
       }
     },
     {
       "id": "away_best_chance",
-      "label": "Aston Villa best single chance (FotMob)",
+      "label": "Netherlands best single chance (FotMob)",
       "value": {
-        "player": "Nicolas Jackson",
-        "minute": 4,
-        "xg": 0.88,
-        "result": "Goal"
+        "player": "Donyell Malen",
+        "minute": 25,
+        "xg": 0.69,
+        "result": "MissedShots"
       }
     }
   ],
   "shots": [
     {
       "side": "away",
-      "minute": 1,
-      "x": 0.9164,
-      "y": 0.3385,
-      "xg": 0.04,
-      "result": "Goal",
-      "player": "Alysson Edward",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "away",
-      "minute": 4,
-      "x": 0.8476,
-      "y": 0.3632,
-      "xg": 0.05,
-      "result": "SavedShot",
-      "player": "Alysson Edward",
-      "situation": "SetPiece"
-    },
-    {
-      "side": "away",
-      "minute": 4,
-      "x": 0.9756,
-      "y": 0.4854,
-      "xg": 0.88,
-      "result": "Goal",
-      "player": "Nicolas Jackson",
-      "situation": "SetPiece"
-    },
-    {
-      "side": "away",
-      "minute": 7,
-      "x": 0.9639,
-      "y": 0.3055,
-      "xg": 0.04,
-      "result": "BlockedShot",
-      "player": "Boubacar Kamara",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 10,
-      "x": 0.8183,
-      "y": 0.5581,
-      "xg": 0.05,
-      "result": "MissedShots",
-      "player": "Bruno Fernandes",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 16,
-      "x": 0.8952,
-      "y": 0.5,
-      "xg": 0.79,
-      "result": "Goal",
-      "player": "Bruno Fernandes",
-      "situation": "Penalty"
-    },
-    {
-      "side": "home",
-      "minute": 24,
-      "x": 0.8122,
-      "y": 0.7697,
+      "minute": 9,
+      "x": 0.9081,
+      "y": 0.3937,
       "xg": 0.03,
-      "result": "SavedShot",
-      "player": "Matheus Cunha",
+      "result": "MissedShots",
+      "player": "Donyell Malen",
       "situation": "RegularPlay"
     },
     {
       "side": "home",
-      "minute": 26,
-      "x": 0.7963,
-      "y": 0.4686,
-      "xg": 0.09,
-      "result": "BlockedShot",
-      "player": "Bruno Fernandes",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 27,
-      "x": 0.8234,
-      "y": 0.4619,
-      "xg": 0.12,
-      "result": "SavedShot",
-      "player": "Kobbie Mainoo",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 29,
-      "x": 0.8686,
-      "y": 0.2674,
+      "minute": 13,
+      "x": 0.7952,
+      "y": 0.7017,
       "xg": 0.02,
       "result": "BlockedShot",
-      "player": "Noussair Mazraoui",
+      "player": "Derry Scherhant",
       "situation": "RegularPlay"
     },
     {
       "side": "home",
-      "minute": 29,
-      "x": 0.8848,
-      "y": 0.4596,
-      "xg": 0.18,
-      "result": "BlockedShot",
-      "player": "Amad Diallo",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 29,
-      "x": 0.7244,
-      "y": 0.4809,
-      "xg": 0.01,
-      "result": "MissedShots",
-      "player": "Diogo Dalot",
-      "situation": "FromCorner"
-    },
-    {
-      "side": "home",
-      "minute": 37,
-      "x": 0.8581,
-      "y": 0.3127,
-      "xg": 0.02,
-      "result": "MissedShots",
-      "player": "Amad Diallo",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "away",
-      "minute": 40,
-      "x": 0.9246,
-      "y": 0.5056,
+      "minute": 23,
+      "x": 0.9127,
+      "y": 0.5247,
       "xg": 0.08,
-      "result": "MissedShots",
-      "player": "Pau Torres",
+      "result": "SavedShot",
+      "player": "Kai Havertz",
       "situation": "SetPiece"
     },
     {
-      "side": "home",
-      "minute": 42,
-      "x": 0.7781,
-      "y": 0.2241,
-      "xg": 0.02,
-      "result": "BlockedShot",
-      "player": "Bruno Fernandes",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 43,
-      "x": 0.9109,
-      "y": 0.3529,
-      "xg": 0.16,
-      "result": "SavedShot",
-      "player": "Amad Diallo",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 44,
-      "x": 0.8581,
-      "y": 0.4888,
-      "xg": 0.19,
-      "result": "Goal",
-      "player": "Youri Tielemans",
-      "situation": "RegularPlay"
-    },
-    {
       "side": "away",
-      "minute": 45,
-      "x": 0.9357,
-      "y": 0.3426,
-      "xg": 0.19,
+      "minute": 25,
+      "x": 0.9675,
+      "y": 0.5011,
+      "xg": 0.69,
       "result": "MissedShots",
-      "player": "Alysson Edward",
+      "player": "Donyell Malen",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 32,
+      "x": 0.8714,
+      "y": 0.6296,
+      "xg": 0.1,
+      "result": "ShotOnPost",
+      "player": "Derry Scherhant",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 40,
+      "x": 0.7738,
+      "y": 0.3622,
+      "xg": 0.03,
+      "result": "BlockedShot",
+      "player": "Aleksandar Pavlović",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 41,
+      "x": 0.8952,
+      "y": 0.7243,
+      "xg": 0.03,
+      "result": "Goal",
+      "player": "Derry Scherhant",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 46,
+      "x": 0.8438,
+      "y": 0.6063,
+      "xg": 0.05,
+      "result": "BlockedShot",
+      "player": "Derry Scherhant",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 46,
+      "x": 0.8895,
+      "y": 0.6194,
+      "xg": 0.15,
+      "result": "MissedShots",
+      "player": "Derry Scherhant",
       "situation": "RegularPlay"
     },
     {
       "side": "away",
       "minute": 48,
-      "x": 0.8952,
-      "y": 0.5,
-      "xg": 0.79,
-      "result": "Goal",
-      "player": "John McGinn",
-      "situation": "Penalty"
-    },
-    {
-      "side": "away",
-      "minute": 53,
-      "x": 0.9774,
-      "y": 0.4641,
-      "xg": 0.27,
-      "result": "Goal",
-      "player": "Leon Goretzka",
-      "situation": "SetPiece"
-    },
-    {
-      "side": "away",
-      "minute": 53,
-      "x": 0.9756,
-      "y": 0.509,
-      "xg": 0.41,
+      "x": 0.9228,
+      "y": 0.4296,
+      "xg": 0.11,
       "result": "MissedShots",
-      "player": "Nicolas Jackson",
-      "situation": "SetPiece"
-    },
-    {
-      "side": "home",
-      "minute": 59,
-      "x": 0.9136,
-      "y": 0.6084,
-      "xg": 0.32,
-      "result": "SavedShot",
-      "player": "Bryan Mbeumo",
+      "player": "Denzel Dumfries",
       "situation": "RegularPlay"
     },
     {
       "side": "home",
-      "minute": 59,
-      "x": 0.8122,
-      "y": 0.4458,
-      "xg": 0.03,
+      "minute": 51,
+      "x": 0.8275,
+      "y": 0.3653,
+      "xg": 0.07,
+      "result": "MissedShots",
+      "player": "Brajan Gruda",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 52,
+      "x": 0.7062,
+      "y": 0.6245,
+      "xg": 0.01,
       "result": "BlockedShot",
-      "player": "Youri Tielemans",
+      "player": "Florian Wirtz",
       "situation": "RegularPlay"
     },
     {
       "side": "away",
+      "minute": 57,
+      "x": 0.8122,
+      "y": 0.6339,
+      "xg": 0.04,
+      "result": "SavedShot",
+      "player": "Cody Gakpo",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
       "minute": 60,
-      "x": 0.8398,
-      "y": 0.563,
+      "x": 0.8017,
+      "y": 0.4259,
+      "xg": 0.05,
+      "result": "Goal",
+      "player": "Florian Wirtz",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 65,
+      "x": 0.9201,
+      "y": 0.5067,
+      "xg": 0.14,
+      "result": "Goal",
+      "player": "Nico Schlotterbeck",
+      "situation": "SetPiece"
+    },
+    {
+      "side": "home",
+      "minute": 67,
+      "x": 0.7512,
+      "y": 0.4123,
+      "xg": 0.04,
+      "result": "MissedShots",
+      "player": "Florian Wirtz",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 71,
+      "x": 0.953,
+      "y": 0.4333,
+      "xg": 0.25,
+      "result": "Goal",
+      "player": "Florian Wirtz",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 73,
+      "x": 0.7877,
+      "y": 0.3169,
+      "xg": 0.02,
+      "result": "SavedShot",
+      "player": "Brajan Gruda",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 74,
+      "x": 0.8091,
+      "y": 0.4574,
+      "xg": 0.03,
+      "result": "SavedShot",
+      "player": "Aleksandar Pavlović",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 77,
+      "x": 0.953,
+      "y": 0.6986,
+      "xg": 0.07,
+      "result": "SavedShot",
+      "player": "Derry Scherhant",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 77,
+      "x": 0.9329,
+      "y": 0.4061,
+      "xg": 0.37,
+      "result": "Goal",
+      "player": "Brajan Gruda",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "home",
+      "minute": 82,
+      "x": 0.8895,
+      "y": 0.4271,
+      "xg": 0.03,
+      "result": "SavedShot",
+      "player": "Jonathan Tah",
+      "situation": "FromCorner"
+    },
+    {
+      "side": "away",
+      "minute": 83,
+      "x": 0.8705,
+      "y": 0.3789,
+      "xg": 0.14,
+      "result": "BlockedShot",
+      "player": "Crysencio Summerville",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "away",
+      "minute": 85,
+      "x": 0.7126,
+      "y": 0.589,
+      "xg": 0.02,
+      "result": "BlockedShot",
+      "player": "Ruben van Bommel",
+      "situation": "RegularPlay"
+    },
+    {
+      "side": "away",
+      "minute": 90,
+      "x": 0.8705,
+      "y": 0.6873,
       "xg": 0.07,
       "result": "BlockedShot",
-      "player": "Johan Manzambi",
-      "situation": "FastBreak"
-    },
-    {
-      "side": "home",
-      "minute": 60,
-      "x": 0.7952,
-      "y": 0.5112,
-      "xg": 0.06,
-      "result": "MissedShots",
-      "player": "Youri Tielemans",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 62,
-      "x": 0.8214,
-      "y": 0.5314,
-      "xg": 0.02,
-      "result": "BlockedShot",
-      "player": "Matheus Cunha",
-      "situation": "SetPiece"
-    },
-    {
-      "side": "home",
-      "minute": 68,
-      "x": 0.8306,
-      "y": 0.2942,
-      "xg": 0.03,
-      "result": "MissedShots",
-      "player": "Bryan Mbeumo",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 70,
-      "x": 0.8895,
-      "y": 0.711,
-      "xg": 0.06,
-      "result": "SavedShot",
-      "player": "Matheus Cunha",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 70,
-      "x": 0.8367,
-      "y": 0.7583,
-      "xg": 0.03,
-      "result": "MissedShots",
-      "player": "Bruno Fernandes",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 77,
-      "x": 0.8952,
-      "y": 0.8187,
-      "xg": 0.02,
-      "result": "BlockedShot",
-      "player": "Bruno Fernandes",
-      "situation": "FromCorner"
-    },
-    {
-      "side": "home",
-      "minute": 77,
-      "x": 0.8486,
-      "y": 0.3755,
-      "xg": 0.04,
-      "result": "MissedShots",
-      "player": "Bryan Mbeumo",
+      "player": "Ruben van Bommel",
       "situation": "RegularPlay"
     },
     {
       "side": "away",
-      "minute": 82,
-      "x": 0.9136,
-      "y": 0.4574,
-      "xg": 0.06,
-      "result": "MissedShots",
-      "player": "Ross Barkley",
-      "situation": "SetPiece"
+      "minute": 90,
+      "x": 0.6815,
+      "y": 0.7058,
+      "xg": 0.02,
+      "result": "BlockedShot",
+      "player": "Joey Veerman",
+      "situation": "RegularPlay"
     },
     {
       "side": "away",
-      "minute": 87,
-      "x": 0.7791,
-      "y": 0.5655,
-      "xg": 0.04,
-      "result": "SavedShot",
-      "player": "Ross Barkley",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 89,
-      "x": 0.9237,
-      "y": 0.5314,
-      "xg": 0.52,
-      "result": "ShotOnPost",
-      "player": "Mason Mount",
-      "situation": "FastBreak"
-    },
-    {
-      "side": "home",
       "minute": 90,
-      "x": 0.9136,
-      "y": 0.5381,
-      "xg": 0.2,
-      "result": "Goal",
-      "player": "Joshua Zirkzee",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 90,
-      "x": 0.8619,
-      "y": 0.5056,
-      "xg": 0.14,
+      "x": 0.9311,
+      "y": 0.4135,
+      "xg": 0.05,
       "result": "MissedShots",
-      "player": "Mason Mount",
+      "player": "Mexx Meerdink",
       "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 90,
-      "x": 0.9201,
-      "y": 0.4382,
-      "xg": 0.06,
-      "result": "MissedShots",
-      "player": "Mason Mount",
-      "situation": "RegularPlay"
-    },
-    {
-      "side": "home",
-      "minute": 90,
-      "x": 0.9756,
-      "y": 0.4787,
-      "xg": 0.35,
-      "result": "Goal",
-      "player": "Patrick Dorgu",
-      "situation": "FromCorner"
     }
   ]
 }
