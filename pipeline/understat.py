@@ -37,14 +37,24 @@ def _page_var(html: str, name: str):
 
 def league_matches(league: str, season: int) -> list[dict]:
     try:  # newer site: JSON endpoint
-        data = _get(f"{BASE}/getLeagueData/{league}/{season}").json()
+        r = _get(f"{BASE}/getLeagueData/{league}/{season}")
+        log.info("Understat endpoint: HTTP %s, %d bytes, starts: %r", r.status_code, len(r.text),
+                 r.text[:160])
+        data = r.json()
         dates = data.get("dates") if isinstance(data, dict) else None
         if dates:
             return dates
     except Exception as e:
         log.info("Understat league endpoint not usable (%s); trying the page", e)
     html = _get(f"{BASE}/league/{league}/{season}").text
-    return _page_var(html, "datesData") or []
+    found = _page_var(html, "datesData")
+    if not found:
+        names = sorted(set(re.findall(r"var\s+(\w+)\s*=", html)))[:20]
+        scripts = re.findall(r'<script[^>]+src="([^"]+)"', html)[:15]
+        log.info("Understat page: %d bytes, title %r, JS variables %s, scripts %s",
+                 len(html), (re.search(r"<title>(.*?)</title>", html, re.S) or [None, ""])[1][:80],
+                 names, scripts)
+    return found or []
 
 
 def match_shots(match_id: str) -> dict:
