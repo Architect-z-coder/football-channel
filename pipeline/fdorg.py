@@ -4,6 +4,7 @@ Free tier: 12 competitions, current season, scores (full time + half time), leag
 team results. No in-match stats (possession, shots) and no lineups. Limit: 10 calls per minute,
 so every call waits 6.5 seconds.
 """
+import re
 import time
 from datetime import date, timedelta
 
@@ -60,34 +61,94 @@ def _table_rows(standings: dict) -> dict:
     return {}
 
 
-def find_best(cfg: dict, api: FootballData) -> tuple[dict, dict, str]:
+def _table(api: FootballData, code: str) -> dict:
+    try:
+        return _table_rows(api.get(f"competitions/{code}/standings"))
+    except StopPipeline as e:
+        log.warning("No table for %s: %s", code, e)
+        return {}
+
+
+def find_candidates(cfg: dict, api: FootballData) -> list[dict]:
+    """All finished matches in the look-back window, most interesting first."""
     days = cfg["scout"]["look_back_days"]
     frm, to = (date.today() - timedelta(days=days)).isoformat(), date.today().isoformat()
     used = set(read_json(DATA_DIR / "history.json", {"fixtures": []})["fixtures"])
-    best = None
+    out = []
     for comp in cfg["competitions"]:
         code = comp.get("code")
         if not code:
             continue
         data = api.get(f"competitions/{code}/matches", dateFrom=frm, dateTo=to, status="FINISHED")
-        matches = [m for m in data.get("matches", []) if m["id"] not in used]
+        matches = data.get("matches", [])
         if not matches:
             continue
-        table = {}
-        if comp.get("has_table", True):
-            try:
-                table = _table_rows(api.get(f"competitions/{code}/standings"))
-            except StopPipeline as e:
-                log.warning("No table for %s: %s", code, e)
+        table = _table(api, code)
         positions = {tid: row["position"] for tid, row in table.items()}
         for m in matches:
-            s = _interest(m, comp["weight"], positions)
-            if best is None or s > best[0]:
-                best = (s, m, comp, table)
-    if not best or best[0] < cfg["scout"]["min_score"]:
+            out.append({"interest": _interest(m, comp["weight"], positions), "match": m,
+                        "competition": comp["name"], "table": table, "done": m["id"] in used})
+    out.sort(key=lambda c: c["interest"], reverse=True)
+    log.info("%d finished matches found (%d API calls)", len(out), api.calls)
+    return out
+
+
+def describe(c: dict) -> str:
+    m = c["match"]
+    h, a = _score(m)
+    flag = "  (already covered)" if c["done"] else ""
+    return (f"{m['id']}  {m['utcDate'][:10]}  {c['competition']}: "
+            f"{m['homeTeam'].get('shortName') or m['homeTeam']['name']} {h}-{a} "
+            f"{m['awayTeam'].get('shortName') or m['awayTeam']['name']}  "
+            f"(interest {c['interest']:.1f}){flag}")
+
+
+def _names(team: dict) -> list[str]:
+    return [str(team.get(k) or "").lower() for k in ("name", "shortName", "tla")]
+
+
+def _matches_pick(m: dict, words: list[str]) -> bool:
+    names = _names(m["homeTeam"]) + _names(m["awayTeam"])
+    return all(any(w in n for n in names) for w in words)
+
+
+def choose(cfg: dict, api: FootballData, pick: str | None) -> tuple[dict, dict, str]:
+    """Return (match, table, competition name) for the match you picked.
+
+    pick = a match number from the list ("575383") or team names ("Arsenal Chelsea").
+    Without a pick: only picks by itself if config scout.auto_pick is true.
+    """
+    pick = (pick or "").strip()
+    if pick.isdigit():
+        m = api.get(f"matches/{pick}")
+        m = m.get("match", m)
+        if m.get("status") != "FINISHED":
+            raise StopPipeline(f"Match {pick} has not finished yet (status: {m.get('status')}).")
+        comp = m.get("competition") or {}
+        table = _table(api, comp["code"]) if comp.get("code") else {}
+        log.info("You picked match %s", pick)
+        return m, table, comp.get("name", "")
+
+    candidates = find_candidates(cfg, api)
+    if pick:
+        words = [w for w in re.split(r"[\s,]+|\bvs?\b|-", pick.lower()) if w and w != "v"]
+        hits = [c for c in candidates if _matches_pick(c["match"], words)]
+        if not hits:
+            raise StopPipeline(
+                f"No finished match matching '{pick}' in the last {cfg['scout']['look_back_days']} days. "
+                "Run the 'list' mode to see the choices, or use a longer look-back.")
+        c = hits[0]
+        log.info("You picked: %s", describe(c))
+        return c["match"], c["table"], c["competition"]
+
+    if not cfg["scout"].get("auto_pick", False):
+        raise StopPipeline("No match chosen. Add one to data/queue.txt, or run the workflow "
+                           "with a match. Run the 'list' mode to see this week's choices.")
+    fresh = [c for c in candidates if not c["done"]]
+    if not fresh or fresh[0]["interest"] < cfg["scout"]["min_score"]:
         raise StopPipeline("No finished match worth a video in the look-back window.")
-    log.info("Chosen match %s (interest %.2f) after %d API calls", best[1]["id"], best[0], api.calls)
-    return best[1], best[3], best[2]["name"]
+    log.info("Auto-picked: %s", describe(fresh[0]))
+    return fresh[0]["match"], fresh[0]["table"], fresh[0]["competition"]
 
 
 def _last5(api: FootballData, team_id: int, before: str) -> list[dict]:
@@ -155,9 +216,14 @@ def build_pack(match: dict, table: dict, competition: str, api: FootballData) ->
     }
 
 
-def scout(cfg: dict) -> dict:
+def list_matches(cfg: dict) -> list[str]:
     api = FootballData(secret("FOOTBALL_DATA_KEY", required=True))
-    match, table, comp = find_best(cfg, api)
+    return [describe(c) for c in find_candidates(cfg, api)]
+
+
+def scout(cfg: dict, pick: str | None = None) -> dict:
+    api = FootballData(secret("FOOTBALL_DATA_KEY", required=True))
+    match, table, comp = choose(cfg, api, pick)
     pack = build_pack(match, table, comp, api)
     log.info("Data pack: %s vs %s (%s), %d facts, %d API calls",
              pack["home"], pack["away"], comp, len(pack["facts"]), api.calls)

@@ -1,0 +1,6 @@
+# Your match queue. Each scheduled run (Monday and Thursday) makes a video about the FIRST line,
+# then removes it once the video is uploaded.
+# Write one match per line, either:
+#   - the two team names, e.g.   Arsenal Chelsea
+#   - or the match number from the "list" run, e.g.   575383
+# Lines starting with # are ignored. If the queue is empty, nothing is made.

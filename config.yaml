@@ -33,7 +33,7 @@ priority_teams:
   - { name: "Algeria", bonus: 1.5 }
 
 scout:
-  look_back_days: 4        # only matches that finished in the last N days
+  look_back_days: 7        # only matches that finished in the last N days
   min_score: 1.0           # skip the run if no match scores at least this
 
 writer:

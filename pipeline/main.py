@@ -4,6 +4,10 @@ Usage:
   python -m pipeline.main               # full run (needs all secrets)
   python -m pipeline.main --dry-run     # sample match, no upload; AI used only if a key is set
   python -m pipeline.main --no-upload   # real match, everything except the upload
+  python -m pipeline.main --list        # show recent finished matches to choose from
+  python -m pipeline.main --pick "Arsenal Chelsea"   # make a video about the match you choose
+
+Without --pick, the next line of data/queue.txt is used (and removed after a successful run).
 """
 import argparse
 import sys
@@ -14,6 +18,43 @@ from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, l
     secret, slugify, write_json
 
 MAX_ATTEMPTS = 2
+QUEUE = DATA_DIR / "queue.txt"
+
+
+def next_in_queue() -> str | None:
+    if not QUEUE.exists():
+        return None
+    for line in QUEUE.read_text(encoding="utf-8").splitlines():
+        if line.strip() and not line.strip().startswith("#"):
+            return line.strip()
+    return None
+
+
+def pop_queue(pick: str) -> None:
+    lines = QUEUE.read_text(encoding="utf-8").splitlines()
+    for i, line in enumerate(lines):
+        if line.strip() == pick:
+            del lines[i]
+            break
+    QUEUE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def show_list() -> int:
+    from .fdorg import list_matches
+    cfg = load_config()
+    rows = list_matches(cfg)
+    days = cfg["scout"]["look_back_days"]
+    text = (f"Finished matches in the last {days} days (most interesting first).\n"
+            "To choose one, copy its number (first column) or type the two team names.\n\n"
+            + ("\n".join(rows) if rows else "None found. Try a longer look-back."))
+    print(text)
+    import os
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("## Matches to choose from\n\n```\n" + text + "\n```\n")
+    notify.send(text[:3800])
+    return 0
 
 
 def get_script(cfg, pack, use_ai):
@@ -32,13 +73,19 @@ def get_script(cfg, pack, use_ai):
     return script, report
 
 
-def run(dry_run: bool, upload: bool) -> int:
+def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     cfg = load_config()
+    from_queue = False
+    if not dry_run and not pick:
+        pick = next_in_queue()
+        from_queue = bool(pick)
+        if pick:
+            log.info("Next match from the queue: %s", pick)
     if dry_run:
         pack = read_json(SAMPLES_DIR / "sample_pack.json")  # fictional match, same shape as a real pack
     elif cfg.get("data_source", "football-data") == "football-data":
         from .fdorg import scout
-        pack = scout(cfg)
+        pack = scout(cfg, pick)
     else:
         from .scout import scout
         pack = scout(cfg)
@@ -92,6 +139,8 @@ def run(dry_run: bool, upload: bool) -> int:
             f"Review, then set to Public or Scheduled:\nhttps://studio.youtube.com/video/{vid}/edit")
     else:
         notify.send(f"Test run finished ({minutes:.1f} min). Files: {workdir.name}")
+    if from_queue and upload and not dry_run:
+        pop_queue(pick)  # only remove it once the video is really uploaded
     log.info("Done. Output in %s", workdir)
     return 0
 
@@ -100,9 +149,13 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--no-upload", action="store_true")
+    p.add_argument("--list", action="store_true")
+    p.add_argument("--pick", default="")
     args = p.parse_args()
     try:
-        sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload))
+        if args.list:
+            sys.exit(show_list())
+        sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload, pick=args.pick or None))
     except StopPipeline as e:
         log.error("Stopped: %s", e)
         notify.send(f"Pipeline stopped, nothing was published.\n\nReason: {e}")
