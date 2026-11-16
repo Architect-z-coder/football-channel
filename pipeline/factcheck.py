@@ -31,6 +31,8 @@ def allowed_numbers(pack: dict) -> set[float]:
     by_id = {f["id"]: f["value"] for f in pack["facts"]}
     for v in by_id.values():
         allowed.update(_numbers_in(v))
+    for shot in pack.get("shots", []):  # Understat shot list (minute, xG)
+        allowed.update(_numbers_in({"minute": shot.get("minute"), "xg": shot.get("xg")}))
     # sums and differences of matching home/away pairs (e.g. "8 more shots")
     for fid, v in by_id.items():
         if fid.startswith("home_"):

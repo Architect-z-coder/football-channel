@@ -73,6 +73,27 @@ def get_script(cfg, pack, use_ai):
     return script, report
 
 
+def show_data(pick: str | None) -> int:
+    """Fetch the data pack for a match and print it. No script, voice or video."""
+    from .fdorg import scout
+    cfg = load_config()
+    pack = scout(cfg, pick or next_in_queue())
+    lines = [f"{f['id']}: {f['value']}" for f in pack["facts"]]
+    shots = pack.get("shots", [])
+    text = (f"{pack['home']} v {pack['away']} ({pack['competition']}), source: {pack.get('source')}\n"
+            + "\n".join(lines) + f"\n\nShots from Understat: {len(shots)}")
+    if shots:
+        text += "\n" + "\n".join(f"{s['minute']}' {s['side']} {s['player']} xG {s['xg']} {s['result']}"
+                                   for s in shots[:40])
+    print(text)
+    import os
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("## Match data\n\n```\n" + text + "\n```\n")
+    return 0
+
+
 def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     cfg = load_config()
     from_queue = False
@@ -151,10 +172,13 @@ def main():
     p.add_argument("--no-upload", action="store_true")
     p.add_argument("--list", action="store_true")
     p.add_argument("--pick", default="")
+    p.add_argument("--data-only", action="store_true")
     args = p.parse_args()
     try:
         if args.list:
             sys.exit(show_list())
+        if args.data_only:
+            sys.exit(show_data(args.pick or None))
         sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload, pick=args.pick or None))
     except StopPipeline as e:
         log.error("Stopped: %s", e)

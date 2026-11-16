@@ -406,7 +406,122 @@ const LessonList = ({ visual, scene }) => {
   );
 };
 
+// ---------- Understat: shot map ----------
+const ShotMap = ({ props, scene }) => {
+  const f = useCurrentFrame();
+  const shots = props.shots || [];
+  const F = facts(props);
+  const W = 920, H = 596;
+  const span = scene.durationInFrames * 0.65;
+  const maxMin = Math.max(90, ...shots.map((s) => s.minute));
+  return (
+    <Center>
+      <div style={{ display: "flex", justifyContent: "space-between", width: W, fontFamily: HEAD,
+                    fontSize: 44, marginBottom: 10 }}>
+        <span style={{ color: C.home }}>{props.home} <CountUp value={F.home_xg} frames={span}
+              style={{ color: C.text }} /> xG</span>
+        <span style={{ color: C.away }}>xG <CountUp value={F.away_xg} frames={span}
+              style={{ color: C.text }} /> {props.away}</span>
+      </div>
+      <svg width={W} height={H} style={{ background: "#123222", borderRadius: 12 }}>
+        <g stroke="rgba(255,255,255,0.22)" strokeWidth="3" fill="none">
+          <rect x="2" y="2" width={W - 4} height={H - 4} rx="10" />
+          <line x1={W / 2} y1="0" x2={W / 2} y2={H} />
+          <circle cx={W / 2} cy={H / 2} r="90" />
+          <rect x="0" y={H * 0.2} width={W * 0.16} height={H * 0.6} />
+          <rect x={W * 0.84} y={H * 0.2} width={W * 0.16} height={H * 0.6} />
+          <rect x="0" y={H * 0.37} width={W * 0.055} height={H * 0.26} />
+          <rect x={W * 0.945} y={H * 0.37} width={W * 0.055} height={H * 0.26} />
+        </g>
+        {shots.map((s, i) => {
+          const home = s.side === "home";
+          const cx = (home ? s.x : 1 - s.x) * W;
+          const cy = (home ? 1 - s.y : s.y) * H;
+          const appear = (s.minute / maxMin) * span;
+          const p = spring({ frame: f - appear, fps: 30, config: { damping: 10, mass: 0.5 } });
+          const r = 8 + 52 * Math.sqrt(s.xg);
+          const goal = s.result === "Goal";
+          const color = home ? C.home : C.away;
+          return (
+            <g key={i} transform={`translate(${cx} ${cy}) scale(${p})`}>
+              <circle r={r} fill={goal ? C.accent : color} fillOpacity={goal ? 1 : 0.35}
+                      stroke={color} strokeWidth={goal ? 7 : 3} />
+            </g>
+          );
+        })}
+      </svg>
+      <div style={{ marginTop: 10, fontFamily: BODY, fontWeight: 600, fontSize: 24, color: C.muted }}>
+        Bigger circle = better chance (xG) · gold = goal · data: Understat
+      </div>
+    </Center>
+  );
+};
+
+// ---------- Understat: xG race ----------
+const XgTimeline = ({ props, scene }) => {
+  const f = useCurrentFrame();
+  const shots = props.shots || [];
+  const W = 1500, H = 520, PAD = 60, RIGHT = 330;
+  const maxMin = Math.max(90, ...shots.map((s) => s.minute + 2));
+  const cum = (side) => {
+    let total = 0;
+    const pts = [[0, 0]];
+    shots.filter((s) => s.side === side).forEach((s) => {
+      pts.push([s.minute, total]);
+      total += s.xg;
+      pts.push([s.minute, total]);
+    });
+    pts.push([maxMin, total]);
+    return { pts, total };
+  };
+  const home = cum("home"), away = cum("away");
+  const maxY = Math.max(1, home.total, away.total) * 1.15;
+  const X = (m) => PAD + (m / maxMin) * (W - PAD - RIGHT);
+  const Y = (v) => H - PAD - (v / maxY) * (H - 2 * PAD);
+  const path = (pts) => pts.map(([m, v], i) => `${i ? "L" : "M"}${X(m)},${Y(v)}`).join(" ");
+  const reveal = interpolate(f, [0, scene.durationInFrames * 0.7], [0, 1], {
+    extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const clipW = PAD + reveal * (W - PAD - RIGHT) + 4;
+  let yh = Y(home.total), ya = Y(away.total);
+  if (Math.abs(yh - ya) < 56) { const mid = (yh + ya) / 2; const up = home.total >= away.total; yh = mid + (up ? -28 : 28); ya = mid + (up ? 28 : -28); }
+  return (
+    <Center>
+      <div style={{ fontFamily: HEAD, fontSize: 62, color: C.text, marginBottom: 6 }}>
+        The xG race
+      </div>
+      <svg width={W} height={H}>
+        <defs><clipPath id="rev"><rect x="0" y="0" width={clipW} height={H} /></clipPath></defs>
+        {[0, 45, 90].map((m) => (
+          <g key={m}>
+            <line x1={X(m)} y1={PAD} x2={X(m)} y2={H - PAD} stroke={C.line} strokeWidth="2" />
+            <text x={X(m)} y={H - 18} fill={C.muted} fontSize="26" fontFamily={BODY}
+                  textAnchor="middle">{m}'</text>
+          </g>
+        ))}
+        <g clipPath="url(#rev)" fill="none" strokeWidth="8" strokeLinejoin="round">
+          <path d={path(home.pts)} stroke={C.home} />
+          <path d={path(away.pts)} stroke={C.away} />
+          {shots.filter((s) => s.result === "Goal").map((s, i) => {
+            const before = shots.filter((t) => t.side === s.side && t.minute <= s.minute)
+              .reduce((a, t) => a + t.xg, 0);
+            return <circle key={i} cx={X(s.minute)} cy={Y(before)} r="16" fill={C.accent}
+                           stroke={C.bg} strokeWidth="5" />;
+          })}
+        </g>
+        <text x={W - RIGHT + 24} y={yh + 14} fill={C.home} fontSize="40" fontFamily={HEAD}
+              opacity={reveal > 0.95 ? 1 : 0}>{home.total.toFixed(2)} {props.home}</text>
+        <text x={W - RIGHT + 24} y={ya + 14} fill={C.away} fontSize="40" fontFamily={HEAD}
+              opacity={reveal > 0.95 ? 1 : 0}>{away.total.toFixed(2)} {props.away}</text>
+      </svg>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 24, color: C.muted }}>
+        Running total of expected goals · gold = goal · data: Understat
+      </div>
+    </Center>
+  );
+};
+
 const MAP = {
+  shot_map: ShotMap, xg_timeline: XgTimeline,
   title_card: TitleCard, key_number: KeyNumber, scoreline: Scoreline,
   halftime_fulltime: HalfFull, stat_bars: StatBars, table_snapshot: TableSnapshot,
   form_compare: FormCompare, events_timeline: EventsTimeline, formations: Formations,

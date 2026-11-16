@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "list = show matches to choose from, full = make + upload as private, no-upload = make files only, dry-run = sample match"
+        description: "list = show matches to choose from, data-only = show one match's data, full = make + upload as private, no-upload = make files only, dry-run = sample match"
         default: "list"
         type: choice
-        options: [list, full, no-upload, dry-run]
+        options: [list, data-only, full, no-upload, dry-run]
       match:
         description: "Which match? Team names (e.g. Arsenal Chelsea) or the match number from the list. Empty = next in data/queue.txt"
         default: ""
@@ -72,6 +72,7 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
           if [ "$MODE" = "list" ]; then python -m pipeline.main --list
+          elif [ "$MODE" = "data-only" ]; then python -m pipeline.main --data-only --pick "$MATCH"
           elif [ "$MODE" = "dry-run" ]; then python -m pipeline.main --dry-run
           elif [ "$MODE" = "no-upload" ]; then python -m pipeline.main --no-upload --pick "$MATCH"
           else python -m pipeline.main --pick "$MATCH"; fi

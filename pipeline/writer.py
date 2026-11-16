@@ -17,7 +17,11 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    (only if the pack has home_position / away_position)
 - {"type": "form_compare"}                      -> both teams' record in their previous 5 matches
                                                    (only if the pack has *_last5_* facts)
-- {"type": "events_timeline"}                   -> goals and red cards on a 90-minute line
+- {"type": "shot_map"}                          -> every shot on a pitch, sized by xG, goals highlighted
+                                                   (only if the pack has a "shots" list)
+- {"type": "xg_timeline"}                       -> both teams' cumulative xG minute by minute, with goals
+                                                   (only if the pack has a "shots" list)
+- {"type": "events_timeline"}                 -> goals and red cards on a 90-minute line
                                                    (only if the pack has event_ facts)
 - {"type": "formations"}                        -> both formations on a pitch
                                                    (only if the pack has *_formation facts)
@@ -41,7 +45,10 @@ HARD RULES
    the next breakdown). Put a short subscribe line at the end of key 1.
 6. Exactly 9 scenes, one per Match Lens beat. Each scene: 40-110 words of narration.
    Change the visual every scene.
-7. For each scene list the fact ids you used in "fact_ids".
+7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
+8. If the pack has a "shots" list, use it: xG explains whether a result was deserved, where the
+   chances came from and who had the best ones. Say "expected goals, or xG" the first time and explain
+   it in one short sentence. Credit "data from Understat" once in the narration.
 {VISUAL_TYPES}
 Return ONLY the JSON object: no thinking, notes or text before or after it, no comments inside it.
 Keep the whole reply under 2,500 words. Shape:

@@ -50,6 +50,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "source": pack.get("source", "API-Football"),
         "facts": {f["id"]: f["value"] for f in pack["facts"]},
         "events": _events(pack),
+        "shots": pack.get("shots", []),
         "scenes": scenes,
     }
     return props, durs
