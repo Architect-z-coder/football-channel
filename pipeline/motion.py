@@ -64,6 +64,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "shots": pack.get("shots", []),
         "momentum": pack.get("momentum") or [],
         "ratings": pack.get("ratings") or [],
+        "lineups": pack.get("lineups") or {},
         "press": pack.get("press") or [],
         "history": history.used_in(script),
         "scenes": scenes,

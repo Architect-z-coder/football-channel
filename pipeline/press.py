@@ -12,16 +12,18 @@ from .llm import parse_json
 
 SYSTEM = """You research what was said after a football match, for a fact-checked analysis video.
 Search the web for reports of the post-match press conferences and interviews of this exact match.
-Collect only:
-- what each head coach said about tactics, the game plan, changes, why the result happened;
-- notable things players said about the match itself.
-Rules: only statements reported after THIS match, by reliable outlets (club/federation sites,
+Collect, for this exact match:
+- BEFORE the match (pre-match press conference, team news): what each head coach said about the plan,
+  selection choices and confirmed absences (injured or suspended players);
+- AFTER the match: what each head coach said about tactics, the game plan, changes, why the result
+  happened; notable things players said about the match itself.
+Rules: only statements about THIS match, by reliable outlets (club/federation sites,
 major news, wire agencies). Each item needs the source URL and the speaker's name and role. Quotes
 must be under 25 words, word for word as reported; otherwise give a short paraphrase marked as such.
 Skip rumours, transfers, injury speculation, politics, betting and private life.
 If you find nothing reliable, return an empty list.
 Return ONLY JSON: {"items": [{"speaker": str, "role": str, "team": str, "quote": str,
-"is_paraphrase": bool, "topic": "tactics|result|player|other", "source": str, "url": str}]}"""
+"is_paraphrase": bool, "when": "before|after", "topic": "tactics|selection|absence|result|player|other", "source": str, "url": str}]}"""
 
 
 def gather(cfg: dict, pack: dict) -> list[dict]:
@@ -39,14 +41,14 @@ def gather(cfg: dict, pack: dict) -> list[dict]:
             model=cfg["writer"]["model"], max_tokens=4000, system=SYSTEM,
             messages=[{"role": "user", "content": user}],
             tools=[{"type": cfg.get("press", {}).get("tool", "web_search_20250305"),
-                    "name": "web_search", "max_uses": 6}])
+                    "name": "web_search", "max_uses": 8}])
         text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
         items = [i for i in parse_json(text).get("items", []) if i.get("url") and i.get("quote")]
         for i in items:
             if not i.get("is_paraphrase") and len(i["quote"].split()) > 25:
                 i["quote"] = " ".join(i["quote"].split()[:25]) + "..."
         log.info("Press: %d statements found", len(items))
-        return items[:8]
+        return items[:10]
     except Exception as e:
         log.warning("Press context skipped: %s", e)
         return []

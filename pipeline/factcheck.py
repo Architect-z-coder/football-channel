@@ -35,6 +35,8 @@ def allowed_numbers(pack: dict) -> set[float]:
         allowed.update(_numbers_in({"minute": shot.get("minute"), "xg": shot.get("xg")}))
     allowed.update(_numbers_in(ai_pack(pack).get("momentum_home_on_top_pct", {})))
     allowed.update(_numbers_in(pack.get("press", [])))
+    for side in (pack.get("lineups") or {}).values():   # shirt numbers, ratings, values
+        allowed.update(_numbers_in(side))
     for lens in pack.get("history", []):  # StatsBomb history lens facts, plus years in its label
         allowed.update(_numbers_in(lens.get("facts", {})))
         allowed.update(_numbers_in(lens.get("label", "")))

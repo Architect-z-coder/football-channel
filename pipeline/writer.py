@@ -28,6 +28,8 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    (only if the pack has *_formation facts)
 - {"type": "text_card", "heading": str, "lines": [str, ...]}  -> max 3 short lines
 - {"type": "lesson_list", "items": [str, str, str]}
+- {"type": "lineups"}                           -> both starting elevens on the pitch with formations,
+                                                   ratings, and the key missing players.
 - {"type": "player_ratings"}                    -> best and lowest-rated starters with FotMob ratings.
 - {"type": "quote_card", "press_index": int}    -> a coach or player quote from the pack's "press"
                                                    list (index from 0), with speaker and source.
@@ -70,6 +72,11 @@ HARD RULES
    insults. When a coach explained the plan or a change, connect it to the numbers ("Koeman said
    ...; the data shows ..."). Quote only text from "press", say who said it, keep quotes word for
    word, and mention the outlet once in the description. Never invent a reason a coach did not give.
+11. Line-ups and absences: the pack may hold each starting eleven, the coaches, and confirmed
+   absentees (injured or suspended) with market values. When a key player (high market value) was
+   missing, or a coach made a surprising choice, say so and connect it to the result and to what the
+   coach said BEFORE the match ("when": "before" in press) and AFTER it. State absences only as
+   reported; never guess injury details or return dates.
 9. History lens (optional, at most ONE scene): the pack's "history" list holds famous teams' per-match
    averages from StatsBomb open data. Use one only when its idea and tags genuinely match what this
    match's numbers show, as a brief comparison that teaches (e.g. "for context, Leicester in 2015/16

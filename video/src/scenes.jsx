@@ -714,7 +714,73 @@ const QuoteCard = ({ visual, props }) => {
   );
 };
 
+
+// ---------- Line-ups: both elevens on one pitch + key absentees ----------
+const Lineups = ({ props }) => {
+  const f = useCurrentFrame();
+  const L = props.lineups || {};
+  if (!L.home || !L.away) return null;
+  const PW = 1240, PH = 680;
+  const dot = (p, side, i) => {
+    // FotMob horizontal layout: x 0..1 from own goal, y 0..1 across. Home attacks right, away left.
+    const x = side === "home" ? (p.x || 0) * PW / 2 : PW - (p.x || 0) * PW / 2;
+    const y = (side === "home" ? (p.y || 0.5) : 1 - (p.y || 0.5)) * PH;
+    const s = spring({ frame: f - 6 - i * 2, fps: 30, config: { damping: 12 } });
+    const col = side === "home" ? C.home : C.away;
+    const last = (p.player || "").split(" ").slice(-1)[0];
+    return (
+      <g key={side + i} transform={`translate(${x},${y}) scale(${s})`}>
+        <circle r={24} fill={col} />
+        <text y={8} textAnchor="middle" fontFamily={BODY} fontWeight={800} fontSize={22} fill={C.bg}>{p.shirt}</text>
+        <text y={50} textAnchor="middle" fontFamily={BODY} fontWeight={700} fontSize={20} fill={C.text}>{last}</text>
+        {p.rating ? <text y={-32} textAnchor="middle" fontFamily={BODY} fontWeight={800} fontSize={19}
+                          fill={ratingColor(p.rating)}>{Number(p.rating).toFixed(1)}</text> : null}
+      </g>
+    );
+  };
+  const missing = (side) => (L[side].missing || []).slice(0, 3);
+  const miss = [...missing("home").map((m) => ({ ...m, side: "home" })), ...missing("away").map((m) => ({ ...m, side: "away" }))];
+  return (
+    <AbsoluteFill style={{ padding: "70px 70px 0", flexDirection: "row", alignItems: "center", gap: 40 }}>
+      <div>
+        <div style={{ display: "flex", justifyContent: "space-between", fontFamily: HEAD, fontSize: 36, marginBottom: 8 }}>
+          <span style={{ color: C.home }}>{L.home.team.toUpperCase()} {L.home.formation}</span>
+          <span style={{ color: C.away }}>{L.away.formation} {L.away.team.toUpperCase()}</span>
+        </div>
+        <svg width={PW} height={PH} style={{ background: "#123222", borderRadius: 14, overflow: "visible" }}>
+          <g stroke="rgba(255,255,255,0.2)" strokeWidth="3" fill="none">
+            <rect x="2" y="2" width={PW - 4} height={PH - 4} rx="12" />
+            <line x1={PW / 2} y1={0} x2={PW / 2} y2={PH} />
+            <circle cx={PW / 2} cy={PH / 2} r={80} />
+            <rect x={0} y={PH * 0.2} width={PW * 0.14} height={PH * 0.6} />
+            <rect x={PW * 0.86} y={PH * 0.2} width={PW * 0.14} height={PH * 0.6} />
+          </g>
+          {L.home.starters.map((p, i) => dot(p, "home", i))}
+          {L.away.starters.map((p, i) => dot(p, "away", i + 11))}
+        </svg>
+      </div>
+      {miss.length ? (
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ fontFamily: BODY, fontWeight: 800, letterSpacing: 3, fontSize: 24, color: C.muted }}>MISSING</div>
+          {miss.map((m, i) => {
+            const s = spring({ frame: f - 40 - i * 6, fps: 30, config: { damping: 14 } });
+            return (
+              <div key={i} style={{ opacity: s, borderLeft: `6px solid ${m.side === "home" ? C.home : C.away}`, paddingLeft: 14 }}>
+                <div style={{ fontFamily: HEAD, fontSize: 34, color: C.text }}>{m.player}</div>
+                <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 21, color: C.muted }}>
+                  {String(m.reason).replace(/_/g, " ")}{m.value_eur ? ` · €${Math.round(m.value_eur / 1e6)}m` : ""}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 const MAP = {
+  lineups: Lineups,
   player_ratings: PlayerRatings,
   quote_card: QuoteCard,
   momentum: Momentum,

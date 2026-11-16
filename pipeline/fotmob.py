@@ -213,6 +213,43 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
         for i, r in enumerate(sorted(starters, key=lambda r: r["rating"])[:3], 1):
             add(f"worst_player_{i}", "Lowest FotMob rating among starters",
                 {k: r[k] for k in ("player", "team", "rating", "subbed_off")})
+    # lineups, coaches and confirmed absentees (injured / suspended), with market values
+    lu = {}
+    for side, team in teams:
+        t = lineup.get(f"{side}Team") or {}
+        coach = t.get("coach") or {}
+        coach = coach[0] if isinstance(coach, list) and coach else coach
+        if isinstance(coach, dict) and coach.get("name"):
+            add(f"{side}_coach", f"{team} head coach", coach["name"])
+        starters = []
+        for p in t.get("starters", []):
+            lay = p.get("horizontalLayout") or {}
+            starters.append({"player": p.get("name"), "shirt": p.get("shirtNumber"),
+                             "x": lay.get("x"), "y": lay.get("y"),
+                             "rating": (p.get("performance") or {}).get("rating"),
+                             "value_m_eur": round((p.get("marketValue") or 0) / 1e6) or None,
+                             "value_eur": p.get("marketValue")})
+        missing = []
+        for p in t.get("unavailable", []) or []:
+            u = p.get("unavailability") or {}
+            missing.append({"player": p.get("name"),
+                            "reason": u.get("type") or "unavailable",       # injury / suspension ...
+                            "expected_return": u.get("expectedReturn"),
+                            "value_eur": p.get("marketValue")})
+        missing.sort(key=lambda m: -(m["value_eur"] or 0))
+        lu[side] = {"team": team, "formation": t.get("formation"), "starters": starters, "missing": missing}
+        if starters:
+            add(f"{side}_starting_xi", f"{team} starting eleven",
+                ", ".join(f"{x['player']}" for x in starters))
+        for i, m in enumerate(missing[:4], 1):
+            add(f"{side}_absent_{i}", f"{team} player missing this match (FotMob; value = market value, EUR)",
+                {"player": m["player"], "reason": m["reason"],
+                 "market_value_m_eur": round((m["value_eur"] or 0) / 1e6) or None})
+        if starters and any(x["value_eur"] for x in starters):
+            add(f"{side}_xi_market_value_m_eur", f"{team} starting eleven total market value, million EUR",
+                round(sum(x["value_eur"] or 0 for x in starters) / 1e6))
+    if any(v["starters"] for v in lu.values()):
+        pack["lineups"] = lu
     potm = (data.get("content", {}).get("matchFacts") or {}).get("playerOfTheMatch") or {}
     if potm.get("name"):
         add("player_of_the_match", "Player of the match (FotMob)",
