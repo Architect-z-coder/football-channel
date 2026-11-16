@@ -216,9 +216,21 @@ def build_pack(match: dict, table: dict, competition: str, api: FootballData) ->
     }
 
 
-def list_matches(cfg: dict) -> list[str]:
+def list_matches(cfg: dict) -> tuple[list[str], list[dict]]:
+    """Text lines for the log/Telegram, and the same matches as data for the dashboard."""
     api = FootballData(secret("FOOTBALL_DATA_KEY", required=True))
-    return [describe(c) for c in find_candidates(cfg, api)]
+    cands = find_candidates(cfg, api)
+    rows = []
+    for c in cands:
+        m = c["match"]
+        h, a = _score(m)
+        ht = (m.get("score") or {}).get("halfTime") or {}
+        rows.append({"id": m["id"], "date": m["utcDate"][:10], "competition": c["competition"],
+                     "home": m["homeTeam"].get("shortName") or m["homeTeam"]["name"],
+                     "away": m["awayTeam"].get("shortName") or m["awayTeam"]["name"],
+                     "score": f"{h}-{a}", "half_time": f"{ht.get('home')}-{ht.get('away')}",
+                     "interest": round(c["interest"], 1), "done": c["done"]})
+    return [describe(c) for c in cands], rows
 
 
 def scout(cfg: dict, pick: str | None = None) -> dict:

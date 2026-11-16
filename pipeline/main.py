@@ -14,11 +14,18 @@ import sys
 from datetime import date
 
 from . import factcheck, notify, render, visuals, voice, writer
+from datetime import datetime, timezone
+
 from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, log, read_json, \
     secret, slugify, write_json
 
 MAX_ATTEMPTS = 2
 QUEUE = DATA_DIR / "queue.txt"
+DASH = DATA_DIR / "dashboard"   # files the dashboard reads
+
+
+def now() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def next_in_queue() -> str | None:
@@ -42,8 +49,9 @@ def pop_queue(pick: str) -> None:
 def show_list() -> int:
     from .fdorg import list_matches
     cfg = load_config()
-    rows = list_matches(cfg)
+    rows, data = list_matches(cfg)
     days = cfg["scout"]["look_back_days"]
+    write_json(DASH / "matches.json", {"updated": now(), "look_back_days": days, "matches": data})
     text = (f"Finished matches in the last {days} days (most interesting first).\n"
             "To choose one, copy its number (first column) or type the two team names.\n\n"
             + ("\n".join(rows) if rows else "None found. Try a longer look-back."))
@@ -86,6 +94,10 @@ def show_data(pick: str | None) -> int:
         text += "\n" + "\n".join(f"{s['minute']}' {s['side']} {s['player']} xG {s['xg']} {s['result']}"
                                    for s in shots[:40])
     print(text)
+    write_json(DASH / "match_data.json", {
+        "updated": now(), "fixture_id": pack.get("fixture_id"), "home": pack["home"],
+        "away": pack["away"], "competition": pack["competition"], "source": pack.get("source"),
+        "facts": pack["facts"], "shots": shots})
     import os
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
@@ -142,6 +154,10 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
             "fixture_id": pack["fixture_id"]}
     write_json(workdir / "metadata.json", meta)
 
+    result = {"updated": now(), "home": pack["home"], "away": pack["away"],
+              "competition": pack["competition"], "fixture_id": pack["fixture_id"],
+              "titles": script["title_options"], "minutes": round(minutes, 1),
+              "files": workdir.name, "uploaded": False, "youtube": None}
     has_voice = bool(secret("ELEVENLABS_API_KEY") and secret("ELEVENLABS_VOICE_ID"))
     if upload and not dry_run and not has_voice:
         notify.send(f"Video made with silent audio (no voice keys yet), so it was NOT uploaded. "
@@ -153,6 +169,7 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         history = read_json(DATA_DIR / "history.json", {"fixtures": []})
         history["fixtures"].append(pack["fixture_id"])
         write_json(DATA_DIR / "history.json", history)
+        result.update(uploaded=True, youtube=f"https://studio.youtube.com/video/{vid}/edit")
         notify.send(
             f"New video ready for review ({minutes:.1f} min): {pack['home']} vs {pack['away']}\n\n"
             f"Title: {script['title_options'][0]}\n"
@@ -160,6 +177,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
             f"Review, then set to Public or Scheduled:\nhttps://studio.youtube.com/video/{vid}/edit")
     else:
         notify.send(f"Test run finished ({minutes:.1f} min). Files: {workdir.name}")
+    if not dry_run:
+        write_json(DASH / "last_video.json", result)
     if from_queue and upload and not dry_run:
         pop_queue(pick)  # only remove it once the video is really uploaded
     log.info("Done. Output in %s", workdir)
@@ -182,6 +201,8 @@ def main():
         sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload, pick=args.pick or None))
     except StopPipeline as e:
         log.error("Stopped: %s", e)
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        (OUT_DIR / "stop_reason.txt").write_text(str(e), encoding="utf-8")
         notify.send(f"Pipeline stopped, nothing was published.\n\nReason: {e}")
         sys.exit(1)
 

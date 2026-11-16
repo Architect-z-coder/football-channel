@@ -18,6 +18,8 @@ on:
         description: "How many days back to look for matches (empty = value in config.yaml)"
         default: ""
         type: string
+  push:
+    paths: ["data/dashboard/request.json"]   # the dashboard writes this file to start a run
 
 permissions:
   contents: write   # to save data/history.json (which matches were already covered)
@@ -33,22 +35,61 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Read the request (dashboard, button or schedule)
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_MODE: ${{ github.event.inputs.mode }}
+          IN_MATCH: ${{ github.event.inputs.match }}
+          IN_DAYS: ${{ github.event.inputs.look_back_days }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          ev = os.environ["EVENT"]
+          if ev == "push":
+              r = json.load(open("data/dashboard/request.json", encoding="utf-8"))
+              mode, match, days, rid = r.get("mode"), r.get("match"), r.get("look_back_days"), r.get("id")
+          elif ev == "workflow_dispatch":
+              mode, match, days, rid = os.environ["IN_MODE"], os.environ["IN_MATCH"], os.environ["IN_DAYS"], ""
+          else:
+              mode, match, days, rid = "full", "", "", ""
+          if mode not in ("list", "data-only", "full", "no-upload", "dry-run"):
+              mode = "list"
+          clean = lambda v: " ".join(str(v or "").split())[:80]
+          days = clean(days) if clean(days).isdigit() else ""
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"MODE={mode}\nMATCH={clean(match)}\nLOOK_BACK_DAYS={days}\nREQ_ID={clean(rid)}\nTRIGGER={ev}\n")
+          print(mode, clean(match), days, rid)
+          PY
+          echo "RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_ENV"
+
+      - name: Tell the dashboard the run has started
+        run: |
+          python3 scripts/status.py running
+          git config user.name "pipeline-bot"
+          git config user.email "pipeline-bot@users.noreply.github.com"
+          git add data/dashboard/status.json
+          git commit -q -m "Dashboard: run started ($MODE)" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
       - uses: actions/setup-node@v4
+        if: env.MODE != 'list' && env.MODE != 'data-only'
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: video/package-lock.json
 
       - name: Install motion-graphics engine (Remotion)
+        if: env.MODE != 'list' && env.MODE != 'data-only'
         working-directory: video
         run: npm ci && npx remotion browser ensure
 
       - name: Install FFmpeg
+        if: env.MODE != 'list' && env.MODE != 'data-only'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Install Python packages
@@ -66,11 +107,8 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          LOOK_BACK_DAYS: ${{ github.event.inputs.look_back_days }}
           REMOTION_CONCURRENCY: "4"
-          MATCH: ${{ github.event.inputs.match }}
         run: |
-          MODE="${{ github.event.inputs.mode || 'full' }}"
           if [ "$MODE" = "list" ]; then python -m pipeline.main --list
           elif [ "$MODE" = "data-only" ]; then python -m pipeline.main --data-only --pick "$MATCH"
           elif [ "$MODE" = "dry-run" ]; then python -m pipeline.main --dry-run
@@ -100,10 +138,12 @@ jobs:
           retention-days: 14
           if-no-files-found: ignore
 
-      - name: Save history
-        if: success()
+      - name: Save results for the dashboard
+        if: always()
         run: |
+          if [ "${{ job.status }}" = "success" ]; then python3 scripts/status.py done; else python3 scripts/status.py failed; fi
           git config user.name "pipeline-bot"
           git config user.email "pipeline-bot@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || (git commit -m "Update match history and queue" && git push)
+          git diff --cached --quiet || git commit -q -m "Dashboard: run $([ '${{ job.status }}' = success ] && echo finished || echo failed) ($MODE)"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
