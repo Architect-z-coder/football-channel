@@ -38,21 +38,27 @@ def assemble(images: list[Path], audios: list[Path], workdir: Path) -> tuple[Pat
     _run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(listing),
           "-c", "copy", str(joined)])
 
-    final = workdir / "video.mp4"
-    music = sorted((ASSETS_DIR / "music").glob("*.mp3")) if (ASSETS_DIR / "music").exists() else []
-    if music:
-        track = random.choice(music)
-        log.info("Adding music bed: %s", track.name)
-        _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined), "-stream_loop", "-1",
-              "-i", str(track), "-filter_complex",
-              "[1:a]volume=0.07[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
-              "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", str(final)])
-    else:
-        joined.rename(final)
+    final = add_music(joined, workdir / "video.mp4")
     for c in clips:
         c.unlink()
     log.info("Video rendered: %.1f minutes", sum(durs) / 60)
     return final, durs
+
+
+def add_music(src: Path, dst: Path) -> Path:
+    """Mix a random cleared track from assets/music quietly under the narration (if any)."""
+    music = sorted((ASSETS_DIR / "music").glob("*.mp3")) if (ASSETS_DIR / "music").exists() else []
+    if not music:
+        src.rename(dst)
+        return dst
+    track = random.choice(music)
+    log.info("Adding music bed: %s", track.name)
+    _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-stream_loop", "-1",
+          "-i", str(track), "-filter_complex",
+          "[1:a]volume=0.07[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
+          "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", str(dst)])
+    src.unlink()
+    return dst
 
 
 def _ts(t: float) -> str:

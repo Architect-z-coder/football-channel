@@ -34,6 +34,16 @@ jobs:
           python-version: "3.12"
           cache: pip
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+
+      - name: Install motion-graphics engine (Remotion)
+        working-directory: video
+        run: npm ci && npx remotion browser ensure
+
       - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 

@@ -54,13 +54,17 @@ def run(dry_run: bool, upload: bool) -> int:
         raise StopPipeline("Script failed fact-checking after retries:\n- " +
                            "\n- ".join(report["problems"][:10]))
 
-    images = []
-    for sc in script["scenes"]:
-        img = workdir / f"scene_{sc['id']:02d}.png"
-        visuals.render_scene(sc, pack, cfg, img)
-        images.append(img)
     audios = voice.narrate(cfg, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"))
-    video, durs = render.assemble(images, audios, workdir)
+    if cfg.get("render_engine", "motion") == "motion":
+        from . import motion
+        video, durs = motion.render(cfg, script, pack, audios, workdir)
+    else:  # fallback: still images with a slow zoom
+        images = []
+        for sc in script["scenes"]:
+            img = workdir / f"scene_{sc['id']:02d}.png"
+            visuals.render_scene(sc, pack, cfg, img)
+            images.append(img)
+        video, durs = render.assemble(images, audios, workdir)
     srt = render.captions(script, durs, workdir / "captions.srt")
     thumbs = visuals.render_thumbnails(script, pack, cfg, workdir)
     minutes = sum(durs) / 60

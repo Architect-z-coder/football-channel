@@ -1,0 +1,420 @@
+import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from "remotion";
+import { C, HEAD, BODY, parseNum, fmt } from "./theme";
+
+// ---------- helpers ----------
+const useSpring = (delay = 0, config = { damping: 14, mass: 0.6 }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return spring({ frame: f - delay, fps, config });
+};
+
+const CountUp = ({ value, delay = 0, frames = 28, style }) => {
+  const f = useCurrentFrame();
+  const p = parseNum(value);
+  if (!p) return <span style={style}>{value ?? "–"}</span>;
+  const t = interpolate(f - delay, [0, frames], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic),
+  });
+  return <span style={style}>{fmt(p, p.n * t)}</span>;
+};
+
+const Center = ({ children, style }) => (
+  <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", ...style }}>
+    {children}
+  </AbsoluteFill>
+);
+
+const facts = (props) => props.facts || {};
+
+// ---------- scene types ----------
+const TitleCard = ({ visual }) => {
+  const words = (visual.title || "").split(" ");
+  const sub = useSpring(12 + words.length * 3);
+  return (
+    <Center style={{ padding: "0 160px", textAlign: "center" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "0 26px", justifyContent: "center" }}>
+        {words.map((w, i) => <Word key={i} w={w} delay={i * 3} />)}
+      </div>
+      <div style={{ marginTop: 30, fontFamily: BODY, fontWeight: 700, fontSize: 40,
+                    color: C.accent, opacity: sub, transform: `translateY(${(1 - sub) * 30}px)` }}>
+        {visual.subtitle}
+      </div>
+    </Center>
+  );
+};
+
+const Word = ({ w, delay }) => {
+  const s = useSpring(delay);
+  return (
+    <span style={{ fontFamily: HEAD, fontSize: 120, color: C.text, lineHeight: 1.05,
+                   display: "inline-block", opacity: s, transform: `translateY(${(1 - s) * 60}px)` }}>
+      {w}
+    </span>
+  );
+};
+
+const KeyNumber = ({ visual }) => {
+  const s = useSpring(0, { damping: 10, mass: 0.5 });
+  const ring = useSpring(6, { damping: 30 });
+  const lbl = useSpring(18);
+  return (
+    <Center>
+      <div style={{ position: "relative", display: "flex", alignItems: "center",
+                    justifyContent: "center" }}>
+        <div style={{ position: "absolute", width: 620, height: 620, borderRadius: 310,
+                      border: `6px solid ${C.accent}`, opacity: 0.25 * ring,
+                      transform: `scale(${0.6 + 0.4 * ring})` }} />
+        <CountUp value={visual.value} frames={30} style={{
+          fontFamily: HEAD, fontSize: 290, color: C.accent, lineHeight: 1,
+          transform: `scale(${0.7 + 0.3 * s})`, display: "inline-block",
+          textShadow: "0 10px 60px rgba(242,193,78,0.35)",
+        }} />
+      </div>
+      <div style={{ marginTop: 20, fontFamily: BODY, fontWeight: 700, fontSize: 46, color: C.text,
+                    opacity: lbl, transform: `translateY(${(1 - lbl) * 24}px)`, maxWidth: 1300,
+                    textAlign: "center" }}>
+        {visual.label}
+      </div>
+    </Center>
+  );
+};
+
+const TeamName = ({ name, color, from, delay }) => {
+  const s = useSpring(delay);
+  return (
+    <div style={{ width: 560, textAlign: "center", fontFamily: HEAD, fontSize: 92, color,
+                  lineHeight: 1.05, opacity: s, transform: `translateX(${(1 - s) * from}px)` }}>
+      {name}
+    </div>
+  );
+};
+
+const Scoreline = ({ props }) => {
+  const F = facts(props);
+  const score = useSpring(12, { damping: 9, mass: 0.6 });
+  const meta = useSpring(22);
+  return (
+    <Center>
+      <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, color: C.muted,
+                    letterSpacing: 4, marginBottom: 30 }}>{props.competition.toUpperCase()}</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 40 }}>
+        <TeamName name={props.home} color={C.home} from={-400} delay={0} />
+        <div style={{ fontFamily: HEAD, fontSize: 230, color: C.text, minWidth: 420,
+                      textAlign: "center", transform: `scale(${2 - score})`, opacity: score }}>
+          {F.score_home} – {F.score_away}
+        </div>
+        <TeamName name={props.away} color={C.away} from={400} delay={4} />
+      </div>
+      <div style={{ marginTop: 30, fontFamily: BODY, fontWeight: 600, fontSize: 30,
+                    color: C.muted, opacity: meta }}>
+        {[F.round || (F.matchday ? `Matchday ${F.matchday}` : null), F.date].filter(Boolean).join("  ·  ")}
+      </div>
+    </Center>
+  );
+};
+
+const HalfFull = ({ props, scene }) => {
+  const F = facts(props);
+  const ht = useSpring(4);
+  const ftDelay = Math.round(scene.durationInFrames * 0.35);
+  const ft = useSpring(ftDelay, { damping: 9, mass: 0.6 });
+  const Row = ({ label, h, a, s, gold }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 50, opacity: s,
+                  transform: `translateY(${(1 - s) * 40}px) scale(${gold ? 0.8 + 0.2 * s : 1})` }}>
+      <span style={{ width: 300, textAlign: "right", fontFamily: BODY, fontWeight: 800,
+                     fontSize: 34, letterSpacing: 4, color: C.muted }}>{label}</span>
+      <span style={{ fontFamily: HEAD, fontSize: 170, color: gold ? C.accent : C.text }}>
+        {h} – {a}
+      </span>
+      <span style={{ width: 300 }} />
+    </div>
+  );
+  return (
+    <Center>
+      <div style={{ display: "flex", gap: 360, fontFamily: HEAD, fontSize: 60, marginBottom: 10 }}>
+        <span style={{ color: C.home }}>{props.home}</span>
+        <span style={{ color: C.away }}>{props.away}</span>
+      </div>
+      <Row label="HALF TIME" h={F.ht_home} a={F.ht_away} s={ht} />
+      <Row label="FULL TIME" h={F.score_home} a={F.score_away} s={ft} gold />
+    </Center>
+  );
+};
+
+const labelOf = (key) =>
+  key.replace(/_/g, " ").replace("pct", "%").replace(/\b\w/g, (c) => c.toUpperCase());
+
+const StatRow = ({ label, hv, av, delay }) => {
+  const s = useSpring(delay, { damping: 20 });
+  const hp = parseNum(hv)?.n ?? 0;
+  const ap = parseNum(av)?.n ?? 0;
+  const total = hp + ap || 1;
+  const W = 1100;
+  return (
+    <div style={{ marginBottom: 22, opacity: Math.min(1, s * 1.5) }}>
+      <div style={{ textAlign: "center", fontFamily: BODY, fontWeight: 700, fontSize: 30,
+                    color: C.muted, marginBottom: 10 }}>{label}</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+        <CountUp value={hv} delay={delay} style={{ width: 170, textAlign: "right", fontFamily: HEAD,
+                 fontSize: 64, color: C.home }} />
+        <div style={{ width: W, height: 34, display: "flex", background: C.line, borderRadius: 17,
+                      overflow: "hidden" }}>
+          <div style={{ width: (W * hp / total) * s, background: C.home }} />
+          <div style={{ flex: 1 }} />
+          <div style={{ width: (W * ap / total) * s, background: C.away }} />
+        </div>
+        <CountUp value={av} delay={delay} style={{ width: 170, fontFamily: HEAD, fontSize: 64,
+                 color: C.away }} />
+      </div>
+    </div>
+  );
+};
+
+const StatBars = ({ visual, props }) => {
+  const F = facts(props);
+  const keys = (visual.stats || []).filter((k) => `home_${k}` in F && `away_${k}` in F).slice(0, 3);
+  return (
+    <Center>
+      <div style={{ display: "flex", justifyContent: "space-between", width: 1500, fontFamily: HEAD,
+                    fontSize: 54, marginBottom: 16 }}>
+        <span style={{ color: C.home }}>{props.home}</span>
+        <span style={{ color: C.away }}>{props.away}</span>
+      </div>
+      {keys.map((k, i) => (
+        <StatRow key={k} label={labelOf(k)} hv={F[`home_${k}`]} av={F[`away_${k}`]} delay={6 + i * 10} />
+      ))}
+    </Center>
+  );
+};
+
+const Grid = ({ title, cols, rows }) => {
+  const head = useSpring(0);
+  return (
+    <Center>
+      <div style={{ fontFamily: HEAD, fontSize: 70, color: C.text, marginBottom: 30, opacity: head }}>
+        {title}
+      </div>
+      <div style={{ display: "flex", marginLeft: 440, gap: 0, marginBottom: 12 }}>
+        {cols.map((c) => (
+          <div key={c} style={{ width: 150, textAlign: "center", fontFamily: BODY, fontWeight: 800,
+                                fontSize: 28, color: C.muted, letterSpacing: 2 }}>{c}</div>
+        ))}
+      </div>
+      {rows.map((r, ri) => <GridRow key={ri} row={r} delay={8 + ri * 10} />)}
+    </Center>
+  );
+};
+
+const GridRow = ({ row, delay }) => {
+  const s = useSpring(delay);
+  return (
+    <div style={{ display: "flex", alignItems: "center", background: C.panel, borderRadius: 18,
+                  padding: "22px 30px", marginBottom: 18, opacity: s,
+                  transform: `translateX(${(1 - s) * -120}px)` }}>
+      <div style={{ width: 410, fontFamily: HEAD, fontSize: 58, color: row.color }}>{row.name}</div>
+      {row.values.map((v, i) => (
+        <CountUp key={i} value={v} delay={delay + 4 + i * 2} style={{
+          width: 150, textAlign: "center", fontFamily: HEAD, fontSize: 64,
+          color: row.highlight === i ? C.accent : C.text }} />
+      ))}
+    </div>
+  );
+};
+
+const TableSnapshot = ({ props }) => {
+  const F = facts(props);
+  const keys = [["Pos", "position"], ["Pts", "points"], ["P", "played_games"], ["W", "won"],
+                ["D", "draw"], ["L", "lost"], ["GF", "goals_for"], ["GA", "goals_against"]];
+  const rows = [["home", C.home], ["away", C.away]].map(([s, color]) => ({
+    name: props[s], color, highlight: 1, values: keys.map(([, k]) => F[`${s}_${k}`] ?? "–"),
+  }));
+  return <Grid title="The league table" cols={keys.map(([c]) => c)} rows={rows} />;
+};
+
+const FormChips = ({ w, d, l, delay }) => {
+  const f = useCurrentFrame();
+  const chips = [...Array(w || 0).fill("W"), ...Array(d || 0).fill("D"), ...Array(l || 0).fill("L")];
+  const color = { W: C.win, D: C.draw, L: C.loss };
+  return (
+    <div style={{ display: "flex", gap: 14 }}>
+      {chips.map((c, i) => {
+        const s = spring({ frame: f - delay - i * 4, fps: 30, config: { damping: 10, mass: 0.4 } });
+        return (
+          <div key={i} style={{ width: 84, height: 84, borderRadius: 42, background: color[c],
+                                display: "flex", alignItems: "center", justifyContent: "center",
+                                fontFamily: HEAD, fontSize: 46, color: "#fff",
+                                transform: `scale(${s})` }}>{c}</div>
+        );
+      })}
+    </div>
+  );
+};
+
+const FormCompare = ({ props }) => {
+  const F = facts(props);
+  const head = useSpring(0);
+  return (
+    <Center>
+      <div style={{ fontFamily: HEAD, fontSize: 66, color: C.text, marginBottom: 40, opacity: head }}>
+        Form: the 5 matches before this one
+      </div>
+      {[["home", C.home], ["away", C.away]].map(([s, color], i) => (
+        <div key={s} style={{ display: "flex", alignItems: "center", gap: 40, marginBottom: 34,
+                              background: C.panel, padding: "24px 40px", borderRadius: 20 }}>
+          <div style={{ width: 400, fontFamily: HEAD, fontSize: 58, color }}>{props[s]}</div>
+          <FormChips w={F[`${s}_last5_wins`]} d={F[`${s}_last5_draws`]} l={F[`${s}_last5_losses`]}
+                     delay={10 + i * 14} />
+          <div style={{ width: 260, fontFamily: BODY, fontWeight: 700, fontSize: 32, color: C.muted,
+                        textAlign: "right" }}>
+            <CountUp value={F[`${s}_last5_goals_for`]} delay={20 + i * 14}
+                     style={{ fontFamily: HEAD, fontSize: 52, color: C.text }} /> scored{" "}
+            <br />
+            <CountUp value={F[`${s}_last5_goals_against`]} delay={20 + i * 14}
+                     style={{ fontFamily: HEAD, fontSize: 52, color: C.text }} /> conceded
+          </div>
+        </div>
+      ))}
+    </Center>
+  );
+};
+
+const EventsTimeline = ({ props, scene }) => {
+  const f = useCurrentFrame();
+  const events = (props.events || []).filter((e) => e.kind === "goal" || e.kind === "red");
+  const end = Math.max(90, ...events.map((e) => e.minute || 0));
+  const draw = interpolate(f, [0, scene.durationInFrames * 0.6], [0, 1], {
+    extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const X0 = 160, X1 = 1760, Y = 360;
+  return (
+    <AbsoluteFill>
+      <div style={{ position: "absolute", top: 40, width: "100%", textAlign: "center",
+                    fontFamily: HEAD, fontSize: 66, color: C.text }}>How the match unfolded</div>
+      <svg width="1920" height="720" style={{ position: "absolute" }}>
+        <line x1={X0} y1={Y} x2={X0 + (X1 - X0) * draw} y2={Y} stroke={C.muted} strokeWidth="6"
+              strokeLinecap="round" />
+        {[0, 45, 90].map((m) => (
+          <text key={m} x={X0 + (X1 - X0) * m / end} y={Y + 60} fill={C.muted} fontSize="30"
+                fontFamily={BODY} textAnchor="middle">{m}'</text>
+        ))}
+      </svg>
+      {events.map((e, i) => {
+        const pos = (e.minute || 0) / end;
+        const s = spring({ frame: f - pos * scene.durationInFrames * 0.6, fps: 30,
+                           config: { damping: 10, mass: 0.5 } });
+        const up = e.side === "home" ? -1 : 1;
+        const color = e.kind === "red" ? C.loss : e.side === "home" ? C.home : C.away;
+        return (
+          <div key={i} style={{ position: "absolute", left: X0 + (X1 - X0) * pos - 150, top: Y - 30,
+                                width: 300, display: "flex", flexDirection: "column",
+                                alignItems: "center", transform: `scale(${s})` }}>
+            <div style={{ width: 60, height: 60, borderRadius: e.kind === "red" ? 8 : 30,
+                          background: color, border: `6px solid ${C.bg}` }} />
+            <div style={{ position: "absolute", top: up < 0 ? -110 : 90, textAlign: "center",
+                          fontFamily: BODY, fontWeight: 800, fontSize: 30, color }}>
+              {e.minute}'{e.extra ? `+${e.extra}` : ""}<br />{e.player || ""}
+            </div>
+          </div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+const formationPoints = (formation, right) => {
+  const rows = (formation || "4-4-2").split("-").map(Number).filter(Boolean);
+  const pts = [[4, 50]];
+  rows.forEach((n, r) => {
+    const x = rows.length > 1 ? 12 + r * (30 / (rows.length - 1)) : 28;
+    for (let j = 0; j < n; j++) pts.push([x, (100 * (j + 1)) / (n + 1)]);
+  });
+  return right ? pts : pts.map(([x, y]) => [100 - x, y]);
+};
+
+const Formations = ({ props }) => {
+  const F = facts(props);
+  const f = useCurrentFrame();
+  const PW = 1100, PH = 520;
+  return (
+    <Center>
+      <div style={{ display: "flex", justifyContent: "space-between", width: PW, fontFamily: HEAD,
+                    fontSize: 48, marginBottom: 16 }}>
+        <span style={{ color: C.home }}>{props.home} {F.home_formation}</span>
+        <span style={{ color: C.away }}>{F.away_formation} {props.away}</span>
+      </div>
+      <div style={{ position: "relative", width: PW, height: PH, background: "#123222",
+                    border: `4px solid ${C.line}`, borderRadius: 12 }}>
+        <div style={{ position: "absolute", left: PW / 2 - 2, top: 0, bottom: 0, width: 4,
+                      background: C.line }} />
+        <div style={{ position: "absolute", left: PW / 2 - 90, top: PH / 2 - 90, width: 180,
+                      height: 180, borderRadius: 90, border: `4px solid ${C.line}` }} />
+        {[["home", C.home, true], ["away", C.away, false]].map(([s, color, right]) =>
+          formationPoints(F[`${s}_formation`], right).map(([x, y], i) => {
+            const p = spring({ frame: f - i * 2 - (right ? 0 : 6), fps: 30, config: { damping: 14 } });
+            const cx = PW / 2 + ((x / 100) * PW - PW / 2) * p;
+            const cy = PH / 2 + ((y / 100) * PH - PH / 2) * p;
+            return <div key={s + i} style={{ position: "absolute", left: cx - 22, top: cy - 22,
+                       width: 44, height: 44, borderRadius: 22, background: color,
+                       border: `4px solid ${C.bg}` }} />;
+          })
+        )}
+      </div>
+    </Center>
+  );
+};
+
+const TextCard = ({ visual }) => {
+  const head = useSpring(0);
+  return (
+    <AbsoluteFill style={{ justifyContent: "center", padding: "0 160px" }}>
+      <div style={{ fontFamily: HEAD, fontSize: 110, color: C.accent, opacity: head,
+                    transform: `translateX(${(1 - head) * -80}px)`, marginBottom: 40 }}>
+        {visual.heading}
+      </div>
+      {(visual.lines || []).slice(0, 3).map((l, i) => <Line key={i} text={l} delay={10 + i * 9} />)}
+    </AbsoluteFill>
+  );
+};
+
+const Line = ({ text, delay, index }) => {
+  const s = useSpring(delay);
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 26, marginBottom: 26, opacity: s,
+                  transform: `translateX(${(1 - s) * 100}px)` }}>
+      {index !== undefined ? (
+        <div style={{ width: 76, height: 76, borderRadius: 38, background: C.accent, color: C.bg,
+                      fontFamily: HEAD, fontSize: 46, display: "flex", alignItems: "center",
+                      justifyContent: "center" }}>{index}</div>
+      ) : (
+        <div style={{ width: 18, height: 18, borderRadius: 9, background: C.accent }} />
+      )}
+      <span style={{ fontFamily: BODY, fontWeight: 700, fontSize: 56, color: C.text }}>{text}</span>
+    </div>
+  );
+};
+
+const LessonList = ({ visual, scene }) => {
+  const head = useSpring(0);
+  const items = (visual.items || []).slice(0, 3);
+  const gap = Math.max(12, Math.floor((scene.durationInFrames * 0.6) / Math.max(1, items.length)));
+  return (
+    <AbsoluteFill style={{ justifyContent: "center", padding: "0 160px" }}>
+      <div style={{ fontFamily: HEAD, fontSize: 110, color: C.accent, opacity: head, marginBottom: 40 }}>
+        The lesson
+      </div>
+      {items.map((t, i) => <Line key={i} text={t} delay={8 + i * gap} index={i + 1} />)}
+    </AbsoluteFill>
+  );
+};
+
+const MAP = {
+  title_card: TitleCard, key_number: KeyNumber, scoreline: Scoreline,
+  halftime_fulltime: HalfFull, stat_bars: StatBars, table_snapshot: TableSnapshot,
+  form_compare: FormCompare, events_timeline: EventsTimeline, formations: Formations,
+  text_card: TextCard, lesson_list: LessonList,
+};
+
+export const SceneVisual = ({ scene, props }) => {
+  const visual = scene.visual || { type: "text_card", heading: scene.on_screen };
+  const Comp = MAP[visual.type] || TextCard;
+  return <Comp visual={visual} props={props} scene={scene} />;
+};

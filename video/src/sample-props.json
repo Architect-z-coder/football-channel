@@ -1,0 +1,154 @@
+{
+  "channel": "The Other Touchline",
+  "competition": "Demo League (fictional test match)",
+  "home": "Northbridge FC",
+  "away": "Harbour City",
+  "source": "API-Football",
+  "facts": {
+    "score_home": 2,
+    "score_away": 1,
+    "date": "2026-11-14",
+    "venue": "Demo Stadium",
+    "round": "Regular Season - 12",
+    "home_ball_possession": "38%",
+    "away_ball_possession": "62%",
+    "home_total_shots": 9,
+    "away_total_shots": 17,
+    "home_shots_on_goal": 5,
+    "away_shots_on_goal": 4,
+    "home_expected_goals": "1.42",
+    "away_expected_goals": "1.10",
+    "home_passes_pct": "79%",
+    "away_passes_pct": "88%",
+    "home_corner_kicks": 3,
+    "away_corner_kicks": 8,
+    "event_0": {
+      "minute": 23,
+      "extra": null,
+      "player": "A. Moreno",
+      "assist": "K. Laine"
+    },
+    "event_1": {
+      "minute": 51,
+      "extra": null,
+      "player": "J. Okafor",
+      "assist": null
+    },
+    "event_2": {
+      "minute": 78,
+      "extra": null,
+      "player": "L. Brandt",
+      "assist": "J. Okafor"
+    },
+    "home_formation": "4-4-2",
+    "away_formation": "4-3-3",
+    "home_coach": "R. Vidal",
+    "away_coach": "M. Sato"
+  },
+  "events": [],
+  "scenes": [
+    {
+      "id": 1,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "key_number",
+        "value": "38%",
+        "label": "Northbridge FC's share of the ball"
+      },
+      "on_screen": "38% possession. Still won.",
+      "narration": "Northbridge had just 38 percent of the ball. Harbour City took 17 shots. And Northbridge still won 2 to 1. So how do you win a match you barely touch the ball in?"
+    },
+    {
+      "id": 2,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "text_card",
+        "heading": "Three keys",
+        "lines": [
+          "Quality over volume",
+          "Accuracy under pressure",
+          "Timing"
+        ]
+      },
+      "on_screen": "",
+      "narration": "In the next few minutes you will see three keys behind this result: quality over volume, accuracy when it mattered, and timing. By the end you will spot them in your next match."
+    },
+    {
+      "id": 3,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "scoreline"
+      },
+      "on_screen": "Northbridge 4-4-2 vs Harbour City 4-3-3",
+      "narration": "First, the picture. Northbridge lined up in a 4-4-2. Harbour City in a 4-3-3. Harbour City scored first, in the 23rd minute, through A. Moreno. Northbridge answered after the break."
+    },
+    {
+      "id": 4,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "stat_bars",
+        "stats": [
+          "ball_possession",
+          "total_shots",
+          "expected_goals"
+        ]
+      },
+      "on_screen": "Fewer shots, better chances",
+      "narration": "Key one: quality over volume. Harbour City had 8 more shots, but Northbridge created more expected goals, 1.42 against 1.10. The numbers suggest Northbridge's chances came from better positions. Recap: it is not how many shots, it is how good they are. If this helps you read the game, subscribe."
+    },
+    {
+      "id": 5,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "stat_bars",
+        "stats": [
+          "shots_on_goal",
+          "passes_pct",
+          "corner_kicks"
+        ]
+      },
+      "on_screen": "5 on target from 9 shots",
+      "narration": "Key two: accuracy. Northbridge put 5 of their 9 shots on target. Harbour City managed 4 from 17. Harbour City also had 8 corners to Northbridge's 3, yet those set pieces brought no goal. Recap: be clinical when the chance comes."
+    },
+    {
+      "id": 6,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "events_timeline"
+      },
+      "on_screen": "51' and 78': the turnaround",
+      "narration": "Key three: timing. J. Okafor equalised in the 51st minute, early in the second half. Then in the 78th minute Okafor turned provider, setting up L. Brandt for the winner. Recap: one sharp spell can decide a match."
+    },
+    {
+      "id": 7,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "lesson_list",
+        "items": [
+          "Value chances, not shots",
+          "Hit the target",
+          "Be ready for your moment"
+        ]
+      },
+      "on_screen": "",
+      "narration": "So what can a player or coach take from this? Value the quality of a chance over the number of shots. Make your attempts count. And stay ready, because matches often turn in short spells."
+    },
+    {
+      "id": 8,
+      "durationInFrames": 150,
+      "audio": null,
+      "visual": {
+        "type": "formations"
+      },
+      "on_screen": "Next: another match, explained",
+      "narration": "How do you win with 38 percent of the ball? Make better chances and finish them. That is how Northbridge did it. See you in the next breakdown."
+    }
+  ]
+}

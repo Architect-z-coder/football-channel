@@ -11,6 +11,12 @@ channel:
 #                     possession, shots, lineups, goal events)
 data_source: football-data
 
+# How videos are drawn:
+#   motion = animated motion graphics (Remotion): counting numbers, growing bars,
+#            word-by-word captions, transitions, sound hits
+#   slides = still images with a slow zoom (old, faster fallback)
+render_engine: motion
+
 # Competitions the Scout watches.
 #   code = football-data.org code; id/season = API-Football league ID and season start year.
 competitions:
