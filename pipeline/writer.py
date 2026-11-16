@@ -30,6 +30,13 @@ Allowed visual types (use only these; the renderer supports nothing else):
 - {"type": "lesson_list", "items": [str, str, str]}
 - {"type": "lineups"}                           -> both starting elevens on the pitch with formations,
                                                    ratings, and the key missing players.
+- {"type": "photo", "photo_index": int, "caption": str}
+                                                -> a real, freely licensed photo of a coach or player
+                                                   from the pack's "photos" list (index from 0), with
+                                                   name, short caption and photo credit. Use it where
+                                                   that person is the subject (a quote, a rating, an
+                                                   absence). The caption must be true; never claim the
+                                                   photo is from this match.
 - {"type": "player_ratings"}                    -> best and lowest-rated starters with FotMob ratings.
 - {"type": "quote_card", "press_index": int}    -> a coach or player quote from the pack's "press"
                                                    list (index from 0), with speaker and source.

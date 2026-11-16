@@ -43,7 +43,13 @@ def gather(cfg: dict, pack: dict) -> list[dict]:
             tools=[{"type": cfg.get("press", {}).get("tool", "web_search_20250305"),
                     "name": "web_search", "max_uses": 8}])
         text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
-        items = [i for i in parse_json(text).get("items", []) if i.get("url") and i.get("quote")]
+        try:
+            data = parse_json(text)
+        except Exception:   # web-search replies sometimes break JSON (stray quotes): ask for a clean copy
+            from .llm import ask_json
+            data = ask_json(cfg["writer"]["model"], "Return the same data as valid JSON only, same keys. "
+                            "Escape quotes inside strings.", text, max_tokens=4000)
+        items = [i for i in data.get("items", []) if i.get("url") and i.get("quote")]
         for i in items:
             if not i.get("is_paraphrase") and len(i["quote"].split()) > 25:
                 i["quote"] = " ".join(i["quote"].split()[:25]) + "..."

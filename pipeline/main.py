@@ -155,6 +155,10 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         pack["press"] = press.gather(cfg, pack)
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
+    if not dry_run and cfg.get("photos", {}).get("enabled", True):
+        from . import photos
+        found = photos.find(photos.people_in(pack), workdir / "photos")
+        pack["photos"] = [{k: v for k, v in ph.items() if k != "path"} for ph in found]
     write_json(workdir / "datapack.json", pack)
 
     script, report = get_script(cfg, pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
@@ -177,6 +181,16 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         video, durs = render.assemble(images, audios, workdir)
     srt = render.captions(script, durs, workdir / "captions.srt", workdir=workdir)
     thumb_paths = thumbs.render(script, pack, workdir)
+    credits = []
+    used_photos = {sc.get("visual", {}).get("photo_index") for sc in script["scenes"]
+                   if sc.get("visual", {}).get("type") == "photo"}
+    for i, ph in enumerate(pack.get("photos") or []):
+        if i in used_photos:
+            credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via Wikimedia Commons ({ph['page']})")
+    for q in pack.get("press") or []:
+        credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())
+    if credits:
+        script["description"] = script["description"].rstrip() + "\n\nSources and credits:\n" + "\n".join(credits)
     made_shorts = (shorts.make(cfg, pack, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"))
                    if secret("ANTHROPIC_API_KEY") else [])
     minutes = sum(durs) / 60

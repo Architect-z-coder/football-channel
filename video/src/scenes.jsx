@@ -1,4 +1,4 @@
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from "remotion";
+import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
 
 // ---------- helpers ----------
@@ -779,7 +779,39 @@ const Lineups = ({ props }) => {
   );
 };
 
+
+// ---------- Real photo (free licence, Wikimedia Commons) with credit ----------
+const PhotoCard = ({ visual, props, scene }) => {
+  const f = useCurrentFrame();
+  const ph = (props.photos || [])[visual.photo_index || 0];
+  if (!ph) return null;
+  const p = spring({ frame: f - 2, fps: 30, config: { damping: 16 } });
+  const zoom = interpolate(f, [0, scene.durationInFrames], [1.0, 1.08]);   // slow Ken Burns
+  return (
+    <AbsoluteFill style={{ padding: "60px 120px 0", flexDirection: "row", alignItems: "center", gap: 70 }}>
+      <div style={{ width: 620, height: 700, borderRadius: 18, overflow: "hidden", border: `4px solid ${C.accent}`,
+                    opacity: p, transform: `translateX(${(1 - p) * -40}px)`, flexShrink: 0, position: "relative" }}>
+        <Img src={staticFile(`run/${ph.file}`)} style={{ width: "100%", height: "100%", objectFit: "cover",
+                                                         objectPosition: "50% 20%", transform: `scale(${zoom})` }} />
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "8px 12px", background: "rgba(0,0,0,0.6)",
+                      fontFamily: BODY, fontSize: 17, color: "#ddd" }}>
+          Photo: {ph.author} · {ph.licence} · Wikimedia Commons
+        </div>
+      </div>
+      <div style={{ opacity: p }}>
+        <div style={{ fontFamily: BODY, fontWeight: 800, letterSpacing: 3, fontSize: 26, color: C.muted }}>
+          {(ph.role || "").toUpperCase()}{ph.team ? ` · ${ph.team.toUpperCase()}` : ""}
+        </div>
+        <div style={{ fontFamily: HEAD, fontSize: 96, color: C.text, lineHeight: 1 }}>{ph.name}</div>
+        {visual.caption ? <div style={{ marginTop: 24, fontFamily: BODY, fontWeight: 600, fontSize: 40, color: C.accent,
+                                        maxWidth: 820, lineHeight: 1.25 }}>{visual.caption}</div> : null}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const MAP = {
+  photo: PhotoCard,
   lineups: Lineups,
   player_ratings: PlayerRatings,
   quote_card: QuoteCard,

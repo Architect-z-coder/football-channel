@@ -65,6 +65,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "momentum": pack.get("momentum") or [],
         "ratings": pack.get("ratings") or [],
         "lineups": pack.get("lineups") or {},
+        "photos": pack.get("photos") or [],
         "press": pack.get("press") or [],
         "history": history.used_in(script),
         "scenes": scenes,
@@ -88,6 +89,10 @@ def _remotion(composition: str, props_file: Path, out: Path) -> None:
 
 def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Path):
     props, durs = build_props(cfg, script, pack, audios)
+    for ph in pack.get("photos") or []:          # free-licence photos from Wikimedia Commons
+        src = workdir / "photos" / ph["file"]
+        if src.exists():
+            shutil.copy(src, VIDEO_DIR / "public" / "run" / ph["file"])
     props_file = workdir / "props.json"
     write_json(props_file, props)
     raw = workdir / "motion.mp4"
