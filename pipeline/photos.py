@@ -43,10 +43,56 @@ def _commons_info(filename: str) -> dict | None:
     lic = (meta.get("LicenseShortName", {}).get("value") or "").strip()
     if not lic.lower().startswith(OK_LICENCES):
         return None
-    import re
-    artist = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value") or "unknown").strip()
     return {"url": info.get("thumburl") or info["url"], "page": info.get("descriptionurl"),
-            "licence": lic, "author": artist[:60]}
+            "licence": lic, "author": _clean_artist(meta.get("Artist", {}).get("value"))}
+
+
+def _clean_artist(html: str) -> str:
+    import re
+    txt = re.sub(r"<[^>]+>", "", html or "").replace("Original:", "").replace("Derivative work:", "/")
+    return " ".join(txt.split()).strip(" ;/")[:60] or "unknown"
+
+
+def _commons_search(query: str, limit: int = 8) -> list[dict]:
+    """Search Wikimedia Commons files; keep only freely licensed photos."""
+    r = requests.get("https://commons.wikimedia.org/w/api.php", headers=HEAD, timeout=20, params={
+        "action": "query", "generator": "search", "gsrsearch": f"filetype:bitmap {query}",
+        "gsrnamespace": 6, "gsrlimit": limit, "prop": "imageinfo", "iiprop": "url|extmetadata|size",
+        "iiextmetadatafilter": "LicenseShortName|Artist", "iiurlwidth": 900, "format": "json"})
+    pages = sorted((r.json().get("query") or {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+    out = []
+    for p in pages:
+        info = (p.get("imageinfo") or [None])[0]
+        if not info or info.get("width", 0) < 400:
+            continue
+        meta = info.get("extmetadata", {})
+        lic = (meta.get("LicenseShortName", {}).get("value") or "").strip()
+        if not lic.lower().startswith(OK_LICENCES):
+            continue
+        out.append({"url": info.get("thumburl") or info["url"], "page": info.get("descriptionurl"),
+                    "licence": lic, "author": _clean_artist(meta.get("Artist", {}).get("value")),
+                    "title": p.get("title", "")})
+    return out
+
+
+def _best_photo(person: dict) -> dict | None:
+    """Search Commons with context first (press conference for coaches, playing for players),
+    then the person's Wikidata portrait."""
+    name = person["name"]
+    last = name.split()[-1].lower()
+    queries = ([f'"{name}" press conference', f'"{name}" coach', f'"{name}"']
+               if "coach" in (person.get("role") or "").lower()
+               else [f'"{name}" football', f'"{name}"'])
+    for q in queries:
+        try:
+            hits = [h for h in _commons_search(q) if last in h["title"].lower()]
+        except Exception as e:
+            log.info("Commons search failed for %s: %s", q, e)
+            hits = []
+        if hits:
+            return {**hits[0], "query": q}
+    fn = _wikidata_image(name)
+    return _commons_info(fn) if fn else None
 
 
 def find(people: list[dict], outdir: Path, limit: int = 6) -> list[dict]:
@@ -58,8 +104,7 @@ def find(people: list[dict], outdir: Path, limit: int = 6) -> list[dict]:
             continue
         seen.add(p["name"])
         try:
-            fn = _wikidata_image(p["name"])
-            info = _commons_info(fn) if fn else None
+            info = _best_photo(p)
             if not info:
                 continue
             ext = Path(info["url"]).suffix.lower() or ".jpg"

@@ -120,7 +120,14 @@ def show_data(pick: str | None) -> int:
         text += "\n" + "\n".join(f"{s['minute']}' {s['side']} {s['player']} xG {s['xg']} {s['result']}"
                                    for s in shots[:40])
     print(text)
+    found = []
+    if cfg.get("photos", {}).get("enabled", True):
+        from . import photos
+        found = photos.find(photos.people_in(pack), OUT_DIR / "photos")
+        for ph in found:
+            print(f"Photo: {ph['name']} ({ph['role']}) - {ph['licence']}, {ph['author']} - {ph['page']}")
     write_json(DASH / "match_data.json", {
+        "photos": [{k: v for k, v in ph.items() if k != "path"} for ph in found],
         "updated": now(), "fixture_id": pack.get("fixture_id"), "home": pack["home"],
         "away": pack["away"], "competition": pack["competition"], "source": pack.get("source"),
         "facts": pack["facts"], "shots": shots})
