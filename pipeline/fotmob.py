@@ -223,3 +223,55 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
     log.info("FotMob: match %s, %d facts, %s shots, momentum %s", mid, len(facts),
              len(pack.get("shots", [])) if added_shots else "no new", "yes" if mom else "no")
     return pack
+
+
+def build_pack(mid: int) -> dict:
+    """A full data pack from FotMob alone, for matches our main source does not cover
+    (Nations League, internationals, cups, AFCON...). Pick it with "fotmob:<match id>"."""
+    data = _get("matchDetails", {"matchId": mid})
+    g, header = data.get("general", {}), data.get("header", {})
+    teams = header.get("teams") or []
+    if len(teams) != 2 or not (header.get("status") or {}).get("finished"):
+        from .common import StopPipeline
+        raise StopPipeline(f"FotMob match {mid} is not a finished match.")
+    home, away = teams[0]["name"], teams[1]["name"]
+    facts = []
+
+    def add(fid, label, value):
+        if value is not None:
+            facts.append({"id": fid, "label": label, "value": value})
+
+    add("score_home", f"{home} goals", teams[0].get("score"))
+    add("score_away", f"{away} goals", teams[1].get("score"))
+    events = ((data.get("content", {}).get("matchFacts") or {}).get("events") or {}).get("events") or []
+    ht = next((e for e in events if e.get("type") == "Half" and e.get("halfStrShort") == "HT"), None)
+    if ht:
+        add("ht_home", f"{home} goals at half time", ht.get("homeScore"))
+        add("ht_away", f"{away} goals at half time", ht.get("awayScore"))
+    add("date", "Match date", (g.get("matchTimeUTCDate") or "")[:10] or None)
+    add("competition_round", "Round", g.get("leagueRoundName"))
+    n = 0
+    for e in events:
+        if e.get("type") == "Goal":
+            n += 1
+            minute = e.get("time")
+            extra = e.get("overloadTime")
+            add(f"goal_{n}", f"Goal {n}", {
+                "team": home if e.get("isHome") else away, "player": (e.get("player") or {}).get("name"),
+                "minute": minute, "added_time": extra or None,
+                "type": "own goal" if e.get("ownGoal") else (e.get("goalDescription") or "open play"),
+                "assist": (e.get("assistInput") or None), "score_after": e.get("newScore")})
+        elif e.get("type") == "Card" and e.get("card") in ("Red", "YellowRed"):
+            add(f"red_card_{e.get('time')}", "Red card", {
+                "team": home if e.get("isHome") else away,
+                "player": (e.get("player") or {}).get("name"), "minute": e.get("time")})
+    pack = {
+        "source": "FotMob",
+        "fixture_id": f"fotmob-{mid}",
+        "competition": g.get("parentLeagueName") or g.get("leagueName") or "",
+        "home": home, "away": away, "facts": facts,
+        "note": "Data from FotMob only: no league table or recent-form facts for this match.",
+    }
+    pack = _apply(pack, data, mid)
+    pack["source"] = "FotMob"
+    return pack

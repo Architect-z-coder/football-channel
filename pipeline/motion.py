@@ -17,6 +17,11 @@ FPS = 30
 
 def _events(pack: dict) -> list[dict]:
     out = []
+    for f in pack["facts"]:   # FotMob-only packs list goals as goal_1, goal_2, ...
+        if f["id"].startswith("goal_") and isinstance(f["value"], dict):
+            v = f["value"]
+            out.append({"kind": "goal", "side": "home" if v.get("team") == pack["home"] else "away",
+                        "minute": v.get("minute"), "extra": v.get("added_time"), "player": v.get("player")})
     for f in pack["facts"]:
         if not f["id"].startswith("event_") or not isinstance(f["value"], dict):
             continue

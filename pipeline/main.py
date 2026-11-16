@@ -115,7 +115,7 @@ def show_data(pick: str | None) -> int:
     lines = [f"{f['id']}: {f['value']}" for f in pack["facts"]]
     shots = pack.get("shots", [])
     text = (f"{pack['home']} v {pack['away']} ({pack['competition']}), source: {pack.get('source')}\n"
-            + "\n".join(lines) + f"\n\nShots from Understat: {len(shots)}")
+            + "\n".join(lines) + f"\n\nShots: {len(shots)}")
     if shots:
         text += "\n" + "\n".join(f"{s['minute']}' {s['side']} {s['player']} xG {s['xg']} {s['result']}"
                                    for s in shots[:40])

@@ -234,6 +234,12 @@ def list_matches(cfg: dict) -> tuple[list[str], list[dict]]:
 
 
 def scout(cfg: dict, pick: str | None = None) -> dict:
+    if pick and pick.strip().lower().startswith("fotmob:"):   # any match FotMob covers
+        from .fotmob import build_pack as fotmob_pack
+        pack = fotmob_pack(int(pick.split(":", 1)[1].strip()))
+        log.info("Data pack (FotMob only): %s vs %s (%s), %d facts, %d shots", pack["home"],
+                 pack["away"], pack["competition"], len(pack["facts"]), len(pack.get("shots", [])))
+        return pack
     api = FootballData(secret("FOOTBALL_DATA_KEY", required=True))
     match, table, comp = choose(cfg, api, pick)
     pack = build_pack(match, table, comp, api)
