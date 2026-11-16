@@ -19,7 +19,7 @@ Score each from 1 to 10:
 - pace: short sentences, no repetition, no filler, each scene moves the story forward.
 - clarity: a casual fan understands every term (xG etc. explained once, simply).
 
-Then give at most 6 specific, actionable notes (quote the weak line and say what to do instead).
+Then give at most 6 short, specific, actionable notes (one sentence each) (quote the weak line and say what to do instead).
 Notes may only use numbers and facts already in the script or data pack.
 Return ONLY JSON: {"hook": int, "payoff": int, "pace": int, "clarity": int, "notes": [str, ...]}"""
 
@@ -28,7 +28,7 @@ def review(cfg: dict, script: dict, pack: dict) -> dict:
     slim = {k: v for k, v in pack.items() if k not in ("history",)}
     user = (f"DATA PACK:\n{json.dumps(slim, ensure_ascii=False)}\n\n"
             f"SCRIPT:\n{json.dumps(script, ensure_ascii=False)}")
-    r = ask_json(cfg["writer"]["model"], CRITIC_SYSTEM, user, max_tokens=2500)
+    r = ask_json(cfg["writer"]["model"], CRITIC_SYSTEM, user, max_tokens=6000)
     scores = {k: int(r.get(k, 0) or 0) for k in ("hook", "payoff", "pace", "clarity")}
     return {**scores, "notes": [str(n) for n in r.get("notes", [])][:6]}
 
