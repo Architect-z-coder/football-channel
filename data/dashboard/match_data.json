@@ -1,5 +1,43 @@
 {
-  "updated": "2026-11-16T22:58:33Z",
+  "photos": [
+    {
+      "name": "Jürgen Klopp",
+      "role": "Head coach",
+      "team": "Germany",
+      "file": "photo_1.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Juergen_Klopp_2014_%28cropped%29.jpg/960px-Juergen_Klopp_2014_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Juergen_Klopp_2014_(cropped).jpg",
+      "licence": "CC BY-SA 3.0",
+      "author": "Tim.Reckmann",
+      "title": "File:Juergen Klopp 2014 (cropped).jpg",
+      "query": "\"Jürgen Klopp\" coach"
+    },
+    {
+      "name": "Xavi Hernández",
+      "role": "Head coach",
+      "team": "Netherlands",
+      "file": "photo_2.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Xavi_Hern%C3%A1ndez_-_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002.jpg",
+      "licence": "Public domain",
+      "author": "Mutari 15:45, 5 March 2008 (UTC)",
+      "title": "File:Xavi Hernández - 002.jpg",
+      "query": "\"Xavi Hernández\""
+    },
+    {
+      "name": "Florian Wirtz",
+      "role": "Player",
+      "team": "Germany",
+      "file": "photo_3.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Florian_Wirtz_-_Ecuador_v_Germany_-_25_June_2026.jpg/960px-Florian_Wirtz_-_Ecuador_v_Germany_-_25_June_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Florian_Wirtz_-_Ecuador_v_Germany_-_25_June_2026.jpg",
+      "licence": "CC BY-SA 4.0",
+      "author": "Bryan Berlin",
+      "title": "File:Florian Wirtz - Ecuador v Germany - 25 June 2026.jpg",
+      "query": "\"Florian Wirtz\" football"
+    }
+  ],
+  "updated": "2026-11-16T23:39:52Z",
   "fixture_id": "fotmob-5181835",
   "home": "Germany",
   "away": "Netherlands",
@@ -291,6 +329,129 @@
         "player": "Crysencio Summerville",
         "rating": 6.8
       }
+    },
+    {
+      "id": "best_player_1",
+      "label": "Highest FotMob rating among starters",
+      "value": {
+        "player": "Brajan Gruda",
+        "team": "Germany",
+        "rating": 9.2
+      }
+    },
+    {
+      "id": "best_player_2",
+      "label": "Highest FotMob rating among starters",
+      "value": {
+        "player": "Florian Wirtz",
+        "team": "Germany",
+        "rating": 9.0
+      }
+    },
+    {
+      "id": "best_player_3",
+      "label": "Highest FotMob rating among starters",
+      "value": {
+        "player": "Nico Schlotterbeck",
+        "team": "Germany",
+        "rating": 8.3
+      }
+    },
+    {
+      "id": "worst_player_1",
+      "label": "Lowest FotMob rating among starters",
+      "value": {
+        "player": "Denzel Dumfries",
+        "team": "Netherlands",
+        "rating": 3.3,
+        "subbed_off": false
+      }
+    },
+    {
+      "id": "worst_player_2",
+      "label": "Lowest FotMob rating among starters",
+      "value": {
+        "player": "Bart Verbruggen",
+        "team": "Netherlands",
+        "rating": 4.8,
+        "subbed_off": false
+      }
+    },
+    {
+      "id": "worst_player_3",
+      "label": "Lowest FotMob rating among starters",
+      "value": {
+        "player": "Jan Paul van Hecke",
+        "team": "Netherlands",
+        "rating": 5.1,
+        "subbed_off": false
+      }
+    },
+    {
+      "id": "home_coach",
+      "label": "Germany head coach",
+      "value": "Jürgen Klopp"
+    },
+    {
+      "id": "home_starting_xi",
+      "label": "Germany starting eleven",
+      "value": "Marc ter Stegen, Philipp Treu, Jonathan Tah, Nico Schlotterbeck, Nathaniel Brown, Joshua Kimmich, Aleksandar Pavlović, Brajan Gruda, Florian Wirtz, Derry Scherhant, Kai Havertz"
+    },
+    {
+      "id": "home_xi_market_value_m_eur",
+      "label": "Germany starting eleven total market value, million EUR",
+      "value": 485
+    },
+    {
+      "id": "away_coach",
+      "label": "Netherlands head coach",
+      "value": "Xavi Hernández"
+    },
+    {
+      "id": "away_starting_xi",
+      "label": "Netherlands starting eleven",
+      "value": "Bart Verbruggen, Denzel Dumfries, Jan Paul van Hecke, Micky van de Ven, Jurriën Timber, Quinten Timber, Joey Veerman, Crysencio Summerville, Tijjani Reijnders, Cody Gakpo, Donyell Malen"
+    },
+    {
+      "id": "away_absent_1",
+      "label": "Netherlands player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Brian Brobbey",
+        "reason": "injury",
+        "market_value_m_eur": 61
+      }
+    },
+    {
+      "id": "away_absent_2",
+      "label": "Netherlands player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Frenkie de Jong",
+        "reason": "injury",
+        "market_value_m_eur": 24
+      }
+    },
+    {
+      "id": "away_absent_3",
+      "label": "Netherlands player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Virgil van Dijk",
+        "reason": "injury",
+        "market_value_m_eur": 13
+      }
+    },
+    {
+      "id": "away_absent_4",
+      "label": "Netherlands player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Nathan Aké",
+        "reason": "injury",
+        "market_value_m_eur": 8
+      }
+    },
+    {
+      "id": "away_xi_market_value_m_eur",
+      "label": "Netherlands starting eleven total market value, million EUR",
+      "value": 473
     },
     {
       "id": "player_of_the_match",
