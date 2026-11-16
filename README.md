@@ -85,3 +85,11 @@ those numbers. To add a team, edit `LENSES` in `scripts/build_history_lens.py` a
 
 `pipeline/thumbs.py` makes three styles for YouTube Test & Compare: the real shot map (when Understat
 has the match), a big-number card, and a team split. Font: Anton (SIL Open Font License).
+
+## FotMob (extra post-match detail, no key)
+
+After choosing a match, `pipeline/fotmob.py` reads the data behind FotMob's public match page:
+every shot with xG and position, team stats (possession, big chances, xG on target, passing...),
+formations, FotMob player ratings, player of the match, and the momentum graph when FotMob has it.
+One list request and one match request per video. It is unofficial and can change or be blocked,
+so it never stops a video; Understat is used as a backup for shots. Turn it off with `fotmob: false`.

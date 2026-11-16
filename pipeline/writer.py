@@ -1,6 +1,7 @@
 """Writer: turns a data pack into a scene-by-scene script (the Match Lens structure)."""
 import json
 
+from .common import ai_pack
 from .llm import ask_json
 
 VISUAL_TYPES = """
@@ -27,6 +28,8 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    (only if the pack has *_formation facts)
 - {"type": "text_card", "heading": str, "lines": [str, ...]}  -> max 3 short lines
 - {"type": "lesson_list", "items": [str, str, str]}
+- {"type": "momentum"}                          -> FotMob's minute-by-minute momentum graph with the goals
+                                                   marked. Only if the pack says "momentum_available".
 - {"type": "history_lens", "lens": str, "metrics": [str, ...]}
                                                 -> a famous team's per-match numbers beside a map of
                                                    all its goals. "lens" = an id from the pack's
@@ -84,7 +87,7 @@ def write_script(cfg: dict, pack: dict, feedback: str | None = None, previous: d
     user = (
         f"Channel: {cfg['channel']['name']} - {cfg['channel']['tagline']}\n"
         f"Target length: about {target_words} words of narration in total.\n\n"
-        f"DATA PACK:\n{json.dumps(pack, ensure_ascii=False)}\n"
+        f"DATA PACK:\n{json.dumps(ai_pack(pack), ensure_ascii=False)}\n"
     )
     if previous:
         user += f"\nYOUR PREVIOUS DRAFT:\n{json.dumps(previous, ensure_ascii=False)}\n"

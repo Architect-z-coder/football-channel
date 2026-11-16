@@ -7,10 +7,10 @@ import json
 from pathlib import Path
 
 from . import factcheck, voice
-from .common import log, write_json
+from .common import ai_pack, log, write_json
 from .llm import ask_json
 
-VISUALS = ["key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
+VISUALS = ["momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
            "table_snapshot", "form_compare", "history_lens"]
 
 SYSTEM = f"""You write YouTube Shorts for a faceless football analysis channel. Each short is a 20-35 second
@@ -25,7 +25,7 @@ RULES
 4. "hook": the on-screen headline, 2-6 words, punchy, true.
 5. "visual": one of {VISUALS}, using the same parameters as in the main script
    (stat_bars needs "stats"; key_number needs "value" and "label"; history_lens needs "lens" and "metrics").
-   Use shot_map / xg_timeline only if the pack has "shots"; table_snapshot / form_compare only if the
+   Use momentum only if the pack says "momentum_available"; shot_map / xg_timeline only if the pack has "shots"; table_snapshot / form_compare only if the
    pack has those facts. The two shorts must use different visuals and different ideas.
 6. "title": under 60 characters, accurate, no hashtags. "fact_ids": the fact ids you used.
 7. Never mention politics, transfer rumours, betting, injuries or private lives.
@@ -36,7 +36,7 @@ Return ONLY JSON: {{"shorts": [{{"id": 1, "title": str, "hook": str, "narration"
 def write(cfg: dict, pack: dict, script: dict, feedback: str | None = None) -> list[dict]:
     main = {"title": script["title_options"][0],
             "keys": [sc.get("on_screen") for sc in script["scenes"]]}
-    user = (f"DATA PACK:\n{json.dumps(pack, ensure_ascii=False)}\n\n"
+    user = (f"DATA PACK:\n{json.dumps(ai_pack(pack), ensure_ascii=False)}\n\n"
             f"THE MAIN VIDEO (for context, do not copy it):\n{json.dumps(main, ensure_ascii=False)}\n")
     if feedback:
         user += f"\nYour previous shorts failed fact-checking. Fix these problems:\n{feedback}\n"

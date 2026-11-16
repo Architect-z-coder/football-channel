@@ -57,6 +57,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "facts": {f["id"]: f["value"] for f in pack["facts"]},
         "events": _events(pack),
         "shots": pack.get("shots", []),
+        "momentum": pack.get("momentum") or [],
         "history": history.used_in(script),
         "scenes": scenes,
     }
@@ -105,7 +106,8 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
         "home": pack["home"], "away": pack["away"],
         "source": pack.get("source", "API-Football") + (" + StatsBomb" if history.used_in(fake_script) else ""),
         "facts": {f["id"]: f["value"] for f in pack["facts"]}, "events": _events(pack),
-        "shots": pack.get("shots", []), "history": history.used_in(fake_script),
+        "shots": pack.get("shots", []), "momentum": pack.get("momentum") or [],
+        "history": history.used_in(fake_script),
         "scenes": [],
         "short": {"hook": short["hook"], "narration": short["narration"], "visual": short.get("visual", {}),
                   "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts,

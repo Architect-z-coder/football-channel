@@ -239,7 +239,10 @@ def scout(cfg: dict, pick: str | None = None) -> dict:
     pack = build_pack(match, table, comp, api)
     code = (match.get("competition") or {}).get("code") or next(
         (c.get("code") for c in cfg["competitions"] if c["name"] == comp), None)
-    if cfg.get("understat", True) and code:
+    if cfg.get("fotmob", True) and code:          # shots, team stats, ratings, momentum
+        from .fotmob import enrich as fotmob_enrich
+        pack = fotmob_enrich(pack, match, code)
+    if cfg.get("understat", True) and code and not pack.get("shots"):   # backup shot source
         from .understat import enrich
         pack = enrich(pack, match, code)
     log.info("Data pack: %s vs %s (%s), %d facts, %d API calls",

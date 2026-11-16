@@ -598,7 +598,55 @@ const HistoryLens = ({ visual, props, scene }) => {
   );
 };
 
+
+// ---------- FotMob momentum: who was on top, minute by minute ----------
+const Momentum = ({ props, scene }) => {
+  const f = useCurrentFrame();
+  const pts = props.momentum || [];
+  if (!pts.length) return <TextCard visual={{ heading: scene.on_screen || "Momentum", lines: [] }} />;
+  const W = 1560, H = 520, MID = H / 2, maxMin = Math.max(90, ...pts.map((p) => p.minute));
+  const maxV = Math.max(1, ...pts.map((p) => Math.abs(p.value)));
+  const x = (m) => (m / maxMin) * W;
+  const bw = Math.max(4, W / pts.length - 3);
+  const reveal = interpolate(f, [8, scene.durationInFrames * 0.6], [0, maxMin], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const fromShots = (props.shots || []).filter((s) => s.result === "Goal").map((s) => ({ minute: s.minute, team: s.side }));
+  const goals = fromShots.length ? fromShots
+    : (props.events || []).filter((e) => e.kind === "goal").map((e) => ({ minute: e.minute, team: e.side }));
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", gap: 18 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", width: W, fontFamily: HEAD, fontSize: 40 }}>
+        <span style={{ color: C.home }}>▲ {props.home.toUpperCase()} ON TOP</span>
+        <span style={{ color: C.away }}>{props.away.toUpperCase()} ON TOP ▼</span>
+      </div>
+      <svg width={W} height={H + 40} style={{ overflow: "visible" }}>
+        <line x1={0} y1={MID} x2={W} y2={MID} stroke={C.line} strokeWidth={3} />
+        <line x1={x(45)} y1={0} x2={x(45)} y2={H} stroke={C.line} strokeDasharray="8 8" strokeWidth={2} />
+        {pts.filter((p) => p.minute <= reveal).map((p, i) => {
+          const h = (Math.abs(p.value) / maxV) * (MID - 10);
+          const home = p.value > 0;
+          return <rect key={i} x={x(p.minute) - bw / 2} y={home ? MID - h : MID} width={bw} height={h}
+                       fill={home ? C.home : C.away} opacity={0.85} rx={2} />;
+        })}
+        {goals.filter((g) => g.minute <= reveal).map((g, i) => (
+          <g key={`g${i}`} transform={`translate(${x(g.minute)}, ${g.team === "home" ? 14 : H - 14})`}>
+            <circle r={16} fill={C.accent} />
+            <text y={7} textAnchor="middle" fontFamily={BODY} fontWeight={800} fontSize={18} fill={C.bg}>⚽</text>
+          </g>
+        ))}
+        {[0, 45, 90].map((m) => (
+          <text key={m} x={x(m)} y={H + 34} textAnchor="middle" fontFamily={BODY} fontWeight={600}
+                fontSize={24} fill={C.muted}>{m}'</text>
+        ))}
+      </svg>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 22, color: C.muted }}>
+        Momentum and goals · data: FotMob
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const MAP = {
+  momentum: Momentum,
   history_lens: HistoryLens,
   shot_map: ShotMap, xg_timeline: XgTimeline,
   title_card: TitleCard, key_number: KeyNumber, scoreline: Scoreline,

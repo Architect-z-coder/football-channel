@@ -1,0 +1,225 @@
+"""FotMob: extra post-match detail from the data behind FotMob's public match pages (no key needed).
+
+Adds, when FotMob has them: every shot with xG and position, team stats (possession, big chances,
+xG on target, passing...), formations, FotMob player ratings and player of the match, and the
+momentum graph. One list request plus one match request per video; credit "FotMob" on screen.
+Unofficial: it can change or be blocked at any time, so it never raises and never stops a video.
+"""
+from datetime import date, timedelta
+
+import requests
+
+from .common import log
+from .understat import _similar
+
+BASE = "https://www.fotmob.com/api/data"
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                         "(KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+           "Accept": "application/json", "Referer": "https://www.fotmob.com/"}
+# football-data.org competition code -> FotMob league id
+LEAGUES = {"PL": 47, "PD": 87, "SA": 55, "BL1": 54, "FL1": 53, "CL": 42, "EC": 50, "WC": 77}
+
+# FotMob team-stat title -> (fact id suffix, label). Values come as [home, away].
+TEAM_STATS = {
+    "Ball possession": ("possession", "possession, percent"),
+    "Expected goals (xG)": ("xg", "expected goals (FotMob)"),
+    "Expected goals on target (xGOT)": ("xgot", "expected goals on target (FotMob)"),
+    "Total shots": ("shots", "shots"),
+    "Shots on target": ("shots_on_target", "shots on target"),
+    "Big chances": ("big_chances", "big chances"),
+    "Big chances missed": ("big_chances_missed", "big chances missed"),
+    "Accurate passes": ("accurate_passes", "accurate passes"),
+    "Touches in opposition box": ("box_touches", "touches in the opposition box"),
+    "Corners": ("corners", "corners"),
+    "Fouls committed": ("fouls", "fouls committed"),
+    "Duels won": ("duels_won", "duels won"),
+    "Tackles": ("tackles", "tackles"),
+    "Interceptions": ("interceptions", "interceptions"),
+    "Keeper saves": ("saves", "goalkeeper saves"),
+}
+RESULT = {"Goal": "Goal", "AttemptSaved": "SavedShot", "Miss": "MissedShots", "Post": "ShotOnPost"}
+
+
+def _get(path: str, params: dict) -> dict:
+    r = requests.get(f"{BASE}/{path}", params=params, headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def _walk(node):
+    """Every dict inside a JSON tree (FotMob moves sections around, so we search instead of indexing)."""
+    if isinstance(node, dict):
+        yield node
+        for v in node.values():
+            yield from _walk(v)
+    elif isinstance(node, list):
+        for v in node:
+            yield from _walk(v)
+
+
+def find_match(fd_match: dict, code: str) -> int | None:
+    league = LEAGUES.get(code)
+    if not league:
+        return None
+    day = date.fromisoformat(fd_match["utcDate"][:10])
+    home = [fd_match["homeTeam"].get(k) or "" for k in ("name", "shortName")]
+    away = [fd_match["awayTeam"].get(k) or "" for k in ("name", "shortName")]
+    best, best_score = None, 0.0
+    for d in (day, day - timedelta(days=1), day + timedelta(days=1)):
+        data = _get("matches", {"date": d.strftime("%Y%m%d")})
+        for lg in data.get("leagues", []):
+            if league not in (lg.get("primaryId"), lg.get("id"), lg.get("parentLeagueId")):
+                continue
+            for m in lg.get("matches", []):
+                h = [m["home"].get("name", ""), m["home"].get("shortName", "")]
+                a = [m["away"].get("name", ""), m["away"].get("shortName", "")]
+                score = max(_similar(home, x) for x in h if x) + max(_similar(away, x) for x in a if x)
+                if score > best_score:
+                    best, best_score = m["id"], score
+        if best_score >= 1.3:
+            break
+    return best if best_score >= 1.1 else None
+
+
+def _num(v):
+    """'410 (85%)' -> (410, 85); '2.02' -> 2.02; 57 -> 57."""
+    if isinstance(v, (int, float)):
+        return v, None
+    s = str(v).strip()
+    pct = None
+    if "(" in s and "%" in s:
+        pct = s[s.index("(") + 1:s.index("%")].strip()
+        s = s[:s.index("(")].strip()
+    try:
+        n = float(s)
+        n = int(n) if n.is_integer() else round(n, 2)
+    except ValueError:
+        return None, None
+    try:
+        pct = int(float(pct)) if pct is not None else None
+    except ValueError:
+        pct = None
+    return n, pct
+
+
+def team_stats(data: dict) -> dict:
+    out = {}
+    for d in _walk(data.get("content", {}).get("stats", data.get("content", {}))):
+        title, vals = d.get("title"), d.get("stats")
+        if title in TEAM_STATS and isinstance(vals, list) and len(vals) == 2 and title not in out:
+            out[title] = vals
+    return out
+
+
+def shots(data: dict, home_id: int) -> list[dict]:
+    raw = []
+    for d in _walk(data.get("content", {})):
+        if isinstance(d.get("shots"), list) and d["shots"] and "expectedGoals" in d["shots"][0]:
+            raw = d["shots"]
+            break
+    out = []
+    for s in raw:
+        if s.get("isOwnGoal"):
+            continue
+        result = "BlockedShot" if s.get("isBlocked") and s.get("eventType") != "Goal" else \
+            RESULT.get(s.get("eventType"), s.get("eventType"))
+        out.append({
+            "side": "home" if s.get("teamId") == home_id else "away",
+            "minute": int(s.get("min") or 0),
+            "x": round(float(s["x"]) / 105, 4), "y": round(float(s["y"]) / 68, 4),  # 0-1, attacking x = 1
+            "xg": round(float(s.get("expectedGoals") or 0), 2),
+            "result": result, "player": s.get("playerName"), "situation": s.get("situation"),
+        })
+    out.sort(key=lambda s: s["minute"])
+    return out
+
+
+def momentum(data: dict) -> list[dict] | None:
+    for d in _walk(data.get("content", {})):
+        m = d.get("momentum")
+        if isinstance(m, dict):
+            pts = (m.get("main") or {}).get("data") or m.get("data")
+            if isinstance(pts, list) and pts and "value" in pts[0]:
+                # FotMob: positive = home on top, negative = away on top
+                return [{"minute": float(p["minute"]), "value": float(p["value"])} for p in pts]
+    return None
+
+
+def enrich(pack: dict, fd_match: dict, code: str) -> dict:
+    """Add FotMob detail to the data pack. Never raises."""
+    try:
+        mid = find_match(fd_match, code)
+        if not mid:
+            log.info("FotMob: match not found.")
+            return pack
+        data = _get("matchDetails", {"matchId": mid})
+    except Exception as e:
+        log.warning("FotMob unavailable, continuing without it: %s", e)
+        return pack
+    try:
+        return _apply(pack, data, mid)
+    except Exception as e:  # page format changed: keep what we had
+        log.warning("FotMob data could not be read (%s); continuing without it.", e)
+        return pack
+
+
+def _apply(pack: dict, data: dict, mid: int) -> dict:
+    facts = pack["facts"]
+    have = {f["id"] for f in facts}
+
+    def add(fid, label, value):
+        if fid not in have and value is not None:
+            facts.append({"id": fid, "label": label, "value": value})
+            have.add(fid)
+
+    general = data.get("general", {})
+    home_id = (general.get("homeTeam") or {}).get("id")
+    teams = (("home", pack["home"]), ("away", pack["away"]))
+
+    for title, vals in team_stats(data).items():
+        key, label = TEAM_STATS[title]
+        for (side, team), raw in zip(teams, vals):
+            n, pct = _num(raw)
+            add(f"{side}_{key}", f"{team} {label} (FotMob)", n)
+            if pct is not None:
+                add(f"{side}_{key}_pct", f"{team} {label}, percent (FotMob)", pct)
+
+    lineup = data.get("content", {}).get("lineup") or {}
+    for side, team in teams:
+        t = lineup.get(f"{side}Team") or {}
+        add(f"{side}_formation", f"{team} formation", t.get("formation"))
+        rated = [p for p in t.get("starters", []) + t.get("subs", [])
+                 if (p.get("performance") or {}).get("rating")]
+        if rated:
+            top = max(rated, key=lambda p: p["performance"]["rating"])
+            add(f"{side}_top_rated", f"{team} highest FotMob player rating",
+                {"player": top.get("name"), "rating": top["performance"]["rating"]})
+    potm = (data.get("content", {}).get("matchFacts") or {}).get("playerOfTheMatch") or {}
+    if potm.get("name"):
+        add("player_of_the_match", "Player of the match (FotMob)",
+            {"player": potm["name"].get("fullName"), "team": potm.get("teamName"),
+             "rating": (potm.get("rating") or {}).get("num")})
+
+    added_shots = False
+    if not pack.get("shots"):
+        sh = shots(data, home_id)
+        if sh:
+            pack["shots"] = sh
+            added_shots = True
+            for side, team in teams:
+                mine = [s for s in sh if s["side"] == side]
+                add(f"{side}_xg", f"{team} expected goals (FotMob)", round(sum(s["xg"] for s in mine), 2))
+                if mine:
+                    best = max(mine, key=lambda s: s["xg"])
+                    add(f"{side}_best_chance", f"{team} best single chance (FotMob)",
+                        {"player": best["player"], "minute": best["minute"], "xg": best["xg"],
+                         "result": best["result"]})
+    mom = momentum(data)
+    if mom:
+        pack["momentum"] = mom
+
+    pack["fotmob_id"] = mid
+    pack["source"] = pack.get("source", "") + " + FotMob"
+    log.info("FotMob: match %s, %d facts, %s shots, momentum %s", mid, len(facts),
+             len(pack.get("shots", [])) if added_shots else "no new", "yes" if mom else "no")
+    return pack

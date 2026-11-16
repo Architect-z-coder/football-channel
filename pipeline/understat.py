@@ -127,9 +127,11 @@ def enrich(pack: dict, fd_match: dict, code: str) -> dict:
         return pack
 
     facts = pack["facts"]
+    have = {f["id"] for f in facts}
 
     def add(fid, label, value):
-        facts.append({"id": fid, "label": label, "value": value})
+        if fid not in have:
+            facts.append({"id": fid, "label": label, "value": value})
 
     for side, team in (("home", pack["home"]), ("away", pack["away"])):
         mine = [s for s in out if s["side"] == side]

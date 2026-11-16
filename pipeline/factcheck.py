@@ -7,7 +7,7 @@
 import json
 import re
 
-from .common import log
+from .common import ai_pack, log
 from .llm import ask_json
 
 NUM = re.compile(r"(?<![\w.])\d+(?:\.\d+)?")
@@ -33,6 +33,7 @@ def allowed_numbers(pack: dict) -> set[float]:
         allowed.update(_numbers_in(v))
     for shot in pack.get("shots", []):  # Understat shot list (minute, xG)
         allowed.update(_numbers_in({"minute": shot.get("minute"), "xg": shot.get("xg")}))
+    allowed.update(_numbers_in(ai_pack(pack).get("momentum_home_on_top_pct", {})))
     for lens in pack.get("history", []):  # StatsBomb history lens facts, plus years in its label
         allowed.update(_numbers_in(lens.get("facts", {})))
         allowed.update(_numbers_in(lens.get("label", "")))
@@ -98,7 +99,7 @@ Return ONLY JSON: {"ok": bool, "problems": [str, ...]}"""
 
 
 def claim_check(cfg: dict, script: dict, pack: dict) -> list[str]:
-    user = f"DATA PACK:\n{json.dumps(pack, ensure_ascii=False)}\n\nSCRIPT:\n{json.dumps(script, ensure_ascii=False)}"
+    user = f"DATA PACK:\n{json.dumps(ai_pack(pack), ensure_ascii=False)}\n\nSCRIPT:\n{json.dumps(script, ensure_ascii=False)}"
     result = ask_json(cfg["writer"]["model"], CLAIM_SYSTEM, user, max_tokens=3000)
     return [] if result.get("ok") and not result.get("problems") else list(result.get("problems", []))
 

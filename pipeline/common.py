@@ -50,3 +50,18 @@ def read_json(path: Path, default=None):
 def write_json(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def ai_pack(pack: dict) -> dict:
+    """The data pack as the AI sees it: the momentum series is replaced by a short summary."""
+    out = {k: v for k, v in pack.items() if k != "momentum"}
+    mom = pack.get("momentum")
+    if mom:
+        def share(lo, hi):
+            pts = [p["value"] for p in mom if lo <= p["minute"] < hi]
+            return round(100 * sum(1 for v in pts if v > 0) / len(pts)) if pts else None
+        out["momentum_available"] = True
+        out["momentum_note"] = ("FotMob momentum: percent of minutes in which the HOME team was on top "
+                                "(the rest the away team)")
+        out["momentum_home_on_top_pct"] = {"first_half": share(0, 46), "second_half": share(46, 200)}
+    return out
