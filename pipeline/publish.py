@@ -60,3 +60,29 @@ def upload(cfg: dict, script: dict, video: Path, srt: Path, thumbs: list[Path]) 
     except Exception as e:  # needs a phone-verified channel
         log.warning("Thumbnail upload failed (verify your channel by phone): %s", e)
     return vid
+
+
+def upload_short(cfg: dict, short: dict, video: Path, main_video_id: str | None) -> str:
+    """Upload one vertical short as PRIVATE, linking to the full video."""
+    from googleapiclient.http import MediaFileUpload
+
+    yt = _youtube()
+    link = f"\n\nFull breakdown: https://youtu.be/{main_video_id}" if main_video_id else ""
+    body = {
+        "snippet": {
+            "title": f"{short['title'][:88]} #shorts",
+            "description": short["narration"] + link + "\n\n#football #shorts",
+            "tags": ["football", "shorts", "football analysis"],
+            "categoryId": cfg["youtube"]["category_id"],
+            "defaultLanguage": cfg["channel"]["language"],
+            "defaultAudioLanguage": cfg["channel"]["language"],
+        },
+        "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": cfg["youtube"]["made_for_kids"]},
+    }
+    req = yt.videos().insert(part="snippet,status", body=body,
+                             media_body=MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True))
+    resp = None
+    while resp is None:
+        _, resp = req.next_chunk()
+    log.info("Short uploaded as private: %s", resp["id"])
+    return resp["id"]

@@ -50,6 +50,10 @@ critic:              # second AI pass that judges the hook and pacing, then rewr
   min_hook: 8        # 1-10
   min_other: 7       # payoff, pace, clarity
 
+shorts:              # vertical clips made from each match video, uploaded as private too
+  enabled: true
+  count: 2
+
 voice:
   model_id: "eleven_multilingual_v2"
 

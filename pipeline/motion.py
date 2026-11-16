@@ -63,12 +63,8 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
     return props, durs
 
 
-def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Path):
-    props, durs = build_props(cfg, script, pack, audios)
-    props_file = workdir / "props.json"
-    write_json(props_file, props)
-    raw = workdir / "motion.mp4"
-    cmd = ["npx", "remotion", "render", "src/index.jsx", "Match", str(raw),
+def _remotion(composition: str, props_file: Path, out: Path) -> None:
+    cmd = ["npx", "remotion", "render", "src/index.jsx", composition, str(out),
            f"--props={props_file}", "--codec=h264", "--crf=20", "--log=error"]
     browser = os.environ.get("REMOTION_BROWSER")
     if browser:
@@ -76,11 +72,50 @@ def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Pat
     concurrency = os.environ.get("REMOTION_CONCURRENCY")
     if concurrency:
         cmd.append(f"--concurrency={concurrency}")
-    log.info("Rendering motion graphics with Remotion (%d scenes, %.1f min)...",
-             len(props["scenes"]), sum(durs) / 60)
     result = subprocess.run(cmd, cwd=VIDEO_DIR, capture_output=True, text=True)
     if result.returncode != 0:
         raise StopPipeline(f"Remotion render failed:\n{(result.stderr or result.stdout)[-1500:]}")
+
+
+def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Path):
+    props, durs = build_props(cfg, script, pack, audios)
+    props_file = workdir / "props.json"
+    write_json(props_file, props)
+    raw = workdir / "motion.mp4"
+    log.info("Rendering motion graphics with Remotion (%d scenes, %.1f min)...",
+             len(props["scenes"]), sum(durs) / 60)
+    _remotion("Match", props_file, raw)
     final = add_music(raw, workdir / "video.mp4")
     shutil.rmtree(VIDEO_DIR / "public" / "run", ignore_errors=True)
     return final, durs
+
+
+def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) -> Path:
+    """One vertical short (1080x1920) with the same graphics, captions and data credit."""
+    run_dir = VIDEO_DIR / "public" / "run"
+    run_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy(audio, run_dir / f"short_{short['id']}.mp3")
+    timed = audio.with_suffix(".words.json")
+    word_starts = ([w["start"] for w in json.loads(timed.read_text(encoding="utf-8"))]
+                   if timed.exists() else None)
+    frames = math.ceil((duration(audio) + 0.3) * FPS) + 45  # + closing card
+    fake_script = {"scenes": [{"visual": short.get("visual", {})}]}
+    props = {
+        "channel": cfg["channel"]["name"], "competition": pack["competition"],
+        "home": pack["home"], "away": pack["away"],
+        "source": pack.get("source", "API-Football") + (" + StatsBomb" if history.used_in(fake_script) else ""),
+        "facts": {f["id"]: f["value"] for f in pack["facts"]}, "events": _events(pack),
+        "shots": pack.get("shots", []), "history": history.used_in(fake_script),
+        "scenes": [],
+        "short": {"hook": short["hook"], "narration": short["narration"], "visual": short.get("visual", {}),
+                  "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts,
+                  "durationInFrames": frames},
+    }
+    props_file = outdir / f"short_{short['id']}_props.json"
+    write_json(props_file, props)
+    raw = outdir / f"short_{short['id']}_raw.mp4"
+    log.info("Rendering short %s (%.0f s)...", short["id"], frames / FPS)
+    _remotion("Short", props_file, raw)
+    final = add_music(raw, outdir / f"short_{short['id']}.mp4")
+    shutil.rmtree(run_dir, ignore_errors=True)
+    return final

@@ -13,7 +13,7 @@ import argparse
 import sys
 from datetime import date
 
-from . import critic, factcheck, history, notify, render, thumbs, visuals, voice, writer
+from . import critic, factcheck, history, notify, render, shorts, thumbs, visuals, voice, writer
 from datetime import datetime, timezone
 
 from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, log, read_json, \
@@ -174,6 +174,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         video, durs = render.assemble(images, audios, workdir)
     srt = render.captions(script, durs, workdir / "captions.srt", workdir=workdir)
     thumb_paths = thumbs.render(script, pack, workdir)
+    made_shorts = (shorts.make(cfg, pack, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"))
+                   if secret("ANTHROPIC_API_KEY") else [])
     minutes = sum(durs) / 60
 
     meta = {"titles": script["title_options"], "description": script["description"],
@@ -185,7 +187,9 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
               "competition": pack["competition"], "fixture_id": pack["fixture_id"],
               "titles": script["title_options"], "minutes": round(minutes, 1),
               "files": workdir.name, "uploaded": False, "youtube": None,
-              "critic": report.get("critic"), "rewritten": bool(report.get("rewritten"))}
+              "critic": report.get("critic"), "rewritten": bool(report.get("rewritten")),
+              "shorts": [{"title": m["short"]["title"], "hook": m["short"]["hook"], "youtube": None}
+                         for m in made_shorts]}
     has_voice = bool(secret("ELEVENLABS_API_KEY") and secret("ELEVENLABS_VOICE_ID"))
     if upload and not dry_run and not has_voice:
         notify.send(f"Video made with silent audio (no voice keys yet), so it was NOT uploaded. "
@@ -198,11 +202,19 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         covered["fixtures"].append(pack["fixture_id"])
         write_json(DATA_DIR / "history.json", covered)
         result.update(uploaded=True, youtube=f"https://studio.youtube.com/video/{vid}/edit")
+        from .publish import upload_short
+        for m, row in zip(made_shorts, result["shorts"]):
+            try:
+                sid = upload_short(cfg, m["short"], m["video"], vid)
+                row["youtube"] = f"https://studio.youtube.com/video/{sid}/edit"
+            except Exception as e:  # a failed short never undoes the main upload
+                log.warning("Short upload failed: %s", e)
         notify.send(
             f"New video ready for review ({minutes:.1f} min): {pack['home']} vs {pack['away']}\n\n"
             f"Title: {script['title_options'][0]}\n"
             f"Other titles to A/B test: {' | '.join(script['title_options'][1:])}\n\n"
-            f"Review, then set to Public or Scheduled:\nhttps://studio.youtube.com/video/{vid}/edit")
+            f"Review, then set to Public or Scheduled:\nhttps://studio.youtube.com/video/{vid}/edit"
+            + "".join(f"\nShort: {r['youtube']}" for r in result["shorts"] if r["youtube"]))
     else:
         notify.send(f"Test run finished ({minutes:.1f} min). Files: {workdir.name}")
     if not dry_run:

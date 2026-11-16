@@ -66,7 +66,7 @@ const TopBar = ({ channel, competition, home, away, total }) => {
 };
 
 // ---------- kinetic captions: words appear and the spoken word lights up ----------
-const Captions = ({ text, speakFrames, wordStarts }) => {
+export const Captions = ({ text, speakFrames, wordStarts, per = 7, size = 50, bottom = 70, maxWidth = 1500 }) => {
   const f = useCurrentFrame();
   const words = text.split(/\s+/).filter(Boolean);
   if (!words.length) return null;
@@ -84,17 +84,17 @@ const Captions = ({ text, speakFrames, wordStarts }) => {
   let current = starts.findIndex((s, i) => f >= s && (i === words.length - 1 || f < starts[i + 1]));
   if (current < 0) current = f < starts[0] ? 0 : words.length - 1;
 
-  const PER = 7; // words per caption line
+  const PER = per; // words per caption line
   const lineStart = Math.floor(current / PER) * PER;
   const line = words.slice(lineStart, lineStart + PER);
   return (
     <div style={{
-      position: "absolute", bottom: 70, left: 0, right: 0, display: "flex",
+      position: "absolute", bottom, left: 0, right: 0, display: "flex",
       justifyContent: "center", fontFamily: BODY,
     }}>
       <div style={{
         background: "rgba(0,0,0,0.55)", padding: "16px 30px", borderRadius: 16,
-        display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", maxWidth: 1500,
+        display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", maxWidth,
       }}>
         {line.map((w, i) => {
           const idx = lineStart + i;
@@ -103,7 +103,7 @@ const Captions = ({ text, speakFrames, wordStarts }) => {
           const pop = spring({ frame: f - starts[idx], fps: 30, config: { damping: 12, mass: 0.4 } });
           return (
             <span key={idx} style={{
-              fontSize: 50, fontWeight: 800, color: active ? C.accent : C.text,
+              fontSize: size, fontWeight: 800, color: active ? C.accent : C.text,
               opacity: shown ? 1 : 0.25,
               transform: `scale(${active ? 1 + 0.08 * pop : 1})`,
               display: "inline-block", textShadow: "0 4px 18px rgba(0,0,0,0.6)",

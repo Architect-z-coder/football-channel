@@ -131,6 +131,7 @@ jobs:
           name: video-files
           path: |
             out/**/video.mp4
+            out/**/shorts/short_?.mp4
             out/**/*.json
             out/*.txt
             out/**/*.srt
