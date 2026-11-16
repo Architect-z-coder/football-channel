@@ -72,3 +72,16 @@ video length, banned topics.
 - `samples/` – the fictional test match
 - `data/history.json` – matches already covered (updated automatically)
 - `out/` – created during a run (video, script, fact-check report, thumbnails)
+
+## History lens (StatsBomb open data)
+
+`data/history_lens.json` holds per-match numbers for famous teams (Leverkusen 2023/24, Leicester 2015/16,
+Arsenal 2003/04, Barcelona 2010/11, Argentina and Morocco at the 2022 World Cup, Spain at Euro 2024,
+Côte d'Ivoire at AFCON 2023), built from StatsBomb's free open data with mplsoccer.
+The writer may use one of them in one scene for a brief comparison, and the fact-checker allows only
+those numbers. To add a team, edit `LENSES` in `scripts/build_history_lens.py` and run it again.
+
+## Thumbnails
+
+`pipeline/thumbs.py` makes three styles for YouTube Test & Compare: the real shot map (when Understat
+has the match), a big-number card, and a team split. Font: Anton (SIL Open Font License).

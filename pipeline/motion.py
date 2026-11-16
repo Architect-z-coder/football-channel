@@ -5,6 +5,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from . import history
 from .common import ROOT, StopPipeline, log, write_json
 from .render import PAD, add_music
 from .voice import duration
@@ -47,10 +48,11 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "competition": pack["competition"],
         "home": pack["home"],
         "away": pack["away"],
-        "source": pack.get("source", "API-Football"),
+        "source": pack.get("source", "API-Football") + (" + StatsBomb" if history.used_in(script) else ""),
         "facts": {f["id"]: f["value"] for f in pack["facts"]},
         "events": _events(pack),
         "shots": pack.get("shots", []),
+        "history": history.used_in(script),
         "scenes": scenes,
     }
     return props, durs

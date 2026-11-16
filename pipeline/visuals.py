@@ -7,7 +7,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
-from mplsoccer import Pitch  # noqa: E402
+from mplsoccer import Pitch, VerticalPitch  # noqa: E402
 
 BG = "#0E1A14"
 PANEL = "#16271E"
@@ -218,7 +218,49 @@ def form_compare(ax, vis, pack, cfg):
     _table_grid(ax, "Form: the 5 matches before this one", [k for k, _ in keys], rows, pack)
 
 
+LENS_LABELS = {
+    "record": "Record", "goals_for_pm": "Goals per match", "goals_against_pm": "Conceded per match",
+    "xg_for_pm": "xG per match", "xg_against_pm": "xG against per match",
+    "shots_for_pm": "Shots per match", "shots_against_pm": "Shots faced per match",
+    "possession_pct": "Possession (share of passes)", "pass_completion_pct": "Pass completion",
+    "ppda": "PPDA (lower = more pressing)",
+}
+
+
+def history_lens(ax, vis, pack, cfg, fig=None):
+    from .history import lenses
+    lens = next((x for x in lenses() if x["id"] == vis.get("lens")), None)
+    if not lens:
+        return text_card(ax, {"heading": "History lens", "lines": []}, pack, cfg)
+    f = lens["facts"]
+    ax.text(5, 90, "HISTORY LENS", color=BG, fontsize=18, fontweight="bold",
+            bbox=dict(boxstyle="round,pad=0.4", fc=ACCENT, ec="none"))
+    ax.text(22, 90, lens["label"], color=TEXT, fontsize=34, fontweight="bold", va="center")
+    ax.text(95, 90, lens.get("coverage", ""), color=MUTED, fontsize=16, ha="right", va="center")
+    pax = fig.add_axes([0.05, 0.14, 0.30, 0.66])
+    pitch = VerticalPitch(pitch_type="statsbomb", half=True, pitch_color=PANEL, line_color=MUTED)
+    pitch.draw(ax=pax)
+    for g in lens.get("goal_shots", []):
+        pitch.scatter(g["x"], g["y"], s=40 + 700 * g["xg"], color=ACCENT, alpha=0.55, ax=pax)
+    ax.text(20, 12, f"Every goal ({len(lens.get('goal_shots', []))}), sized by xG · StatsBomb open data",
+            color=MUTED, fontsize=13, ha="center")
+    keys = [k for k in vis.get("metrics", []) if k in LENS_LABELS][:4] or ["goals_for_pm", "possession_pct"]
+    for i, k in enumerate(keys):
+        if k == "record":
+            if "wins" not in f:
+                continue
+            val = f"{f['wins']}W {f['draws']}D {f['losses']}L"
+        else:
+            if f.get(k) is None:
+                continue
+            val = f"{f[k]}%" if k.endswith("_pct") else str(f[k])
+        x, y = 42 + (i % 2) * 30, 64 - (i // 2) * 28
+        ax.text(x, y, val, color=ACCENT, fontsize=40 if k == "record" else 54, fontweight="bold")
+        ax.text(x, y - 7, LENS_LABELS[k], color=TEXT, fontsize=17)
+
+
 RENDERERS = {
+    "history_lens": history_lens,
     "halftime_fulltime": halftime_fulltime, "table_snapshot": table_snapshot,
     "form_compare": form_compare,
     "title_card": title_card, "scoreline": scoreline, "stat_bars": stat_bars,
@@ -232,7 +274,7 @@ def render_scene(scene: dict, pack: dict, cfg: dict, path: Path) -> None:
     kind = vis.get("type", "text_card")
     fig, ax = _fig()
     fn = RENDERERS.get(kind, text_card)
-    if kind == "formations":
+    if kind in ("formations", "history_lens"):
         fn(ax, vis, pack, cfg, fig=fig)
     else:
         fn(ax, vis, pack, cfg)

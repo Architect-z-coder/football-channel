@@ -27,6 +27,15 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    (only if the pack has *_formation facts)
 - {"type": "text_card", "heading": str, "lines": [str, ...]}  -> max 3 short lines
 - {"type": "lesson_list", "items": [str, str, str]}
+- {"type": "history_lens", "lens": str, "metrics": [str, ...]}
+                                                -> a famous team's per-match numbers beside a map of
+                                                   all its goals. "lens" = an id from the pack's
+                                                   "history" list. "metrics" = 2-4 of: record,
+                                                   goals_for_pm, goals_against_pm, xg_for_pm,
+                                                   xg_against_pm, shots_for_pm, shots_against_pm,
+                                                   possession_pct, pass_completion_pct, ppda
+                                                   (only keys present in that lens's facts;
+                                                   "record" needs wins/draws/losses).
 """
 
 SYSTEM = f"""You write scripts for a faceless YouTube channel that explains modern football clearly.
@@ -49,6 +58,13 @@ HARD RULES
 8. If the pack has a "shots" list, use it: xG explains whether a result was deserved, where the
    chances came from and who had the best ones. Say "expected goals, or xG" the first time and explain
    it in one short sentence. Credit "data from Understat" once in the narration.
+9. History lens (optional, at most ONE scene): the pack's "history" list holds famous teams' per-match
+   averages from StatsBomb open data. Use one only when its idea and tags genuinely match what this
+   match's numbers show, as a brief comparison that teaches (e.g. "for context, Leicester in 2015/16
+   averaged 42.5 percent possession and still won the league"). Put it inside a key or the lesson, keep
+   it to 1-3 sentences, name the team and season exactly as written in its "label", say "StatsBomb data"
+   once, and use only numbers from that lens's facts (per match, as labelled). Never claim anything
+   about the lens team beyond its "idea" line and its facts. If none fits, use none.
 {VISUAL_TYPES}
 Return ONLY the JSON object: no thinking, notes or text before or after it, no comments inside it.
 Keep the whole reply under 2,500 words. Shape:

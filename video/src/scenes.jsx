@@ -520,7 +520,86 @@ const XgTimeline = ({ props, scene }) => {
   );
 };
 
+
+// ---------- StatsBomb open data: history lens ----------
+const LENS_LABELS = {
+  record: "Record", goals_for_pm: "Goals per match", goals_against_pm: "Conceded per match",
+  xg_for_pm: "xG per match", xg_against_pm: "xG against per match",
+  shots_for_pm: "Shots per match", shots_against_pm: "Shots faced per match",
+  possession_pct: "Possession (share of passes)", pass_completion_pct: "Pass completion",
+  ppda: "PPDA (lower = more pressing)",
+};
+const lensValue = (facts, key) => {
+  if (key === "record") return facts.wins === undefined ? null : `${facts.wins}W ${facts.draws}D ${facts.losses}L`;
+  const v = facts[key];
+  if (v === undefined || v === null) return null;
+  return key.endsWith("_pct") ? `${v}%` : String(v);
+};
+
+const LensTile = ({ label, value, delay }) => {
+  const p = useSpring(delay);
+  return (
+    <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, padding: "18px 24px",
+                  opacity: p, transform: `translateY(${(1 - p) * 30}px)` }}>
+      <div style={{ fontFamily: HEAD, fontSize: 76, color: C.accent, lineHeight: 1.05 }}>
+        {/\d+W/.test(value) ? value : <CountUp value={value} delay={delay} />}
+      </div>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.text }}>{label}</div>
+    </div>
+  );
+};
+
+const HistoryLens = ({ visual, props, scene }) => {
+  const f = useCurrentFrame();
+  const lens = (props.history || {})[visual.lens];
+  if (!lens) return <TextCard visual={{ heading: visual.heading || scene.on_screen || "History lens", lines: [] }} />;
+  const metrics = (visual.metrics || ["goals_for_pm", "xg_for_pm", "possession_pct", "ppda"])
+    .filter((k) => lensValue(lens.facts, k) !== null).slice(0, 4);
+  // half pitch: StatsBomb x 60..120 (attacking up), y 0..80 across
+  const PW = 420, PH = 525, sx = (y) => (y / 80) * PW, sy = (x) => ((120 - x) / 60) * PH;
+  const head = useSpring(0);
+  const goals = lens.goal_shots || [];
+  return (
+    <AbsoluteFill style={{ padding: "0 90px", justifyContent: "center", gap: 22 }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 22, opacity: head,
+                    transform: `translateX(${(1 - head) * -40}px)` }}>
+        <span style={{ fontFamily: BODY, fontWeight: 800, fontSize: 24, letterSpacing: 3, color: C.bg,
+                       background: C.accent, borderRadius: 8, padding: "6px 14px" }}>HISTORY LENS</span>
+        <span style={{ fontFamily: HEAD, fontSize: 64, color: C.text }}>{lens.label}</span>
+        <span style={{ fontFamily: BODY, fontWeight: 500, fontSize: 24, color: C.muted }}>{lens.coverage}</span>
+      </div>
+      <div style={{ display: "flex", gap: 48, alignItems: "center" }}>
+        <div>
+          <svg width={PW} height={PH} style={{ background: "#123222", borderRadius: 12 }}>
+            <g stroke="rgba(255,255,255,0.22)" strokeWidth="3" fill="none">
+              <rect x="2" y="2" width={PW - 4} height={PH - 4} rx="10" />
+              <rect x={sx(18)} y={sy(120)} width={sx(62) - sx(18)} height={sy(102) - sy(120)} />
+              <rect x={sx(30)} y={sy(120)} width={sx(50) - sx(30)} height={sy(114) - sy(120)} />
+              <path d={`M ${sx(30)} ${PH} A ${sx(10)} ${sx(10)} 0 0 1 ${sx(50)} ${PH}`} />
+            </g>
+            {goals.map((g, i) => {
+              const appear = 10 + (i / Math.max(goals.length, 1)) * scene.durationInFrames * 0.5;
+              const p = spring({ frame: f - appear, fps: 30, config: { damping: 10, mass: 0.5 } });
+              return <circle key={i} cx={sx(g.y)} cy={sy(g.x)} r={(4 + 18 * Math.sqrt(g.xg)) * p}
+                             fill={C.accent} fillOpacity={0.8} stroke={C.bg} strokeWidth={2} />;
+            })}
+          </svg>
+          <div style={{ marginTop: 8, fontFamily: BODY, fontWeight: 600, fontSize: 21, color: C.muted, width: PW }}>
+            Every goal ({goals.length}), sized by xG · StatsBomb open data
+          </div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, flex: 1 }}>
+          {metrics.map((k, i) => (
+            <LensTile key={k} label={LENS_LABELS[k] || k} value={lensValue(lens.facts, k)} delay={14 + i * 8} />
+          ))}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const MAP = {
+  history_lens: HistoryLens,
   shot_map: ShotMap, xg_timeline: XgTimeline,
   title_card: TitleCard, key_number: KeyNumber, scoreline: Scoreline,
   halftime_fulltime: HalfFull, stat_bars: StatBars, table_snapshot: TableSnapshot,

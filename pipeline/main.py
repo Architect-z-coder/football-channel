@@ -13,7 +13,7 @@ import argparse
 import sys
 from datetime import date
 
-from . import factcheck, notify, render, visuals, voice, writer
+from . import factcheck, history, notify, render, thumbs, visuals, voice, writer
 from datetime import datetime, timezone
 
 from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, log, read_json, \
@@ -123,6 +123,7 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         from .scout import scout
         pack = scout(cfg)
 
+    pack["history"] = history.menu()
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
     write_json(workdir / "datapack.json", pack)
@@ -146,7 +147,7 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
             images.append(img)
         video, durs = render.assemble(images, audios, workdir)
     srt = render.captions(script, durs, workdir / "captions.srt")
-    thumbs = visuals.render_thumbnails(script, pack, cfg, workdir)
+    thumb_paths = thumbs.render(script, pack, workdir)
     minutes = sum(durs) / 60
 
     meta = {"titles": script["title_options"], "description": script["description"],
@@ -165,10 +166,10 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         upload = False
     if upload and not dry_run:
         from .publish import upload as yt_upload
-        vid = yt_upload(cfg, script, video, srt, thumbs)
-        history = read_json(DATA_DIR / "history.json", {"fixtures": []})
-        history["fixtures"].append(pack["fixture_id"])
-        write_json(DATA_DIR / "history.json", history)
+        vid = yt_upload(cfg, script, video, srt, thumb_paths)
+        covered = read_json(DATA_DIR / "history.json", {"fixtures": []})
+        covered["fixtures"].append(pack["fixture_id"])
+        write_json(DATA_DIR / "history.json", covered)
         result.update(uploaded=True, youtube=f"https://studio.youtube.com/video/{vid}/edit")
         notify.send(
             f"New video ready for review ({minutes:.1f} min): {pack['home']} vs {pack['away']}\n\n"
