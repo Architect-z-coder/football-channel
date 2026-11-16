@@ -51,6 +51,10 @@ def league_matches(league: str, season: int) -> list[dict]:
     if not found:
         names = sorted(set(re.findall(r"var\s+(\w+)\s*=", html)))[:20]
         scripts = re.findall(r'<script[^>]+src="([^"]+)"', html)[:15]
+        for ln in html.splitlines():
+            low = ln.lower()
+            if any(k in low for k in ("script", "api", "fetch", "league", "season", "json", "cloudflare", "captcha", "error", "<a ")):
+                log.info("UNDERSTAT-HTML %s", ln.strip()[:220])
         log.info("Understat page: %d bytes, title %r, JS variables %s, scripts %s",
                  len(html), (re.search(r"<title>(.*?)</title>", html, re.S) or [None, ""])[1][:80],
                  names, scripts)
