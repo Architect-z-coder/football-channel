@@ -1,0 +1,30 @@
+{
+  "updated": "2026-11-16T23:09:02Z",
+  "home": "Germany",
+  "away": "Netherlands",
+  "competition": "UEFA Nations League A Grp. 2",
+  "fixture_id": "fotmob-5181835",
+  "titles": [
+    "Germany 5-0 Netherlands: The xG Said 1.52",
+    "How Germany Scored 5 From 1.52 xG",
+    "Germany vs Netherlands 5-0: What the Numbers Show"
+  ],
+  "minutes": 4.1,
+  "files": "20261116-germany-netherlands",
+  "uploaded": false,
+  "youtube": null,
+  "critic": null,
+  "rewritten": false,
+  "shorts": [
+    {
+      "title": "Germany 5-0 Netherlands from just 1.52 xG",
+      "hook": "5 Goals, 1.52 xG",
+      "youtube": null
+    },
+    {
+      "title": "10 shots on target to 1: Germany vs Netherlands",
+      "hook": "10 Shots On Target To 1",
+      "youtube": null
+    }
+  ]
+}
