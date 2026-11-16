@@ -1,7 +1,7 @@
 {
-  "id": "ger-ned-data",
-  "mode": "data-only",
+  "id": "ger-ned-video",
+  "mode": "no-upload",
   "match": "fotmob:5181835",
   "look_back_days": "",
-  "requested_at": "2026-11-16T22:58:00Z"
+  "requested_at": "2026-11-16T23:02:00Z"
 }
