@@ -345,6 +345,8 @@ function renderVideo(v, st) {
   $("video").innerHTML = `
     <div class="m-score"><span>${esc(v.home)}</span><span class="sub">v</span><span class="away">${esc(v.away)}</span><span class="sub">${esc(v.competition)}</span></div>
     <ol class="titles">${(v.titles || []).map(t => `<li>${esc(t)}</li>`).join("")}</ol>
+    ${v.critic ? `<div class="kv"><span><b>Editor score</b>hook ${esc(v.critic.hook)}/10 · payoff ${esc(v.critic.payoff)} · pace ${esc(v.critic.pace)} · clarity ${esc(v.critic.clarity)}</span>${v.rewritten ? `<span class="chip hot">rewritten after review</span>` : ""}</div>` : ""}
+    ${(v.shorts || []).length ? `<div class="kv">${v.shorts.map(sh => `<span><b>Short</b>${sh.youtube ? `<a href="${esc(sh.youtube)}" target="_blank" rel="noopener">${esc(sh.title)}</a>` : esc(sh.title)}</span>`).join("")}</div>` : ""}
     <div class="kv">
       ${v.uploaded && v.youtube ? `<span><a href="${esc(v.youtube)}" target="_blank" rel="noopener">Review in YouTube Studio (Private)</a></span>` : `<span><b>Upload</b>not uploaded (files only)</span>`}
       ${st && st.run_url ? `<span><a href="${esc(st.run_url)}" target="_blank" rel="noopener">Download files from the run</a></span>` : ""}
