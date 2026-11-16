@@ -63,7 +63,7 @@ def _commons_search(query: str, limit: int = 8) -> list[dict]:
     out = []
     for p in pages:
         info = (p.get("imageinfo") or [None])[0]
-        if not info or info.get("width", 0) < 400:
+        if not info or info.get("width", 0) < 280:
             continue
         meta = info.get("extmetadata", {})
         lic = (meta.get("LicenseShortName", {}).get("value") or "").strip()
@@ -71,7 +71,7 @@ def _commons_search(query: str, limit: int = 8) -> list[dict]:
             continue
         out.append({"url": info.get("thumburl") or info["url"], "page": info.get("descriptionurl"),
                     "licence": lic, "author": _clean_artist(meta.get("Artist", {}).get("value")),
-                    "title": p.get("title", "")})
+                    "title": p.get("title", ""), "width": info.get("width", 0)})
     return out
 
 
@@ -85,7 +85,8 @@ def _best_photo(person: dict) -> dict | None:
                else [f'"{name}" football', f'"{name}"'])
     for q in queries:
         try:
-            hits = [h for h in _commons_search(q) if last in h["title"].lower()]
+            hits = sorted((h for h in _commons_search(q) if last in h["title"].lower()),
+                          key=lambda h: -h["width"])   # sharpest photo of the right person first
         except Exception as e:
             log.info("Commons search failed for %s: %s", q, e)
             hits = []
@@ -95,7 +96,7 @@ def _best_photo(person: dict) -> dict | None:
     return _commons_info(fn) if fn else None
 
 
-def find(people: list[dict], outdir: Path, limit: int = 6) -> list[dict]:
+def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
     """people: [{"name", "role", "team"}]. Returns photos saved in outdir with credits."""
     out, seen = [], set()
     outdir.mkdir(parents=True, exist_ok=True)
