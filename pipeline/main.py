@@ -150,6 +150,9 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         pack = scout(cfg)
 
     pack["history"] = history.menu()
+    if not dry_run:
+        from . import press
+        pack["press"] = press.gather(cfg, pack)
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
     write_json(workdir / "datapack.json", pack)

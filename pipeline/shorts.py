@@ -10,7 +10,7 @@ from . import factcheck, voice
 from .common import ai_pack, log, write_json
 from .llm import ask_json
 
-VISUALS = ["momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
+VISUALS = ["player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
            "table_snapshot", "form_compare", "history_lens"]
 
 SYSTEM = f"""You write YouTube Shorts for a faceless football analysis channel. Each short is a 20-35 second

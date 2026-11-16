@@ -8,7 +8,7 @@ import { Captions } from "./Match";
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
 const END = 45; // frames of the closing card
 // how much to zoom each 16:9 graphic so it fills the phone width (content widths differ by type)
-const ZOOM = { momentum: 0.66, shot_map: 1.1, key_number: 1.0, scoreline: 0.78, halftime_fulltime: 0.78, stat_bars: 0.64,
+const ZOOM = { player_ratings: 0.62, quote_card: 0.62, momentum: 0.66, shot_map: 1.1, key_number: 1.0, scoreline: 0.78, halftime_fulltime: 0.78, stat_bars: 0.64,
   xg_timeline: 0.66, table_snapshot: 0.6, form_compare: 0.62, history_lens: 0.62 };
 const BOX_TOP = 650, BOX_H = 820;
 

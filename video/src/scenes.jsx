@@ -645,7 +645,78 @@ const Momentum = ({ props, scene }) => {
   );
 };
 
+
+// ---------- FotMob player ratings: best vs lowest-rated starters ----------
+const ratingColor = (r) => (r >= 8 ? C.win : r >= 7 ? C.accent : r >= 6 ? C.draw : C.loss);
+const RatingRow = ({ r, delay }) => {
+  const f = useCurrentFrame();
+  const p = spring({ frame: f - delay, fps: 30, config: { damping: 14 } });
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 22, opacity: p, transform: `translateX(${(1 - p) * 40}px)` }}>
+      <div style={{ width: 120, height: 84, borderRadius: 14, background: ratingColor(r.rating), display: "flex",
+                    alignItems: "center", justifyContent: "center", fontFamily: HEAD, fontSize: 56, color: C.bg }}>
+        {r.rating.toFixed(1)}
+      </div>
+      <div>
+        <div style={{ fontFamily: HEAD, fontSize: 50, color: C.text, lineHeight: 1 }}>{r.player}</div>
+        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: r.side === "home" ? C.home : C.away }}>
+          {r.team}{r.subbed_off ? " · subbed off" : ""}
+        </div>
+      </div>
+    </div>
+  );
+};
+const PlayerRatings = ({ props }) => {
+  const st = (props.ratings || []).filter((r) => r.started);
+  if (!st.length) return null;
+  const best = [...st].sort((a, b) => b.rating - a.rating).slice(0, 3);
+  const worst = [...st].sort((a, b) => a.rating - b.rating).slice(0, 3);
+  const col = (title, rows, d0) => (
+    <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 26 }}>
+      <div style={{ fontFamily: BODY, fontWeight: 800, letterSpacing: 3, fontSize: 28, color: C.muted }}>{title}</div>
+      {rows.map((r, i) => <RatingRow key={r.player} r={r} delay={d0 + i * 8} />)}
+    </div>
+  );
+  return (
+    <AbsoluteFill style={{ padding: "0 120px", justifyContent: "center" }}>
+      <div style={{ display: "flex", gap: 80 }}>
+        {col("BEST RATED", best, 6)}
+        {col("LOWEST RATED STARTERS", worst, 30)}
+      </div>
+      <div style={{ marginTop: 34, fontFamily: BODY, fontWeight: 600, fontSize: 22, color: C.muted }}>
+        Player ratings: FotMob (0-10)
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// ---------- What the coach / player said ----------
+const QuoteCard = ({ visual, props }) => {
+  const f = useCurrentFrame();
+  const q = (props.press || [])[visual.press_index || 0];
+  if (!q) return null;
+  const p = spring({ frame: f - 4, fps: 30, config: { damping: 16 } });
+  let host = "";
+  try { host = new URL(q.url).hostname.replace(/^www\./, ""); } catch (e) { host = q.source || ""; }
+  return (
+    <AbsoluteFill style={{ padding: "0 180px", justifyContent: "center", opacity: p }}>
+      <div style={{ fontFamily: HEAD, fontSize: 220, color: C.accent, lineHeight: 0.6, height: 110 }}>“</div>
+      <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: q.quote.length > 120 ? 54 : 66, color: C.text,
+                    lineHeight: 1.25, fontStyle: q.is_paraphrase ? "italic" : "normal",
+                    transform: `translateY(${(1 - p) * 30}px)` }}>
+        {q.quote}
+      </div>
+      <div style={{ marginTop: 40, fontFamily: HEAD, fontSize: 46, color: C.accent }}>{q.speaker}</div>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.muted }}>
+        {q.role}{q.team ? `, ${q.team}` : ""} · {q.is_paraphrase ? "paraphrased from " : "via "}{host}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const MAP = {
+  player_ratings: PlayerRatings,
+  quote_card: QuoteCard,
   momentum: Momentum,
   history_lens: HistoryLens,
   shot_map: ShotMap, xg_timeline: XgTimeline,

@@ -28,6 +28,9 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    (only if the pack has *_formation facts)
 - {"type": "text_card", "heading": str, "lines": [str, ...]}  -> max 3 short lines
 - {"type": "lesson_list", "items": [str, str, str]}
+- {"type": "player_ratings"}                    -> best and lowest-rated starters with FotMob ratings.
+- {"type": "quote_card", "press_index": int}    -> a coach or player quote from the pack's "press"
+                                                   list (index from 0), with speaker and source.
 - {"type": "momentum"}                          -> FotMob's minute-by-minute momentum graph with the goals
                                                    marked. Only if the pack says "momentum_available".
 - {"type": "history_lens", "lens": str, "metrics": [str, ...]}
@@ -61,6 +64,12 @@ HARD RULES
 8. If the pack has a "shots" list, use it: xG explains whether a result was deserved, where the
    chances came from and who had the best ones. Say "expected goals, or xG" the first time and explain
    it in one short sentence. Credit "data from Understat" once in the narration.
+10. Players and press: the pack may hold FotMob ratings (best_player_*, worst_player_*) and
+   "press": what coaches and players said after the match, each with its source. Name the best and
+   the lowest-rated starters and explain WITH THE DATA why (shots, chances, duels...), never as
+   insults. When a coach explained the plan or a change, connect it to the numbers ("Koeman said
+   ...; the data shows ..."). Quote only text from "press", say who said it, keep quotes word for
+   word, and mention the outlet once in the description. Never invent a reason a coach did not give.
 9. History lens (optional, at most ONE scene): the pack's "history" list holds famous teams' per-match
    averages from StatsBomb open data. Use one only when its idea and tags genuinely match what this
    match's numbers show, as a brief comparison that teaches (e.g. "for context, Leicester in 2015/16

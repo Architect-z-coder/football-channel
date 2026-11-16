@@ -194,6 +194,25 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
             top = max(rated, key=lambda p: p["performance"]["rating"])
             add(f"{side}_top_rated", f"{team} highest FotMob player rating",
                 {"player": top.get("name"), "rating": top["performance"]["rating"]})
+    ratings = []
+    for side, team in teams:
+        t = lineup.get(f"{side}Team") or {}
+        for p in t.get("starters", []) + t.get("subs", []):
+            perf = p.get("performance") or {}
+            if perf.get("rating"):
+                subs = perf.get("substitutionEvents") or []
+                ratings.append({"side": side, "team": team, "player": p.get("name"),
+                                "rating": round(float(perf["rating"]), 1),
+                                "started": p in t.get("starters", []),
+                                "subbed_off": any(e.get("type") == "subOut" for e in subs)})
+    if ratings:
+        pack["ratings"] = sorted(ratings, key=lambda r: -r["rating"])
+        starters = [r for r in ratings if r["started"]]
+        for i, r in enumerate(sorted(starters, key=lambda r: -r["rating"])[:3], 1):
+            add(f"best_player_{i}", "Highest FotMob rating among starters", {k: r[k] for k in ("player", "team", "rating")})
+        for i, r in enumerate(sorted(starters, key=lambda r: r["rating"])[:3], 1):
+            add(f"worst_player_{i}", "Lowest FotMob rating among starters",
+                {k: r[k] for k in ("player", "team", "rating", "subbed_off")})
     potm = (data.get("content", {}).get("matchFacts") or {}).get("playerOfTheMatch") or {}
     if potm.get("name"):
         add("player_of_the_match", "Player of the match (FotMob)",
