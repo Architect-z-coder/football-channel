@@ -51,10 +51,16 @@ def league_matches(league: str, season: int) -> list[dict]:
     if not found:
         names = sorted(set(re.findall(r"var\s+(\w+)\s*=", html)))[:20]
         scripts = re.findall(r'<script[^>]+src="([^"]+)"', html)[:15]
-        for ln in html.splitlines():
-            low = ln.lower()
-            if any(k in low for k in ("script", "api", "fetch", "league", "season", "json", "cloudflare", "captcha", "error", "<a ")):
-                log.info("UNDERSTAT-HTML %s", ln.strip()[:220])
+        text = re.sub(r"\s+", " ", re.sub(r"<style.*?</style>|<[^>]+>", " ", html, flags=re.S)).strip()
+        log.info("UNDERSTAT-TEXT %s", text[:700])
+        for probe in (f"{BASE}/league/{league}", f"{BASE}/league/{league}/{season - 1}", BASE):
+            try:
+                rr = requests.get(probe, headers={"User-Agent": HEADERS["User-Agent"]}, timeout=30)
+                vars_ = sorted(set(re.findall(r"var\s+(\w+)\s*=", rr.text)))[:10]
+                log.info("UNDERSTAT-PROBE %s -> HTTP %s, %d bytes, vars %s, final url %s",
+                         probe, rr.status_code, len(rr.text), vars_, rr.url)
+            except Exception as e:
+                log.info("UNDERSTAT-PROBE %s -> %s", probe, e)
         log.info("Understat page: %d bytes, title %r, JS variables %s, scripts %s",
                  len(html), (re.search(r"<title>(.*?)</title>", html, re.S) or [None, ""])[1][:80],
                  names, scripts)
