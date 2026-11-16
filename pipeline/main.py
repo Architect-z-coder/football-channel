@@ -13,7 +13,7 @@ import argparse
 import sys
 from datetime import date
 
-from . import factcheck, history, notify, render, thumbs, visuals, voice, writer
+from . import critic, factcheck, history, notify, render, thumbs, visuals, voice, writer
 from datetime import datetime, timezone
 
 from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, log, read_json, \
@@ -70,15 +70,41 @@ def get_script(cfg, pack, use_ai):
         log.warning("No ANTHROPIC_API_KEY: using the sample script.")
         script = read_json(SAMPLES_DIR / "sample_script.json")
         return script, factcheck.check(cfg, script, pack, use_ai=False)
-    feedback = None
+    feedback, script = None, None
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        script = writer.write_script(cfg, pack, feedback)
+        script = writer.write_script(cfg, pack, feedback, previous=script if feedback else None)
         report = factcheck.check(cfg, script, pack)
         if report["ok"]:
-            return script, report
+            return improve(cfg, pack, script, report)
         feedback = "\n".join(report["problems"])
         log.warning("Attempt %d failed fact-check:\n%s", attempt, feedback)
     return script, report
+
+
+def improve(cfg, pack, script, report):
+    """Critic pass: one rewrite for a weak hook or pacing. A rewrite that fails fact-check is dropped."""
+    if not cfg.get("critic", {}).get("enabled", True):
+        return script, report
+    try:
+        review = critic.review(cfg, script, pack)
+    except Exception as e:  # the critic is a bonus: never stop a good script because of it
+        log.warning("Critic skipped: %s", e)
+        return script, report
+    report = {**report, "critic": review}
+    if not critic.needs_rewrite(cfg, review):
+        log.info("Critic: no rewrite needed (hook %d)", review["hook"])
+        return script, report
+    try:
+        better = writer.write_script(cfg, pack, previous=script, editor_notes=critic.feedback(review))
+        check2 = factcheck.check(cfg, better, pack)
+    except Exception as e:
+        log.warning("Critic rewrite failed (%s); keeping the first script.", e)
+        return script, report
+    if check2["ok"]:
+        log.info("Critic rewrite passed fact-check; using it.")
+        return better, {**check2, "critic": review, "rewritten": True}
+    log.warning("Critic rewrite failed fact-check; keeping the first script.")
+    return script, {**report, "rewrite_rejected": check2["problems"][:5]}
 
 
 def show_data(pick: str | None) -> int:
@@ -146,7 +172,7 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
             visuals.render_scene(sc, pack, cfg, img)
             images.append(img)
         video, durs = render.assemble(images, audios, workdir)
-    srt = render.captions(script, durs, workdir / "captions.srt")
+    srt = render.captions(script, durs, workdir / "captions.srt", workdir=workdir)
     thumb_paths = thumbs.render(script, pack, workdir)
     minutes = sum(durs) / 60
 
@@ -158,7 +184,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     result = {"updated": now(), "home": pack["home"], "away": pack["away"],
               "competition": pack["competition"], "fixture_id": pack["fixture_id"],
               "titles": script["title_options"], "minutes": round(minutes, 1),
-              "files": workdir.name, "uploaded": False, "youtube": None}
+              "files": workdir.name, "uploaded": False, "youtube": None,
+              "critic": report.get("critic"), "rewritten": bool(report.get("rewritten"))}
     has_voice = bool(secret("ELEVENLABS_API_KEY") and secret("ELEVENLABS_VOICE_ID"))
     if upload and not dry_run and not has_voice:
         notify.send(f"Video made with silent audio (no voice keys yet), so it was NOT uploaded. "

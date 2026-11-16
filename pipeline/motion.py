@@ -1,4 +1,5 @@
 """Motion graphics: renders the video with Remotion (animated scenes, captions, transitions, SFX)."""
+import json
 import math
 import os
 import shutil
@@ -40,7 +41,11 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         seconds = duration(audio) + PAD
         frames = math.ceil(seconds * FPS)
         durs.append(frames / FPS)
+        timed = audio.with_suffix(".words.json")
+        word_starts = ([w["start"] for w in json.loads(timed.read_text(encoding="utf-8"))]
+                       if timed.exists() else None)
         scenes.append({"id": sc["id"], "durationInFrames": frames, "audio": f"run/{audio.name}",
+                       "wordStarts": word_starts,
                        "visual": sc.get("visual") or {}, "on_screen": sc.get("on_screen", ""),
                        "narration": sc.get("narration", "")})
     props = {

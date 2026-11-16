@@ -66,15 +66,17 @@ const TopBar = ({ channel, competition, home, away, total }) => {
 };
 
 // ---------- kinetic captions: words appear and the spoken word lights up ----------
-const Captions = ({ text, speakFrames }) => {
+const Captions = ({ text, speakFrames, wordStarts }) => {
   const f = useCurrentFrame();
   const words = text.split(/\s+/).filter(Boolean);
   if (!words.length) return null;
-  // weight each word by length so long words take longer
+  // exact timings from the voice when we have them (seconds -> frames)
+  const exact = Array.isArray(wordStarts) && wordStarts.length === words.length;
+  // otherwise weight each word by length so long words take longer
   const weights = words.map((w) => 1 + w.replace(/[^\w]/g, "").length * 0.18);
   const totalW = weights.reduce((a, b) => a + b, 0);
   let acc = 0;
-  const starts = weights.map((w) => {
+  const starts = exact ? wordStarts.map((t) => t * 30) : weights.map((w) => {
     const s = (acc / totalW) * speakFrames;
     acc += w;
     return s;
@@ -140,7 +142,7 @@ const SceneShell = ({ scene, props }) => {
           <SceneVisual scene={scene} props={props} />
         </div>
       </AbsoluteFill>
-      <Captions text={scene.narration} speakFrames={Math.max(15, dur - TAIL)} />
+      <Captions text={scene.narration} speakFrames={Math.max(15, dur - TAIL)} wordStarts={scene.wordStarts} />
     </AbsoluteFill>
   );
 };

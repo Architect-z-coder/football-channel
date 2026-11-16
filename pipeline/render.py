@@ -67,10 +67,22 @@ def _ts(t: float) -> str:
     return f"{int(h):02d}:{int(m):02d}:{s:06.3f}".replace(".", ",")
 
 
-def captions(script: dict, durs: list[float], path: Path, words_per_line: int = 9) -> Path:
-    """SRT captions timed by spreading each scene's words across its audio."""
+def captions(script: dict, durs: list[float], path: Path, words_per_line: int = 9,
+             workdir: Path | None = None) -> Path:
+    """SRT captions: exact word timings from the voice when we have them, otherwise estimated."""
+    import json
     lines, t, n = [], 0.0, 1
     for sc, d in zip(script["scenes"], durs):
+        timed = workdir / f"voice_{sc['id']:02d}.words.json" if workdir else None
+        if timed and timed.exists():
+            ws = json.loads(timed.read_text(encoding="utf-8"))
+            for i in range(0, len(ws), words_per_line):
+                chunk = ws[i:i + words_per_line]
+                lines.append(f"{n}\n{_ts(t + chunk[0]['start'])} --> {_ts(t + chunk[-1]['end'])}\n"
+                             f"{' '.join(w['w'] for w in chunk)}\n")
+                n += 1
+            t += d
+            continue
         words = sc["narration"].split()
         speak = max(0.5, d - PAD)
         chunks = [words[i:i + words_per_line] for i in range(0, len(words), words_per_line)]
