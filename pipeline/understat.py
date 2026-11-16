@@ -37,33 +37,17 @@ def _page_var(html: str, name: str):
 
 def league_matches(league: str, season: int) -> list[dict]:
     try:  # newer site: JSON endpoint
-        r = _get(f"{BASE}/getLeagueData/{league}/{season}")
-        log.info("Understat endpoint: HTTP %s, %d bytes, starts: %r", r.status_code, len(r.text),
-                 r.text[:160])
-        data = r.json()
+        data = _get(f"{BASE}/getLeagueData/{league}/{season}").json()
         dates = data.get("dates") if isinstance(data, dict) else None
         if dates:
             return dates
-    except Exception as e:
-        log.info("Understat league endpoint not usable (%s); trying the page", e)
+    except Exception:
+        pass  # fall back to the page
     html = _get(f"{BASE}/league/{league}/{season}").text
     found = _page_var(html, "datesData")
     if not found:
-        names = sorted(set(re.findall(r"var\s+(\w+)\s*=", html)))[:20]
-        scripts = re.findall(r'<script[^>]+src="([^"]+)"', html)[:15]
         text = re.sub(r"\s+", " ", re.sub(r"<style.*?</style>|<[^>]+>", " ", html, flags=re.S)).strip()
-        log.info("UNDERSTAT-TEXT %s", text[:700])
-        for probe in (f"{BASE}/league/{league}", f"{BASE}/league/{league}/{season - 1}", BASE):
-            try:
-                rr = requests.get(probe, headers={"User-Agent": HEADERS["User-Agent"]}, timeout=30)
-                vars_ = sorted(set(re.findall(r"var\s+(\w+)\s*=", rr.text)))[:10]
-                log.info("UNDERSTAT-PROBE %s -> HTTP %s, %d bytes, vars %s, final url %s",
-                         probe, rr.status_code, len(rr.text), vars_, rr.url)
-            except Exception as e:
-                log.info("UNDERSTAT-PROBE %s -> %s", probe, e)
-        log.info("Understat page: %d bytes, title %r, JS variables %s, scripts %s",
-                 len(html), (re.search(r"<title>(.*?)</title>", html, re.S) or [None, ""])[1][:80],
-                 names, scripts)
+        log.warning("Understat returned no data. Page says: %r", text[:200])
     return found or []
 
 
