@@ -3,9 +3,9 @@
   "mode": "no-upload",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "running",
+  "state": "failed",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/43978993328",
   "started": "2026-11-16T23:24:26Z",
-  "finished": null,
-  "reason": null
+  "finished": "2026-11-16T23:29:19Z",
+  "reason": "ElevenLabs error 401: {\"detail\":{\"type\":\"invalid_request\",\"code\":\"quota_exceeded\",\"message\":\"This request exceeds your quota of 10000. You have 105 credits remaining, while 527 credits are required for this request.\",\"status\":\"quota_exceeded\",\"request_id\":\"1eb6281ad94d0cf7481a43122da5411e\"}}"
 }
