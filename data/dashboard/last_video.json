@@ -1,42 +1,42 @@
 {
-  "updated": "2026-11-17T13:42:27Z",
+  "updated": "2026-11-17T14:57:45Z",
   "home": "Germany",
   "away": "Netherlands",
   "competition": "UEFA Nations League A Grp. 2",
   "fixture_id": "fotmob-5181835",
   "titles": [
-    "Germany 5-0 Netherlands: Was It Really That One-Sided?",
-    "1.39 xG, 5 Goals: How Germany Beat the Netherlands",
-    "Germany 5-0 Netherlands: 3 Keys the Scoreline Hides"
+    "Germany 5-0 Netherlands: What the Scoreline Hides",
+    "Klopp's Germany Score 5 From 0.71 xG",
+    "The 0.69 Miss Before Germany's 5-0 Rout"
   ],
-  "minutes": 4.9,
+  "minutes": 5.4,
   "files": "20261117-germany-netherlands",
   "uploaded": false,
   "youtube": null,
   "critic": {
-    "hook": 7,
-    "payoff": 7,
+    "hook": 8,
+    "payoff": 6,
     "pace": 6,
     "clarity": 7,
     "notes": [
-      "Scene 1: the open question only arrives in sentence 6, after the xG explanation, so open with \"Germany won 5-0 on just 1.39 xG. Was it deserved?\" and explain xG afterwards.",
-      "Scene 2: cut \"We read the numbers only. We do not guess at what happened on the pitch beyond what the data can show.\" It is filler and stalls the story right after the hook.",
-      "Scene 4: \"We want to win the game\" is a generic quote that adds nothing, so drop it and the sentence about names and shapes, and go straight to \"Same shape, same value, so what decided it?\"",
-      "Scene 5: the \"If you enjoy this, subscribe\" line breaks the build between Key 1 and Key 2, so move it to the closing scene only.",
-      "Scene 6: \"FotMob's momentum graph\" is never explained, so either add \"which tracks which team is pushing forward minute by minute\" or lead with the 50 vs 19 box touches and drop it.",
-      "Scene 7: \"read these as a team-wide night\" is a weak payoff, so replace it with a clear claim such as \"Verbruggen faced 10 shots on target and 5 went in, so the Dutch rating gap starts with their defence.\""
+      "Scene 1's closing question, \"How did a match that close in the numbers end like this?\", is answered only half-heartedly in scene 9, which hands the verdict to the viewer with \"Tell us in the comments\". Commit to an answer instead: Germany's finishing ran hot while Malen's 0.69 miss went begging, then use the comments as an add-on.",
+      "Scene 2 (\"Germany arrive with 2 wins, 2 draws and a loss... The Netherlands arrive with 3 wins, 2 draws\") is a stats list that stalls the story right after the hook. Cut it to one line of stakes, such as both coaches' first-ever meeting ending 1-1 and Germany needing a result in round 6.",
+      "Scene 3, \"Three people carry this story\", spends a whole scene on a Völler quote, a Xavi quote and an absence list, and nothing happens. Fold the Brobbey, Van Dijk and Aké absences into one sentence and cut the Völler and Xavi quotes.",
+      "Scene 5 ends with \"But the real question is how the Dutch fell apart from there\", and scene 6 then admits \"The data cannot say why the night went that way.\" That opens a promise the script never pays off. Drop the line, or answer it with Klopp's tactical tweak (\"have a centre-back step out to defend\") and the 50 vs 19 box touches.",
+      "The xG numbers repeat across scenes: 0.03 appears in scenes 1 and 4, 0.71 in scenes 1, 7 and 8, and 1.39 vs 1.11 in the title and scene 7. Say each once at its strongest moment (scene 7) and cut the echoes in scenes 4 and 8, e.g. \"The numbers back the word insane...\".",
+      "Scene 7's \"Germany finished far above what their chances predicted\" and the \"1.39 to 1.11\" comparison are the real twist, but they are buried at scene 7 after long setup. Tighten scenes 2-3 so the reveal lands earlier, and explain xG as \"chance quality\" once instead of re-describing it as \"expected goals\" later."
     ]
   },
-  "rewritten": true,
+  "rewritten": false,
   "shorts": [
     {
-      "title": "Germany scored 5 from 1.39 xG vs Netherlands",
-      "hook": "5 Goals. 1.39 xG.",
+      "title": "Germany 5-0 Netherlands on just 1.39 xG",
+      "hook": "5-0 on 1.39 xG",
       "youtube": null
     },
     {
-      "title": "Gruda 9.2, Dumfries 3.3: Germany's 5-0 in ratings",
-      "hook": "9.2 Versus 3.3",
+      "title": "4 goals in 18 minutes: how Germany broke the Dutch",
+      "hook": "4 goals, 18 minutes",
       "youtube": null
     }
   ],
