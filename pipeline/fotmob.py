@@ -237,7 +237,6 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
             u = p.get("unavailability") or {}
             missing.append({"player": p.get("name"),
                             "reason": u.get("type") or "unavailable",       # injury / suspension ...
-                            "expected_return": u.get("expectedReturn"),
                             "value_eur": p.get("marketValue")})
         missing.sort(key=lambda m: -(m["value_eur"] or 0))
         lu[side] = {"team": team, "formation": t.get("formation"), "starters": starters, "missing": missing}

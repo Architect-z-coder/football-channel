@@ -103,7 +103,7 @@ Statements about coaches' appointments, promises and choices are supported only 
 "context" (each with a source). Quotes must appear word for word in the pack's "press" or "context", attributed to the same speaker.
 The pack's "history" list is reference data from StatsBomb about past teams: statements about a
 history-lens team are supported only by that lens's facts, label, coverage and "idea" line.
-Also flag anything about politics, transfer rumours, betting, injuries or private lives.
+Also flag anything about politics, transfer rumours, betting or private lives. Absences are ALLOWED when they only state, as reported in the pack, that a player was missing and the listed reason (injury, suspension) and the effect on the team. Flag injury speculation: return dates, how serious an injury is, medical details, or guesses about fitness.
 Return ONLY JSON: {"ok": bool, "problems": [str, ...]}"""
 
 
