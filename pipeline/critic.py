@@ -14,8 +14,9 @@ viewer retention, not for facts (facts are checked separately and must not chang
 Score each from 1 to 10:
 - hook: do the first 2 sentences of scene 1 give a concrete, surprising fact AND an open question that
   makes a football fan need the answer? Vague openers ("In this video...", "Let's talk about...") score 3 or less.
-- payoff: does every key deliver a clear claim, a number and why it matters, and does the close answer
-  the hook's question?
+- payoff: is it a STORY - clear characters, stakes, a turning point and a satisfying reveal - with the
+  data used as evidence, not a list of statistics? Does the ending answer the opening question?
+  A script that reads like a stats report scores 4 or less.
 - pace: short sentences, no repetition, no filler, each scene moves the story forward.
 - clarity: a casual fan understands every term (xG etc. explained once, simply).
 

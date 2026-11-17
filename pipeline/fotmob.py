@@ -129,6 +129,7 @@ def shots(data: dict, home_id: int) -> list[dict]:
             "x": round(float(s["x"]) / 105, 4), "y": round(float(s["y"]) / 68, 4),  # 0-1, attacking x = 1
             "xg": round(float(s.get("expectedGoals") or 0), 2),
             "result": result, "player": s.get("playerName"), "situation": s.get("situation"),
+            "body_part": s.get("shotType"),
         })
     out.sort(key=lambda s: s["minute"])
     return out
