@@ -3,9 +3,9 @@
   "mode": "no-upload",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "running",
+  "state": "failed",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44102392099",
   "started": "2026-11-17T14:22:39Z",
-  "finished": null,
-  "reason": null
+  "finished": "2026-11-17T14:32:39Z",
+  "reason": "Remotion render failed:\n\u001b[31m\u001b[41m\u001b[37m CancelledError \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mError: Error loading image with src: http://localhost:3000/public/run/photo_2.jpg. Failed 3 times (maxRetries: 2). Check that the URL is reachable and returns a valid image. During server-side rendering, the browser may have logged the failed request and its HTTP status code above. Pass onError to handle the failure.\u001b[39m\n"
 }
