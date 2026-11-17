@@ -18,6 +18,8 @@ OK_LICENCES = ("public domain", "pd", "cc0", "cc by", "cc-by")
 def _get(url: str, **kw):
     """GET with one polite retry when Wikimedia says 'too many requests'."""
     import time
+    kw.pop("headers", None)
+    kw.pop("timeout", None)
     for attempt in range(3):
         r = requests.get(url, headers=HEAD, timeout=30, **kw)
         if r.status_code != 429:
