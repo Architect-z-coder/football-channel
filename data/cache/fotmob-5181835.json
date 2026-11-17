@@ -1,0 +1,176 @@
+{
+  "saved": "2026-11-17T22:33:05Z",
+  "press": [
+    {
+      "speaker": "Jürgen Klopp",
+      "role": "Germany head coach",
+      "team": "Germany",
+      "quote": "Klopp said he had already made his lineup decision but would not reveal it. He added that strong performers are more likely to play again, but need not start days later.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "selection",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/ive-made-decision-just-wont-183700038.html"
+    },
+    {
+      "speaker": "Jürgen Klopp",
+      "role": "Germany head coach",
+      "team": "Germany",
+      "quote": "Klopp said he relished facing a Netherlands side that likes to play football. He saw winning the match, and topping Group A2 on head-to-head, as the plan.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/ive-made-decision-just-wont-183700038.html"
+    },
+    {
+      "speaker": "Jürgen Klopp",
+      "role": "Germany head coach",
+      "team": "Germany",
+      "quote": "Waldemar Anton is injured at home, and he is also a top player.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Goal.com (via Yahoo Sports)",
+      "url": "https://www.goal.com/en-sa/news/jurgen-klopp-germany-squad-rotation-defence-netherlands/blt8ef76dc65f56406e"
+    },
+    {
+      "speaker": "Xavi Hernández",
+      "role": "Netherlands head coach",
+      "team": "Netherlands",
+      "quote": "Zijn blessure is heel klein, maar hij kan morgen niet spelen",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Mee Met Oranje",
+      "url": "https://www.meemetoranje.nl/nederlands-elftal/nieuws/frenkie-de-jong-blessure-oranje-xavi-barcelona-duitsland/"
+    },
+    {
+      "speaker": "Xavi Hernández",
+      "role": "Netherlands head coach",
+      "team": "Netherlands",
+      "quote": "Xavi said Frenkie de Jong's injury is not serious, and he called up no replacement for the midfielder.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "Mee Met Oranje",
+      "url": "https://www.meemetoranje.nl/nederlands-elftal/nieuws/vermoedelijke-opstelling-oranje-duitsland-frenkie-de-jong-nations-league/"
+    },
+    {
+      "speaker": "Xavi Hernández",
+      "role": "Netherlands head coach",
+      "team": "Netherlands",
+      "quote": "Het is een van de beste podia om ons beste niveau te laten zien.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "other",
+      "source": "Voetbalzone",
+      "url": "https://www.voetbalzone.nl/nieuws/bondscoach-xavi-vertelt-het-eerlijke-verhaal-achter-de-afwezigheid-van-frenkie-de-jong-bij-het-nederlands-elftal/blt3c8e895cc7472db7"
+    },
+    {
+      "speaker": "Jürgen Klopp",
+      "role": "Germany head coach",
+      "team": "Germany",
+      "quote": "I wouldn't have dared to wish for a 5-0 before the game",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "result",
+      "source": "ESPN (quoting Klopp to ARD)",
+      "url": "https://www.espn.com/soccer/story/_/id/50505834/klopp-germany-netherlands-rout"
+    }
+  ],
+  "context": {
+    "teams": [
+      {
+        "team": "Germany",
+        "coach": "Jürgen Klopp",
+        "appointed": "Announced by the DFB on 24 July 2026 (four-year contract to 2030). He took over from Nagelsmann on 15 August 2026.",
+        "replaced": "Julian Nagelsmann",
+        "replaced_reason": "Nagelsmann stepped down after Germany lost to Paraguay in the 2026 World Cup round of 32, the nation's first World Cup penalty-shootout defeat.",
+        "institution_quote": {
+          "quote": "he can develop young players and get his teams to perform under pressure",
+          "speaker": "Rudi Völler, DFB sporting director (partial quote of his statement on the appointment)",
+          "source": "DFB (German Football Association), 'Jürgen Klopp appointed new Germany head coach'",
+          "url": "https://www.dfb.de/news/juergen-klopp-appointed-new-germany-head-coach"
+        },
+        "coach_promise": {
+          "quote": "I want people to go home thinking ‘Wow, that was cool!’",
+          "source": "FIFA.com, quoting Klopp at his unveiling in Frankfurt, 24 July 2026",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jurgen-klopp-germany-to-do-list"
+        },
+        "key_choices": [
+          {
+            "text": "For his first four Nations League games Klopp named 44 players, including 16 uncapped, and split them into two squads.",
+            "source": "dpa international via Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/germanys-klopp-picks-44-players-081837162.html"
+          },
+          {
+            "text": "Joshua Kimmich kept the captain's armband under Klopp.",
+            "source": "AFP via Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/klopp-calls-44-players-huge-091837208.html"
+          },
+          {
+            "text": "Klopp named Marc-André ter Stegen as Germany's number one goalkeeper 'for the moment'.",
+            "source": "AFP via Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/klopp-calls-44-players-huge-091837208.html"
+          },
+          {
+            "text": "His first squad left out Deniz Undav, Leroy Sané and Oliver Baumann.",
+            "source": "dpa international via Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/germanys-klopp-picks-44-players-081837162.html"
+          },
+          {
+            "text": "For the November window he cut the group to 24 and recalled Niclas Füllkrug. He also gave a first senior call-up to Wael Mohya and kept five recent debutants, including Jonas Urbig, Said El Mala and Philipp Treu.",
+            "source": "Get German Football News",
+            "url": "https://www.getfootballnewsgermany.com/2026/germany-november-2026-squad/"
+          },
+          {
+            "text": "At his unveiling Klopp said Germany would play with four defenders and rely on wingers, and that some players would get opportunities they did not expect.",
+            "source": "Goal.com",
+            "url": "https://www.goal.com/en-in/lists/klopp-begins-his-germany-era-with-strong-messages-if-you-go-after-my-family-i-ll-leave-and-expect-surprises/blt75e1144140653638"
+          },
+          {
+            "text": "Against the Netherlands Klopp started Ter Stegen; Treu, Schlotterbeck, Tah, Brown; Kimmich, Pavlovic; Gruda, Wirtz, Scherhant; Havertz.",
+            "source": "Goal.com",
+            "url": "https://www.goal.com/en/news/xavi-names-netherlands-line-up-this-is-frenkie-de-jong-s-replacement/bltecfca13a9d3fcdcb"
+          }
+        ],
+        "links": [
+          {
+            "text": "Klopp's first match as Germany coach was against the Netherlands, then coached by another new man, Xavi. It ended 1-1 in Amsterdam, with Völler asking for patience.",
+            "source": "Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/v-ller-klopp-him-time-161100869.html"
+          },
+          {
+            "text": "Before the World Cup opener against Curaçao, Klopp, working as a TV pundit, said 'luckily Julian Nagelsmann picks the team – for now'. He later apologised on air, and a few weeks later he was named Nagelsmann's successor.",
+            "source": "absolutfussball.com",
+            "url": "https://www.absolutfussball.com/dfb-team/voeller-ueber-klopps-noch-spruch-fuer-die-komik-zustaendig-94584172.html"
+          },
+          {
+            "text": "Germany lost 0-1 to Greece in Klopp's first home game, a defeat described as historic.",
+            "source": "Bulinews",
+            "url": "https://bulinews.com/voller-confirms-klopp-ditch-44-man-germany-squad"
+          },
+          {
+            "text": "The 5-0 win over the Netherlands on 16 November 2026 sealed Germany's place in the Nations League quarter-finals. Al Jazeera called it the Dutch side's heaviest defeat in 67 years.",
+            "source": "Al Jazeera",
+            "url": "https://www.aljazeera.com/sports/2026/11/16/germany-thrash-netherlands-to-book-quarterfinal-spot"
+          }
+        ]
+      },
+      {
+        "team": "Netherlands",
+        "coach": "Xavi Hernández",
+        "appointed": "Announced by the KNVB on 12 August 2026 (contract to the 2030 World Cup). He was presented in Zeist on 25 August 2026.",
+        "replaced": "Ronald Koeman",
+        "replaced_reason": "Koeman resigned on 30 June 2026, hours after the Netherlands lost on penalties to Morocco in the World Cup round of 32. He said the responsibility ultimately rests with the head coach.",
+        "institution_quote": {
+          "quote": "a footballing vision that aligns very well with the way we want the Netherlands national team to play",
+          "speaker": "Nigel de Jong, KNVB Director of Elite Football (partial quote)",
+          "source": "DutchNews.nl, 'Barcelona legend Xavi appointed Netherlands head coach'",
+          "url": "https://www.dutchnews.n"
+        }
+      }
+    ]
+  }
+}
