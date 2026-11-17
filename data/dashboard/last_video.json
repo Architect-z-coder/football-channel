@@ -1,30 +1,44 @@
 {
-  "updated": "2026-11-16T23:09:02Z",
+  "updated": "2026-11-17T13:42:27Z",
   "home": "Germany",
   "away": "Netherlands",
   "competition": "UEFA Nations League A Grp. 2",
   "fixture_id": "fotmob-5181835",
   "titles": [
-    "Germany 5-0 Netherlands: The xG Said 1.52",
-    "How Germany Scored 5 From 1.52 xG",
-    "Germany vs Netherlands 5-0: What the Numbers Show"
+    "Germany 5-0 Netherlands: Was It Really That One-Sided?",
+    "1.39 xG, 5 Goals: How Germany Beat the Netherlands",
+    "Germany 5-0 Netherlands: 3 Keys the Scoreline Hides"
   ],
-  "minutes": 4.1,
-  "files": "20261116-germany-netherlands",
+  "minutes": 4.9,
+  "files": "20261117-germany-netherlands",
   "uploaded": false,
   "youtube": null,
-  "critic": null,
-  "rewritten": false,
+  "critic": {
+    "hook": 7,
+    "payoff": 7,
+    "pace": 6,
+    "clarity": 7,
+    "notes": [
+      "Scene 1: the open question only arrives in sentence 6, after the xG explanation, so open with \"Germany won 5-0 on just 1.39 xG. Was it deserved?\" and explain xG afterwards.",
+      "Scene 2: cut \"We read the numbers only. We do not guess at what happened on the pitch beyond what the data can show.\" It is filler and stalls the story right after the hook.",
+      "Scene 4: \"We want to win the game\" is a generic quote that adds nothing, so drop it and the sentence about names and shapes, and go straight to \"Same shape, same value, so what decided it?\"",
+      "Scene 5: the \"If you enjoy this, subscribe\" line breaks the build between Key 1 and Key 2, so move it to the closing scene only.",
+      "Scene 6: \"FotMob's momentum graph\" is never explained, so either add \"which tracks which team is pushing forward minute by minute\" or lead with the 50 vs 19 box touches and drop it.",
+      "Scene 7: \"read these as a team-wide night\" is a weak payoff, so replace it with a clear claim such as \"Verbruggen faced 10 shots on target and 5 went in, so the Dutch rating gap starts with their defence.\""
+    ]
+  },
+  "rewritten": true,
   "shorts": [
     {
-      "title": "Germany 5-0 Netherlands from just 1.52 xG",
-      "hook": "5 Goals, 1.52 xG",
+      "title": "Germany scored 5 from 1.39 xG vs Netherlands",
+      "hook": "5 Goals. 1.39 xG.",
       "youtube": null
     },
     {
-      "title": "10 shots on target to 1: Germany vs Netherlands",
-      "hook": "10 Shots On Target To 1",
+      "title": "Gruda 9.2, Dumfries 3.3: Germany's 5-0 in ratings",
+      "hook": "9.2 Versus 3.3",
       "youtube": null
     }
-  ]
+  ],
+  "voice": "edge"
 }
