@@ -20,8 +20,10 @@ GitHub does the heavy work (data, research, script, render); the producer adds t
    "duration": durationSeconds, "starts": [start of each word, in order]}]}`.
    The number of starts must equal the number of words in `text` (split on spaces); check before committing.
    Never change the text. One call per item, no retries of a call that succeeded.
-5. **Render on GitHub:** write request.json with `"mode": "full"` (uploads as PRIVATE) and the same
-   match; commit both files, push; poll status as in step 3.
+5. **Render on GitHub:** if `youtube.upload_ready` in config.yaml is true, use `"mode": "full"` (uploads as
+   PRIVATE); otherwise `"mode": "no-upload"` (files only, kept 14 days on the run page). Same match; commit
+   the manifest and request.json, push; poll status (max 25 min). After a successful no-upload run, remove
+   that match line from data/queue.txt yourself and push (a full run removes it on its own).
 6. Report: titles, length, YouTube Studio links and the suggested publish days of the two Shorts
    (from `data/dashboard/last_video.json`), or the failure reason.
 
