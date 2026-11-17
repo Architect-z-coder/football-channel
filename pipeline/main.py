@@ -10,6 +10,7 @@ Usage:
 Without --pick, the next line of data/queue.txt is used (and removed after a successful run).
 """
 import argparse
+import os
 import sys
 from datetime import date
 
@@ -22,6 +23,7 @@ from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, l
 MAX_ATTEMPTS = 2
 QUEUE = DATA_DIR / "queue.txt"
 DASH = DATA_DIR / "dashboard"   # files the dashboard reads
+CACHE = DATA_DIR / "cache"      # research + approved script per match (reused if a later step fails)
 
 
 def now() -> str:
@@ -159,9 +161,16 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     pack["history"] = history.menu()
     if not dry_run:
         from . import press
-        pack["press"] = press.gather(cfg, pack)
-        from . import context
-        pack["context"] = context.gather(cfg, pack)
+        cached = read_json(CACHE / f"{slugify(str(pack['fixture_id']))}.json", {})
+        if cached.get("press") is not None:
+            log.info("Using saved press/context research for this match (no new web search).")
+            pack["press"], pack["context"] = cached["press"], cached.get("context", {})
+        else:
+            pack["press"] = press.gather(cfg, pack)
+            from . import context
+            pack["context"] = context.gather(cfg, pack)
+            write_json(CACHE / f"{slugify(str(pack['fixture_id']))}.json",
+                       {"saved": now(), "press": pack["press"], "context": pack["context"]})
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
     if not dry_run and cfg.get("photos", {}).get("enabled", True):
@@ -170,7 +179,15 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         pack["photos"] = [{k: v for k, v in ph.items() if k != "path"} for ph in found]
     write_json(workdir / "datapack.json", pack)
 
-    script, report = get_script(cfg, pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
+    cache_file = CACHE / f"{slugify(str(pack['fixture_id']))}.json"
+    cached = read_json(cache_file, {}) if not dry_run else {}
+    if cached.get("script") and not os.environ.get("NEW_SCRIPT"):
+        log.info("Using the saved, fact-checked script for this match (set NEW_SCRIPT=1 to write a new one).")
+        script, report = cached["script"], cached["report"]
+    else:
+        script, report = get_script(cfg, pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
+        if not dry_run and report.get("ok"):
+            write_json(cache_file, {**cached, "script": script, "report": report, "saved_script": now()})
     write_json(workdir / "script.json", script)
     write_json(workdir / "factcheck.json", report)
     if not report["ok"]:
@@ -200,8 +217,11 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
         credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())
     if credits:
         script["description"] = script["description"].rstrip() + "\n\nSources and credits:\n" + "\n".join(credits)
-    made_shorts = (shorts.make(cfg, pack, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"))
+    made_shorts = (shorts.make(cfg, pack, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"),
+                               preset=None if os.environ.get("NEW_SCRIPT") else cached.get("shorts"))
                    if secret("ANTHROPIC_API_KEY") else [])
+    if made_shorts and not dry_run:
+        write_json(cache_file, {**read_json(cache_file, {}), "shorts": [m["short"] for m in made_shorts]})
     minutes = sum(durs) / 60
 
     meta = {"titles": script["title_options"], "description": script["description"],

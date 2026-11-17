@@ -129,12 +129,33 @@ def narrate(cfg: dict, script: dict, workdir: Path, placeholder: bool = False) -
                 log.warning("%s -> switching to the free backup voice for the rest of this run.", e)
                 provider = "edge"
         if provider == "edge":
-            _edge(sc["narration"], path, backup.get("voice", "en-GB-RyanNeural"), backup.get("rate", "+5%"))
+            _edge_safe(sc["narration"], path, backup)
         elif provider == "silent":
             _silent(path, max(3.0, len(sc["narration"].split()) / wpm * 60))
         files.append(path)
     (workdir / "voice_provider.txt").write_text(provider, encoding="utf-8")
     return files
+
+
+def _edge_safe(text: str, path: Path, backup: dict) -> None:
+    """Edge sometimes returns no audio (busy service or a voice/text it dislikes): retry, then try
+    the second voice, then a cleaned text."""
+    import re
+    import time
+    clean = re.sub(r"\.{2,}|…", ".", text).replace("—", ", ").replace("–", "-")
+    tries = [(backup.get("voice", "en-GB-RyanNeural"), backup.get("rate", "+0%"), text),
+             (backup.get("voice", "en-GB-RyanNeural"), backup.get("rate", "+0%"), clean),
+             (backup.get("fallback_voice", "en-GB-RyanNeural"), "+0%", clean)]
+    last = None
+    for i, (v, rate, t) in enumerate(tries):
+        try:
+            _edge(t, path, v, rate)
+            return
+        except Exception as e:
+            last = e
+            log.warning("Backup voice attempt %d failed (%s): %s", i + 1, v, e)
+            time.sleep(3)
+    raise StopPipeline(f"Backup voice failed after retries: {last}")
 
 
 def provider_used(workdir: Path) -> str:

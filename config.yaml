@@ -69,6 +69,7 @@ voice:
   backup:            # free Microsoft Edge neural voice, used when ElevenLabs credits run out
     voice: en-US-AndrewMultilingualNeural   # most natural free voice; alternatives: en-GB-RyanNeural
     rate: "-4%"
+    fallback_voice: en-GB-RyanNeural
 
 youtube:
   category_id: "17"        # Sports

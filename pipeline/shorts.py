@@ -67,23 +67,25 @@ def _as_script(shorts: list[dict]) -> dict:
                         "fact_ids": s.get("fact_ids", [])} for s in shorts]}
 
 
-def make(cfg: dict, pack: dict, script: dict, workdir: Path, placeholder: bool) -> list[dict]:
+def make(cfg: dict, pack: dict, script: dict, workdir: Path, placeholder: bool,
+         preset: list[dict] | None = None) -> list[dict]:
     """Write, check, voice and render the shorts. Returns [{"short": ..., "video": Path}]."""
     if not cfg.get("shorts", {}).get("enabled", True):
         return []
     outdir = workdir / "shorts"
     outdir.mkdir(exist_ok=True)
     try:
-        shorts, feedback = [], None
-        for _ in range(2):
+        shorts, feedback = preset or [], None
+        for _ in range(0 if preset else 2):
             shorts = write(cfg, pack, script, feedback)
             report = factcheck.check(cfg, _as_script(shorts), pack)
             if report["ok"]:
                 break
             feedback = "\n".join(report["problems"])
         else:
-            log.warning("Shorts failed fact-check twice; skipping shorts.")
-            return []
+            if not preset:
+                log.warning("Shorts failed fact-check twice; skipping shorts.")
+                return []
         write_json(outdir / "shorts.json", shorts)
         audios = voice.narrate(cfg, {"scenes": [{"id": s["id"], "narration": s["narration"]}
                                                 for s in shorts]}, outdir, placeholder=placeholder)
