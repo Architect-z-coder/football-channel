@@ -4,6 +4,7 @@ import {
 import { C, HEAD, BODY } from "./theme";
 import { SceneVisual, findPhoto } from "./scenes";
 import { Captions } from "./Match";
+import { NameTags } from "./NameTag";
 
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
 const END = 45; // frames of the closing card
@@ -100,6 +101,7 @@ export const Short = (props) => {
           </Sequence>
         );
       })}
+      <NameTags tags={short.tags} left={50} bottom={520} scale={1.15} />
       {f < speak ? (
         <Captions text={short.narration} speakFrames={speak - 10} wordStarts={short.wordStarts}
                   per={4} size={72} bottom={270} maxWidth={980} />

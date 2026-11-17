@@ -146,7 +146,7 @@ def _best_photo(person: dict) -> dict | None:
         return None
 
 
-def find(people: list[dict], outdir: Path, limit: int = 12) -> list[dict]:
+def find(people: list[dict], outdir: Path, limit: int = 12, start: int = 0) -> list[dict]:
     """people: [{"name", "role", "team"}]. Returns photos saved in outdir with credits."""
     out, seen = [], set()
     outdir.mkdir(parents=True, exist_ok=True)
@@ -158,7 +158,7 @@ def find(people: list[dict], outdir: Path, limit: int = 12) -> list[dict]:
             info = _best_photo(p)
             if not info:
                 continue
-            dest = outdir / f"photo_{len(out) + 1}.jpg"
+            dest = outdir / f"photo_{start + len(out) + 1}.jpg"
             import io
             import time
 

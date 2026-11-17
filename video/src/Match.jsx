@@ -3,6 +3,7 @@ import {
   useVideoConfig, Easing,
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
+import { NameTags } from "./NameTag";
 import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
 const TAIL = 12; // frames of silence at the end of each scene (matches Python PAD)
@@ -184,6 +185,7 @@ const SceneShell = ({ scene, props }) => {
           </div>
         )}
       </AbsoluteFill>
+      <NameTags tags={scene.tags} />
       <Captions text={scene.narration} speakFrames={Math.max(15, dur - TAIL)} wordStarts={scene.wordStarts} />
     </AbsoluteFill>
   );

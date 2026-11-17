@@ -65,6 +65,15 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
                        "wordStarts": word_starts, "shots": shots,
                        "visual": sc.get("visual") or {}, "on_screen": sc.get("on_screen", ""),
                        "narration": sc.get("narration", "")})
+    from . import nametags
+    offs, acc = [], 0.0
+    for d in durs:
+        offs.append(acc); acc += d
+    tag_lists = nametags.tags_for(pack, [{"narration": s["narration"], "word_starts": s["wordStarts"],
+                                          "frames": s["durationInFrames"], "offset_s": o}
+                                         for s, o in zip(scenes, offs)])
+    for s, t in zip(scenes, tag_lists):
+        s["tags"] = t
     props = {
         "channel": cfg["channel"]["name"],
         "competition": pack["competition"],
@@ -137,6 +146,9 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
         start = int(word_starts[n] * FPS) if word_starts and n < len(word_starts) else int(n / total_words * speak)
         shots.append({"from": 0 if not shots else max(start - 4, shots[-1]["from"] + 20), "visual": sh.get("visual") or {}})
         n += len((sh.get("text") or "").split())
+    from . import nametags
+    short_tags = nametags.tags_for(pack, [{"narration": short["narration"], "word_starts": word_starts,
+                                           "frames": speak}])[0]
     fake_script = {"scenes": [{"visual": short.get("visual", {})}]}
     props = {
         "channel": cfg["channel"]["name"], "competition": pack["competition"],
@@ -151,6 +163,7 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
         "scenes": [],
         "short": {"hook": short["hook"], "narration": short["narration"], "visual": short.get("visual", {}),
                   "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts, "shots": shots,
+                  "tags": short_tags,
                   "durationInFrames": frames},
     }
     props_file = outdir / f"short_{short['id']}_props.json"

@@ -194,6 +194,19 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
         raise StopPipeline("Script failed fact-checking after retries:\n- " +
                            "\n- ".join(report["problems"][:10]))
 
+    if not prepare and not dry_run and cfg.get("photos", {}).get("enabled", True):
+        # name tags: a photo for every player or coach the story names (free licence only)
+        from . import nametags, photos
+        texts = [sc["narration"] for sc in script["scenes"]] + [x["narration"] for x in cached.get("shorts") or []]
+        have = {ph["name"] for ph in pack.get("photos") or []}
+        need = [{k: p[k] for k in ("name", "role", "team")} for p in nametags.mentioned(texts, nametags.roster(pack))
+                if p["name"] not in have]
+        if need:
+            more = photos.find(need, workdir / "photos", limit=16, start=len(pack.get("photos") or []))
+            pack["photos"] = (pack.get("photos") or []) + [{k: v for k, v in ph.items() if k != "path"} for ph in more]
+            write_json(workdir / "datapack.json", pack)
+            log.info("Name tags: %d of %d named people have a free photo.", len(more), len(need))
+
     if prepare:   # stop before the voice: the producer task makes it (Everygen) and starts the render
         prepared = cached.get("shorts") or shorts.prepare(cfg, pack, script)
         if prepared:
@@ -225,8 +238,10 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
     credits = []
     used = {(v or {}).get("photo") for sc in script["scenes"] for v in
             [sh.get("visual") for sh in sc.get("shots") or []] + [sc.get("visual")]}
+    from . import nametags
+    named = {p["name"] for p in nametags.mentioned([sc["narration"] for sc in script["scenes"]], nametags.roster(pack))}
     for ph in pack.get("photos") or []:
-        if ph["name"] in used:
+        if ph["name"] in used or ph["name"] in named:
             credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via {ph.get('via', 'Wikimedia Commons')} ({ph['page']})")
     for q in pack.get("press") or []:
         credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())
