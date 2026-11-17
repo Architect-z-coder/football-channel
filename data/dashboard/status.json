@@ -3,9 +3,9 @@
   "mode": "prepare",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "running",
+  "state": "failed",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44192736112",
   "started": "2026-11-17T22:43:08Z",
-  "finished": null,
-  "reason": null
+  "finished": "2026-11-17T22:47:22Z",
+  "reason": "Script failed fact-checking after retries:\n- Scene 2 discusses injuries: \"Brian Brobbey, Virgil van Dijk and Nathan Aké were out injured, and Xavi said Frenkie de Jong could not play.\" The brief says to flag anything about injuries, even though the pack lists these absences.\n- Scene 9 discusses injury timelines: \"FotMob lists Brobbey as expected back in late November, Aké in early December, and van Dijk as doubtful.\" This is injury content and should be flagged under the same rule."
 }
