@@ -67,6 +67,19 @@ def _as_script(shorts: list[dict]) -> dict:
                         "fact_ids": s.get("fact_ids", [])} for s in shorts]}
 
 
+def prepare(cfg: dict, pack: dict, script: dict) -> list[dict]:
+    """Write and fact-check the shorts (no voice, no render). [] if they fail twice."""
+    feedback = None
+    for _ in range(2):
+        shorts = write(cfg, pack, script, feedback)
+        report = factcheck.check(cfg, _as_script(shorts), pack)
+        if report["ok"]:
+            return shorts
+        feedback = "\n".join(report["problems"])
+    log.warning("Shorts failed fact-check twice; skipping shorts.")
+    return []
+
+
 def make(cfg: dict, pack: dict, script: dict, workdir: Path, placeholder: bool,
          preset: list[dict] | None = None) -> list[dict]:
     """Write, check, voice and render the shorts. Returns [{"short": ..., "video": Path}]."""

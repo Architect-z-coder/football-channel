@@ -112,7 +112,55 @@ def _elevenlabs(text: str, path: Path, model_id: str, key: str, voice_id: str) -
         words_file(path).write_text(json.dumps(words), encoding="utf-8")
 
 
+MANIFEST_DIR = Path(__file__).resolve().parent.parent / "data" / "voice"
+
+
+def load_manifest() -> dict:
+    """text -> {"url", "words"} for voices made outside the pipeline (Everygen via the producer task)."""
+    out = {}
+    for f in MANIFEST_DIR.glob("*.json"):
+        try:
+            for it in json.loads(f.read_text(encoding="utf-8")).get("items", []):
+                if it.get("text") and it.get("url"):
+                    out[" ".join(it["text"].split())] = it
+        except ValueError:
+            continue
+    return out
+
+
+def _from_manifest(item: dict, text: str, path: Path) -> None:
+    r = requests.get(item["url"], timeout=60)
+    r.raise_for_status()
+    raw = path.with_suffix(".src.wav")
+    raw.write_bytes(r.content)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-c:a", "libmp3lame", "-b:a", "192k",
+                    str(path)], check=True)
+    raw.unlink(missing_ok=True)
+    words, tokens = item.get("words") or [], text.split()
+    if len(words) == len(tokens):
+        words_file(path).write_text(json.dumps(
+            [{"w": t, "start": round(w["start"], 3), "end": round(w["end"], 3)} for t, w in zip(tokens, words)]),
+            encoding="utf-8")
+
+
 def narrate(cfg: dict, script: dict, workdir: Path, placeholder: bool = False) -> list[Path]:
+    manifest = {} if placeholder else load_manifest()
+    files, used = [], set()
+    for sc in script["scenes"]:
+        it = manifest.get(" ".join(sc["narration"].split()))
+        if not it:
+            break
+        path = workdir / f"voice_{sc['id']:02d}.mp3"
+        _from_manifest(it, sc["narration"], path)
+        files.append(path)
+        used.add(it.get("voice", "manifest"))
+    else:
+        if script["scenes"]:
+            log.info("Voice: using prepared %s voice for all %d scenes.", ", ".join(used), len(files))
+            (workdir / "voice_provider.txt").write_text("everygen:" + ",".join(used), encoding="utf-8")
+            return files
+    if manifest and files:
+        log.warning("Prepared voice covers only part of the script; using the normal voice instead.")
     key, voice_id = secret("ELEVENLABS_API_KEY"), secret("ELEVENLABS_VOICE_ID")
     backup = cfg["voice"].get("backup", {})
     provider = "silent" if placeholder else ("elevenlabs" if key and voice_id else "edge")

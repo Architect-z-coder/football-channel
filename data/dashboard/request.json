@@ -1,7 +1,6 @@
 {
-  "id": "ger-ned-shots-2",
-  "mode": "no-upload",
+  "id": "ger-ned-prep-1",
+  "mode": "prepare",
   "match": "fotmob:5181835",
-  "look_back_days": "",
-  "requested_at": "2026-11-17T14:40:00Z"
+  "look_back_days": ""
 }

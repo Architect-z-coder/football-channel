@@ -141,7 +141,7 @@ def show_data(pick: str | None) -> int:
     return 0
 
 
-def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
+def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = False) -> int:
     cfg = load_config()
     from_queue = False
     if not dry_run and not pick:
@@ -193,6 +193,21 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     if not report["ok"]:
         raise StopPipeline("Script failed fact-checking after retries:\n- " +
                            "\n- ".join(report["problems"][:10]))
+
+    if prepare:   # stop before the voice: the producer task makes it (Everygen) and starts the render
+        prepared = cached.get("shorts") or shorts.prepare(cfg, pack, script)
+        if prepared:
+            write_json(cache_file, {**read_json(cache_file, {}), "shorts": prepared})
+        items = ([{"key": f"scene_{sc['id']:02d}", "text": sc["narration"]} for sc in script["scenes"]]
+                 + [{"key": f"short_{x['id']}", "text": x["narration"]} for x in prepared])
+        write_json(DASH / "voice_needed.json", {
+            "updated": now(), "fixture_id": pack["fixture_id"], "match": pick,
+            "slug": slugify(str(pack["fixture_id"])), "home": pack["home"], "away": pack["away"],
+            "voice": cfg["voice"].get("everygen_voice", "alex"), "items": items,
+            "characters": sum(len(i["text"]) for i in items)})
+        notify.send(f"Script ready for {pack['home']} vs {pack['away']}: {len(items)} voice parts needed.")
+        log.info("Prepared: %d voice parts written to data/dashboard/voice_needed.json", len(items))
+        return 0
 
     audios = voice.narrate(cfg, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"))
     if cfg.get("render_engine", "motion") == "motion":
@@ -282,13 +297,15 @@ def main():
     p.add_argument("--list", action="store_true")
     p.add_argument("--pick", default="")
     p.add_argument("--data-only", action="store_true")
+    p.add_argument("--prepare", action="store_true", help="data + research + scripts, stop before the voice")
     args = p.parse_args()
     try:
         if args.list:
             sys.exit(show_list())
         if args.data_only:
             sys.exit(show_data(args.pick or None))
-        sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload, pick=args.pick or None))
+        sys.exit(run(dry_run=args.dry_run, upload=not args.no_upload, pick=args.pick or None,
+                     prepare=args.prepare))
     except StopPipeline as e:
         log.error("Stopped: %s", e)
         OUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -66,6 +66,7 @@ shorts:              # vertical clips made from each match video, uploaded as pr
 
 voice:
   model_id: "eleven_multilingual_v2"
+  everygen_voice: alex   # channel voice, made by the producer task through Everygen
   backup:            # free Microsoft Edge neural voice, used when ElevenLabs credits run out
     voice: en-US-AndrewMultilingualNeural   # most natural free voice; alternatives: en-GB-RyanNeural
     rate: "-4%"

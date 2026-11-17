@@ -1,15 +1,13 @@
 name: Produce video
 
 on:
-  schedule:
-    - cron: "17 6 * * 1,4"   # Monday and Thursday, 06:17 UTC (07:17 Algeria)
   workflow_dispatch:
     inputs:
       mode:
         description: "list = show matches to choose from, data-only = show one match's data, full = make + upload as private, no-upload = make files only, dry-run = sample match"
         default: "list"
         type: choice
-        options: [list, data-only, full, no-upload, dry-run]
+        options: [list, data-only, prepare, full, no-upload, dry-run]
       match:
         description: "Which match? Team names (e.g. Arsenal Chelsea) or the match number from the list. Empty = next in data/queue.txt"
         default: ""
@@ -52,7 +50,7 @@ jobs:
               mode, match, days, rid = os.environ["IN_MODE"], os.environ["IN_MATCH"], os.environ["IN_DAYS"], ""
           else:
               mode, match, days, rid = "full", "", "", ""
-          if mode not in ("list", "data-only", "full", "no-upload", "dry-run"):
+          if mode not in ("list", "data-only", "prepare", "full", "no-upload", "dry-run"):
               mode = "list"
           clean = lambda v: " ".join(str(v or "").split())[:80]
           days = clean(days) if clean(days).isdigit() else ""
@@ -77,19 +75,19 @@ jobs:
           cache: pip
 
       - uses: actions/setup-node@v4
-        if: env.MODE != 'list' && env.MODE != 'data-only'
+        if: env.MODE != 'list' && env.MODE != 'data-only' && env.MODE != 'prepare'
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: video/package-lock.json
 
       - name: Install motion-graphics engine (Remotion)
-        if: env.MODE != 'list' && env.MODE != 'data-only'
+        if: env.MODE != 'list' && env.MODE != 'data-only' && env.MODE != 'prepare'
         working-directory: video
         run: npm ci && npx remotion browser ensure
 
       - name: Install FFmpeg
-        if: env.MODE != 'list' && env.MODE != 'data-only'
+        if: env.MODE != 'list' && env.MODE != 'data-only' && env.MODE != 'prepare'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Install Python packages
@@ -111,6 +109,7 @@ jobs:
         run: |
           if [ "$MODE" = "list" ]; then python -m pipeline.main --list
           elif [ "$MODE" = "data-only" ]; then python -m pipeline.main --data-only --pick "$MATCH"
+          elif [ "$MODE" = "prepare" ]; then python -m pipeline.main --prepare --pick "$MATCH"
           elif [ "$MODE" = "dry-run" ]; then python -m pipeline.main --dry-run
           elif [ "$MODE" = "no-upload" ]; then python -m pipeline.main --no-upload --pick "$MATCH"
           else python -m pipeline.main --pick "$MATCH"; fi
