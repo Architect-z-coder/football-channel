@@ -109,7 +109,7 @@ Return ONLY JSON: {"ok": bool, "problems": [str, ...]}"""
 
 def claim_check(cfg: dict, script: dict, pack: dict) -> list[str]:
     user = f"DATA PACK:\n{json.dumps(ai_pack(pack), ensure_ascii=False)}\n\nSCRIPT:\n{json.dumps(script, ensure_ascii=False)}"
-    result = ask_json(cfg["writer"]["model"], CLAIM_SYSTEM, user, max_tokens=3000)
+    result = ask_json(cfg["writer"]["model"], CLAIM_SYSTEM, user, max_tokens=10000)
     return [] if result.get("ok") and not result.get("problems") else list(result.get("problems", []))
 
 
