@@ -266,6 +266,12 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
                  for g in games if g.get("tooltipText")])
     if any(v["starters"] for v in lu.values()):
         pack["lineups"] = lu
+    info = (data.get("content", {}).get("matchFacts") or {}).get("infoBox") or {}
+    stadium = info.get("Stadium") or {}
+    if stadium.get("name"):
+        add("stadium", "Stadium", f"{stadium['name']}, {stadium.get('city', '')}".strip(", "))
+    if info.get("Attendance"):
+        add("attendance", "Attendance", info["Attendance"])
     potm = (data.get("content", {}).get("matchFacts") or {}).get("playerOfTheMatch") or {}
     if potm.get("name"):
         add("player_of_the_match", "Player of the match (FotMob)",

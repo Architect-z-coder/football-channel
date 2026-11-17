@@ -1,8 +1,8 @@
 import {
-  AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
-import { SceneVisual } from "./scenes";
+import { SceneVisual, findPhoto } from "./scenes";
 import { Captions } from "./Match";
 
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
@@ -17,6 +17,33 @@ const VBackground = () => {
   const y = 45 + 10 * Math.sin(f / 200);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(circle at 50% ${y}%, ${C.bg2} 0%, ${C.bg} 65%)` }} />
+  );
+};
+
+const VShot = ({ len, children }) => {
+  const f = useCurrentFrame();
+  const o = Math.min(interpolate(f, [0, 8], [0, 1], { extrapolateRight: "clamp" }),
+                     interpolate(f, [len - 8, len], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
+  return <AbsoluteFill style={{ opacity: o }}>{children}</AbsoluteFill>;
+};
+
+// full-height photo for shots about a person: slow push-in, name low, credit small
+const VPhoto = ({ ph, visual, len }) => {
+  const f = useCurrentFrame();
+  const zoom = interpolate(f, [0, len], [1.05, 1.15]);
+  return (
+    <AbsoluteFill>
+      <Img src={staticFile(`run/${ph.file}`)} onError={() => {}} style={{ width: "100%", height: "100%", objectFit: "cover",
+           objectPosition: "50% 22%", transform: `scale(${zoom})` }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(7,17,12,0.85) 0%, rgba(7,17,12,0.1) 30%, rgba(7,17,12,0.2) 55%, rgba(7,17,12,0.92) 82%)" }} />
+      <div style={{ position: "absolute", left: 60, right: 60, top: 1240 }}>
+        <div style={{ fontFamily: HEAD, fontSize: 80, color: "#fff", lineHeight: 1 }}>{ph.role === "Stadium" ? ph.name.split(",")[0] : ph.name}</div>
+        {visual.caption ? <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 38, color: C.accent, marginTop: 8 }}>{visual.caption}</div> : null}
+      </div>
+      <div style={{ position: "absolute", left: 60, bottom: 110, fontFamily: BODY, fontSize: 20, color: "rgba(255,255,255,0.75)" }}>
+        Photo: {ph.author} · {ph.licence} · {ph.via || "Wikimedia Commons"}
+      </div>
+    </AbsoluteFill>
   );
 };
 
@@ -35,30 +62,44 @@ export const Short = (props) => {
   return (
     <AbsoluteFill style={{ fontFamily: BODY }}>
       <VBackground />
-      <div style={{ position: "absolute", top: 70, left: 60, right: 60, height: 8, background: C.line, borderRadius: 4 }}>
+      <div style={{ position: "absolute", zIndex: 5, top: 70, left: 60, right: 60, height: 8, background: C.line, borderRadius: 4 }}>
         <div style={{ width: `${progress * 100}%`, height: "100%", background: C.accent, borderRadius: 4 }} />
       </div>
-      <div style={{ position: "absolute", top: 110, left: 60, right: 60, display: "flex", gap: 14,
+      <div style={{ position: "absolute", zIndex: 5, top: 110, left: 60, right: 60, display: "flex", gap: 14,
                     alignItems: "center", color: C.muted, fontWeight: 700, fontSize: 30, letterSpacing: 2 }}>
         <div style={{ width: 16, height: 16, borderRadius: 8, background: C.accent }} />
         {props.channel.toUpperCase()}
       </div>
-      <div style={{ position: "absolute", top: 190, left: 60, right: 60, fontFamily: HEAD, fontSize: short.hook.length > 26 ? 90 : 112,
+      <div style={{ position: "absolute", zIndex: 5, top: 190, left: 60, right: 60, fontFamily: HEAD, fontSize: short.hook.length > 26 ? 90 : 112,
                     lineHeight: 1.02, color: C.text, textTransform: "uppercase",
                     opacity: hookIn, transform: `translateY(${(1 - hookIn) * 40}px)` }}>
         {short.hook}
       </div>
-      <div style={{ position: "absolute", top: 580, left: 60, color: C.muted, fontSize: 30, fontWeight: 600 }}>
+      <div style={{ position: "absolute", zIndex: 5, top: 580, left: 60, color: C.muted, fontSize: 30, fontWeight: 600 }}>
         {props.home} v {props.away} · {props.competition}
       </div>
-      <div style={{ position: "absolute", top: BOX_TOP, left: 0, width: 1080, height: BOX_H, overflow: "hidden",
-                    opacity: visIn * (1 - endIn), transform: `scale(${0.94 + 0.06 * visIn})` }}>
-        <div style={{ width: 1920, height: 1080, position: "absolute",
-                      left: (1080 - 1920 * zoom) / 2, top: (BOX_H - 1080 * zoom) / 2,
-                      transform: `scale(${zoom})`, transformOrigin: "top left" }}>
-          <SceneVisual scene={scene} props={props} />
-        </div>
-      </div>
+      {(short.shots && short.shots.length ? short.shots : [{ from: 0, visual: short.visual }]).map((sh, i, arr) => {
+        const next = i + 1 < arr.length ? arr[i + 1].from : speak;
+        const len = Math.max(10, next - sh.from + (i + 1 < arr.length ? 8 : 0));
+        const ph = sh.visual.type === "photo" ? findPhoto(props, sh.visual) : null;
+        const z = ZOOM[sh.visual?.type] || 0.6;
+        return (
+          <Sequence key={i} from={sh.from} durationInFrames={len}>
+            <VShot len={len}>
+              {ph ? <VPhoto ph={ph} visual={sh.visual} len={len} /> : (
+                <div style={{ position: "absolute", top: BOX_TOP, left: 0, width: 1080, height: BOX_H, overflow: "hidden",
+                              opacity: visIn * (1 - endIn) }}>
+                  <div style={{ width: 1920, height: 1080, position: "absolute",
+                                left: (1080 - 1920 * z) / 2, top: (BOX_H - 1080 * z) / 2,
+                                transform: `scale(${z})`, transformOrigin: "top left" }}>
+                    <SceneVisual scene={{ ...scene, visual: sh.visual, durationInFrames: len }} props={props} />
+                  </div>
+                </div>
+              )}
+            </VShot>
+          </Sequence>
+        );
+      })}
       {f < speak ? (
         <Captions text={short.narration} speakFrames={speak - 10} wordStarts={short.wordStarts}
                   per={4} size={72} bottom={270} maxWidth={980} />

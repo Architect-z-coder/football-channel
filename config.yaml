@@ -67,8 +67,8 @@ shorts:              # vertical clips made from each match video, uploaded as pr
 voice:
   model_id: "eleven_multilingual_v2"
   backup:            # free Microsoft Edge neural voice, used when ElevenLabs credits run out
-    voice: en-GB-RyanNeural
-    rate: "+5%"
+    voice: en-US-AndrewMultilingualNeural   # most natural free voice; alternatives: en-GB-RyanNeural
+    rate: "-4%"
 
 youtube:
   category_id: "17"        # Sports

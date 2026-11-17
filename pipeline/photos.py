@@ -88,10 +88,40 @@ def _commons_search(query: str, limit: int = 8) -> list[dict]:
     return out
 
 
+OPENVERSE_OK = {"by", "by-sa", "cc0", "pdm"}
+
+
+def _openverse(query: str, last: str) -> dict | None:
+    """Openverse (Flickr and other open collections): commercial-use licences only."""
+    r = _get("https://api.openverse.org/v1/images/", params={
+        "q": query, "license_type": "commercial", "page_size": 20})
+    best = None
+    for h in r.json().get("results", []):
+        lic = (h.get("license") or "").lower()
+        if lic not in OPENVERSE_OK or (h.get("width") or 0) < 400:
+            continue
+        if last and last not in ((h.get("title") or "") + " " + " ".join(t.get("name", "") for t in h.get("tags") or [])).lower():
+            continue
+        if not best or (h.get("width") or 0) > (best.get("width") or 0):
+            best = h
+    if not best:
+        return None
+    lic = best["license"]
+    lic_name = {"cc0": "CC0", "pdm": "Public domain"}.get(lic, f"CC {lic.upper()} {best.get('license_version') or ''}".strip())
+    return {"url": best["url"], "page": best.get("foreign_landing_url") or best.get("url"),
+            "licence": lic_name, "author": (best.get("creator") or "unknown")[:60],
+            "via": "Openverse"}
+
+
 def _best_photo(person: dict) -> dict | None:
     """Search Commons with context first (press conference for coaches, playing for players),
     then the person's Wikidata portrait."""
     name = person["name"]
+    if person.get("role") == "Stadium":                       # places: plain search, no name filter
+        hits = _commons_search(f'"{name.split(",")[0]}"')
+        if hits:
+            return hits[0]
+        return _openverse(name.split(",")[0], "")
     last = name.split()[-1].lower()
     queries = ([f'"{name}" press conference', f'"{name}" coach', f'"{name}"']
                if "coach" in (person.get("role") or "").lower()
@@ -106,10 +136,17 @@ def _best_photo(person: dict) -> dict | None:
         if hits:
             return {**hits[0], "query": q}
     fn = _wikidata_image(name)
-    return _commons_info(fn) if fn else None
+    info = _commons_info(fn) if fn else None
+    if info:
+        return info
+    try:
+        return _openverse(name, last)
+    except Exception as e:
+        log.info("Openverse failed for %s: %s", name, e)
+        return None
 
 
-def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
+def find(people: list[dict], outdir: Path, limit: int = 12) -> list[dict]:
     """people: [{"name", "role", "team"}]. Returns photos saved in outdir with credits."""
     out, seen = [], set()
     outdir.mkdir(parents=True, exist_ok=True)
@@ -135,7 +172,7 @@ def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
                 raise ValueError("download was not an image")
             img.thumbnail((1200, 1200))
             img.save(dest, "JPEG", quality=88)
-            out.append({**p, "file": dest.name, "path": str(dest), **info})
+            out.append({**p, "file": dest.name, "path": str(dest), "via": info.get("via", "Wikimedia Commons"), **info})
         except Exception as e:
             log.info("No photo for %s (%s)", p["name"], e)
     log.info("Photos: %d free-licence photos found (Wikimedia Commons)", len(out))
@@ -143,9 +180,12 @@ def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
 
 
 def people_in(pack: dict) -> list[dict]:
-    """Who the story is about: coaches, top and bottom rated starters, key absentees."""
+    """Who and where the story is about: stadium, coaches, scorers, top/bottom rated, absentees,
+    and coaches named in the coach story (e.g. the predecessor)."""
     f = {x["id"]: x["value"] for x in pack["facts"]}
     ppl = []
+    if f.get("stadium"):
+        ppl.append({"name": f["stadium"], "role": "Stadium", "team": ""})
     for side in ("home", "away"):
         team = pack[side]
         if f.get(f"{side}_coach"):
@@ -157,4 +197,10 @@ def people_in(pack: dict) -> list[dict]:
         a = f.get(f"{side}_absent_1")
         if isinstance(a, dict):
             ppl.append({"name": a["player"], "role": f"Missing ({a.get('reason')})", "team": pack[side]})
+    for k in sorted(k for k in f if k.startswith("goal_")):
+        if isinstance(f[k], dict) and f[k].get("player"):
+            ppl.append({"name": f[k]["player"], "role": "Scorer", "team": f[k].get("team")})
+    for t in (pack.get("context") or {}).get("teams", []):
+        if t.get("replaced"):
+            ppl.append({"name": t["replaced"].split("(")[0].strip(), "role": "Former coach", "team": t.get("team")})
     return ppl

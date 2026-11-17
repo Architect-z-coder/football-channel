@@ -60,13 +60,16 @@ def script_text_items(script: dict):
     for sc in script["scenes"]:
         yield sc["id"], "narration", sc.get("narration", "")
         yield sc["id"], "on_screen", sc.get("on_screen", "")
-        vis = sc.get("visual", {})
-        for k in ("value", "label", "title", "subtitle", "heading"):
-            if k in vis:
-                yield sc["id"], f"visual.{k}", str(vis[k])
-        for k in ("lines", "items"):
-            for line in vis.get(k, []):
-                yield sc["id"], f"visual.{k}", str(line)
+        visuals = [sh.get("visual") or {} for sh in sc.get("shots") or []] or [sc.get("visual", {})]
+        for vis in visuals:
+            for k in ("value", "label", "title", "subtitle", "heading", "caption", "quote"):
+                if k in vis:
+                    yield sc["id"], f"visual.{k}", str(vis[k])
+            for k in ("lines", "items"):
+                for line in vis.get(k, []):
+                    yield sc["id"], f"visual.{k}", str(line)
+            for m in vis.get("moments", []) or []:
+                yield sc["id"], "visual.moments", f"{m.get('minute', '')} {m.get('text', '')}"
     for t in script.get("title_options", []):
         yield "title", "title", t
 

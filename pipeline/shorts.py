@@ -13,45 +13,58 @@ from .llm import ask_json
 VISUALS = ["goal_replay", "quote_card", "lineups", "player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
            "table_snapshot", "form_compare", "history_lens"]
 
-SYSTEM = f"""You write YouTube Shorts for a faceless football analysis channel. Each short is a 20-35 second
-vertical clip that stops the scroll with one striking fact and teaches one idea.
+SYSTEM = f"""You write 2 YouTube Shorts about one football match for a faceless storytelling channel.
+Each Short is its OWN small story (30-45 seconds, 60-95 words), understandable without the main video,
+and the two never repeat each other's topic. Formats, one of each:
+
+1. "player_spotlight" - the best-rated player of the match (from the pack's ratings): who he is in this
+   story, what he did (goals, assists, chances, duels from the pack), why it mattered, what it says about
+   his team or coach. Hook = his rating or his most striking act.
+2. "goal_explained" - the single goal that best tells the match story: the situation before it, how it
+   happened (minute, scorer, assist, header/foot, corner/open play, xG - only what the pack gives), and
+   why it changed the match. Use a goal_replay shot.
 
 RULES
-1. Closed book: every number, name, minute and result must come from the data pack. Digits in narration.
-2. Hook in the first 5 words: start with the most surprising number or contrast. No greetings, no
-   "in this video", no question as the very first words.
-3. Narration: 50-80 words, short sentences, one idea, then a one-line payoff. End exactly with:
-   "Full breakdown on the channel."
-4. "hook": the on-screen headline, 2-6 words, punchy, true.
-5. "visual": one of {VISUALS}, using the same parameters as in the main script
-   (stat_bars needs "stats"; key_number needs "value" and "label"; history_lens needs "lens" and "metrics").
-   Use momentum only if the pack says "momentum_available"; shot_map / xg_timeline only if the pack has "shots"; table_snapshot / form_compare only if the
-   pack has those facts. The two shorts must use different visuals and different ideas.
-6. "title": under 60 characters, accurate, no hashtags. "fact_ids": the fact ids you used.
-7. Never mention politics, transfer rumours, betting, injuries or private lives.
-Return ONLY JSON: {{"shorts": [{{"id": 1, "title": str, "hook": str, "narration": str,
-  "visual": {{...}}, "fact_ids": [str]}}, {{"id": 2, ...}}]}}"""
+1. Closed book: every number, name, minute and claim must come from the data pack. Digits in narration.
+   No general claims (rare, record, first ever) the pack cannot prove.
+2. Hook in the first sentence (under 10 words): the most striking fact, as a scene. No greetings.
+3. Shot list: 3-6 shots, each 1-2 short spoken sentences ("text") with the picture on screen
+   ("visual"). Show the person's photo when he is the subject ({{"type": "photo", "photo": "<name as in
+   the pack's photos list>", "caption": "<true, 2-7 words>"}}); otherwise a graphic: one of {VISUALS}.
+   Never the same visual twice in a row. Captions never claim a photo is from this match.
+4. End with one question for the comments, then "Full story on the channel."
+5. "title": under 60 characters, accurate. "hook": the on-screen headline, 2-6 words.
+6. Never mention politics, transfer rumours, betting, injury speculation or private lives.
+Return ONLY JSON: {{"shorts": [{{"id": 1, "format": "player_spotlight", "title": str, "hook": str,
+  "shots": [{{"text": str, "visual": {{...}}}}], "fact_ids": [str]}}, {{"id": 2, "format": "goal_explained", ...}}]}}"""
 
 
 def write(cfg: dict, pack: dict, script: dict, feedback: str | None = None) -> list[dict]:
     main = {"title": script["title_options"][0],
             "keys": [sc.get("on_screen") for sc in script["scenes"]]}
     user = (f"DATA PACK:\n{json.dumps(ai_pack(pack), ensure_ascii=False)}\n\n"
-            f"THE MAIN VIDEO (for context, do not copy it):\n{json.dumps(main, ensure_ascii=False)}\n")
+            f"THE MAIN VIDEO (for context: tell DIFFERENT stories, do not copy it):\n{json.dumps(main, ensure_ascii=False)}\n")
     if feedback:
         user += f"\nYour previous shorts failed fact-checking. Fix these problems:\n{feedback}\n"
     shorts = ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=4000).get("shorts", [])
     out = []
     for i, s in enumerate(shorts[: cfg.get("shorts", {}).get("count", 2)], start=1):
-        if s.get("visual", {}).get("type") not in VISUALS:
-            s["visual"] = {"type": "scoreline"}
+        shots = [x for x in s.get("shots") or [] if (x.get("text") or "").strip()]
+        for x in shots:
+            if (x.get("visual") or {}).get("type") not in VISUALS + ["photo"]:
+                x["visual"] = {"type": "scoreline"}
+        s["shots"] = shots
+        s["narration"] = " ".join(x["text"].strip() for x in shots) or s.get("narration", "")
+        graphics = [x["visual"] for x in shots if x["visual"].get("type") != "photo"]
+        s["visual"] = graphics[0] if graphics else {"type": "scoreline"}
         out.append({**s, "id": i})
     return out
 
 
 def _as_script(shorts: list[dict]) -> dict:
     return {"scenes": [{"id": s["id"], "narration": s["narration"], "on_screen": s["hook"],
-                        "visual": s.get("visual", {}), "fact_ids": s.get("fact_ids", [])} for s in shorts]}
+                        "visual": s.get("visual", {}), "shots": s.get("shots", []),
+                        "fact_ids": s.get("fact_ids", [])} for s in shorts]}
 
 
 def make(cfg: dict, pack: dict, script: dict, workdir: Path, placeholder: bool) -> list[dict]:

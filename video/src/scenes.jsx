@@ -875,9 +875,49 @@ const Lineups = ({ props }) => {
 
 
 // ---------- Real photo (free licence, Wikimedia Commons) with credit ----------
+export const findPhoto = (props, visual) => {
+  const list = props.photos || [];
+  if (visual.photo) {
+    const want = String(visual.photo).toLowerCase();
+    return list.find((p) => p.name.toLowerCase() === want)
+      || list.find((p) => want.includes(p.name.toLowerCase().split(" ").slice(-1)[0]));
+  }
+  return list[visual.photo_index || 0];
+};
+
+// Full-screen photo with a slow move, for shots where the words are about a person or a place.
+export const FullPhoto = ({ visual, props, dur }) => {
+  const f = useCurrentFrame();
+  const ph = findPhoto(props, visual);
+  if (!ph) return null;
+  const zoom = interpolate(f, [0, Math.max(dur, 30)], [1.04, 1.14]);
+  const pan = interpolate(f, [0, Math.max(dur, 30)], [-1.5, 1.5]);
+  const lab = spring({ frame: f - 6, fps: 30, config: { damping: 16 } });
+  return (
+    <AbsoluteFill>
+      <Img src={staticFile(`run/${ph.file}`)} onError={() => {}} style={{ width: "100%", height: "100%",
+           objectFit: "cover", objectPosition: ph.role === "Stadium" ? "50% 50%" : "50% 25%",
+           transform: `scale(${zoom}) translateX(${pan}%)` }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(7,17,12,0.55) 0%, rgba(7,17,12,0.05) 35%, rgba(7,17,12,0.15) 60%, rgba(7,17,12,0.9) 100%)" }} />
+      <div style={{ position: "absolute", left: 80, bottom: 250, opacity: lab, transform: `translateY(${(1 - lab) * 30}px)` }}>
+        {ph.role !== "Stadium" ? <div style={{ fontFamily: BODY, fontWeight: 800, letterSpacing: 3, fontSize: 24, color: C.accent }}>
+          {(ph.role || "").toUpperCase()}{ph.team ? ` · ${ph.team.toUpperCase()}` : ""}</div> : null}
+        <div style={{ fontFamily: HEAD, fontSize: 84, color: "#fff", lineHeight: 1, textShadow: "0 4px 24px rgba(0,0,0,0.7)" }}>
+          {ph.role === "Stadium" ? ph.name.split(",")[0] : ph.name}</div>
+        {visual.caption ? <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 34, color: "#fff", marginTop: 8,
+                                         textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>{visual.caption}</div> : null}
+      </div>
+      <div style={{ position: "absolute", right: 60, top: 130, fontFamily: BODY, fontSize: 17, color: "rgba(255,255,255,0.8)",
+                    background: "rgba(0,0,0,0.45)", padding: "4px 10px", borderRadius: 6 }}>
+        Photo: {ph.author} · {ph.licence} · {ph.via || "Wikimedia Commons"}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const PhotoCard = ({ visual, props, scene }) => {
   const f = useCurrentFrame();
-  const ph = (props.photos || [])[visual.photo_index || 0];
+  const ph = findPhoto(props, visual);
   if (!ph) return null;
   const p = spring({ frame: f - 2, fps: 30, config: { damping: 16 } });
   const zoom = interpolate(f, [0, scene.durationInFrames], [1.0, 1.08]);   // slow Ken Burns
@@ -889,7 +929,7 @@ const PhotoCard = ({ visual, props, scene }) => {
                                                          objectPosition: "50% 20%", transform: `scale(${zoom})` }} />
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "8px 12px", background: "rgba(0,0,0,0.6)",
                       fontFamily: BODY, fontSize: 17, color: "#ddd" }}>
-          Photo: {ph.author} · {ph.licence} · Wikimedia Commons
+          Photo: {ph.author} · {ph.licence} · {ph.via || "Wikimedia Commons"}
         </div>
       </div>
       <div style={{ opacity: p }}>

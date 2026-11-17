@@ -49,8 +49,20 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         timed = audio.with_suffix(".words.json")
         word_starts = ([w["start"] for w in json.loads(timed.read_text(encoding="utf-8"))]
                        if timed.exists() else None)
+        # shot list: each shot starts when its first word is spoken
+        shots, n = [], 0
+        total_words = max(1, len(sc.get("narration", "").split()))
+        for sh in sc.get("shots") or []:
+            k = len((sh.get("text") or "").split())
+            if word_starts and n < len(word_starts):
+                start = int(word_starts[n] * FPS)
+            else:
+                start = int(n / total_words * (frames - 15))
+            shots.append({"from": 0 if not shots else max(start - 4, shots[-1]["from"] + 20),
+                          "visual": sh.get("visual") or {}})
+            n += k
         scenes.append({"id": sc["id"], "durationInFrames": frames, "audio": f"run/{audio.name}",
-                       "wordStarts": word_starts,
+                       "wordStarts": word_starts, "shots": shots,
                        "visual": sc.get("visual") or {}, "on_screen": sc.get("on_screen", ""),
                        "narration": sc.get("narration", "")})
     props = {
@@ -110,10 +122,21 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
     run_dir = VIDEO_DIR / "public" / "run"
     run_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy(audio, run_dir / f"short_{short['id']}.mp3")
+    for ph in pack.get("photos") or []:
+        src = outdir.parent / "photos" / ph["file"]
+        if src.exists():
+            shutil.copy(src, run_dir / ph["file"])
     timed = audio.with_suffix(".words.json")
     word_starts = ([w["start"] for w in json.loads(timed.read_text(encoding="utf-8"))]
                    if timed.exists() else None)
     frames = math.ceil((duration(audio) + 0.3) * FPS) + 45  # + closing card
+    speak = frames - 45
+    shots, n = [], 0
+    total_words = max(1, len(short["narration"].split()))
+    for sh in short.get("shots") or []:
+        start = int(word_starts[n] * FPS) if word_starts and n < len(word_starts) else int(n / total_words * speak)
+        shots.append({"from": 0 if not shots else max(start - 4, shots[-1]["from"] + 20), "visual": sh.get("visual") or {}})
+        n += len((sh.get("text") or "").split())
     fake_script = {"scenes": [{"visual": short.get("visual", {})}]}
     props = {
         "channel": cfg["channel"]["name"], "competition": pack["competition"],
@@ -121,10 +144,13 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
         "source": pack.get("source", "API-Football") + (" + StatsBomb" if history.used_in(fake_script) else ""),
         "facts": {f["id"]: f["value"] for f in pack["facts"]}, "events": _events(pack),
         "shots": pack.get("shots", []), "momentum": pack.get("momentum") or [],
+        "ratings": pack.get("ratings") or [], "lineups": pack.get("lineups") or {},
+        "photos": pack.get("photos") or [], "press": pack.get("press") or [],
+        "goals": [f["value"] for f in pack["facts"] if f["id"].startswith("goal_") and isinstance(f["value"], dict)],
         "history": history.used_in(fake_script),
         "scenes": [],
         "short": {"hook": short["hook"], "narration": short["narration"], "visual": short.get("visual", {}),
-                  "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts,
+                  "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts, "shots": shots,
                   "durationInFrames": frames},
     }
     props_file = outdir / f"short_{short['id']}_props.json"

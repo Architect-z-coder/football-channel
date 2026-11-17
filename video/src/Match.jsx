@@ -1,9 +1,9 @@
 import {
-  AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame,
+  AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame,
   useVideoConfig, Easing,
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
-import { SceneVisual } from "./scenes";
+import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
 const TAIL = 12; // frames of silence at the end of each scene (matches Python PAD)
 
@@ -115,6 +115,26 @@ export const Captions = ({ text, speakFrames, wordStarts, per = 7, size = 50, bo
   );
 };
 
+// ---------- shots: crossfade between pictures; graphics sit on a dark stadium backdrop ----------
+const ShotFade = ({ len, last, exit, children }) => {
+  const f = useCurrentFrame();
+  const a = interpolate(f, [0, 8], [0, 1], { extrapolateRight: "clamp" });
+  const b = last ? exit : interpolate(f, [len - 8, len], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return <AbsoluteFill style={{ opacity: Math.min(a, b) }}>{children}</AbsoluteFill>;
+};
+
+const Backdrop = ({ props }) => {
+  const f = useCurrentFrame();
+  const st = (props.photos || []).find((p) => p.role === "Stadium");
+  if (!st) return null;
+  return (
+    <AbsoluteFill>
+      <Img src={staticFile(`run/${st.file}`)} onError={() => {}} style={{ width: "100%", height: "100%", objectFit: "cover",
+           filter: "blur(10px) brightness(0.28) saturate(0.7)", transform: `scale(${1.1 + f / 3000})` }} />
+    </AbsoluteFill>
+  );
+};
+
 // ---------- one scene: slide in, hold, fade out ----------
 const SceneShell = ({ scene, props }) => {
   const f = useCurrentFrame();
@@ -125,8 +145,28 @@ const SceneShell = ({ scene, props }) => {
     extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.cubic),
   });
   const kicker = scene.on_screen;
+  const shots = scene.shots || [];
   return (
     <AbsoluteFill>
+      {shots.map((sh, i) => {
+        const next = i + 1 < shots.length ? shots[i + 1].from : dur;
+        const len = next - sh.from + (i + 1 < shots.length ? 8 : 0);   // small overlap for a crossfade
+        const isPhoto = sh.visual.type === "photo" && findPhoto(props, sh.visual);
+        return (
+          <Sequence key={i} from={sh.from} durationInFrames={Math.max(len, 10)}>
+            <ShotFade len={Math.max(len, 10)} last={i + 1 === shots.length} exit={exit}>
+              {isPhoto ? <FullPhoto visual={sh.visual} props={props} dur={len} /> : (
+                <AbsoluteFill>
+                  <Backdrop props={props} />
+                  <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
+                    <SceneVisual scene={{ ...scene, visual: sh.visual, durationInFrames: len }} props={props} />
+                  </div>
+                </AbsoluteFill>
+              )}
+            </ShotFade>
+          </Sequence>
+        );
+      })}
       <AbsoluteFill style={{
         opacity: enter * exit,
         transform: `translateX(${(1 - enter) * 160}px) scale(${0.96 + 0.04 * exit})`,
@@ -138,9 +178,11 @@ const SceneShell = ({ scene, props }) => {
             padding: "8px 18px", borderRadius: 8, textTransform: "uppercase",
           }}>{kicker}</div>
         ) : null}
-        <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
-          <SceneVisual scene={scene} props={props} />
-        </div>
+        {scene.shots && scene.shots.length ? null : (
+          <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
+            <SceneVisual scene={scene} props={props} />
+          </div>
+        )}
       </AbsoluteFill>
       <Captions text={scene.narration} speakFrames={Math.max(15, dur - TAIL)} wordStarts={scene.wordStarts} />
     </AbsoluteFill>

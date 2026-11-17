@@ -104,7 +104,7 @@ HARD RULES
    Use open loops ("but that is not the real story...") to pull viewers from one scene to the next.
    Describe goals with the details the pack gives (minute, scorer, assist, header/foot, corner/open play),
    and never invent details it does not give (no weather, crowd noise, celebrations, emotions of players).
-6. Exactly 9 scenes, 40-110 words of narration each. Change the visual every scene. "on_screen" is a
+6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a
    short chapter title in story words (2-5 words, e.g. "The night Dumfries won't forget"), not a stat.
 7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
 8. If the pack has a "shots" list, use it: xG explains whether a result was deserved, where the
@@ -128,6 +128,18 @@ HARD RULES
    it to 1-3 sentences, name the team and season exactly as written in its "label", say "StatsBomb data"
    once, and use only numbers from that lens's facts (per match, as labelled). Never claim anything
    about the lens team beyond its "idea" line and its facts. If none fits, use none.
+12. PICTURES WALK WITH THE STORY (shot list). Each scene is cut into 2-5 "shots": each shot is 1-2
+   spoken sentences ("text") plus the picture on screen while they are spoken ("visual"). Think like a
+   documentary editor:
+   - when the words are about a PERSON or PLACE, show their photo: {{"type": "photo", "photo": "<name
+     exactly as in the pack's photos list>", "caption": "<optional, 2-7 true words>"}};
+   - when the words are about a NUMBER, MOMENT or PATTERN, show the graphic that proves it (shot_map,
+     goal_replay, key_moments, player_ratings, lineups, momentum, quote_card, stat_bars...);
+   - never the same visual twice in a row; when the pack has photos, at least 4 of the 9 scenes must
+     open on a photo, and the cold open should start on a photo or a goal replay;
+   - a photo caption must be true and must never claim the photo is from this match.
+   Write "text" for the ear: short spoken sentences, natural pauses with full stops and "...", vary the
+   rhythm (short punchy lines at the big moments, a slower line for the meaning).
 {VISUAL_TYPES}
 Return ONLY the JSON object: no planning, analysis, notes or text before or after it, no comments
 inside it. Do your thinking silently; the reply starts with "{{".
@@ -137,8 +149,8 @@ Keep the whole reply under 2,500 words. Shape:
   "thumbnail_texts": [str, str, str],        // 2-4 words each
   "description": str,                        // 2 short paragraphs + a "Data: <source>." line
   "tags": [str, ...],
-  "scenes": [{{"id": int, "beat": str, "visual": {{...}}, "on_screen": str, "narration": str,
-              "fact_ids": [str, ...]}}]
+  "scenes": [{{"id": int, "beat": str, "on_screen": str, "fact_ids": [str, ...],
+              "shots": [{{"text": str, "visual": {{...}}}}, ...]}}]
 }}"""
 
 
@@ -156,4 +168,16 @@ def write_script(cfg: dict, pack: dict, feedback: str | None = None, previous: d
         user += f"\nYour previous draft failed fact-checking. Fix these problems:\n{feedback}\n"
     if editor_notes:
         user += f"\n{editor_notes}\nReturn the complete improved script in the same JSON shape.\n"
-    return ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=32000)
+    return normalise(ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=32000))
+
+
+def normalise(script: dict) -> dict:
+    """Narration = the shots' text joined; the scene's main visual = its first non-photo graphic."""
+    for sc in script.get("scenes", []):
+        shots = [x for x in sc.get("shots") or [] if (x.get("text") or "").strip()]
+        if shots:
+            sc["shots"] = shots
+            sc["narration"] = " ".join(x["text"].strip() for x in shots)
+            graphics = [x["visual"] for x in shots if (x.get("visual") or {}).get("type") not in (None, "photo")]
+            sc["visual"] = graphics[0] if graphics else shots[0].get("visual") or {}
+    return script

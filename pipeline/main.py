@@ -14,7 +14,7 @@ import sys
 from datetime import date
 
 from . import critic, factcheck, history, notify, render, shorts, thumbs, visuals, voice, writer
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from .common import DATA_DIR, OUT_DIR, SAMPLES_DIR, StopPipeline, load_config, log, read_json, \
     secret, slugify, write_json
@@ -191,11 +191,11 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     srt = render.captions(script, durs, workdir / "captions.srt", workdir=workdir)
     thumb_paths = thumbs.render(script, pack, workdir)
     credits = []
-    used_photos = {sc.get("visual", {}).get("photo_index") for sc in script["scenes"]
-                   if sc.get("visual", {}).get("type") == "photo"}
-    for i, ph in enumerate(pack.get("photos") or []):
-        if i in used_photos:
-            credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via Wikimedia Commons ({ph['page']})")
+    used = {(v or {}).get("photo") for sc in script["scenes"] for v in
+            [sh.get("visual") for sh in sc.get("shots") or []] + [sc.get("visual")]}
+    for ph in pack.get("photos") or []:
+        if ph["name"] in used:
+            credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via {ph.get('via', 'Wikimedia Commons')} ({ph['page']})")
     for q in pack.get("press") or []:
         credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())
     if credits:
@@ -214,8 +214,10 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
               "titles": script["title_options"], "minutes": round(minutes, 1),
               "files": workdir.name, "uploaded": False, "youtube": None,
               "critic": report.get("critic"), "rewritten": bool(report.get("rewritten")),
-              "shorts": [{"title": m["short"]["title"], "hook": m["short"]["hook"], "youtube": None}
-                         for m in made_shorts]}
+              "shorts": [{"title": m["short"]["title"], "hook": m["short"]["hook"],
+                          "format": m["short"].get("format"), "youtube": None,
+                          "suggested_publish": str(date.today() + timedelta(days=i + 1))}
+                         for i, m in enumerate(made_shorts)]}
     result["voice"] = voice.provider_used(workdir)
     has_voice = result["voice"] != "silent"
     if upload and not dry_run and not has_voice:
@@ -241,7 +243,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
             f"Title: {script['title_options'][0]}\n"
             f"Other titles to A/B test: {' | '.join(script['title_options'][1:])}\n\n"
             f"Review, then set to Public or Scheduled:\nhttps://studio.youtube.com/video/{vid}/edit"
-            + "".join(f"\nShort: {r['youtube']}" for r in result["shorts"] if r["youtube"]))
+            + "".join(f"\nShort ({r['format']}), publish {r['suggested_publish']}: {r['youtube']}"
+                      for r in result["shorts"] if r["youtube"]))
     else:
         notify.send(f"Test run finished ({minutes:.1f} min). Files: {workdir.name}")
     if not dry_run:
