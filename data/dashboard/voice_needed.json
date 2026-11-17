@@ -1,0 +1,56 @@
+{
+  "updated": "2026-11-17T22:53:52Z",
+  "fixture_id": "fotmob-5181835",
+  "match": "fotmob:5181835",
+  "slug": "fotmob-5181835",
+  "home": "Germany",
+  "away": "Netherlands",
+  "voice": "alex",
+  "items": [
+    {
+      "key": "scene_01",
+      "text": "Olympiastadion, Berlin. Minute 25. Still 0-0. Donyell Malen meets the ball with his head, right in front of goal. Expected goals, or xG, measures how likely a shot is to score. This one is worth 0.69. More likely a goal than not. He misses. By the end, Germany have won 5-0. Yet the expected goals read 1.39 to 1.11. So how did a 5-0 hide a game that close?"
+    },
+    {
+      "key": "scene_02",
+      "text": "Two new coaches, one group. Jürgen Klopp and Xavi Hernández first met in Amsterdam, and it ended 1-1. Before this rematch, Klopp said he relished facing a Netherlands side that likes to play football. His plan was to win, and top the group on head-to-head. The Dutch arrive after a 7-0 win over Greece. But Xavi is thin on options. Brian Brobbey, Virgil van Dijk and Nathan Aké are all out injured."
+    },
+    {
+      "key": "scene_03",
+      "text": "Three people carry this story. First, Jürgen Klopp, whose first home game as Germany coach ended in a 0-1 defeat to Greece. Tonight he starts Ter Stegen in goal, and Gruda, Wirtz and Scherhant behind Havertz. Second, Florian Wirtz, in the middle of that three. Watch him. And third, on the other side, Denzel Dumfries, in the Dutch back four. We will come back to him."
+    },
+    {
+      "key": "scene_04",
+      "text": "The first half belongs to Germany. The momentum graph has them on top for 72 percent of it. But it is no siege. Havertz heads a set piece in minute 23, and it is saved. Scherhant hits the post in minute 32. And the best chance of the half is still Malen's miss. Then, minute 41. Joshua Kimmich finds Derry Scherhant, who finishes with his right foot, from open play. The chance is worth 0.03 xG. Almost nothing. It goes in. 1-0. Germany take a scrap. The Dutch spurned a 0.69. Hold on to that."
+    },
+    {
+      "key": "scene_05",
+      "text": "Minute 57. Cody Gakpo shoots for the Netherlands, and it is saved. Three minutes later, Florian Wirtz hits a left-footed shot from open play. 2-0. Five minutes on, a set piece. Brajan Gruda sets it up, and Nico Schlotterbeck heads it in. 3-0. Two goals in five minutes, from chances worth 0.05 and 0.13. Small chances, taken. Germany are on top for 74 percent of this half, and the match slips away from the Dutch."
+    },
+    {
+      "key": "scene_06",
+      "text": "Minute 71. Gruda sets up Wirtz again. A chance worth 0.24. 4-0. Minute 78. This time Gruda finishes it himself, left foot, open play. 5-0. He ends with a goal, 2 assists, and the highest rating on the pitch, 9.2. Now, back to Denzel Dumfries. His rating is 3.3, the lowest of any starter. And the five lowest-rated starters are the Dutch goalkeeper and back four. Four goals fell between minute 60 and minute 78. That points to where the Dutch night broke."
+    },
+    {
+      "key": "scene_07",
+      "text": "Here is what the scoreline hides. Data from FotMob gives expected goals of 1.39 for Germany and 1.11 for the Netherlands. Almost level. The Dutch number rests on one header: Malen's, in minute 25. That single chance is 0.69 of the 1.11. Germany's five goals came from smaller chances: 0.03, 0.05, 0.13, 0.24 and 0.26. Germany took the chances the Dutch spurned. They also shot more: 18 shots to 9, and 10 on target to 1. So it was not just luck. Germany shot more, and shot straighter."
+    },
+    {
+      "key": "scene_08",
+      "text": "After the match, Klopp told ARD, as ESPN reports: \"I wouldn't have dared to wish for a 5-0 before the game.\" The numbers fit his surprise. Germany did not need big chances. They needed to take small ones. The win sealed their place in the Nations League quarter-finals, and Al Jazeera called it the Dutch side's heaviest defeat in 67 years."
+    },
+    {
+      "key": "scene_09",
+      "text": "At his unveiling, Klopp said: \"I want people to go home thinking 'Wow, that was cool!'\" That was FIFA.com quoting him. A first home defeat to Greece has become a quarter-final place. So, the answer. This was a game close on chances that Germany won in the box, and the Dutch lost there. Germany had 50 touches in the opposition box, the Netherlands 19. And for Xavi, it all comes back to one header, Malen's 0.69 miss at minute 25. Tell me in the comments: was Malen's miss the moment the night tipped? And if you like football told through the numbers, subscribe to The Other Touchline."
+    },
+    {
+      "key": "short_1",
+      "text": "Brajan Gruda's 9.2 was the best rating on the pitch in Berlin. Germany led 2-0 when his pass set up Schlotterbeck's header in the 65th minute. 3-0. Six minutes later, Gruda set up Wirtz for the fourth. 4-0. Then he scored himself, with his left foot, for 5-0. One goal, two assists. Wirtz scored twice and was rated 9.0. Gruda still finished above him. Klopp said, \"I wouldn't have dared to wish for a 5-0 before the game.\" Who was your man of the match? Full story on the channel."
+    },
+    {
+      "key": "short_2",
+      "text": "Germany's first goal was worth just 0.03 xG. Derry Scherhant had been blocked in the 13th minute and hit the post in the 32nd. In the 41st minute Kimmich passed, Scherhant hit it with his right foot, and it was 1-0. Germany were on top for 72% of that first half, with one goal to show for it. That was the lowest xG of Germany's five goals. Four more came after the break, and it finished 5-0. Which goal changed the game for you? Full story on the channel."
+    }
+  ],
+  "characters": 4837
+}
