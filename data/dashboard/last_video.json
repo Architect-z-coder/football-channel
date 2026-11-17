@@ -1,44 +1,48 @@
 {
-  "updated": "2026-11-17T14:57:45Z",
+  "updated": "2026-11-17T23:08:35Z",
   "home": "Germany",
   "away": "Netherlands",
   "competition": "UEFA Nations League A Grp. 2",
   "fixture_id": "fotmob-5181835",
   "titles": [
-    "Germany 5-0 Netherlands: What the Scoreline Hides",
-    "Klopp's Germany Score 5 From 0.71 xG",
-    "The 0.69 Miss Before Germany's 5-0 Rout"
+    "How a 5-0 Hid a 1.39 to 1.11 Game",
+    "The 0.69 Miss Behind Germany's 5-0 Win",
+    "Germany 5-0 Netherlands: The Score Hides a Close Game"
   ],
-  "minutes": 5.4,
+  "minutes": 4.5,
   "files": "20261117-germany-netherlands",
   "uploaded": false,
   "youtube": null,
   "critic": {
-    "hook": 8,
+    "hook": 7,
     "payoff": 6,
     "pace": 6,
     "clarity": 7,
     "notes": [
-      "Scene 1's closing question, \"How did a match that close in the numbers end like this?\", is answered only half-heartedly in scene 9, which hands the verdict to the viewer with \"Tell us in the comments\". Commit to an answer instead: Germany's finishing ran hot while Malen's 0.69 miss went begging, then use the comments as an add-on.",
-      "Scene 2 (\"Germany arrive with 2 wins, 2 draws and a loss... The Netherlands arrive with 3 wins, 2 draws\") is a stats list that stalls the story right after the hook. Cut it to one line of stakes, such as both coaches' first-ever meeting ending 1-1 and Germany needing a result in round 6.",
-      "Scene 3, \"Three people carry this story\", spends a whole scene on a Völler quote, a Xavi quote and an absence list, and nothing happens. Fold the Brobbey, Van Dijk and Aké absences into one sentence and cut the Völler and Xavi quotes.",
-      "Scene 5 ends with \"But the real question is how the Dutch fell apart from there\", and scene 6 then admits \"The data cannot say why the night went that way.\" That opens a promise the script never pays off. Drop the line, or answer it with Klopp's tactical tweak (\"have a centre-back step out to defend\") and the 50 vs 19 box touches.",
-      "The xG numbers repeat across scenes: 0.03 appears in scenes 1 and 4, 0.71 in scenes 1, 7 and 8, and 1.39 vs 1.11 in the title and scene 7. Say each once at its strongest moment (scene 7) and cut the echoes in scenes 4 and 8, e.g. \"The numbers back the word insane...\".",
-      "Scene 7's \"Germany finished far above what their chances predicted\" and the \"1.39 to 1.11\" comparison are the real twist, but they are buried at scene 7 after long setup. Tighten scenes 2-3 so the reveal lands earlier, and explain xG as \"chance quality\" once instead of re-describing it as \"expected goals\" later."
+      "Hook: \"Germany will win this match 5-0. But was it really that one-sided?\" spoils the result and then asks a weak question; open on the sharper contrast instead: a 0.69 chance missed at 0-0, then a 5-0 scoreline, with 'how did a 5-0 hide a 1.39 to 1.11 xG game?' as the question.",
+      "Scene 3 is a pause in the story: \"Klopp is the first character... The third character is on the other side\" reads like a cast list, and there is no second character. Cut the Klopp 'Wow, that was cool' quote here, or use it only as the closing payoff.",
+      "The Dumfries setup (\"Remember his name\") is never paid off: scene 6 says \"the numbers cannot show\" the rest of his night. Either cut the setup or build a real payoff on the 3.3 rating, such as the Dutch right side collapsing during the 60 to 78 minute goal run.",
+      "The Act One line \"A chance worth just 0.03 xG. It goes in\" is your best moment of data-as-story, but it is followed by a 5 goals vs 1.39 xG argument. Frame the thesis once as 'Germany took the chances the Dutch spurned' and stop repeating the 'not a massacre' point in scenes 7, 8 and 9.",
+      "Scene 2 is a dense list of coach histories, form and injuries before any action: \"Xavi Hernández took over the Netherlands after Ronald Koeman resigned, hours after a shootout loss to Morocco.\" Trim it to one stakes line (two new coaches, 1-1 in Amsterdam, Germany needing the win) and move the injuries into a single short sentence.",
+      "The ending does not fully answer the opening question and then hedges: \"Whether it is also 'Wow, that was cool' is for you to decide.\" End with a firm verdict, such as 'a close contest that Germany won in the box, and the Dutch lost there', tied back to Malen's 0.69 miss at minute 25."
     ]
   },
-  "rewritten": false,
+  "rewritten": true,
   "shorts": [
     {
-      "title": "Germany 5-0 Netherlands on just 1.39 xG",
-      "hook": "5-0 on 1.39 xG",
-      "youtube": null
+      "title": "Gruda's 9.2: One Goal, Two Assists in Berlin",
+      "hook": "Gruda: 9.2 in Berlin",
+      "format": "player_spotlight",
+      "youtube": null,
+      "suggested_publish": "2026-11-18"
     },
     {
-      "title": "4 goals in 18 minutes: how Germany broke the Dutch",
-      "hook": "4 goals, 18 minutes",
-      "youtube": null
+      "title": "The 0.03 xG Goal That Cracked the Dutch",
+      "hook": "The 0.03 xG Goal",
+      "format": "goal_explained",
+      "youtube": null,
+      "suggested_publish": "2026-11-19"
     }
   ],
-  "voice": "edge"
+  "voice": "everygen:alex"
 }
