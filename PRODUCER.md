@@ -13,9 +13,12 @@ GitHub does the heavy work (data, research, script, render); the producer adds t
    `state` is `done` or `failed`. Failed -> report the reason and stop.
 4. **Voice with Everygen:** read `data/dashboard/voice_needed.json`. Check the Everygen balance; it must be
    at least the number of items + 5, otherwise stop and tell the owner. For each item, call
-   `generate_voiceover` with the item's exact `text` and `voiceId` = the file's `voice` (alex).
+   `generate_voiceover_batch` (up to 12 lines per call, one locked voice) with each item's exact `text`
+   and `voiceId` = the file's `voice` (alex).
    Save `data/voice/<slug>.json`:
-   `{"fixture_id": ..., "items": [{"key", "text", "url": audioUrl, "words": words, "voice": "alex"}]}`.
+   `{"fixture_id": ..., "provider": "everygen", "items": [{"key", "text", "url": audioUrl, "voice": "alex",
+   "duration": durationSeconds, "starts": [start of each word, in order]}]}`.
+   The number of starts must equal the number of words in `text` (split on spaces); check before committing.
    Never change the text. One call per item, no retries of a call that succeeded.
 5. **Render on GitHub:** write request.json with `"mode": "full"` (uploads as PRIVATE) and the same
    match; commit both files, push; poll status as in step 3.

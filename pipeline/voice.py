@@ -137,6 +137,10 @@ def _from_manifest(item: dict, text: str, path: Path) -> None:
                     str(path)], check=True)
     raw.unlink(missing_ok=True)
     words, tokens = item.get("words") or [], text.split()
+    starts = item.get("starts") or []
+    if starts and len(starts) == len(tokens):     # compact form: start times only
+        ends = starts[1:] + [item.get("duration") or starts[-1] + 0.5]
+        words = [{"start": a, "end": b} for a, b in zip(starts, ends)]
     if len(words) == len(tokens):
         words_file(path).write_text(json.dumps(
             [{"w": t, "start": round(w["start"], 3), "end": round(w["end"], 3)} for t, w in zip(tokens, words)]),

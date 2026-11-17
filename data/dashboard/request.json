@@ -1,6 +1,6 @@
 {
-  "id": "ger-ned-prep-2",
-  "mode": "prepare",
+  "id": "ger-ned-render-1",
+  "mode": "no-upload",
   "match": "fotmob:5181835",
   "look_back_days": ""
 }
