@@ -1,11 +1,11 @@
 {
-  "request_id": "ger-ned-story-1",
+  "request_id": "ger-ned-story-2",
   "mode": "no-upload",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "failed",
-  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44097333112",
-  "started": "2026-11-17T13:54:00Z",
-  "finished": "2026-11-17T13:58:54Z",
-  "reason": "Script failed fact-checking after retries:\n- Scene 8: \"a five-goal margin is still rare\" is a general claim about how often such margins happen. The data pack has no historical or comparative data on winning margins, so nothing in it supports this."
+  "state": "running",
+  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44102392099",
+  "started": "2026-11-17T14:22:39Z",
+  "finished": null,
+  "reason": null
 }
