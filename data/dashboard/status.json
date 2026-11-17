@@ -3,9 +3,9 @@
   "mode": "no-upload",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "running",
+  "state": "failed",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44188572058",
   "started": "2026-11-17T22:17:40Z",
-  "finished": null,
-  "reason": null
+  "finished": "2026-11-17T22:28:46Z",
+  "reason": "The run stopped with an error. Open the run log for details."
 }
