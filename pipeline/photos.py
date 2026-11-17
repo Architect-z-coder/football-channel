@@ -11,20 +11,31 @@ import requests
 
 from .common import log
 
-HEAD = {"User-Agent": "TheOtherTouchline/1.0 (football analysis channel; contact via GitHub)"}
+HEAD = {"User-Agent": "TheOtherTouchline/1.0 (https://github.com/Architect-z-coder/football-channel) python-requests"}
 OK_LICENCES = ("public domain", "pd", "cc0", "cc by", "cc-by")
 
 
+def _get(url: str, **kw):
+    """GET with one polite retry when Wikimedia says 'too many requests'."""
+    import time
+    for attempt in range(3):
+        r = requests.get(url, headers=HEAD, timeout=30, **kw)
+        if r.status_code != 429:
+            return r
+        time.sleep(5 * (attempt + 1))
+    r.raise_for_status()
+    return r
+
+
 def _wikidata_image(name: str) -> str | None:
-    r = requests.get("https://www.wikidata.org/w/api.php", headers=HEAD, timeout=20, params={
+    r = _get("https://www.wikidata.org/w/api.php", headers=HEAD, timeout=20, params={
         "action": "wbsearchentities", "search": name, "language": "en", "type": "item",
         "limit": 5, "format": "json"})
     for hit in r.json().get("search", []):
         desc = (hit.get("description") or "").lower()
         if not any(w in desc for w in ("football", "soccer", "coach", "manager")):
             continue
-        e = requests.get(f"https://www.wikidata.org/wiki/Special:EntityData/{hit['id']}.json",
-                         headers=HEAD, timeout=20).json()
+        e = _get(f"https://www.wikidata.org/wiki/Special:EntityData/{hit['id']}.json").json()
         claims = e["entities"][hit["id"]].get("claims", {}).get("P18") or []
         if claims:
             return claims[0]["mainsnak"]["datavalue"]["value"]
@@ -32,7 +43,7 @@ def _wikidata_image(name: str) -> str | None:
 
 
 def _commons_info(filename: str) -> dict | None:
-    r = requests.get("https://commons.wikimedia.org/w/api.php", headers=HEAD, timeout=20, params={
+    r = _get("https://commons.wikimedia.org/w/api.php", params={
         "action": "query", "titles": f"File:{filename}", "prop": "imageinfo",
         "iiprop": "url|extmetadata", "iiurlwidth": 900, "format": "json"})
     page = next(iter(r.json()["query"]["pages"].values()))
@@ -55,7 +66,7 @@ def _clean_artist(html: str) -> str:
 
 def _commons_search(query: str, limit: int = 8) -> list[dict]:
     """Search Wikimedia Commons files; keep only freely licensed photos."""
-    r = requests.get("https://commons.wikimedia.org/w/api.php", headers=HEAD, timeout=20, params={
+    r = _get("https://commons.wikimedia.org/w/api.php", params={
         "action": "query", "generator": "search", "gsrsearch": f"filetype:bitmap {query}",
         "gsrnamespace": 6, "gsrlimit": limit, "prop": "imageinfo", "iiprop": "url|extmetadata|size",
         "iiextmetadatafilter": "LicenseShortName|Artist", "iiurlwidth": 900, "format": "json"})
@@ -114,7 +125,7 @@ def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
 
             from PIL import Image
             time.sleep(1)                                   # be gentle with Wikimedia
-            r = requests.get(info["url"], headers=HEAD, timeout=30)
+            r = _get(info["url"])
             r.raise_for_status()
             try:                                            # must be a real image: re-save as a clean JPEG
                 img = Image.open(io.BytesIO(r.content)).convert("RGB")

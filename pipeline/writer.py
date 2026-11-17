@@ -129,7 +129,8 @@ HARD RULES
    once, and use only numbers from that lens's facts (per match, as labelled). Never claim anything
    about the lens team beyond its "idea" line and its facts. If none fits, use none.
 {VISUAL_TYPES}
-Return ONLY the JSON object: no thinking, notes or text before or after it, no comments inside it.
+Return ONLY the JSON object: no planning, analysis, notes or text before or after it, no comments
+inside it. Do your thinking silently; the reply starts with "{{".
 Keep the whole reply under 2,500 words. Shape:
 {{
   "title_options": [str, str, str],          // under 70 characters, accurate, curiosity without lying
@@ -155,4 +156,4 @@ def write_script(cfg: dict, pack: dict, feedback: str | None = None, previous: d
         user += f"\nYour previous draft failed fact-checking. Fix these problems:\n{feedback}\n"
     if editor_notes:
         user += f"\n{editor_notes}\nReturn the complete improved script in the same JSON shape.\n"
-    return ask_json(cfg["writer"]["model"], SYSTEM, user)
+    return ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=32000)
