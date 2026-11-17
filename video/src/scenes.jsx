@@ -885,7 +885,7 @@ const PhotoCard = ({ visual, props, scene }) => {
     <AbsoluteFill style={{ padding: "60px 120px 0", flexDirection: "row", alignItems: "center", gap: 70 }}>
       <div style={{ width: 620, height: 700, borderRadius: 18, overflow: "hidden", border: `4px solid ${C.accent}`,
                     opacity: p, transform: `translateX(${(1 - p) * -40}px)`, flexShrink: 0, position: "relative" }}>
-        <Img src={staticFile(`run/${ph.file}`)} style={{ width: "100%", height: "100%", objectFit: "cover",
+        <Img src={staticFile(`run/${ph.file}`)} onError={() => {}} style={{ width: "100%", height: "100%", objectFit: "cover",
                                                          objectPosition: "50% 20%", transform: `scale(${zoom})` }} />
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "8px 12px", background: "rgba(0,0,0,0.6)",
                       fontFamily: BODY, fontSize: 17, color: "#ddd" }}>

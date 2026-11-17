@@ -108,9 +108,20 @@ def find(people: list[dict], outdir: Path, limit: int = 8) -> list[dict]:
             info = _best_photo(p)
             if not info:
                 continue
-            ext = Path(info["url"]).suffix.lower() or ".jpg"
-            dest = outdir / f"photo_{len(out) + 1}{ext if ext in ('.jpg', '.jpeg', '.png', '.webp') else '.jpg'}"
-            dest.write_bytes(requests.get(info["url"], headers=HEAD, timeout=30).content)
+            dest = outdir / f"photo_{len(out) + 1}.jpg"
+            import io
+            import time
+
+            from PIL import Image
+            time.sleep(1)                                   # be gentle with Wikimedia
+            r = requests.get(info["url"], headers=HEAD, timeout=30)
+            r.raise_for_status()
+            try:                                            # must be a real image: re-save as a clean JPEG
+                img = Image.open(io.BytesIO(r.content)).convert("RGB")
+            except Exception:
+                raise ValueError("download was not an image")
+            img.thumbnail((1200, 1200))
+            img.save(dest, "JPEG", quality=88)
             out.append({**p, "file": dest.name, "path": str(dest), **info})
         except Exception as e:
             log.info("No photo for %s (%s)", p["name"], e)
