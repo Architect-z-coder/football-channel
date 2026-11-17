@@ -214,7 +214,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
               "critic": report.get("critic"), "rewritten": bool(report.get("rewritten")),
               "shorts": [{"title": m["short"]["title"], "hook": m["short"]["hook"], "youtube": None}
                          for m in made_shorts]}
-    has_voice = bool(secret("ELEVENLABS_API_KEY") and secret("ELEVENLABS_VOICE_ID"))
+    result["voice"] = voice.provider_used(workdir)
+    has_voice = result["voice"] != "silent"
     if upload and not dry_run and not has_voice:
         notify.send(f"Video made with silent audio (no voice keys yet), so it was NOT uploaded. "
                     f"Files: {workdir.name}")
