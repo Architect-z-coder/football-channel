@@ -35,6 +35,7 @@ def allowed_numbers(pack: dict) -> set[float]:
         allowed.update(_numbers_in({"minute": shot.get("minute"), "xg": shot.get("xg")}))
     allowed.update(_numbers_in(ai_pack(pack).get("momentum_home_on_top_pct", {})))
     allowed.update(_numbers_in(pack.get("press", [])))
+    allowed.update(_numbers_in(pack.get("context", {})))
     for side in (pack.get("lineups") or {}).values():   # shirt numbers, ratings, values
         allowed.update(_numbers_in(side))
     for lens in pack.get("history", []):  # StatsBomb history lens facts, plus years in its label
@@ -95,7 +96,8 @@ CLAIM_SYSTEM = """You are a strict football fact-checker. You receive a data pac
 List every statement in the script that the data pack does not support: wrong numbers, wrong names,
 wrong minutes, events that are not in the pack, or tactical claims stated as fact that the numbers
 cannot show. Reading of the numbers phrased as interpretation ("this suggests") is acceptable.
-Quotes must appear word for word in the pack's "press" list, attributed to the same speaker.
+Statements about coaches' appointments, promises and choices are supported only by the pack's
+"context" (each with a source). Quotes must appear word for word in the pack's "press" or "context", attributed to the same speaker.
 The pack's "history" list is reference data from StatsBomb about past teams: statements about a
 history-lens team are supported only by that lens's facts, label, coverage and "idea" line.
 Also flag anything about politics, transfer rumours, betting, injuries or private lives.

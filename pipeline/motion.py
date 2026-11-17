@@ -67,6 +67,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "lineups": pack.get("lineups") or {},
         "photos": pack.get("photos") or [],
         "press": pack.get("press") or [],
+        "goals": [f["value"] for f in pack["facts"] if f["id"].startswith("goal_") and isinstance(f["value"], dict)],
         "history": history.used_in(script),
         "scenes": scenes,
     }

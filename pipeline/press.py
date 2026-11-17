@@ -58,3 +58,21 @@ def gather(cfg: dict, pack: dict) -> list[dict]:
     except Exception as e:
         log.warning("Press context skipped: %s", e)
         return []
+
+
+def web_research(cfg: dict, system: str, user: str, max_uses: int = 8) -> dict:
+    """One Claude call with web search; returns parsed JSON (repairing it once if needed)."""
+    import anthropic
+    client = anthropic.Anthropic(api_key=secret("ANTHROPIC_API_KEY", required=True))
+    msg = client.messages.create(
+        model=cfg["writer"]["model"], max_tokens=5000, system=system,
+        messages=[{"role": "user", "content": user}],
+        tools=[{"type": cfg.get("press", {}).get("tool", "web_search_20250305"),
+                "name": "web_search", "max_uses": max_uses}])
+    text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
+    try:
+        return parse_json(text)
+    except Exception:
+        from .llm import ask_json
+        return ask_json(cfg["writer"]["model"], "Return the same data as valid JSON only, same keys. "
+                        "Escape quotes inside strings.", text, max_tokens=5000)

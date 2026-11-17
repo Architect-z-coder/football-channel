@@ -38,8 +38,18 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    absence). The caption must be true; never claim the
                                                    photo is from this match.
 - {"type": "player_ratings"}                    -> best and lowest-rated starters with FotMob ratings.
-- {"type": "quote_card", "press_index": int}    -> a coach or player quote from the pack's "press"
-                                                   list (index from 0), with speaker and source.
+- {"type": "quote_card", "quote": str, "speaker": str, "role": str, "outlet": str}
+                                                -> press-room style quote card. The quote must be copied
+                                                   word for word from the pack's "press" or "context";
+                                                   outlet = the source's name or website.
+- {"type": "goal_replay", "goal_index": int}    -> animated replay of one goal on a 2D pitch: where the
+                                                   shot came from, where it went in, scorer, assist, xG.
+                                                   goal_index counts goals in time order from 0. Only if
+                                                   the pack has a "shots" list.
+- {"type": "key_moments", "moments": [{"minute": int, "text": str}, ...]}
+                                                -> 4-6 key moments on an animated timeline (goals, red
+                                                   cards, big misses, substitutions), text 2-6 words each,
+                                                   all from the pack. Ideal for the cold open.
 - {"type": "momentum"}                          -> FotMob's minute-by-minute momentum graph with the goals
                                                    marked. Only if the pack says "momentum_available".
 - {"type": "history_lens", "lens": str, "metrics": [str, ...]}
@@ -66,7 +76,9 @@ HARD RULES
 2. Analysis is allowed, but phrase it as reading of the numbers ("the numbers suggest", "that points to"),
    never as a claim about what happened on the pitch that the data cannot show.
 3. Never mention: politics, transfer rumours, betting or odds, injury speculation, private lives.
-4. Spell numbers as digits in narration (e.g. "62 percent", "14 shots") so they can be checked.
+4. No general claims the pack cannot prove: never say something is rare, a first, a record, "never
+   happened", or compare with other matches/eras unless the pack states it.
+4b. Spell numbers as digits in narration (e.g. "62 percent", "14 shots") so they can be checked.
 5. Story structure (9 scenes, one beat each):
    1 COLD OPEN - drop the viewer into the decisive or most surprising moment (a goal, a miss, a collapse),
      told as a scene, then the question the video will answer. No "in this video".
@@ -83,6 +95,12 @@ HARD RULES
    8 THE VERDICT - what the coaches and players said AFTER, set against what really happened.
    9 WHAT IT MEANS - what happens next for these teams or characters, the lesson, and one question for
      viewers to answer in the comments. Short subscribe line here only.
+   ANGLES: first find the single strongest STORY of this match, then use only the 3-4 angles that prove
+   it: the match (what happened), the hidden truth (xG, shots, ratings), the people (best/worst
+   players), the absences (who was missing and did it matter), the coaches' words (before and after,
+   from "press"), the coach story and the institution's bet (from "context": why each coach was
+   appointed, who he replaced, what he promised, his key choices since, and recent form), and history
+   (only as a brief comparison). The coach story belongs in THE STAKES and WHAT IT MEANS.
    Use open loops ("but that is not the real story...") to pull viewers from one scene to the next.
    Describe goals with the details the pack gives (minute, scorer, assist, header/foot, corner/open play),
    and never invent details it does not give (no weather, crowd noise, celebrations, emotions of players).

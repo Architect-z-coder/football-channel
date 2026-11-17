@@ -160,6 +160,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None) -> int:
     if not dry_run:
         from . import press
         pack["press"] = press.gather(cfg, pack)
+        from . import context
+        pack["context"] = context.gather(cfg, pack)
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
     if not dry_run and cfg.get("photos", {}).get("enabled", True):

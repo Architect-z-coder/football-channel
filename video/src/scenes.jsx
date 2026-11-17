@@ -693,23 +693,117 @@ const PlayerRatings = ({ props }) => {
 // ---------- What the coach / player said ----------
 const QuoteCard = ({ visual, props }) => {
   const f = useCurrentFrame();
-  const q = (props.press || [])[visual.press_index || 0];
-  if (!q) return null;
+  const old = visual.press_index !== undefined ? (props.press || [])[visual.press_index] : null;
+  const q = old ? { quote: old.quote, speaker: old.speaker, role: old.role, outlet: (old.source || "") }
+                : { quote: visual.quote, speaker: visual.speaker, role: visual.role, outlet: visual.outlet };
+  if (!q.quote) return null;
   const p = spring({ frame: f - 4, fps: 30, config: { damping: 16 } });
-  let host = "";
-  try { host = new URL(q.url).hostname.replace(/^www\./, ""); } catch (e) { host = q.source || ""; }
+  const words = q.quote.split(" ");
+  const shown = Math.min(words.length, Math.floor(interpolate(f, [10, 10 + words.length * 4], [0, words.length],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" })));
   return (
-    <AbsoluteFill style={{ padding: "0 180px", justifyContent: "center", opacity: p }}>
-      <div style={{ fontFamily: HEAD, fontSize: 220, color: C.accent, lineHeight: 0.6, height: 110 }}>“</div>
-      <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: q.quote.length > 120 ? 54 : 66, color: C.text,
-                    lineHeight: 1.25, fontStyle: q.is_paraphrase ? "italic" : "normal",
-                    transform: `translateY(${(1 - p) * 30}px)` }}>
-        {q.quote}
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
+      {/* press-room backdrop: soft panel wall + desk + microphone (our own drawing) */}
+      <div style={{ position: "absolute", inset: "40px 120px 60px", borderRadius: 24, opacity: 0.9 * p,
+                    background: `repeating-linear-gradient(90deg, ${C.panel} 0 160px, #0b1912 160px 320px)` }} />
+      <div style={{ position: "absolute", left: 120, right: 120, bottom: 60, height: 70, background: "#050c08",
+                    borderTop: `4px solid ${C.accent}`, opacity: p }} />
+      <svg width="90" height="230" style={{ position: "absolute", bottom: 128, left: 230, opacity: p }}>
+        <rect x="33" y="0" width="24" height="60" rx="12" fill="#cfd6d2" />
+        <rect x="42" y="58" width="6" height="140" fill="#8a948f" />
+        <rect x="15" y="196" width="60" height="10" rx="4" fill="#8a948f" />
+      </svg>
+      <div style={{ position: "relative", maxWidth: 1250, marginLeft: 220, marginBottom: 120, opacity: p }}>
+        <div style={{ fontFamily: BODY, fontWeight: 800, letterSpacing: 4, fontSize: 24, color: C.accent }}>PRESS CONFERENCE</div>
+        <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: q.quote.length > 120 ? 52 : 64, color: C.text,
+                      lineHeight: 1.25, marginTop: 16 }}>
+          “{words.slice(0, shown).join(" ")}<span style={{ opacity: 0 }}>{words.slice(shown).join(" ")}</span>”
+        </div>
+        <div style={{ marginTop: 34, fontFamily: HEAD, fontSize: 48, color: C.accent }}>{q.speaker}</div>
+        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.muted }}>
+          {q.role}{q.outlet ? ` · via ${q.outlet}` : ""}
+        </div>
       </div>
-      <div style={{ marginTop: 40, fontFamily: HEAD, fontSize: 46, color: C.accent }}>{q.speaker}</div>
-      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.muted }}>
-        {q.role}{q.team ? `, ${q.team}` : ""} · {q.is_paraphrase ? "paraphrased from " : "via "}{host}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Goal replay: shot spot -> ball into the net, on a 2D pitch ----------
+const GoalReplay = ({ visual, props, scene }) => {
+  const f = useCurrentFrame();
+  const goals = (props.shots || []).filter((s) => s.result === "Goal").sort((a, b) => a.minute - b.minute);
+  const g = goals[visual.goal_index || 0];
+  if (!g) return null;
+  const info = (props.goals || []).find((x) => x.minute === g.minute && (x.player || "").includes((g.player || "").split(" ").slice(-1)[0])) || {};
+  // half pitch, attacking up: x 0.5..1 (towards goal), y 0..1 across
+  const PW = 980, PH = 640, gx = (y) => 60 + y * (PW - 120), gy = (x) => PH - ((x - 0.5) / 0.5) * (PH - 40);
+  const sx = gx(g.y), sy = gy(g.x), tx = gx(g.goal_y ?? 0.5), ty = gy(1) + 6;
+  const t = interpolate(f, [25, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.quad) });
+  const net = spring({ frame: f - 45, fps: 30, config: { damping: 8 } });
+  const home = g.side === "home", col = home ? C.home : C.away;
+  const appear = spring({ frame: f - 5, fps: 30, config: { damping: 14 } });
+  return (
+    <AbsoluteFill style={{ padding: "60px 110px 0", flexDirection: "row", alignItems: "center", gap: 70 }}>
+      <svg width={PW} height={PH} style={{ background: "#123222", borderRadius: 16, overflow: "visible" }}>
+        <g stroke="rgba(255,255,255,0.25)" strokeWidth="3" fill="none">
+          <rect x="2" y="2" width={PW - 4} height={PH - 4} rx="14" />
+          <rect x={gx(0.2)} y={gy(1)} width={gx(0.8) - gx(0.2)} height={gy(0.84) - gy(1)} />
+          <rect x={gx(0.37)} y={gy(1)} width={gx(0.63) - gx(0.37)} height={gy(0.95) - gy(1)} />
+          <path d={`M ${gx(0.4)} ${gy(0.84)} A 90 60 0 0 0 ${gx(0.6)} ${gy(0.84)}`} />
+        </g>
+        <rect x={gx(0.45)} y={gy(1) - 22} width={gx(0.55) - gx(0.45)} height={22} fill="none" stroke="#fff" strokeWidth="4" />
+        <rect x={gx(0.45)} y={gy(1) - 22} width={gx(0.55) - gx(0.45)} height={22} fill={C.accent} opacity={0.5 * net} />
+        <line x1={sx} y1={sy} x2={sx + (tx - sx) * t} y2={sy + (ty - sy) * t} stroke={C.accent} strokeWidth="5" strokeDasharray="12 10" />
+        <circle cx={sx} cy={sy} r={22 * appear} fill={col} stroke={C.bg} strokeWidth="3" />
+        <circle cx={sx + (tx - sx) * t} cy={sy + (ty - sy) * t} r={12} fill="#fff" stroke="#222" strokeWidth="2" opacity={t > 0 ? 1 : 0} />
+      </svg>
+      <div style={{ opacity: appear }}>
+        <div style={{ fontFamily: HEAD, fontSize: 120, color: C.accent, lineHeight: 1 }}>{g.minute}'</div>
+        <div style={{ fontFamily: HEAD, fontSize: 76, color: C.text, lineHeight: 1.05 }}>{g.player}</div>
+        <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 30, color: col, marginTop: 6 }}>{home ? props.home : props.away}</div>
+        <div style={{ marginTop: 26, display: "flex", flexDirection: "column", gap: 10, fontFamily: BODY, fontWeight: 600, fontSize: 30, color: C.muted }}>
+          {info.assist ? <span>Assist: <b style={{ color: C.text }}>{info.assist}</b></span> : null}
+          <span>{[(g.body_part || "").replace(/([a-z])([A-Z])/g, "$1 $2"), (g.situation || "").replace(/([a-z])([A-Z])/g, "$1 $2")].filter(Boolean).join(" · ")}</span>
+          <span>Chance quality: <b style={{ color: C.text }}>{g.xg} xG</b></span>
+        </div>
       </div>
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Key moments: the match in a few beats ----------
+const KeyMoments = ({ visual, scene }) => {
+  const f = useCurrentFrame();
+  const ms = (visual.moments || []).slice(0, 6).sort((a, b) => a.minute - b.minute);
+  if (!ms.length) return null;
+  const W = 1600, x = (m) => (Math.min(m, 95) / 95) * W;
+  const per = Math.max(12, (scene.durationInFrames * 0.7) / ms.length);
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
+      <svg width={W} height={520} style={{ overflow: "visible", marginTop: -60 }}>
+        <line x1={0} y1={210} x2={W} y2={210} stroke={C.line} strokeWidth="6" />
+        <line x1={0} y1={210} x2={x(interpolate(f, [0, per * ms.length], [0, 95], { extrapolateRight: "clamp" }))} y2={210}
+              stroke={C.accent} strokeWidth="6" />
+        {[0, 45, 90].map((m) => <text key={m} x={x(m)} y={250} textAnchor="middle" fontFamily={BODY} fontSize={22} fontWeight={600} fill={C.muted}>{m}'</text>)}
+        {ms.map((m, i) => {
+          const s = spring({ frame: f - i * per, fps: 30, config: { damping: 13 } });
+          const cx = x(m.minute), card = (W / ms.length) * (i + 0.5);   // cards evenly spaced, linked to the real minute
+          return (
+            <g key={i} opacity={s}>
+              <circle cx={cx} cy={210} r={14 * s} fill={C.accent} />
+              <path d={`M ${cx} 224 L ${cx} 262 L ${card} 300 L ${card} 318`} stroke={C.accent} strokeWidth="3" fill="none" />
+              <text x={card} y={366} textAnchor="middle" fontFamily={HEAD} fontSize={48} fill={C.accent}>{m.minute}'</text>
+              {String(m.text).split(" ").reduce((rows, w) => {
+                const last = rows[rows.length - 1];
+                if (last && (last + " " + w).length <= 14) rows[rows.length - 1] = last + " " + w; else rows.push(w);
+                return rows;
+              }, []).slice(0, 3).map((row, k) => (
+                <text key={k} x={card} y={404 + k * 32} textAnchor="middle" fontFamily={BODY} fontWeight={700} fontSize={27} fill={C.text}>{row}</text>
+              ))}
+            </g>
+          );
+        })}
+      </svg>
     </AbsoluteFill>
   );
 };
@@ -811,6 +905,8 @@ const PhotoCard = ({ visual, props, scene }) => {
 };
 
 const MAP = {
+  goal_replay: GoalReplay,
+  key_moments: KeyMoments,
   photo: PhotoCard,
   lineups: Lineups,
   player_ratings: PlayerRatings,

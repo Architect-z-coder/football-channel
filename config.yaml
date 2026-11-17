@@ -57,6 +57,9 @@ press:               # coach / player post-match statements found by web search,
 photos:              # free-licence photos of coaches / key players from Wikimedia Commons, credited
   enabled: true
 
+context:             # coach story and the club/federation's reasons for appointing him (web search)
+  enabled: true
+
 shorts:              # vertical clips made from each match video, uploaded as private too
   enabled: true
   count: 2

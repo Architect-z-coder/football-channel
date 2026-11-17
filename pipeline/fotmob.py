@@ -130,6 +130,8 @@ def shots(data: dict, home_id: int) -> list[dict]:
             "xg": round(float(s.get("expectedGoals") or 0), 2),
             "result": result, "player": s.get("playerName"), "situation": s.get("situation"),
             "body_part": s.get("shotType"),
+            "goal_y": round(float(s["goalCrossedY"]) / 68, 3) if s.get("goalCrossedY") is not None else None,
+            "goal_z": round(float(s["goalCrossedZ"]), 2) if s.get("goalCrossedZ") is not None else None,
         })
     out.sort(key=lambda s: s["minute"])
     return out
@@ -249,6 +251,19 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
         if starters and any(x["value_eur"] for x in starters):
             add(f"{side}_xi_market_value_m_eur", f"{team} starting eleven total market value, million EUR",
                 round(sum(x["value_eur"] or 0 for x in starters) / 1e6))
+    form = (data.get("content", {}).get("matchFacts") or {}).get("teamForm") or []
+    for (side, team), games in zip(teams, form if len(form) == 2 else []):
+        res = [g.get("resultString") for g in games if g.get("resultString")]
+        if res:
+            add(f"{side}_form_last{len(res)}", f"{team} results in the previous {len(res)} matches, oldest first",
+                " ".join(res))
+            add(f"{side}_form_record", f"{team} record in those {len(res)} matches",
+                {"won": res.count("W"), "drawn": res.count("D"), "lost": res.count("L")})
+            add(f"{side}_form_games", f"{team} previous {len(res)} matches, oldest first",
+                [{"date": (g.get("date") or {}).get("utcTime", "")[:10],
+                  "match": f"{g['tooltipText']['homeTeam']} {g['tooltipText']['homeScore']}-"
+                           f"{g['tooltipText']['awayScore']} {g['tooltipText']['awayTeam']}"}
+                 for g in games if g.get("tooltipText")])
     if any(v["starters"] for v in lu.values()):
         pack["lineups"] = lu
     potm = (data.get("content", {}).get("matchFacts") or {}).get("playerOfTheMatch") or {}
