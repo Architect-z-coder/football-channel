@@ -126,8 +126,11 @@ def _best_photo(person: dict) -> dict | None:
             try:
                 for h in _commons_search(q):
                     t = h["title"].lower()
-                    if key in t and h["url"] not in seen and not any(x in t for x in ("aerial", "exterior",
-                                                                                     "outside", "map", "logo", "plan")):
+                    inside = ("inside", "interior", "innen", "stands", "tribune", "tribüne", "pitch", "spielfeld",
+                              "panorama", "crowd", "fans", "match", "spiel", "final", " vs ", " v ", "game")
+                    if key in t and h["url"] not in seen and any(x in t for x in inside) and not any(
+                            x in t for x in ("aerial", "exterior", "outside", "map", "logo", "plan", "garten",
+                                             "garden", "model", "modell", "ticket")):
                         seen.add(h["url"]); hits.append(h)
             except Exception as e:
                 log.info("Commons search failed for %s: %s", q, e)
@@ -145,8 +148,12 @@ def _best_photo(person: dict) -> dict | None:
                else [f'"{name}" football', f'"{name}"'])
     for q in queries:
         try:
+            def crowd(t: str) -> int:   # titles naming several people ("A, B and C") are group photos
+                t = t.lower().replace(name.lower(), "")
+                return t.count(",") + t.count(" and ") + t.count(" und ") + t.count(" en ") + t.count(" y ")
             hits = sorted((h for h in _commons_search(q) if last in h["title"].lower()),
-                          key=lambda h: -h["width"])   # sharpest photo of the right person first
+                          key=lambda h: (min(crowd(h["title"]), 2), -h["width"]))   # alone, then sharpest
+            hits = [h for h in hits if crowd(h["title"]) == 0] or hits[:0]
         except Exception as e:
             log.info("Commons search failed for %s: %s", q, e)
             hits = []
