@@ -76,3 +76,47 @@ def web_research(cfg: dict, system: str, user: str, max_uses: int = 8) -> dict:
         from .llm import ask_json
         return ask_json(cfg["writer"]["model"], "Return the same data as valid JSON only, same keys. "
                         "Escape quotes inside strings.", text, max_tokens=5000)
+
+
+# ---------------- what the papers said ----------------
+OUTLETS = ["The Guardian", "The Athletic", "BBC Sport", "ESPN", "The Times", "The Independent",
+           "The Telegraph", "Reuters", "AP", "Kicker", "Süddeutsche Zeitung", "FAZ", "Der Spiegel",
+           "NOS", "De Telegraaf", "Algemeen Dagblad", "Voetbal International", "L'Équipe", "Le Monde",
+           "Marca", "AS", "El País", "Mundo Deportivo", "La Gazzetta dello Sport", "Corriere dello Sport",
+           "A Bola", "Record", "Olé", "New York Times"]
+
+REVIEW_SYSTEM = """You find what respected newspapers and named football journalists wrote about ONE match,
+for a fact-checked analysis video that will show a cut of each article on screen.
+Search the web for match reports, analysis pieces and columns about this exact match, published after it,
+by these outlets (others of the same standing are fine): {outlets}.
+For each article (at most 5, different outlets, prefer ones with a named writer and a clear opinion):
+- outlet, author (the byline, "" if none), date (YYYY-MM-DD), url (the article page itself), headline (as published),
+- quote: ONE sentence copied WORD FOR WORD from the article body that carries the writer's judgement of the match
+  (tactics, a player, a coach's decision, the meaning of the result). 8 to 30 words. Keep the original language;
+- quote_en: an English translation if the quote is not in English, else "";
+- point: the writer's main view in one plain English sentence, in your own words;
+- free: true if the article looked readable without a subscription, false if it is paywalled, null if unsure.
+Rules: only articles about THIS match; no rumours, transfers, betting, politics, private lives, injury speculation.
+If you are not sure a sentence is word for word, leave that article out. If you find nothing reliable, return [].
+Return ONLY JSON: {{"reviews": [{{"outlet", "author", "date", "url", "headline", "quote", "quote_en", "point", "free"}}]}}"""
+
+
+def reviews(cfg: dict, pack: dict) -> list[dict]:
+    if not cfg.get("press", {}).get("reviews", True) or not secret("ANTHROPIC_API_KEY"):
+        return []
+    try:
+        f = {x["id"]: x["value"] for x in pack["facts"]}
+        user = (f"Match: {pack['home']} {f.get('score_home')}-{f.get('score_away')} {pack['away']}, "
+                f"{pack['competition']}, played {f.get('date', '')}.")
+        data = web_research(cfg, REVIEW_SYSTEM.format(outlets=", ".join(OUTLETS)), user, max_uses=10)
+        out = []
+        for r in data.get("reviews", []):
+            if r.get("url", "").startswith("http") and r.get("quote") and r.get("outlet"):
+                if len(r["quote"].split()) > 40:
+                    continue
+                out.append(r)
+        log.info("Press reviews: %d articles found", len(out))
+        return out[:5]
+    except Exception as e:
+        log.warning("Press reviews skipped: %s", e)
+        return []

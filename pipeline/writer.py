@@ -42,6 +42,9 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                 -> press-room style quote card. The quote must be copied
                                                    word for word from the pack's "press" or "context";
                                                    outlet = the source's name or website.
+- {"type": "press_cut", "review_index": int}     -> a cut of a real newspaper article from the pack's "reviews"
+                                                   (index from 0): headline, writer, date, and the quoted
+                                                   sentence, highlighted word by word while it is read.
 - {"type": "goal_replay", "goal_index": int}    -> animated replay of one goal on a 2D pitch: where the
                                                    shot came from, where it went in, scorer, assist, xG.
                                                    goal_index counts goals in time order from 0. Only if
@@ -132,6 +135,12 @@ HARD RULES
    insults. When a coach explained the plan or a change, connect it to the numbers ("Koeman said
    ...; the data shows ..."). Quote only text from "press", say who said it, keep quotes word for
    word, and mention the outlet once in the description. Never invent a reason a coach did not give.
+10b. What the papers said: if the pack has "reviews" (articles by respected outlets about this match),
+   add ONE short part near the verdict that brings in two or three of them, each as its own shot with
+   visual press_cut. Each shot: name the writer and outlet in a few words, then read the quote WORD FOR
+   WORD (use "quote" if it is English, else "quote_en" and say "writes, in translation,"), then one
+   sentence of our own on whether the data agrees. Never change a quoted word, never quote anything
+   that is not in "reviews", and keep it fair: if a writer disagrees with our reading, say so.
 11. Line-ups and absences: the pack may hold each starting eleven, the coaches, and confirmed
    absentees (injured or suspended) with market values. When a key player (high market value) was
    missing, or a coach made a surprising choice, say so and connect it to the result and to what the

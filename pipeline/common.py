@@ -55,6 +55,9 @@ def write_json(path: Path, data) -> None:
 def ai_pack(pack: dict) -> dict:
     """The data pack as the AI sees it: the momentum series is replaced by a short summary."""
     out = {k: v for k, v in pack.items() if k != "momentum"}
+    if pack.get("reviews"):   # what the AI needs of each press cut (not the screenshot geometry)
+        out["reviews"] = [{k: r.get(k) for k in ("outlet", "author", "date", "headline", "quote", "quote_en",
+                                                 "point", "kind")} for r in pack["reviews"]]
     mom = pack.get("momentum")
     if mom:
         def share(lo, hi):

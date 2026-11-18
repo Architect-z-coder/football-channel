@@ -1,5 +1,6 @@
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
+import { PressCut } from "./Newspaper";
 
 // ---------- helpers ----------
 const useSpring = (delay = 0, config = { damping: 14, mass: 0.6 }) => {
@@ -945,6 +946,7 @@ const PhotoCard = ({ visual, props, scene }) => {
 };
 
 const MAP = {
+  press_cut: PressCut,
   goal_replay: GoalReplay,
   key_moments: KeyMoments,
   photo: PhotoCard,

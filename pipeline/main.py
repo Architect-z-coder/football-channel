@@ -203,7 +203,17 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
             from . import context
             pack["context"] = context.gather(cfg, pack)
             write_json(CACHE / f"{slugify(str(pack['fixture_id']))}.json",
-                       {"saved": now(), "press": pack["press"], "context": pack["context"]})
+                       {**cached, "saved": now(), "press": pack["press"], "context": pack["context"]})
+        # what the papers said: search once, screenshot once (free pages), keep for prepare and render
+        cache_path = CACHE / f"{slugify(str(pack['fixture_id']))}.json"
+        cached = read_json(cache_path, {})
+        if "reviews" in cached:
+            pack["reviews"] = cached["reviews"]
+        else:
+            from . import clippings
+            found = press.reviews(cfg, pack)
+            pack["reviews"] = clippings.capture(found, CACHE / "press" / slugify(str(pack["fixture_id"])))
+            write_json(cache_path, {**read_json(cache_path, {}), "reviews": pack["reviews"]})
     workdir = OUT_DIR / f"{date.today():%Y%m%d}-{slugify(pack['home'] + '-' + pack['away'])}"
     workdir.mkdir(parents=True, exist_ok=True)
     if not dry_run and cfg.get("photos", {}).get("enabled", True):
@@ -291,6 +301,9 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
     credits = []
     used = {(v or {}).get("photo") for sc in script["scenes"] for v in
             [sh.get("visual") for sh in sc.get("shots") or []] + [sc.get("visual")]}
+    if pack.get("reviews"):
+        script["description"] = script["description"].rstrip() + "\n\nWhat the papers said:\n" + "\n".join(
+            f"- {r['outlet']}{', ' + r['author'] if r.get('author') else ''}: {r['url']}" for r in pack["reviews"])
     from . import nametags
     named = {p["name"] for p in nametags.mentioned([sc["narration"] for sc in script["scenes"]], nametags.roster(pack))}
     for ph in pack.get("photos") or []:

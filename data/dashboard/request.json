@@ -1,6 +1,6 @@
 {
-  "id": "ger-ned-tags-1",
-  "mode": "no-upload",
+  "id": "ger-ned-press-1",
+  "mode": "prepare",
   "match": "fotmob:5181835",
   "look_back_days": ""
 }

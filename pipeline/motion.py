@@ -35,6 +35,29 @@ def _events(pack: dict) -> list[dict]:
     return out
 
 
+def _quote_frames(pack: dict, vis: dict, tokens: list[str], starts, shot_from: int) -> list[int]:
+    """Frames (from the shot start) at which each spoken word of the quote is said, for the highlight."""
+    import re as _re
+    revs = pack.get("reviews") or []
+    i = vis.get("review_index", 0)
+    if not (0 <= i < len(revs)):
+        return []
+    norm = lambda w: _re.sub(r"[^a-z0-9]", "", w.lower())
+    idx = [(j, norm(t)) for j, t in enumerate(tokens) if norm(t)]     # skip dashes and lone marks
+    toks = [t for _, t in idx]
+    for key in ("quote", "quote_en"):
+        q = [norm(w) for w in (revs[i].get(key) or "").split() if norm(w)]
+        if len(q) < 3:
+            continue
+        for a in range(len(toks) - len(q) + 1):
+            if toks[a:a + len(q)] == q:
+                pos = [idx[a + j][0] for j in range(len(q))]
+                if starts and len(starts) == len(tokens):
+                    return [max(0, int(starts[p] * FPS) - shot_from) for p in pos]
+                return [p * 9 for p in pos]      # no timings: about 3.3 words a second
+    return []
+
+
 def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tuple[dict, list[float]]:
     run_dir = VIDEO_DIR / "public" / "run"
     if run_dir.exists():
@@ -58,8 +81,12 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
                 start = int(word_starts[n] * FPS)
             else:
                 start = int(n / total_words * (frames - 15))
-            shots.append({"from": 0 if not shots else max(start - 4, shots[-1]["from"] + 20),
-                          "visual": sh.get("visual") or {}})
+            frm = 0 if not shots else max(start - 4, shots[-1]["from"] + 20)
+            vis = dict(sh.get("visual") or {})
+            if vis.get("type") == "press_cut":
+                vis["hl"] = _quote_frames(pack, vis, (sh.get("text") or "").split(),
+                                          word_starts[n:n + k] if word_starts else None, frm)
+            shots.append({"from": frm, "visual": vis})
             n += k
         scenes.append({"id": sc["id"], "durationInFrames": frames, "audio": f"run/{audio.name}",
                        "wordStarts": word_starts, "shots": shots,
@@ -88,6 +115,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "lineups": pack.get("lineups") or {},
         "photos": pack.get("photos") or [],
         "press": pack.get("press") or [],
+        "reviews": pack.get("reviews") or [],
         "goals": [f["value"] for f in pack["facts"] if f["id"].startswith("goal_") and isinstance(f["value"], dict)],
         "history": history.used_in(script),
         "scenes": scenes,
@@ -111,6 +139,12 @@ def _remotion(composition: str, props_file: Path, out: Path) -> None:
 
 def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Path):
     props, durs = build_props(cfg, script, pack, audios)
+    from .common import slugify as _slug
+    press_dir = Path(__file__).resolve().parent.parent / "data" / "cache" / "press" / _slug(str(pack["fixture_id"]))
+    for r in pack.get("reviews") or []:          # newspaper screenshots
+        for f in (r.get("files") or {}).values():
+            if (press_dir / f).exists():
+                shutil.copy(press_dir / f, VIDEO_DIR / "public" / "run" / f)
     for ph in pack.get("photos") or []:          # free-licence photos from Wikimedia Commons
         src = workdir / "photos" / ph["file"]
         if src.exists():
