@@ -241,9 +241,21 @@ def _pick_person(person: dict) -> dict | None:
                if "coach" in (person.get("role") or "").lower()
                else [f'"{name}" football', f'"{name}"'])
     cands, seen = [], set()
+    import unicodedata
+
+    def plain(t: str) -> str:
+        return unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+    parts = [plain(w) for w in name.replace("-", " ").split() if len(plain(w)) > 1]
+    must = [parts[0], parts[-1]] if len(parts) > 1 else parts     # first AND last name
+
+    def right_person(c) -> bool:
+        if c.get("via") == "Wikidata portrait":
+            return True
+        text = plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " "))
+        return all(m in text for m in must)
 
     def add(c):
-        if c and c.get("url") and c["url"] not in seen:
+        if c and c.get("url") and c["url"] not in seen and right_person(c):
             seen.add(c["url"]); cands.append(c)
     for q in queries:
         try:
