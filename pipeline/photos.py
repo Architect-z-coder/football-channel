@@ -192,6 +192,7 @@ def find(people: list[dict], outdir: Path, limit: int = 15, start: int = 0) -> l
             img.thumbnail((1200, 1200))
             img.save(dest, "JPEG", quality=88)
             out.append({**p, "file": dest.name, "path": str(dest), "via": info.get("via", "Wikimedia Commons"), **info})
+            log.info("Photo %s: %s -> %s", dest.name, p["name"], info.get("title") or info.get("page"))
         except Exception as e:
             log.info("No photo for %s (%s)", p["name"], e)
     log.info("Photos: %d free-licence photos found (Wikimedia Commons)", len(out))
