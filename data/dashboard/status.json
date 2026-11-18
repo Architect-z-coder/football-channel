@@ -3,9 +3,9 @@
   "mode": "no-upload",
   "match": "fotmob:5181835",
   "trigger": "push",
-  "state": "running",
+  "state": "done",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44364674858",
   "started": "2026-11-18T17:59:24Z",
-  "finished": null,
+  "finished": "2026-11-18T18:20:56Z",
   "reason": null
 }

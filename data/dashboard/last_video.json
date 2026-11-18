@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T23:30:59Z",
+  "updated": "2026-11-18T18:20:52Z",
   "home": "Germany",
   "away": "Netherlands",
   "competition": "UEFA Nations League A Grp. 2",
@@ -10,7 +10,7 @@
     "Germany 5-0 Netherlands: The Score Hides a Close Game"
   ],
   "minutes": 4.5,
-  "files": "20261117-germany-netherlands",
+  "files": "20261118-germany-netherlands",
   "uploaded": false,
   "youtube": null,
   "critic": {
@@ -34,14 +34,14 @@
       "hook": "Gruda: 9.2 in Berlin",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-18"
+      "suggested_publish": "2026-11-19"
     },
     {
       "title": "The 0.03 xG Goal That Cracked the Dutch",
       "hook": "The 0.03 xG Goal",
       "format": "goal_explained",
       "youtube": null,
-      "suggested_publish": "2026-11-19"
+      "suggested_publish": "2026-11-20"
     }
   ],
   "voice": "everygen:alex"
