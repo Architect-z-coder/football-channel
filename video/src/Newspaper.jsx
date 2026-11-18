@@ -47,7 +47,10 @@ export const Clipping = ({ t, s = 1, channel, frames = 90 }) => {
           <div style={{ marginTop: 8 * s, border: `${1.5 * s}px solid ${INK}`, height: W * 0.78, overflow: "hidden",
                         background: "#cfc6b3" }}>
             <Img src={staticFile(`run/${t.file}`)} onError={() => {}}
-                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 20%",
+                 style={{ width: "100%", height: "100%", objectFit: "cover",
+                          objectPosition: t.face ? `${(t.face[0] * 100).toFixed(1)}% ${(t.face[1] * 100).toFixed(1)}%` : "50% 20%",
+                          transform: t.face ? "scale(1.35)" : "none",
+                          transformOrigin: t.face ? `${(t.face[0] * 100).toFixed(1)}% ${(t.face[1] * 100).toFixed(1)}%` : "50% 50%",
                           filter: "grayscale(1) contrast(1.25) brightness(1.02) sepia(0.18)" }} />
           </div>
         ) : null}

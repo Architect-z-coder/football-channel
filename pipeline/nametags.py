@@ -86,6 +86,7 @@ def tags_for(pack: dict, scenes: list[dict], shown: dict | None = None) -> list[
             ph = photo_of(pack, p["name"])
             tags.append({"from": frm, "name": p["name"], "team": p["team"], "role": p["role"],
                          "file": ph["file"] if ph else None,
+                         "face": ph.get("face") if ph else None,
                          "credit": f"{ph.get('author') or 'Unknown'}, {ph.get('licence')}" if ph else ""})
             shown[p["name"]] = whole
             busy_until = frm + TAG_FRAMES

@@ -91,6 +91,25 @@ def _commons_search(query: str, limit: int = 8) -> list[dict]:
 OPENVERSE_OK = {"by", "by-sa", "cc0", "pdm"}
 
 
+def _openverse_all(query: str, last: str) -> list[dict]:
+    """All usable Openverse hits (Flickr and other open collections), commercial-use licences only."""
+    r = _get("https://api.openverse.org/v1/images/", params={
+        "q": query, "license_type": "commercial", "page_size": 20})
+    out = []
+    for h in r.json().get("results", []):
+        lic = (h.get("license") or "").lower()
+        if lic not in OPENVERSE_OK or (h.get("width") or 0) < 400:
+            continue
+        text = ((h.get("title") or "") + " " + " ".join(t.get("name", "") for t in h.get("tags") or [])).lower()
+        if last and last not in text:
+            continue
+        lic_name = {"cc0": "CC0", "pdm": "Public domain"}.get(lic, f"CC {lic.upper()} {h.get('license_version') or ''}".strip())
+        out.append({"url": h["url"], "page": h.get("foreign_landing_url") or h.get("url"), "licence": lic_name,
+                    "author": (h.get("creator") or "unknown")[:60], "title": h.get("title") or "",
+                    "width": h.get("width") or 0, "via": f"Openverse ({h.get('source') or h.get('provider') or 'open'})"})
+    return out
+
+
 def _openverse(query: str, last: str) -> dict | None:
     """Openverse (Flickr and other open collections): commercial-use licences only."""
     r = _get("https://api.openverse.org/v1/images/", params={
@@ -142,6 +161,128 @@ def _best_photo(person: dict) -> dict | None:
         if hits:
             return hits[0]
         return _openverse(name.split(",")[0], "")
+    return _pick_person(person)
+
+
+def _crowd(title: str, name: str) -> int:
+    """Titles naming several people ("A, B and C") are usually group photos."""
+    t = title.lower().replace(name.lower(), "")
+    return t.count(",") + t.count(" and ") + t.count(" und ") + t.count(" en ") + t.count(" y ")
+
+
+def _year(title: str) -> int | None:
+    import re
+    ys = [int(y) for y in re.findall(r"(?<!\d)(19[5-9]\d|20[0-4]\d)(?!\d)", title or "")]
+    return max(ys) if ys else None
+
+
+_CASCADE = None
+
+
+def _faces(img) -> list[tuple]:
+    """Frontal faces (x, y, w, h) found by OpenCV; [] if OpenCV is missing."""
+    global _CASCADE
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        return []
+    if _CASCADE is None:
+        _CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    if _CASCADE.empty():
+        return []
+    g = cv2.cvtColor(np.array(img.convert("RGB")), cv2.COLOR_RGB2GRAY)
+    m = max(30, min(g.shape) // 14)
+    return [tuple(int(v) for v in f) for f in _CASCADE.detectMultiScale(g, 1.1, 6, minSize=(m, m))]
+
+
+def _score(c: dict, name: str) -> tuple[float, tuple | None]:
+    """Higher is better: one clear face, recent, sharp, not a group photo."""
+    import io
+    from datetime import date
+
+    from PIL import Image
+    sc = 0.0
+    sc -= 3 * min(_crowd(c.get("title", ""), name), 2)
+    y = _year(c.get("title", ""))
+    if y:
+        age = date.today().year - y
+        sc += 2 if age <= 3 else 1 if age <= 6 else -1 if age > 10 else 0
+    sc += 0.5 if (c.get("width") or 0) >= 800 else 0
+    face = None
+    try:
+        r = _get(c["url"])
+        img = Image.open(io.BytesIO(r.content))
+        img.thumbnail((900, 900))
+        c["_img"] = img
+        fs = sorted(_faces(img), key=lambda f: -f[2] * f[3])
+        if len(fs) == 1:
+            sc += 3
+        elif len(fs) >= 2:
+            big, nxt = fs[0][2] * fs[0][3], fs[1][2] * fs[1][3]
+            sc += 1 if big >= 3 * nxt else -3          # one dominant face is fine, a group is not
+        else:
+            sc -= 1.5
+        if fs:
+            x, yy, w, h = fs[0]
+            face = ((x + w / 2) / img.width, (yy + h / 2) / img.height)
+    except Exception as e:
+        log.info("Photo candidate skipped (%s): %s", c.get("title", "")[:50], e)
+        return -99, None
+    return sc, face
+
+
+def _pick_person(person: dict) -> dict | None:
+    """Gather candidates from Commons, Wikidata and Openverse; keep the best-scoring photo."""
+    import time
+    name = person["name"]
+    last = name.split()[-1].lower()
+    queries = ([f'"{name}" press conference', f'"{name}" coach', f'"{name}"']
+               if "coach" in (person.get("role") or "").lower()
+               else [f'"{name}" football', f'"{name}"'])
+    cands, seen = [], set()
+
+    def add(c):
+        if c and c.get("url") and c["url"] not in seen:
+            seen.add(c["url"]); cands.append(c)
+    for q in queries:
+        try:
+            for h in _commons_search(q):
+                if last in h["title"].lower():
+                    add({**h, "query": q, "via": "Wikimedia Commons"})
+        except Exception as e:
+            log.info("Commons search failed for %s: %s", q, e)
+    try:
+        fn = _wikidata_image(name)
+        info = _commons_info(fn) if fn else None
+        if info:
+            add({**info, "title": f"File:{fn}", "via": "Wikidata portrait"})
+    except Exception as e:
+        log.info("Wikidata failed for %s: %s", name, e)
+    try:
+        for h in _openverse_all(name, last)[:6]:
+            add(h)
+    except Exception as e:
+        log.info("Openverse failed for %s: %s", name, e)
+    if not cands:
+        return None
+    # cheap pre-rank (no download), then look at the top few
+    cands.sort(key=lambda c: (min(_crowd(c.get("title", ""), name), 2), -(_year(c.get("title", "")) or 0),
+                              -(c.get("width") or 0)))
+    best, best_sc = None, -98
+    for c in cands[:7]:
+        sc, face = _score(c, name)
+        time.sleep(0.5)
+        if sc > best_sc:
+            best, best_sc = {**c, "face": face}, sc
+    if best is None or best_sc < -2:
+        return None
+    log.info("Photo pick for %s: %s (score %.1f, %d candidates)", name, best.get("title", "")[:70], best_sc, len(cands))
+    return best
+
+
+def _old_pick(person: dict) -> dict | None:
+    name = person["name"]
     last = name.split()[-1].lower()
     queries = ([f'"{name}" press conference', f'"{name}" coach', f'"{name}"']
                if "coach" in (person.get("role") or "").lower()
@@ -189,13 +330,16 @@ def find(people: list[dict], outdir: Path, limit: int = 15, start: int = 0) -> l
             import time
 
             from PIL import Image
-            time.sleep(1)                                   # be gentle with Wikimedia
-            r = _get(info["url"])
-            r.raise_for_status()
-            try:                                            # must be a real image: re-save as a clean JPEG
-                img = Image.open(io.BytesIO(r.content)).convert("RGB")
-            except Exception:
-                raise ValueError("download was not an image")
+            img = info.pop("_img", None)
+            if img is None:
+                time.sleep(1)                               # be gentle with Wikimedia
+                r = _get(info["url"])
+                r.raise_for_status()
+                try:                                        # must be a real image: re-save as a clean JPEG
+                    img = Image.open(io.BytesIO(r.content))
+                except Exception:
+                    raise ValueError("download was not an image")
+            img = img.convert("RGB")
             img.thumbnail((1200, 1200))
             img.save(dest, "JPEG", quality=88)
             out.append({**p, "file": dest.name, "path": str(dest), "via": info.get("via", "Wikimedia Commons"), **info})
