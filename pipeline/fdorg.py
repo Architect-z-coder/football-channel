@@ -241,7 +241,17 @@ def scout(cfg: dict, pick: str | None = None) -> dict:
                  pack["away"], pack["competition"], len(pack["facts"]), len(pack.get("shots", [])))
         return pack
     api = FootballData(secret("FOOTBALL_DATA_KEY", required=True))
-    match, table, comp = choose(cfg, api, pick)
+    try:
+        match, table, comp = choose(cfg, api, pick)
+    except Exception as e:
+        if not pick:
+            raise
+        from .fotmob import find_by_names       # Nations League, friendlies, cups: FotMob only
+        mid = find_by_names(pick, cfg["scout"].get("look_back_days", 7))
+        if not mid:
+            raise
+        log.info("Not in football-data (%s); using FotMob match %s", e, mid)
+        return scout(cfg, f"fotmob:{mid}")
     pack = build_pack(match, table, comp, api)
     code = (match.get("competition") or {}).get("code") or next(
         (c.get("code") for c in cfg["competitions"] if c["name"] == comp), None)

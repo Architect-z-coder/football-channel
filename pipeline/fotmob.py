@@ -81,6 +81,48 @@ def find_match(fd_match: dict, code: str) -> int | None:
     return best if best_score >= 1.1 else None
 
 
+ALIASES = {"turkey": "turkiye", "türkiye": "turkiye", "usa": "united states", "korea republic": "south korea",
+           "holland": "netherlands", "czech republic": "czechia", "ivory coast": "cote d'ivoire",
+           "côte d'ivoire": "cote d'ivoire", "bosnia": "bosnia and herzegovina"}
+
+
+def find_by_names(text: str, days: int = 7) -> int | None:
+    """'France Turkey' or 'France v Turkey' -> the FotMob id of their most recent finished match."""
+    import re
+    import unicodedata
+
+    def plain(t):
+        t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower().strip()
+        return ALIASES.get(t, t)
+    words = [w for w in re.split(r"\s+(?:v|vs|-|x)\s+|\s+", text.strip(), flags=re.I) if w]
+    best, best_score = None, 0.0
+    for back in range(0, days + 1):
+        d = date.today() - timedelta(days=back)
+        try:
+            data = _get("matches", {"date": d.strftime("%Y%m%d")})
+        except Exception:
+            continue
+        for lg in data.get("leagues", []):
+            for m in lg.get("matches", []):
+                st = m.get("status") or {}
+                if not st.get("finished"):
+                    continue
+                names = [plain(m["home"].get("name")), plain(m["away"].get("name"))]
+                # every word of the request must belong to one of the two team names
+                hits = sum(1 for w in words if any(plain(w) in n or n in plain(w) for n in names))
+                both = all(any(plain(w) in n or n in plain(w) for w in words) for n in names)
+                exact = sum(1 for n in names if any(plain(w) == n for w in words))
+                score = hits / max(1, len(words)) + (1 if both else 0) + 0.25 * exact
+                if score > best_score:
+                    best, best_score = m["id"], score
+        if best_score >= 2:
+            break
+    if best_score >= 2:
+        log.info("FotMob: '%s' is match %s", text, best)
+        return int(best)
+    return None
+
+
 def _num(v):
     """'410 (85%)' -> (410, 85); '2.02' -> 2.02; 57 -> 57."""
     if isinstance(v, (int, float)):
