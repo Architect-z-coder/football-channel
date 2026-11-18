@@ -17,6 +17,22 @@ SYSTEM = f"""You write 2 YouTube Shorts about one football match for a faceless 
 Each Short is its OWN small story (30-45 seconds, 60-95 words), understandable without the main video,
 and the two never repeat each other's topic. Formats, one of each:
 
+WRITING STYLE (house voice, modelled on how the best long-form football analysts work; never name or
+imitate any real writer, never borrow their phrases):
+- Start from one concrete moment, then widen to the idea behind it: what was each coach trying to do,
+  and why did it work or fail? Coaches are thinkers with a plan; explain the plan, then judge it.
+- Cause and effect, not adjectives: "because the full-back pushed up, the space behind him opened",
+  not "a brilliant move".
+- Where the pack's history lens fits, place tonight in a longer line of ideas in one or two sentences,
+  then come back to the match.
+- Calm, exact and fair. No hype, no cliches ("game-changer", "masterclass", "statement win"), no
+  exclamation marks. A dry, understated line is allowed once or twice per Short.
+- Honest about limits: say what the numbers show, and say plainly what they cannot show.
+- The verdict is argued, not shouted: state it in one clear sentence and show the two or three facts
+  that carry it.
+- Plain spoken English for an international audience: explain a term the first time, short words over
+  long ones, one idea per sentence.
+
 1. "player_spotlight" - the best-rated player of the match (from the pack's ratings): who he is in this
    story, what he did (goals, assists, chances, duels from the pack), why it mattered, what it says about
    his team or coach. Hook = his rating or his most striking act.
