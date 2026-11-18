@@ -209,6 +209,15 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
         cached = read_json(cache_path, {})
         if "reviews" in cached:
             pack["reviews"] = cached["reviews"]
+            if any(r.get("kind") == "pending" for r in pack["reviews"]):     # retake marked screenshots only
+                from . import clippings
+                pend = [r for r in pack["reviews"] if r.get("kind") == "pending"]
+                shot = clippings.capture(pend, CACHE / "press" / slugify(str(pack["fixture_id"])),
+                                         first=1 + pack["reviews"].index(pend[0]))
+                done = {r["url"]: r for r in shot}
+                pack["reviews"] = [done.get(r["url"], r) if r.get("kind") == "pending" else r
+                                   for r in pack["reviews"] if r.get("kind") != "pending" or r["url"] in done]
+                write_json(cache_path, {**read_json(cache_path, {}), "reviews": pack["reviews"]})
         else:
             from . import clippings
             found = press.reviews(cfg, pack)

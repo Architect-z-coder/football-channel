@@ -41,7 +41,12 @@ JS_FIND = r"""
     return t.length < 2500 && t.includes(target);
   });
   if (!blocks.length) return {found: false};
-  blocks.sort((a, b) => (a.textContent.length - b.textContent.length));
+  blocks.splice(0, blocks.length, ...blocks.filter(e => { const r = e.getBoundingClientRect();
+    const cs = getComputedStyle(e); return r.width > 150 && r.height > 10 && r.height < 1200 &&
+    cs.visibility !== 'hidden' && parseFloat(cs.opacity) > 0.2; }));
+  if (!blocks.length) return {found: false, hidden: true};
+  const rank = e => (['P', 'BLOCKQUOTE'].includes(e.tagName) ? 0 : e.tagName === 'LI' ? 1 : 2);
+  blocks.sort((a, b) => rank(a) - rank(b) || (a.textContent.length - b.textContent.length));
   const el = blocks[0];
   // map simplified text back to text nodes to measure each word
   const nodes = []; const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -71,6 +76,16 @@ JS_FIND = r"""
 """
 
 
+def _blank(path: Path) -> bool:
+    """True if the image is (almost) one flat colour: nothing readable was captured."""
+    try:
+        from PIL import Image, ImageStat
+        im = Image.open(path).convert("L")
+        return ImageStat.Stat(im).stddev[0] < 4
+    except Exception:
+        return True
+
+
 def _reject_cookies(page) -> None:
     for frame in [page] + list(page.frames):
         for label in REJECT:
@@ -84,7 +99,7 @@ def _reject_cookies(page) -> None:
                 continue
 
 
-def capture(items: list[dict], outdir: Path) -> list[dict]:
+def capture(items: list[dict], outdir: Path, first: int = 1) -> list[dict]:
     """Adds kind ("screenshot" | "rebuilt"), files and word boxes to each review; drops wrong quotes."""
     if not items:
         return []
@@ -100,7 +115,7 @@ def capture(items: list[dict], outdir: Path) -> list[dict]:
         ctx = browser.new_context(viewport={"width": 1100, "height": 1400}, device_scale_factor=2,
                                   locale="en-GB", user_agent=(
             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"))
-        for i, r in enumerate(items, 1):
+        for i, r in enumerate(items, first):
             r = {**r, "kind": "rebuilt"}
             page = ctx.new_page()
             try:
@@ -119,12 +134,24 @@ def capture(items: list[dict], outdir: Path) -> list[dict]:
                         log.warning("Press cut %d (%s): quote not on the page; review dropped.", i, r["outlet"])
                     continue
                 para = outdir / f"press_{i}_para.png"
-                page.locator("[data-tot-quote]").first.screenshot(path=str(para))
+                loc = page.locator("[data-tot-quote]").first
+                loc.screenshot(path=str(para))
+                if _blank(para):                       # lazy text or a hidden copy: wait, try once more
+                    loc.scroll_into_view_if_needed(); page.wait_for_timeout(2000)
+                    loc.screenshot(path=str(para))
+                if _blank(para):
+                    para.unlink(missing_ok=True)
+                    log.info("Press cut %d (%s): screenshot came out blank; rebuilt clipping.", i, r["outlet"])
+                    out.append(r)
+                    continue
                 files = {"para": para.name}
                 if res.get("head"):
                     head = outdir / f"press_{i}_head.png"
                     page.locator("[data-tot-head]").first.screenshot(path=str(head))
-                    files["head"] = head.name
+                    if _blank(head):
+                        head.unlink(missing_ok=True)
+                    else:
+                        files["head"] = head.name
                 r.update(kind="screenshot", files=files, rects=res["rects"], box={"w": res["w"], "h": res["h"]},
                          verified=True)
                 log.info("Press cut %d (%s): screenshot taken.", i, r["outlet"])
@@ -135,5 +162,4 @@ def capture(items: list[dict], outdir: Path) -> list[dict]:
             finally:
                 page.close()
         browser.close()
-    (outdir / "reviews.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return out
