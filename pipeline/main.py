@@ -12,6 +12,7 @@ Without --pick, the next line of data/queue.txt is used (and removed after a suc
 import argparse
 import os
 import sys
+from pathlib import Path
 from datetime import date
 
 from . import critic, factcheck, history, notify, render, shorts, thumbs, visuals, voice, writer
@@ -141,6 +142,38 @@ def show_data(pick: str | None) -> int:
     return 0
 
 
+REVIEW = DATA_DIR / "review"
+
+
+def _visual_note(v: dict) -> str:
+    v = v or {}
+    t = v.get("type", "")
+    extra = v.get("photo") or v.get("speaker") or v.get("caption") or v.get("text") or ""
+    return f"{t}{': ' + str(extra)[:60] if extra else ''}"
+
+
+def write_draft(pack: dict, script: dict, shorts_list: list, cfg: dict) -> Path:
+    """A readable draft for the owner: titles, every scene's words and what is on screen, the Shorts."""
+    REVIEW.mkdir(parents=True, exist_ok=True)
+    slug = slugify(str(pack["fixture_id"]))
+    words = sum(len(sc["narration"].split()) for sc in script["scenes"])
+    L = [f"# Draft: {pack['home']} vs {pack['away']}", "",
+         f"{pack['competition']} | about {words / cfg['writer']['words_per_minute']:.1f} min | "
+         f"voice: {cfg['voice'].get('everygen_voice', '')}", "",
+         "Reply **approve**, or say what to change (scene number + what). Nothing is voiced or rendered "
+         "until you approve.", "", "## Title options"]
+    L += [f"{i}. {t}" for i, t in enumerate(script.get("title_options", []), 1)]
+    for sc in script["scenes"]:
+        L += ["", f"## Scene {sc['id']}" + (f" | {sc['on_screen']}" if sc.get("on_screen") else "")]
+        for sh in sc.get("shots") or [{"text": sc["narration"], "visual": sc.get("visual")}]:
+            L += [f"- {sh.get('text', '').strip()}", f"  *On screen: {_visual_note(sh.get('visual'))}*"]
+    for x in shorts_list or []:
+        L += ["", f"## Short {x['id']} ({x.get('format', '')}): {x.get('title', '')}", "", x["narration"]]
+    path = REVIEW / f"{slug}.md"
+    path.write_text("\n".join(L) + "\n", encoding="utf-8")
+    return path
+
+
 def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = False) -> int:
     cfg = load_config()
     from_queue = False
@@ -184,6 +217,25 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
     if cached.get("script") and not os.environ.get("NEW_SCRIPT"):
         log.info("Using the saved, fact-checked script for this match (set NEW_SCRIPT=1 to write a new one).")
         script, report = cached["script"], cached["report"]
+        if cached.get("edited"):       # the owner changed the draft: check the new words again
+            for sc in script["scenes"]:     # narration is always the shot texts, in order
+                if sc.get("shots"):
+                    sc["narration"] = " ".join((sh.get("text") or "").strip() for sh in sc["shots"]).strip()
+            report = factcheck.check(cfg, script, pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
+            sh_list = cached.get("shorts") or []
+            if report["ok"] and sh_list:
+                for x in sh_list:
+                    if x.get("shots"):
+                        x["narration"] = " ".join((h.get("text") or "").strip() for h in x["shots"]).strip()
+                sr = factcheck.check(cfg, shorts._as_script(sh_list), pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
+                if not sr["ok"]:
+                    report = {"ok": False, "problems": ["Short: " + p for p in sr["problems"]]}
+            if report["ok"]:
+                cached = {**cached, "script": script, "report": report, "shorts": sh_list, "edited": False}
+                write_json(cache_file, cached)
+                log.info("Edited draft passed the fact-check again.")
+            else:
+                raise StopPipeline("Your edits failed the fact-check:\n- " + "\n- ".join(report["problems"][:10]))
     else:
         script, report = get_script(cfg, pack, use_ai=bool(secret("ANTHROPIC_API_KEY")))
         if not dry_run and report.get("ok"):
@@ -218,7 +270,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
             "slug": slugify(str(pack["fixture_id"])), "home": pack["home"], "away": pack["away"],
             "voice": cfg["voice"].get("everygen_voice", "alex"), "items": items,
             "characters": sum(len(i["text"]) for i in items)})
-        notify.send(f"Script ready for {pack['home']} vs {pack['away']}: {len(items)} voice parts needed.")
+        write_draft(pack, script, prepared, cfg)
+        notify.send(f"Draft script ready for {pack['home']} vs {pack['away']}: please read and approve.")
         log.info("Prepared: %d voice parts written to data/dashboard/voice_needed.json", len(items))
         return 0
 
