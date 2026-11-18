@@ -316,7 +316,7 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
     from . import nametags
     named = {p["name"] for p in nametags.mentioned([sc["narration"] for sc in script["scenes"]], nametags.roster(pack))}
     for ph in pack.get("photos") or []:
-        if ph["name"] in used or ph["name"] in named:
+        if ph["name"] in used or ph["name"] in named or ph.get("role", "").startswith("Stadium"):
             credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via {ph.get('via', 'Wikimedia Commons')} ({ph['page']})")
     for q in pack.get("press") or []:
         credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())

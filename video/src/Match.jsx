@@ -125,9 +125,11 @@ const ShotFade = ({ len, last, exit, children }) => {
   return <AbsoluteFill style={{ opacity: Math.min(a, b) }}>{children}</AbsoluteFill>;
 };
 
-const Backdrop = ({ props }) => {
+const Backdrop = ({ props, sceneId = 0 }) => {
   const f = useCurrentFrame();
-  const st = (props.photos || []).find((p) => p.role === "Stadium");
+  const all = props.photos || [];
+  const inside = all.filter((p) => p.role === "Stadium inside");
+  const st = inside.length ? inside[sceneId % inside.length] : all.find((p) => p.role === "Stadium");
   if (!st) return null;
   return (
     <AbsoluteFill>
@@ -159,7 +161,7 @@ const SceneShell = ({ scene, props }) => {
             <ShotFade len={Math.max(len, 10)} last={i + 1 === shots.length} exit={exit}>
               {isPhoto ? <FullPhoto visual={sh.visual} props={props} dur={len} /> : (
                 <AbsoluteFill>
-                  <Backdrop props={props} />
+                  <Backdrop props={props} sceneId={scene.id} />
                   <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
                     <SceneVisual scene={{ ...scene, visual: sh.visual, durationInFrames: len }} props={props} />
                   </div>

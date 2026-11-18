@@ -37,6 +37,9 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    that person is the subject (a quote, a rating, an
                                                    absence). The caption must be true; never claim the
                                                    photo is from this match.
+  Stadium photos ("Stadium" and "Stadium inside" roles) set the scene: use an inside view full-screen
+  for the cold open or the moment the match starts ("Olympiastadion, Berlin. Minute 25."), with a
+  caption that names the stadium only (never claim it shows this match).
 - {"type": "player_ratings"}                    -> best and lowest-rated starters with FotMob ratings.
 - {"type": "quote_card", "quote": str, "speaker": str, "role": str, "outlet": str}
                                                 -> press-room style quote card. The quote must be copied

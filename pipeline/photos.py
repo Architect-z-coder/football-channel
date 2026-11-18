@@ -117,6 +117,23 @@ def _best_photo(person: dict) -> dict | None:
     """Search Commons with context first (press conference for coaches, playing for players),
     then the person's Wikidata portrait."""
     name = person["name"]
+    if person.get("role") == "Stadium inside":               # stands, pitch, interior views
+        base = person["stadium"].split(",")[0]
+        key = next((w.lower() for w in base.split() if len(w) > 3), base.lower())
+        seen, hits = set(), []
+        for q in (f'"{base}" interior', f'"{base}" inside', f'"{base}" stands', f'"{base}" pitch',
+                  f'"{base}" match', f'"{base}" tribune'):
+            try:
+                for h in _commons_search(q):
+                    t = h["title"].lower()
+                    if key in t and h["url"] not in seen and not any(x in t for x in ("aerial", "exterior",
+                                                                                     "outside", "map", "logo", "plan")):
+                        seen.add(h["url"]); hits.append(h)
+            except Exception as e:
+                log.info("Commons search failed for %s: %s", q, e)
+            if len(hits) > person.get("pick", 0) + 2:
+                break
+        return hits[person.get("pick", 0)] if len(hits) > person.get("pick", 0) else None
     if person.get("role") == "Stadium":                       # places: plain search, no name filter
         hits = _commons_search(f'"{name.split(",")[0]}"')
         if hits:
@@ -146,7 +163,7 @@ def _best_photo(person: dict) -> dict | None:
         return None
 
 
-def find(people: list[dict], outdir: Path, limit: int = 12, start: int = 0) -> list[dict]:
+def find(people: list[dict], outdir: Path, limit: int = 15, start: int = 0) -> list[dict]:
     """people: [{"name", "role", "team"}]. Returns photos saved in outdir with credits."""
     out, seen = [], set()
     outdir.mkdir(parents=True, exist_ok=True)
@@ -157,6 +174,8 @@ def find(people: list[dict], outdir: Path, limit: int = 12, start: int = 0) -> l
         try:
             info = _best_photo(p)
             if not info:
+                continue
+            if any(o.get("url") == info.get("url") for o in out):
                 continue
             dest = outdir / f"photo_{start + len(out) + 1}.jpg"
             import io
@@ -186,6 +205,9 @@ def people_in(pack: dict) -> list[dict]:
     ppl = []
     if f.get("stadium"):
         ppl.append({"name": f["stadium"], "role": "Stadium", "team": ""})
+        for k in range(3):        # up to three views from inside the ground
+            ppl.append({"name": f"{f['stadium']} (inside, view {k + 1})", "role": "Stadium inside",
+                        "stadium": f["stadium"], "pick": k, "team": ""})
     for side in ("home", "away"):
         team = pack[side]
         if f.get(f"{side}_coach"):
