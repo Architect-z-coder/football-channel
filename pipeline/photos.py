@@ -254,7 +254,23 @@ def _pick_person(person: dict) -> dict | None:
         text = plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " "))
         return all(m in text for m in must)
 
+    is_coach = "coach" in (person.get("role") or "").lower()
+    COACH_WORDS = ("coach", "manager", "trainer", "press conference", "pressekonferenz", "bench", "head coach",
+                   "entrenador", "allenatore", "entraineur", "conférence", "conferencia", "rueda de prensa",
+                   "persconferentie", "bondscoach", "coaching", "sideline", "touchline")
+
+    def as_coach(c) -> bool:
+        """A coach is shown only in a photo taken as a coach: coaching words, or a recent year."""
+        t = plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " "))
+        if any(plain(w) in t for w in COACH_WORDS):
+            return True
+        y = _year(c.get("title", ""))
+        from datetime import date
+        return bool(y and y >= date.today().year - 7)
+
     def add(c):
+        if is_coach and c and not as_coach(c):
+            return
         if c and c.get("url") and c["url"] not in seen and right_person(c):
             seen.add(c["url"]); cands.append(c)
     for q in queries:
