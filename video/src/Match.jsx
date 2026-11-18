@@ -4,6 +4,7 @@ import {
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
 import { NameTags } from "./NameTag";
+import { Headline } from "./Newspaper";
 import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
 const TAIL = 12; // frames of silence at the end of each scene (matches Python PAD)
@@ -173,11 +174,8 @@ const SceneShell = ({ scene, props }) => {
         transform: `translateX(${(1 - enter) * 160}px) scale(${0.96 + 0.04 * exit})`,
       }}>
         {kicker ? (
-          <div style={{
-            position: "absolute", top: 120, left: 60, fontFamily: BODY, fontWeight: 800,
-            fontSize: 26, letterSpacing: 2, color: C.bg, background: C.accent,
-            padding: "8px 18px", borderRadius: 8, textTransform: "uppercase",
-          }}>{kicker}</div>
+          <Headline text={kicker} channel={props.channel} sceneNo={scene.id}
+                    kicker={`${props.competition} · ${props.home} v ${props.away}`} />
         ) : null}
         {scene.shots && scene.shots.length ? null : (
           <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
@@ -185,7 +183,7 @@ const SceneShell = ({ scene, props }) => {
           </div>
         )}
       </AbsoluteFill>
-      <NameTags tags={scene.tags} />
+      <NameTags tags={scene.tags} channel={props.channel} />
       <Captions text={scene.narration} speakFrames={Math.max(15, dur - TAIL)} wordStarts={scene.wordStarts} />
     </AbsoluteFill>
   );

@@ -5,6 +5,7 @@ import { C, HEAD, BODY } from "./theme";
 import { SceneVisual, findPhoto } from "./scenes";
 import { Captions } from "./Match";
 import { NameTags } from "./NameTag";
+import { ShortFront } from "./Newspaper";
 
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
 const END = 45; // frames of the closing card
@@ -66,19 +67,8 @@ export const Short = (props) => {
       <div style={{ position: "absolute", zIndex: 5, top: 70, left: 60, right: 60, height: 8, background: C.line, borderRadius: 4 }}>
         <div style={{ width: `${progress * 100}%`, height: "100%", background: C.accent, borderRadius: 4 }} />
       </div>
-      <div style={{ position: "absolute", zIndex: 5, top: 110, left: 60, right: 60, display: "flex", gap: 14,
-                    alignItems: "center", color: C.muted, fontWeight: 700, fontSize: 30, letterSpacing: 2 }}>
-        <div style={{ width: 16, height: 16, borderRadius: 8, background: C.accent }} />
-        {props.channel.toUpperCase()}
-      </div>
-      <div style={{ position: "absolute", zIndex: 5, top: 190, left: 60, right: 60, fontFamily: HEAD, fontSize: short.hook.length > 26 ? 90 : 112,
-                    lineHeight: 1.02, color: C.text, textTransform: "uppercase",
-                    opacity: hookIn, transform: `translateY(${(1 - hookIn) * 40}px)` }}>
-        {short.hook}
-      </div>
-      <div style={{ position: "absolute", zIndex: 5, top: 580, left: 60, color: C.muted, fontSize: 30, fontWeight: 600 }}>
-        {props.home} v {props.away} · {props.competition}
-      </div>
+      <ShortFront hook={short.hook} channel={props.channel}
+                  line={`${props.competition} · ${props.home} v ${props.away}`} />
       {(short.shots && short.shots.length ? short.shots : [{ from: 0, visual: short.visual }]).map((sh, i, arr) => {
         const next = i + 1 < arr.length ? arr[i + 1].from : speak;
         const len = Math.max(10, next - sh.from + (i + 1 < arr.length ? 8 : 0));
@@ -101,7 +91,7 @@ export const Short = (props) => {
           </Sequence>
         );
       })}
-      <NameTags tags={short.tags} left={50} bottom={520} scale={1.15} />
+      <NameTags tags={short.tags} channel={props.channel} left={60} bottom={480} scale={1.3} />
       {f < speak ? (
         <Captions text={short.narration} speakFrames={speak - 10} wordStarts={short.wordStarts}
                   per={4} size={72} bottom={270} maxWidth={980} />
