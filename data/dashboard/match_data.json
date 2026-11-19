@@ -107,7 +107,7 @@
       ]
     }
   ],
-  "updated": "2026-11-19T08:54:52Z",
+  "updated": "2026-11-19T08:57:47Z",
   "fixture_id": "fotmob-5181799",
   "home": "France",
   "away": "Turkiye",
@@ -341,6 +341,571 @@
       "id": "away_fouls",
       "label": "Turkiye fouls committed (FotMob)",
       "value": 11
+    },
+    {
+      "id": "home_defenders_touches",
+      "label": "France defenders (4 players): Touches, total (FotMob)",
+      "value": 217
+    },
+    {
+      "id": "home_defenders_touches_in_opposition_box",
+      "label": "France defenders (4 players): Touches in opposition box, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_defenders_recoveries",
+      "label": "France defenders (4 players): Recoveries, total (FotMob)",
+      "value": 16
+    },
+    {
+      "id": "home_defenders_duels_won",
+      "label": "France defenders (4 players): Duels won, total (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "home_defenders_duels_lost",
+      "label": "France defenders (4 players): Duels lost, total (FotMob)",
+      "value": 12
+    },
+    {
+      "id": "home_defenders_interceptions",
+      "label": "France defenders (4 players): Interceptions, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_defenders_clearances",
+      "label": "France defenders (4 players): Clearances, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "home_defenders_blocks",
+      "label": "France defenders (4 players): Blocks, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "home_defenders_aerial_duels_won",
+      "label": "France defenders (4 players): Aerial duels won, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_defenders_ground_duels_won",
+      "label": "France defenders (4 players): Ground duels won, total (FotMob)",
+      "value": 8
+    },
+    {
+      "id": "home_defenders_passes_into_final_third",
+      "label": "France defenders (4 players): Passes into final third, total (FotMob)",
+      "value": 16
+    },
+    {
+      "id": "home_defenders_accurate_passes",
+      "label": "France defenders (4 players): Accurate passes, total (FotMob)",
+      "value": 167
+    },
+    {
+      "id": "home_defenders_dispossessed",
+      "label": "France defenders (4 players): Dispossessed, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_defenders_defensive_actions",
+      "label": "France defenders (4 players): Defensive actions, total (FotMob)",
+      "value": 16
+    },
+    {
+      "id": "home_defenders_chances_created",
+      "label": "France defenders (4 players): Chances created, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_defenders_accurate_long_balls",
+      "label": "France defenders (4 players): Accurate long balls, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_defenders_was_fouled",
+      "label": "France defenders (4 players): Was fouled, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_defenders_fouls_committed",
+      "label": "France defenders (4 players): Fouls committed, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_midfielders_touches",
+      "label": "France midfielders (7 players): Touches, total (FotMob)",
+      "value": 375
+    },
+    {
+      "id": "home_midfielders_touches_in_opposition_box",
+      "label": "France midfielders (7 players): Touches in opposition box, total (FotMob)",
+      "value": 18
+    },
+    {
+      "id": "home_midfielders_recoveries",
+      "label": "France midfielders (7 players): Recoveries, total (FotMob)",
+      "value": 27
+    },
+    {
+      "id": "home_midfielders_duels_won",
+      "label": "France midfielders (7 players): Duels won, total (FotMob)",
+      "value": 19
+    },
+    {
+      "id": "home_midfielders_duels_lost",
+      "label": "France midfielders (7 players): Duels lost, total (FotMob)",
+      "value": 24
+    },
+    {
+      "id": "home_midfielders_interceptions",
+      "label": "France midfielders (7 players): Interceptions, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "home_midfielders_clearances",
+      "label": "France midfielders (7 players): Clearances, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_midfielders_blocks",
+      "label": "France midfielders (7 players): Blocks, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "home_midfielders_aerial_duels_won",
+      "label": "France midfielders (7 players): Aerial duels won, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_midfielders_ground_duels_won",
+      "label": "France midfielders (7 players): Ground duels won, total (FotMob)",
+      "value": 17
+    },
+    {
+      "id": "home_midfielders_passes_into_final_third",
+      "label": "France midfielders (7 players): Passes into final third, total (FotMob)",
+      "value": 28
+    },
+    {
+      "id": "home_midfielders_accurate_passes",
+      "label": "France midfielders (7 players): Accurate passes, total (FotMob)",
+      "value": 269
+    },
+    {
+      "id": "home_midfielders_successful_dribbles",
+      "label": "France midfielders (7 players): Successful dribbles, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "home_midfielders_dispossessed",
+      "label": "France midfielders (7 players): Dispossessed, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_midfielders_defensive_actions",
+      "label": "France midfielders (7 players): Defensive actions, total (FotMob)",
+      "value": 19
+    },
+    {
+      "id": "home_midfielders_chances_created",
+      "label": "France midfielders (7 players): Chances created, total (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "home_midfielders_accurate_long_balls",
+      "label": "France midfielders (7 players): Accurate long balls, total (FotMob)",
+      "value": 8
+    },
+    {
+      "id": "home_midfielders_was_fouled",
+      "label": "France midfielders (7 players): Was fouled, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_midfielders_fouls_committed",
+      "label": "France midfielders (7 players): Fouls committed, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "home_forwards_touches",
+      "label": "France forwards (3 players): Touches, total (FotMob)",
+      "value": 167
+    },
+    {
+      "id": "home_forwards_touches_in_opposition_box",
+      "label": "France forwards (3 players): Touches in opposition box, total (FotMob)",
+      "value": 32
+    },
+    {
+      "id": "home_forwards_recoveries",
+      "label": "France forwards (3 players): Recoveries, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "home_forwards_duels_won",
+      "label": "France forwards (3 players): Duels won, total (FotMob)",
+      "value": 13
+    },
+    {
+      "id": "home_forwards_duels_lost",
+      "label": "France forwards (3 players): Duels lost, total (FotMob)",
+      "value": 8
+    },
+    {
+      "id": "home_forwards_interceptions",
+      "label": "France forwards (3 players): Interceptions, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_forwards_clearances",
+      "label": "France forwards (3 players): Clearances, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "home_forwards_blocks",
+      "label": "France forwards (3 players): Blocks, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "home_forwards_aerial_duels_won",
+      "label": "France forwards (3 players): Aerial duels won, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_forwards_ground_duels_won",
+      "label": "France forwards (3 players): Ground duels won, total (FotMob)",
+      "value": 12
+    },
+    {
+      "id": "home_forwards_passes_into_final_third",
+      "label": "France forwards (3 players): Passes into final third, total (FotMob)",
+      "value": 13
+    },
+    {
+      "id": "home_forwards_accurate_passes",
+      "label": "France forwards (3 players): Accurate passes, total (FotMob)",
+      "value": 95
+    },
+    {
+      "id": "home_forwards_successful_dribbles",
+      "label": "France forwards (3 players): Successful dribbles, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "home_forwards_dispossessed",
+      "label": "France forwards (3 players): Dispossessed, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_forwards_defensive_actions",
+      "label": "France forwards (3 players): Defensive actions, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "home_forwards_chances_created",
+      "label": "France forwards (3 players): Chances created, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "home_forwards_accurate_long_balls",
+      "label": "France forwards (3 players): Accurate long balls, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_forwards_was_fouled",
+      "label": "France forwards (3 players): Was fouled, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_forwards_fouls_committed",
+      "label": "France forwards (3 players): Fouls committed, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_touches",
+      "label": "Turkiye defenders (5 players): Touches, total (FotMob)",
+      "value": 208
+    },
+    {
+      "id": "away_defenders_touches_in_opposition_box",
+      "label": "Turkiye defenders (5 players): Touches in opposition box, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "away_defenders_recoveries",
+      "label": "Turkiye defenders (5 players): Recoveries, total (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "away_defenders_duels_won",
+      "label": "Turkiye defenders (5 players): Duels won, total (FotMob)",
+      "value": 14
+    },
+    {
+      "id": "away_defenders_duels_lost",
+      "label": "Turkiye defenders (5 players): Duels lost, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_defenders_interceptions",
+      "label": "Turkiye defenders (5 players): Interceptions, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "away_defenders_clearances",
+      "label": "Turkiye defenders (5 players): Clearances, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "away_defenders_blocks",
+      "label": "Turkiye defenders (5 players): Blocks, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_defenders_aerial_duels_won",
+      "label": "Turkiye defenders (5 players): Aerial duels won, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_defenders_ground_duels_won",
+      "label": "Turkiye defenders (5 players): Ground duels won, total (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "away_defenders_passes_into_final_third",
+      "label": "Turkiye defenders (5 players): Passes into final third, total (FotMob)",
+      "value": 13
+    },
+    {
+      "id": "away_defenders_accurate_passes",
+      "label": "Turkiye defenders (5 players): Accurate passes, total (FotMob)",
+      "value": 130
+    },
+    {
+      "id": "away_defenders_successful_dribbles",
+      "label": "Turkiye defenders (5 players): Successful dribbles, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_defenders_dispossessed",
+      "label": "Turkiye defenders (5 players): Dispossessed, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_defenders_defensive_actions",
+      "label": "Turkiye defenders (5 players): Defensive actions, total (FotMob)",
+      "value": 25
+    },
+    {
+      "id": "away_defenders_chances_created",
+      "label": "Turkiye defenders (5 players): Chances created, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_accurate_long_balls",
+      "label": "Turkiye defenders (5 players): Accurate long balls, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_defenders_was_fouled",
+      "label": "Turkiye defenders (5 players): Was fouled, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_defenders_fouls_committed",
+      "label": "Turkiye defenders (5 players): Fouls committed, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_midfielders_touches",
+      "label": "Turkiye midfielders (7 players): Touches, total (FotMob)",
+      "value": 248
+    },
+    {
+      "id": "away_midfielders_touches_in_opposition_box",
+      "label": "Turkiye midfielders (7 players): Touches in opposition box, total (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "away_midfielders_recoveries",
+      "label": "Turkiye midfielders (7 players): Recoveries, total (FotMob)",
+      "value": 24
+    },
+    {
+      "id": "away_midfielders_duels_won",
+      "label": "Turkiye midfielders (7 players): Duels won, total (FotMob)",
+      "value": 19
+    },
+    {
+      "id": "away_midfielders_duels_lost",
+      "label": "Turkiye midfielders (7 players): Duels lost, total (FotMob)",
+      "value": 21
+    },
+    {
+      "id": "away_midfielders_interceptions",
+      "label": "Turkiye midfielders (7 players): Interceptions, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_midfielders_clearances",
+      "label": "Turkiye midfielders (7 players): Clearances, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_midfielders_blocks",
+      "label": "Turkiye midfielders (7 players): Blocks, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "away_midfielders_aerial_duels_won",
+      "label": "Turkiye midfielders (7 players): Aerial duels won, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_midfielders_ground_duels_won",
+      "label": "Turkiye midfielders (7 players): Ground duels won, total (FotMob)",
+      "value": 18
+    },
+    {
+      "id": "away_midfielders_passes_into_final_third",
+      "label": "Turkiye midfielders (7 players): Passes into final third, total (FotMob)",
+      "value": 15
+    },
+    {
+      "id": "away_midfielders_accurate_passes",
+      "label": "Turkiye midfielders (7 players): Accurate passes, total (FotMob)",
+      "value": 152
+    },
+    {
+      "id": "away_midfielders_successful_dribbles",
+      "label": "Turkiye midfielders (7 players): Successful dribbles, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_midfielders_dispossessed",
+      "label": "Turkiye midfielders (7 players): Dispossessed, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_midfielders_defensive_actions",
+      "label": "Turkiye midfielders (7 players): Defensive actions, total (FotMob)",
+      "value": 13
+    },
+    {
+      "id": "away_midfielders_chances_created",
+      "label": "Turkiye midfielders (7 players): Chances created, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "away_midfielders_accurate_long_balls",
+      "label": "Turkiye midfielders (7 players): Accurate long balls, total (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "away_midfielders_was_fouled",
+      "label": "Turkiye midfielders (7 players): Was fouled, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_midfielders_fouls_committed",
+      "label": "Turkiye midfielders (7 players): Fouls committed, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_forwards_touches",
+      "label": "Turkiye forwards (3 players): Touches, total (FotMob)",
+      "value": 81
+    },
+    {
+      "id": "away_forwards_touches_in_opposition_box",
+      "label": "Turkiye forwards (3 players): Touches in opposition box, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_forwards_recoveries",
+      "label": "Turkiye forwards (3 players): Recoveries, total (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "away_forwards_duels_won",
+      "label": "Turkiye forwards (3 players): Duels won, total (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "away_forwards_duels_lost",
+      "label": "Turkiye forwards (3 players): Duels lost, total (FotMob)",
+      "value": 17
+    },
+    {
+      "id": "away_forwards_interceptions",
+      "label": "Turkiye forwards (3 players): Interceptions, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_forwards_clearances",
+      "label": "Turkiye forwards (3 players): Clearances, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_forwards_blocks",
+      "label": "Turkiye forwards (3 players): Blocks, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "away_forwards_aerial_duels_won",
+      "label": "Turkiye forwards (3 players): Aerial duels won, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_forwards_ground_duels_won",
+      "label": "Turkiye forwards (3 players): Ground duels won, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_forwards_passes_into_final_third",
+      "label": "Turkiye forwards (3 players): Passes into final third, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_forwards_accurate_passes",
+      "label": "Turkiye forwards (3 players): Accurate passes, total (FotMob)",
+      "value": 23
+    },
+    {
+      "id": "away_forwards_successful_dribbles",
+      "label": "Turkiye forwards (3 players): Successful dribbles, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_forwards_dispossessed",
+      "label": "Turkiye forwards (3 players): Dispossessed, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_forwards_defensive_actions",
+      "label": "Turkiye forwards (3 players): Defensive actions, total (FotMob)",
+      "value": 8
+    },
+    {
+      "id": "away_forwards_chances_created",
+      "label": "Turkiye forwards (3 players): Chances created, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "away_forwards_accurate_long_balls",
+      "label": "Turkiye forwards (3 players): Accurate long balls, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_forwards_was_fouled",
+      "label": "Turkiye forwards (3 players): Was fouled, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_forwards_fouls_committed",
+      "label": "Turkiye forwards (3 players): Fouls committed, total (FotMob)",
+      "value": 4
     },
     {
       "id": "home_formation",
