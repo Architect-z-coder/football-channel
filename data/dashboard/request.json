@@ -1,6 +1,6 @@
 {
-  "id": "fra-tur-prep-4",
-  "mode": "prepare",
+  "id": "fra-tur-render-1",
+  "mode": "no-upload",
   "match": "France Turkey",
   "look_back_days": ""
 }
