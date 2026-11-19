@@ -476,5 +476,447 @@
       },
       "verified": true
     }
-  ]
+  ],
+  "script": {
+    "title_options": [
+      "France 2-1 Turkiye: 7 big chances, 6 missed",
+      "Why France only won 2-1 in Bordeaux",
+      "The own goal, the late header and the 0.86 miss"
+    ],
+    "thumbnail_texts": [
+      "6 OF 7 MISSED",
+      "THE 0.86 MISS",
+      "MINUTE 90"
+    ],
+    "description": "France beat Turkiye 2-1 in Bordeaux and reached the Nations League quarter-finals. They created 3.36 expected goals to Turkiye's 1.54, yet needed an own goal at minute 49 and Kroupi's strike at minute 80, and Bardakci's header at minute 90 made the ending tense. We ask how a team makes 7 big chances and wins by one goal, following Rayan Cherki, Arda Güler and Emirhan Topçu.\n\nWe use pre-match words from Zinédine Zidane (Flashscore) and Sergen Yalçın (Türkiye Today), and the match report from Ouest-France. Data: FotMob.",
+    "tags": [
+      "France",
+      "Turkiye",
+      "Nations League",
+      "Rayan Cherki",
+      "Arda Güler",
+      "Kylian Mbappé",
+      "Bradley Barcola",
+      "xG",
+      "football analysis",
+      "match story",
+      "Zinédine Zidane"
+    ],
+    "scenes": [
+      {
+        "id": 1,
+        "beat": "COLD OPEN",
+        "on_screen": "Ninety minutes, one header",
+        "fact_ids": [
+          "home_xg",
+          "home_big_chances",
+          "goal_2",
+          "goal_3"
+        ],
+        "shots": [
+          {
+            "text": "France create 3.36 expected goals, or xG, and still have to survive the end of the match in Bordeaux. How does a team make 7 big chances and win by only one goal? xG is simply what the chances were worth in goals.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 5,
+              "photo": "Abdülkerim Bardakci",
+              "caption": "Abdülkerim Bardakci"
+            }
+          },
+          {
+            "text": "Minute 90. A Turkiye corner. Abdülkerim Bardakci rises and heads it in, with Arda Güler credited with the assist. It is 2-1. Ten minutes earlier, France led 2-0.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 90
+            }
+          }
+        ],
+        "narration": "France create 3.36 expected goals, or xG, and still have to survive the end of the match in Bordeaux. How does a team make 7 big chances and win by only one goal? xG is simply what the chances were worth in goals. Minute 90. A Turkiye corner. Abdülkerim Bardakci rises and heads it in, with Arda Güler credited with the assist. It is 2-1. Ten minutes earlier, France led 2-0.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 90
+        }
+      },
+      {
+        "id": 2,
+        "beat": "THE STAKES",
+        "on_screen": "Finish the job",
+        "fact_ids": [
+          "home_form_last5",
+          "away_form_last5",
+          "home_form_record",
+          "away_form_record",
+          "away_absent_1",
+          "away_absent_2",
+          "press"
+        ],
+        "shots": [
+          {
+            "text": "Round 6 of the group. France arrive with 3 wins, 1 draw and 1 defeat in their last 5, the defeat a 3-1 loss in Italy three days earlier. Turkiye arrive with 5 defeats in 5.",
+            "visual": {
+              "type": "form_compare"
+            }
+          },
+          {
+            "text": "Zidane's words the day before were plain. In translation: we know what we must do, finish the job and qualify. He gave no details on the game plan.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
+              "speaker": "Zinédine Zidane",
+              "role": "France head coach",
+              "outlet": "Flashscore"
+            }
+          },
+          {
+            "text": "Turkiye were without the suspended Ozan Kabak and Ümit Akdağ. Sergen Yalçın said they would take a more defensive position, but still play with a striker.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 3,
+              "photo": "Ozan Kabak",
+              "caption": "Ozan Kabak, suspended"
+            }
+          }
+        ],
+        "narration": "Round 6 of the group. France arrive with 3 wins, 1 draw and 1 defeat in their last 5, the defeat a 3-1 loss in Italy three days earlier. Turkiye arrive with 5 defeats in 5. Zidane's words the day before were plain. In translation: we know what we must do, finish the job and qualify. He gave no details on the game plan. Turkiye were without the suspended Ozan Kabak and Ümit Akdağ. Sergen Yalçın said they would take a more defensive position, but still play with a striker.",
+        "visual": {
+          "type": "form_compare"
+        }
+      },
+      {
+        "id": 3,
+        "beat": "THE CHARACTERS",
+        "on_screen": "Three names to follow",
+        "fact_ids": [
+          "home_formation",
+          "away_formation",
+          "lineups",
+          "home_starting_xi",
+          "away_starting_xi"
+        ],
+        "shots": [
+          {
+            "text": "Three people carry this story. Rayan Cherki plays behind Kylian Mbappé in France's 4-2-3-1. Our reading: his job is to find gaps in a Turkiye back five.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 0,
+              "photo": "Rayan Cherki",
+              "caption": "Rayan Cherki"
+            }
+          },
+          {
+            "text": "Arda Güler, at 98 million euros, is Turkiye's most valuable starter. If Turkiye are to hurt France, our reading is that it runs through him.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 1,
+              "photo": "Arda Güler",
+              "caption": "Arda Güler"
+            }
+          },
+          {
+            "text": "And Emirhan Topçu, one of Turkiye's 3 centre-backs. A defender hopes for a quiet night. Keep minute 49 in mind.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 2,
+              "photo": "Emirhan Topçu",
+              "caption": "Emirhan Topçu"
+            }
+          }
+        ],
+        "narration": "Three people carry this story. Rayan Cherki plays behind Kylian Mbappé in France's 4-2-3-1. Our reading: his job is to find gaps in a Turkiye back five. Arda Güler, at 98 million euros, is Turkiye's most valuable starter. If Turkiye are to hurt France, our reading is that it runs through him. And Emirhan Topçu, one of Turkiye's 3 centre-backs. A defender hopes for a quiet night. Keep minute 49 in mind.",
+        "visual": {
+          "type": "photo",
+          "photo_index": 0,
+          "photo": "Rayan Cherki",
+          "caption": "Rayan Cherki"
+        }
+      },
+      {
+        "id": 4,
+        "beat": "ACT ONE",
+        "on_screen": "France press, nothing falls",
+        "fact_ids": [
+          "momentum_home_on_top_pct",
+          "ht_home",
+          "ht_away",
+          "shots",
+          "away_formation"
+        ],
+        "shots": [
+          {
+            "text": "Stade Atlantique, Bordeaux. France take control of the first half, and FotMob's momentum graph has them on top for most of it. Turkiye sit in a 5-4-1.",
+            "visual": {
+              "type": "momentum"
+            }
+          },
+          {
+            "text": "The chances come. Minute 21, Bradley Barcola breaks away and is saved. Minute 34, Mbappé shoots and is saved too. Turkiye's one real answer comes at minute 35: İsmail Yüksek's shot, worth 0.37 xG, is saved.",
+            "visual": {
+              "type": "shot_map"
+            }
+          },
+          {
+            "text": "Half time, 0-0. France dominate and have nothing to show for it. Remember that feeling. It comes back.",
+            "visual": {
+              "type": "halftime_fulltime"
+            }
+          }
+        ],
+        "narration": "Stade Atlantique, Bordeaux. France take control of the first half, and FotMob's momentum graph has them on top for most of it. Turkiye sit in a 5-4-1. The chances come. Minute 21, Bradley Barcola breaks away and is saved. Minute 34, Mbappé shoots and is saved too. Turkiye's one real answer comes at minute 35: İsmail Yüksek's shot, worth 0.37 xG, is saved. Half time, 0-0. France dominate and have nothing to show for it. Remember that feeling. It comes back.",
+        "visual": {
+          "type": "momentum"
+        }
+      },
+      {
+        "id": 5,
+        "beat": "THE TURNING POINT",
+        "on_screen": "Minute 49",
+        "fact_ids": [
+          "goal_1",
+          "home_best_chance",
+          "worst_player_1",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Minute 49. A France corner leads to two chances. Adrien Rabiot's header goes wide. Then Bradley Barcola shoots from very close to goal. That chance is worth 0.86 xG, the kind that scores about 9 times in 10. He misses.",
+            "visual": {
+              "type": "shot_map"
+            }
+          },
+          {
+            "text": "In that same minute, France take the lead anyway. The pack credits Emirhan Topçu with an own goal. It is 1-0. The numbers cannot show how it went in, only who is credited.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 49,
+                  "text": "Rabiot header wide"
+                },
+                {
+                  "minute": 49,
+                  "text": "Barcola misses, 0.86 xG"
+                },
+                {
+                  "minute": 49,
+                  "text": "Topçu own goal, 1-0"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Our reading: this is the turning point. France finally lead, but through a goal credited to a defender, not a finisher. Topçu ends with the lowest rating of any starter, 5.6.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 2,
+              "photo": "Emirhan Topçu",
+              "caption": "Emirhan Topçu"
+            }
+          }
+        ],
+        "narration": "Minute 49. A France corner leads to two chances. Adrien Rabiot's header goes wide. Then Bradley Barcola shoots from very close to goal. That chance is worth 0.86 xG, the kind that scores about 9 times in 10. He misses. In that same minute, France take the lead anyway. The pack credits Emirhan Topçu with an own goal. It is 1-0. The numbers cannot show how it went in, only who is credited. Our reading: this is the turning point. France finally lead, but through a goal credited to a defender, not a finisher. Topçu ends with the lowest rating of any starter, 5.6.",
+        "visual": {
+          "type": "shot_map"
+        }
+      },
+      {
+        "id": 6,
+        "beat": "ACT TWO",
+        "on_screen": "The second goal, the second scare",
+        "fact_ids": [
+          "goal_2",
+          "goal_3",
+          "best_player_1",
+          "best_player_2",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "France lead, but the match does not close. Mbappé shoots at minutes 64, 73 and 75, and every one is saved or blocked.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 4,
+              "photo": "Junior Kroupi",
+              "caption": "Junior Kroupi"
+            }
+          },
+          {
+            "text": "Minute 80. Substitute Junior Kroupi scores in open play with his right foot. Rayan Cherki sets it up. It is 2-0. The shot is worth only 0.15 xG, and it goes in. Cherki ends as player of the match, rated 8.4.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 80
+            }
+          },
+          {
+            "text": "Then France miss again. Minute 88, Lucas Da Cunha shoots from a 0.20 chance and misses. Two minutes later, Turkiye's best-rated player, Güler at 8.1, sets up Bardakci's header. 2-1.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 64,
+                  "text": "Mbappé shot saved"
+                },
+                {
+                  "minute": 80,
+                  "text": "Kroupi scores, 2-0"
+                },
+                {
+                  "minute": 88,
+                  "text": "Da Cunha misses"
+                },
+                {
+                  "minute": 90,
+                  "text": "Bardakci header, 2-1"
+                }
+              ]
+            }
+          }
+        ],
+        "narration": "France lead, but the match does not close. Mbappé shoots at minutes 64, 73 and 75, and every one is saved or blocked. Minute 80. Substitute Junior Kroupi scores in open play with his right foot. Rayan Cherki sets it up. It is 2-0. The shot is worth only 0.15 xG, and it goes in. Cherki ends as player of the match, rated 8.4. Then France miss again. Minute 88, Lucas Da Cunha shoots from a 0.20 chance and misses. Two minutes later, Turkiye's best-rated player, Güler at 8.1, sets up Bardakci's header. 2-1.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 80
+        }
+      },
+      {
+        "id": 7,
+        "beat": "THE HIDDEN TRUTH",
+        "on_screen": "Six misses explain the margin",
+        "fact_ids": [
+          "home_xg",
+          "home_big_chances",
+          "home_big_chances_missed",
+          "home_best_chance",
+          "goal_1",
+          "goal_2"
+        ],
+        "shots": [
+          {
+            "text": "Here is the answer. FotMob's numbers put France's chances at 3.36 xG, but only 2 goals came, and one was an own goal. France missed 6 of their 7 big chances.",
+            "visual": {
+              "type": "xg_timeline"
+            }
+          },
+          {
+            "text": "The clearest case is Barcola at minute 49. A chance worth 0.86 xG should go in.",
+            "visual": {
+              "type": "key_number",
+              "value": "0.86",
+              "label": "xG on Barcola's miss, minute 49"
+            }
+          },
+          {
+            "text": "Our reading: the margin was one goal because France's finishing was poor, not because Turkiye matched them for chances. The numbers cannot show how much was French waste and how much was Turkiye defending.",
+            "visual": {
+              "type": "shot_map"
+            }
+          }
+        ],
+        "narration": "Here is the answer. FotMob's numbers put France's chances at 3.36 xG, but only 2 goals came, and one was an own goal. France missed 6 of their 7 big chances. The clearest case is Barcola at minute 49. A chance worth 0.86 xG should go in. Our reading: the margin was one goal because France's finishing was poor, not because Turkiye matched them for chances. The numbers cannot show how much was French waste and how much was Turkiye defending.",
+        "visual": {
+          "type": "xg_timeline"
+        }
+      },
+      {
+        "id": 8,
+        "beat": "THE VERDICT",
+        "on_screen": "Finish the job, but not the chances",
+        "fact_ids": [
+          "reviews",
+          "goal_2",
+          "home_big_chances_missed"
+        ],
+        "shots": [
+          {
+            "text": "Ouest-France writes, in translation, \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').\" Here the data agrees.",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 0
+            }
+          },
+          {
+            "text": "Our verdict: France did what Zidane asked and finished the job. They qualify and top the group, the paper says. But they won it on a 0.15 chance and an own goal, not on their best moments.",
+            "visual": {
+              "type": "scoreline"
+            }
+          }
+        ],
+        "narration": "Ouest-France writes, in translation, \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').\" Here the data agrees. Our verdict: France did what Zidane asked and finished the job. They qualify and top the group, the paper says. But they won it on a 0.15 chance and an own goal, not on their best moments.",
+        "visual": {
+          "type": "press_cut",
+          "review_index": 0
+        }
+      },
+      {
+        "id": 9,
+        "beat": "WHAT IT MEANS",
+        "on_screen": "Making chances is not enough",
+        "fact_ids": [
+          "away_form_last5",
+          "best_player_2",
+          "player_of_the_match",
+          "reviews"
+        ],
+        "shots": [
+          {
+            "text": "So how does a team make 7 big chances and win by one goal? By missing 6 of them. France go through to the quarter-finals, but Ouest-France says the same wasted chances showed in Italy.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 0,
+              "photo": "Rayan Cherki",
+              "caption": "Rayan Cherki"
+            }
+          },
+          {
+            "text": "Turkiye leave Bordeaux with a late goal for Bardakci and a sixth defeat in a row. Güler, at 8.1, was good enough to lift them, but not to earn a point.",
+            "visual": {
+              "type": "photo",
+              "photo_index": 1,
+              "photo": "Arda Güler",
+              "caption": "Arda Güler"
+            }
+          },
+          {
+            "text": "Making chances is one skill. Taking them is another. Will France's misses cost them in the quarter-finals? Tell us in the comments, and subscribe to The Other Touchline.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Your call",
+              "lines": [
+                "Will the misses cost France?",
+                "Tell us below"
+              ]
+            }
+          }
+        ],
+        "narration": "So how does a team make 7 big chances and win by one goal? By missing 6 of them. France go through to the quarter-finals, but Ouest-France says the same wasted chances showed in Italy. Turkiye leave Bordeaux with a late goal for Bardakci and a sixth defeat in a row. Güler, at 8.1, was good enough to lift them, but not to earn a point. Making chances is one skill. Taking them is another. Will France's misses cost them in the quarter-finals? Tell us in the comments, and subscribe to The Other Touchline.",
+        "visual": {
+          "type": "text_card",
+          "heading": "Your call",
+          "lines": [
+            "Will the misses cost France?",
+            "Tell us below"
+          ]
+        }
+      }
+    ]
+  },
+  "report": {
+    "ok": true,
+    "problems": [],
+    "critic": {
+      "hook": 6,
+      "payoff": 6,
+      "pace": 6,
+      "clarity": 7,
+      "notes": [
+        "Scene 1 opens with \"Minute 90. A corner for Turkiye. Arda Güler gets the assist.\", a list of match events with no tension. Lead with the contrast instead: France had 3.36 xG and still needed to survive the last seconds. Make the open question the second sentence.",
+        "\"So why did France have to survive the final minutes of a match they controlled? The scoreline hides the answer.\" is a vague tease, and it promises a mystery that Scene 7 then answers with a stat dump. Ask a sharper question, such as how a team creates 7 big chances and wins by only one goal, and answer it directly in the finale.",
+        "Scene 3 sets up three \"characters\" but only Cherki gets a real arc. Güler and Topçu are just named, and Topçu's \"Remember his name\" is a setup the script never pays off beyond the own goal. Either follow all three through the match or cut to one or two.",
+        "Scene 7 (\"Data from FotMob gives France 3.36 xG... 7 big chances and missed 6... 51 touches... 20\") reads like a stats report. Cut it to xG and the 6-of-7 big chances, and tie them to a specific miss such as Barcola's 0.86 chance.",
+        "Scene 8 repeats what the story has already shown: franceinfo and Ouest-France are quoted at length, each followed by \"The data agrees\". Trim to one short quote and move on, because the \"Our verdict\" line adds nothing new.",
+        "Scene 4's momentum percentage and the 7-shot first-half breakdown (\"The other six are worth 0.06 xG or less each\") slow the pace. Keep one line about France's pressure and the Yüksek save, and cut the rest. Scene 9's closing question (\"comfortable win or a lucky one?\") feels like an engagement tag, not an answer to the opening question."
+      ]
+    },
+    "rewritten": true
+  },
+  "saved_script": "2026-11-19T00:19:34Z"
 }
