@@ -62,7 +62,7 @@ def write(cfg: dict, pack: dict, script: dict, feedback: str | None = None) -> l
             f"THE MAIN VIDEO (for context: tell DIFFERENT stories, do not copy it):\n{json.dumps(main, ensure_ascii=False)}\n")
     if feedback:
         user += f"\nYour previous shorts failed fact-checking. Fix these problems:\n{feedback}\n"
-    shorts = ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=4000).get("shorts", [])
+    shorts = ask_json(cfg["writer"]["model"], SYSTEM, user, max_tokens=12000).get("shorts", [])
     out = []
     for i, s in enumerate(shorts[: cfg.get("shorts", {}).get("count", 2)], start=1):
         shots = [x for x in s.get("shots") or [] if (x.get("text") or "").strip()]
