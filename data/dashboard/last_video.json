@@ -1,48 +1,48 @@
 {
-  "updated": "2026-11-18T21:30:53Z",
-  "home": "Germany",
-  "away": "Netherlands",
-  "competition": "UEFA Nations League A Grp. 2",
-  "fixture_id": "fotmob-5181835",
+  "updated": "2026-11-19T00:51:06Z",
+  "home": "France",
+  "away": "Turkiye",
+  "competition": "UEFA Nations League A Grp. 1",
+  "fixture_id": "fotmob-5181799",
   "titles": [
-    "How a 5-0 Hid a 1.39 to 1.11 Game",
-    "The 0.69 Miss Behind Germany's 5-0 Win",
-    "Germany 5-0 Netherlands: The Score Hides a Close Game"
+    "France 2-1 Turkiye: The Chances That Almost Cost Them",
+    "France Created Everything. Turkiye Scored in Minute 90.",
+    "Why France Won 2-1 But Still Had Questions to Answer"
   ],
-  "minutes": 4.5,
-  "files": "20261118-germany-netherlands",
+  "minutes": 4.9,
+  "files": "20261119-france-turkiye",
   "uploaded": false,
   "youtube": null,
   "critic": {
-    "hook": 7,
+    "hook": 6,
     "payoff": 6,
     "pace": 6,
     "clarity": 7,
     "notes": [
-      "Hook: \"Germany will win this match 5-0. But was it really that one-sided?\" spoils the result and then asks a weak question; open on the sharper contrast instead: a 0.69 chance missed at 0-0, then a 5-0 scoreline, with 'how did a 5-0 hide a 1.39 to 1.11 xG game?' as the question.",
-      "Scene 3 is a pause in the story: \"Klopp is the first character... The third character is on the other side\" reads like a cast list, and there is no second character. Cut the Klopp 'Wow, that was cool' quote here, or use it only as the closing payoff.",
-      "The Dumfries setup (\"Remember his name\") is never paid off: scene 6 says \"the numbers cannot show\" the rest of his night. Either cut the setup or build a real payoff on the 3.3 rating, such as the Dutch right side collapsing during the 60 to 78 minute goal run.",
-      "The Act One line \"A chance worth just 0.03 xG. It goes in\" is your best moment of data-as-story, but it is followed by a 5 goals vs 1.39 xG argument. Frame the thesis once as 'Germany took the chances the Dutch spurned' and stop repeating the 'not a massacre' point in scenes 7, 8 and 9.",
-      "Scene 2 is a dense list of coach histories, form and injuries before any action: \"Xavi Hernández took over the Netherlands after Ronald Koeman resigned, hours after a shootout loss to Morocco.\" Trim it to one stakes line (two new coaches, 1-1 in Amsterdam, Germany needing the win) and move the injuries into a single short sentence.",
-      "The ending does not fully answer the opening question and then hedges: \"Whether it is also 'Wow, that was cool' is for you to decide.\" End with a firm verdict, such as 'a close contest that Germany won in the box, and the Dutch lost there', tied back to Malen's 0.69 miss at minute 25."
+      "Opening: \"Rayan Cherki will end this night as the player of the match. But that is not what Bordeaux will talk about. Not yet.\" This is teasing, not a human situation. Open on Zidane's \"finish the work and qualify\" against a Turkiye side on five straight defeats, then ask why it ended in panic.",
+      "Scene 1 spends its first lines on Cherki and then gives away the 2-1 and the minute-90 goal as the question. Drop the Cherki tease and keep the open question about whether a lopsided night can still turn dangerous.",
+      "Scene 3 (\"Our reading: that is where chances are made. He is valued at 99 million euros.\") is a cast list that ties neither character to the story. Give Cherki and Güler one concrete stake each, for example the playmaker against the man who will set up the late goal, and cut the market values.",
+      "Scene 5: \"It is not clear from the data how the two moments connect. But the numbers suggest the lead did not come from France's best chance.\" This hedging kills the turning point. Say plainly that France missed a 0.86 chance, and that the own goal came in the same minute from the same corner.",
+      "Scene 8: \"Our numbers say tighter on the scoreboard, less so in the chances.\" This is a clumsy rebuttal of franceinfo that adds nothing. Use one press quote to land the verdict and tie it to the 6-of-7 big chances missed.",
+      "Scene 7: \"Turkiye's goalkeeper, Berke Özer, was among the four best-rated players on the night.\" This is a stat-report line, and he is a good character left underused. Give him a moment, for example the 7 saves, and link it to the minute-90 corner so the ending answers the opening question."
     ]
   },
   "rewritten": true,
   "shorts": [
     {
-      "title": "Gruda's 9.2: One Goal, Two Assists in Berlin",
-      "hook": "Gruda: 9.2 in Berlin",
+      "title": "Rayan Cherki: 8.4 rating and the pass for 2-0",
+      "hook": "Cherki: 8.4 rating",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-19"
+      "suggested_publish": "2026-11-20"
     },
     {
-      "title": "The 0.03 xG Goal That Cracked the Dutch",
-      "hook": "The 0.03 xG Goal",
+      "title": "Turkiye's 90th-minute header, after three misses",
+      "hook": "Four corner shots, one goal",
       "format": "goal_explained",
       "youtube": null,
-      "suggested_publish": "2026-11-20"
+      "suggested_publish": "2026-11-21"
     }
   ],
-  "voice": "everygen:alex"
+  "voice": "everygen:astro"
 }
