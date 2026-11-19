@@ -10,7 +10,7 @@ from . import factcheck, voice
 from .common import ai_pack, log, write_json
 from .llm import ask_json
 
-VISUALS = ["goal_replay", "quote_card", "lineups", "player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
+VISUALS = ["goal_replay", "diagnosis", "result_odds", "quote_card", "lineups", "player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
            "table_snapshot", "form_compare", "history_lens"]
 
 SYSTEM = f"""You write 2 YouTube Shorts about one football match for a faceless storytelling channel.
@@ -36,9 +36,15 @@ imitate any real writer, never borrow their phrases):
 1. "player_spotlight" - the best-rated player of the match (from the pack's ratings): who he is in this
    story, what he did (goals, assists, chances, duels from the pack), why it mattered, what it says about
    his team or coach. Hook = his rating or his most striking act.
-2. "goal_explained" - the single goal that best tells the match story: the situation before it, how it
-   happened (minute, scorer, assist, header/foot, corner/open play, xG - only what the pack gives), and
-   why it changed the match. Use a goal_replay shot.
+2. "turning_point" - THE thing that decided this match, the differentiator. First find it, then tell it:
+   it may be a goal, but just as well a tactic or pattern (set pieces, a deep block that held then broke,
+   a pressing plan), a substitution, a red card, a keeper's night, or a swing in momentum. Use the
+   diag_* facts to prove it (set-piece vs open-play xG, finishing vs xG, goals prevented, the 20,000
+   replays) and the coaches' or papers' words when they name it. Structure: the situation before ->
+   the moment or pattern -> why it changed the match -> what it says. If it is a goal, use a
+   goal_replay shot ({{"type": "goal_replay", "minute": <the goal's minute>}}, never for an own goal);
+   otherwise momentum, shot_map, diagnosis, result_odds or a stat graphic. Hook = the turning point in
+   a few words ("Minute 49 changed everything", "Set pieces won this").
 
 RULES
 1. Closed book: every number, name, minute and claim must come from the data pack. Digits in narration.
@@ -53,7 +59,7 @@ RULES
 6. Never mention politics, transfer rumours, betting, injury speculation or private lives.
 Never say "the pack" or "the data pack" to the viewer; say "the match data" or just state the fact.
 Return ONLY JSON: {{"shorts": [{{"id": 1, "format": "player_spotlight", "title": str, "hook": str,
-  "shots": [{{"text": str, "visual": {{...}}}}], "fact_ids": [str]}}, {{"id": 2, "format": "goal_explained", ...}}]}}"""
+  "shots": [{{"text": str, "visual": {{...}}}}], "fact_ids": [str]}}, {{"id": 2, "format": "turning_point", ...}}]}}"""
 
 
 def write(cfg: dict, pack: dict, script: dict, feedback: str | None = None) -> list[dict]:
