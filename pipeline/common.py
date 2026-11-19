@@ -57,7 +57,8 @@ def ai_pack(pack: dict) -> dict:
     out = {k: v for k, v in pack.items() if k != "momentum"}
     if pack.get("player_stats"):   # per-player stats, only the labels that help a diagnosis
         from .fotmob import LINE_STATS
-        keep = set(LINE_STATS) | {"Goals", "Assists", "Total shots", "Shots on target", "Expected goals (xG)",
+        from .fotmob import KEEPER_STATS
+        keep = set(LINE_STATS) | set(KEEPER_STATS) | {"Goals", "Assists", "Total shots", "Shots on target", "Expected goals (xG)",
                                   "Expected assists (xA)", "Big chances missed", "Saves", "Goals conceded"}
         out["player_stats"] = [{**{k: p[k] for k in ("player", "team", "line")},
                                 "stats": {k: v for k, v in p["stats"].items() if k in keep}}

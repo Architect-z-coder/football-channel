@@ -214,7 +214,10 @@ LINES = {0: "goalkeeper", 1: "defenders", 2: "midfielders", 3: "forwards"}
 LINE_STATS = ["Touches", "Touches in opposition box", "Recoveries", "Tackles won", "Duels won", "Duels lost",
               "Interceptions", "Clearances", "Blocks", "Aerial duels won", "Ground duels won",
               "Passes into final third", "Accurate passes", "Successful dribbles", "Dispossessed",
-              "Defensive actions", "Chances created", "Crosses", "Accurate long balls", "Was fouled", "Fouls committed"]
+              "Defensive actions", "Chances created", "Crosses", "Accurate long balls", "Was fouled", "Fouls committed",
+              "Line breaking passes"]
+KEEPER_STATS = ["Saves", "Saves inside box", "Goals prevented", "xGOT faced", "Diving save", "High claim",
+                "Acted as sweeper", "Punches"]
 
 
 def _stat_value(st: dict):
@@ -257,6 +260,12 @@ def _player_stats(pack: dict, data: dict, home_id, teams, add) -> None:
     pack["player_stats"] = players
     log.info("FotMob player stats: %d players, labels: %s", len(players), ", ".join(sorted(labels)))
     for side, team in teams:
+        for p in players:
+            if p["side"] == side and p["line"] == "goalkeeper":
+                for label in KEEPER_STATS:
+                    if label in p["stats"]:
+                        add(f"{side}_keeper_{label.lower().replace(' ', '_')}",
+                            f"{team} goalkeeper {p['player']}: {label} (FotMob)", p["stats"][label])
         for line in ("defenders", "midfielders", "forwards"):
             group = [p for p in players if p["side"] == side and p["line"] == line]
             if not group:
