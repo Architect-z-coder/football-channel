@@ -123,6 +123,25 @@ def find_by_names(text: str, days: int = 7) -> int | None:
     return None
 
 
+def _report_positions(data) -> None:
+    """Log where FotMob's reply holds anything about player positions or heat maps (one-off check)."""
+    found = []
+
+    def walk(o, path, depth=0):
+        if depth > 7 or len(found) > 40:
+            return
+        if isinstance(o, dict):
+            for k, v in o.items():
+                kl = str(k).lower()
+                if any(w in kl for w in ("heat", "position", "avgpos", "averagex", "touch", "locations")):
+                    found.append(f"{path}/{k}: {type(v).__name__}{' len ' + str(len(v)) if hasattr(v, '__len__') else ''}")
+                walk(v, f"{path}/{k}", depth + 1)
+        elif isinstance(o, list) and o:
+            walk(o[0], path + "[0]", depth + 1)
+    walk(data, "")
+    log.info("FotMob position keys: %s", "; ".join(found[:40]) or "none")
+
+
 def _num(v):
     """'410 (85%)' -> (410, 85); '2.02' -> 2.02; 57 -> 57."""
     if isinstance(v, (int, float)):
@@ -199,6 +218,7 @@ def enrich(pack: dict, fd_match: dict, code: str) -> dict:
             log.info("FotMob: match not found.")
             return pack
         data = _get("matchDetails", {"matchId": mid})
+        _report_positions(data)
     except Exception as e:
         log.warning("FotMob unavailable, continuing without it: %s", e)
         return pack
@@ -349,6 +369,7 @@ def build_pack(mid: int) -> dict:
     """A full data pack from FotMob alone, for matches our main source does not cover
     (Nations League, internationals, cups, AFCON...). Pick it with "fotmob:<match id>"."""
     data = _get("matchDetails", {"matchId": mid})
+    _report_positions(data)
     g, header = data.get("general", {}), data.get("header", {})
     teams = header.get("teams") or []
     if len(teams) != 2 or not (header.get("status") or {}).get("finished"):
