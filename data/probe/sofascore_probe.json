@@ -1,0 +1,7 @@
+{
+ "status": {
+  "https://api.sofascore.com/api/v1/sport/football/scheduled-events/2026-11-15": 403,
+  "https://www.sofascore.com/api/v1/sport/football/scheduled-events/2026-11-15": 403
+ },
+ "event": null
+}
