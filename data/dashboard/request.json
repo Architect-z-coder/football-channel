@@ -1,6 +1,6 @@
 {
-  "id": "fra-tur-data-1",
-  "mode": "data-only",
+  "id": "fra-tur-prep-1",
+  "mode": "prepare",
   "match": "France Turkey",
   "look_back_days": ""
 }
