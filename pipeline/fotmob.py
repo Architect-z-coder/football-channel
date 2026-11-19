@@ -209,6 +209,68 @@ def enrich(pack: dict, fd_match: dict, code: str) -> dict:
         return pack
 
 
+LINES = {0: "goalkeeper", 1: "defenders", 2: "midfielders", 3: "forwards"}
+# stats worth totalling by line (FotMob labels; whatever exists in the reply is used)
+LINE_STATS = ["Touches", "Touches in opposition box", "Recoveries", "Tackles won", "Duels won", "Duels lost",
+              "Interceptions", "Clearances", "Blocks", "Aerial duels won", "Ground duels won",
+              "Passes into final third", "Accurate passes", "Successful dribbles", "Dispossessed",
+              "Defensive actions", "Chances created", "Crosses", "Accurate long balls", "Was fouled", "Fouls committed"]
+
+
+def _stat_value(st: dict):
+    """FotMob stat -> (value, total or None). Handles plain numbers and 'x/y' style stats."""
+    v = (st or {}).get("stat") or {}
+    val, tot = v.get("value"), v.get("total")
+    try:
+        val = float(val)
+        val = int(val) if val.is_integer() else round(val, 2)
+    except (TypeError, ValueError):
+        return None, None
+    try:
+        tot = int(float(tot)) if tot is not None else None
+    except (TypeError, ValueError):
+        tot = None
+    return val, tot
+
+
+def _player_stats(pack: dict, data: dict, home_id, teams, add) -> None:
+    """Every player's FotMob match stats (no positions: FotMob has none), and totals by line."""
+    ps = (data.get("content") or {}).get("playerStats") or {}
+    players, labels = [], set()
+    for pid, p in ps.items():
+        if not isinstance(p, dict):
+            continue
+        side = "home" if p.get("teamId") == home_id else "away"
+        row = {"player": p.get("name"), "team": pack[side], "side": side,
+               "line": LINES.get(p.get("usualPosition", p.get("positionId"))), "stats": {}}
+        for grp in p.get("stats") or []:
+            for label, st in ((grp or {}).get("stats") or {}).items():
+                val, tot = _stat_value(st)
+                if val is None or label in ("FotMob rating",):
+                    continue
+                row["stats"][label] = f"{val}/{tot}" if tot else val
+                labels.add(label)
+        if row["player"] and row["stats"]:
+            players.append(row)
+    if not players:
+        return
+    pack["player_stats"] = players
+    log.info("FotMob player stats: %d players, labels: %s", len(players), ", ".join(sorted(labels)))
+    for side, team in teams:
+        for line in ("defenders", "midfielders", "forwards"):
+            group = [p for p in players if p["side"] == side and p["line"] == line]
+            if not group:
+                continue
+            for label in LINE_STATS:
+                vals = [p["stats"][label] for p in group if label in p["stats"]]
+                nums = [v if isinstance(v, (int, float)) else float(str(v).split("/")[0]) for v in vals]
+                if nums:
+                    key = label.lower().replace(" ", "_")
+                    total = sum(nums)
+                    add(f"{side}_{line}_{key}", f"{team} {line} ({len(group)} players): {label}, total (FotMob)",
+                        int(total) if float(total).is_integer() else round(total, 2))
+
+
 def _apply(pack: dict, data: dict, mid: int) -> dict:
     facts = pack["facts"]
     have = {f["id"] for f in facts}
@@ -229,6 +291,8 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
             add(f"{side}_{key}", f"{team} {label} (FotMob)", n)
             if pct is not None:
                 add(f"{side}_{key}_pct", f"{team} {label}, percent (FotMob)", pct)
+
+    _player_stats(pack, data, home_id, teams, add)
 
     lineup = data.get("content", {}).get("lineup") or {}
     for side, team in teams:

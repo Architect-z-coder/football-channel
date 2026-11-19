@@ -151,8 +151,13 @@ HARD RULES
      goalkeeping (the keeper's goals prevented), set pieces vs open play, and luck (diag_sim_result:
      "with these exact chances, X win N times in 100"). Name which cause mattered most.
    - tactical causes (a high or low block, players out of position, a pressing plan) only as our reading,
-     and only when shot locations, possession, box touches, the formation or a quoted coach/paper support
-     it; say what supports it, and say plainly when the data cannot tell.
+     and only when shot locations, possession, box touches, the formation, the per-player stats
+     ("player_stats", and the <side>_<line>_<stat> totals for defenders / midfielders / forwards:
+     recoveries, tackles, duels, touches in the opposition box, passes into the final third...) or a
+     quoted coach/paper support it. Example: "Turkiye's five defenders made 31 recoveries, but their
+     forwards touched the ball only 4 times in France's box: they defended well and could not escape."
+     We have NO position or heat-map data: never claim where a player stood. Say what supports the
+     reading, and say plainly when the data cannot tell.
    Use visuals xg_explainer, diagnosis and result_odds here.
 5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
    numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
