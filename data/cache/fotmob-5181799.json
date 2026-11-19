@@ -1,480 +1,1041 @@
 {
- "saved": "2026-11-19T00:06:15Z",
- "press": [
-  {
-   "speaker": "Zinédine Zidane",
-   "role": "France head coach",
-   "team": "France",
-   "quote": "Il n'y a pas de problème, il sera avec nous",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "selection",
-   "source": "Eurosport France (press conference, 14 Nov 2026; about Kylian Mbappé, who missed the Italy match with a hamstring problem)",
-   "url": "https://www.eurosport.fr/football/ligue-des-nations/2026-2027/ligue-des-nations-i-france-turquie-i-zinedine-zidane-sur-sa-relation-avec-kylian-mbappe-ce-sont-des-betises-cest-assez-agacant_sto23355348/story.shtml"
-  },
-  {
-   "speaker": "Zinédine Zidane",
-   "role": "France head coach",
-   "team": "France",
-   "quote": "On est tous disponibles normalement. Mais il faut attendre le dernier entraînement.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "absence",
-   "source": "Flashscore (press conference, 14 Nov 2026; on the squad's availability)",
-   "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
-  },
-  {
-   "speaker": "Zinédine Zidane",
-   "role": "France head coach",
-   "team": "France",
-   "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "tactics",
-   "source": "Flashscore (press conference, 14 Nov 2026; he gave no details on changes or the game plan)",
-   "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
-  },
-  {
-   "speaker": "Sergen Yalçın",
-   "role": "Türkiye head coach",
-   "team": "Türkiye",
-   "quote": "Ama yarınki maçta biraz daha kontrollü oynayacağız.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "tactics",
-   "source": "GZT (pre-match press conference, Bordeaux, 14 Nov 2026; he also said Türkiye would not play without a striker)",
-   "url": "https://www.gzt.com/spor/fransa-turkiye-maci-oncesi-sergen-yalcindan-iddali-sozler-onu-bir-kenara-yazin-4278820"
-  },
-  {
-   "speaker": "Sergen Yalçın",
-   "role": "Türkiye head coach",
-   "team": "Türkiye",
-   "quote": "Paraphrase: He said Türkiye had played Belgium in one format and would use another against France. They would take a more defensive position and still play with a striker. He said the team and the country needed a win.",
-   "is_paraphrase": true,
-   "when": "before",
-   "topic": "tactics",
-   "source": "Türkiye Today (press conference, 14 Nov 2026)",
-   "url": "https://www.turkiyetoday.com/sports/france-and-turkiye-meet-in-bordeaux-with-a-win-on-both-minds-3232441"
-  }
- ],
- "context": {},
- "reviews": [
-  {
-   "outlet": "Ouest-France",
-   "author": "",
-   "date": "2026-11-16",
-   "url": "https://www.ouest-france.fr/sport/football/equipe-de-france/france-turquie-la-qualification-la-premiere-place-mais-un-manque-de-maitrise-pour-les-bleus-e5f465ee-e142-11f1-9a29-f4bab172af08",
-   "headline": "France - Turquie. La qualification, la première place mais un manque de maîtrise pour les Bleus",
-   "quote": "Cette inefficacité a fait trembler les Bleus jusqu’en fin de match, et le but du break inscrit par Kroupi, son premier, bien servi par Cherki (2-0, 80’).",
-   "quote_en": "This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').",
-   "point": "France qualified and topped the group, but they showed the same weaknesses as in Italy: they wasted many chances, and Zidane still has plenty of work to do.",
-   "free": null,
-   "kind": "rebuilt"
-  },
-  {
-   "outlet": "franceinfo",
-   "author": "",
-   "date": "2026-11-15",
-   "url": "https://www.franceinfo.fr/sports/foot/ligue-des-nations/l-equipe-de-france-s-impose-face-a-la-turquie-et-se-qualifie-pour-les-quarts-de-finale-de-la-ligue-des-nations_8283920.html",
-   "headline": "Sans briller, l'équipe de France s’impose face à la Turquie et se qualifie pour les quarts de finale de la Ligue des nations",
-   "quote": "Dans un match plus accroché que ce que les classements des deux équipes pouvaient laisser penser, les Bleus ont dû prendre leur mal en patience avant de faire la différence.",
-   "quote_en": "In a match that was tighter than the two teams' rankings suggested, Les Bleus had to be patient before making the difference.",
-   "point": "France won without shining: they dominated a tighter game than expected and had to wait for the second half, helped by an own goal and Kroupi's first international goal.",
-   "free": true,
-   "kind": "screenshot",
-   "files": {
-    "para": "press_2_para.png"
-   },
-   "rects": [
+  "saved": "2026-11-19T00:06:15Z",
+  "press": [
     {
-     "x": 0,
-     "y": 2,
-     "w": 45.6875,
-     "h": 21
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "Il n'y a pas de problème, il sera avec nous",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "selection",
+      "source": "Eurosport France (press conference, 14 Nov 2026; about Kylian Mbappé, who missed the Italy match with a hamstring problem)",
+      "url": "https://www.eurosport.fr/football/ligue-des-nations/2026-2027/ligue-des-nations-i-france-turquie-i-zinedine-zidane-sur-sa-relation-avec-kylian-mbappe-ce-sont-des-betises-cest-assez-agacant_sto23355348/story.shtml"
     },
     {
-     "x": 51.390625,
-     "y": 2,
-     "w": 22.828125,
-     "h": 21
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "On est tous disponibles normalement. Mais il faut attendre le dernier entraînement.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Flashscore (press conference, 14 Nov 2026; on the squad's availability)",
+      "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
     },
     {
-     "x": 79.921875,
-     "y": 2,
-     "w": 56.953125,
-     "h": 21
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Flashscore (press conference, 14 Nov 2026; he gave no details on changes or the game plan)",
+      "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
     },
     {
-     "x": 142.578125,
-     "y": 2,
-     "w": 37.234375,
-     "h": 21
+      "speaker": "Sergen Yalçın",
+      "role": "Türkiye head coach",
+      "team": "Türkiye",
+      "quote": "Ama yarınki maçta biraz daha kontrollü oynayacağız.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "tactics",
+      "source": "GZT (pre-match press conference, Bordeaux, 14 Nov 2026; he also said Türkiye would not play without a striker)",
+      "url": "https://www.gzt.com/spor/fransa-turkiye-maci-oncesi-sergen-yalcindan-iddali-sozler-onu-bir-kenara-yazin-4278820"
     },
     {
-     "x": 185.515625,
-     "y": 2,
-     "w": 81.234375,
-     "h": 21
-    },
-    {
-     "x": 272.453125,
-     "y": 2,
-     "w": 33.921875,
-     "h": 21
-    },
-    {
-     "x": 312.078125,
-     "y": 2,
-     "w": 20.984375,
-     "h": 21
-    },
-    {
-     "x": 338.78125,
-     "y": 2,
-     "w": 33.921875,
-     "h": 21
-    },
-    {
-     "x": 378.40625,
-     "y": 2,
-     "w": 25.46875,
-     "h": 21
-    },
-    {
-     "x": 409.578125,
-     "y": 2,
-     "w": 112.234375,
-     "h": 21
-    },
-    {
-     "x": 527.515625,
-     "y": 2,
-     "w": 31.890625,
-     "h": 21
-    },
-    {
-     "x": 565.109375,
-     "y": 2,
-     "w": 44.578125,
-     "h": 21
-    },
-    {
-     "x": 615.390625,
-     "y": 2,
-     "w": 70.8125,
-     "h": 21
-    },
-    {
-     "x": 691.90625,
-     "y": 2,
-     "w": 90.078125,
-     "h": 21
-    },
-    {
-     "x": 787.6875,
-     "y": 2,
-     "w": 58.28125,
-     "h": 21
-    },
-    {
-     "x": 0,
-     "y": 28.09375,
-     "w": 67.484375,
-     "h": 21
-    },
-    {
-     "x": 73.203125,
-     "y": 28.09375,
-     "w": 25.46875,
-     "h": 21
-    },
-    {
-     "x": 104.375,
-     "y": 28.09375,
-     "w": 49.21875,
-     "h": 21
-    },
-    {
-     "x": 159.296875,
-     "y": 28.09375,
-     "w": 29.5,
-     "h": 21
-    },
-    {
-     "x": 194.5,
-     "y": 28.09375,
-     "w": 22.859375,
-     "h": 21
-    },
-    {
-     "x": 223.0625,
-     "y": 28.09375,
-     "w": 70.421875,
-     "h": 21
-    },
-    {
-     "x": 299.203125,
-     "y": 28.09375,
-     "w": 34.890625,
-     "h": 21
-    },
-    {
-     "x": 339.796875,
-     "y": 28.09375,
-     "w": 33.59375,
-     "h": 21
-    },
-    {
-     "x": 379.09375,
-     "y": 28.09375,
-     "w": 22.5,
-     "h": 21
-    },
-    {
-     "x": 407.296875,
-     "y": 28.09375,
-     "w": 77.984375,
-     "h": 21
-    },
-    {
-     "x": 490.984375,
-     "y": 28.09375,
-     "w": 51.1875,
-     "h": 21
-    },
-    {
-     "x": 547.890625,
-     "y": 28.09375,
-     "w": 22.515625,
-     "h": 21
-    },
-    {
-     "x": 576.109375,
-     "y": 28.09375,
-     "w": 40.453125,
-     "h": 21
-    },
-    {
-     "x": 622.28125,
-     "y": 28.09375,
-     "w": 16.046875,
-     "h": 21
-    },
-    {
-     "x": 644.03125,
-     "y": 28.09375,
-     "w": 90.375,
-     "h": 21
+      "speaker": "Sergen Yalçın",
+      "role": "Türkiye head coach",
+      "team": "Türkiye",
+      "quote": "Paraphrase: He said Türkiye had played Belgium in one format and would use another against France. They would take a more defensive position and still play with a striker. He said the team and the country needed a win.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Türkiye Today (press conference, 14 Nov 2026)",
+      "url": "https://www.turkiyetoday.com/sports/france-and-turkiye-meet-in-bordeaux-with-a-win-on-both-minds-3232441"
     }
-   ],
-   "box": {
-    "w": 863.328125,
-    "h": 114.375
-   },
-   "verified": true
-  },
-  {
-   "outlet": "AFP (via Yahoo Noticias)",
-   "author": "",
-   "date": "2026-11-15",
-   "url": "https://es-us.noticias.yahoo.com/deportes/francia-gana-turqu%C3%ADa-clasifica-cuartos-223959602.html",
-   "headline": "Francia gana a Turquía y se clasifica para cuartos de la Liga de Naciones",
-   "quote": "Pero el contenido del partido volvió a dejar mucho que desear y plantea muchas incógnitas pese al regreso del capitán Kylian Mbappé, baja en Milán por dolores en los isquiotibiales.",
-   "quote_en": "But the content of the match once again left a lot to be desired and raises many questions despite the return of captain Kylian Mbappé, who missed Milan with hamstring pain.",
-   "point": "France topped the group, but the wire report says the performance was again poor and leaves open questions about Zidane's possession-based approach.",
-   "free": true,
-   "kind": "screenshot",
-   "files": {
-    "para": "press_3_para.png",
-    "head": "press_3_head.png"
-   },
-   "rects": [
+  ],
+  "context": {},
+  "reviews": [
     {
-     "x": 0,
-     "y": 5,
-     "w": 39,
-     "h": 21
+      "outlet": "Ouest-France",
+      "author": "",
+      "date": "2026-11-16",
+      "url": "https://www.ouest-france.fr/sport/football/equipe-de-france/france-turquie-la-qualification-la-premiere-place-mais-un-manque-de-maitrise-pour-les-bleus-e5f465ee-e142-11f1-9a29-f4bab172af08",
+      "headline": "France - Turquie. La qualification, la première place mais un manque de maîtrise pour les Bleus",
+      "quote": "Cette inefficacité a fait trembler les Bleus jusqu’en fin de match, et le but du break inscrit par Kroupi, son premier, bien servi par Cherki (2-0, 80’).",
+      "quote_en": "This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').",
+      "point": "France qualified and topped the group, but they showed the same weaknesses as in Italy: they wasted many chances, and Zidane still has plenty of work to do.",
+      "free": null,
+      "kind": "rebuilt"
     },
     {
-     "x": 43,
-     "y": 5,
-     "w": 13,
-     "h": 21
+      "outlet": "franceinfo",
+      "author": "",
+      "date": "2026-11-15",
+      "url": "https://www.franceinfo.fr/sports/foot/ligue-des-nations/l-equipe-de-france-s-impose-face-a-la-turquie-et-se-qualifie-pour-les-quarts-de-finale-de-la-ligue-des-nations_8283920.html",
+      "headline": "Sans briller, l'équipe de France s’impose face à la Turquie et se qualifie pour les quarts de finale de la Ligue des nations",
+      "quote": "Dans un match plus accroché que ce que les classements des deux équipes pouvaient laisser penser, les Bleus ont dû prendre leur mal en patience avant de faire la différence.",
+      "quote_en": "In a match that was tighter than the two teams' rankings suggested, Les Bleus had to be patient before making the difference.",
+      "point": "France won without shining: they dominated a tighter game than expected and had to wait for the second half, helped by an own goal and Kroupi's first international goal.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_2_para.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 2,
+          "w": 45.6875,
+          "h": 21
+        },
+        {
+          "x": 51.390625,
+          "y": 2,
+          "w": 22.828125,
+          "h": 21
+        },
+        {
+          "x": 79.921875,
+          "y": 2,
+          "w": 56.953125,
+          "h": 21
+        },
+        {
+          "x": 142.578125,
+          "y": 2,
+          "w": 37.234375,
+          "h": 21
+        },
+        {
+          "x": 185.515625,
+          "y": 2,
+          "w": 81.234375,
+          "h": 21
+        },
+        {
+          "x": 272.453125,
+          "y": 2,
+          "w": 33.921875,
+          "h": 21
+        },
+        {
+          "x": 312.078125,
+          "y": 2,
+          "w": 20.984375,
+          "h": 21
+        },
+        {
+          "x": 338.78125,
+          "y": 2,
+          "w": 33.921875,
+          "h": 21
+        },
+        {
+          "x": 378.40625,
+          "y": 2,
+          "w": 25.46875,
+          "h": 21
+        },
+        {
+          "x": 409.578125,
+          "y": 2,
+          "w": 112.234375,
+          "h": 21
+        },
+        {
+          "x": 527.515625,
+          "y": 2,
+          "w": 31.890625,
+          "h": 21
+        },
+        {
+          "x": 565.109375,
+          "y": 2,
+          "w": 44.578125,
+          "h": 21
+        },
+        {
+          "x": 615.390625,
+          "y": 2,
+          "w": 70.8125,
+          "h": 21
+        },
+        {
+          "x": 691.90625,
+          "y": 2,
+          "w": 90.078125,
+          "h": 21
+        },
+        {
+          "x": 787.6875,
+          "y": 2,
+          "w": 58.28125,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 28.09375,
+          "w": 67.484375,
+          "h": 21
+        },
+        {
+          "x": 73.203125,
+          "y": 28.09375,
+          "w": 25.46875,
+          "h": 21
+        },
+        {
+          "x": 104.375,
+          "y": 28.09375,
+          "w": 49.21875,
+          "h": 21
+        },
+        {
+          "x": 159.296875,
+          "y": 28.09375,
+          "w": 29.5,
+          "h": 21
+        },
+        {
+          "x": 194.5,
+          "y": 28.09375,
+          "w": 22.859375,
+          "h": 21
+        },
+        {
+          "x": 223.0625,
+          "y": 28.09375,
+          "w": 70.421875,
+          "h": 21
+        },
+        {
+          "x": 299.203125,
+          "y": 28.09375,
+          "w": 34.890625,
+          "h": 21
+        },
+        {
+          "x": 339.796875,
+          "y": 28.09375,
+          "w": 33.59375,
+          "h": 21
+        },
+        {
+          "x": 379.09375,
+          "y": 28.09375,
+          "w": 22.5,
+          "h": 21
+        },
+        {
+          "x": 407.296875,
+          "y": 28.09375,
+          "w": 77.984375,
+          "h": 21
+        },
+        {
+          "x": 490.984375,
+          "y": 28.09375,
+          "w": 51.1875,
+          "h": 21
+        },
+        {
+          "x": 547.890625,
+          "y": 28.09375,
+          "w": 22.515625,
+          "h": 21
+        },
+        {
+          "x": 576.109375,
+          "y": 28.09375,
+          "w": 40.453125,
+          "h": 21
+        },
+        {
+          "x": 622.28125,
+          "y": 28.09375,
+          "w": 16.046875,
+          "h": 21
+        },
+        {
+          "x": 644.03125,
+          "y": 28.09375,
+          "w": 90.375,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 863.328125,
+        "h": 114.375
+      },
+      "verified": true
     },
     {
-     "x": 60,
-     "y": 5,
-     "w": 82,
-     "h": 21
-    },
-    {
-     "x": 146,
-     "y": 5,
-     "w": 24,
-     "h": 21
-    },
-    {
-     "x": 174,
-     "y": 5,
-     "w": 58,
-     "h": 21
-    },
-    {
-     "x": 236,
-     "y": 5,
-     "w": 48,
-     "h": 21
-    },
-    {
-     "x": 288,
-     "y": 5,
-     "w": 9,
-     "h": 21
-    },
-    {
-     "x": 301,
-     "y": 5,
-     "w": 40,
-     "h": 21
-    },
-    {
-     "x": 345,
-     "y": 5,
-     "w": 54,
-     "h": 21
-    },
-    {
-     "x": 403,
-     "y": 5,
-     "w": 30,
-     "h": 21
-    },
-    {
-     "x": 437,
-     "y": 5,
-     "w": 55,
-     "h": 21
-    },
-    {
-     "x": 496,
-     "y": 5,
-     "w": 9,
-     "h": 21
-    },
-    {
-     "x": 509,
-     "y": 5,
-     "w": 57,
-     "h": 21
-    },
-    {
-     "x": 570,
-     "y": 5,
-     "w": 61,
-     "h": 21
-    },
-    {
-     "x": 0,
-     "y": 37,
-     "w": 82,
-     "h": 21
-    },
-    {
-     "x": 86,
-     "y": 37,
-     "w": 39,
-     "h": 21
-    },
-    {
-     "x": 129,
-     "y": 37,
-     "w": 12,
-     "h": 21
-    },
-    {
-     "x": 145,
-     "y": 37,
-     "w": 62,
-     "h": 21
-    },
-    {
-     "x": 211,
-     "y": 37,
-     "w": 24,
-     "h": 21
-    },
-    {
-     "x": 239,
-     "y": 37,
-     "w": 58,
-     "h": 21
-    },
-    {
-     "x": 301,
-     "y": 37,
-     "w": 44,
-     "h": 21
-    },
-    {
-     "x": 349,
-     "y": 37,
-     "w": 69,
-     "h": 21
-    },
-    {
-     "x": 422,
-     "y": 37,
-     "w": 33,
-     "h": 21
-    },
-    {
-     "x": 459,
-     "y": 37,
-     "w": 19,
-     "h": 21
-    },
-    {
-     "x": 482,
-     "y": 37,
-     "w": 40,
-     "h": 21
-    },
-    {
-     "x": 526,
-     "y": 37,
-     "w": 27,
-     "h": 21
-    },
-    {
-     "x": 557,
-     "y": 37,
-     "w": 61,
-     "h": 21
-    },
-    {
-     "x": 0,
-     "y": 69,
-     "w": 19,
-     "h": 21
-    },
-    {
-     "x": 23,
-     "y": 69,
-     "w": 23,
-     "h": 21
-    },
-    {
-     "x": 50,
-     "y": 69,
-     "w": 105,
-     "h": 21
+      "outlet": "AFP (via Yahoo Noticias)",
+      "author": "",
+      "date": "2026-11-15",
+      "url": "https://es-us.noticias.yahoo.com/deportes/francia-gana-turqu%C3%ADa-clasifica-cuartos-223959602.html",
+      "headline": "Francia gana a Turquía y se clasifica para cuartos de la Liga de Naciones",
+      "quote": "Pero el contenido del partido volvió a dejar mucho que desear y plantea muchas incógnitas pese al regreso del capitán Kylian Mbappé, baja en Milán por dolores en los isquiotibiales.",
+      "quote_en": "But the content of the match once again left a lot to be desired and raises many questions despite the return of captain Kylian Mbappé, who missed Milan with hamstring pain.",
+      "point": "France topped the group, but the wire report says the performance was again poor and leaves open questions about Zidane's possession-based approach.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_3_para.png",
+        "head": "press_3_head.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 5,
+          "w": 39,
+          "h": 21
+        },
+        {
+          "x": 43,
+          "y": 5,
+          "w": 13,
+          "h": 21
+        },
+        {
+          "x": 60,
+          "y": 5,
+          "w": 82,
+          "h": 21
+        },
+        {
+          "x": 146,
+          "y": 5,
+          "w": 24,
+          "h": 21
+        },
+        {
+          "x": 174,
+          "y": 5,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 236,
+          "y": 5,
+          "w": 48,
+          "h": 21
+        },
+        {
+          "x": 288,
+          "y": 5,
+          "w": 9,
+          "h": 21
+        },
+        {
+          "x": 301,
+          "y": 5,
+          "w": 40,
+          "h": 21
+        },
+        {
+          "x": 345,
+          "y": 5,
+          "w": 54,
+          "h": 21
+        },
+        {
+          "x": 403,
+          "y": 5,
+          "w": 30,
+          "h": 21
+        },
+        {
+          "x": 437,
+          "y": 5,
+          "w": 55,
+          "h": 21
+        },
+        {
+          "x": 496,
+          "y": 5,
+          "w": 9,
+          "h": 21
+        },
+        {
+          "x": 509,
+          "y": 5,
+          "w": 57,
+          "h": 21
+        },
+        {
+          "x": 570,
+          "y": 5,
+          "w": 61,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 37,
+          "w": 82,
+          "h": 21
+        },
+        {
+          "x": 86,
+          "y": 37,
+          "w": 39,
+          "h": 21
+        },
+        {
+          "x": 129,
+          "y": 37,
+          "w": 12,
+          "h": 21
+        },
+        {
+          "x": 145,
+          "y": 37,
+          "w": 62,
+          "h": 21
+        },
+        {
+          "x": 211,
+          "y": 37,
+          "w": 24,
+          "h": 21
+        },
+        {
+          "x": 239,
+          "y": 37,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 301,
+          "y": 37,
+          "w": 44,
+          "h": 21
+        },
+        {
+          "x": 349,
+          "y": 37,
+          "w": 69,
+          "h": 21
+        },
+        {
+          "x": 422,
+          "y": 37,
+          "w": 33,
+          "h": 21
+        },
+        {
+          "x": 459,
+          "y": 37,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 482,
+          "y": 37,
+          "w": 40,
+          "h": 21
+        },
+        {
+          "x": 526,
+          "y": 37,
+          "w": 27,
+          "h": 21
+        },
+        {
+          "x": 557,
+          "y": 37,
+          "w": 61,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 69,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 23,
+          "y": 69,
+          "w": 23,
+          "h": 21
+        },
+        {
+          "x": 50,
+          "y": 69,
+          "w": 105,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 640,
+        "h": 96
+      },
+      "verified": true
     }
-   ],
-   "box": {
-    "w": 640,
-    "h": 96
-   },
-   "verified": true
-  }
- ]
+  ],
+  "script": {
+    "title_options": [
+      "France 2-1 Turkiye: The Chances That Almost Cost Them",
+      "France Created Everything. Turkiye Scored in Minute 90.",
+      "Why France Won 2-1 But Still Had Questions to Answer"
+    ],
+    "thumbnail_texts": [
+      "6 OF 7 MISSED",
+      "MINUTE 90",
+      "THE 0.86 MISS"
+    ],
+    "description": "France beat Turkiye 2-1 in Bordeaux to finish the Nations League group job, but the score hides a stranger story. France created chance after chance, missed almost every big one, and had to concede a Turkiye goal in minute 90. We follow the night from the pre-match words of Zinedine Zidane and Sergen Yalcin to the numbers that explain it, and to a goalkeeper who nearly made the plan work.\n\nWe quote Flashscore, GZT, Türkiye Today and Eurosport France for the pre-match press conferences, and franceinfo, Ouest-France and AFP on the match. Photos from Wikimedia Commons under free licences. Data: FotMob.",
+    "tags": [
+      "France Turkiye",
+      "Nations League",
+      "Zidane",
+      "Mbappe",
+      "Cherki",
+      "Arda Guler",
+      "xG",
+      "football analysis",
+      "match story",
+      "Kroupi",
+      "Bordeaux"
+    ],
+    "scenes": [
+      {
+        "id": 1,
+        "beat": "THE QUESTION",
+        "on_screen": "A night that should be simple",
+        "fact_ids": [
+          "stadium",
+          "away_form_record",
+          "away_form_last5"
+        ],
+        "shots": [
+          {
+            "text": "Bordeaux, 15 November. Turkiye walk into the Stade Atlantique on 5 defeats in a row. Their coach, Sergen Yalçın, has said the team and the country need a win.",
+            "visual": {
+              "type": "photo",
+              "photo": "Arda Güler",
+              "caption": "Arda Güler, Turkiye"
+            }
+          },
+          {
+            "text": "The day before, Zinédine Zidane gave France's answer. In translation: we know what we must do, finish the work and qualify.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
+              "speaker": "Zinédine Zidane",
+              "role": "France head coach",
+              "outlet": "Flashscore"
+            }
+          },
+          {
+            "text": "On paper, it looks simple. So how does a night like that stay dangerous until the very last minute?",
+            "visual": {
+              "type": "title_card",
+              "title": "France vs Turkiye",
+              "subtitle": "Nations League, Bordeaux"
+            }
+          }
+        ],
+        "narration": "Bordeaux, 15 November. Turkiye walk into the Stade Atlantique on 5 defeats in a row. Their coach, Sergen Yalçın, has said the team and the country need a win. The day before, Zinédine Zidane gave France's answer. In translation: we know what we must do, finish the work and qualify. On paper, it looks simple. So how does a night like that stay dangerous until the very last minute?",
+        "visual": {
+          "type": "quote_card",
+          "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
+          "speaker": "Zinédine Zidane",
+          "role": "France head coach",
+          "outlet": "Flashscore"
+        }
+      },
+      {
+        "id": 2,
+        "beat": "WHAT WAS EXPECTED",
+        "on_screen": "Control against a deep block",
+        "fact_ids": [
+          "home_form_record",
+          "away_form_record",
+          "home_form_games",
+          "away_absent_1",
+          "away_absent_2"
+        ],
+        "shots": [
+          {
+            "text": "France arrive having won 3 of their last 5, but they lost the latest, 3-1 away in Italy. Turkiye have lost all 5.",
+            "visual": {
+              "type": "form_compare"
+            }
+          },
+          {
+            "text": "Yalçın promised a change. His words, in translation: tomorrow we will play a bit more in control. Türkiye Today adds that he meant a more defensive position, still with one striker.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "Ama yarınki maçta biraz daha kontrollü oynayacağız.",
+              "speaker": "Sergen Yalçın",
+              "role": "Türkiye head coach",
+              "outlet": "GZT"
+            }
+          },
+          {
+            "text": "And he had fewer players to choose from. Ozan Kabak and Ümit Akdağ were both suspended. So the yardstick is clear: France to attack, Turkiye to sit deep and wait.",
+            "visual": {
+              "type": "photo",
+              "photo": "Ozan Kabak",
+              "caption": "Ozan Kabak, suspended"
+            }
+          }
+        ],
+        "narration": "France arrive having won 3 of their last 5, but they lost the latest, 3-1 away in Italy. Turkiye have lost all 5. Yalçın promised a change. His words, in translation: tomorrow we will play a bit more in control. Türkiye Today adds that he meant a more defensive position, still with one striker. And he had fewer players to choose from. Ozan Kabak and Ümit Akdağ were both suspended. So the yardstick is clear: France to attack, Turkiye to sit deep and wait.",
+        "visual": {
+          "type": "form_compare"
+        }
+      },
+      {
+        "id": 3,
+        "beat": "THE CHARACTERS",
+        "on_screen": "Three people to watch",
+        "fact_ids": [
+          "home_formation",
+          "away_formation",
+          "home_starting_xi",
+          "away_starting_xi",
+          "home_coach"
+        ],
+        "shots": [
+          {
+            "text": "Three people carry this story. First, Rayan Cherki, in the middle of France's attacking three. Our reading: against five defenders, France need someone to find the gaps, and that is his job.",
+            "visual": {
+              "type": "photo",
+              "photo": "Rayan Cherki",
+              "caption": "Rayan Cherki, France"
+            }
+          },
+          {
+            "text": "Second, Arda Güler, in Turkiye's midfield four. If Turkiye are to threaten France at all, the ball probably has to pass through him. Remember his name.",
+            "visual": {
+              "type": "photo",
+              "photo": "Arda Güler",
+              "caption": "Arda Güler, Turkiye"
+            }
+          },
+          {
+            "text": "Third, Kylian Mbappé. Eurosport France noted that he missed the Italy match with a hamstring problem. Before this one Zidane said, in translation: there is no problem, he will be with us.",
+            "visual": {
+              "type": "lineups"
+            }
+          }
+        ],
+        "narration": "Three people carry this story. First, Rayan Cherki, in the middle of France's attacking three. Our reading: against five defenders, France need someone to find the gaps, and that is his job. Second, Arda Güler, in Turkiye's midfield four. If Turkiye are to threaten France at all, the ball probably has to pass through him. Remember his name. Third, Kylian Mbappé. Eurosport France noted that he missed the Italy match with a hamstring problem. Before this one Zidane said, in translation: there is no problem, he will be with us.",
+        "visual": {
+          "type": "lineups"
+        }
+      },
+      {
+        "id": 4,
+        "beat": "ACT ONE",
+        "on_screen": "France press, Turkiye wait",
+        "fact_ids": [
+          "momentum_home_on_top_pct",
+          "ht_home",
+          "ht_away",
+          "away_formation",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Minute 1. Turkiye line up in a 5-4-1, and France take the ball. FotMob's momentum graph has France on top in 79 percent of the first-half minutes.",
+            "visual": {
+              "type": "momentum"
+            }
+          },
+          {
+            "text": "The chances come, and they do not go in. Minute 21: Barcola, on a fast break, is saved. Minute 34: Mbappé is saved. Minute 35: Turkiye's best first-half chance, from İsmail Yüksek, is saved too.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 11,
+                  "text": "Rabiot header misses"
+                },
+                {
+                  "minute": 21,
+                  "text": "Barcola saved on break"
+                },
+                {
+                  "minute": 34,
+                  "text": "Mbappé saved"
+                },
+                {
+                  "minute": 35,
+                  "text": "Yüksek saved"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Half-time. 0-0. France have the ball, Turkiye have a plan, and the plan is holding.",
+            "visual": {
+              "type": "halftime_fulltime"
+            }
+          }
+        ],
+        "narration": "Minute 1. Turkiye line up in a 5-4-1, and France take the ball. FotMob's momentum graph has France on top in 79 percent of the first-half minutes. The chances come, and they do not go in. Minute 21: Barcola, on a fast break, is saved. Minute 34: Mbappé is saved. Minute 35: Turkiye's best first-half chance, from İsmail Yüksek, is saved too. Half-time. 0-0. France have the ball, Turkiye have a plan, and the plan is holding.",
+        "visual": {
+          "type": "momentum"
+        }
+      },
+      {
+        "id": 5,
+        "beat": "THE TURNING POINT",
+        "on_screen": "Minute 49",
+        "fact_ids": [
+          "goal_1",
+          "home_best_chance",
+          "worst_player_1",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Minute 49. A France corner. In Turkiye's back five stands Emirhan Topçu.",
+            "visual": {
+              "type": "photo",
+              "photo": "Emirhan Topçu",
+              "caption": "Emirhan Topçu, Turkiye"
+            }
+          },
+          {
+            "text": "First, the chance. Expected goals, or xG, gives every shot a value from 0 to 1: how often a shot like it is scored. FotMob values Barcola's shot from this corner at 0.86. Close to a certain goal. It is not scored.",
+            "visual": {
+              "type": "key_number",
+              "value": "0.86",
+              "label": "xG, Barcola, minute 49: missed"
+            }
+          },
+          {
+            "text": "Same minute, same set piece, by our reading. And the ball ends up in the net anyway: an own goal by Topçu. 1-0 France. France's best chance fails, and France still lead. FotMob's lowest rating among starters, 5.6, goes to Topçu.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 49,
+                  "text": "Barcola's big chance missed"
+                },
+                {
+                  "minute": 49,
+                  "text": "Topçu own goal, 1-0"
+                }
+              ]
+            }
+          }
+        ],
+        "narration": "Minute 49. A France corner. In Turkiye's back five stands Emirhan Topçu. First, the chance. Expected goals, or xG, gives every shot a value from 0 to 1: how often a shot like it is scored. FotMob values Barcola's shot from this corner at 0.86. Close to a certain goal. It is not scored. Same minute, same set piece, by our reading. And the ball ends up in the net anyway: an own goal by Topçu. 1-0 France. France's best chance fails, and France still lead. FotMob's lowest rating among starters, 5.6, goes to Topçu.",
+        "visual": {
+          "type": "key_number",
+          "value": "0.86",
+          "label": "xG, Barcola, minute 49: missed"
+        }
+      },
+      {
+        "id": 6,
+        "beat": "ACT TWO",
+        "on_screen": "Tension until the end",
+        "fact_ids": [
+          "goal_2",
+          "goal_3",
+          "best_player_1",
+          "best_player_2"
+        ],
+        "shots": [
+          {
+            "text": "France lead, but the second goal takes until minute 80. Junior Kroupi, a substitute, scores from open play with his right foot, set up by Cherki. franceinfo reports it as his first international goal.",
+            "visual": {
+              "type": "photo",
+              "photo": "Junior Kroupi",
+              "caption": "Junior Kroupi, France"
+            }
+          },
+          {
+            "text": "Cherki finishes as FotMob's top-rated player, 8.4. Our reading: this pass helps explain it.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 80
+            }
+          },
+          {
+            "text": "2-0 should settle it. Then, minute 90. A Turkiye corner. Arda Güler gives the assist, and Abdülkerim Bardakci scores with a header. 2-1. Güler's rating, 8.1, is the best on his side.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 90
+            }
+          }
+        ],
+        "narration": "France lead, but the second goal takes until minute 80. Junior Kroupi, a substitute, scores from open play with his right foot, set up by Cherki. franceinfo reports it as his first international goal. Cherki finishes as FotMob's top-rated player, 8.4. Our reading: this pass helps explain it. 2-0 should settle it. Then, minute 90. A Turkiye corner. Arda Güler gives the assist, and Abdülkerim Bardakci scores with a header. 2-1. Güler's rating, 8.1, is the best on his side.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 80
+        }
+      },
+      {
+        "id": 7,
+        "beat": "WHAT THE NUMBERS REVEAL",
+        "on_screen": "The goalkeeper who held on",
+        "fact_ids": [
+          "home_xg",
+          "away_xg",
+          "away_saves",
+          "away_best_chance",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Now the part the scoreline hides. FotMob's data places every shot on the pitch, sized by xG. Look at how many of France's are close to goal.",
+            "visual": {
+              "type": "shot_map"
+            }
+          },
+          {
+            "text": "France's xG is 3.36. Turkiye's is 1.54. That points to a France win by far more than one goal, and it says Yalçın's deeper block did not stop the chances.",
+            "visual": {
+              "type": "stat_bars",
+              "stats": [
+                "expected_goals",
+                "total_shots"
+              ]
+            }
+          },
+          {
+            "text": "What kept Turkiye alive was their goalkeeper. Berke Özer made 7 saves. He kept the plan breathing. So when minute 90 came, one corner was enough, and the header that scored was Turkiye's best chance of the night, by FotMob's numbers.",
+            "visual": {
+              "type": "key_number",
+              "value": "7",
+              "label": "saves by Berke Özer"
+            }
+          }
+        ],
+        "narration": "Now the part the scoreline hides. FotMob's data places every shot on the pitch, sized by xG. Look at how many of France's are close to goal. France's xG is 3.36. Turkiye's is 1.54. That points to a France win by far more than one goal, and it says Yalçın's deeper block did not stop the chances. What kept Turkiye alive was their goalkeeper. Berke Özer made 7 saves. He kept the plan breathing. So when minute 90 came, one corner was enough, and the header that scored was Turkiye's best chance of the night, by FotMob's numbers.",
+        "visual": {
+          "type": "shot_map"
+        }
+      },
+      {
+        "id": 8,
+        "beat": "THE VERDICT",
+        "on_screen": "Won, but trembling",
+        "fact_ids": [
+          "home_big_chances",
+          "home_big_chances_missed",
+          "score_home",
+          "score_away"
+        ],
+        "shots": [
+          {
+            "text": "Neither coach's post-match words are in the match data we have, so the press gives the verdict. Ouest-France writes, in translation: \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki.\"",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 0
+            }
+          },
+          {
+            "text": "The match data gives that word a number. France had 7 big chances, and missed 6. Our verdict, in one sentence: France deserved the win, and earned the worry.",
+            "visual": {
+              "type": "key_number",
+              "value": "6 of 7",
+              "label": "France big chances missed"
+            }
+          }
+        ],
+        "narration": "Neither coach's post-match words are in the match data we have, so the press gives the verdict. Ouest-France writes, in translation: \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki.\" The match data gives that word a number. France had 7 big chances, and missed 6. Our verdict, in one sentence: France deserved the win, and earned the worry.",
+        "visual": {
+          "type": "press_cut",
+          "review_index": 0
+        }
+      },
+      {
+        "id": 9,
+        "beat": "WHAT IT MEANS",
+        "on_screen": "Finishing is the lesson",
+        "fact_ids": [
+          "score_home",
+          "score_away",
+          "away_form_record",
+          "home_big_chances_missed"
+        ],
+        "shots": [
+          {
+            "text": "France qualified for the quarter-finals and finished first in the group, franceinfo and Ouest-France report. For Turkiye, 5 defeats became 6.",
+            "visual": {
+              "type": "photo",
+              "photo": "Abdülkerim Bardakci",
+              "caption": "Abdülkerim Bardakci, Turkiye"
+            }
+          },
+          {
+            "text": "But AFP writes, in translation, that the content of the match \"once again left a lot to be desired\". That is the open question for Zidane's side. The control is there. The finishing, on this night, was not.",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 2
+            }
+          },
+          {
+            "text": "The lesson: control earns you chances, and only finishing earns you comfort. If you like match stories built on the numbers, subscribe. And tell us in the comments: a finishing problem, or one unlucky night?",
+            "visual": {
+              "type": "lesson_list",
+              "items": [
+                "Control is not the same as safety",
+                "Big chances must be taken",
+                "One late corner can change the mood"
+              ]
+            }
+          }
+        ],
+        "narration": "France qualified for the quarter-finals and finished first in the group, franceinfo and Ouest-France report. For Turkiye, 5 defeats became 6. But AFP writes, in translation, that the content of the match \"once again left a lot to be desired\". That is the open question for Zidane's side. The control is there. The finishing, on this night, was not. The lesson: control earns you chances, and only finishing earns you comfort. If you like match stories built on the numbers, subscribe. And tell us in the comments: a finishing problem, or one unlucky night?",
+        "visual": {
+          "type": "press_cut",
+          "review_index": 2
+        }
+      }
+    ]
+  },
+  "report": {
+    "ok": true,
+    "problems": [],
+    "critic": {
+      "hook": 6,
+      "payoff": 6,
+      "pace": 6,
+      "clarity": 7,
+      "notes": [
+        "Opening: \"Rayan Cherki will end this night as the player of the match. But that is not what Bordeaux will talk about. Not yet.\" This is teasing, not a human situation. Open on Zidane's \"finish the work and qualify\" against a Turkiye side on five straight defeats, then ask why it ended in panic.",
+        "Scene 1 spends its first lines on Cherki and then gives away the 2-1 and the minute-90 goal as the question. Drop the Cherki tease and keep the open question about whether a lopsided night can still turn dangerous.",
+        "Scene 3 (\"Our reading: that is where chances are made. He is valued at 99 million euros.\") is a cast list that ties neither character to the story. Give Cherki and Güler one concrete stake each, for example the playmaker against the man who will set up the late goal, and cut the market values.",
+        "Scene 5: \"It is not clear from the data how the two moments connect. But the numbers suggest the lead did not come from France's best chance.\" This hedging kills the turning point. Say plainly that France missed a 0.86 chance, and that the own goal came in the same minute from the same corner.",
+        "Scene 8: \"Our numbers say tighter on the scoreboard, less so in the chances.\" This is a clumsy rebuttal of franceinfo that adds nothing. Use one press quote to land the verdict and tie it to the 6-of-7 big chances missed.",
+        "Scene 7: \"Turkiye's goalkeeper, Berke Özer, was among the four best-rated players on the night.\" This is a stat-report line, and he is a good character left underused. Give him a moment, for example the 7 saves, and link it to the minute-90 corner so the ending answers the opening question."
+      ]
+    },
+    "rewritten": true
+  },
+  "saved_script": "2026-11-19T00:36:25Z",
+  "shorts": [
+    {
+      "id": 1,
+      "format": "player_spotlight",
+      "title": "Rayan Cherki: 8.4 rating and the pass for 2-0",
+      "hook": "Cherki: 8.4 rating",
+      "shots": [
+        {
+          "text": "An 8.4 rating, the best on the pitch.",
+          "visual": {
+            "type": "photo",
+            "photo": "Rayan Cherki",
+            "caption": "Rayan Cherki, rated 8.4"
+          }
+        },
+        {
+          "text": "Rayan Cherki played centrally, behind Kylian Mbappé, in France's 4-2-3-1.",
+          "visual": {
+            "type": "lineups"
+          }
+        },
+        {
+          "text": "In the 80th minute his pass set up Junior Kroupi for 2-0, Kroupi's first international goal.",
+          "visual": {
+            "type": "goal_replay"
+          }
+        },
+        {
+          "text": "France had 60 percent of the ball and 23 shots. Cherki took one, worth 0.04 expected goals.",
+          "visual": {
+            "type": "stat_bars"
+          }
+        },
+        {
+          "text": "The data lists one assist and one shot. It cannot show the rest of his work.",
+          "visual": {
+            "type": "player_ratings"
+          }
+        },
+        {
+          "text": "Should Cherki start behind Mbappé every match? Full story on the channel.",
+          "visual": {
+            "type": "key_number"
+          }
+        }
+      ],
+      "fact_ids": [
+        "best_player_1",
+        "player_of_the_match",
+        "home_formation",
+        "goal_2",
+        "home_possession",
+        "home_shots"
+      ],
+      "narration": "An 8.4 rating, the best on the pitch. Rayan Cherki played centrally, behind Kylian Mbappé, in France's 4-2-3-1. In the 80th minute his pass set up Junior Kroupi for 2-0, Kroupi's first international goal. France had 60 percent of the ball and 23 shots. Cherki took one, worth 0.04 expected goals. The data lists one assist and one shot. It cannot show the rest of his work. Should Cherki start behind Mbappé every match? Full story on the channel.",
+      "visual": {
+        "type": "lineups"
+      }
+    },
+    {
+      "id": 2,
+      "format": "goal_explained",
+      "title": "Turkiye's 90th-minute header, after three misses",
+      "hook": "Four corner shots, one goal",
+      "shots": [
+        {
+          "text": "90th minute, France 2-0 up, and Turkiye have a corner.",
+          "visual": {
+            "type": "goal_replay"
+          }
+        },
+        {
+          "text": "Abdülkerim Bardakci had already shot from corners in the 17th, 60th and 83rd minutes. All three missed.",
+          "visual": {
+            "type": "shot_map"
+          }
+        },
+        {
+          "text": "The fourth came from Arda Güler's assist: a header worth 0.43 expected goals, about 4 in 10.",
+          "visual": {
+            "type": "photo",
+            "photo": "Abdülkerim Bardakci",
+            "caption": "Abdülkerim Bardakci, Turkiye scorer"
+          }
+        },
+        {
+          "text": "That one chance was more than a quarter of Turkiye's 1.54 expected goals. France had 3.36 and 23 shots.",
+          "visual": {
+            "type": "xg_timeline"
+          }
+        },
+        {
+          "text": "France won 2-1 instead of 2-0, with 6 big chances missed.",
+          "visual": {
+            "type": "scoreline"
+          }
+        },
+        {
+          "text": "Was it bad luck, or the price of those misses? Full story on the channel.",
+          "visual": {
+            "type": "key_number"
+          }
+        }
+      ],
+      "fact_ids": [
+        "goal_3",
+        "goal_2",
+        "home_xg",
+        "away_xg",
+        "home_shots",
+        "home_big_chances_missed",
+        "away_best_chance",
+        "score_home",
+        "score_away"
+      ],
+      "narration": "90th minute, France 2-0 up, and Turkiye have a corner. Abdülkerim Bardakci had already shot from corners in the 17th, 60th and 83rd minutes. All three missed. The fourth came from Arda Güler's assist: a header worth 0.43 expected goals, about 4 in 10. That one chance was more than a quarter of Turkiye's 1.54 expected goals. France had 3.36 and 23 shots. France won 2-1 instead of 2-0, with 6 big chances missed. Was it bad luck, or the price of those misses? Full story on the channel.",
+      "visual": {
+        "type": "goal_replay"
+      }
+    }
+  ]
 }
