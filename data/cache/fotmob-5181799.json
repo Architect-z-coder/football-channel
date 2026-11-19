@@ -1,0 +1,480 @@
+{
+  "saved": "2026-11-19T00:06:15Z",
+  "press": [
+    {
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "Il n'y a pas de problème, il sera avec nous",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "selection",
+      "source": "Eurosport France (press conference, 14 Nov 2026; about Kylian Mbappé, who missed the Italy match with a hamstring problem)",
+      "url": "https://www.eurosport.fr/football/ligue-des-nations/2026-2027/ligue-des-nations-i-france-turquie-i-zinedine-zidane-sur-sa-relation-avec-kylian-mbappe-ce-sont-des-betises-cest-assez-agacant_sto23355348/story.shtml"
+    },
+    {
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "On est tous disponibles normalement. Mais il faut attendre le dernier entraînement.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Flashscore (press conference, 14 Nov 2026; on the squad's availability)",
+      "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
+    },
+    {
+      "speaker": "Zinédine Zidane",
+      "role": "France head coach",
+      "team": "France",
+      "quote": "On sait ce qu'on doit faire: terminer le travail et se qualifier, c'est notre objectif de demain.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Flashscore (press conference, 14 Nov 2026; he gave no details on changes or the game plan)",
+      "url": "https://www.flashscore.fr/actualites/football-ligue-des-nations-uefa-mbappe-change-tout-selon-zidane-qui-prefere-l-avoir-que-ne-pas-l-avoir/QFFDwCSP/"
+    },
+    {
+      "speaker": "Sergen Yalçın",
+      "role": "Türkiye head coach",
+      "team": "Türkiye",
+      "quote": "Ama yarınki maçta biraz daha kontrollü oynayacağız.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "tactics",
+      "source": "GZT (pre-match press conference, Bordeaux, 14 Nov 2026; he also said Türkiye would not play without a striker)",
+      "url": "https://www.gzt.com/spor/fransa-turkiye-maci-oncesi-sergen-yalcindan-iddali-sozler-onu-bir-kenara-yazin-4278820"
+    },
+    {
+      "speaker": "Sergen Yalçın",
+      "role": "Türkiye head coach",
+      "team": "Türkiye",
+      "quote": "Paraphrase: He said Türkiye had played Belgium in one format and would use another against France. They would take a more defensive position and still play with a striker. He said the team and the country needed a win.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Türkiye Today (press conference, 14 Nov 2026)",
+      "url": "https://www.turkiyetoday.com/sports/france-and-turkiye-meet-in-bordeaux-with-a-win-on-both-minds-3232441"
+    }
+  ],
+  "context": {},
+  "reviews": [
+    {
+      "outlet": "Ouest-France",
+      "author": "",
+      "date": "2026-11-16",
+      "url": "https://www.ouest-france.fr/sport/football/equipe-de-france/france-turquie-la-qualification-la-premiere-place-mais-un-manque-de-maitrise-pour-les-bleus-e5f465ee-e142-11f1-9a29-f4bab172af08",
+      "headline": "France - Turquie. La qualification, la première place mais un manque de maîtrise pour les Bleus",
+      "quote": "Cette inefficacité a fait trembler les Bleus jusqu’en fin de match, et le but du break inscrit par Kroupi, son premier, bien servi par Cherki (2-0, 80’).",
+      "quote_en": "This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').",
+      "point": "France qualified and topped the group, but they showed the same weaknesses as in Italy: they wasted many chances, and Zidane still has plenty of work to do.",
+      "free": null,
+      "kind": "rebuilt"
+    },
+    {
+      "outlet": "franceinfo",
+      "author": "",
+      "date": "2026-11-15",
+      "url": "https://www.franceinfo.fr/sports/foot/ligue-des-nations/l-equipe-de-france-s-impose-face-a-la-turquie-et-se-qualifie-pour-les-quarts-de-finale-de-la-ligue-des-nations_8283920.html",
+      "headline": "Sans briller, l'équipe de France s’impose face à la Turquie et se qualifie pour les quarts de finale de la Ligue des nations",
+      "quote": "Dans un match plus accroché que ce que les classements des deux équipes pouvaient laisser penser, les Bleus ont dû prendre leur mal en patience avant de faire la différence.",
+      "quote_en": "In a match that was tighter than the two teams' rankings suggested, Les Bleus had to be patient before making the difference.",
+      "point": "France won without shining: they dominated a tighter game than expected and had to wait for the second half, helped by an own goal and Kroupi's first international goal.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_2_para.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 2,
+          "w": 45.6875,
+          "h": 21
+        },
+        {
+          "x": 51.390625,
+          "y": 2,
+          "w": 22.828125,
+          "h": 21
+        },
+        {
+          "x": 79.921875,
+          "y": 2,
+          "w": 56.953125,
+          "h": 21
+        },
+        {
+          "x": 142.578125,
+          "y": 2,
+          "w": 37.234375,
+          "h": 21
+        },
+        {
+          "x": 185.515625,
+          "y": 2,
+          "w": 81.234375,
+          "h": 21
+        },
+        {
+          "x": 272.453125,
+          "y": 2,
+          "w": 33.921875,
+          "h": 21
+        },
+        {
+          "x": 312.078125,
+          "y": 2,
+          "w": 20.984375,
+          "h": 21
+        },
+        {
+          "x": 338.78125,
+          "y": 2,
+          "w": 33.921875,
+          "h": 21
+        },
+        {
+          "x": 378.40625,
+          "y": 2,
+          "w": 25.46875,
+          "h": 21
+        },
+        {
+          "x": 409.578125,
+          "y": 2,
+          "w": 112.234375,
+          "h": 21
+        },
+        {
+          "x": 527.515625,
+          "y": 2,
+          "w": 31.890625,
+          "h": 21
+        },
+        {
+          "x": 565.109375,
+          "y": 2,
+          "w": 44.578125,
+          "h": 21
+        },
+        {
+          "x": 615.390625,
+          "y": 2,
+          "w": 70.8125,
+          "h": 21
+        },
+        {
+          "x": 691.90625,
+          "y": 2,
+          "w": 90.078125,
+          "h": 21
+        },
+        {
+          "x": 787.6875,
+          "y": 2,
+          "w": 58.28125,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 28.09375,
+          "w": 67.484375,
+          "h": 21
+        },
+        {
+          "x": 73.203125,
+          "y": 28.09375,
+          "w": 25.46875,
+          "h": 21
+        },
+        {
+          "x": 104.375,
+          "y": 28.09375,
+          "w": 49.21875,
+          "h": 21
+        },
+        {
+          "x": 159.296875,
+          "y": 28.09375,
+          "w": 29.5,
+          "h": 21
+        },
+        {
+          "x": 194.5,
+          "y": 28.09375,
+          "w": 22.859375,
+          "h": 21
+        },
+        {
+          "x": 223.0625,
+          "y": 28.09375,
+          "w": 70.421875,
+          "h": 21
+        },
+        {
+          "x": 299.203125,
+          "y": 28.09375,
+          "w": 34.890625,
+          "h": 21
+        },
+        {
+          "x": 339.796875,
+          "y": 28.09375,
+          "w": 33.59375,
+          "h": 21
+        },
+        {
+          "x": 379.09375,
+          "y": 28.09375,
+          "w": 22.5,
+          "h": 21
+        },
+        {
+          "x": 407.296875,
+          "y": 28.09375,
+          "w": 77.984375,
+          "h": 21
+        },
+        {
+          "x": 490.984375,
+          "y": 28.09375,
+          "w": 51.1875,
+          "h": 21
+        },
+        {
+          "x": 547.890625,
+          "y": 28.09375,
+          "w": 22.515625,
+          "h": 21
+        },
+        {
+          "x": 576.109375,
+          "y": 28.09375,
+          "w": 40.453125,
+          "h": 21
+        },
+        {
+          "x": 622.28125,
+          "y": 28.09375,
+          "w": 16.046875,
+          "h": 21
+        },
+        {
+          "x": 644.03125,
+          "y": 28.09375,
+          "w": 90.375,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 863.328125,
+        "h": 114.375
+      },
+      "verified": true
+    },
+    {
+      "outlet": "AFP (via Yahoo Noticias)",
+      "author": "",
+      "date": "2026-11-15",
+      "url": "https://es-us.noticias.yahoo.com/deportes/francia-gana-turqu%C3%ADa-clasifica-cuartos-223959602.html",
+      "headline": "Francia gana a Turquía y se clasifica para cuartos de la Liga de Naciones",
+      "quote": "Pero el contenido del partido volvió a dejar mucho que desear y plantea muchas incógnitas pese al regreso del capitán Kylian Mbappé, baja en Milán por dolores en los isquiotibiales.",
+      "quote_en": "But the content of the match once again left a lot to be desired and raises many questions despite the return of captain Kylian Mbappé, who missed Milan with hamstring pain.",
+      "point": "France topped the group, but the wire report says the performance was again poor and leaves open questions about Zidane's possession-based approach.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_3_para.png",
+        "head": "press_3_head.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 5,
+          "w": 39,
+          "h": 21
+        },
+        {
+          "x": 43,
+          "y": 5,
+          "w": 13,
+          "h": 21
+        },
+        {
+          "x": 60,
+          "y": 5,
+          "w": 82,
+          "h": 21
+        },
+        {
+          "x": 146,
+          "y": 5,
+          "w": 24,
+          "h": 21
+        },
+        {
+          "x": 174,
+          "y": 5,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 236,
+          "y": 5,
+          "w": 48,
+          "h": 21
+        },
+        {
+          "x": 288,
+          "y": 5,
+          "w": 9,
+          "h": 21
+        },
+        {
+          "x": 301,
+          "y": 5,
+          "w": 40,
+          "h": 21
+        },
+        {
+          "x": 345,
+          "y": 5,
+          "w": 54,
+          "h": 21
+        },
+        {
+          "x": 403,
+          "y": 5,
+          "w": 30,
+          "h": 21
+        },
+        {
+          "x": 437,
+          "y": 5,
+          "w": 55,
+          "h": 21
+        },
+        {
+          "x": 496,
+          "y": 5,
+          "w": 9,
+          "h": 21
+        },
+        {
+          "x": 509,
+          "y": 5,
+          "w": 57,
+          "h": 21
+        },
+        {
+          "x": 570,
+          "y": 5,
+          "w": 61,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 37,
+          "w": 82,
+          "h": 21
+        },
+        {
+          "x": 86,
+          "y": 37,
+          "w": 39,
+          "h": 21
+        },
+        {
+          "x": 129,
+          "y": 37,
+          "w": 12,
+          "h": 21
+        },
+        {
+          "x": 145,
+          "y": 37,
+          "w": 62,
+          "h": 21
+        },
+        {
+          "x": 211,
+          "y": 37,
+          "w": 24,
+          "h": 21
+        },
+        {
+          "x": 239,
+          "y": 37,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 301,
+          "y": 37,
+          "w": 44,
+          "h": 21
+        },
+        {
+          "x": 349,
+          "y": 37,
+          "w": 69,
+          "h": 21
+        },
+        {
+          "x": 422,
+          "y": 37,
+          "w": 33,
+          "h": 21
+        },
+        {
+          "x": 459,
+          "y": 37,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 482,
+          "y": 37,
+          "w": 40,
+          "h": 21
+        },
+        {
+          "x": 526,
+          "y": 37,
+          "w": 27,
+          "h": 21
+        },
+        {
+          "x": 557,
+          "y": 37,
+          "w": 61,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 69,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 23,
+          "y": 69,
+          "w": 23,
+          "h": 21
+        },
+        {
+          "x": 50,
+          "y": 69,
+          "w": 105,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 640,
+        "h": 96
+      },
+      "verified": true
+    }
+  ]
+}
