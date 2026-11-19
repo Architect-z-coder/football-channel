@@ -918,5 +918,113 @@
     },
     "rewritten": true
   },
-  "saved_script": "2026-11-19T00:19:34Z"
+  "saved_script": "2026-11-19T00:19:34Z",
+  "shorts": [
+    {
+      "id": 1,
+      "format": "player_spotlight",
+      "title": "Rayan Cherki: 8.4, the best rating on the pitch",
+      "hook": "Cherki's 8.4",
+      "shots": [
+        {
+          "text": "Rayan Cherki. 8.4, the best rating of any player in France against Turkiye.",
+          "visual": {
+            "type": "photo",
+            "photo": "Rayan Cherki",
+            "caption": "Rayan Cherki, France"
+          }
+        },
+        {
+          "text": "Zidane's 4-2-3-1 placed him in the middle of the three behind Kylian Mbappé, between Olise and Barcola.",
+          "visual": {
+            "type": "lineups"
+          }
+        },
+        {
+          "text": "He took one shot, in minute 13, worth 0.04 expected goals. His value came from somewhere else.",
+          "visual": {
+            "type": "key_number"
+          }
+        },
+        {
+          "text": "Minute 80, still 1-0. Cherki set up substitute Junior Kroupi, who scored his first international goal. 2-0.",
+          "visual": {
+            "type": "goal_replay"
+          }
+        },
+        {
+          "text": "France had 7 big chances and missed 6. His pass was the one that became a goal. The pack has no passing numbers for him, so the rating is a judgement, not a count. Was 8.4 fair? Full story on the channel.",
+          "visual": {
+            "type": "stat_bars"
+          }
+        }
+      ],
+      "fact_ids": [
+        "best_player_1",
+        "player_of_the_match",
+        "home_formation",
+        "home_big_chances",
+        "home_big_chances_missed",
+        "goal_2",
+        "home_coach"
+      ],
+      "narration": "Rayan Cherki. 8.4, the best rating of any player in France against Turkiye. Zidane's 4-2-3-1 placed him in the middle of the three behind Kylian Mbappé, between Olise and Barcola. He took one shot, in minute 13, worth 0.04 expected goals. His value came from somewhere else. Minute 80, still 1-0. Cherki set up substitute Junior Kroupi, who scored his first international goal. 2-0. France had 7 big chances and missed 6. His pass was the one that became a goal. The pack has no passing numbers for him, so the rating is a judgement, not a count. Was 8.4 fair? Full story on the channel.",
+      "visual": {
+        "type": "lineups"
+      }
+    },
+    {
+      "id": 2,
+      "format": "goal_explained",
+      "title": "Minute 49: the own goal that broke Turkiye's plan",
+      "hook": "The goal nobody scored",
+      "shots": [
+        {
+          "text": "0-0 until minute 49. Then Emirhan Topçu put the ball into his own net.",
+          "visual": {
+            "type": "goal_replay"
+          }
+        },
+        {
+          "text": "France had been on top for 79% of the first-half minutes. Turkiye sat in a 5-4-1, and their coach had said they would defend deeper against France.",
+          "visual": {
+            "type": "momentum"
+          }
+        },
+        {
+          "text": "Morocco used a similar idea at the 2022 World Cup, with 38% of the ball: stay compact and wait. It works until one touch ends the wait.",
+          "visual": {
+            "type": "history_lens"
+          }
+        },
+        {
+          "text": "Topçu was the lowest-rated starter, 5.6. The pack lists no assist and cannot show how the ball reached him.",
+          "visual": {
+            "type": "photo",
+            "photo": "Emirhan Topçu",
+            "caption": "Emirhan Topçu, Turkiye"
+          }
+        },
+        {
+          "text": "Same minute, Barcola missed a chance worth 0.86 expected goals. Turkiye had held for 48 minutes. Was it Topçu's error, or France's pressure? Full story on the channel.",
+          "visual": {
+            "type": "shot_map"
+          }
+        }
+      ],
+      "fact_ids": [
+        "goal_1",
+        "ht_home",
+        "ht_away",
+        "away_formation",
+        "worst_player_1",
+        "home_best_chance",
+        "momentum_home_on_top_pct"
+      ],
+      "narration": "0-0 until minute 49. Then Emirhan Topçu put the ball into his own net. France had been on top for 79% of the first-half minutes. Turkiye sat in a 5-4-1, and their coach had said they would defend deeper against France. Morocco used a similar idea at the 2022 World Cup, with 38% of the ball: stay compact and wait. It works until one touch ends the wait. Topçu was the lowest-rated starter, 5.6. The pack lists no assist and cannot show how the ball reached him. Same minute, Barcola missed a chance worth 0.86 expected goals. Turkiye had held for 48 minutes. Was it Topçu's error, or France's pressure? Full story on the channel.",
+      "visual": {
+        "type": "goal_replay"
+      }
+    }
+  ]
 }

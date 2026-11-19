@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-18T17:37:59Z",
-  "fixture_id": "fotmob-5181835",
-  "match": "fotmob:5181835",
-  "slug": "fotmob-5181835",
-  "home": "Germany",
-  "away": "Netherlands",
+  "updated": "2026-11-19T00:24:07Z",
+  "fixture_id": "fotmob-5181799",
+  "match": "France Turkey",
+  "slug": "fotmob-5181799",
+  "home": "France",
+  "away": "Turkiye",
   "voice": "astro",
   "items": [
     {
       "key": "scene_01",
-      "text": "Olympiastadion, Berlin. Minute 25. Still 0-0. Donyell Malen meets the ball with his head, right in front of goal. Expected goals, or xG, measures how likely a shot is to score. This one is worth 0.69. More likely a goal than not. He misses. By the end, Germany have won 5-0. Yet the expected goals read 1.39 to 1.11. So how did a 5-0 hide a game that close?"
+      "text": "France create 3.36 expected goals, or xG, and still have to survive the end of the match in Bordeaux. How does a team make 7 big chances and win by only one goal? xG is simply what the chances were worth in goals. Minute 90. A Turkiye corner. Abdülkerim Bardakci rises and heads it in, with Arda Güler credited with the assist. It is 2-1. Ten minutes earlier, France led 2-0."
     },
     {
       "key": "scene_02",
-      "text": "Two new coaches, one group. Jürgen Klopp and Xavi Hernández first met in Amsterdam, and it ended 1-1. Before this rematch, Klopp said he relished facing a Netherlands side that likes to play football. His plan was to win, and top the group on head-to-head. The Dutch arrive after a 7-0 win over Greece. But Xavi is thin on options. Brian Brobbey, Virgil van Dijk and Nathan Aké are all out injured."
+      "text": "Round 6 of the group. France arrive with 3 wins, 1 draw and 1 defeat in their last 5, the defeat a 3-1 loss in Italy three days earlier. Turkiye arrive with 5 defeats in 5. Zidane's words the day before were plain. In translation: we know what we must do, finish the job and qualify. He gave no details on the game plan. Turkiye were without the suspended Ozan Kabak and Ümit Akdağ. Sergen Yalçın said they would take a more defensive position, but still play with a striker."
     },
     {
       "key": "scene_03",
-      "text": "Three people carry this story. First, Jürgen Klopp, whose first home game as Germany coach ended in a 0-1 defeat to Greece. Tonight he starts Ter Stegen in goal, and Gruda, Wirtz and Scherhant behind Havertz. Second, Florian Wirtz, in the middle of that three. Watch him. And third, on the other side, Denzel Dumfries, in the Dutch back four. We will come back to him."
+      "text": "Three people carry this story. Rayan Cherki plays behind Kylian Mbappé in France's 4-2-3-1. Our reading: his job is to find gaps in a Turkiye back five. Arda Güler, at 98 million euros, is Turkiye's most valuable starter. If Turkiye are to hurt France, our reading is that it runs through him. And Emirhan Topçu, one of Turkiye's 3 centre-backs. A defender hopes for a quiet night. Keep minute 49 in mind."
     },
     {
       "key": "scene_04",
-      "text": "The first half belongs to Germany. The momentum graph has them on top for 72 percent of it. But it is no siege. Havertz heads a set piece in minute 23, and it is saved. Scherhant hits the post in minute 32. And the best chance of the half is still Malen's miss. Then, minute 41. Joshua Kimmich finds Derry Scherhant, who finishes with his right foot, from open play. The chance is worth 0.03 xG. Almost nothing. It goes in. 1-0. Germany take a scrap. The Dutch spurned a 0.69. Hold on to that."
+      "text": "Stade Atlantique, Bordeaux. France take control of the first half, and FotMob's momentum graph has them on top for most of it. Turkiye sit in a 5-4-1. The chances come. Minute 21, Bradley Barcola breaks away and is saved. Minute 34, Mbappé shoots and is saved too. Turkiye's one real answer comes at minute 35: İsmail Yüksek's shot, worth 0.37 xG, is saved. Half time, 0-0. France dominate and have nothing to show for it. Remember that feeling. It comes back."
     },
     {
       "key": "scene_05",
-      "text": "Minute 57. Cody Gakpo shoots for the Netherlands, and it is saved. Three minutes later, Florian Wirtz hits a left-footed shot from open play. 2-0. Five minutes on, a set piece. Brajan Gruda sets it up, and Nico Schlotterbeck heads it in. 3-0. Two goals in five minutes, from chances worth 0.05 and 0.13. Small chances, taken. Germany are on top for 74 percent of this half, and the match slips away from the Dutch."
+      "text": "Minute 49. A France corner leads to two chances. Adrien Rabiot's header goes wide. Then Bradley Barcola shoots from very close to goal. That chance is worth 0.86 xG, the kind that scores about 9 times in 10. He misses. In that same minute, France take the lead anyway. The pack credits Emirhan Topçu with an own goal. It is 1-0. The numbers cannot show how it went in, only who is credited. Our reading: this is the turning point. France finally lead, but through a goal credited to a defender, not a finisher. Topçu ends with the lowest rating of any starter, 5.6."
     },
     {
       "key": "scene_06",
-      "text": "Minute 71. Gruda sets up Wirtz again. A chance worth 0.24. 4-0. Minute 78. This time Gruda finishes it himself, left foot, open play. 5-0. He ends with a goal, 2 assists, and the highest rating on the pitch, 9.2. Now, back to Denzel Dumfries. His rating is 3.3, the lowest of any starter. And the five lowest-rated starters are the Dutch goalkeeper and back four. Four goals fell between minute 60 and minute 78. That points to where the Dutch night broke."
+      "text": "France lead, but the match does not close. Mbappé shoots at minutes 64, 73 and 75, and every one is saved or blocked. Minute 80. Substitute Junior Kroupi scores in open play with his right foot. Rayan Cherki sets it up. It is 2-0. The shot is worth only 0.15 xG, and it goes in. Cherki ends as player of the match, rated 8.4. Then France miss again. Minute 88, Lucas Da Cunha shoots from a 0.20 chance and misses. Two minutes later, Turkiye's best-rated player, Güler at 8.1, sets up Bardakci's header. 2-1."
     },
     {
       "key": "scene_07",
-      "text": "Here is what the scoreline hides. Data from FotMob gives expected goals of 1.39 for Germany and 1.11 for the Netherlands. Almost level. The Dutch number rests on one header: Malen's, in minute 25. That single chance is 0.69 of the 1.11. Germany's five goals came from smaller chances: 0.03, 0.05, 0.13, 0.24 and 0.26. Germany took the chances the Dutch spurned. They also shot more: 18 shots to 9, and 10 on target to 1. So it was not just luck. Germany shot more, and shot straighter."
+      "text": "Here is the answer. FotMob's numbers put France's chances at 3.36 xG, but only 2 goals came, and one was an own goal. France missed 6 of their 7 big chances. The clearest case is Barcola at minute 49. A chance worth 0.86 xG should go in. Our reading: the margin was one goal because France's finishing was poor, not because Turkiye matched them for chances. The numbers cannot show how much was French waste and how much was Turkiye defending."
     },
     {
       "key": "scene_08",
-      "text": "After the match, Klopp told ARD, as ESPN reports: \"I wouldn't have dared to wish for a 5-0 before the game.\" The numbers fit his surprise. Germany did not need big chances. They needed to take small ones. The win sealed their place in the Nations League quarter-finals, and Al Jazeera called it the Dutch side's heaviest defeat in 67 years."
+      "text": "Ouest-France writes, in translation, \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki (2-0, 80').\" Here the data agrees. Our verdict: France did what Zidane asked and finished the job. They qualify and top the group, the paper says. But they won it on a 0.15 chance and an own goal, not on their best moments."
     },
     {
       "key": "scene_09",
-      "text": "At his unveiling, Klopp said: \"I want people to go home thinking 'Wow, that was cool!'\" That was FIFA.com quoting him. A first home defeat to Greece has become a quarter-final place. So, the answer. This was a game close on chances that Germany won in the box, and the Dutch lost there. Germany had 50 touches in the opposition box, the Netherlands 19. And for Xavi, it all comes back to one header, Malen's 0.69 miss at minute 25. Tell me in the comments: was Malen's miss the moment the night tipped? And if you like football told through the numbers, subscribe to The Other Touchline."
+      "text": "So how does a team make 7 big chances and win by one goal? By missing 6 of them. France go through to the quarter-finals, but Ouest-France says the same wasted chances showed in Italy. Turkiye leave Bordeaux with a late goal for Bardakci and a sixth defeat in a row. Güler, at 8.1, was good enough to lift them, but not to earn a point. Making chances is one skill. Taking them is another. Will France's misses cost them in the quarter-finals? Tell us in the comments, and subscribe to The Other Touchline."
     },
     {
       "key": "short_1",
-      "text": "Brajan Gruda's 9.2 was the best rating on the pitch in Berlin. Germany led 2-0 when his pass set up Schlotterbeck's header in the 65th minute. 3-0. Six minutes later, Gruda set up Wirtz for the fourth. 4-0. Then he scored himself, with his left foot, for 5-0. One goal, two assists. Wirtz scored twice and was rated 9.0. Gruda still finished above him. Klopp said, \"I wouldn't have dared to wish for a 5-0 before the game.\" Who was your man of the match? Full story on the channel."
+      "text": "Rayan Cherki. 8.4, the best rating of any player in France against Turkiye. Zidane's 4-2-3-1 placed him in the middle of the three behind Kylian Mbappé, between Olise and Barcola. He took one shot, in minute 13, worth 0.04 expected goals. His value came from somewhere else. Minute 80, still 1-0. Cherki set up substitute Junior Kroupi, who scored his first international goal. 2-0. France had 7 big chances and missed 6. His pass was the one that became a goal. The pack has no passing numbers for him, so the rating is a judgement, not a count. Was 8.4 fair? Full story on the channel."
     },
     {
       "key": "short_2",
-      "text": "Germany's first goal was worth just 0.03 xG. Derry Scherhant had been blocked in the 13th minute and hit the post in the 32nd. In the 41st minute Kimmich passed, Scherhant hit it with his right foot, and it was 1-0. Germany were on top for 72% of that first half, with one goal to show for it. That was the lowest xG of Germany's five goals. Four more came after the break, and it finished 5-0. Which goal changed the game for you? Full story on the channel."
+      "text": "0-0 until minute 49. Then Emirhan Topçu put the ball into his own net. France had been on top for 79% of the first-half minutes. Turkiye sat in a 5-4-1, and their coach had said they would defend deeper against France. Morocco used a similar idea at the 2022 World Cup, with 38% of the ball: stay compact and wait. It works until one touch ends the wait. Topçu was the lowest-rated starter, 5.6. The pack lists no assist and cannot show how the ball reached him. Same minute, Barcola missed a chance worth 0.86 expected goals. Turkiye had held for 48 minutes. Was it Topçu's error, or France's pressure? Full story on the channel."
     }
   ],
-  "characters": 4837
+  "characters": 5357
 }
