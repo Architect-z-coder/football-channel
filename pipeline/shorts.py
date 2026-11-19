@@ -51,6 +51,7 @@ RULES
 4. End with one question for the comments, then "Full story on the channel."
 5. "title": under 60 characters, accurate. "hook": the on-screen headline, 2-6 words.
 6. Never mention politics, transfer rumours, betting, injury speculation or private lives.
+Never say "the pack" or "the data pack" to the viewer; say "the match data" or just state the fact.
 Return ONLY JSON: {{"shorts": [{{"id": 1, "format": "player_spotlight", "title": str, "hook": str,
   "shots": [{{"text": str, "visual": {{...}}}}], "fact_ids": [str]}}, {{"id": 2, "format": "goal_explained", ...}}]}}"""
 

@@ -12,8 +12,11 @@ CRITIC_SYSTEM = """You are a senior YouTube editor for a football analysis chann
 viewer retention, not for facts (facts are checked separately and must not change).
 
 Score each from 1 to 10:
-- hook: do the first 2 sentences of scene 1 give a concrete, surprising fact AND an open question that
-  makes a football fan need the answer? Vague openers ("In this video...", "Let's talk about...") score 3 or less.
+- hook: do the first 2 sentences of scene 1 put the viewer in a concrete human situation (the stakes,
+  a coach's words, what was expected) AND raise an open question? Numbers are NOT needed in the opening;
+  the channel gives context first and data later. Score down an opening that starts with statistics.
+- context: do scenes 1-3 set up what was expected (coaches' words, papers, stakes) before any xG,
+  ratings or shot numbers? (judge inside payoff and pace)
 - payoff: is it a STORY - clear characters, stakes, a turning point and a satisfying reveal - with the
   data used as evidence, not a list of statistics? Does the ending answer the opening question?
   A script that reads like a stats report scores 4 or less.

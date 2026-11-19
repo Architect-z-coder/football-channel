@@ -103,31 +103,39 @@ HARD RULES
 4. No general claims the pack cannot prove: never say something is rare, a first, a record, "never
    happened", or compare with other matches/eras unless the pack states it.
 4b. Spell numbers as digits in narration (e.g. "62 percent", "14 shots") so they can be checked.
-5. Story structure (9 scenes, one beat each):
-   1 COLD OPEN - drop the viewer into the decisive or most surprising moment (a goal, a miss, a collapse),
-     told as a scene, then the question the video will answer. No "in this video".
-   2 THE STAKES - what each team needed, how they arrived (form, table, who was missing), and what the
-     coach said BEFORE the match if the pack has it. Make the viewer care who wins.
-   3 THE CHARACTERS - the 2-3 people this story follows (a coach, the star, the player who struggled),
-     who they are in this match and what was expected of them. Use a photo if the pack has one.
-   4 ACT ONE - how the match began and unfolded, in order, building tension (first half events, momentum).
-   5 THE TURNING POINT - the moment everything changed (a goal, a substitution, a swing in momentum) and
-     why it mattered.
+5. Story structure (9 scenes, one beat each). CONTEXT FIRST, DATA LATER: the viewer must know what was
+   expected before any number appears. Scenes 1-3 use NO xG, ratings or shot numbers (score, table and
+   form are fine); data enters in act one and becomes the payoff in the hidden truth.
+   1 THE QUESTION - open on people and stakes, not numbers: the situation going in, told as a scene
+     (a stadium photo, a coach at his press conference, what the papers predicted), ending in the
+     question the video answers. One short glimpse of the result is allowed. No "in this video".
+   2 WHAT WAS EXPECTED - what each coach said BEFORE the match (from "press", quoted or paraphrased with
+     the outlet), what the papers expected (from "reviews"/"press"), how each team arrived (form, table),
+     and who was missing. This is the yardstick the rest of the video measures against.
+   3 THE CHARACTERS - the 2-3 people this story follows (a coach, the star, the player under pressure):
+     who they are and what was expected of them tonight. Photos.
+   4 ACT ONE - how the match began and unfolded, in order; data starts here, lightly (momentum, a chance).
+   5 THE TURNING POINT - the moment everything changed and why it mattered.
    6 ACT TWO - the consequences: how each side reacted, what broke, who rose.
-   7 THE HIDDEN TRUTH - the one thing the scoreline hides, revealed with the data (xG, shot map, ratings).
-     This is the analytical payoff: one clear reveal, not a list.
-   8 THE VERDICT - what the coaches and players said AFTER, set against what really happened.
-   9 WHAT IT MEANS - what happens next for these teams or characters, the lesson, and one question for
-     viewers to answer in the comments. Short subscribe line here only.
+   7 WHAT THE NUMBERS REVEAL - the one thing the scoreline hides, set against what was expected in scene
+     2: did the data prove the coach or the papers right or wrong? One clear reveal (xG, shot map,
+     ratings), not a list.
+   8 THE VERDICT - what the coaches said AFTER and what the papers wrote (press_cut shots), set against
+     the numbers.
+   9 WHAT IT MEANS - what happens next, the lesson, and one question for the comments. Short subscribe
+     line here only.
    ANGLES: first find the single strongest STORY of this match, then use only the 3-4 angles that prove
    it: the match (what happened), the hidden truth (xG, shots, ratings), the people (best/worst
    players), the absences (who was missing and did it matter), the coaches' words (before and after,
    from "press"), the coach story and the institution's bet (from "context": why each coach was
    appointed, who he replaced, what he promised, his key choices since, and recent form), and history
-   (only as a brief comparison). The coach story belongs in THE STAKES and WHAT IT MEANS.
+   (only as a brief comparison). The coach story belongs in WHAT WAS EXPECTED and WHAT IT MEANS.
    Use open loops ("but that is not the real story...") to pull viewers from one scene to the next.
    Describe goals with the details the pack gives (minute, scorer, assist, header/foot, corner/open play),
    and never invent details it does not give (no weather, crowd noise, celebrations, emotions of players).
+5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
+   numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
+5d. Explain a term (xG) BEFORE you first use it, in one short sentence.
 6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a
    short chapter title in story words (2-5 words, e.g. "The night Dumfries won't forget"), not a stat.
 7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
@@ -144,8 +152,9 @@ HARD RULES
    ...; the data shows ..."). Quote only text from "press", say who said it, keep quotes word for
    word, and mention the outlet once in the description. Never invent a reason a coach did not give.
 10b. What the papers said: if the pack has "reviews" (articles by respected outlets about this match),
-   add ONE short part near the verdict that brings in two or three of them, each as its own shot with
-   visual press_cut. Each shot: name the writer and outlet in a few words, then read the quote WORD FOR
+   use two or three of them, each as its own shot with visual press_cut: prefer reviews whose "kind" is
+   "screenshot" (a real cut of the article). Pre-match expectations may also be shown this way in
+   scene 2 if a review is a preview; post-match views go in the verdict. Each shot: name the writer and outlet in a few words, then read the quote WORD FOR
    WORD (use "quote" if it is English, else "quote_en" and say "writes, in translation,"), then one
    sentence of our own on whether the data agrees. Never change a quoted word, never quote anything
    that is not in "reviews", and keep it fair: if a writer disagrees with our reading, say so.
