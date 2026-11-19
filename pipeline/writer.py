@@ -48,10 +48,12 @@ Allowed visual types (use only these; the renderer supports nothing else):
 - {"type": "press_cut", "review_index": int}     -> a cut of a real newspaper article from the pack's "reviews"
                                                    (index from 0): headline, writer, date, and the quoted
                                                    sentence, highlighted word by word while it is read.
-- {"type": "goal_replay", "goal_index": int}    -> animated replay of one goal on a 2D pitch: where the
+- {"type": "goal_replay", "minute": int}        -> animated replay of one goal on a 2D pitch: where the
                                                    shot came from, where it went in, scorer, assist, xG.
-                                                   goal_index counts goals in time order from 0. Only if
-                                                   the pack has a "shots" list.
+                                                   "minute" = the goal's minute exactly as in the pack
+                                                   (the shot with result "Goal" at that minute). Only if
+                                                   the pack has a "shots" list. Never for an own goal
+                                                   (there is no shot to replay); use key_moments instead.
 - {"type": "key_moments", "moments": [{"minute": int, "text": str}, ...]}
                                                 -> 4-6 key moments on an animated timeline (goals, red
                                                    cards, big misses, substitutions), text 2-6 words each,
@@ -130,7 +132,10 @@ HARD RULES
    short chapter title in story words (2-5 words, e.g. "The night Dumfries won't forget"), not a stat.
 7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
 8. If the pack has a "shots" list, use it: xG explains whether a result was deserved, where the
-   chances came from and who had the best ones. Say "expected goals, or xG" the first time and explain
+   chances came from and who had the best ones.
+   Tactical readings (a player's role, a coach's plan) are welcome but must be marked as our reading and
+   rest on a pack number or a quoted source: "his 4 key passes suggest he was the outlet", never "he is
+   the player they need" as bare fact. Say "expected goals, or xG" the first time and explain
    it in one short sentence. Credit the data source named in the pack's "source" once in the narration.
 10. Players and press: the pack may hold FotMob ratings (best_player_*, worst_player_*) and
    "press": what coaches and players said after the match, each with its source. Name the best and

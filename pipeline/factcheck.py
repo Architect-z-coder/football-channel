@@ -100,7 +100,7 @@ def banned_check(script: dict, banned: list[str]) -> list[str]:
 CLAIM_SYSTEM = """You are a strict football fact-checker. You receive a data pack and a script.
 List every statement in the script that the data pack does not support: wrong numbers, wrong names,
 wrong minutes, events that are not in the pack, or tactical claims stated as fact that the numbers
-cannot show. Reading of the numbers phrased as interpretation ("this suggests") is acceptable.
+cannot show. Reading of the numbers phrased as interpretation ("this suggests", "our reading") is acceptable when a pack number or a quoted source supports it. A goal_replay visual names its goal by "minute": check that minute is the goal the narration describes.
 Statements about coaches' appointments, promises and choices are supported only by the pack's
 "context" (each with a source). Quotes must appear word for word in the pack's "press" or "context", attributed to the same speaker, or in the pack's "reviews" (quote, or quote_en said as a translation), attributed to the same writer and outlet.
 The pack's "history" list is reference data from StatsBomb about past teams: statements about a

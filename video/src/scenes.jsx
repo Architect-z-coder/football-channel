@@ -733,7 +733,9 @@ const QuoteCard = ({ visual, props }) => {
 const GoalReplay = ({ visual, props, scene }) => {
   const f = useCurrentFrame();
   const goals = (props.shots || []).filter((s) => s.result === "Goal").sort((a, b) => a.minute - b.minute);
-  const g = goals[visual.goal_index || 0];
+  const g = visual.minute != null
+    ? goals.find((x) => x.minute === visual.minute) || goals.find((x) => Math.abs(x.minute - visual.minute) <= 1)
+    : goals[visual.goal_index || 0];
   if (!g) return null;
   const info = (props.goals || []).find((x) => x.minute === g.minute && (x.player || "").includes((g.player || "").split(" ").slice(-1)[0])) || {};
   // half pitch, attacking up: x 0.5..1 (towards goal), y 0..1 across
