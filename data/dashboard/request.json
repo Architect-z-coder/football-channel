@@ -1,6 +1,6 @@
 {
-  "id": "fra-tur-render-1",
-  "mode": "no-upload",
-  "match": "France Turkey",
+  "id": "fra-tur-poscheck",
+  "mode": "data-only",
+  "match": "fotmob:5181799",
   "look_back_days": ""
 }
