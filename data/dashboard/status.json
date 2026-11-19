@@ -1,11 +1,11 @@
 {
-  "request_id": "fra-tur-prep-4",
-  "mode": "prepare",
+  "request_id": "fra-tur-render-1",
+  "mode": "no-upload",
   "match": "France Turkey",
   "trigger": "push",
-  "state": "done",
-  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44429488400",
-  "started": "2026-11-19T00:30:10Z",
-  "finished": "2026-11-19T00:38:00Z",
+  "state": "running",
+  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44430917088",
+  "started": "2026-11-19T00:40:43Z",
+  "finished": null,
   "reason": null
 }
