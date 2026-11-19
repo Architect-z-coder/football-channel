@@ -170,6 +170,7 @@ def shots(data: dict, home_id: int) -> list[dict]:
             "minute": int(s.get("min") or 0),
             "x": round(float(s["x"]) / 105, 4), "y": round(float(s["y"]) / 68, 4),  # 0-1, attacking x = 1
             "xg": round(float(s.get("expectedGoals") or 0), 2),
+            "xgot": round(float(s["expectedGoalsOnTarget"]), 2) if s.get("expectedGoalsOnTarget") is not None else None,
             "result": result, "player": s.get("playerName"), "situation": s.get("situation"),
             "body_part": s.get("shotType"),
             "goal_y": round(float(s["goalCrossedY"]) / 68, 3) if s.get("goalCrossedY") is not None else None,

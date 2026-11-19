@@ -1,6 +1,7 @@
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
 import { PressCut } from "./Newspaper";
+import { XgExplainer, DiagnosisFunnel, ResultOdds } from "./Diagnosis";
 
 // ---------- helpers ----------
 const useSpring = (delay = 0, config = { damping: 14, mass: 0.6 }) => {
@@ -948,6 +949,9 @@ const PhotoCard = ({ visual, props, scene }) => {
 };
 
 const MAP = {
+  xg_explainer: XgExplainer,
+  diagnosis: DiagnosisFunnel,
+  result_odds: ResultOdds,
   press_cut: PressCut,
   goal_replay: GoalReplay,
   key_moments: KeyMoments,

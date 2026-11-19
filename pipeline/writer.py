@@ -48,6 +48,14 @@ Allowed visual types (use only these; the renderer supports nothing else):
 - {"type": "press_cut", "review_index": int}     -> a cut of a real newspaper article from the pack's "reviews"
                                                    (index from 0): headline, writer, date, and the quoted
                                                    sentence, highlighted word by word while it is read.
+- {"type": "xg_explainer"}                     -> teaching graphic: how xG is built (distance, angle,
+                                                   body part, type of assist, situation), no numbers.
+                                                   Use once, when xG is first explained.
+- {"type": "diagnosis", "side": "home"|"away"}  -> the "why" funnel for one team: chances (xG) -> on target
+                                                   (xGOT) -> goals, plus the other keeper's goals
+                                                   prevented. Needs the diag_* facts.
+- {"type": "result_odds"}                       -> the chances replayed 20,000 times: win / draw / win %
+                                                   (fact diag_sim_result).
 - {"type": "goal_replay", "minute": int}        -> animated replay of one goal on a 2D pitch: where the
                                                    shot came from, where it went in, scorer, assist, xG.
                                                    "minute" = the goal's minute exactly as in the pack
@@ -133,6 +141,19 @@ HARD RULES
    Use open loops ("but that is not the real story...") to pull viewers from one scene to the next.
    Describe goals with the details the pack gives (minute, scorer, assist, header/foot, corner/open play),
    and never invent details it does not give (no weather, crowd noise, celebrations, emotions of players).
+5b. THE DIAGNOSIS (inside WHAT THE NUMBERS REVEAL, when the pack has diag_* facts): do not just report
+   numbers, explain WHY the result happened, like a doctor's diagnosis, in plain words:
+   - the science, once, simply: xG is learned from hundreds of thousands of past shots - distance, angle,
+     header or foot, the kind of pass, open play or set piece - and says how often a chance like it is
+     scored. xGOT looks at where the shot actually went in the goal.
+   - then test the causes one by one, with the diag_* facts: chance quality (xG per shot, chances worth
+     0.3+, shots from inside the box), finishing (goals minus xG; xGOT minus xG = shot placement),
+     goalkeeping (the keeper's goals prevented), set pieces vs open play, and luck (diag_sim_result:
+     "with these exact chances, X win N times in 100"). Name which cause mattered most.
+   - tactical causes (a high or low block, players out of position, a pressing plan) only as our reading,
+     and only when shot locations, possession, box touches, the formation or a quoted coach/paper support
+     it; say what supports it, and say plainly when the data cannot tell.
+   Use visuals xg_explainer, diagnosis and result_odds here.
 5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
    numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
 5d. Explain a term (xG) BEFORE you first use it, in one short sentence.

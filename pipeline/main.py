@@ -187,6 +187,8 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
     elif cfg.get("data_source", "football-data") == "football-data":
         from .fdorg import scout
         pack = scout(cfg, pick)
+        from . import diagnosis
+        pack = diagnosis.add(pack)
     else:
         from .scout import scout
         pack = scout(cfg)
