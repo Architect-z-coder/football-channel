@@ -3,9 +3,9 @@
   "mode": "prepare",
   "match": "Bayern Koln",
   "trigger": "push",
-  "state": "running",
+  "state": "failed",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44834005342",
   "started": "2026-11-20T23:04:25Z",
-  "finished": null,
-  "reason": null
+  "finished": "2026-11-20T23:08:48Z",
+  "reason": "Your edits failed the fact-check:\n- Thumbnail text \"68 IN 100\" is wrong. The pack's simulation gives Köln 64 wins in 100 (Bayern 14, draw 22). No 68 appears.\n- Scene 6 key_number visual \"32 v 15\" (Tackles, Köln v Bayern) is wrong. Bayern made 14 tackles, and the narration itself says 14.\n- Scene 9 says \"Köln had 29 percent here\". The pack gives Köln 28 percent possession."
 }
