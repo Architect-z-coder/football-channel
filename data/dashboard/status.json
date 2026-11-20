@@ -3,9 +3,9 @@
   "mode": "no-upload",
   "match": "Bayern Koln",
   "trigger": "push",
-  "state": "running",
+  "state": "done",
   "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44836134207",
   "started": "2026-11-20T23:21:12Z",
-  "finished": null,
+  "finished": "2026-11-20T23:38:25Z",
   "reason": null
 }

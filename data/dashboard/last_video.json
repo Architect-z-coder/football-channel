@@ -1,47 +1,34 @@
 {
-  "updated": "2026-11-19T00:51:06Z",
-  "home": "France",
-  "away": "Turkiye",
-  "competition": "UEFA Nations League A Grp. 1",
-  "fixture_id": "fotmob-5181799",
+  "updated": "2026-11-20T23:38:21Z",
+  "home": "Bayern München",
+  "away": "1. FC Köln",
+  "competition": "Bundesliga",
+  "fixture_id": "fotmob-5881226",
   "titles": [
-    "France 2-1 Turkiye: The Chances That Almost Cost Them",
-    "France Created Everything. Turkiye Scored in Minute 90.",
-    "Why France Won 2-1 But Still Had Questions to Answer"
+    "Bayern had the ball. Köln had the chances.",
+    "Why Kompany said Köln deserved the draw",
+    "72% possession, 17 shots, 1 point: Bayern 1-1 Köln"
   ],
-  "minutes": 4.9,
-  "files": "20261119-france-turkiye",
+  "minutes": 5.2,
+  "files": "20261120-bayern-m-nchen-1-fc-k-ln",
   "uploaded": false,
   "youtube": null,
-  "critic": {
-    "hook": 6,
-    "payoff": 6,
-    "pace": 6,
-    "clarity": 7,
-    "notes": [
-      "Opening: \"Rayan Cherki will end this night as the player of the match. But that is not what Bordeaux will talk about. Not yet.\" This is teasing, not a human situation. Open on Zidane's \"finish the work and qualify\" against a Turkiye side on five straight defeats, then ask why it ended in panic.",
-      "Scene 1 spends its first lines on Cherki and then gives away the 2-1 and the minute-90 goal as the question. Drop the Cherki tease and keep the open question about whether a lopsided night can still turn dangerous.",
-      "Scene 3 (\"Our reading: that is where chances are made. He is valued at 99 million euros.\") is a cast list that ties neither character to the story. Give Cherki and Güler one concrete stake each, for example the playmaker against the man who will set up the late goal, and cut the market values.",
-      "Scene 5: \"It is not clear from the data how the two moments connect. But the numbers suggest the lead did not come from France's best chance.\" This hedging kills the turning point. Say plainly that France missed a 0.86 chance, and that the own goal came in the same minute from the same corner.",
-      "Scene 8: \"Our numbers say tighter on the scoreboard, less so in the chances.\" This is a clumsy rebuttal of franceinfo that adds nothing. Use one press quote to land the verdict and tie it to the 6-of-7 big chances missed.",
-      "Scene 7: \"Turkiye's goalkeeper, Berke Özer, was among the four best-rated players on the night.\" This is a stat-report line, and he is a good character left underused. Give him a moment, for example the 7 saves, and link it to the minute-90 corner so the ending answers the opening question."
-    ]
-  },
-  "rewritten": true,
+  "critic": null,
+  "rewritten": false,
   "shorts": [
     {
-      "title": "Rayan Cherki: 8.4 rating and the pass for 2-0",
-      "hook": "Cherki: 8.4 rating",
+      "title": "Jonathan Tah: best rated, in a 1-1 draw",
+      "hook": "Tah: 8.3, best on the pitch",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-20"
+      "suggested_publish": "2026-11-21"
     },
     {
-      "title": "Turkiye's 90th-minute header, after three misses",
-      "hook": "Four corner shots, one goal",
-      "format": "goal_explained",
+      "title": "Köln's fast breaks should have won it",
+      "hook": "Two breaks. One goal. One point.",
+      "format": "turning_point",
       "youtube": null,
-      "suggested_publish": "2026-11-21"
+      "suggested_publish": "2026-11-22"
     }
   ],
   "voice": "everygen:astro"
