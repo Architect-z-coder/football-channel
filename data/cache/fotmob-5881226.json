@@ -132,6 +132,28 @@
    "topic": "other",
    "source": "Qatar Tribune (DPA)",
    "url": "https://www.qatar-tribune.com/article/263709/sports/kompany-back-to-bayern-hq-after-illness"
+  },
+  {
+   "speaker": "1. FC Köln / Bundesliga.com",
+   "role": "club announcement",
+   "team": "1. FC Köln",
+   "quote": "René Wagner, 37, in his first head coach job, was Steffen Baumgart's assistant at Köln (2021-23), Hamburger SV and Union Berlin; he took over as interim in March 2026 after Lukas Kwasniok was sacked, kept Köln in the Bundesliga (14th) and was appointed permanently on a contract until 2028.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "other",
+   "source": "fc.de / bundesliga.com",
+   "url": "https://fc.de/en/news/all-news/rene-wagner-remains-fc-head-coach"
+  },
+  {
+   "speaker": "Get Football News Germany / Bulinews",
+   "role": "report",
+   "team": "1. FC Köln",
+   "quote": "Saïd El Mala, born 26 August 2006 (20), was first called up to Germany's senior squad in November 2025 and was named by Julian Nagelsmann in Germany's 2026 World Cup squad.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "other",
+   "source": "getfootballnewsgermany.com",
+   "url": "https://www.getfootballnewsgermany.com/2026/nagelsmann-nominates-cologne-world-cup-el-mala/"
   }
  ],
  "context": {
@@ -506,7 +528,7 @@
   "title_options": [
    "Bayern had the ball. Köln had the chances.",
    "Why Kompany said Köln deserved the draw",
-   "71% possession, 17 shots, 1 point: Bayern 1-1 Köln"
+   "72% possession, 17 shots, 1 point: Bayern 1-1 Köln"
   ],
   "thumbnail_texts": [
    "BALL vs CHANCES",
@@ -591,7 +613,7 @@
       }
      },
      {
-      "text": "Köln's coach René Wagner, in the FC Bayern preview: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back.",
+      "text": "Köln's coach is René Wagner, 37, in his first job as a head coach. For years he was Steffen Baumgart's assistant. He took over in March, when Lukas Kwasniok was sacked, kept Köln up, and was given the job until 2028. In the FC Bayern preview he asked: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back.",
       "visual": {
        "type": "quote_card",
        "quote": "Other teams have already taken points off them in Munich – so why not us?",
@@ -830,7 +852,7 @@
       }
      },
      {
-      "text": "Bayern keep 71 percent of the ball. Köln make 32 tackles to their 15. That points to a side happy to defend, then break.",
+      "text": "Bayern keep 72 percent of the ball. Köln make 32 tackles to their 14. That points to a side happy to defend, then break.",
       "visual": {
        "type": "key_number",
        "value": "32 v 15",
@@ -868,20 +890,20 @@
       }
      },
      {
-      "text": "FotMob gives Köln 1.98 xG and Bayern 0.94. Every Köln shot came from inside the box. Most of Bayern's 17 did not.",
+      "text": "FotMob gives Köln 1.99 xG and Bayern 1.07. Every Köln shot came from inside the box. Most of Bayern's 17 did not.",
       "visual": {
        "type": "shot_map"
       }
      },
      {
-      "text": "Köln then missed 4 of their 5 big chances. Urbig saved 0.65 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper.",
+      "text": "Köln then missed 3 of their 4 big chances. Urbig saved 0.63 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper.",
       "visual": {
        "type": "diagnosis",
        "side": "away"
       }
      },
      {
-      "text": "Replay these chances 20,000 times, and Köln win 68 of every 100. Bayern win 12.",
+      "text": "Replay these chances 20,000 times, and Köln win 64 of every 100. Bayern win 14.",
       "visual": {
        "type": "result_odds"
       }
@@ -903,7 +925,7 @@
     ],
     "shots": [
      {
-      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 4 big chances missed, not faultless in front of goal.",
+      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 3 big chances missed, not faultless in front of goal.",
       "visual": {
        "type": "press_cut",
        "review_index": 1
@@ -1074,32 +1096,32 @@
    "hook": "Two breaks. One goal. One point.",
    "shots": [
     {
-     "text": "Bayern had 71% of the ball, but Köln had the better chances.",
+     "text": "Bayern had 72% of the ball, but Köln had the better chances.",
      "visual": {
       "type": "stat_bars"
      }
     },
     {
-     "text": "Minute 12: Saïd El Mala sets up Mikey Moore on a fast break, and Köln lead 1-0.",
+     "text": "Minute 12: Saïd El Mala, 20, named in Germany's World Cup squad this summer, sets up Mikey Moore on a fast break, and Köln lead 1-0.",
      "visual": {
       "type": "goal_replay",
       "minute": 12
      }
     },
     {
-     "text": "Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.39 expected goals, which is what an average finisher would score from them.",
+     "text": "Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.43 expected goals, which is what an average finisher would score from them.",
      "visual": {
       "type": "shot_map"
      }
     },
     {
-     "text": "Köln's chances added up to 1.97 expected goals, all from open play. Bayern's added up to 0.94. Replayed 20,000 times, Köln win 68%.",
+     "text": "Köln's chances added up to 1.99 expected goals, all from open play. Bayern's added up to 1.07. Replayed 20,000 times, Köln win 64%.",
      "visual": {
       "type": "diagnosis"
      }
     },
     {
-     "text": "Kompany said Köln deserved the result. Can a team with 29% of the ball keep doing this? Full story on the channel.",
+     "text": "Kompany said Köln deserved the result. Can a team with 28% of the ball keep doing this? Full story on the channel.",
      "visual": {
       "type": "quote_card"
      }
