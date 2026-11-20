@@ -533,7 +533,7 @@
   "thumbnail_texts": [
    "BALL vs CHANCES",
    "KÖLN DESERVED IT",
-   "68 IN 100"
+   "64 IN 100"
   ],
   "description": "Bayern München 1-1 1. FC Köln, Bundesliga round 10. Bayern had most of the ball and 17 shots, yet the chances were worth more to Köln. We follow Kompany's return, Wagner's plan for fast breaks, one save at minute 51, and what expected goals say about who deserved more. Sources for quotes: Bundesliga.com, FC Bayern, Geissblog.koeln, ran (Joyn), AP via Yahoo Sports, Sportschau (ARD), AFP via Malay Mail, and StatsBomb open data for the history comparison.\n\nTell us in the comments: was the draw fair? Data: FotMob.",
   "tags": [
@@ -855,7 +855,7 @@
       "text": "Bayern keep 72 percent of the ball. Köln make 32 tackles to their 14. That points to a side happy to defend, then break.",
       "visual": {
        "type": "key_number",
-       "value": "32 v 15",
+       "value": "32 v 14",
        "label": "Tackles, Köln v Bayern"
       }
      }
@@ -978,7 +978,7 @@
       }
      },
      {
-      "text": "For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here.",
+      "text": "For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 28 percent here.",
       "visual": {
        "type": "history_lens",
        "lens": "leicester_1516",
@@ -1001,7 +1001,7 @@
       }
      }
     ],
-    "narration": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match.",
+    "narration": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 28 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match.",
     "visual": {
      "type": "lesson_list",
      "items": [
@@ -1026,7 +1026,7 @@
     "The hook question \"Who really controlled this match... and who should have won it?\" arrives only after four flat setup sentences. Move it up to the second sentence, right after Kompany's return, and drop \"The final score is 1-1\" as a separate shot.",
     "Scene 2 stacks form records, a quote and five absences in one block. Cut the Leicester-style detail, keep Wagner's \"so why not us?\" as the emotional setup, and mention only Díaz as the absence.",
     "Scene 3 gives Kane and Mikey Moore one clumsy line each and never builds them as characters. Cut Kane (he plays 20 minutes) or tie each player to the story: Kane as the Bayern star who leaves early, Moore as the Köln finisher who will decide the night.",
-    "Scene 6 (\"Act Two\") is filler: Tah's duels, Kane's 9 touches, 71% possession and 32 v 15 tackles repeat what scene 7 says again. Merge it into a short bridge, or give it one concrete moment such as Karl's minute-54 miss, so the story keeps moving.",
+    "Scene 6 (\"Act Two\") is filler: Tah's duels, Kane's 9 touches, 71% possession and 32 v 14 tackles repeat what scene 7 says again. Merge it into a short bridge, or give it one concrete moment such as Karl's minute-54 miss, so the story keeps moving.",
     "The ending says \"the luck went Bayern's way\" but the payoff stays a stats lesson, and the Leicester comparison feels bolted on. Close by answering the opening question directly with Kompany's \"Köln deserved it\" line, and cut the Leicester paragraph."
    ]
   },
