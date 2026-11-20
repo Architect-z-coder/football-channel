@@ -1,6 +1,6 @@
 {
-  "id": "bay-kol-prep-5",
-  "mode": "prepare",
+  "id": "bay-kol-render-1",
+  "mode": "no-upload",
   "match": "Bayern Koln",
   "look_back_days": ""
 }
