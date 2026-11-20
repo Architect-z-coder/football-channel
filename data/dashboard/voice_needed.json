@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T22:53:34Z",
+  "updated": "2026-11-20T23:12:24Z",
   "fixture_id": "fotmob-5881226",
   "match": "Bayern Koln",
   "slug": "fotmob-5881226",
@@ -9,11 +9,11 @@
   "items": [
     {
       "key": "scene_01",
-      "text": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Vincent Kompany is back on the touchline. Bayern München arrive with four wins and a draw in their last five. Their visitors, 1. FC Köln, have won one of theirs, and lost two. The final score is 1-1. But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?"
+      "text": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Four weeks ago, Vincent Kompany collapsed at Bayern's training ground. He spent five days in hospital, then went home to rest. While he was away, his assistant Aaron Danks took the team for five matches: four wins and a draw. Tonight, Kompany is back on the touchline. Their visitors, 1. FC Köln, have won one of their last five, and lost two. The final score is 1-1. But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?"
     },
     {
       "key": "scene_02",
-      "text": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen. Köln's coach René Wagner, in the FC Bayern preview: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back. Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga."
+      "text": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen. Köln's coach is René Wagner, 37, in his first job as a head coach. For years he was Steffen Baumgart's assistant. He took over in March, when Lukas Kwasniok was sacked, kept Köln up, and was given the job until 2028. In the FC Bayern preview he asked: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back. Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga."
     },
     {
       "key": "scene_03",
@@ -29,19 +29,19 @@
     },
     {
       "key": "scene_06",
-      "text": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels. Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict. Bayern keep 71 percent of the ball. Köln make 32 tackles to their 15. That points to a side happy to defend, then break."
+      "text": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels. Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict. Bayern keep 72 percent of the ball. Köln make 32 tackles to their 14. That points to a side happy to defend, then break."
     },
     {
       "key": "scene_07",
-      "text": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored. FotMob gives Köln 1.98 xG and Bayern 0.94. Every Köln shot came from inside the box. Most of Bayern's 17 did not. Köln then missed 4 of their 5 big chances. Urbig saved 0.65 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper. Replay these chances 20,000 times, and Köln win 68 of every 100. Bayern win 12."
+      "text": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored. FotMob gives Köln 1.99 xG and Bayern 1.07. Every Köln shot came from inside the box. Most of Bayern's 17 did not. Köln then missed 3 of their 4 big chances. Urbig saved 0.63 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper. Replay these chances 20,000 times, and Köln win 64 of every 100. Bayern win 14."
     },
     {
       "key": "scene_08",
-      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 4 big chances missed, not faultless in front of goal. After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\" AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more."
+      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 3 big chances missed, not faultless in front of goal. After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\" AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more."
     },
     {
       "key": "scene_09",
-      "text": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match."
+      "text": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 28 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match."
     },
     {
       "key": "short_1",
@@ -49,8 +49,8 @@
     },
     {
       "key": "short_2",
-      "text": "Bayern had 71% of the ball, but Köln had the better chances. Minute 12: Saïd El Mala sets up Mikey Moore on a fast break, and Köln lead 1-0. Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.39 expected goals, which is what an average finisher would score from them. Köln's chances added up to 1.97 expected goals, all from open play. Bayern's added up to 0.94. Replayed 20,000 times, Köln win 68%. Kompany said Köln deserved the result. Can a team with 29% of the ball keep doing this? Full story on the channel."
+      "text": "Bayern had 72% of the ball, but Köln had the better chances. Minute 12: Saïd El Mala, 20, named in Germany's World Cup squad this summer, sets up Mikey Moore on a fast break, and Köln lead 1-0. Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.43 expected goals, which is what an average finisher would score from them. Köln's chances added up to 1.99 expected goals, all from open play. Bayern's added up to 1.07. Replayed 20,000 times, Köln win 64%. Kompany said Köln deserved the result. Can a team with 28% of the ball keep doing this? Full story on the channel."
     }
   ],
-  "characters": 5253
+  "characters": 5674
 }
