@@ -149,7 +149,8 @@ def _best_photo(person: dict) -> dict | None:
                               "panorama", "crowd", "fans", "match", "spiel", "final", " vs ", " v ", "game")
                     if key in t and h["url"] not in seen and any(x in t for x in inside) and not any(
                             x in t for x in ("aerial", "exterior", "outside", "map", "logo", "plan", "garten",
-                                             "garden", "model", "modell", "ticket")):
+                                             "garden", "model", "modell", "ticket", "lego", "miniature",
+                                             "miniatur", "toy", "replica")):
                         seen.add(h["url"]); hits.append(h)
             except Exception as e:
                 log.info("Commons search failed for %s: %s", q, e)
@@ -268,8 +269,21 @@ def _pick_person(person: dict) -> dict | None:
         from datetime import date
         return bool(y and y >= date.today().year - 7)
 
+    FOOTBALL = ("football", "soccer", "fussball", "fußball", "futbol", "fútbol", "calcio", "voetbal", " fc", "fc ",
+                " v ", " vs", " - ", "match", "training", "stadium", "stadion", "estadio", "league", "liga", "cup",
+                "pokal", "copa", "national team", "nationalmannschaft", "u21", "u-21", "bundesliga", "premier",
+                "champions", "world cup", "euro 20", "friendly", "goal", "player", "spieler")
+    team_words = [plain(w) for w in ((person.get("team") or "") + " " + (person.get("club") or "")).split() if len(w) > 3]
+
+    def football_photo(c) -> bool:
+        """A player photo must look like football: a football word, a team, or a match in its title."""
+        t = " " + plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " ")) + " "
+        return any(w in t for w in FOOTBALL) or any(w in t for w in team_words)
+
     def add(c):
         if is_coach and c and not as_coach(c):
+            return
+        if not is_coach and c and c.get("via") != "Wikidata portrait" and not football_photo(c):
             return
         if c and c.get("url") and c["url"] not in seen and right_person(c):
             seen.add(c["url"]); cands.append(c)
