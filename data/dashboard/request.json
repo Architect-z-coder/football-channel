@@ -1,6 +1,6 @@
 {
-  "id": "bay-kol-prep-2",
-  "mode": "prepare",
-  "match": "Bayern Koln",
+  "id": "bay-kol-data-2",
+  "mode": "data-only",
+  "match": "fotmob:5881226",
   "look_back_days": ""
 }
