@@ -1,162 +1,214 @@
 {
   "photos": [
     {
-      "name": "Rayan Cherki",
-      "role": "Player",
-      "team": "France",
+      "name": "Allianz Arena, München",
+      "role": "Stadium",
+      "team": "",
       "file": "photo_1.jpg",
       "via": "Wikimedia Commons",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Rayan_Cherki_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Rayan_Cherki_2019.jpg",
-      "licence": "CC BY-SA 3.0",
-      "author": "Кирилл Венедиктов",
-      "title": "File:Rayan Cherki 2019.jpg",
-      "width": 548,
-      "query": "\"Rayan Cherki\"",
-      "face": [
-        0.32299270072992703,
-        0.09854014598540146
-      ]
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Allianz_arena_daylight_Richard_Bartz.jpg/960px-Allianz_arena_daylight_Richard_Bartz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Allianz_arena_daylight_Richard_Bartz.jpg",
+      "licence": "CC BY-SA 2.5",
+      "author": "Richard Bartz, Munich aka Makro Freak",
+      "title": "File:Allianz arena daylight Richard Bartz.jpg",
+      "width": 5000
     },
     {
-      "name": "Arda Güler",
-      "role": "Player",
-      "team": "Turkiye",
+      "name": "Allianz Arena, München (inside, view 1)",
+      "role": "Stadium inside",
+      "stadium": "Allianz Arena, München",
+      "pick": 0,
+      "team": "",
       "file": "photo_2.jpg",
       "via": "Wikimedia Commons",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Arda_G%C3%BCler_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Arda_G%C3%BCler_2025.jpg",
-      "licence": "CC BY-SA 4.0",
-      "author": "LawEnthusiast",
-      "title": "File:Arda Güler 2025.jpg",
-      "width": 552,
-      "query": "\"Arda Güler\" football",
-      "face": [
-        0.4325068870523416,
-        0.12777777777777777
-      ]
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Allianz_Arena_inside%2C_2008.jpg/960px-Allianz_Arena_inside%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Allianz_Arena_inside,_2008.jpg",
+      "licence": "CC BY-SA 3.0",
+      "author": "Franci Ravnikar",
+      "title": "File:Allianz Arena inside, 2008.jpg",
+      "width": 2592
     },
     {
-      "name": "Emirhan Topçu",
-      "role": "Player",
-      "team": "Turkiye",
+      "name": "Allianz Arena, München (inside, view 2)",
+      "role": "Stadium inside",
+      "stadium": "Allianz Arena, München",
+      "pick": 1,
+      "team": "",
       "file": "photo_3.jpg",
       "via": "Wikimedia Commons",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Emirhan_Top%C3%A7u_20260121.jpg/960px-Emirhan_Top%C3%A7u_20260121.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Emirhan_Top%C3%A7u_20260121.jpg",
-      "licence": "CC BY 4.0",
-      "author": "Zafer",
-      "title": "File:Emirhan Topçu 20260121.jpg",
-      "width": 5152,
-      "query": "\"Emirhan Topçu\"",
-      "face": [
-        0.49333333333333335,
-        0.37666666666666665
-      ]
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Allianz_Arena_Legoland_-_inside_%2810210383713%29.jpg/960px-Allianz_Arena_Legoland_-_inside_%2810210383713%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Allianz_Arena_Legoland_-_inside_(10210383713).jpg",
+      "licence": "CC BY 2.0",
+      "author": "Christian Benseler",
+      "title": "File:Allianz Arena Legoland - inside (10210383713).jpg",
+      "width": 1936
     },
     {
-      "name": "Ozan Kabak",
-      "role": "Missing (suspension)",
-      "team": "Turkiye",
+      "name": "Allianz Arena, München (inside, view 3)",
+      "role": "Stadium inside",
+      "stadium": "Allianz Arena, München",
+      "pick": 2,
+      "team": "",
       "file": "photo_4.jpg",
       "via": "Wikimedia Commons",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ozan_kabak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Ozan_kabak.jpg",
-      "licence": "CC BY 3.0",
-      "author": "Jeollo von VfB-exklusiv.de",
-      "title": "File:Ozan kabak.jpg",
-      "width": 642,
-      "query": "\"Ozan Kabak\"",
-      "face": [
-        0.5124610591900312,
-        0.32125
-      ]
-    },
-    {
-      "name": "Junior Kroupi",
-      "role": "Scorer",
-      "team": "France",
-      "file": "photo_5.jpg",
-      "via": "Wikimedia Commons",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Eli_Junior_Kroupi_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Eli_Junior_Kroupi_(cropped).jpg",
-      "licence": "CC BY-SA 4.0",
-      "author": "Timmy96",
-      "title": "File:Eli Junior Kroupi (cropped).jpg",
-      "width": 648,
-      "query": "\"Junior Kroupi\"",
-      "face": [
-        0.41512345679012347,
-        0.23688663282571912
-      ]
-    },
-    {
-      "name": "Abdülkerim Bardakci",
-      "role": "Scorer",
-      "team": "Turkiye",
-      "file": "photo_6.jpg",
-      "via": "Wikidata portrait",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Abd%C3%BClkerim_Bardak%C3%A7%C4%B1_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Abd%C3%BClkerim_Bardak%C3%A7%C4%B1_(cropped).jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Allianz_Arena_during_a_match_between_Bayern_Munich_and_1860_Munich.jpg/960px-Allianz_Arena_during_a_match_between_Bayern_Munich_and_1860_Munich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Allianz_Arena_during_a_match_between_Bayern_Munich_and_1860_Munich.jpg",
       "licence": "CC BY-SA 3.0",
-      "author": "БОГДАН ЗАЯЦ",
-      "title": "File:Abdülkerim Bardakçı (cropped).jpg",
+      "author": "Tobias Kage",
+      "title": "File:Allianz Arena during a match between Bayern Munich and 1860 Munich.jpg",
+      "width": 1391
+    },
+    {
+      "name": "Jonathan Tah",
+      "role": "Player",
+      "team": "Bayern München",
+      "file": "photo_5.jpg",
+      "via": "Openverse (wikimedia)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Kevin_Rodriguez_Jonathan_Tah_Ecuador_v_Germany_25_June_2026-210.jpg",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=195271470",
+      "licence": "CC BY-SA 4.0",
+      "author": "Bryan Berlin",
+      "title": "Kevin Rodriguez Jonathan Tah Ecuador v Germany 25 June 2026-210",
+      "width": 5000,
       "face": [
-        0.44656488549618323,
-        0.38671875
+        0.8305555555555556,
+        0.22083333333333333
       ]
+    },
+    {
+      "name": "Nathaniel Brown",
+      "role": "Player",
+      "team": "Bayern München",
+      "file": "photo_6.jpg",
+      "via": "Openverse (wikimedia)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nathaniel_Brown_Ecuador_v_Germany_25_June_2026-160.jpg",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=195271443",
+      "licence": "CC BY-SA 4.0",
+      "author": "Bryan Berlin",
+      "title": "Nathaniel Brown Ecuador v Germany 25 June 2026-160",
+      "width": 3333,
+      "face": [
+        0.4925,
+        0.275
+      ]
+    },
+    {
+      "name": "Harry Kane",
+      "role": "Player",
+      "team": "Bayern München",
+      "file": "photo_7.jpg",
+      "via": "Openverse (wikimedia)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=194950984",
+      "licence": "CC BY-SA 4.0",
+      "author": "Bryan Berlin",
+      "title": "Harry Kane England v Ghana 23 June 2026-219 (cropped)",
+      "width": 2752,
+      "face": [
+        0.5225,
+        0.25833333333333336
+      ]
+    },
+    {
+      "name": "Luis Díaz",
+      "role": "Missing (injury)",
+      "team": "Bayern München",
+      "file": "photo_8.jpg",
+      "via": "Openverse (wikimedia)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Luis_D%C3%ADaz_Viana_Instituto_Estudios_Europeos_Valladolid_2016.jpg",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=52207422",
+      "licence": "CC BY-SA 4.0",
+      "author": "Gallowolf",
+      "title": "Luis Díaz Viana Instituto Estudios Europeos Valladolid 2016",
+      "width": 3776,
+      "face": [
+        0.3038888888888889,
+        0.18552412645590682
+      ]
+    },
+    {
+      "name": "Thijs Dallinga",
+      "role": "Missing (injury)",
+      "team": "1. FC Köln",
+      "file": "photo_9.jpg",
+      "via": "Openverse (wikimedia)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/TFC-FC_Metz_%282023-10-01%29_Thijs_Dallinga_tire_%28cropped%29.jpg",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=138377240",
+      "licence": "CC BY-SA 4.0",
+      "author": "Gaillac",
+      "title": "TFC-FC Metz (2023-10-01) Thijs Dallinga tire (cropped)",
+      "width": 1241,
+      "face": [
+        0.49624624624624625,
+        0.6283333333333333
+      ]
+    },
+    {
+      "name": "Mikey Moore",
+      "role": "Scorer",
+      "team": "1. FC Köln",
+      "file": "photo_10.jpg",
+      "via": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mikey_Moore_with_a_fan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page": "https://commons.wikimedia.org/wiki/File:Mikey_Moore_with_a_fan.jpg",
+      "licence": "CC0",
+      "author": "Timmy96",
+      "title": "File:Mikey Moore with a fan.jpg",
+      "width": 753,
+      "query": "\"Mikey Moore\" football",
+      "face": null
     }
   ],
-  "updated": "2026-11-19T09:01:41Z",
-  "fixture_id": "fotmob-5181799",
-  "home": "France",
-  "away": "Turkiye",
-  "competition": "UEFA Nations League A Grp. 1",
+  "updated": "2026-11-20T23:03:24Z",
+  "fixture_id": "fotmob-5881226",
+  "home": "Bayern München",
+  "away": "1. FC Köln",
+  "competition": "Bundesliga",
   "source": "FotMob",
   "facts": [
     {
       "id": "score_home",
-      "label": "France goals",
-      "value": 2
+      "label": "Bayern München goals",
+      "value": 1
     },
     {
       "id": "score_away",
-      "label": "Turkiye goals",
+      "label": "1. FC Köln goals",
       "value": 1
     },
     {
       "id": "ht_home",
-      "label": "France goals at half time",
-      "value": 0
+      "label": "Bayern München goals at half time",
+      "value": 1
     },
     {
       "id": "ht_away",
-      "label": "Turkiye goals at half time",
-      "value": 0
+      "label": "1. FC Köln goals at half time",
+      "value": 1
     },
     {
       "id": "date",
       "label": "Match date",
-      "value": "2026-11-15"
+      "value": "2026-11-20"
     },
     {
       "id": "competition_round",
       "label": "Round",
-      "value": "6"
+      "value": "10"
     },
     {
       "id": "goal_1",
       "label": "Goal 1",
       "value": {
-        "team": "France",
-        "player": "Emirhan Topçu",
-        "minute": 49,
+        "team": "1. FC Köln",
+        "player": "Mikey Moore",
+        "minute": 12,
         "added_time": null,
-        "type": "own goal",
-        "assist": null,
+        "type": "open play",
+        "assist": "Saïd El Mala",
         "score_after": [
-          1,
-          0
+          0,
+          1
         ]
       }
     },
@@ -164,900 +216,844 @@
       "id": "goal_2",
       "label": "Goal 2",
       "value": {
-        "team": "France",
-        "player": "Junior Kroupi",
-        "minute": 80,
+        "team": "Bayern München",
+        "player": "Nathaniel Brown",
+        "minute": 37,
         "added_time": null,
         "type": "open play",
-        "assist": "Rayan Cherki",
+        "assist": "Tom Bischof",
         "score_after": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "id": "goal_3",
-      "label": "Goal 3",
-      "value": {
-        "team": "Turkiye",
-        "player": "Abdülkerim Bardakci",
-        "minute": 90,
-        "added_time": null,
-        "type": "Header",
-        "assist": "Arda Güler",
-        "score_after": [
-          2,
+          1,
           1
         ]
       }
     },
     {
       "id": "home_possession",
-      "label": "France possession, percent (FotMob)",
-      "value": 60
+      "label": "Bayern München possession, percent (FotMob)",
+      "value": 72
     },
     {
       "id": "away_possession",
-      "label": "Turkiye possession, percent (FotMob)",
-      "value": 40
+      "label": "1. FC Köln possession, percent (FotMob)",
+      "value": 28
     },
     {
       "id": "home_xg",
-      "label": "France expected goals (FotMob) (FotMob)",
-      "value": 3.36
+      "label": "Bayern München expected goals (FotMob) (FotMob)",
+      "value": 1.07
     },
     {
       "id": "away_xg",
-      "label": "Turkiye expected goals (FotMob) (FotMob)",
-      "value": 1.54
+      "label": "1. FC Köln expected goals (FotMob) (FotMob)",
+      "value": 1.99
     },
     {
       "id": "home_shots",
-      "label": "France shots (FotMob)",
-      "value": 23
-    },
-    {
-      "id": "away_shots",
-      "label": "Turkiye shots (FotMob)",
-      "value": 14
-    },
-    {
-      "id": "home_shots_on_target",
-      "label": "France shots on target (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "away_shots_on_target",
-      "label": "Turkiye shots on target (FotMob)",
-      "value": 3
-    },
-    {
-      "id": "home_box_touches",
-      "label": "France touches in the opposition box (FotMob)",
-      "value": 51
-    },
-    {
-      "id": "away_box_touches",
-      "label": "Turkiye touches in the opposition box (FotMob)",
-      "value": 20
-    },
-    {
-      "id": "home_big_chances",
-      "label": "France big chances (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "away_big_chances",
-      "label": "Turkiye big chances (FotMob)",
-      "value": 3
-    },
-    {
-      "id": "home_big_chances_missed",
-      "label": "France big chances missed (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_big_chances_missed",
-      "label": "Turkiye big chances missed (FotMob)",
-      "value": 2
-    },
-    {
-      "id": "home_accurate_passes",
-      "label": "France accurate passes (FotMob)",
-      "value": 553
-    },
-    {
-      "id": "home_accurate_passes_pct",
-      "label": "France accurate passes, percent (FotMob)",
-      "value": 89
-    },
-    {
-      "id": "away_accurate_passes",
-      "label": "Turkiye accurate passes (FotMob)",
-      "value": 337
-    },
-    {
-      "id": "away_accurate_passes_pct",
-      "label": "Turkiye accurate passes, percent (FotMob)",
-      "value": 84
-    },
-    {
-      "id": "home_corners",
-      "label": "France corners (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "away_corners",
-      "label": "Turkiye corners (FotMob)",
-      "value": 5
-    },
-    {
-      "id": "home_tackles",
-      "label": "France tackles (FotMob)",
+      "label": "Bayern München shots (FotMob)",
       "value": 17
     },
     {
-      "id": "away_tackles",
-      "label": "Turkiye tackles (FotMob)",
-      "value": 14
-    },
-    {
-      "id": "home_interceptions",
-      "label": "France interceptions (FotMob)",
-      "value": 10
-    },
-    {
-      "id": "away_interceptions",
-      "label": "Turkiye interceptions (FotMob)",
-      "value": 12
-    },
-    {
-      "id": "home_saves",
-      "label": "France goalkeeper saves (FotMob)",
-      "value": 2
-    },
-    {
-      "id": "away_saves",
-      "label": "Turkiye goalkeeper saves (FotMob)",
+      "id": "away_shots",
+      "label": "1. FC Köln shots (FotMob)",
       "value": 7
     },
     {
+      "id": "home_shots_on_target",
+      "label": "Bayern München shots on target (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_shots_on_target",
+      "label": "1. FC Köln shots on target (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_box_touches",
+      "label": "Bayern München touches in the opposition box (FotMob)",
+      "value": 35
+    },
+    {
+      "id": "away_box_touches",
+      "label": "1. FC Köln touches in the opposition box (FotMob)",
+      "value": 22
+    },
+    {
+      "id": "home_big_chances",
+      "label": "Bayern München big chances (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_big_chances",
+      "label": "1. FC Köln big chances (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_big_chances_missed",
+      "label": "Bayern München big chances missed (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_big_chances_missed",
+      "label": "1. FC Köln big chances missed (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_accurate_passes",
+      "label": "Bayern München accurate passes (FotMob)",
+      "value": 749
+    },
+    {
+      "id": "home_accurate_passes_pct",
+      "label": "Bayern München accurate passes, percent (FotMob)",
+      "value": 92
+    },
+    {
+      "id": "away_accurate_passes",
+      "label": "1. FC Köln accurate passes (FotMob)",
+      "value": 262
+    },
+    {
+      "id": "away_accurate_passes_pct",
+      "label": "1. FC Köln accurate passes, percent (FotMob)",
+      "value": 80
+    },
+    {
+      "id": "home_corners",
+      "label": "Bayern München corners (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_corners",
+      "label": "1. FC Köln corners (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "home_tackles",
+      "label": "Bayern München tackles (FotMob)",
+      "value": 14
+    },
+    {
+      "id": "away_tackles",
+      "label": "1. FC Köln tackles (FotMob)",
+      "value": 32
+    },
+    {
+      "id": "home_interceptions",
+      "label": "Bayern München interceptions (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_interceptions",
+      "label": "1. FC Köln interceptions (FotMob)",
+      "value": 16
+    },
+    {
+      "id": "home_saves",
+      "label": "Bayern München goalkeeper saves (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_saves",
+      "label": "1. FC Köln goalkeeper saves (FotMob)",
+      "value": 0
+    },
+    {
       "id": "home_duels_won",
-      "label": "France duels won (FotMob)",
-      "value": 44
+      "label": "Bayern München duels won (FotMob)",
+      "value": 30
     },
     {
       "id": "away_duels_won",
-      "label": "Turkiye duels won (FotMob)",
-      "value": 44
+      "label": "1. FC Köln duels won (FotMob)",
+      "value": 51
     },
     {
       "id": "home_fouls",
-      "label": "France fouls committed (FotMob)",
-      "value": 13
+      "label": "Bayern München fouls committed (FotMob)",
+      "value": 6
     },
     {
       "id": "away_fouls",
-      "label": "Turkiye fouls committed (FotMob)",
-      "value": 11
+      "label": "1. FC Köln fouls committed (FotMob)",
+      "value": 3
     },
     {
       "id": "home_keeper_saves",
-      "label": "France goalkeeper Mike Maignan: Saves (FotMob)",
-      "value": 1
+      "label": "Bayern München goalkeeper Jonas Urbig: Saves (FotMob)",
+      "value": 3
     },
     {
       "id": "home_keeper_saves_inside_box",
-      "label": "France goalkeeper Mike Maignan: Saves inside box (FotMob)",
-      "value": 1
+      "label": "Bayern München goalkeeper Jonas Urbig: Saves inside box (FotMob)",
+      "value": 3
     },
     {
       "id": "home_keeper_goals_prevented",
-      "label": "France goalkeeper Mike Maignan: Goals prevented (FotMob)",
-      "value": 0.32
+      "label": "Bayern München goalkeeper Jonas Urbig: Goals prevented (FotMob)",
+      "value": 0.63
     },
     {
       "id": "home_keeper_xgot_faced",
-      "label": "France goalkeeper Mike Maignan: xGOT faced (FotMob)",
-      "value": 0.32
+      "label": "Bayern München goalkeeper Jonas Urbig: xGOT faced (FotMob)",
+      "value": 1.63
     },
     {
       "id": "home_keeper_diving_save",
-      "label": "France goalkeeper Mike Maignan: Diving save (FotMob)",
-      "value": 1
+      "label": "Bayern München goalkeeper Jonas Urbig: Diving save (FotMob)",
+      "value": 2
     },
     {
       "id": "home_keeper_high_claim",
-      "label": "France goalkeeper Mike Maignan: High claim (FotMob)",
+      "label": "Bayern München goalkeeper Jonas Urbig: High claim (FotMob)",
       "value": 0
     },
     {
       "id": "home_keeper_acted_as_sweeper",
-      "label": "France goalkeeper Mike Maignan: Acted as sweeper (FotMob)",
-      "value": 0
+      "label": "Bayern München goalkeeper Jonas Urbig: Acted as sweeper (FotMob)",
+      "value": 1
     },
     {
       "id": "home_keeper_punches",
-      "label": "France goalkeeper Mike Maignan: Punches (FotMob)",
+      "label": "Bayern München goalkeeper Jonas Urbig: Punches (FotMob)",
       "value": 0
     },
     {
       "id": "home_defenders_touches",
-      "label": "France defenders (4 players): Touches, total (FotMob)",
-      "value": 217
+      "label": "Bayern München defenders (5 players): Touches, total (FotMob)",
+      "value": 340
     },
     {
       "id": "home_defenders_touches_in_opposition_box",
-      "label": "France defenders (4 players): Touches in opposition box, total (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "home_defenders_recoveries",
-      "label": "France defenders (4 players): Recoveries, total (FotMob)",
-      "value": 16
-    },
-    {
-      "id": "home_defenders_duels_won",
-      "label": "France defenders (4 players): Duels won, total (FotMob)",
+      "label": "Bayern München defenders (5 players): Touches in opposition box, total (FotMob)",
       "value": 11
     },
     {
+      "id": "home_defenders_recoveries",
+      "label": "Bayern München defenders (5 players): Recoveries, total (FotMob)",
+      "value": 19
+    },
+    {
+      "id": "home_defenders_duels_won",
+      "label": "Bayern München defenders (5 players): Duels won, total (FotMob)",
+      "value": 15
+    },
+    {
       "id": "home_defenders_duels_lost",
-      "label": "France defenders (4 players): Duels lost, total (FotMob)",
-      "value": 12
+      "label": "Bayern München defenders (5 players): Duels lost, total (FotMob)",
+      "value": 14
     },
     {
       "id": "home_defenders_interceptions",
-      "label": "France defenders (4 players): Interceptions, total (FotMob)",
+      "label": "Bayern München defenders (5 players): Interceptions, total (FotMob)",
       "value": 2
     },
     {
       "id": "home_defenders_clearances",
-      "label": "France defenders (4 players): Clearances, total (FotMob)",
-      "value": 5
+      "label": "Bayern München defenders (5 players): Clearances, total (FotMob)",
+      "value": 4
     },
     {
       "id": "home_defenders_blocks",
-      "label": "France defenders (4 players): Blocks, total (FotMob)",
-      "value": 5
+      "label": "Bayern München defenders (5 players): Blocks, total (FotMob)",
+      "value": 0
     },
     {
       "id": "home_defenders_aerial_duels_won",
-      "label": "France defenders (4 players): Aerial duels won, total (FotMob)",
-      "value": 3
-    },
-    {
-      "id": "home_defenders_ground_duels_won",
-      "label": "France defenders (4 players): Ground duels won, total (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "home_defenders_passes_into_final_third",
-      "label": "France defenders (4 players): Passes into final third, total (FotMob)",
-      "value": 16
-    },
-    {
-      "id": "home_defenders_accurate_passes",
-      "label": "France defenders (4 players): Accurate passes, total (FotMob)",
-      "value": 167
-    },
-    {
-      "id": "home_defenders_dispossessed",
-      "label": "France defenders (4 players): Dispossessed, total (FotMob)",
+      "label": "Bayern München defenders (5 players): Aerial duels won, total (FotMob)",
       "value": 1
     },
     {
+      "id": "home_defenders_ground_duels_won",
+      "label": "Bayern München defenders (5 players): Ground duels won, total (FotMob)",
+      "value": 14
+    },
+    {
+      "id": "home_defenders_passes_into_final_third",
+      "label": "Bayern München defenders (5 players): Passes into final third, total (FotMob)",
+      "value": 40
+    },
+    {
+      "id": "home_defenders_accurate_passes",
+      "label": "Bayern München defenders (5 players): Accurate passes, total (FotMob)",
+      "value": 264
+    },
+    {
+      "id": "home_defenders_successful_dribbles",
+      "label": "Bayern München defenders (5 players): Successful dribbles, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_defenders_dispossessed",
+      "label": "Bayern München defenders (5 players): Dispossessed, total (FotMob)",
+      "value": 3
+    },
+    {
       "id": "home_defenders_defensive_actions",
-      "label": "France defenders (4 players): Defensive actions, total (FotMob)",
-      "value": 16
+      "label": "Bayern München defenders (5 players): Defensive actions, total (FotMob)",
+      "value": 15
     },
     {
       "id": "home_defenders_chances_created",
-      "label": "France defenders (4 players): Chances created, total (FotMob)",
+      "label": "Bayern München defenders (5 players): Chances created, total (FotMob)",
       "value": 3
     },
     {
       "id": "home_defenders_accurate_long_balls",
-      "label": "France defenders (4 players): Accurate long balls, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "home_defenders_was_fouled",
-      "label": "France defenders (4 players): Was fouled, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "home_defenders_fouls_committed",
-      "label": "France defenders (4 players): Fouls committed, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "home_defenders_line_breaking_passes",
-      "label": "France defenders (4 players): Line breaking passes, total (FotMob)",
-      "value": 28
-    },
-    {
-      "id": "home_midfielders_touches",
-      "label": "France midfielders (7 players): Touches, total (FotMob)",
-      "value": 375
-    },
-    {
-      "id": "home_midfielders_touches_in_opposition_box",
-      "label": "France midfielders (7 players): Touches in opposition box, total (FotMob)",
-      "value": 18
-    },
-    {
-      "id": "home_midfielders_recoveries",
-      "label": "France midfielders (7 players): Recoveries, total (FotMob)",
-      "value": 27
-    },
-    {
-      "id": "home_midfielders_duels_won",
-      "label": "France midfielders (7 players): Duels won, total (FotMob)",
-      "value": 19
-    },
-    {
-      "id": "home_midfielders_duels_lost",
-      "label": "France midfielders (7 players): Duels lost, total (FotMob)",
-      "value": 24
-    },
-    {
-      "id": "home_midfielders_interceptions",
-      "label": "France midfielders (7 players): Interceptions, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "home_midfielders_clearances",
-      "label": "France midfielders (7 players): Clearances, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "home_midfielders_blocks",
-      "label": "France midfielders (7 players): Blocks, total (FotMob)",
-      "value": 0
-    },
-    {
-      "id": "home_midfielders_aerial_duels_won",
-      "label": "France midfielders (7 players): Aerial duels won, total (FotMob)",
-      "value": 2
-    },
-    {
-      "id": "home_midfielders_ground_duels_won",
-      "label": "France midfielders (7 players): Ground duels won, total (FotMob)",
-      "value": 17
-    },
-    {
-      "id": "home_midfielders_passes_into_final_third",
-      "label": "France midfielders (7 players): Passes into final third, total (FotMob)",
-      "value": 28
-    },
-    {
-      "id": "home_midfielders_accurate_passes",
-      "label": "France midfielders (7 players): Accurate passes, total (FotMob)",
-      "value": 269
-    },
-    {
-      "id": "home_midfielders_successful_dribbles",
-      "label": "France midfielders (7 players): Successful dribbles, total (FotMob)",
+      "label": "Bayern München defenders (5 players): Accurate long balls, total (FotMob)",
       "value": 5
     },
     {
-      "id": "home_midfielders_dispossessed",
-      "label": "France midfielders (7 players): Dispossessed, total (FotMob)",
-      "value": 4
+      "id": "home_defenders_was_fouled",
+      "label": "Bayern München defenders (5 players): Was fouled, total (FotMob)",
+      "value": 1
     },
     {
-      "id": "home_midfielders_defensive_actions",
-      "label": "France midfielders (7 players): Defensive actions, total (FotMob)",
+      "id": "home_defenders_fouls_committed",
+      "label": "Bayern München defenders (5 players): Fouls committed, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_midfielders_touches",
+      "label": "Bayern München midfielders (5 players): Touches, total (FotMob)",
+      "value": 447
+    },
+    {
+      "id": "home_midfielders_touches_in_opposition_box",
+      "label": "Bayern München midfielders (5 players): Touches in opposition box, total (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "home_midfielders_recoveries",
+      "label": "Bayern München midfielders (5 players): Recoveries, total (FotMob)",
+      "value": 17
+    },
+    {
+      "id": "home_midfielders_duels_won",
+      "label": "Bayern München midfielders (5 players): Duels won, total (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "home_midfielders_duels_lost",
+      "label": "Bayern München midfielders (5 players): Duels lost, total (FotMob)",
       "value": 19
     },
     {
+      "id": "home_midfielders_interceptions",
+      "label": "Bayern München midfielders (5 players): Interceptions, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "home_midfielders_clearances",
+      "label": "Bayern München midfielders (5 players): Clearances, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_midfielders_blocks",
+      "label": "Bayern München midfielders (5 players): Blocks, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "home_midfielders_aerial_duels_won",
+      "label": "Bayern München midfielders (5 players): Aerial duels won, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "home_midfielders_ground_duels_won",
+      "label": "Bayern München midfielders (5 players): Ground duels won, total (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "home_midfielders_passes_into_final_third",
+      "label": "Bayern München midfielders (5 players): Passes into final third, total (FotMob)",
+      "value": 69
+    },
+    {
+      "id": "home_midfielders_accurate_passes",
+      "label": "Bayern München midfielders (5 players): Accurate passes, total (FotMob)",
+      "value": 351
+    },
+    {
+      "id": "home_midfielders_successful_dribbles",
+      "label": "Bayern München midfielders (5 players): Successful dribbles, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "home_midfielders_dispossessed",
+      "label": "Bayern München midfielders (5 players): Dispossessed, total (FotMob)",
+      "value": 8
+    },
+    {
+      "id": "home_midfielders_defensive_actions",
+      "label": "Bayern München midfielders (5 players): Defensive actions, total (FotMob)",
+      "value": 11
+    },
+    {
       "id": "home_midfielders_chances_created",
-      "label": "France midfielders (7 players): Chances created, total (FotMob)",
+      "label": "Bayern München midfielders (5 players): Chances created, total (FotMob)",
       "value": 9
     },
     {
       "id": "home_midfielders_accurate_long_balls",
-      "label": "France midfielders (7 players): Accurate long balls, total (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "home_midfielders_was_fouled",
-      "label": "France midfielders (7 players): Was fouled, total (FotMob)",
-      "value": 3
+      "label": "Bayern München midfielders (5 players): Accurate long balls, total (FotMob)",
+      "value": 14
     },
     {
       "id": "home_midfielders_fouls_committed",
-      "label": "France midfielders (7 players): Fouls committed, total (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "home_midfielders_line_breaking_passes",
-      "label": "France midfielders (7 players): Line breaking passes, total (FotMob)",
-      "value": 39
+      "label": "Bayern München midfielders (5 players): Fouls committed, total (FotMob)",
+      "value": 3
     },
     {
       "id": "home_forwards_touches",
-      "label": "France forwards (3 players): Touches, total (FotMob)",
-      "value": 167
+      "label": "Bayern München forwards (5 players): Touches, total (FotMob)",
+      "value": 173
     },
     {
       "id": "home_forwards_touches_in_opposition_box",
-      "label": "France forwards (3 players): Touches in opposition box, total (FotMob)",
-      "value": 32
+      "label": "Bayern München forwards (5 players): Touches in opposition box, total (FotMob)",
+      "value": 14
     },
     {
       "id": "home_forwards_recoveries",
-      "label": "France forwards (3 players): Recoveries, total (FotMob)",
-      "value": 6
+      "label": "Bayern München forwards (5 players): Recoveries, total (FotMob)",
+      "value": 7
     },
     {
       "id": "home_forwards_duels_won",
-      "label": "France forwards (3 players): Duels won, total (FotMob)",
-      "value": 13
+      "label": "Bayern München forwards (5 players): Duels won, total (FotMob)",
+      "value": 6
     },
     {
       "id": "home_forwards_duels_lost",
-      "label": "France forwards (3 players): Duels lost, total (FotMob)",
-      "value": 8
+      "label": "Bayern München forwards (5 players): Duels lost, total (FotMob)",
+      "value": 17
     },
     {
       "id": "home_forwards_interceptions",
-      "label": "France forwards (3 players): Interceptions, total (FotMob)",
-      "value": 2
+      "label": "Bayern München forwards (5 players): Interceptions, total (FotMob)",
+      "value": 0
     },
     {
       "id": "home_forwards_clearances",
-      "label": "France forwards (3 players): Clearances, total (FotMob)",
+      "label": "Bayern München forwards (5 players): Clearances, total (FotMob)",
       "value": 0
     },
     {
       "id": "home_forwards_blocks",
-      "label": "France forwards (3 players): Blocks, total (FotMob)",
+      "label": "Bayern München forwards (5 players): Blocks, total (FotMob)",
       "value": 0
     },
     {
       "id": "home_forwards_aerial_duels_won",
-      "label": "France forwards (3 players): Aerial duels won, total (FotMob)",
-      "value": 1
+      "label": "Bayern München forwards (5 players): Aerial duels won, total (FotMob)",
+      "value": 0
     },
     {
       "id": "home_forwards_ground_duels_won",
-      "label": "France forwards (3 players): Ground duels won, total (FotMob)",
-      "value": 12
+      "label": "Bayern München forwards (5 players): Ground duels won, total (FotMob)",
+      "value": 6
     },
     {
       "id": "home_forwards_passes_into_final_third",
-      "label": "France forwards (3 players): Passes into final third, total (FotMob)",
-      "value": 13
-    },
-    {
-      "id": "home_forwards_accurate_passes",
-      "label": "France forwards (3 players): Accurate passes, total (FotMob)",
-      "value": 95
-    },
-    {
-      "id": "home_forwards_successful_dribbles",
-      "label": "France forwards (3 players): Successful dribbles, total (FotMob)",
+      "label": "Bayern München forwards (5 players): Passes into final third, total (FotMob)",
       "value": 5
     },
     {
+      "id": "home_forwards_accurate_passes",
+      "label": "Bayern München forwards (5 players): Accurate passes, total (FotMob)",
+      "value": 111
+    },
+    {
+      "id": "home_forwards_successful_dribbles",
+      "label": "Bayern München forwards (5 players): Successful dribbles, total (FotMob)",
+      "value": 4
+    },
+    {
       "id": "home_forwards_dispossessed",
-      "label": "France forwards (3 players): Dispossessed, total (FotMob)",
-      "value": 1
+      "label": "Bayern München forwards (5 players): Dispossessed, total (FotMob)",
+      "value": 6
     },
     {
       "id": "home_forwards_defensive_actions",
-      "label": "France forwards (3 players): Defensive actions, total (FotMob)",
-      "value": 6
+      "label": "Bayern München forwards (5 players): Defensive actions, total (FotMob)",
+      "value": 0
     },
     {
       "id": "home_forwards_chances_created",
-      "label": "France forwards (3 players): Chances created, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "home_forwards_accurate_long_balls",
-      "label": "France forwards (3 players): Accurate long balls, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "home_forwards_was_fouled",
-      "label": "France forwards (3 players): Was fouled, total (FotMob)",
-      "value": 3
-    },
-    {
-      "id": "home_forwards_fouls_committed",
-      "label": "France forwards (3 players): Fouls committed, total (FotMob)",
+      "label": "Bayern München forwards (5 players): Chances created, total (FotMob)",
       "value": 2
     },
     {
-      "id": "home_forwards_line_breaking_passes",
-      "label": "France forwards (3 players): Line breaking passes, total (FotMob)",
-      "value": 18
+      "id": "home_forwards_accurate_long_balls",
+      "label": "Bayern München forwards (5 players): Accurate long balls, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_forwards_was_fouled",
+      "label": "Bayern München forwards (5 players): Was fouled, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "home_forwards_fouls_committed",
+      "label": "Bayern München forwards (5 players): Fouls committed, total (FotMob)",
+      "value": 0
     },
     {
       "id": "away_keeper_saves",
-      "label": "Turkiye goalkeeper Berke Özer: Saves (FotMob)",
-      "value": 7
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Saves (FotMob)",
+      "value": 0
     },
     {
       "id": "away_keeper_saves_inside_box",
-      "label": "Turkiye goalkeeper Berke Özer: Saves inside box (FotMob)",
-      "value": 6
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Saves inside box (FotMob)",
+      "value": 0
     },
     {
       "id": "away_keeper_goals_prevented",
-      "label": "Turkiye goalkeeper Berke Özer: Goals prevented (FotMob)",
-      "value": 0.11
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Goals prevented (FotMob)",
+      "value": -0.62
     },
     {
       "id": "away_keeper_xgot_faced",
-      "label": "Turkiye goalkeeper Berke Özer: xGOT faced (FotMob)",
-      "value": 1.11
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: xGOT faced (FotMob)",
+      "value": 0.38
     },
     {
       "id": "away_keeper_diving_save",
-      "label": "Turkiye goalkeeper Berke Özer: Diving save (FotMob)",
-      "value": 4
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Diving save (FotMob)",
+      "value": 0
     },
     {
       "id": "away_keeper_high_claim",
-      "label": "Turkiye goalkeeper Berke Özer: High claim (FotMob)",
-      "value": 1
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: High claim (FotMob)",
+      "value": 0
     },
     {
       "id": "away_keeper_acted_as_sweeper",
-      "label": "Turkiye goalkeeper Berke Özer: Acted as sweeper (FotMob)",
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Acted as sweeper (FotMob)",
       "value": 0
     },
     {
       "id": "away_keeper_punches",
-      "label": "Turkiye goalkeeper Berke Özer: Punches (FotMob)",
-      "value": 0
+      "label": "1. FC Köln goalkeeper Marvin Schwäbe: Punches (FotMob)",
+      "value": 1
     },
     {
       "id": "away_defenders_touches",
-      "label": "Turkiye defenders (5 players): Touches, total (FotMob)",
-      "value": 208
+      "label": "1. FC Köln defenders (3 players): Touches, total (FotMob)",
+      "value": 163
     },
     {
       "id": "away_defenders_touches_in_opposition_box",
-      "label": "Turkiye defenders (5 players): Touches in opposition box, total (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "away_defenders_recoveries",
-      "label": "Turkiye defenders (5 players): Recoveries, total (FotMob)",
-      "value": 11
-    },
-    {
-      "id": "away_defenders_duels_won",
-      "label": "Turkiye defenders (5 players): Duels won, total (FotMob)",
-      "value": 14
-    },
-    {
-      "id": "away_defenders_duels_lost",
-      "label": "Turkiye defenders (5 players): Duels lost, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_defenders_interceptions",
-      "label": "Turkiye defenders (5 players): Interceptions, total (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "away_defenders_clearances",
-      "label": "Turkiye defenders (5 players): Clearances, total (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "away_defenders_blocks",
-      "label": "Turkiye defenders (5 players): Blocks, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_defenders_aerial_duels_won",
-      "label": "Turkiye defenders (5 players): Aerial duels won, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "away_defenders_ground_duels_won",
-      "label": "Turkiye defenders (5 players): Ground duels won, total (FotMob)",
-      "value": 10
-    },
-    {
-      "id": "away_defenders_passes_into_final_third",
-      "label": "Turkiye defenders (5 players): Passes into final third, total (FotMob)",
-      "value": 13
-    },
-    {
-      "id": "away_defenders_accurate_passes",
-      "label": "Turkiye defenders (5 players): Accurate passes, total (FotMob)",
-      "value": 130
-    },
-    {
-      "id": "away_defenders_successful_dribbles",
-      "label": "Turkiye defenders (5 players): Successful dribbles, total (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "away_defenders_dispossessed",
-      "label": "Turkiye defenders (5 players): Dispossessed, total (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "away_defenders_defensive_actions",
-      "label": "Turkiye defenders (5 players): Defensive actions, total (FotMob)",
-      "value": 25
-    },
-    {
-      "id": "away_defenders_chances_created",
-      "label": "Turkiye defenders (5 players): Chances created, total (FotMob)",
-      "value": 2
-    },
-    {
-      "id": "away_defenders_accurate_long_balls",
-      "label": "Turkiye defenders (5 players): Accurate long balls, total (FotMob)",
-      "value": 5
-    },
-    {
-      "id": "away_defenders_was_fouled",
-      "label": "Turkiye defenders (5 players): Was fouled, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "away_defenders_fouls_committed",
-      "label": "Turkiye defenders (5 players): Fouls committed, total (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "away_defenders_line_breaking_passes",
-      "label": "Turkiye defenders (5 players): Line breaking passes, total (FotMob)",
-      "value": 22
-    },
-    {
-      "id": "away_midfielders_touches",
-      "label": "Turkiye midfielders (7 players): Touches, total (FotMob)",
-      "value": 248
-    },
-    {
-      "id": "away_midfielders_touches_in_opposition_box",
-      "label": "Turkiye midfielders (7 players): Touches in opposition box, total (FotMob)",
-      "value": 10
-    },
-    {
-      "id": "away_midfielders_recoveries",
-      "label": "Turkiye midfielders (7 players): Recoveries, total (FotMob)",
-      "value": 24
-    },
-    {
-      "id": "away_midfielders_duels_won",
-      "label": "Turkiye midfielders (7 players): Duels won, total (FotMob)",
-      "value": 19
-    },
-    {
-      "id": "away_midfielders_duels_lost",
-      "label": "Turkiye midfielders (7 players): Duels lost, total (FotMob)",
-      "value": 21
-    },
-    {
-      "id": "away_midfielders_interceptions",
-      "label": "Turkiye midfielders (7 players): Interceptions, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "away_midfielders_clearances",
-      "label": "Turkiye midfielders (7 players): Clearances, total (FotMob)",
-      "value": 1
-    },
-    {
-      "id": "away_midfielders_blocks",
-      "label": "Turkiye midfielders (7 players): Blocks, total (FotMob)",
+      "label": "1. FC Köln defenders (3 players): Touches in opposition box, total (FotMob)",
       "value": 0
     },
     {
-      "id": "away_midfielders_aerial_duels_won",
-      "label": "Turkiye midfielders (7 players): Aerial duels won, total (FotMob)",
+      "id": "away_defenders_recoveries",
+      "label": "1. FC Köln defenders (3 players): Recoveries, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_defenders_duels_won",
+      "label": "1. FC Köln defenders (3 players): Duels won, total (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "away_defenders_duels_lost",
+      "label": "1. FC Köln defenders (3 players): Duels lost, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_defenders_interceptions",
+      "label": "1. FC Köln defenders (3 players): Interceptions, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_defenders_clearances",
+      "label": "1. FC Köln defenders (3 players): Clearances, total (FotMob)",
+      "value": 15
+    },
+    {
+      "id": "away_defenders_blocks",
+      "label": "1. FC Köln defenders (3 players): Blocks, total (FotMob)",
+      "value": 4
+    },
+    {
+      "id": "away_defenders_aerial_duels_won",
+      "label": "1. FC Köln defenders (3 players): Aerial duels won, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_ground_duels_won",
+      "label": "1. FC Köln defenders (3 players): Ground duels won, total (FotMob)",
+      "value": 9
+    },
+    {
+      "id": "away_defenders_passes_into_final_third",
+      "label": "1. FC Köln defenders (3 players): Passes into final third, total (FotMob)",
+      "value": 5
+    },
+    {
+      "id": "away_defenders_accurate_passes",
+      "label": "1. FC Köln defenders (3 players): Accurate passes, total (FotMob)",
+      "value": 107
+    },
+    {
+      "id": "away_defenders_successful_dribbles",
+      "label": "1. FC Köln defenders (3 players): Successful dribbles, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_dispossessed",
+      "label": "1. FC Köln defenders (3 players): Dispossessed, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "away_defenders_defensive_actions",
+      "label": "1. FC Köln defenders (3 players): Defensive actions, total (FotMob)",
+      "value": 30
+    },
+    {
+      "id": "away_defenders_chances_created",
+      "label": "1. FC Köln defenders (3 players): Chances created, total (FotMob)",
+      "value": 0
+    },
+    {
+      "id": "away_defenders_accurate_long_balls",
+      "label": "1. FC Köln defenders (3 players): Accurate long balls, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_was_fouled",
+      "label": "1. FC Köln defenders (3 players): Was fouled, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_defenders_fouls_committed",
+      "label": "1. FC Köln defenders (3 players): Fouls committed, total (FotMob)",
       "value": 1
     },
     {
+      "id": "away_midfielders_touches",
+      "label": "1. FC Köln midfielders (9 players): Touches, total (FotMob)",
+      "value": 254
+    },
+    {
+      "id": "away_midfielders_touches_in_opposition_box",
+      "label": "1. FC Köln midfielders (9 players): Touches in opposition box, total (FotMob)",
+      "value": 12
+    },
+    {
+      "id": "away_midfielders_recoveries",
+      "label": "1. FC Köln midfielders (9 players): Recoveries, total (FotMob)",
+      "value": 34
+    },
+    {
+      "id": "away_midfielders_duels_won",
+      "label": "1. FC Köln midfielders (9 players): Duels won, total (FotMob)",
+      "value": 37
+    },
+    {
+      "id": "away_midfielders_duels_lost",
+      "label": "1. FC Köln midfielders (9 players): Duels lost, total (FotMob)",
+      "value": 20
+    },
+    {
+      "id": "away_midfielders_interceptions",
+      "label": "1. FC Köln midfielders (9 players): Interceptions, total (FotMob)",
+      "value": 11
+    },
+    {
+      "id": "away_midfielders_clearances",
+      "label": "1. FC Köln midfielders (9 players): Clearances, total (FotMob)",
+      "value": 12
+    },
+    {
+      "id": "away_midfielders_blocks",
+      "label": "1. FC Köln midfielders (9 players): Blocks, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_midfielders_aerial_duels_won",
+      "label": "1. FC Köln midfielders (9 players): Aerial duels won, total (FotMob)",
+      "value": 4
+    },
+    {
       "id": "away_midfielders_ground_duels_won",
-      "label": "Turkiye midfielders (7 players): Ground duels won, total (FotMob)",
-      "value": 18
+      "label": "1. FC Köln midfielders (9 players): Ground duels won, total (FotMob)",
+      "value": 33
     },
     {
       "id": "away_midfielders_passes_into_final_third",
-      "label": "Turkiye midfielders (7 players): Passes into final third, total (FotMob)",
+      "label": "1. FC Köln midfielders (9 players): Passes into final third, total (FotMob)",
       "value": 15
     },
     {
       "id": "away_midfielders_accurate_passes",
-      "label": "Turkiye midfielders (7 players): Accurate passes, total (FotMob)",
-      "value": 152
+      "label": "1. FC Köln midfielders (9 players): Accurate passes, total (FotMob)",
+      "value": 109
     },
     {
       "id": "away_midfielders_successful_dribbles",
-      "label": "Turkiye midfielders (7 players): Successful dribbles, total (FotMob)",
-      "value": 4
+      "label": "1. FC Köln midfielders (9 players): Successful dribbles, total (FotMob)",
+      "value": 5
     },
     {
       "id": "away_midfielders_dispossessed",
-      "label": "Turkiye midfielders (7 players): Dispossessed, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "away_midfielders_defensive_actions",
-      "label": "Turkiye midfielders (7 players): Defensive actions, total (FotMob)",
-      "value": 13
-    },
-    {
-      "id": "away_midfielders_chances_created",
-      "label": "Turkiye midfielders (7 players): Chances created, total (FotMob)",
-      "value": 7
-    },
-    {
-      "id": "away_midfielders_accurate_long_balls",
-      "label": "Turkiye midfielders (7 players): Accurate long balls, total (FotMob)",
-      "value": 9
-    },
-    {
-      "id": "away_midfielders_was_fouled",
-      "label": "Turkiye midfielders (7 players): Was fouled, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_midfielders_fouls_committed",
-      "label": "Turkiye midfielders (7 players): Fouls committed, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_midfielders_line_breaking_passes",
-      "label": "Turkiye midfielders (7 players): Line breaking passes, total (FotMob)",
-      "value": 23
-    },
-    {
-      "id": "away_forwards_touches",
-      "label": "Turkiye forwards (3 players): Touches, total (FotMob)",
-      "value": 81
-    },
-    {
-      "id": "away_forwards_touches_in_opposition_box",
-      "label": "Turkiye forwards (3 players): Touches in opposition box, total (FotMob)",
+      "label": "1. FC Köln midfielders (9 players): Dispossessed, total (FotMob)",
       "value": 3
     },
     {
-      "id": "away_forwards_recoveries",
-      "label": "Turkiye forwards (3 players): Recoveries, total (FotMob)",
-      "value": 10
+      "id": "away_midfielders_defensive_actions",
+      "label": "1. FC Köln midfielders (9 players): Defensive actions, total (FotMob)",
+      "value": 49
     },
     {
-      "id": "away_forwards_duels_won",
-      "label": "Turkiye forwards (3 players): Duels won, total (FotMob)",
-      "value": 11
+      "id": "away_midfielders_chances_created",
+      "label": "1. FC Köln midfielders (9 players): Chances created, total (FotMob)",
+      "value": 4
     },
     {
-      "id": "away_forwards_duels_lost",
-      "label": "Turkiye forwards (3 players): Duels lost, total (FotMob)",
-      "value": 17
+      "id": "away_midfielders_accurate_long_balls",
+      "label": "1. FC Köln midfielders (9 players): Accurate long balls, total (FotMob)",
+      "value": 4
     },
     {
-      "id": "away_forwards_interceptions",
-      "label": "Turkiye forwards (3 players): Interceptions, total (FotMob)",
+      "id": "away_midfielders_was_fouled",
+      "label": "1. FC Köln midfielders (9 players): Was fouled, total (FotMob)",
+      "value": 3
+    },
+    {
+      "id": "away_midfielders_fouls_committed",
+      "label": "1. FC Köln midfielders (9 players): Fouls committed, total (FotMob)",
       "value": 1
     },
     {
+      "id": "away_forwards_touches",
+      "label": "1. FC Köln forwards (3 players): Touches, total (FotMob)",
+      "value": 31
+    },
+    {
+      "id": "away_forwards_touches_in_opposition_box",
+      "label": "1. FC Köln forwards (3 players): Touches in opposition box, total (FotMob)",
+      "value": 10
+    },
+    {
+      "id": "away_forwards_recoveries",
+      "label": "1. FC Köln forwards (3 players): Recoveries, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_forwards_duels_won",
+      "label": "1. FC Köln forwards (3 players): Duels won, total (FotMob)",
+      "value": 2
+    },
+    {
+      "id": "away_forwards_duels_lost",
+      "label": "1. FC Köln forwards (3 players): Duels lost, total (FotMob)",
+      "value": 7
+    },
+    {
+      "id": "away_forwards_interceptions",
+      "label": "1. FC Köln forwards (3 players): Interceptions, total (FotMob)",
+      "value": 0
+    },
+    {
       "id": "away_forwards_clearances",
-      "label": "Turkiye forwards (3 players): Clearances, total (FotMob)",
-      "value": 6
+      "label": "1. FC Köln forwards (3 players): Clearances, total (FotMob)",
+      "value": 0
     },
     {
       "id": "away_forwards_blocks",
-      "label": "Turkiye forwards (3 players): Blocks, total (FotMob)",
+      "label": "1. FC Köln forwards (3 players): Blocks, total (FotMob)",
       "value": 0
     },
     {
       "id": "away_forwards_aerial_duels_won",
-      "label": "Turkiye forwards (3 players): Aerial duels won, total (FotMob)",
-      "value": 5
-    },
-    {
-      "id": "away_forwards_ground_duels_won",
-      "label": "Turkiye forwards (3 players): Ground duels won, total (FotMob)",
-      "value": 6
-    },
-    {
-      "id": "away_forwards_passes_into_final_third",
-      "label": "Turkiye forwards (3 players): Passes into final third, total (FotMob)",
-      "value": 3
-    },
-    {
-      "id": "away_forwards_accurate_passes",
-      "label": "Turkiye forwards (3 players): Accurate passes, total (FotMob)",
-      "value": 23
-    },
-    {
-      "id": "away_forwards_successful_dribbles",
-      "label": "Turkiye forwards (3 players): Successful dribbles, total (FotMob)",
-      "value": 2
-    },
-    {
-      "id": "away_forwards_dispossessed",
-      "label": "Turkiye forwards (3 players): Dispossessed, total (FotMob)",
-      "value": 5
-    },
-    {
-      "id": "away_forwards_defensive_actions",
-      "label": "Turkiye forwards (3 players): Defensive actions, total (FotMob)",
-      "value": 8
-    },
-    {
-      "id": "away_forwards_chances_created",
-      "label": "Turkiye forwards (3 players): Chances created, total (FotMob)",
+      "label": "1. FC Köln forwards (3 players): Aerial duels won, total (FotMob)",
       "value": 0
     },
     {
-      "id": "away_forwards_accurate_long_balls",
-      "label": "Turkiye forwards (3 players): Accurate long balls, total (FotMob)",
+      "id": "away_forwards_ground_duels_won",
+      "label": "1. FC Köln forwards (3 players): Ground duels won, total (FotMob)",
       "value": 2
     },
     {
-      "id": "away_forwards_was_fouled",
-      "label": "Turkiye forwards (3 players): Was fouled, total (FotMob)",
+      "id": "away_forwards_passes_into_final_third",
+      "label": "1. FC Köln forwards (3 players): Passes into final third, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_forwards_accurate_passes",
+      "label": "1. FC Köln forwards (3 players): Accurate passes, total (FotMob)",
+      "value": 6
+    },
+    {
+      "id": "away_forwards_successful_dribbles",
+      "label": "1. FC Köln forwards (3 players): Successful dribbles, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_forwards_dispossessed",
+      "label": "1. FC Köln forwards (3 players): Dispossessed, total (FotMob)",
       "value": 3
+    },
+    {
+      "id": "away_forwards_defensive_actions",
+      "label": "1. FC Köln forwards (3 players): Defensive actions, total (FotMob)",
+      "value": 1
+    },
+    {
+      "id": "away_forwards_chances_created",
+      "label": "1. FC Köln forwards (3 players): Chances created, total (FotMob)",
+      "value": 2
     },
     {
       "id": "away_forwards_fouls_committed",
-      "label": "Turkiye forwards (3 players): Fouls committed, total (FotMob)",
-      "value": 4
-    },
-    {
-      "id": "away_forwards_line_breaking_passes",
-      "label": "Turkiye forwards (3 players): Line breaking passes, total (FotMob)",
-      "value": 3
+      "label": "1. FC Köln forwards (3 players): Fouls committed, total (FotMob)",
+      "value": 1
     },
     {
       "id": "home_formation",
-      "label": "France formation",
+      "label": "Bayern München formation",
       "value": "4-2-3-1"
     },
     {
       "id": "home_top_rated",
-      "label": "France highest FotMob player rating",
+      "label": "Bayern München highest FotMob player rating",
       "value": {
-        "player": "Rayan Cherki",
-        "rating": 8.4
+        "player": "Jonathan Tah",
+        "rating": 8.3
       }
     },
     {
       "id": "away_formation",
-      "label": "Turkiye formation",
-      "value": "5-4-1"
+      "label": "1. FC Köln formation",
+      "value": "3-5-1-1"
     },
     {
       "id": "away_top_rated",
-      "label": "Turkiye highest FotMob player rating",
+      "label": "1. FC Köln highest FotMob player rating",
       "value": {
-        "player": "Arda Güler",
-        "rating": 8.1
+        "player": "Tom Krauß",
+        "rating": 7.9
       }
     },
     {
       "id": "best_player_1",
       "label": "Highest FotMob rating among starters",
       "value": {
-        "player": "Rayan Cherki",
-        "team": "France",
-        "rating": 8.4
+        "player": "Jonathan Tah",
+        "team": "Bayern München",
+        "rating": 8.3
       }
     },
     {
       "id": "best_player_2",
       "label": "Highest FotMob rating among starters",
       "value": {
-        "player": "Arda Güler",
-        "team": "Turkiye",
+        "player": "Nathaniel Brown",
+        "team": "Bayern München",
         "rating": 8.1
       }
     },
@@ -1065,28 +1061,28 @@
       "id": "best_player_3",
       "label": "Highest FotMob rating among starters",
       "value": {
-        "player": "Lucas Da Cunha",
-        "team": "France",
-        "rating": 8.0
+        "player": "Tom Krauß",
+        "team": "1. FC Köln",
+        "rating": 7.9
       }
     },
     {
       "id": "worst_player_1",
       "label": "Lowest FotMob rating among starters",
       "value": {
-        "player": "Emirhan Topçu",
-        "team": "Turkiye",
-        "rating": 5.6,
-        "subbed_off": false
+        "player": "Harry Kane",
+        "team": "Bayern München",
+        "rating": 6.0,
+        "subbed_off": true
       }
     },
     {
       "id": "worst_player_2",
       "label": "Lowest FotMob rating among starters",
       "value": {
-        "player": "Deniz Gül",
-        "team": "Turkiye",
-        "rating": 5.7,
+        "player": "Marvin Schwäbe",
+        "team": "1. FC Köln",
+        "rating": 6.0,
         "subbed_off": false
       }
     },
@@ -1094,995 +1090,644 @@
       "id": "worst_player_3",
       "label": "Lowest FotMob rating among starters",
       "value": {
-        "player": "İsmail Yüksek",
-        "team": "Turkiye",
-        "rating": 6.0,
+        "player": "Linton Maina",
+        "team": "1. FC Köln",
+        "rating": 6.5,
         "subbed_off": true
       }
     },
     {
       "id": "home_coach",
-      "label": "France head coach",
-      "value": "Zinédine Zidane"
+      "label": "Bayern München head coach",
+      "value": "Vincent Kompany"
     },
     {
       "id": "home_starting_xi",
-      "label": "France starting eleven",
-      "value": "Mike Maignan, Saël Kumbedi, Jérémy Jacquet, Ibrahima Konaté, Andy Diouf, Lucas Da Cunha, Adrien Rabiot, Michael Olise, Rayan Cherki, Bradley Barcola, Kylian Mbappé"
+      "label": "Bayern München starting eleven",
+      "value": "Jonas Urbig, Konrad Laimer, Dayot Upamecano, Jonathan Tah, Josip Stanišić, Joshua Kimmich, Aleksandar Pavlović, Michael Olise, Lennart Karl, Nathaniel Brown, Harry Kane"
     },
     {
-      "id": "home_xi_market_value_m_eur",
-      "label": "France starting eleven total market value, million EUR",
-      "value": 745
-    },
-    {
-      "id": "away_coach",
-      "label": "Turkiye head coach",
-      "value": "Sergen Yalçin"
-    },
-    {
-      "id": "away_starting_xi",
-      "label": "Turkiye starting eleven",
-      "value": "Berke Özer, Merih Demiral, Abdülkerim Bardakci, Emirhan Topçu, Barış Alper Yılmaz, Eren Elmalı, Arda Güler, İsmail Yüksek, Hakan Çalhanoğlu, Can Uzun, Deniz Gül"
-    },
-    {
-      "id": "away_absent_1",
-      "label": "Turkiye player missing this match (FotMob; value = market value, EUR)",
+      "id": "home_absent_1",
+      "label": "Bayern München player missing this match (FotMob; value = market value, EUR)",
       "value": {
-        "player": "Ozan Kabak",
-        "reason": "suspension",
-        "market_value_m_eur": 17
+        "player": "Luis Díaz",
+        "reason": "injury",
+        "market_value_m_eur": 76
       }
     },
     {
-      "id": "away_absent_2",
-      "label": "Turkiye player missing this match (FotMob; value = market value, EUR)",
+      "id": "home_absent_2",
+      "label": "Bayern München player missing this match (FotMob; value = market value, EUR)",
       "value": {
-        "player": "Ümit Akdağ",
-        "reason": "suspension",
+        "player": "Ismael Saibari",
+        "reason": "injury",
+        "market_value_m_eur": 60
+      }
+    },
+    {
+      "id": "home_absent_3",
+      "label": "Bayern München player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Alphonso Davies",
+        "reason": "injury",
+        "market_value_m_eur": 45
+      }
+    },
+    {
+      "id": "home_absent_4",
+      "label": "Bayern München player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Serge Gnabry",
+        "reason": "injury",
+        "market_value_m_eur": 12
+      }
+    },
+    {
+      "id": "home_xi_market_value_m_eur",
+      "label": "Bayern München starting eleven total market value, million EUR",
+      "value": 670
+    },
+    {
+      "id": "away_coach",
+      "label": "1. FC Köln head coach",
+      "value": "René Wagner"
+    },
+    {
+      "id": "away_starting_xi",
+      "label": "1. FC Köln starting eleven",
+      "value": "Marvin Schwäbe, Joël Schmied, Jahmai Simpson-Pusey, Luka Lochoshvili, Sebastian Sebulonsen, Tom Krauß, Paul Okon-Engstler, Mikey Moore, Borna Sosa, Linton Maina, Saïd El Mala"
+    },
+    {
+      "id": "away_absent_1",
+      "label": "1. FC Köln player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Thijs Dallinga",
+        "reason": "injury",
         "market_value_m_eur": 10
       }
     },
     {
+      "id": "away_absent_2",
+      "label": "1. FC Köln player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Rav van den Berg",
+        "reason": "injury",
+        "market_value_m_eur": 8
+      }
+    },
+    {
+      "id": "away_absent_3",
+      "label": "1. FC Köln player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Ellyes Skhiri",
+        "reason": "injury",
+        "market_value_m_eur": 2
+      }
+    },
+    {
+      "id": "away_absent_4",
+      "label": "1. FC Köln player missing this match (FotMob; value = market value, EUR)",
+      "value": {
+        "player": "Timo Hübers",
+        "reason": "injury",
+        "market_value_m_eur": 1
+      }
+    },
+    {
       "id": "away_xi_market_value_m_eur",
-      "label": "Turkiye starting eleven total market value, million EUR",
-      "value": 255
+      "label": "1. FC Köln starting eleven total market value, million EUR",
+      "value": 124
     },
     {
       "id": "home_form_last5",
-      "label": "France results in the previous 5 matches, oldest first",
-      "value": "W W D W L"
+      "label": "Bayern München results in the previous 5 matches, oldest first",
+      "value": "W W D W W"
     },
     {
       "id": "home_form_record",
-      "label": "France record in those 5 matches",
+      "label": "Bayern München record in those 5 matches",
       "value": {
-        "won": 3,
+        "won": 4,
         "drawn": 1,
-        "lost": 1
+        "lost": 0
       }
     },
     {
       "id": "home_form_games",
-      "label": "France previous 5 matches, oldest first",
+      "label": "Bayern München previous 5 matches, oldest first",
       "value": [
         {
-          "date": "2026-09-25",
-          "match": "Turkiye 0-1 France"
+          "date": "2026-10-25",
+          "match": "Freiburg 1-3 Bayern München"
         },
         {
-          "date": "2026-09-28",
-          "match": "Belgium 0-1 France"
+          "date": "2026-10-28",
+          "match": "Bayern München 6-1 Magdeburg"
         },
         {
-          "date": "2026-10-02",
-          "match": "France 1-1 Italy"
+          "date": "2026-10-31",
+          "match": "Bayern München 2-2 Borussia Dortmund"
         },
         {
-          "date": "2026-10-05",
-          "match": "France 4-1 Belgium"
+          "date": "2026-11-03",
+          "match": "Atlético Madrid 0-2 Bayern München"
         },
         {
-          "date": "2026-11-12",
-          "match": "Italy 3-1 France"
+          "date": "2026-11-07",
+          "match": "Mainz 05 1-2 Bayern München"
         }
       ]
     },
     {
       "id": "away_form_last5",
-      "label": "Turkiye results in the previous 5 matches, oldest first",
-      "value": "L L L L L"
+      "label": "1. FC Köln results in the previous 5 matches, oldest first",
+      "value": "L D W D L"
     },
     {
       "id": "away_form_record",
-      "label": "Turkiye record in those 5 matches",
+      "label": "1. FC Köln record in those 5 matches",
       "value": {
-        "won": 0,
-        "drawn": 0,
-        "lost": 5
+        "won": 1,
+        "drawn": 2,
+        "lost": 2
       }
     },
     {
       "id": "away_form_games",
-      "label": "Turkiye previous 5 matches, oldest first",
+      "label": "1. FC Köln previous 5 matches, oldest first",
       "value": [
         {
-          "date": "2026-09-25",
-          "match": "Turkiye 0-1 France"
+          "date": "2026-10-16",
+          "match": "Eintracht Frankfurt 1-0 1. FC Köln"
         },
         {
-          "date": "2026-09-28",
-          "match": "Turkiye 1-4 Italy"
+          "date": "2026-10-24",
+          "match": "1. FC Köln 0-0 Schalke 04"
         },
         {
-          "date": "2026-10-02",
-          "match": "Belgium 3-0 Turkiye"
+          "date": "2026-10-27",
+          "match": "1. FC Köln 5-0 Union Berlin"
         },
         {
-          "date": "2026-10-05",
-          "match": "Italy 3-1 Turkiye"
+          "date": "2026-11-01",
+          "match": "Union Berlin 1-1 1. FC Köln"
         },
         {
-          "date": "2026-11-12",
-          "match": "Turkiye 1-2 Belgium"
+          "date": "2026-11-08",
+          "match": "1. FC Köln 1-2 Bayer Leverkusen"
         }
       ]
     },
     {
       "id": "stadium",
       "label": "Stadium",
-      "value": "Stade Atlantique Bordeaux Métropole, Bordeaux"
-    },
-    {
-      "id": "attendance",
-      "label": "Attendance",
-      "value": 40033
+      "value": "Allianz Arena, München"
     },
     {
       "id": "player_of_the_match",
       "label": "Player of the match (FotMob)",
       "value": {
-        "player": "Rayan Cherki",
-        "team": "France",
-        "rating": "8.4"
+        "player": "Jonathan Tah",
+        "team": "Bayern München",
+        "rating": "8.3"
       }
     },
     {
       "id": "home_best_chance",
-      "label": "France best single chance (FotMob)",
+      "label": "Bayern München best single chance (FotMob)",
       "value": {
-        "player": "Bradley Barcola",
-        "minute": 49,
-        "xg": 0.86,
+        "player": "Lennart Karl",
+        "minute": 54,
+        "xg": 0.28,
         "result": "MissedShots"
       }
     },
     {
       "id": "away_best_chance",
-      "label": "Turkiye best single chance (FotMob)",
+      "label": "1. FC Köln best single chance (FotMob)",
       "value": {
-        "player": "Abdülkerim Bardakci",
-        "minute": 90,
-        "xg": 0.43,
+        "player": "Mikey Moore",
+        "minute": 12,
+        "xg": 0.93,
         "result": "Goal"
       }
     }
   ],
   "shots": [
     {
-      "side": "away",
-      "minute": 3,
-      "x": 0.7116,
-      "y": 0.0203,
-      "xg": 0.01,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Barış Alper Yılmaz",
-      "situation": "FastBreak",
-      "body_part": "RightFoot",
-      "goal_y": 0.363,
-      "goal_z": 1.96
-    },
-    {
       "side": "home",
-      "minute": 6,
-      "x": 0.7909,
-      "y": 0.78,
-      "xg": 0.02,
-      "xgot": 0.05,
-      "result": "SavedShot",
-      "player": "Adrien Rabiot",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.524,
-      "goal_z": 1.59
-    },
-    {
-      "side": "away",
       "minute": 10,
-      "x": 0.762,
-      "y": 0.4507,
-      "xg": 0.03,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Arda Güler",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.483,
-      "goal_z": 1.22
-    },
-    {
-      "side": "home",
-      "minute": 11,
-      "x": 0.9145,
-      "y": 0.5213,
-      "xg": 0.1,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Adrien Rabiot",
-      "situation": "RegularPlay",
-      "body_part": "Header",
-      "goal_y": 0.498,
-      "goal_z": 5.43
-    },
-    {
-      "side": "home",
-      "minute": 13,
-      "x": 0.8183,
-      "y": 0.3591,
+      "x": 0.881,
+      "y": 0.3612,
       "xg": 0.04,
       "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Rayan Cherki",
-      "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.608,
-      "goal_z": 0.8
-    },
-    {
-      "side": "home",
-      "minute": 14,
-      "x": 0.8819,
-      "y": 0.5549,
-      "xg": 0.11,
-      "xgot": 0.0,
       "result": "BlockedShot",
-      "player": "Adrien Rabiot",
+      "player": "Lennart Karl",
       "situation": "RegularPlay",
       "body_part": "LeftFoot",
-      "goal_y": 0.496,
-      "goal_z": 1.22
-    },
-    {
-      "side": "home",
-      "minute": 14,
-      "x": 0.8886,
-      "y": 0.6533,
-      "xg": 0.04,
-      "xgot": 0.07,
-      "result": "SavedShot",
-      "player": "Kylian Mbappé",
-      "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.533,
-      "goal_z": 0.37
-    },
-    {
-      "side": "away",
-      "minute": 16,
-      "x": 0.8562,
-      "y": 0.4641,
-      "xg": 0.06,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Deniz Gül",
-      "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.502,
-      "goal_z": 1.22
-    },
-    {
-      "side": "away",
-      "minute": 17,
-      "x": 0.9228,
-      "y": 0.5791,
-      "xg": 0.03,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Abdülkerim Bardakci",
-      "situation": "FromCorner",
-      "body_part": "Header",
-      "goal_y": 0.671,
-      "goal_z": 1.43
-    },
-    {
-      "side": "home",
-      "minute": 21,
-      "x": 0.8971,
-      "y": 0.6388,
-      "xg": 0.42,
-      "xgot": 0.21,
-      "result": "SavedShot",
-      "player": "Bradley Barcola",
-      "situation": "FastBreak",
-      "body_part": "RightFoot",
-      "goal_y": 0.511,
-      "goal_z": 1.01
-    },
-    {
-      "side": "home",
-      "minute": 23,
-      "x": 0.8848,
-      "y": 0.6429,
-      "xg": 0.07,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Bradley Barcola",
-      "situation": "RegularPlay",
-      "body_part": "RightFoot",
       "goal_y": 0.503,
       "goal_z": 1.22
     },
     {
       "side": "away",
-      "minute": 32,
-      "x": 0.8962,
-      "y": 0.6728,
-      "xg": 0.05,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Arda Güler",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.519,
-      "goal_z": 1.22
+      "minute": 12,
+      "x": 0.9846,
+      "y": 0.5551,
+      "xg": 0.93,
+      "xgot": 1.0,
+      "result": "Goal",
+      "player": "Mikey Moore",
+      "situation": "FastBreak",
+      "body_part": "RightFoot",
+      "goal_y": 0.526,
+      "goal_z": 0.04
     },
     {
-      "side": "away",
-      "minute": 32,
-      "x": 0.9274,
-      "y": 0.5914,
-      "xg": 0.03,
+      "side": "home",
+      "minute": 15,
+      "x": 0.9219,
+      "y": 0.4296,
+      "xg": 0.17,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Deniz Gül",
-      "situation": "FromCorner",
-      "body_part": "Header",
-      "goal_y": 0.002,
-      "goal_z": 0.44
-    },
-    {
-      "side": "home",
-      "minute": 34,
-      "x": 0.8876,
-      "y": 0.4061,
-      "xg": 0.33,
-      "xgot": 0.3,
-      "result": "SavedShot",
-      "player": "Kylian Mbappé",
+      "player": "Lennart Karl",
       "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.484,
-      "goal_z": 0.49
+      "body_part": "LeftFoot",
+      "goal_y": 0.867,
+      "goal_z": 0.09
     },
     {
       "side": "home",
-      "minute": 34,
-      "x": 0.8081,
-      "y": 0.3272,
+      "minute": 22,
+      "x": 0.7352,
+      "y": 0.4036,
       "xg": 0.02,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Michael Olise",
-      "situation": "FromCorner",
-      "body_part": "LeftFoot",
-      "goal_y": 0.537,
-      "goal_z": 5.79
-    },
-    {
-      "side": "away",
-      "minute": 35,
-      "x": 0.8886,
-      "y": 0.4462,
-      "xg": 0.37,
-      "xgot": 0.32,
-      "result": "SavedShot",
-      "player": "İsmail Yüksek",
+      "player": "Joshua Kimmich",
       "situation": "RegularPlay",
       "body_part": "RightFoot",
-      "goal_y": 0.482,
-      "goal_z": 0.57
+      "goal_y": 0.543,
+      "goal_z": 5.06
     },
     {
       "side": "home",
-      "minute": 38,
-      "x": 0.8648,
-      "y": 0.2664,
-      "xg": 0.03,
-      "xgot": 0.07,
-      "result": "SavedShot",
-      "player": "Michael Olise",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.522,
-      "goal_z": 1.46
-    },
-    {
-      "side": "home",
-      "minute": 42,
-      "x": 0.953,
-      "y": 0.6169,
-      "xg": 0.21,
+      "minute": 25,
+      "x": 0.7609,
+      "y": 0.4922,
+      "xg": 0.04,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Andy Diouf",
+      "player": "Tom Bischof",
       "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.585,
-      "goal_z": 0.27
-    },
-    {
-      "side": "home",
-      "minute": 48,
-      "x": 0.8245,
-      "y": 0.6245,
-      "xg": 0.1,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Michael Olise",
-      "situation": "FreeKick",
       "body_part": "LeftFoot",
-      "goal_y": 0.506,
-      "goal_z": 1.22
-    },
-    {
-      "side": "home",
-      "minute": 49,
-      "x": 0.9612,
-      "y": 0.6708,
-      "xg": 0.02,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Adrien Rabiot",
-      "situation": "FromCorner",
-      "body_part": "Header",
-      "goal_y": 0.008,
+      "goal_y": 0.378,
       "goal_z": 0.36
     },
     {
       "side": "home",
-      "minute": 49,
-      "x": 0.9756,
-      "y": 0.5034,
-      "xg": 0.86,
+      "minute": 28,
+      "x": 0.8377,
+      "y": 0.6955,
+      "xg": 0.03,
+      "xgot": 0.0,
+      "result": "BlockedShot",
+      "player": "Nathaniel Brown",
+      "situation": "RegularPlay",
+      "body_part": "LeftFoot",
+      "goal_y": 0.541,
+      "goal_z": 1.22
+    },
+    {
+      "side": "home",
+      "minute": 34,
+      "x": 0.7588,
+      "y": 0.4832,
+      "xg": 0.04,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Bradley Barcola",
-      "situation": "FromCorner",
-      "body_part": "RightFoot",
+      "player": "Aleksandar Pavlović",
+      "situation": "RegularPlay",
+      "body_part": "LeftFoot",
+      "goal_y": 0.469,
+      "goal_z": 5.79
+    },
+    {
+      "side": "home",
+      "minute": 37,
+      "x": 0.7984,
+      "y": 0.4843,
+      "xg": 0.06,
+      "xgot": 0.38,
+      "result": "Goal",
+      "player": "Nathaniel Brown",
+      "situation": "RegularPlay",
+      "body_part": "LeftFoot",
+      "goal_y": 0.459,
+      "goal_z": 0.21
+    },
+    {
+      "side": "home",
+      "minute": 40,
+      "x": 0.8337,
+      "y": 0.5581,
+      "xg": 0.03,
+      "xgot": 0.0,
+      "result": "MissedShots",
+      "player": "Michael Olise",
+      "situation": "RegularPlay",
+      "body_part": "LeftFoot",
       "goal_y": 0.39,
+      "goal_z": 4.58
+    },
+    {
+      "side": "home",
+      "minute": 45,
+      "x": 0.8347,
+      "y": 0.5101,
+      "xg": 0.07,
+      "xgot": 0.0,
+      "result": "BlockedShot",
+      "player": "Tom Bischof",
+      "situation": "RegularPlay",
+      "body_part": "RightFoot",
+      "goal_y": 0.483,
+      "goal_z": 1.22
+    },
+    {
+      "side": "home",
+      "minute": 45,
+      "x": 0.8886,
+      "y": 0.6388,
+      "xg": 0.01,
+      "xgot": 0.0,
+      "result": "MissedShots",
+      "player": "Dayot Upamecano",
+      "situation": "FromCorner",
+      "body_part": "Header",
+      "goal_y": 0.605,
       "goal_z": 0.53
     },
     {
       "side": "away",
-      "minute": 52,
-      "x": 0.9118,
-      "y": 0.5914,
-      "xg": 0.07,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Can Uzun",
-      "situation": "RegularPlay",
+      "minute": 51,
+      "x": 0.9173,
+      "y": 0.5549,
+      "xg": 0.5,
+      "xgot": 0.41,
+      "result": "SavedShot",
+      "player": "Mikey Moore",
+      "situation": "FastBreak",
       "body_part": "RightFoot",
-      "goal_y": 0.517,
-      "goal_z": 1.22
+      "goal_y": 0.524,
+      "goal_z": 0.33
     },
     {
-      "side": "away",
-      "minute": 59,
-      "x": 0.9274,
-      "y": 0.3687,
-      "xg": 0.07,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Arda Güler",
-      "situation": "RegularPlay",
-      "body_part": "RightFoot",
-      "goal_y": 0.475,
-      "goal_z": 1.22
-    },
-    {
-      "side": "away",
-      "minute": 60,
-      "x": 0.9639,
-      "y": 0.5045,
-      "xg": 0.2,
+      "side": "home",
+      "minute": 54,
+      "x": 0.9201,
+      "y": 0.3831,
+      "xg": 0.28,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Abdülkerim Bardakci",
-      "situation": "FromCorner",
-      "body_part": "OtherBodyParts",
-      "goal_y": 0.995,
-      "goal_z": 0.27
+      "player": "Lennart Karl",
+      "situation": "RegularPlay",
+      "body_part": "RightFoot",
+      "goal_y": 0.574,
+      "goal_z": 0.36
+    },
+    {
+      "side": "away",
+      "minute": 57,
+      "x": 0.8781,
+      "y": 0.3581,
+      "xg": 0.06,
+      "xgot": 0.17,
+      "result": "SavedShot",
+      "player": "Saïd El Mala",
+      "situation": "RegularPlay",
+      "body_part": "RightFoot",
+      "goal_y": 0.515,
+      "goal_z": 1.59
+    },
+    {
+      "side": "away",
+      "minute": 57,
+      "x": 0.9072,
+      "y": 0.5964,
+      "xg": 0.09,
+      "xgot": 0.06,
+      "result": "SavedShot",
+      "player": "Linton Maina",
+      "situation": "RegularPlay",
+      "body_part": "LeftFoot",
+      "goal_y": 0.538,
+      "goal_z": 0.69
+    },
+    {
+      "side": "home",
+      "minute": 60,
+      "x": 0.7909,
+      "y": 0.3738,
+      "xg": 0.03,
+      "xgot": 0.0,
+      "result": "MissedShots",
+      "player": "Konrad Laimer",
+      "situation": "RegularPlay",
+      "body_part": "RightFoot",
+      "goal_y": 0.609,
+      "goal_z": 1.61
     },
     {
       "side": "home",
       "minute": 61,
-      "x": 0.861,
-      "y": 0.3086,
-      "xg": 0.05,
-      "xgot": 0.11,
-      "result": "SavedShot",
-      "player": "Michael Olise",
-      "situation": "FastBreak",
-      "body_part": "LeftFoot",
-      "goal_y": 0.464,
-      "goal_z": 0.73
-    },
-    {
-      "side": "home",
-      "minute": 64,
-      "x": 0.8619,
-      "y": 0.5314,
-      "xg": 0.3,
-      "xgot": 0.19,
-      "result": "SavedShot",
-      "player": "Kylian Mbappé",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.513,
-      "goal_z": 1.01
-    },
-    {
-      "side": "home",
-      "minute": 65,
-      "x": 0.9612,
-      "y": 0.679,
-      "xg": 0.02,
-      "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Junior Kroupi",
-      "situation": "FromCorner",
-      "body_part": "RightFoot",
-      "goal_y": 0.528,
-      "goal_z": 1.22
-    },
-    {
-      "side": "away",
-      "minute": 67,
-      "x": 0.7523,
-      "y": 0.411,
-      "xg": 0.02,
-      "xgot": 0.05,
-      "result": "SavedShot",
-      "player": "Arda Güler",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.524,
-      "goal_z": 0.37
-    },
-    {
-      "side": "away",
-      "minute": 70,
       "x": 0.7695,
-      "y": 0.4574,
-      "xg": 0.11,
+      "y": 0.3962,
+      "xg": 0.02,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Arda Güler",
-      "situation": "RegularPlay",
+      "player": "Konrad Laimer",
+      "situation": "FromCorner",
+      "body_part": "RightFoot",
+      "goal_y": 0.647,
+      "goal_z": 0.98
+    },
+    {
+      "side": "home",
+      "minute": 70,
+      "x": 0.8895,
+      "y": 0.7346,
+      "xg": 0.03,
+      "xgot": 0.0,
+      "result": "MissedShots",
+      "player": "Nathaniel Brown",
+      "situation": "FastBreak",
       "body_part": "LeftFoot",
-      "goal_y": 0.416,
-      "goal_z": 0.71
+      "goal_y": 0.526,
+      "goal_z": 7.48
     },
     {
       "side": "home",
       "minute": 73,
-      "x": 0.9017,
-      "y": 0.4551,
-      "xg": 0.1,
+      "x": 0.7706,
+      "y": 0.4641,
+      "xg": 0.02,
       "xgot": 0.0,
       "result": "BlockedShot",
-      "player": "Kylian Mbappé",
+      "player": "Jamal Musiala",
       "situation": "RegularPlay",
       "body_part": "RightFoot",
-      "goal_y": 0.496,
+      "goal_y": 0.485,
       "goal_z": 1.22
     },
     {
       "side": "home",
-      "minute": 75,
-      "x": 0.9338,
-      "y": 0.5988,
-      "xg": 0.1,
+      "minute": 76,
+      "x": 0.7695,
+      "y": 0.5542,
+      "xg": 0.03,
       "xgot": 0.0,
-      "result": "BlockedShot",
-      "player": "Kylian Mbappé",
+      "result": "MissedShots",
+      "player": "Aleksandar Pavlović",
       "situation": "RegularPlay",
       "body_part": "RightFoot",
-      "goal_y": 0.515,
-      "goal_z": 1.22
-    },
-    {
-      "side": "home",
-      "minute": 75,
-      "x": 0.7845,
-      "y": 0.6135,
-      "xg": 0.04,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Eduardo Camavinga",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.515,
-      "goal_z": 6.64
-    },
-    {
-      "side": "home",
-      "minute": 77,
-      "x": 0.8112,
-      "y": 0.6574,
-      "xg": 0.04,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Eduardo Camavinga",
-      "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.558,
-      "goal_z": 5.31
+      "goal_y": 0.572,
+      "goal_z": 1.96
     },
     {
       "side": "home",
       "minute": 80,
-      "x": 0.9246,
-      "y": 0.6553,
-      "xg": 0.15,
-      "xgot": 0.11,
-      "result": "Goal",
-      "player": "Junior Kroupi",
+      "x": 0.9201,
+      "y": 0.4966,
+      "xg": 0.14,
+      "xgot": 0.0,
+      "result": "BlockedShot",
+      "player": "Jamal Musiala",
       "situation": "RegularPlay",
       "body_part": "RightFoot",
-      "goal_y": 0.513,
-      "goal_z": 0.69
+      "goal_y": 0.492,
+      "goal_z": 1.22
     },
     {
       "side": "away",
-      "minute": 83,
-      "x": 0.8962,
-      "y": 0.4664,
-      "xg": 0.05,
+      "minute": 82,
+      "x": 0.9136,
+      "y": 0.5056,
+      "xg": 0.32,
       "xgot": 0.0,
       "result": "MissedShots",
-      "player": "Abdülkerim Bardakci",
-      "situation": "FromCorner",
-      "body_part": "LeftFoot",
-      "goal_y": 0.491,
-      "goal_z": 6.03
-    },
-    {
-      "side": "home",
-      "minute": 88,
-      "x": 0.8552,
-      "y": 0.4944,
-      "xg": 0.2,
-      "xgot": 0.0,
-      "result": "MissedShots",
-      "player": "Lucas Da Cunha",
+      "player": "Saïd El Mala",
       "situation": "RegularPlay",
-      "body_part": "LeftFoot",
-      "goal_y": 0.435,
-      "goal_z": 0.44
+      "body_part": "RightFoot",
+      "goal_y": 0.613,
+      "goal_z": 0.36
     },
     {
       "side": "away",
       "minute": 90,
-      "x": 0.9503,
-      "y": 0.5314,
-      "xg": 0.43,
-      "xgot": 0.62,
-      "result": "Goal",
-      "player": "Abdülkerim Bardakci",
-      "situation": "FromCorner",
-      "body_part": "Header",
-      "goal_y": 0.493,
-      "goal_z": 0.77
+      "x": 0.8667,
+      "y": 0.286,
+      "xg": 0.03,
+      "xgot": 0.0,
+      "result": "MissedShots",
+      "player": "Alessio Castro-Montes",
+      "situation": "FastBreak",
+      "body_part": "RightFoot",
+      "goal_y": 0.635,
+      "goal_z": 1.16
+    },
+    {
+      "side": "away",
+      "minute": 90,
+      "x": 0.8571,
+      "y": 0.472,
+      "xg": 0.06,
+      "xgot": 0.0,
+      "result": "BlockedShot",
+      "player": "Reigan Heskey",
+      "situation": "RegularPlay",
+      "body_part": "RightFoot",
+      "goal_y": 0.504,
+      "goal_z": 1.22
     }
   ],
   "player_stats": [
     {
-      "player": "Abdülkerim Bardakci",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "defenders",
-      "stats": {
-        "Minutes played": 90,
-        "Goals": 1,
-        "Assists": 0,
-        "Expected goals (xG)": 0.71,
-        "Expected goals on target (xGOT)": 0.62,
-        "Expected assists (xA)": 0.01,
-        "xG + xA": 0.72,
-        "Total shots": 4,
-        "Accurate passes": "55/61",
-        "Chances created": 0,
-        "Shots on target": 1,
-        "Shots off target": 3,
-        "Shot accuracy": "1/4",
-        "Shotmap": 1,
-        "Defensive actions": 7,
-        "Touches": 75,
-        "Touches in opposition box": 5,
-        "Passes into final third": 6,
-        "Line breaking passes": 9,
-        "Accurate long balls": "3/7",
-        "Dispossessed": 0,
-        "xG Non-penalty": 0.71,
-        "Tackles": 3,
-        "Blocks": 1,
-        "Clearances": 1,
-        "Interceptions": 2,
-        "Recoveries": 2,
-        "Dribbled past": 1,
-        "Ground duels won": "3/4",
-        "Aerial duels won": "2/3",
-        "Fouls committed": 0,
-        "Duels won": 5,
-        "Duels lost": 2
-      }
-    },
-    {
-      "player": "Hakan Çalhanoğlu",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 81,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected assists (xA)": 0.19,
-        "xG + xA": 0.19,
-        "Accurate passes": "41/47",
-        "Chances created": 2,
-        "Shotmap": 0,
-        "Defensive actions": 5,
-        "Touches": 55,
-        "Touches in opposition box": 0,
-        "Passes into final third": 2,
-        "Line breaking passes": 2,
-        "Accurate long balls": "1/1",
-        "Dispossessed": 0,
-        "Tackles": 4,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 1,
-        "Recoveries": 6,
-        "Dribbled past": 0,
-        "Ground duels won": "4/7",
-        "Aerial duels won": 0,
-        "Fouls committed": 3,
-        "Duels won": 4,
-        "Duels lost": 3
-      }
-    },
-    {
-      "player": "Adrien Rabiot",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 63,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.24,
-        "Expected goals on target (xGOT)": 0.05,
-        "Expected assists (xA)": 0.02,
-        "xG + xA": 0.26,
-        "Total shots": 4,
-        "Accurate passes": "25/33",
-        "Chances created": 1,
-        "Big chances created": 1,
-        "Shots on target": 1,
-        "Shots off target": 2,
-        "Blocked shots": 1,
-        "Shot accuracy": "1/3",
-        "Shotmap": 1,
-        "Defensive actions": 3,
-        "Touches": 46,
-        "Touches in opposition box": 4,
-        "Passes into final third": 1,
-        "Line breaking passes": 3,
-        "Accurate crosses": "0/1",
-        "Dispossessed": 0,
-        "xG Non-penalty": 0.24,
-        "Tackles": 2,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 1,
-        "Recoveries": 6,
-        "Dribbled past": 0,
-        "Ground duels won": "2/5",
-        "Aerial duels won": "0/1",
-        "Fouls committed": 3,
-        "Duels won": 2,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "Mike Maignan",
-      "team": "France",
-      "side": "home",
-      "line": "goalkeeper",
-      "stats": {
-        "Minutes played": 45,
-        "Saves": 1,
-        "Goals conceded": 0,
-        "xGOT faced": 0.32,
-        "Goals prevented": 0.32,
-        "Shotmap": 1,
-        "Accurate passes": "11/12",
-        "Accurate long balls": "1/2",
-        "Diving save": 1,
-        "Saves inside box": 1,
-        "Acted as sweeper": 0,
-        "Punches": 0,
-        "Throws": 1,
-        "High claim": 0,
-        "Recoveries": 4,
-        "Clearances": 0,
-        "Touches": 15,
-        "Defensive actions": 0,
-        "Duels won": 1,
-        "Ground duels won": "1/1",
-        "Was fouled": 1,
-        "Fouls committed": 0,
-        "Tackles": 0,
-        "Interceptions": 0
-      }
-    },
-    {
-      "player": "Kylian Mbappé",
-      "team": "France",
+      "player": "Harry Kane",
+      "team": "Bayern München",
       "side": "home",
       "line": "forwards",
       "stats": {
-        "Minutes played": 90,
+        "Minutes played": 20,
         "Goals": 0,
         "Assists": 0,
-        "Expected goals (xG)": 0.86,
-        "Expected goals on target (xGOT)": 0.56,
-        "Expected assists (xA)": 0.13,
-        "xG + xA": 0.99,
-        "Total shots": 5,
-        "Accurate passes": "31/37",
-        "Chances created": 3,
-        "Big chances created": 1,
-        "Shots on target": 3,
-        "Shots off target": 0,
-        "Blocked shots": 2,
-        "Shot accuracy": "3/3",
-        "Shotmap": 1,
-        "Defensive actions": 0,
-        "Big chances missed": 3,
-        "Touches": 63,
-        "Touches in opposition box": 18,
-        "Successful dribbles": "4/6",
-        "Passes into final third": 2,
-        "Line breaking passes": 6,
-        "Accurate crosses": "0/1",
-        "Accurate long balls": "1/1",
-        "Corners": 1,
-        "Dispossessed": 1,
-        "Offsides": 1,
-        "xG Non-penalty": 0.86,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 0,
-        "Dribbled past": 1,
-        "Ground duels won": "7/11",
-        "Aerial duels won": "0/1",
-        "Was fouled": 3,
-        "Fouls committed": 0,
-        "Duels won": 7,
-        "Duels lost": 5
-      }
-    },
-    {
-      "player": "Salih Özcan",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 29,
-        "Goals": 0,
-        "Assists": 0,
-        "Accurate passes": "10/14",
-        "Chances created": 0,
-        "Shotmap": 0,
-        "Defensive actions": 3,
-        "Touches": 22,
-        "Touches in opposition box": 0,
-        "Successful dribbles": "1/2",
-        "Passes into final third": 1,
-        "Line breaking passes": 2,
-        "Accurate long balls": "0/1",
-        "Dispossessed": 1,
-        "Tackles": 3,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 3,
-        "Dribbled past": 1,
-        "Ground duels won": "5/9",
-        "Aerial duels won": 0,
-        "Was fouled": 1,
-        "Fouls committed": 1,
-        "Duels won": 5,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "Ferdi Kadıoğlu",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "defenders",
-      "stats": {
-        "Minutes played": 9,
-        "Goals": 0,
-        "Assists": 0,
-        "Accurate passes": "7/7",
+        "Accurate passes": "6/6",
         "Chances created": 0,
         "Shotmap": 0,
         "Defensive actions": 0,
         "Touches": 9,
         "Touches in opposition box": 0,
-        "Line breaking passes": 1,
-        "Dispossessed": 0,
+        "Successful dribbles": "0/1",
+        "Passes into final third": 1,
+        "Accurate long balls": "1/1",
+        "Dispossessed": 1,
+        "Offsides": 1,
         "Tackles": 0,
         "Blocks": 0,
         "Clearances": 0,
         "Interceptions": 0,
         "Recoveries": 1,
-        "Dribbled past": 0,
+        "Dribbled past": 1,
+        "Ground duels won": "0/3",
         "Aerial duels won": 0,
-        "Fouls committed": 0
+        "Fouls committed": 0,
+        "Duels lost": 3
       }
     },
     {
-      "player": "Berke Özer",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "goalkeeper",
+      "player": "Joshua Kimmich",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "midfielders",
       "stats": {
         "Minutes played": 90,
-        "Saves": 7,
-        "Goals conceded": 2,
-        "xGOT faced": 1.11,
-        "Goals prevented": 0.11,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.02,
+        "Expected assists (xA)": 0.4,
+        "xG + xA": 0.42,
+        "Total shots": 1,
+        "Accurate passes": "131/136",
+        "Chances created": 1,
+        "Shots on target": 0,
+        "Shots off target": 1,
+        "Shot accuracy": "0/1",
         "Shotmap": 1,
-        "Accurate passes": "32/45",
-        "Accurate long balls": "11/24",
-        "Diving save": 4,
-        "Saves inside box": 6,
-        "Acted as sweeper": 0,
-        "Punches": 0,
-        "Throws": 4,
-        "High claim": 1,
-        "Recoveries": 7,
-        "Clearances": 2,
-        "Touches": 61,
-        "Defensive actions": 2,
+        "Defensive actions": 5,
+        "Touches": 152,
+        "Touches in opposition box": 1,
+        "Passes into final third": 34,
+        "Accurate crosses": "1/1",
+        "Accurate long balls": "5/6",
+        "Corners": 1,
+        "Dispossessed": 1,
+        "xG Non-penalty": 0.02,
+        "Tackles": 1,
+        "Blocks": 1,
+        "Clearances": 1,
+        "Interceptions": 2,
+        "Recoveries": 9,
+        "Dribbled past": 1,
+        "Ground duels won": "1/3",
+        "Aerial duels won": 0,
         "Fouls committed": 0,
-        "Tackles": 0,
-        "Passes into final third": 6,
-        "Line breaking passes": 10,
-        "Interceptions": 0
+        "Duels won": 1,
+        "Duels lost": 2
       }
     },
     {
-      "player": "Ibrahima Konaté",
-      "team": "France",
+      "player": "Jonathan Tah",
+      "team": "Bayern München",
       "side": "home",
       "line": "defenders",
       "stats": {
@@ -2091,84 +1736,576 @@
         "Assists": 0,
         "Expected assists (xA)": 0.02,
         "xG + xA": 0.02,
-        "Accurate passes": "50/57",
+        "Accurate passes": "65/68",
         "Chances created": 1,
         "Shotmap": 0,
-        "Defensive actions": 7,
-        "Touches": 72,
+        "Defensive actions": 6,
+        "Touches": 76,
         "Touches in opposition box": 0,
-        "Passes into final third": 8,
-        "Line breaking passes": 7,
-        "Accurate long balls": "0/2",
-        "Dispossessed": 1,
-        "Tackles": 2,
-        "Blocks": 2,
+        "Successful dribbles": "1/1",
+        "Passes into final third": 9,
+        "Accurate long balls": "2/2",
+        "Dispossessed": 0,
+        "Tackles": 3,
+        "Last man tackle": 2,
+        "Blocks": 0,
         "Clearances": 2,
-        "Headed clearance": 1,
         "Interceptions": 1,
-        "Recoveries": 6,
+        "Recoveries": 1,
         "Dribbled past": 0,
-        "Ground duels won": "5/7",
-        "Aerial duels won": "1/3",
-        "Was fouled": 3,
-        "Fouls committed": 1,
-        "Duels won": 6,
-        "Duels lost": 4
+        "Ground duels won": "4/4",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 4
       }
     },
     {
-      "player": "Merih Demiral",
-      "team": "Turkiye",
+      "player": "Konrad Laimer",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "defenders",
+      "stats": {
+        "Minutes played": 70,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.06,
+        "Expected assists (xA)": 0.25,
+        "xG + xA": 0.31,
+        "Total shots": 2,
+        "Accurate passes": "74/80",
+        "Chances created": 1,
+        "Big chances created": 1,
+        "Shots on target": 0,
+        "Shots off target": 2,
+        "Shot accuracy": "0/2",
+        "Shotmap": 1,
+        "Defensive actions": 1,
+        "Touches": 96,
+        "Touches in opposition box": 5,
+        "Successful dribbles": "1/2",
+        "Passes into final third": 18,
+        "Accurate crosses": "0/1",
+        "Dispossessed": 0,
+        "xG Non-penalty": 0.06,
+        "Tackles": 0,
+        "Blocks": 0,
+        "Clearances": 1,
+        "Headed clearance": 1,
+        "Interceptions": 0,
+        "Recoveries": 2,
+        "Dribbled past": 0,
+        "Ground duels won": "2/3",
+        "Aerial duels won": "0/1",
+        "Was fouled": 1,
+        "Fouls committed": 1,
+        "Duels won": 2,
+        "Duels lost": 2
+      }
+    },
+    {
+      "player": "Marvin Schwäbe",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "goalkeeper",
+      "stats": {
+        "Minutes played": 90,
+        "Saves": 0,
+        "Goals conceded": 1,
+        "xGOT faced": 0.38,
+        "Goals prevented": -0.62,
+        "Shotmap": 1,
+        "Accurate passes": "40/55",
+        "Accurate long balls": "8/22",
+        "Diving save": 0,
+        "Saves inside box": 0,
+        "Acted as sweeper": 0,
+        "Punches": 1,
+        "Throws": 4,
+        "High claim": 0,
+        "Recoveries": 6,
+        "Clearances": 1,
+        "Touches": 61,
+        "Defensive actions": 1,
+        "Duels won": 1,
+        "Ground duels won": "1/1",
+        "Was fouled": 1,
+        "Fouls committed": 0,
+        "Tackles": 0,
+        "Passes into final third": 5,
+        "Interceptions": 0
+      }
+    },
+    {
+      "player": "Borna Sosa",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 90,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": "22/27",
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 16,
+        "Touches": 56,
+        "Touches in opposition box": 0,
+        "Passes into final third": 3,
+        "Accurate long balls": "0/2",
+        "Dispossessed": 0,
+        "Tackles": 8,
+        "Blocks": 0,
+        "Clearances": 4,
+        "Headed clearance": 2,
+        "Interceptions": 4,
+        "Recoveries": 3,
+        "Dribbled past": 0,
+        "Ground duels won": "8/8",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 8
+      }
+    },
+    {
+      "player": "Marius Bülter",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "forwards",
+      "stats": {
+        "Minutes played": 1,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": 0,
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 0,
+        "Touches": 0,
+        "Touches in opposition box": 0,
+        "Dispossessed": 0,
+        "Tackles": 0,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 0,
+        "Dribbled past": 0,
+        "Ground duels won": "0/1",
+        "Aerial duels won": 0,
+        "Fouls committed": 1,
+        "Duels lost": 1
+      }
+    },
+    {
+      "player": "Dayot Upamecano",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "defenders",
+      "stats": {
+        "Minutes played": 70,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.01,
+        "Expected assists (xA)": 0.06,
+        "xG + xA": 0.07,
+        "Total shots": 1,
+        "Accurate passes": "47/49",
+        "Chances created": 1,
+        "Shots on target": 0,
+        "Shots off target": 1,
+        "Shot accuracy": "0/1",
+        "Shotmap": 1,
+        "Defensive actions": 4,
+        "Touches": 64,
+        "Touches in opposition box": 3,
+        "Successful dribbles": "1/2",
+        "Passes into final third": 3,
+        "Dispossessed": 1,
+        "xG Non-penalty": 0.01,
+        "Tackles": 3,
+        "Last man tackle": 1,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 1,
+        "Recoveries": 7,
+        "Dribbled past": 3,
+        "Ground duels won": "4/11",
+        "Aerial duels won": 0,
+        "Fouls committed": 2,
+        "Duels won": 4,
+        "Duels lost": 7
+      }
+    },
+    {
+      "player": "Alessio Castro-Montes",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 5,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.03,
+        "xG + xA": 0.03,
+        "Total shots": 1,
+        "Accurate passes": "4/4",
+        "Chances created": 0,
+        "Shots on target": 0,
+        "Shots off target": 1,
+        "Shot accuracy": "0/1",
+        "Shotmap": 1,
+        "Defensive actions": 2,
+        "Touches": 9,
+        "Touches in opposition box": 1,
+        "Passes into final third": 1,
+        "Dispossessed": 0,
+        "xG Non-penalty": 0.03,
+        "Tackles": 1,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 1,
+        "Recoveries": 1,
+        "Dribbled past": 1,
+        "Ground duels won": "1/2",
+        "Aerial duels won": "1/1",
+        "Fouls committed": 0,
+        "Duels won": 2,
+        "Duels lost": 1
+      }
+    },
+    {
+      "player": "Luka Lochoshvili",
+      "team": "1. FC Köln",
       "side": "away",
       "line": "defenders",
       "stats": {
         "Minutes played": 90,
         "Goals": 0,
         "Assists": 0,
-        "Expected assists (xA)": 0.17,
-        "xG + xA": 0.17,
-        "Accurate passes": "21/24",
-        "Chances created": 1,
+        "Accurate passes": "42/51",
+        "Chances created": 0,
         "Shotmap": 0,
-        "Defensive actions": 9,
-        "Touches": 38,
-        "Touches in opposition box": 1,
-        "Passes into final third": 2,
-        "Line breaking passes": 3,
-        "Accurate long balls": "0/3",
+        "Defensive actions": 11,
+        "Touches": 65,
+        "Touches in opposition box": 0,
+        "Accurate long balls": "1/8",
         "Dispossessed": 0,
-        "Tackles": 1,
-        "Blocks": 4,
-        "Clearances": 3,
+        "Tackles": 4,
+        "Blocks": 1,
+        "Clearances": 4,
         "Headed clearance": 1,
-        "Interceptions": 1,
-        "Recoveries": 2,
+        "Interceptions": 2,
+        "Recoveries": 1,
         "Dribbled past": 0,
-        "Ground duels won": "1/2",
+        "Ground duels won": "5/5",
         "Aerial duels won": "1/1",
-        "Fouls committed": 1,
-        "Duels won": 2,
+        "Was fouled": 2,
+        "Fouls committed": 0,
+        "Duels won": 6
+      }
+    },
+    {
+      "player": "Kim Min-Jae",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "defenders",
+      "stats": {
+        "Minutes played": 20,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": "12/13",
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 3,
+        "Touches": 19,
+        "Touches in opposition box": 0,
+        "Successful dribbles": "1/1",
+        "Passes into final third": 3,
+        "Accurate long balls": "1/1",
+        "Dispossessed": 1,
+        "Tackles": 2,
+        "Blocks": 0,
+        "Clearances": 1,
+        "Interceptions": 0,
+        "Recoveries": 1,
+        "Dribbled past": 0,
+        "Ground duels won": "3/4",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 3,
         "Duels lost": 1
       }
     },
     {
-      "player": "Yunus Akgün",
-      "team": "Turkiye",
+      "player": "Linton Maina",
+      "team": "1. FC Köln",
       "side": "away",
       "line": "midfielders",
       "stats": {
-        "Minutes played": 21,
+        "Minutes played": 77,
         "Goals": 0,
         "Assists": 0,
-        "Accurate passes": "5/8",
+        "Expected goals (xG)": 0.09,
+        "Expected goals on target (xGOT)": 0.06,
+        "Expected assists (xA)": 0.02,
+        "xG + xA": 0.11,
+        "Total shots": 1,
+        "Accurate passes": "9/12",
+        "Chances created": 0,
+        "Shots on target": 1,
+        "Shots off target": 0,
+        "Shot accuracy": "1/1",
+        "Shotmap": 1,
+        "Defensive actions": 2,
+        "Touches": 23,
+        "Touches in opposition box": 1,
+        "Successful dribbles": "0/1",
+        "Passes into final third": 2,
+        "Accurate long balls": "0/2",
+        "Dispossessed": 1,
+        "xG Non-penalty": 0.09,
+        "Tackles": 1,
+        "Blocks": 0,
+        "Clearances": 1,
+        "Headed clearance": 1,
+        "Interceptions": 0,
+        "Recoveries": 3,
+        "Dribbled past": 2,
+        "Ground duels won": "2/6",
+        "Aerial duels won": 0,
+        "Was fouled": 1,
+        "Fouls committed": 0,
+        "Duels won": 2,
+        "Duels lost": 4
+      }
+    },
+    {
+      "player": "Sebastian Sebulonsen",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 85,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected assists (xA)": 0.25,
+        "xG + xA": 0.25,
+        "Accurate passes": "10/18",
+        "Chances created": 1,
+        "Big chances created": 1,
+        "Shotmap": 0,
+        "Defensive actions": 3,
+        "Touches": 32,
+        "Touches in opposition box": 4,
+        "Successful dribbles": "2/2",
+        "Passes into final third": 2,
+        "Accurate crosses": "0/1",
+        "Accurate long balls": "0/3",
+        "Dispossessed": 0,
+        "Tackles": 2,
+        "Blocks": 1,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 2,
+        "Dribbled past": 0,
+        "Ground duels won": "4/4",
+        "Aerial duels won": "2/3",
+        "Fouls committed": 0,
+        "Duels won": 6,
+        "Duels lost": 1
+      }
+    },
+    {
+      "player": "Josip Stanišić",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "defenders",
+      "stats": {
+        "Minutes played": 90,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected assists (xA)": 0.1,
+        "xG + xA": 0.1,
+        "Accurate passes": "66/75",
         "Chances created": 0,
         "Shotmap": 0,
-        "Defensive actions": 0,
+        "Defensive actions": 1,
+        "Touches": 85,
+        "Touches in opposition box": 3,
+        "Passes into final third": 7,
+        "Accurate crosses": "0/1",
+        "Accurate long balls": "2/2",
+        "Dispossessed": 1,
+        "Tackles": 1,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 8,
+        "Dribbled past": 0,
+        "Ground duels won": "1/2",
+        "Aerial duels won": "1/4",
+        "Fouls committed": 0,
+        "Duels won": 2,
+        "Duels lost": 4
+      }
+    },
+    {
+      "player": "Tom Krauß",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 90,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected assists (xA)": 0.01,
+        "xG + xA": 0.01,
+        "Accurate passes": "29/34",
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 15,
+        "Touches": 55,
+        "Touches in opposition box": 1,
+        "Passes into final third": 3,
+        "Accurate long balls": "2/3",
+        "Dispossessed": 0,
+        "Tackles": 6,
+        "Blocks": 0,
+        "Clearances": 6,
+        "Headed clearance": 1,
+        "Interceptions": 3,
+        "Recoveries": 10,
+        "Dribbled past": 2,
+        "Ground duels won": "7/9",
+        "Aerial duels won": 0,
+        "Was fouled": 1,
+        "Fouls committed": 0,
+        "Duels won": 7,
+        "Duels lost": 2
+      }
+    },
+    {
+      "player": "Ísak Jóhannesson",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 13,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": "4/7",
+        "Chances created": 1,
+        "Shotmap": 0,
+        "Defensive actions": 3,
         "Touches": 11,
+        "Touches in opposition box": 0,
+        "Passes into final third": 2,
+        "Accurate long balls": "1/3",
+        "Dispossessed": 0,
+        "Tackles": 3,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 1,
+        "Dribbled past": 2,
+        "Ground duels won": "3/5",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 3,
+        "Duels lost": 2
+      }
+    },
+    {
+      "player": "Joël Schmied",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "defenders",
+      "stats": {
+        "Minutes played": 90,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": "18/20",
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 8,
+        "Touches": 31,
         "Touches in opposition box": 0,
         "Successful dribbles": "0/1",
         "Passes into final third": 1,
+        "Accurate long balls": "0/1",
         "Dispossessed": 0,
+        "Tackles": 1,
+        "Blocks": 1,
+        "Clearances": 3,
+        "Interceptions": 3,
+        "Recoveries": 0,
+        "Dribbled past": 0,
+        "Ground duels won": "1/3",
+        "Aerial duels won": "1/1",
+        "Fouls committed": 1,
+        "Duels won": 2,
+        "Duels lost": 2
+      }
+    },
+    {
+      "player": "Michael Olise",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "forwards",
+      "stats": {
+        "Minutes played": 45,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.03,
+        "Expected assists (xA)": 0.21,
+        "xG + xA": 0.24,
+        "Total shots": 1,
+        "Accurate passes": "39/47",
+        "Chances created": 2,
+        "Shots on target": 0,
+        "Shots off target": 1,
+        "Shot accuracy": "0/1",
+        "Shotmap": 1,
+        "Defensive actions": 0,
+        "Touches": 62,
+        "Touches in opposition box": 6,
+        "Successful dribbles": "1/4",
+        "Passes into final third": 3,
+        "Accurate crosses": "0/3",
+        "Accurate long balls": "0/1",
+        "Corners": 1,
+        "Dispossessed": 2,
+        "Offsides": 1,
+        "xG Non-penalty": 0.03,
+        "Tackles": 0,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 2,
+        "Dribbled past": 0,
+        "Ground duels won": "1/6",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 1,
+        "Duels lost": 5
+      }
+    },
+    {
+      "player": "Jan Thielmann",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 13,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected assists (xA)": 0.01,
+        "xG + xA": 0.01,
+        "Accurate passes": "2/3",
+        "Chances created": 1,
+        "Shotmap": 0,
+        "Defensive actions": 0,
+        "Touches": 6,
+        "Touches in opposition box": 0,
+        "Dispossessed": 1,
         "Tackles": 0,
         "Blocks": 0,
         "Clearances": 0,
@@ -2182,740 +2319,384 @@
       }
     },
     {
-      "player": "Emirhan Topçu",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "defenders",
-      "stats": {
-        "Minutes played": 90,
-        "Goals": 0,
-        "Own goal": 1,
-        "Assists": 0,
-        "Expected assists (xA)": 0.01,
-        "xG + xA": 0.01,
-        "Accurate passes": "32/38",
-        "Chances created": 0,
-        "Shotmap": 1,
-        "Defensive actions": 9,
-        "Touches": 56,
-        "Touches in opposition box": 1,
-        "Passes into final third": 3,
-        "Line breaking passes": 7,
-        "Accurate long balls": "1/4",
-        "Dispossessed": 1,
-        "Tackles": 1,
-        "Blocks": 1,
-        "Clearances": 3,
-        "Headed clearance": 2,
-        "Interceptions": 4,
-        "Recoveries": 3,
-        "Dribbled past": 0,
-        "Ground duels won": "5/6",
-        "Aerial duels won": "1/1",
-        "Was fouled": 4,
-        "Fouls committed": 0,
-        "Duels won": 6,
-        "Duels lost": 1
-      }
-    },
-    {
-      "player": "Barış Alper Yılmaz",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "forwards",
-      "stats": {
-        "Minutes played": 81,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.01,
-        "Expected assists (xA)": 0.01,
-        "xG + xA": 0.02,
-        "Total shots": 1,
-        "Accurate passes": "15/18",
-        "Chances created": 0,
-        "Shots on target": 0,
-        "Shots off target": 1,
-        "Shot accuracy": "0/1",
-        "Shotmap": 1,
-        "Defensive actions": 4,
-        "Touches": 39,
-        "Touches in opposition box": 0,
-        "Successful dribbles": "2/5",
-        "Line breaking passes": 2,
-        "Accurate long balls": "1/3",
-        "Dispossessed": 1,
-        "xG Non-penalty": 0.01,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 3,
-        "Interceptions": 1,
-        "Recoveries": 10,
-        "Dribbled past": 2,
-        "Ground duels won": "3/10",
-        "Aerial duels won": "1/2",
-        "Was fouled": 1,
-        "Fouls committed": 1,
-        "Duels won": 4,
-        "Duels lost": 8
-      }
-    },
-    {
-      "player": "Orkun Kökçü",
-      "team": "Turkiye",
-      "side": "away",
+      "player": "Jamal Musiala",
+      "team": "Bayern München",
+      "side": "home",
       "line": "midfielders",
       "stats": {
-        "Minutes played": 9,
+        "Minutes played": 20,
         "Goals": 0,
         "Assists": 0,
-        "Expected assists (xA)": 0.2,
-        "xG + xA": 0.2,
-        "Accurate passes": "7/8",
+        "Expected goals (xG)": 0.16,
+        "xG + xA": 0.16,
+        "Total shots": 2,
+        "Accurate passes": "4/6",
         "Chances created": 0,
-        "Shotmap": 0,
-        "Defensive actions": 0,
-        "Touches": 10,
-        "Touches in opposition box": 0,
-        "Line breaking passes": 1,
-        "Accurate crosses": "1/2",
-        "Dispossessed": 0,
+        "Shots on target": 0,
+        "Shots off target": 0,
+        "Blocked shots": 2,
+        "Shotmap": 1,
+        "Defensive actions": 1,
+        "Big chances missed": 1,
+        "Touches": 16,
+        "Touches in opposition box": 1,
+        "Successful dribbles": "1/2",
+        "Passes into final third": 1,
+        "Dispossessed": 2,
+        "xG Non-penalty": 0.16,
         "Tackles": 0,
         "Blocks": 0,
         "Clearances": 0,
-        "Interceptions": 0,
+        "Interceptions": 1,
         "Recoveries": 0,
         "Dribbled past": 0,
-        "Aerial duels won": 0,
-        "Fouls committed": 0
-      }
-    },
-    {
-      "player": "Eduardo Camavinga",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 27,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.08,
-        "Expected assists (xA)": 0.05,
-        "xG + xA": 0.13,
-        "Total shots": 2,
-        "Accurate passes": "27/28",
-        "Chances created": 1,
-        "Shots on target": 0,
-        "Shots off target": 2,
-        "Shot accuracy": "0/2",
-        "Shotmap": 1,
-        "Defensive actions": 1,
-        "Touches": 38,
-        "Touches in opposition box": 1,
-        "Successful dribbles": "0/1",
-        "Passes into final third": 4,
-        "Line breaking passes": 7,
-        "Accurate long balls": "2/2",
-        "Dispossessed": 2,
-        "xG Non-penalty": 0.08,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 1,
-        "Recoveries": 2,
-        "Dribbled past": 0,
-        "Ground duels won": "0/4",
-        "Aerial duels won": 0,
-        "Fouls committed": 1,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "Michael Olise",
-      "team": "France",
-      "side": "home",
-      "line": "forwards",
-      "stats": {
-        "Minutes played": 85,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.19,
-        "Expected goals on target (xGOT)": 0.18,
-        "Expected assists (xA)": 0.44,
-        "xG + xA": 0.63,
-        "Total shots": 4,
-        "Accurate passes": "47/57",
-        "Chances created": 2,
-        "Big chances created": 1,
-        "Shots on target": 2,
-        "Shots off target": 1,
-        "Blocked shots": 1,
-        "Shot accuracy": "2/3",
-        "Shotmap": 1,
-        "Defensive actions": 1,
-        "Touches": 68,
-        "Touches in opposition box": 6,
-        "Passes into final third": 11,
-        "Line breaking passes": 10,
-        "Accurate crosses": "0/1",
-        "Accurate long balls": "3/6",
-        "Dispossessed": 0,
-        "xG Non-penalty": 0.19,
-        "Tackles": 1,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 2,
-        "Dribbled past": 1,
         "Ground duels won": "1/4",
         "Aerial duels won": 0,
-        "Fouls committed": 2,
+        "Fouls committed": 0,
         "Duels won": 1,
         "Duels lost": 3
       }
     },
     {
-      "player": "Eren Elmalı",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "defenders",
+      "player": "Jonas Urbig",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "goalkeeper",
       "stats": {
-        "Minutes played": 81,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected assists (xA)": 0.02,
-        "xG + xA": 0.02,
-        "Accurate passes": "15/16",
-        "Chances created": 1,
-        "Shotmap": 0,
+        "Minutes played": 90,
+        "Saves": 3,
+        "Goals conceded": 1,
+        "xGOT faced": 1.63,
+        "Goals prevented": 0.63,
+        "Shotmap": 1,
+        "Accurate passes": "23/27",
+        "Accurate long balls": "3/7",
+        "Diving save": 2,
+        "Saves inside box": 3,
+        "Acted as sweeper": 1,
+        "Punches": 0,
+        "Throws": 7,
+        "High claim": 0,
+        "Recoveries": 13,
+        "Clearances": 0,
+        "Touches": 37,
         "Defensive actions": 0,
-        "Touches": 30,
-        "Touches in opposition box": 0,
-        "Successful dribbles": "1/2",
+        "Duels lost": 1,
+        "Ground duels won": "0/1",
+        "Fouls committed": 0,
+        "Tackles": 0,
         "Passes into final third": 2,
-        "Line breaking passes": 2,
-        "Accurate crosses": "0/1",
-        "Accurate long balls": "1/1",
+        "Interceptions": 0
+      }
+    },
+    {
+      "player": "Tom Bischof",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 70,
+        "Goals": 0,
+        "Assists": 1,
+        "Expected goals (xG)": 0.11,
+        "Expected assists (xA)": 0.17,
+        "xG + xA": 0.28,
+        "Total shots": 2,
+        "Accurate passes": "62/68",
+        "Chances created": 3,
+        "Shots on target": 0,
+        "Shots off target": 1,
+        "Blocked shots": 1,
+        "Shot accuracy": "0/1",
+        "Shotmap": 1,
+        "Defensive actions": 1,
+        "Touches": 79,
+        "Touches in opposition box": 1,
+        "Successful dribbles": "0/1",
+        "Passes into final third": 10,
+        "Accurate crosses": "0/2",
+        "Accurate long balls": "2/2",
+        "Corners": 1,
         "Dispossessed": 0,
+        "xG Non-penalty": 0.11,
+        "Tackles": 1,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 1,
+        "Dribbled past": 0,
+        "Ground duels won": "1/2",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 1,
+        "Duels lost": 1
+      }
+    },
+    {
+      "player": "Nathaniel Brown",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "forwards",
+      "stats": {
+        "Minutes played": 90,
+        "Goals": 1,
+        "Assists": 0,
+        "Expected goals (xG)": 0.12,
+        "Expected goals on target (xGOT)": 0.38,
+        "Expected assists (xA)": 0.05,
+        "xG + xA": 0.17,
+        "Total shots": 3,
+        "Accurate passes": "44/48",
+        "Chances created": 0,
+        "Shots on target": 1,
+        "Shots off target": 1,
+        "Blocked shots": 1,
+        "Shot accuracy": "1/2",
+        "Shotmap": 1,
+        "Defensive actions": 0,
+        "Touches": 65,
+        "Touches in opposition box": 4,
+        "Successful dribbles": "1/2",
+        "Passes into final third": 1,
+        "Accurate crosses": "0/2",
+        "Dispossessed": 0,
+        "xG Non-penalty": 0.12,
         "Tackles": 0,
         "Blocks": 0,
         "Clearances": 0,
         "Interceptions": 0,
-        "Recoveries": 3,
-        "Dribbled past": 0,
-        "Ground duels won": "1/2",
-        "Aerial duels won": "0/1",
+        "Recoveries": 4,
+        "Dribbled past": 1,
+        "Ground duels won": "3/5",
+        "Aerial duels won": 0,
+        "Was fouled": 2,
         "Fouls committed": 0,
-        "Duels won": 1,
+        "Duels won": 3,
         "Duels lost": 2
       }
     },
     {
-      "player": "Lucas Da Cunha",
-      "team": "France",
-      "side": "home",
+      "player": "Mikey Moore",
+      "team": "1. FC Köln",
+      "side": "away",
       "line": "midfielders",
       "stats": {
-        "Minutes played": 90,
-        "Goals": 0,
+        "Minutes played": 89,
+        "Goals": 1,
         "Assists": 0,
-        "Expected goals (xG)": 0.2,
-        "Expected assists (xA)": 0.31,
-        "xG + xA": 0.51,
-        "Total shots": 1,
-        "Accurate passes": "67/73",
-        "Chances created": 2,
-        "Big chances created": 2,
-        "Shots on target": 0,
-        "Shots off target": 1,
-        "Shot accuracy": "0/1",
+        "Expected goals (xG)": 1.43,
+        "Expected goals on target (xGOT)": 1.4,
+        "Expected assists (xA)": 0.06,
+        "xG + xA": 1.49,
+        "Total shots": 2,
+        "Accurate passes": "14/17",
+        "Chances created": 1,
+        "Big chances created": 1,
+        "Shots on target": 2,
+        "Shots off target": 0,
+        "Shot accuracy": "2/2",
         "Shotmap": 1,
-        "Defensive actions": 7,
-        "Touches": 86,
-        "Touches in opposition box": 1,
-        "Successful dribbles": "1/1",
-        "Passes into final third": 6,
-        "Line breaking passes": 9,
-        "Accurate long balls": "2/2",
-        "Dispossessed": 0,
-        "xG Non-penalty": 0.2,
-        "Tackles": 4,
-        "Blocks": 0,
-        "Clearances": 1,
-        "Interceptions": 2,
-        "Recoveries": 7,
-        "Dribbled past": 1,
-        "Ground duels won": "7/10",
-        "Aerial duels won": "1/2",
-        "Was fouled": 2,
-        "Fouls committed": 2,
-        "Duels won": 8,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "Oğuz Aydın",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "forwards",
-      "stats": {
-        "Minutes played": 9,
-        "Goals": 0,
-        "Assists": 0,
-        "Accurate passes": "1/2",
-        "Chances created": 0,
-        "Shotmap": 0,
-        "Defensive actions": 1,
-        "Touches": 7,
-        "Touches in opposition box": 1,
+        "Defensive actions": 2,
+        "Big chances missed": 1,
+        "Touches": 33,
+        "Touches in opposition box": 5,
+        "Successful dribbles": "3/5",
         "Passes into final third": 2,
-        "Line breaking passes": 1,
-        "Accurate crosses": "0/1",
-        "Accurate long balls": "1/1",
-        "Dispossessed": 0,
-        "Tackles": 0,
+        "Dispossessed": 1,
+        "Offsides": 1,
+        "xG Non-penalty": 1.43,
+        "Tackles": 1,
         "Blocks": 0,
         "Clearances": 1,
         "Interceptions": 0,
-        "Recoveries": 0,
-        "Dribbled past": 0,
-        "Aerial duels won": 0,
-        "Fouls committed": 0
-      }
-    },
-    {
-      "player": "Rayan Cherki",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 82,
-        "Goals": 0,
-        "Assists": 1,
-        "Expected goals (xG)": 0.04,
-        "Expected assists (xA)": 0.19,
-        "xG + xA": 0.23,
-        "Total shots": 1,
-        "Accurate passes": "59/63",
-        "Chances created": 3,
-        "Big chances created": 1,
-        "Shots on target": 0,
-        "Shots off target": 1,
-        "Shot accuracy": "0/1",
-        "Shotmap": 1,
-        "Defensive actions": 3,
-        "Touches": 78,
-        "Touches in opposition box": 4,
-        "Successful dribbles": "1/4",
-        "Passes into final third": 5,
-        "Line breaking passes": 4,
-        "Accurate crosses": "1/4",
-        "Accurate long balls": "4/5",
-        "Corners": 6,
-        "Dispossessed": 0,
-        "xG Non-penalty": 0.04,
-        "Tackles": 2,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 1,
-        "Recoveries": 4,
-        "Dribbled past": 0,
-        "Ground duels won": "4/7",
-        "Aerial duels won": "0/1",
-        "Was fouled": 1,
-        "Fouls committed": 0,
-        "Duels won": 4,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "İsmail Yüksek",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 61,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.37,
-        "Expected goals on target (xGOT)": 0.32,
-        "xG + xA": 0.37,
-        "Total shots": 1,
-        "Accurate passes": "14/17",
-        "Chances created": 0,
-        "Shots on target": 1,
-        "Shots off target": 0,
-        "Shot accuracy": "1/1",
-        "Shotmap": 1,
-        "Defensive actions": 1,
-        "Big chances missed": 1,
-        "Touches": 28,
-        "Touches in opposition box": 3,
-        "Successful dribbles": "1/1",
-        "Passes into final third": 2,
-        "Line breaking passes": 1,
-        "Accurate crosses": "0/1",
-        "Dispossessed": 1,
-        "Offsides": 1,
-        "xG Non-penalty": 0.37,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 1,
-        "Recoveries": 1,
+        "Recoveries": 5,
         "Dribbled past": 3,
-        "Ground duels won": "1/5",
-        "Aerial duels won": 0,
-        "Fouls committed": 0,
-        "Duels won": 1,
-        "Duels lost": 4
-      }
-    },
-    {
-      "player": "Arda Güler",
-      "team": "Turkiye",
-      "side": "away",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 90,
-        "Goals": 0,
-        "Assists": 1,
-        "Expected goals (xG)": 0.29,
-        "Expected goals on target (xGOT)": 0.05,
-        "Expected assists (xA)": 0.43,
-        "xG + xA": 0.72,
-        "Total shots": 5,
-        "Accurate passes": "41/47",
-        "Chances created": 3,
-        "Big chances created": 1,
-        "Shots on target": 1,
-        "Shots off target": 1,
-        "Blocked shots": 3,
-        "Shot accuracy": "1/2",
-        "Shotmap": 1,
-        "Defensive actions": 3,
-        "Big chances missed": 1,
-        "Touches": 74,
-        "Touches in opposition box": 5,
-        "Successful dribbles": "1/1",
-        "Passes into final third": 6,
-        "Line breaking passes": 15,
-        "Accurate crosses": "3/4",
-        "Accurate long balls": "6/7",
-        "Corners": 5,
-        "Dispossessed": 2,
-        "xG Non-penalty": 0.29,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 1,
-        "Interceptions": 2,
-        "Recoveries": 10,
-        "Dribbled past": 2,
         "Ground duels won": "5/11",
         "Aerial duels won": 0,
-        "Was fouled": 4,
-        "Fouls committed": 2,
+        "Was fouled": 1,
+        "Fouls committed": 0,
         "Duels won": 5,
         "Duels lost": 6
       }
     },
     {
-      "player": "Andy Diouf",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 90,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.21,
-        "Expected assists (xA)": 0.18,
-        "xG + xA": 0.39,
-        "Total shots": 1,
-        "Accurate passes": "67/73",
-        "Chances created": 1,
-        "Shots on target": 0,
-        "Shots off target": 1,
-        "Shot accuracy": "0/1",
-        "Shotmap": 1,
-        "Defensive actions": 5,
-        "Big chances missed": 1,
-        "Touches": 98,
-        "Touches in opposition box": 5,
-        "Successful dribbles": "3/5",
-        "Passes into final third": 11,
-        "Line breaking passes": 10,
-        "Accurate long balls": "0/1",
-        "Dispossessed": 1,
-        "xG Non-penalty": 0.21,
-        "Tackles": 1,
-        "Blocks": 0,
-        "Clearances": 3,
-        "Headed clearance": 2,
-        "Interceptions": 1,
-        "Recoveries": 6,
-        "Dribbled past": 2,
-        "Ground duels won": "4/10",
-        "Aerial duels won": "1/2",
-        "Fouls committed": 1,
-        "Duels won": 5,
-        "Duels lost": 7
-      }
-    },
-    {
-      "player": "Bradley Barcola",
-      "team": "France",
-      "side": "home",
-      "line": "forwards",
-      "stats": {
-        "Minutes played": 63,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 1.36,
-        "Expected goals on target (xGOT)": 0.21,
-        "Expected assists (xA)": 0.14,
-        "xG + xA": 1.5,
-        "Total shots": 3,
-        "Accurate passes": "17/21",
-        "Chances created": 1,
-        "Big chances created": 1,
-        "Shots on target": 1,
-        "Shots off target": 1,
-        "Blocked shots": 1,
-        "Shot accuracy": "1/2",
-        "Shotmap": 1,
-        "Fantasy assists": 1,
-        "Defensive actions": 5,
-        "Big chances missed": 2,
-        "Touches": 36,
-        "Touches in opposition box": 8,
-        "Successful dribbles": "1/1",
-        "Line breaking passes": 2,
-        "Accurate long balls": "0/1",
-        "Dispossessed": 0,
-        "xG Non-penalty": 1.36,
-        "Tackles": 3,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 2,
-        "Recoveries": 4,
-        "Dribbled past": 0,
-        "Ground duels won": "4/4",
-        "Aerial duels won": "1/1",
-        "Fouls committed": 0,
-        "Duels won": 5
-      }
-    },
-    {
-      "player": "Saël Kumbedi",
-      "team": "France",
-      "side": "home",
+      "player": "Jahmai Simpson-Pusey",
+      "team": "1. FC Köln",
+      "side": "away",
       "line": "defenders",
       "stats": {
         "Minutes played": 90,
         "Goals": 0,
         "Assists": 0,
-        "Expected assists (xA)": 0.25,
-        "xG + xA": 0.25,
-        "Accurate passes": "49/54",
-        "Chances created": 2,
+        "Expected assists (xA)": 0.01,
+        "xG + xA": 0.01,
+        "Accurate passes": "47/52",
+        "Chances created": 0,
         "Shotmap": 0,
-        "Defensive actions": 3,
-        "Touches": 62,
-        "Touches in opposition box": 1,
-        "Passes into final third": 3,
-        "Line breaking passes": 7,
-        "Accurate crosses": "0/1",
+        "Defensive actions": 11,
+        "Touches": 67,
+        "Touches in opposition box": 0,
+        "Successful dribbles": "2/3",
+        "Passes into final third": 4,
+        "Accurate long balls": "1/3",
         "Dispossessed": 0,
         "Tackles": 1,
-        "Blocks": 1,
-        "Clearances": 1,
-        "Headed clearance": 1,
+        "Last man tackle": 1,
+        "Blocks": 2,
+        "Clearances": 8,
+        "Headed clearance": 2,
         "Interceptions": 0,
-        "Recoveries": 4,
-        "Dribbled past": 1,
-        "Ground duels won": "1/3",
-        "Aerial duels won": "1/1",
-        "Fouls committed": 1,
+        "Recoveries": 2,
+        "Dribbled past": 0,
+        "Ground duels won": "3/4",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 3,
+        "Duels lost": 1
+      }
+    },
+    {
+      "player": "Aleksandar Pavlović",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "midfielders",
+      "stats": {
+        "Minutes played": 87,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.08,
+        "Expected assists (xA)": 0.17,
+        "xG + xA": 0.25,
+        "Total shots": 2,
+        "Accurate passes": "110/120",
+        "Chances created": 2,
+        "Shots on target": 0,
+        "Shots off target": 2,
+        "Shot accuracy": "0/2",
+        "Shotmap": 1,
+        "Defensive actions": 3,
+        "Touches": 129,
+        "Touches in opposition box": 1,
+        "Passes into final third": 21,
+        "Accurate long balls": "6/7",
+        "Dispossessed": 0,
+        "xG Non-penalty": 0.08,
+        "Tackles": 2,
+        "Blocks": 0,
+        "Clearances": 1,
+        "Interceptions": 0,
+        "Recoveries": 5,
+        "Dribbled past": 0,
+        "Ground duels won": "2/4",
+        "Aerial duels won": 0,
+        "Fouls committed": 2,
         "Duels won": 2,
         "Duels lost": 2
       }
     },
     {
-      "player": "Pablo Pagis",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 5,
-        "Goals": 0,
-        "Assists": 0,
-        "Expected assists (xA)": 0.03,
-        "xG + xA": 0.03,
-        "Accurate passes": "11/11",
-        "Chances created": 0,
-        "Shotmap": 0,
-        "Defensive actions": 0,
-        "Touches": 11,
-        "Touches in opposition box": 0,
-        "Passes into final third": 1,
-        "Line breaking passes": 4,
-        "Corners": 1,
-        "Dispossessed": 0,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 1,
-        "Dribbled past": 0,
-        "Aerial duels won": 0,
-        "Fouls committed": 0
-      }
-    },
-    {
-      "player": "Warren Zaïre-Emery",
-      "team": "France",
-      "side": "home",
-      "line": "defenders",
-      "stats": {
-        "Minutes played": 8,
-        "Goals": 0,
-        "Assists": 0,
-        "Accurate passes": "8/9",
-        "Chances created": 0,
-        "Shotmap": 0,
-        "Defensive actions": 0,
-        "Touches": 10,
-        "Touches in opposition box": 0,
-        "Line breaking passes": 1,
-        "Dispossessed": 0,
-        "Tackles": 0,
-        "Blocks": 0,
-        "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 1,
-        "Dribbled past": 0,
-        "Aerial duels won": 0,
-        "Fouls committed": 0
-      }
-    },
-    {
-      "player": "Can Uzun",
-      "team": "Turkiye",
+      "player": "Paul Okon-Engstler",
+      "team": "1. FC Köln",
       "side": "away",
       "line": "midfielders",
       "stats": {
-        "Minutes played": 69,
+        "Minutes played": 77,
         "Goals": 0,
         "Assists": 0,
-        "Expected goals (xG)": 0.07,
-        "Expected assists (xA)": 0.31,
-        "xG + xA": 0.38,
-        "Total shots": 1,
-        "Accurate passes": "34/37",
-        "Chances created": 2,
-        "Big chances created": 1,
-        "Shots on target": 0,
-        "Shots off target": 0,
-        "Blocked shots": 1,
-        "Shotmap": 1,
-        "Defensive actions": 1,
-        "Touches": 48,
-        "Touches in opposition box": 2,
-        "Successful dribbles": "1/2",
-        "Passes into final third": 3,
-        "Line breaking passes": 2,
-        "Accurate long balls": "2/2",
+        "Accurate passes": "15/18",
+        "Chances created": 0,
+        "Shotmap": 0,
+        "Defensive actions": 6,
+        "Touches": 29,
+        "Touches in opposition box": 0,
+        "Successful dribbles": "0/1",
+        "Accurate long balls": "1/3",
         "Dispossessed": 0,
-        "xG Non-penalty": 0.07,
-        "Tackles": 1,
+        "Tackles": 3,
         "Blocks": 0,
         "Clearances": 0,
-        "Interceptions": 0,
-        "Recoveries": 2,
+        "Interceptions": 3,
+        "Recoveries": 7,
         "Dribbled past": 0,
-        "Ground duels won": "3/4",
-        "Aerial duels won": "1/2",
-        "Was fouled": 1,
-        "Fouls committed": 0,
+        "Ground duels won": "3/5",
+        "Aerial duels won": "1/1",
+        "Fouls committed": 1,
         "Duels won": 4,
         "Duels lost": 2
       }
     },
     {
-      "player": "Deniz Gül",
-      "team": "Turkiye",
+      "player": "Saïd El Mala",
+      "team": "1. FC Köln",
       "side": "away",
       "line": "forwards",
       "stats": {
-        "Minutes played": 90,
+        "Minutes played": 85,
         "Goals": 0,
-        "Assists": 0,
-        "Expected goals (xG)": 0.09,
-        "Expected assists (xA)": 0.01,
-        "xG + xA": 0.1,
+        "Assists": 1,
+        "Expected goals (xG)": 0.38,
+        "Expected goals on target (xGOT)": 0.17,
+        "Expected assists (xA)": 0.25,
+        "xG + xA": 0.63,
         "Total shots": 2,
-        "Accurate passes": "7/12",
-        "Chances created": 0,
-        "Shots on target": 0,
-        "Shots off target": 1,
-        "Blocked shots": 1,
-        "Shot accuracy": "0/1",
-        "Shotmap": 1,
-        "Defensive actions": 3,
-        "Touches": 35,
-        "Touches in opposition box": 2,
-        "Passes into final third": 1,
-        "Dispossessed": 4,
-        "xG Non-penalty": 0.09,
-        "Tackles": 1,
-        "Blocks": 0,
-        "Clearances": 2,
-        "Headed clearance": 2,
-        "Interceptions": 0,
-        "Recoveries": 0,
-        "Dribbled past": 0,
-        "Ground duels won": "3/10",
-        "Aerial duels won": "4/6",
-        "Was fouled": 2,
-        "Fouls committed": 3,
-        "Duels won": 7,
-        "Duels lost": 9
-      }
-    },
-    {
-      "player": "Junior Kroupi",
-      "team": "France",
-      "side": "home",
-      "line": "midfielders",
-      "stats": {
-        "Minutes played": 27,
-        "Goals": 1,
-        "Assists": 0,
-        "Expected goals (xG)": 0.17,
-        "Expected goals on target (xGOT)": 0.11,
-        "Expected assists (xA)": 0.07,
-        "xG + xA": 0.24,
-        "Total shots": 2,
-        "Accurate passes": "13/13",
-        "Chances created": 1,
+        "Accurate passes": "5/9",
+        "Chances created": 2,
+        "Big chances created": 2,
         "Shots on target": 1,
-        "Shots off target": 0,
-        "Blocked shots": 1,
-        "Shot accuracy": "1/1",
+        "Shots off target": 1,
+        "Shot accuracy": "1/2",
         "Shotmap": 1,
-        "Defensive actions": 0,
-        "Touches": 18,
-        "Touches in opposition box": 3,
-        "Line breaking passes": 2,
-        "Dispossessed": 1,
+        "Defensive actions": 1,
+        "Big chances missed": 2,
+        "Touches": 27,
+        "Touches in opposition box": 9,
+        "Successful dribbles": "1/3",
+        "Passes into final third": 1,
+        "Dispossessed": 3,
         "Offsides": 1,
-        "xG Non-penalty": 0.17,
-        "Tackles": 0,
+        "xG Non-penalty": 0.38,
+        "Tackles": 1,
         "Blocks": 0,
         "Clearances": 0,
         "Interceptions": 0,
         "Recoveries": 1,
         "Dribbled past": 0,
+        "Ground duels won": "2/7",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 2,
+        "Duels lost": 5
+      }
+    },
+    {
+      "player": "Reigan Heskey",
+      "team": "1. FC Köln",
+      "side": "away",
+      "line": "forwards",
+      "stats": {
+        "Minutes played": 5,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected goals (xG)": 0.06,
+        "xG + xA": 0.06,
+        "Total shots": 1,
+        "Accurate passes": "1/2",
+        "Chances created": 0,
+        "Shots on target": 0,
+        "Shots off target": 0,
+        "Blocked shots": 1,
+        "Shotmap": 1,
+        "Defensive actions": 0,
+        "Touches": 4,
+        "Touches in opposition box": 1,
+        "Dispossessed": 0,
+        "xG Non-penalty": 0.06,
+        "Tackles": 0,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 1,
+        "Dribbled past": 1,
         "Ground duels won": "0/1",
         "Aerial duels won": 0,
         "Fouls committed": 0,
@@ -2923,70 +2704,113 @@
       }
     },
     {
-      "player": "Jérémy Jacquet",
-      "team": "France",
+      "player": "Lennart Karl",
+      "team": "Bayern München",
       "side": "home",
-      "line": "defenders",
+      "line": "midfielders",
       "stats": {
         "Minutes played": 90,
         "Goals": 0,
         "Assists": 0,
-        "Expected assists (xA)": 0.02,
-        "xG + xA": 0.02,
-        "Accurate passes": "60/63",
+        "Expected goals (xG)": 0.48,
+        "Expected assists (xA)": 0.42,
+        "xG + xA": 0.9,
+        "Total shots": 3,
+        "Accurate passes": "44/50",
+        "Chances created": 3,
+        "Big chances created": 1,
+        "Shots on target": 0,
+        "Shots off target": 2,
+        "Blocked shots": 1,
+        "Shot accuracy": "0/2",
+        "Shotmap": 1,
+        "Defensive actions": 1,
+        "Big chances missed": 1,
+        "Touches": 71,
+        "Touches in opposition box": 6,
+        "Successful dribbles": "3/6",
+        "Passes into final third": 3,
+        "Accurate crosses": "1/1",
+        "Accurate long balls": "1/1",
+        "Corners": 1,
+        "Dispossessed": 5,
+        "Offsides": 2,
+        "xG Non-penalty": 0.48,
+        "Tackles": 1,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 2,
+        "Dribbled past": 0,
+        "Ground duels won": "4/13",
+        "Aerial duels won": "0/2",
+        "Fouls committed": 1,
+        "Duels won": 4,
+        "Duels lost": 11
+      }
+    },
+    {
+      "player": "Tim Binder",
+      "team": "Bayern München",
+      "side": "home",
+      "line": "forwards",
+      "stats": {
+        "Minutes played": 45,
+        "Goals": 0,
+        "Assists": 0,
+        "Expected assists (xA)": 0.08,
+        "xG + xA": 0.08,
+        "Accurate passes": "21/22",
         "Chances created": 0,
         "Shotmap": 0,
-        "Defensive actions": 6,
-        "Touches": 73,
-        "Touches in opposition box": 0,
-        "Passes into final third": 5,
-        "Line breaking passes": 13,
-        "Accurate long balls": "4/5",
-        "Dispossessed": 0,
-        "Tackles": 1,
-        "Blocks": 2,
-        "Clearances": 2,
-        "Headed clearance": 2,
-        "Interceptions": 1,
-        "Recoveries": 5,
-        "Dribbled past": 1,
-        "Ground duels won": "2/5",
-        "Aerial duels won": "1/4",
-        "Was fouled": 1,
-        "Fouls committed": 2,
-        "Duels won": 3,
+        "Defensive actions": 0,
+        "Touches": 36,
+        "Touches in opposition box": 4,
+        "Successful dribbles": "2/5",
+        "Accurate crosses": "0/3",
+        "Accurate long balls": "1/1",
+        "Corners": 1,
+        "Dispossessed": 3,
+        "Offsides": 1,
+        "Tackles": 0,
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 0,
+        "Dribbled past": 0,
+        "Ground duels won": "2/8",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels won": 2,
         "Duels lost": 6
       }
     },
     {
-      "player": "Guillaume Restes",
-      "team": "France",
+      "player": "Noah Codjo-Evora",
+      "team": "Bayern München",
       "side": "home",
-      "line": "goalkeeper",
+      "line": "forwards",
       "stats": {
-        "Minutes played": 45,
-        "Saves": 1,
-        "Goals conceded": 1,
-        "xGOT faced": 0.67,
-        "Goals prevented": -0.33,
-        "Shotmap": 1,
-        "Accurate passes": "11/16",
-        "Accurate long balls": "1/6",
-        "Diving save": 1,
-        "Saves inside box": 0,
-        "Acted as sweeper": 0,
-        "Punches": 0,
-        "Throws": 1,
-        "High claim": 0,
-        "Recoveries": 3,
-        "Clearances": 0,
-        "Touches": 18,
+        "Minutes played": 3,
+        "Goals": 0,
+        "Assists": 0,
+        "Accurate passes": "1/1",
+        "Chances created": 0,
+        "Shotmap": 0,
         "Defensive actions": 0,
-        "Fouls committed": 0,
+        "Touches": 1,
+        "Touches in opposition box": 0,
+        "Dispossessed": 0,
         "Tackles": 0,
-        "Passes into final third": 2,
-        "Line breaking passes": 2,
-        "Interceptions": 0
+        "Blocks": 0,
+        "Clearances": 0,
+        "Interceptions": 0,
+        "Recoveries": 0,
+        "Dribbled past": 1,
+        "Ground duels won": "0/1",
+        "Aerial duels won": 0,
+        "Fouls committed": 0,
+        "Duels lost": 1
       }
     }
   ]
