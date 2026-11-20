@@ -156,7 +156,7 @@ def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Pat
     log.info("Rendering motion graphics with Remotion (%d scenes, %.1f min)...",
              len(props["scenes"]), sum(durs) / 60)
     _remotion("Match", props_file, raw)
-    final = add_music(raw, workdir / "video.mp4")
+    final = add_music(raw, workdir / "video.mp4", "main", pack.get("home", ""))
     shutil.rmtree(VIDEO_DIR / "public" / "run", ignore_errors=True)
     return final, durs
 
@@ -206,6 +206,6 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
     raw = outdir / f"short_{short['id']}_raw.mp4"
     log.info("Rendering short %s (%.0f s)...", short["id"], frames / FPS)
     _remotion("Short", props_file, raw)
-    final = add_music(raw, outdir / f"short_{short['id']}.mp4")
+    final = add_music(raw, outdir / f"short_{short['id']}.mp4", "short", pack.get("home", ""))
     shutil.rmtree(run_dir, ignore_errors=True)
     return final

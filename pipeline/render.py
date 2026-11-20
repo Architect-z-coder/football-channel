@@ -45,18 +45,62 @@ def assemble(images: list[Path], audios: list[Path], workdir: Path) -> tuple[Pat
     return final, durs
 
 
-def add_music(src: Path, dst: Path) -> Path:
-    """Mix a random cleared track from assets/music quietly under the narration (if any)."""
-    music = sorted((ASSETS_DIR / "music").glob("*.mp3")) if (ASSETS_DIR / "music").exists() else []
-    if not music:
+MUSIC_CACHE = ASSETS_DIR / "music" / "cache"
+
+
+def _music_track(kind: str, team: str = "") -> Path | None:
+    """The bed for this video: tracks listed in config.yaml (music.tracks), downloaded once and cached.
+    kind = "main" or "short"; a track whose "teams" list names the home team is preferred."""
+    import requests
+    from .common import load_config
+    tracks = [t for t in (load_config().get("music") or {}).get("tracks", []) if t.get("kind") == kind]
+    if not tracks:
+        local = sorted((ASSETS_DIR / "music").glob("*.mp3"))
+        return random.choice(local) if local else None
+    team_l = (team or "").lower()
+    fitting = [t for t in tracks if any(x.lower() in team_l for x in t.get("teams", []))]
+    pick = random.choice(fitting or [t for t in tracks if not t.get("teams")] or tracks)
+    MUSIC_CACHE.mkdir(parents=True, exist_ok=True)
+    path = MUSIC_CACHE / f"{pick['name']}.mp3"
+    if not path.exists():
+        try:
+            r = requests.get(pick["url"], timeout=60)
+            r.raise_for_status()
+            path.write_bytes(r.content)
+        except Exception as e:
+            log.warning("Music %s not downloaded (%s); no music bed.", pick["name"], e)
+            return None
+    return path
+
+
+def _duration(path: Path) -> float:
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                         capture_output=True, text=True).stdout.strip()
+    try:
+        return float(out)
+    except ValueError:
+        return 0.0
+
+
+def add_music(src: Path, dst: Path, kind: str = "main", team: str = "") -> Path:
+    """Mix the music bed under the narration: it ducks while the voice speaks, fades in and out."""
+    from .common import load_config
+    mcfg = load_config().get("music") or {}
+    track = _music_track(kind, team) if mcfg.get("enabled", True) else None
+    if not track:
         src.rename(dst)
         return dst
-    track = random.choice(music)
-    log.info("Adding music bed: %s", track.name)
-    _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-stream_loop", "-1",
-          "-i", str(track), "-filter_complex",
-          "[1:a]volume=0.07[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
-          "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", str(dst)])
+    vol = mcfg.get("volume_short" if kind == "short" else "volume", 0.16)
+    dur = _duration(src)
+    fade_out = max(0.0, dur - 2.5)
+    log.info("Adding music bed: %s (ducked under the voice)", track.name)
+    graph = (f"[0:a]asplit=2[voice][sc];"
+             f"[1:a]volume={vol},afade=t=in:st=0:d=2,afade=t=out:st={fade_out:.2f}:d=2.5[m];"
+             f"[m][sc]sidechaincompress=threshold=0.02:ratio=8:attack=20:release=450:makeup=1[duck];"
+             f"[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]")
+    _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-stream_loop", "-1", "-i", str(track),
+          "-filter_complex", graph, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+          str(dst)])
     src.unlink()
     return dst
 
