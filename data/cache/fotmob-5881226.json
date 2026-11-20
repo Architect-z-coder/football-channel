@@ -1,0 +1,1102 @@
+{
+  "saved": "2026-11-20T22:44:51Z",
+  "press": [
+    {
+      "speaker": "Vincent Kompany",
+      "role": "Head coach, Bayern München",
+      "team": "Bayern München",
+      "quote": "It’s a Friday match, so anything can happen.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "other",
+      "source": "Bundesliga.com",
+      "url": "https://www.bundesliga.com/en/bundesliga/news/vincent-kompany-to-return-for-bayern-munich-against-cologne-40038"
+    },
+    {
+      "speaker": "Vincent Kompany",
+      "role": "Head coach, Bayern München",
+      "team": "Bayern München",
+      "quote": "Kompany said he is highly motivated for his return to the touchline and hopes to pass that motivation on to the players.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "other",
+      "source": "Bundesliga.com",
+      "url": "https://www.bundesliga.com/en/bundesliga/news/vincent-kompany-to-return-for-bayern-munich-against-cologne-40038"
+    },
+    {
+      "speaker": "Vincent Kompany",
+      "role": "Head coach, Bayern München",
+      "team": "Bayern München",
+      "quote": "Kompany said Luis Díaz is recovering well, but the Köln game comes too soon for him. He could return within about a week.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "FC Bayern (official preview)",
+      "url": "https://fcbayern.com/en/news/matchpreviews/2026/11/preview-fc-bayern-vs.-koeln-bundesliga-md-10"
+    },
+    {
+      "speaker": "René Wagner",
+      "role": "Head coach, 1. FC Köln",
+      "team": "1. FC Köln",
+      "quote": "Ragnar Ache ist hundert Prozent fit und wird im Kader stehen.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Geissblog.koeln (live ticker with press conference notes)",
+      "url": "https://geissblog.koeln/2026/11/bundesliga-liveticker-fc-bayern-muenchen-1-fc-koeln-2/"
+    },
+    {
+      "speaker": "René Wagner",
+      "role": "Head coach, 1. FC Köln",
+      "team": "1. FC Köln",
+      "quote": "Wagner said Van den Berg, Hübers, Dallinga, Rondić and Skhiri are still in rehab and unavailable. He said Ache could be a bit too early for the starting XI.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "Geissblog.koeln (live ticker with press conference notes)",
+      "url": "https://geissblog.koeln/2026/11/bundesliga-liveticker-fc-bayern-muenchen-1-fc-koeln-2/"
+    },
+    {
+      "speaker": "René Wagner",
+      "role": "Head coach, 1. FC Köln",
+      "team": "1. FC Köln",
+      "quote": "Wir werden leidenschaftlich verteidigen und mutig sein.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Geissblog.koeln (live ticker with press conference notes)",
+      "url": "https://geissblog.koeln/2026/11/bundesliga-liveticker-fc-bayern-muenchen-1-fc-koeln-2/"
+    },
+    {
+      "speaker": "René Wagner",
+      "role": "Head coach, 1. FC Köln",
+      "team": "1. FC Köln",
+      "quote": "Wagner said Köln want to be dangerous themselves and expect Bayern to push them back. He said Köln's strength is fast transitions, and they will need some luck.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Geissblog.koeln (live ticker with press conference notes)",
+      "url": "https://geissblog.koeln/2026/11/bundesliga-liveticker-fc-bayern-muenchen-1-fc-koeln-2/"
+    },
+    {
+      "speaker": "René Wagner",
+      "role": "Head coach, 1. FC Köln",
+      "team": "1. FC Köln",
+      "quote": "Other teams have already taken points off them in Munich – so why not us?",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "other",
+      "source": "FC Bayern (official preview)",
+      "url": "https://fcbayern.com/en/news/matchpreviews/2026/11/preview-fc-bayern-vs.-koeln-bundesliga-md-10"
+    },
+    {
+      "speaker": "Vincent Kompany",
+      "role": "Head coach, Bayern München",
+      "team": "Bayern München",
+      "quote": "Ich glaube, dass das Ergebnis fair war und Köln das verdient hat.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "result",
+      "source": "ran (Joyn)",
+      "url": "https://ran.joyn.de/sports/fussball/bundesliga/bundesliga-stimmen-zum-spiel-fc-bayern-vs-koeln-rummenigge-ueber-musiala-das-ist-ein-problem-220067"
+    },
+    {
+      "speaker": "Vincent Kompany",
+      "role": "Head coach, Bayern München",
+      "team": "Bayern München",
+      "quote": "Aber das sind keine Ausreden.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "other",
+      "source": "ran (Joyn)",
+      "url": "https://ran.joyn.de/sports/fussball/bundesliga/bundesliga-stimmen-zum-spiel-fc-bayern-vs-koeln-rummenigge-ueber-musiala-das-ist-ein-problem-220067"
+    }
+  ],
+  "context": {
+    "teams": [
+      {
+        "team": "Bayern München",
+        "coach": "Vincent Kompany",
+        "appointed": "<cite index=\"14-2\">Announced 29 May 2024</cite>. <cite index=\"72-2\">He was officially presented on 30 May 2024.</cite> <cite index=\"16-15\">He became head coach on 1 July 2024.</cite>",
+        "replaced": "Thomas Tuchel",
+        "replaced_reason": "<cite index=\"13-7\">Tuchel had agreed in February 2024 to leave by mutual consent at the end of the 2023/24 season.</cite> <cite index=\"19-8\">The announcement came after Bayern fell behind Bayer Leverkusen in the title race.</cite>",
+        "institution_quote": {
+          "quote": "Vincent Kompany is the type of coach who fits in very well with FC Bayern's playing philosophy and identity",
+          "speaker": "Christoph Freund, Bayern sporting director",
+          "source": "Gulf News (appointment report, May 2024)",
+          "url": "https://gulfnews.com/sport/football/bayern-munich-appoint-kompany-to-end-long-search-for-new-coach-1.102867370"
+        },
+        "coach_promise": {
+          "quote": "I want the players of Bayern Munich to be brave and have personality on the ball.",
+          "source": "AFP via Malay Mail, presentation press conference, 30 May 2024",
+          "url": "https://www.malaymail.com/news/sports/2024/05/30/kompany-insists-call-from-bayern-munich-was-no-surprise/137302"
+        },
+        "key_choices": [
+          {
+            "text": "<cite index=\"56-3\">Kompany has given senior debuts to more than 10 youngsters in his two years in charge, according to bundesliga.com.</cite>",
+            "source": "bundesliga.com",
+            "url": "https://www.bundesliga.com/en/bundesliga/news/bayern-munich-youngsters-to-watch-ibrahimovic-brown-bischof-urbig-38204"
+          },
+          {
+            "text": "<cite index=\"57-4\">Aleksandar Pavlović has become a permanent fixture in Kompany's starting XI, often alongside Joshua Kimmich.</cite>",
+            "source": "Bavarian Football Works",
+            "url": "https://www.bavarianfootballworks.com/bayern-munich-bundesliga/175176/aleksandar-pavlovic-joshua-kimmich-germany-academy-youth"
+          },
+          {
+            "text": "<cite index=\"73-8\">At the 2025 season-opener press conference, Kompany said Bayern want to attack no matter what happens.</cite>",
+            "source": "OneFootball (press conference report)",
+            "url": "https://onefootball.com/en/news/press-conference-bayern-munich-vs-rb-leipzig-vincent-kompany-and-max-eberl-talk-squad-depth-preparations-and-more-41542494"
+          },
+          {
+            "text": "<cite index=\"86-5,86-6\">Manuel Neuer is Bayern's captain for 2026/27, with Joshua Kimmich remaining vice-captain.</cite>",
+            "source": "bundesliga.com",
+            "url": ""
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "outlet": "AP (via Yahoo Sports)",
+      "author": "",
+      "date": "2026-11-20",
+      "url": "https://sports.yahoo.com/articles/kompany-returns-kane-limps-off-222521291.html",
+      "headline": "Kompany returns but Kane limps off as Bayern Munich held by Cologne in Bundesliga",
+      "quote": "Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.",
+      "quote_en": "",
+      "point": "AP frames the 1-1 as a point that was enough to keep Bayern top of the Bundesliga despite an early goal conceded and Kane's injury, in an open second half where neither side scored.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_1_para.png",
+        "head": "press_1_head.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 4,
+          "w": 41,
+          "h": 21
+        },
+        {
+          "x": 46,
+          "y": 4,
+          "w": 41,
+          "h": 21
+        },
+        {
+          "x": 92,
+          "y": 4,
+          "w": 31,
+          "h": 21
+        },
+        {
+          "x": 128,
+          "y": 4,
+          "w": 66,
+          "h": 21
+        },
+        {
+          "x": 199,
+          "y": 4,
+          "w": 14,
+          "h": 21
+        },
+        {
+          "x": 218,
+          "y": 4,
+          "w": 10,
+          "h": 21
+        },
+        {
+          "x": 233,
+          "y": 4,
+          "w": 37,
+          "h": 21
+        },
+        {
+          "x": 275,
+          "y": 4,
+          "w": 59,
+          "h": 21
+        },
+        {
+          "x": 339,
+          "y": 4,
+          "w": 32,
+          "h": 21
+        },
+        {
+          "x": 376,
+          "y": 4,
+          "w": 28,
+          "h": 21
+        },
+        {
+          "x": 409,
+          "y": 4,
+          "w": 12,
+          "h": 21
+        },
+        {
+          "x": 426,
+          "y": 4,
+          "w": 77,
+          "h": 21
+        },
+        {
+          "x": 508,
+          "y": 4,
+          "w": 65,
+          "h": 21
+        },
+        {
+          "x": 578,
+          "y": 4,
+          "w": 31,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 34.046875,
+          "w": 28,
+          "h": 21
+        },
+        {
+          "x": 33,
+          "y": 34.046875,
+          "w": 43,
+          "h": 21
+        },
+        {
+          "x": 81,
+          "y": 34.046875,
+          "w": 31,
+          "h": 21
+        },
+        {
+          "x": 117,
+          "y": 34.046875,
+          "w": 61,
+          "h": 21
+        },
+        {
+          "x": 183,
+          "y": 34.046875,
+          "w": 26,
+          "h": 21
+        },
+        {
+          "x": 214,
+          "y": 34.046875,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 277,
+          "y": 34.046875,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 301,
+          "y": 34.046875,
+          "w": 41,
+          "h": 21
+        },
+        {
+          "x": 347,
+          "y": 34.046875,
+          "w": 10,
+          "h": 21
+        },
+        {
+          "x": 362,
+          "y": 34.046875,
+          "w": 43,
+          "h": 21
+        },
+        {
+          "x": 410,
+          "y": 34.046875,
+          "w": 51,
+          "h": 21
+        },
+        {
+          "x": 466,
+          "y": 34.046875,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 490,
+          "y": 34.046875,
+          "w": 70,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 64.09375,
+          "w": 85,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 640,
+        "h": 120.1875
+      },
+      "verified": true
+    },
+    {
+      "outlet": "Sportschau (ARD)",
+      "author": "",
+      "date": "2026-11-20",
+      "url": "https://www.sportschau.de/fussball/bundesliga/dezimierte-bayern-koennen-koeln-nicht-knacken,spielbericht-bayern-muenchen-koeln-102.html",
+      "headline": "Bei Kompany-Comeback: Köln überrascht in München, Kane und Olise verletzt ausgewechselt",
+      "quote": "Die Bayern mussten sich nach der Pause neu sortieren, während die Kölner weiter einen fast fehlerlosen Auftritt hinlegten.",
+      "quote_en": "Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.",
+      "point": "The report calls the draw a big surprise, praising a courageous Köln display and saying Bayern, weakened by injuries to Kane and Olise, could not break them down on Kompany's return.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_2_para.png",
+        "head": "press_2_head.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 29.609375,
+          "h": 26
+        },
+        {
+          "x": 33.796875,
+          "y": 0,
+          "w": 60.203125,
+          "h": 26
+        },
+        {
+          "x": 98.1875,
+          "y": 0,
+          "w": 78.421875,
+          "h": 26
+        },
+        {
+          "x": 180.796875,
+          "y": 0,
+          "w": 35.8125,
+          "h": 26
+        },
+        {
+          "x": 220.796875,
+          "y": 0,
+          "w": 43.8125,
+          "h": 26
+        },
+        {
+          "x": 268.796875,
+          "y": 0,
+          "w": 28.609375,
+          "h": 26
+        },
+        {
+          "x": 301.59375,
+          "y": 0,
+          "w": 53.015625,
+          "h": 26
+        },
+        {
+          "x": 358.796875,
+          "y": 0,
+          "w": 34.609375,
+          "h": 26
+        },
+        {
+          "x": 397.59375,
+          "y": 0,
+          "w": 84.015625,
+          "h": 26
+        },
+        {
+          "x": 485.796875,
+          "y": 0,
+          "w": 79.40625,
+          "h": 26
+        },
+        {
+          "x": 569.390625,
+          "y": 0,
+          "w": 26.609375,
+          "h": 26
+        },
+        {
+          "x": 600.1875,
+          "y": 0,
+          "w": 57.21875,
+          "h": 26
+        },
+        {
+          "x": 0,
+          "y": 26,
+          "w": 56.203125,
+          "h": 26
+        },
+        {
+          "x": 60.390625,
+          "y": 26,
+          "w": 50.015625,
+          "h": 26
+        },
+        {
+          "x": 114.59375,
+          "y": 26,
+          "w": 33.8125,
+          "h": 26
+        },
+        {
+          "x": 152.59375,
+          "y": 26,
+          "w": 100.21875,
+          "h": 26
+        },
+        {
+          "x": 256.984375,
+          "y": 26,
+          "w": 65.625,
+          "h": 26
+        },
+        {
+          "x": 326.796875,
+          "y": 26,
+          "w": 85.8125,
+          "h": 26
+        }
+      ],
+      "box": {
+        "w": 680,
+        "h": 156
+      },
+      "verified": true
+    }
+  ],
+  "script": {
+    "title_options": [
+      "Bayern had the ball. Köln had the chances.",
+      "Why Kompany said Köln deserved the draw",
+      "71% possession, 17 shots, 1 point: Bayern 1-1 Köln"
+    ],
+    "thumbnail_texts": [
+      "BALL vs CHANCES",
+      "KÖLN DESERVED IT",
+      "68 IN 100"
+    ],
+    "description": "Bayern München 1-1 1. FC Köln, Bundesliga round 10. Bayern had most of the ball and 17 shots, yet the chances were worth more to Köln. We follow Kompany's return, Wagner's plan for fast breaks, one save at minute 51, and what expected goals say about who deserved more. Sources for quotes: Bundesliga.com, FC Bayern, Geissblog.koeln, ran (Joyn), AP via Yahoo Sports, Sportschau (ARD), AFP via Malay Mail, and StatsBomb open data for the history comparison.\n\nTell us in the comments: was the draw fair? Data: FotMob.",
+    "tags": [
+      "Bayern München",
+      "1. FC Köln",
+      "Bundesliga",
+      "Vincent Kompany",
+      "René Wagner",
+      "expected goals",
+      "xG",
+      "football analysis",
+      "match analysis",
+      "Mikey Moore"
+    ],
+    "scenes": [
+      {
+        "id": 1,
+        "beat": "THE QUESTION",
+        "on_screen": "A Friday night in Munich",
+        "fact_ids": [
+          "stadium",
+          "home_coach",
+          "home_form_record",
+          "away_form_record",
+          "score_home",
+          "score_away",
+          "competition_round"
+        ],
+        "shots": [
+          {
+            "text": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Vincent Kompany is back on the touchline. Bayern München arrive with four wins and a draw in their last five.",
+            "visual": {
+              "type": "photo",
+              "photo": "Allianz Arena, München (inside, view 1)",
+              "caption": "Allianz Arena, Munich"
+            }
+          },
+          {
+            "text": "Their visitors, 1. FC Köln, have won one of theirs, and lost two. The final score is 1-1.",
+            "visual": {
+              "type": "scoreline"
+            }
+          },
+          {
+            "text": "But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?",
+            "visual": {
+              "type": "title_card",
+              "title": "Who really won?",
+              "subtitle": "Bayern 1-1 Köln"
+            }
+          }
+        ],
+        "narration": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Vincent Kompany is back on the touchline. Bayern München arrive with four wins and a draw in their last five. Their visitors, 1. FC Köln, have won one of theirs, and lost two. The final score is 1-1. But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?",
+        "visual": {
+          "type": "scoreline"
+        }
+      },
+      {
+        "id": 2,
+        "beat": "WHAT WAS EXPECTED",
+        "on_screen": "Form, words and absences",
+        "fact_ids": [
+          "home_form_games",
+          "away_form_games",
+          "press",
+          "home_absent_1",
+          "home_absent_2",
+          "home_absent_3",
+          "home_absent_4",
+          "away_absent_1"
+        ],
+        "shots": [
+          {
+            "text": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen.",
+            "visual": {
+              "type": "form_compare"
+            }
+          },
+          {
+            "text": "Köln's coach René Wagner, in the FC Bayern preview: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "Other teams have already taken points off them in Munich – so why not us?",
+              "speaker": "René Wagner",
+              "role": "Head coach, 1. FC Köln",
+              "outlet": "FC Bayern (official preview)"
+            }
+          },
+          {
+            "text": "Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga.",
+            "visual": {
+              "type": "photo",
+              "photo": "Luis Díaz",
+              "caption": "Luis Díaz: out injured"
+            }
+          }
+        ],
+        "narration": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen. Köln's coach René Wagner, in the FC Bayern preview: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back. Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga.",
+        "visual": {
+          "type": "form_compare"
+        }
+      },
+      {
+        "id": 3,
+        "beat": "THE CHARACTERS",
+        "on_screen": "Three people, one plan",
+        "fact_ids": [
+          "home_coach",
+          "home_formation",
+          "away_formation",
+          "away_coach"
+        ],
+        "shots": [
+          {
+            "text": "Kompany is the coach Bayern chose in 2024 to follow Thomas Tuchel. At his presentation he made one promise.",
+            "visual": {
+              "type": "photo",
+              "photo": "Thomas Tuchel",
+              "caption": "Thomas Tuchel, Kompany's predecessor"
+            }
+          },
+          {
+            "text": "Bayern players should be brave and have personality on the ball. Since then, bundesliga.com says, he has given senior debuts to more than 10 youngsters. That is the yardstick tonight.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "I want the players of Bayern Munich to be brave and have personality on the ball.",
+              "speaker": "Vincent Kompany",
+              "role": "Head coach, Bayern München",
+              "outlet": "AFP via Malay Mail"
+            }
+          },
+          {
+            "text": "At the front of that plan, Harry Kane, who leads the line in a 4-2-3-1.",
+            "visual": {
+              "type": "photo",
+              "photo": "Harry Kane",
+              "caption": "Harry Kane, Bayern"
+            }
+          },
+          {
+            "text": "On the other side, Mikey Moore, a Köln midfielder in a 3-5-1-1 built to hit on the break.",
+            "visual": {
+              "type": "photo",
+              "photo": "Mikey Moore",
+              "caption": "Mikey Moore, Köln"
+            }
+          }
+        ],
+        "narration": "Kompany is the coach Bayern chose in 2024 to follow Thomas Tuchel. At his presentation he made one promise. Bayern players should be brave and have personality on the ball. Since then, bundesliga.com says, he has given senior debuts to more than 10 youngsters. That is the yardstick tonight. At the front of that plan, Harry Kane, who leads the line in a 4-2-3-1. On the other side, Mikey Moore, a Köln midfielder in a 3-5-1-1 built to hit on the break.",
+        "visual": {
+          "type": "quote_card",
+          "quote": "I want the players of Bayern Munich to be brave and have personality on the ball.",
+          "speaker": "Vincent Kompany",
+          "role": "Head coach, Bayern München",
+          "outlet": "AFP via Malay Mail"
+        }
+      },
+      {
+        "id": 4,
+        "beat": "ACT ONE",
+        "on_screen": "Köln strike first",
+        "fact_ids": [
+          "goal_1",
+          "goal_2",
+          "momentum_home_on_top_pct",
+          "ht_home",
+          "ht_away"
+        ],
+        "shots": [
+          {
+            "text": "Allianz Arena. Minute 12. Köln break.",
+            "visual": {
+              "type": "photo",
+              "photo": "Allianz Arena, München (inside, view 2)",
+              "caption": "Allianz Arena, Munich"
+            }
+          },
+          {
+            "text": "Saïd El Mala finds Mikey Moore. Moore finishes with his right foot. 0-1. This is the fast break Wagner described.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 12
+            }
+          },
+          {
+            "text": "Bayern answer by taking over. By FotMob's momentum measure, they are on top for 83 percent of the first half.",
+            "visual": {
+              "type": "momentum"
+            }
+          },
+          {
+            "text": "Minute 37. Tom Bischof's pass, and Nathaniel Brown scores with his left foot, from open play. 1-1. But the level score hides a bigger imbalance.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 37
+            }
+          }
+        ],
+        "narration": "Allianz Arena. Minute 12. Köln break. Saïd El Mala finds Mikey Moore. Moore finishes with his right foot. 0-1. This is the fast break Wagner described. Bayern answer by taking over. By FotMob's momentum measure, they are on top for 83 percent of the first half. Minute 37. Tom Bischof's pass, and Nathaniel Brown scores with his left foot, from open play. 1-1. But the level score hides a bigger imbalance.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 12
+        }
+      },
+      {
+        "id": 5,
+        "beat": "THE TURNING POINT",
+        "on_screen": "A save, not a goal",
+        "fact_ids": [
+          "shots",
+          "home_keeper_saves",
+          "home_keeper_diving_save"
+        ],
+        "shots": [
+          {
+            "text": "Minute 51. Köln break again. Moore shoots from inside the box, and Jonas Urbig saves.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 12,
+                  "text": "Moore scores for Köln"
+                },
+                {
+                  "minute": 37,
+                  "text": "Brown equalises"
+                },
+                {
+                  "minute": 51,
+                  "text": "Urbig saves from Moore"
+                },
+                {
+                  "minute": 54,
+                  "text": "Karl shoots wide"
+                },
+                {
+                  "minute": 82,
+                  "text": "El Mala misses"
+                }
+              ]
+            }
+          },
+          {
+            "text": "A goal here makes it 1-2. Urbig makes 3 saves in the match, 2 of them diving, and each one keeps the score level.",
+            "visual": {
+              "type": "key_number",
+              "value": "3",
+              "label": "Urbig saves, 2 of them diving"
+            }
+          },
+          {
+            "text": "Our reading: this is where the match could have tipped. The turning point is not a goal. It is a save.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Minute 51",
+              "lines": [
+                "Köln break again",
+                "Urbig saves",
+                "Still 1-1"
+              ]
+            }
+          }
+        ],
+        "narration": "Minute 51. Köln break again. Moore shoots from inside the box, and Jonas Urbig saves. A goal here makes it 1-2. Urbig makes 3 saves in the match, 2 of them diving, and each one keeps the score level. Our reading: this is where the match could have tipped. The turning point is not a goal. It is a save.",
+        "visual": {
+          "type": "key_moments",
+          "moments": [
+            {
+              "minute": 12,
+              "text": "Moore scores for Köln"
+            },
+            {
+              "minute": 37,
+              "text": "Brown equalises"
+            },
+            {
+              "minute": 51,
+              "text": "Urbig saves from Moore"
+            },
+            {
+              "minute": 54,
+              "text": "Karl shoots wide"
+            },
+            {
+              "minute": 82,
+              "text": "El Mala misses"
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "beat": "ACT TWO",
+        "on_screen": "A long push",
+        "fact_ids": [
+          "best_player_1",
+          "worst_player_1",
+          "home_possession",
+          "home_tackles",
+          "away_tackles",
+          "player_stats"
+        ],
+        "shots": [
+          {
+            "text": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels.",
+            "visual": {
+              "type": "photo",
+              "photo": "Jonathan Tah",
+              "caption": "Jonathan Tah, Bayern"
+            }
+          },
+          {
+            "text": "Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict.",
+            "visual": {
+              "type": "player_ratings"
+            }
+          },
+          {
+            "text": "Bayern keep 71 percent of the ball. Köln make 32 tackles to their 15. That points to a side happy to defend, then break.",
+            "visual": {
+              "type": "key_number",
+              "value": "32 v 15",
+              "label": "Tackles, Köln v Bayern"
+            }
+          }
+        ],
+        "narration": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels. Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict. Bayern keep 71 percent of the ball. Köln make 32 tackles to their 15. That points to a side happy to defend, then break.",
+        "visual": {
+          "type": "player_ratings"
+        }
+      },
+      {
+        "id": 7,
+        "beat": "WHAT THE NUMBERS REVEAL",
+        "on_screen": "The chances tell it differently",
+        "fact_ids": [
+          "home_xg",
+          "away_xg",
+          "home_shots",
+          "away_shots",
+          "diag_home_inbox_pct",
+          "diag_away_inbox_pct",
+          "away_big_chances",
+          "away_big_chances_missed",
+          "home_keeper_goals_prevented",
+          "diag_sim_result",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored.",
+            "visual": {
+              "type": "xg_explainer"
+            }
+          },
+          {
+            "text": "FotMob gives Köln 1.98 xG and Bayern 0.94. Every Köln shot came from inside the box. Most of Bayern's 17 did not.",
+            "visual": {
+              "type": "shot_map"
+            }
+          },
+          {
+            "text": "Köln then missed 4 of their 5 big chances. Urbig saved 0.65 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper.",
+            "visual": {
+              "type": "diagnosis",
+              "side": "away"
+            }
+          },
+          {
+            "text": "Replay these chances 20,000 times, and Köln win 68 of every 100. Bayern win 12.",
+            "visual": {
+              "type": "result_odds"
+            }
+          }
+        ],
+        "narration": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored. FotMob gives Köln 1.98 xG and Bayern 0.94. Every Köln shot came from inside the box. Most of Bayern's 17 did not. Köln then missed 4 of their 5 big chances. Urbig saved 0.65 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper. Replay these chances 20,000 times, and Köln win 68 of every 100. Bayern win 12.",
+        "visual": {
+          "type": "xg_explainer"
+        }
+      },
+      {
+        "id": 8,
+        "beat": "THE VERDICT",
+        "on_screen": "What they said after",
+        "fact_ids": [
+          "press",
+          "reviews",
+          "away_big_chances_missed"
+        ],
+        "shots": [
+          {
+            "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 4 big chances missed, not faultless in front of goal.",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 1
+            }
+          },
+          {
+            "text": "After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\"",
+            "visual": {
+              "type": "quote_card",
+              "quote": "Ich glaube, dass das Ergebnis fair war und Köln das verdient hat.",
+              "speaker": "Vincent Kompany",
+              "role": "Head coach, Bayern München",
+              "outlet": "ran (Joyn)"
+            }
+          },
+          {
+            "text": "AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more.",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 0
+            }
+          }
+        ],
+        "narration": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 4 big chances missed, not faultless in front of goal. After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\" AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more.",
+        "visual": {
+          "type": "press_cut",
+          "review_index": 1
+        }
+      },
+      {
+        "id": 9,
+        "beat": "WHAT IT MEANS",
+        "on_screen": "The ball is not the prize",
+        "fact_ids": [
+          "home_possession",
+          "away_possession",
+          "press",
+          "diag_sim_result"
+        ],
+        "shots": [
+          {
+            "text": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points.",
+            "visual": {
+              "type": "lesson_list",
+              "items": [
+                "Ball control is not chance control",
+                "Compact, then fast, can beat the ball",
+                "Finishing decides the points"
+              ]
+            }
+          },
+          {
+            "text": "For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here.",
+            "visual": {
+              "type": "history_lens",
+              "lens": "leicester_1516",
+              "metrics": [
+                "record",
+                "possession_pct",
+                "xg_for_pm"
+              ]
+            }
+          },
+          {
+            "text": "Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Your verdict?",
+              "lines": [
+                "Was 1-1 fair?",
+                "Tell us below"
+              ]
+            }
+          }
+        ],
+        "narration": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match.",
+        "visual": {
+          "type": "lesson_list",
+          "items": [
+            "Ball control is not chance control",
+            "Compact, then fast, can beat the ball",
+            "Finishing decides the points"
+          ]
+        }
+      }
+    ]
+  },
+  "report": {
+    "ok": true,
+    "problems": [],
+    "critic": {
+      "hook": 5,
+      "payoff": 6,
+      "pace": 6,
+      "clarity": 7,
+      "notes": [
+        "Scene 1 opens with \"Allianz Arena, Munich. A Friday night in the Bundesliga, round 10.\" and then lists form records. Open on a human stake instead, such as Kompany's return to the touchline and Wagner's \"why not us?\" belief, and hold the form lines for scene 2.",
+        "The hook question \"Who really controlled this match... and who should have won it?\" arrives only after four flat setup sentences. Move it up to the second sentence, right after Kompany's return, and drop \"The final score is 1-1\" as a separate shot.",
+        "Scene 2 stacks form records, a quote and five absences in one block. Cut the Leicester-style detail, keep Wagner's \"so why not us?\" as the emotional setup, and mention only Díaz as the absence.",
+        "Scene 3 gives Kane and Mikey Moore one clumsy line each and never builds them as characters. Cut Kane (he plays 20 minutes) or tie each player to the story: Kane as the Bayern star who leaves early, Moore as the Köln finisher who will decide the night.",
+        "Scene 6 (\"Act Two\") is filler: Tah's duels, Kane's 9 touches, 71% possession and 32 v 15 tackles repeat what scene 7 says again. Merge it into a short bridge, or give it one concrete moment such as Karl's minute-54 miss, so the story keeps moving.",
+        "The ending says \"the luck went Bayern's way\" but the payoff stays a stats lesson, and the Leicester comparison feels bolted on. Close by answering the opening question directly with Kompany's \"Köln deserved it\" line, and cut the Leicester paragraph."
+      ]
+    },
+    "rewrite_rejected": [
+      "Scene 9: \"Next, Kompany said Díaz could return within about a week.\" This is a return date for an injured player. Injury return dates are speculation and must not be stated, even when paraphrasing a preview."
+    ]
+  },
+  "saved_script": "2026-11-20T22:52:38Z",
+  "shorts": [
+    {
+      "id": 1,
+      "format": "player_spotlight",
+      "title": "Jonathan Tah: best rated, in a 1-1 draw",
+      "hook": "Tah: 8.3, best on the pitch",
+      "shots": [
+        {
+          "text": "Jonathan Tah scored nothing, and still got the best rating of the night: 8.3.",
+          "visual": {
+            "type": "photo",
+            "photo": "Jonathan Tah",
+            "caption": "Jonathan Tah, Bayern centre-back"
+          }
+        },
+        {
+          "text": "He won all 4 of his ground duels. He also made 6 defensive actions and 2 clearances.",
+          "visual": {
+            "type": "player_ratings"
+          }
+        },
+        {
+          "text": "On the ball he was just as tidy: 65 of 68 passes found a team-mate, 9 of them into the final third.",
+          "visual": {
+            "type": "key_number"
+          }
+        },
+        {
+          "text": "Bayern were on top in 83% of first-half minutes and 70% of the second. Tah's calm passing fitted that control.",
+          "visual": {
+            "type": "momentum"
+          }
+        },
+        {
+          "text": "The rating cannot show everything, though. Köln still scored at minute 12 and the match ended 1-1. Is a defender's 8.3 enough on a night like that? Full story on the channel.",
+          "visual": {
+            "type": "scoreline"
+          }
+        }
+      ],
+      "fact_ids": [
+        "best_player_1",
+        "player_of_the_match",
+        "home_possession",
+        "momentum_home_on_top_pct",
+        "score_home",
+        "score_away",
+        "goal_1"
+      ],
+      "narration": "Jonathan Tah scored nothing, and still got the best rating of the night: 8.3. He won all 4 of his ground duels. He also made 6 defensive actions and 2 clearances. On the ball he was just as tidy: 65 of 68 passes found a team-mate, 9 of them into the final third. Bayern were on top in 83% of first-half minutes and 70% of the second. Tah's calm passing fitted that control. The rating cannot show everything, though. Köln still scored at minute 12 and the match ended 1-1. Is a defender's 8.3 enough on a night like that? Full story on the channel.",
+      "visual": {
+        "type": "player_ratings"
+      }
+    },
+    {
+      "id": 2,
+      "format": "turning_point",
+      "title": "Köln's fast breaks should have won it",
+      "hook": "Two breaks. One goal. One point.",
+      "shots": [
+        {
+          "text": "Bayern had 71% of the ball, but Köln had the better chances.",
+          "visual": {
+            "type": "stat_bars"
+          }
+        },
+        {
+          "text": "Minute 12: Saïd El Mala sets up Mikey Moore on a fast break, and Köln lead 1-0.",
+          "visual": {
+            "type": "goal_replay",
+            "minute": 12
+          }
+        },
+        {
+          "text": "Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.39 expected goals, which is what an average finisher would score from them.",
+          "visual": {
+            "type": "shot_map"
+          }
+        },
+        {
+          "text": "Köln's chances added up to 1.97 expected goals, all from open play. Bayern's added up to 0.94. Replayed 20,000 times, Köln win 68%.",
+          "visual": {
+            "type": "diagnosis"
+          }
+        },
+        {
+          "text": "Kompany said Köln deserved the result. Can a team with 29% of the ball keep doing this? Full story on the channel.",
+          "visual": {
+            "type": "quote_card"
+          }
+        }
+      ],
+      "fact_ids": [
+        "home_possession",
+        "goal_1",
+        "away_xg",
+        "home_xg",
+        "diag_away_setpiece_xg",
+        "diag_home_setpiece_xg",
+        "diag_sim_result",
+        "home_keeper_goals_prevented"
+      ],
+      "narration": "Bayern had 71% of the ball, but Köln had the better chances. Minute 12: Saïd El Mala sets up Mikey Moore on a fast break, and Köln lead 1-0. Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.39 expected goals, which is what an average finisher would score from them. Köln's chances added up to 1.97 expected goals, all from open play. Bayern's added up to 0.94. Replayed 20,000 times, Köln win 68%. Kompany said Köln deserved the result. Can a team with 29% of the ball keep doing this? Full story on the channel.",
+      "visual": {
+        "type": "stat_bars"
+      }
+    }
+  ]
+}

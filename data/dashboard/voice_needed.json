@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-19T00:37:58Z",
-  "fixture_id": "fotmob-5181799",
-  "match": "France Turkey",
-  "slug": "fotmob-5181799",
-  "home": "France",
-  "away": "Turkiye",
+  "updated": "2026-11-20T22:53:34Z",
+  "fixture_id": "fotmob-5881226",
+  "match": "Bayern Koln",
+  "slug": "fotmob-5881226",
+  "home": "Bayern München",
+  "away": "1. FC Köln",
   "voice": "astro",
   "items": [
     {
       "key": "scene_01",
-      "text": "Bordeaux, 15 November. Turkiye walk into the Stade Atlantique on 5 defeats in a row. Their coach, Sergen Yalçın, has said the team and the country need a win. The day before, Zinédine Zidane gave France's answer. In translation: we know what we must do, finish the work and qualify. On paper, it looks simple. So how does a night like that stay dangerous until the very last minute?"
+      "text": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Vincent Kompany is back on the touchline. Bayern München arrive with four wins and a draw in their last five. Their visitors, 1. FC Köln, have won one of theirs, and lost two. The final score is 1-1. But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?"
     },
     {
       "key": "scene_02",
-      "text": "France arrive having won 3 of their last 5, but they lost the latest, 3-1 away in Italy. Turkiye have lost all 5. Yalçın promised a change. His words, in translation: tomorrow we will play a bit more in control. Türkiye Today adds that he meant a more defensive position, still with one striker. And he had fewer players to choose from. Ozan Kabak and Ümit Akdağ were both suspended. So the yardstick is clear: France to attack, Turkiye to sit deep and wait."
+      "text": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen. Köln's coach René Wagner, in the FC Bayern preview: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back. Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga."
     },
     {
       "key": "scene_03",
-      "text": "Three people carry this story. First, Rayan Cherki, in the middle of France's attacking three. Our reading: against five defenders, France need someone to find the gaps, and that is his job. Second, Arda Güler, in Turkiye's midfield four. If Turkiye are to threaten France at all, the ball probably has to pass through him. Remember his name. Third, Kylian Mbappé. Eurosport France noted that he missed the Italy match with a hamstring problem. Before this one Zidane said, in translation: there is no problem, he will be with us."
+      "text": "Kompany is the coach Bayern chose in 2024 to follow Thomas Tuchel. At his presentation he made one promise. Bayern players should be brave and have personality on the ball. Since then, bundesliga.com says, he has given senior debuts to more than 10 youngsters. That is the yardstick tonight. At the front of that plan, Harry Kane, who leads the line in a 4-2-3-1. On the other side, Mikey Moore, a Köln midfielder in a 3-5-1-1 built to hit on the break."
     },
     {
       "key": "scene_04",
-      "text": "Minute 1. Turkiye line up in a 5-4-1, and France take the ball. FotMob's momentum graph has France on top in 79 percent of the first-half minutes. The chances come, and they do not go in. Minute 21: Barcola, on a fast break, is saved. Minute 34: Mbappé is saved. Minute 35: Turkiye's best first-half chance, from İsmail Yüksek, is saved too. Half-time. 0-0. France have the ball, Turkiye have a plan, and the plan is holding."
+      "text": "Allianz Arena. Minute 12. Köln break. Saïd El Mala finds Mikey Moore. Moore finishes with his right foot. 0-1. This is the fast break Wagner described. Bayern answer by taking over. By FotMob's momentum measure, they are on top for 83 percent of the first half. Minute 37. Tom Bischof's pass, and Nathaniel Brown scores with his left foot, from open play. 1-1. But the level score hides a bigger imbalance."
     },
     {
       "key": "scene_05",
-      "text": "Minute 49. A France corner. In Turkiye's back five stands Emirhan Topçu. First, the chance. Expected goals, or xG, gives every shot a value from 0 to 1: how often a shot like it is scored. FotMob values Barcola's shot from this corner at 0.86. Close to a certain goal. It is not scored. Same minute, same set piece, by our reading. And the ball ends up in the net anyway: an own goal by Topçu. 1-0 France. France's best chance fails, and France still lead. FotMob's lowest rating among starters, 5.6, goes to Topçu."
+      "text": "Minute 51. Köln break again. Moore shoots from inside the box, and Jonas Urbig saves. A goal here makes it 1-2. Urbig makes 3 saves in the match, 2 of them diving, and each one keeps the score level. Our reading: this is where the match could have tipped. The turning point is not a goal. It is a save."
     },
     {
       "key": "scene_06",
-      "text": "France lead, but the second goal takes until minute 80. Junior Kroupi, a substitute, scores from open play with his right foot, set up by Cherki. franceinfo reports it as his first international goal. Cherki finishes as FotMob's top-rated player, 8.4. Our reading: this pass helps explain it. 2-0 should settle it. Then, minute 90. A Turkiye corner. Arda Güler gives the assist, and Abdülkerim Bardakci scores with a header. 2-1. Güler's rating, 8.1, is the best on his side."
+      "text": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels. Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict. Bayern keep 71 percent of the ball. Köln make 32 tackles to their 15. That points to a side happy to defend, then break."
     },
     {
       "key": "scene_07",
-      "text": "Now the part the scoreline hides. FotMob's data places every shot on the pitch, sized by xG. Look at how many of France's are close to goal. France's xG is 3.36. Turkiye's is 1.54. That points to a France win by far more than one goal, and it says Yalçın's deeper block did not stop the chances. What kept Turkiye alive was their goalkeeper. Berke Özer made 7 saves. He kept the plan breathing. So when minute 90 came, one corner was enough, and the header that scored was Turkiye's best chance of the night, by FotMob's numbers."
+      "text": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored. FotMob gives Köln 1.98 xG and Bayern 0.94. Every Köln shot came from inside the box. Most of Bayern's 17 did not. Köln then missed 4 of their 5 big chances. Urbig saved 0.65 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper. Replay these chances 20,000 times, and Köln win 68 of every 100. Bayern win 12."
     },
     {
       "key": "scene_08",
-      "text": "Neither coach's post-match words are in the match data we have, so the press gives the verdict. Ouest-France writes, in translation: \"This wastefulness made Les Bleus tremble until the end of the match, and the clinching goal came from Kroupi, his first, well set up by Cherki.\" The match data gives that word a number. France had 7 big chances, and missed 6. Our verdict, in one sentence: France deserved the win, and earned the worry."
+      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 4 big chances missed, not faultless in front of goal. After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\" AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more."
     },
     {
       "key": "scene_09",
-      "text": "France qualified for the quarter-finals and finished first in the group, franceinfo and Ouest-France report. For Turkiye, 5 defeats became 6. But AFP writes, in translation, that the content of the match \"once again left a lot to be desired\". That is the open question for Zidane's side. The control is there. The finishing, on this night, was not. The lesson: control earns you chances, and only finishing earns you comfort. If you like match stories built on the numbers, subscribe. And tell us in the comments: a finishing problem, or one unlucky night?"
+      "text": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 29 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match."
     },
     {
       "key": "short_1",
-      "text": "An 8.4 rating, the best on the pitch. Rayan Cherki played centrally, behind Kylian Mbappé, in France's 4-2-3-1. In the 80th minute his pass set up Junior Kroupi for 2-0, Kroupi's first international goal. France had 60 percent of the ball and 23 shots. Cherki took one, worth 0.04 expected goals. The data lists one assist and one shot. It cannot show the rest of his work. Should Cherki start behind Mbappé every match? Full story on the channel."
+      "text": "Jonathan Tah scored nothing, and still got the best rating of the night: 8.3. He won all 4 of his ground duels. He also made 6 defensive actions and 2 clearances. On the ball he was just as tidy: 65 of 68 passes found a team-mate, 9 of them into the final third. Bayern were on top in 83% of first-half minutes and 70% of the second. Tah's calm passing fitted that control. The rating cannot show everything, though. Köln still scored at minute 12 and the match ended 1-1. Is a defender's 8.3 enough on a night like that? Full story on the channel."
     },
     {
       "key": "short_2",
-      "text": "90th minute, France 2-0 up, and Turkiye have a corner. Abdülkerim Bardakci had already shot from corners in the 17th, 60th and 83rd minutes. All three missed. The fourth came from Arda Güler's assist: a header worth 0.43 expected goals, about 4 in 10. That one chance was more than a quarter of Turkiye's 1.54 expected goals. France had 3.36 and 23 shots. France won 2-1 instead of 2-0, with 6 big chances missed. Was it bad luck, or the price of those misses? Full story on the channel."
+      "text": "Bayern had 71% of the ball, but Köln had the better chances. Minute 12: Saïd El Mala sets up Mikey Moore on a fast break, and Köln lead 1-0. Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.39 expected goals, which is what an average finisher would score from them. Köln's chances added up to 1.97 expected goals, all from open play. Bayern's added up to 0.94. Replayed 20,000 times, Köln win 68%. Kompany said Köln deserved the result. Can a team with 29% of the ball keep doing this? Full story on the channel."
     }
   ],
-  "characters": 5240
+  "characters": 5253
 }
