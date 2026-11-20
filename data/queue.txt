@@ -5,4 +5,3 @@
 #   - or the match number from the "list" run, e.g.   575383
 # Lines starting with # are ignored. If the queue is empty, nothing is made.
 Bayern Köln
-Bayern Koln
