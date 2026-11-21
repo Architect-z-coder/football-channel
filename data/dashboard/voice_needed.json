@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-21T08:03:20Z",
-  "fixture_id": "fotmob-5881226",
-  "match": "Bayern Koln",
-  "slug": "fotmob-5881226",
-  "home": "Bayern München",
-  "away": "1. FC Köln",
+  "updated": "2026-11-21T14:55:15Z",
+  "fixture_id": "fotmob-5795522",
+  "match": "Manchester City Fulham",
+  "slug": "fotmob-5795522",
+  "home": "Manchester City",
+  "away": "Fulham",
   "voice": "astro",
   "items": [
     {
       "key": "scene_01",
-      "text": "Allianz Arena, Munich. A Friday night in the Bundesliga, round 10. Four weeks ago, Vincent Kompany collapsed at Bayern's training ground. He spent five days in hospital, then went home to rest. While he was away, his assistant Aaron Danks took the team for five matches: four wins and a draw. Tonight, Kompany is back on the touchline. Their visitors, 1. FC Köln, have won one of their last five, and lost two. The final score is 1-1. But a 1-1 can hide a very different story. Who really controlled this match... and who should have won it?"
+      "text": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain. Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\" A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?"
     },
     {
       "key": "scene_02",
-      "text": "Going in, the form was lopsided. Bayern: four wins and a draw, including 2-0 away at Atlético Madrid. Köln: one win, two draws, two defeats, the latest a 1-2 loss at home to Bayer Leverkusen. Köln's coach is René Wagner, 37, in his first job as a head coach. For years he was Steffen Baumgart's assistant. He took over in March, when Lukas Kwasniok was sacked, kept Köln up, and was given the job until 2028. In the FC Bayern preview he asked: \"Other teams have already taken points off them in Munich – so why not us?\" His plan, per Geissblog.koeln: fast transitions, and expect Bayern to push them back. Both were short of players. Bayern were without Luis Díaz, Alphonso Davies, Ismael Saibari and Serge Gnabry. Köln were without five, including Thijs Dallinga."
+      "text": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws. Maresca says the international break was used for review. Yahoo Sports, citing City Xtra, reports: \"We reviewed things during the international break that we need to do better\". Fulham's coach, Álvaro Arbeloa, in a translated report, calls his team's 20 straight defeats against City not relevant. He says Fulham will need their best performance. So the stakes are clear. City must fix a leak. Fulham must forget a record."
     },
     {
       "key": "scene_03",
-      "text": "Kompany is the coach Bayern chose in 2024 to follow Thomas Tuchel. At his presentation he made one promise. Bayern players should be brave and have personality on the ball. Since then, bundesliga.com says, he has given senior debuts to more than 10 youngsters. That is the yardstick tonight. At the front of that plan, Harry Kane, who leads the line in a 4-2-3-1. On the other side, Mikey Moore, a Köln midfielder in a 3-5-1-1 built to hit on the break."
+      "text": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\". The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score. The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour."
     },
     {
       "key": "scene_04",
-      "text": "Allianz Arena. Minute 12. Köln break. Saïd El Mala finds Mikey Moore. Moore finishes with his right foot. 0-1. This is the fast break Wagner described. Bayern answer by taking over. By FotMob's momentum measure, they are on top for 83 percent of the first half. Minute 37. Tom Bischof's pass, and Nathaniel Brown scores with his left foot, from open play. 1-1. But the level score hides a bigger imbalance."
+      "text": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide. Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1. FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail."
     },
     {
       "key": "scene_05",
-      "text": "Minute 51. Köln break again. Moore shoots from inside the box, and Jonas Urbig saves. A goal here makes it 1-2. Urbig makes 3 saves in the match, 2 of them diving, and each one keeps the score level. Our reading: this is where the match could have tipped. The turning point is not a goal. It is a save."
+      "text": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob puts this one at 0.75. Three times in four. It is the best chance of the match for either team. Haaland ends with 4 shots worth 1.0 xG in total, and no goal."
     },
     {
       "key": "scene_06",
-      "text": "After the break, Bayern keep pushing and Köln keep defending. Jonathan Tah, the highest-rated starter, wins all 4 of his ground duels. Harry Kane is the lowest-rated Bayern starter. But he was substituted after only 9 touches, so it is a short sample, not a verdict. Bayern keep 72 percent of the ball. Köln make 32 tackles to their 14. That points to a side happy to defend, then break."
+      "text": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1. Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 20 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal."
     },
     {
       "key": "scene_07",
-      "text": "Now the part the score hides. Expected goals, or xG, is a model built on many past shots: distance, angle, foot or head, type of pass. It says how often a chance like that is scored. FotMob gives Köln 1.99 xG and Bayern 1.07. Every Köln shot came from inside the box. Most of Bayern's 17 did not. Köln then missed 3 of their 4 big chances. Urbig saved 0.63 goals more than an average keeper would. Our reading: the draw owes something to Köln's finishing and something to Bayern's goalkeeper. Replay these chances 20,000 times, and Köln win 64 of every 100. Bayern win 14."
+      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.88 xG, and Fulham 0.72. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper."
     },
     {
       "key": "scene_08",
-      "text": "Sportschau writes, in translation, \"Bayern had to reorganise after the break, while Köln kept up an almost faultless performance.\" The numbers back the defending, though with 3 big chances missed, not faultless in front of goal. After the match Kompany said, in translation: \"I believe the result was fair and Köln deserved it.\" Then: \"But those are no excuses.\" AP writes: \"Both sides had chances in a busy second half but it remained goalless and the point was enough for Bayern to edge a point ahead of Borussia Dortmund.\" That is the table's view. The chances say Köln deserved more."
+      "text": "Steve Douglas of AP writes: \"City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.\" FotMob agrees on one thing. It rates Anderson 8.1, the highest of any player. The lowest rating among City's starters is Haaland, on 6.5. His shots explain it: 4 attempts, 1 on target, no goal. So, did Maresca fix the avoidable goals? Only in part. Fulham got little, yet one shot still went in. We have no post-match words from either coach, so we cannot hear how he read it."
     },
     {
       "key": "scene_09",
-      "text": "The lesson is simple. Holding the ball is not the same as making chances that matter. And a compact side that breaks fast can cost the ball-holders points. For context, Leicester in 2015/16 averaged 42.5 percent possession and won the league with compact defending and direct attacks, in StatsBomb data. Köln had 28 percent here. Before the match, Wagner said Köln would need some luck. The numbers suggest the luck went Bayern's way. Was the draw fair? Tell us below, and subscribe for the next match."
+      "text": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance. At the other end, City's 1.88 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over. So here is the question for the comments. Was Muniz's goal an avoidable goal, or just football? Tell us below. And if you like football told as a story, subscribe."
     },
     {
       "key": "short_1",
-      "text": "Jonathan Tah scored nothing, and still got the best rating of the night: 8.3. He won all 4 of his ground duels. He also made 6 defensive actions and 2 clearances. On the ball he was just as tidy: 65 of 68 passes found a team-mate, 9 of them into the final third. Bayern were on top in 83% of first-half minutes and 70% of the second. Tah's calm passing fitted that control. The rating cannot show everything, though. Köln still scored at minute 12 and the match ended 1-1. Is a defender's 8.3 enough on a night like that? Full story on the channel."
+      "text": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.00 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel."
     },
     {
       "key": "short_2",
-      "text": "Bayern had 72% of the ball, but Köln had the better chances. Minute 12: Saïd El Mala, 20, named in Germany's World Cup squad this summer, sets up Mikey Moore on a fast break, and Köln lead 1-0. Minute 51: another break, Moore again, and Jonas Urbig saves it. Moore's two shots were worth 1.43 expected goals, which is what an average finisher would score from them. Köln's chances added up to 1.99 expected goals, all from open play. Bayern's added up to 1.07. Replayed 20,000 times, Köln win 64%. Kompany said Köln deserved the result. Can a team with 28% of the ball keep doing this? Full story on the channel."
+      "text": "City created 1.88 expected goals. Fulham created 0.72. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.89 goals below what their chances suggest. Replay these chances 20,000 times and City win 70%, draw 20%, Fulham win 9%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel."
     }
   ],
-  "characters": 5674
+  "characters": 5704
 }
