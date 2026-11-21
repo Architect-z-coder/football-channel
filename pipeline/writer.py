@@ -56,6 +56,17 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    prevented. Needs the diag_* facts.
 - {"type": "result_odds"}                       -> the chances replayed 20,000 times: win / draw / win %
                                                    (fact diag_sim_result).
+- {"type": "tactics_board", "team": "home"|"away"|"both", "kicker": str, "title": str,
+   "steps": [{"word": "<a word from this shot's text>", "side": "home"|"away",
+              "shirts": [shirt numbers], "label": "BACK FOUR"}]}
+                                                -> a tilted tactics board of the REAL starting line-ups
+                                                   (pack "lineups": formation, shirt numbers, positions).
+                                                   Each step lights a group of players with a short
+                                                   capital label exactly when its word is spoken. Use it
+                                                   to explain a shape or a plan ("the back three", "five in
+                                                   midfield", "three behind Kane"). Only the starting
+                                                   formation is real: never draw movement, runs or
+                                                   positions the data does not have.
 - {"type": "goal_replay", "minute": int}        -> animated replay of one goal on a 2D pitch: where the
                                                    shot came from, where it went in, scorer, assist, xG.
                                                    "minute" = the goal's minute exactly as in the pack

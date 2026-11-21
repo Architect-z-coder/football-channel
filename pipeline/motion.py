@@ -119,6 +119,18 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
                 start = int(n / total_words * (frames - 15))
             frm = 0 if not shots else max(start - 4, shots[-1]["from"] + 20)
             vis = dict(sh.get("visual") or {})
+            if vis.get("type") == "tactics_board":     # highlight steps land on their spoken word
+                toks = [_re2.sub(r"[^a-z0-9]", "", w.lower()) for w in (sh.get("text") or "").split()]
+                ws = word_starts[n:n + k] if word_starts else None
+                for st in vis.get("steps") or []:
+                    key = _re2.sub(r"[^a-z0-9]", "", str(st.get("word", "")).lower())
+                    j = toks.index(key) if key in toks else None
+                    if j is not None and ws and len(ws) == len(toks):
+                        st["from"] = max(0, int(ws[j] * FPS) - frm)
+                    elif j is not None:
+                        st["from"] = j * 9
+                    else:
+                        st.setdefault("from", 30 * (1 + (vis.get("steps") or []).index(st)))
             if vis.get("type") == "press_cut":
                 vis["hl"] = _quote_frames(pack, vis, (sh.get("text") or "").split(),
                                           word_starts[n:n + k] if word_starts else None, frm)

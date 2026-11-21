@@ -1,6 +1,7 @@
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
 import { PressCut } from "./Newspaper";
+import { TacticsBoard } from "./TacticsBoard";
 import { XgExplainer, DiagnosisFunnel, ResultOdds } from "./Diagnosis";
 
 // ---------- helpers ----------
@@ -949,6 +950,7 @@ const PhotoCard = ({ visual, props, scene }) => {
 };
 
 const MAP = {
+  tactics_board: TacticsBoard,
   xg_explainer: XgExplainer,
   diagnosis: DiagnosisFunnel,
   result_odds: ResultOdds,
