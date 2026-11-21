@@ -324,6 +324,27 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
                                 "rating": round(float(perf["rating"]), 1),
                                 "started": p in t.get("starters", []),
                                 "subbed_off": any(e.get("type") == "subOut" for e in subs)})
+    # substitutions with their minute (who came on, who went off): for the momentum graph
+    changes = []
+    for side, team in teams:
+        t = lineup.get(f"{side}Team") or {}
+        for p in t.get("starters", []) + t.get("subs", []):
+            for e in (p.get("performance") or {}).get("substitutionEvents") or []:
+                try:
+                    minute = int(str(e.get("time", "")).split("+")[0].strip("'"))
+                except ValueError:
+                    continue
+                changes.append({"side": side, "team": team, "minute": minute, "player": p.get("name"),
+                                "type": "on" if e.get("type") == "subIn" else "off"})
+    if changes:
+        pairs = {}
+        for c in changes:
+            pairs.setdefault((c["side"], c["minute"]), {"side": c["side"], "team": c["team"], "minute": c["minute"],
+                                                         "on": [], "off": []})[c["type"]].append(c["player"])
+        pack["subs"] = sorted(pairs.values(), key=lambda x: x["minute"])
+        for i, s_ in enumerate(pack["subs"], 1):
+            add(f"sub_{i}", f"Substitution ({s_['team']}, minute {s_['minute']})",
+                {"minute": s_["minute"], "team": s_["team"], "on": ", ".join(s_["on"]), "off": ", ".join(s_["off"])})
     if ratings:
         pack["ratings"] = sorted(ratings, key=lambda r: -r["rating"])
         starters = [r for r in ratings if r["started"]]

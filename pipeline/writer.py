@@ -67,6 +67,18 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    midfield", "three behind Kane"). Only the starting
                                                    formation is real: never draw movement, runs or
                                                    positions the data does not have.
+- {"type": "threat_map", "side": "home"|"away", "player": "<exact name, optional>", "kicker": str, "title": str}
+                                                -> where one team's threat came from: its shots appear in
+                                                   time order on the attacking half, sized by xG and
+                                                   coloured by type (fast break / open play / set piece),
+                                                   then the share of xG per channel (left / centre /
+                                                   right). Use it for "where the danger came from" and,
+                                                   from the defender's side, "the weakness they exposed"
+                                                   (facts diag_<side>_xg_by_channel / _by_type /
+                                                   _main_channel). Left/right are the ATTACKER'S left/right.
+                                                   With "player": only that player's shots (where HE was
+                                                   dangerous). We have no heat maps or positions: never
+                                                   call it a heat map or say where a player was.
 - {"type": "goal_replay", "minute": int}        -> animated replay of one goal on a 2D pitch: where the
                                                    shot came from, where it went in, scorer, assist, xG.
                                                    "minute" = the goal's minute exactly as in the pack
@@ -77,7 +89,8 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                 -> 4-6 key moments on an animated timeline (goals, red
                                                    cards, big misses, substitutions), text 2-6 words each,
                                                    all from the pack. Ideal for the cold open.
-- {"type": "momentum"}                          -> FotMob's minute-by-minute momentum graph with the goals
+- {"type": "momentum"}  (substitutions are marked on it at their minute: use it to show whether a
+                          change turned the game, as our reading backed by the momentum and the sub_* facts)                          -> FotMob's minute-by-minute momentum graph with the goals
                                                    marked. Only if the pack says "momentum_available".
 - {"type": "history_lens", "lens": str, "metrics": [str, ...]}
                                                 -> a famous team's per-match numbers beside a map of

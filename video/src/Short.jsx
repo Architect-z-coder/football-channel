@@ -13,7 +13,7 @@ const END = 45; // frames of the closing card
 // how much to zoom each 16:9 graphic so it fills the phone width (content widths differ by type)
 const ZOOM = { goal_replay: 0.6, key_moments: 0.62, lineups: 0.56, player_ratings: 0.62, quote_card: 0.62, momentum: 0.66, shot_map: 1.1, key_number: 1.0, scoreline: 0.78, halftime_fulltime: 0.78, stat_bars: 0.64,
   xg_timeline: 0.66, table_snapshot: 0.6, form_compare: 0.62, history_lens: 0.62,
-  diagnosis: 0.66, result_odds: 0.68, xg_explainer: 0.6, tactics_board: 1 };
+  diagnosis: 0.66, result_odds: 0.68, xg_explainer: 0.6, tactics_board: 1, threat_map: 1 };
 const BOX_TOP = 650, BOX_H = 820;
 
 const VBackground = () => {

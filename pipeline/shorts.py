@@ -10,7 +10,7 @@ from . import factcheck, voice
 from .common import ai_pack, log, write_json
 from .llm import ask_json
 
-VISUALS = ["goal_replay", "diagnosis", "result_odds", "tactics_board", "quote_card", "lineups", "player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
+VISUALS = ["goal_replay", "diagnosis", "result_odds", "tactics_board", "threat_map", "quote_card", "lineups", "player_ratings", "momentum", "key_number", "scoreline", "halftime_fulltime", "stat_bars", "shot_map", "xg_timeline",
            "table_snapshot", "form_compare", "history_lens"]
 
 SYSTEM = f"""You write 2 YouTube Shorts about one football match for a faceless storytelling channel.

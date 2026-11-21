@@ -2,6 +2,7 @@ import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, us
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
 import { PressCut } from "./Newspaper";
 import { TacticsBoard } from "./TacticsBoard";
+import { ThreatMap } from "./ThreatMap";
 import { XgExplainer, DiagnosisFunnel, ResultOdds } from "./Diagnosis";
 
 // ---------- helpers ----------
@@ -636,6 +637,20 @@ const Momentum = ({ props, scene }) => {
             <text y={7} textAnchor="middle" fontFamily={BODY} fontWeight={800} fontSize={18} fill={C.bg}>⚽</text>
           </g>
         ))}
+        {(props.subs || []).filter((c) => c.minute <= reveal).map((c, i) => {
+          const last = (n) => (n || "").split(" ").slice(-1)[0];
+          const home = c.side === "home";
+          return (
+            <g key={`s${i}`} transform={`translate(${x(c.minute)}, 0)`}>
+              <line y1={home ? 40 : MID} y2={home ? MID : H - 40} stroke={home ? C.home : C.away} strokeWidth="2"
+                    strokeDasharray="6 6" opacity="0.8" />
+              <text y={home ? 34 - (i % 2) * 26 : H - 18 + (i % 2) * 26} textAnchor="middle" fontFamily={BODY}
+                    fontWeight={700} fontSize={19} fill={home ? C.home : C.away}>
+                {`${c.minute}' ⇄ ${c.on.map(last).join(", ")}`}
+              </text>
+            </g>
+          );
+        })}
         {[0, 45, 90].map((m) => (
           <text key={m} x={x(m)} y={H + 34} textAnchor="middle" fontFamily={BODY} fontWeight={600}
                 fontSize={24} fill={C.muted}>{m}'</text>
@@ -950,6 +965,7 @@ const PhotoCard = ({ visual, props, scene }) => {
 };
 
 const MAP = {
+  threat_map: ThreatMap,
   tactics_board: TacticsBoard,
   xg_explainer: XgExplainer,
   diagnosis: DiagnosisFunnel,

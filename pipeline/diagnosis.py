@@ -79,12 +79,32 @@ def add(pack: dict) -> dict:
                 add_fact(f"diag_{keeper}_keeper_prevented",
                          f"{A if keeper == 'away' else H} goalkeeper: goals prevented (xGOT faced minus goals conceded from shots)",
                          round(r["xgot"] - r["goals"], 2))
+        # where the threat came from: channel (seen from the attacker) and type of attack
+        sit_name = lambda x: ("fast break" if x.get("situation") == "FastBreak" else
+                              "set piece" if x.get("situation") in SET_PIECES else "open play")
+        # FotMob shot y: high = the attacker's LEFT (checked against line-ups: a left winger shoots at y ~0.7)
+        chan = lambda x: "right" if x["y"] < 1 / 3 else "left" if x["y"] > 2 / 3 else "centre"
+        threat = {}
+        for side, team in (("home", H), ("away", A)):
+            s_ = [x for x in shots if x["side"] == side]
+            tot = sum(x["xg"] for x in s_) or 1
+            by_c = {c: round(sum(x["xg"] for x in s_ if chan(x) == c), 2) for c in ("left", "centre", "right")}
+            by_t = {t: round(sum(x["xg"] for x in s_ if sit_name(x) == t), 2) for t in ("fast break", "open play", "set piece")}
+            n_t = {t: sum(1 for x in s_ if sit_name(x) == t) for t in ("fast break", "open play", "set piece")}
+            threat[side] = {"by_channel": by_c, "by_type": by_t, "shots_by_type": n_t}
+            add_fact(f"diag_{side}_xg_by_channel", f"{team}: xG by channel, seen from the attacker (left / centre / right)",
+                     f"{by_c['left']} / {by_c['centre']} / {by_c['right']}")
+            add_fact(f"diag_{side}_xg_by_type", f"{team}: xG by type of attack (fast break / open play / set piece), shots in brackets",
+                     f"{by_t['fast break']} ({n_t['fast break']}) / {by_t['open play']} ({n_t['open play']}) / {by_t['set piece']} ({n_t['set piece']})")
+            big = max(by_c, key=by_c.get)
+            add_fact(f"diag_{side}_main_channel", f"{team}: channel that produced most xG, and its share",
+                     f"{big} ({round(100 * by_c[big] / tot)}%)")
         add_fact("diag_sim_result", f"With these chances, replayed 20,000 times: {H} win / draw / {A} win (%), own goals not counted",
                  f"{hw} / {dr} / {aw}")
         if og_home or og_away:
             add_fact("diag_own_goals", f"Own goals: for {H} / for {A}", f"{og_home} / {og_away}")
         pack["facts"] += facts
-        pack["diagnosis"] = {"home": res["home"], "away": res["away"], "sim": [hw, dr, aw],
+        pack["diagnosis"] = {"home": res["home"], "away": res["away"], "sim": [hw, dr, aw], "threat": threat,
                              "own_goals": [og_home, og_away]}
         log.info("Diagnosis: %s xG %.2f (xGOT %s, %d goals), %s xG %.2f; sim %d/%d/%d", H, res["home"]["xg"],
                  res["home"]["xgot"], res["home"]["goals"], A, res["away"]["xg"], hw, dr, aw)
