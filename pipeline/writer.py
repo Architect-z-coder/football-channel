@@ -186,6 +186,10 @@ HARD RULES
 5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
    numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
 5d. Explain a term (xG) BEFORE you first use it, in one short sentence.
+5e. Use these pictures when the pack allows: one "tactics_board" where the plan or line-ups are told
+   (needs line-ups), one "threat_map" in the diagnosis (needs shots; side = the team whose danger
+   explains the result, add "player" only for the one player who made the difference), and a
+   "momentum" shot when a substitution changed the game. Say the shape of the danger in words too.
 6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a
    short chapter title in story words (2-5 words, e.g. "The night Dumfries won't forget"), not a stat.
 7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
