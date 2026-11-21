@@ -18,12 +18,12 @@ def _numbers_in(value) -> list[float]:
     if isinstance(value, bool) or value is None:
         return []
     if isinstance(value, (int, float)):
-        return [float(value)]
+        return [float(value), abs(float(value))]   # "-0.89" is said as "0.89 fewer"
     if isinstance(value, dict):
         return [n for v in value.values() for n in _numbers_in(v)]
     if isinstance(value, list):
         return [n for v in value for n in _numbers_in(v)]
-    return [float(m) for m in NUM.findall(str(value))]
+    return [x for m in NUM.findall(str(value)) for x in (float(m), abs(float(m)))]
 
 
 def allowed_numbers(pack: dict) -> set[float]:
