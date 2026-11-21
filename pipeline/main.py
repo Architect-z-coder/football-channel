@@ -133,7 +133,8 @@ def show_data(pick: str | None) -> int:
         "photos": [{k: v for k, v in ph.items() if k != "path"} for ph in found],
         "updated": now(), "fixture_id": pack.get("fixture_id"), "home": pack["home"],
         "away": pack["away"], "competition": pack["competition"], "source": pack.get("source"),
-        "facts": pack["facts"], "shots": shots, "player_stats": pack.get("player_stats") or []})
+        "facts": pack["facts"], "shots": shots, "player_stats": pack.get("player_stats") or [],
+        "lineups": pack.get("lineups") or {}})
     import os
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:

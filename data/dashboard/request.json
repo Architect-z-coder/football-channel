@@ -1,1 +1,6 @@
-{"id": "bay-kol-prep-20261121080046", "mode": "prepare", "match": "Bayern Koln", "look_back_days": ""}
+{
+  "id": "bay-kol-lineups",
+  "mode": "data-only",
+  "match": "fotmob:5881226",
+  "look_back_days": ""
+}
