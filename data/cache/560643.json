@@ -1,0 +1,373 @@
+{
+  "saved": "2026-11-21T14:33:27Z",
+  "press": [
+    {
+      "speaker": "Enzo Maresca",
+      "role": "Man City head coach",
+      "team": "Man City",
+      "quote": "Still from the Forest game, we have Matheus and Khusa are still a doubt for tomorrow",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "Manchester City official website (pre-match press conference, 20 Nov 2026)",
+      "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+    },
+    {
+      "speaker": "Enzo Maresca",
+      "role": "Man City head coach",
+      "team": "Man City",
+      "quote": "Maresca said Antoine Semenyo (knee injury) is the only other confirmed absentee. Matheus Nunes and Abdukodir Khusanov are doubtful. This is the outlet's summary, not a direct quote.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "Yahoo Sports (press conference report)",
+      "url": "https://sports.yahoo.com/articles/enzo-maresca-press-conference-two-133700859.html"
+    },
+    {
+      "speaker": "Enzo Maresca",
+      "role": "Man City head coach",
+      "team": "Man City",
+      "quote": "Maresca said Marc Guéhi, who did not join England because of a small issue against Forest, is expected to be available. Reported by BBC Sport via MSN.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "selection",
+      "source": "MSN (BBC Sport key lines from news conference)",
+      "url": "https://www.msn.com/en-us/news/other/maresca-on-team-fitness-midfield-balance-and-facing-fulham/ar-AA2hRboU?ocid=BingNewsSerp"
+    },
+    {
+      "speaker": "Enzo Maresca",
+      "role": "Man City head coach",
+      "team": "Man City",
+      "quote": "Maresca spoke of the need for balance between attacking and defending. The club's reporter at the Etihad said this pointed to a Bouaddi–Anderson double pivot. The double pivot is the reporter's reading, not Maresca's own words.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Manchester City official website (matchday commentary, Jack Mumford)",
+      "url": "https://www.mancity.com/matchday/fixtures/mens/2026/premier-league/man-city-v-fulham-21-nov-2026?page=Commentary"
+    },
+    {
+      "speaker": "Enzo Maresca",
+      "role": "Man City head coach",
+      "team": "Man City",
+      "quote": "I didn't know that it's 20 games, hopefully 21",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "result",
+      "source": "Yahoo Sports (AFP report of pre-match press conference)",
+      "url": "https://sports.yahoo.com/articles/maresca-says-struggling-man-city-155026821.html"
+    },
+    {
+      "speaker": "Álvaro Arbeloa",
+      "role": "Fulham head coach",
+      "team": "Fulham",
+      "quote": "Arbeloa said Fulham's defending is solid at the moment but they must improve their attacking efficiency and chance-taking. He said City remain one of the best teams in the world, so Fulham must play their best to win away. This is the outlet's summary, not a direct quote.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "AllFootballApp (summary of Fulham pre-match press conference)",
+      "url": "https://www.allfootballapp.com/articles/6016726-arbeloa-city-lose-three-row-they"
+    },
+    {
+      "speaker": "Álvaro Arbeloa",
+      "role": "Fulham head coach",
+      "team": "Fulham",
+      "quote": "Arbeloa said Fulham need character, discipline and courage at the Etihad. He asked his players not to dwell on the poor head-to-head record against City. This is the outlet's summary, not a direct quote.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Aktualita (citing Fulham's official website press conference)",
+      "url": "https://aktualita.co/en/sports/man-city-vs-fulham-match-preview"
+    },
+    {
+      "speaker": "Álvaro Arbeloa",
+      "role": "Fulham head coach",
+      "team": "Fulham",
+      "quote": "It’s another point; we wanted to win, but we need to keep working hard.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "result",
+      "source": "VAVEL USA live blog (the post doesn't show whether this was said at half-time or full time, so check before use)",
+      "url": "https://www.vavel.com/en-us/soccer/2026/11/21/1279936-manchester-city-vs-fulham-live-score-premier-league.html"
+    }
+  ],
+  "context": {
+    "teams": [
+      {
+        "team": "Man City",
+        "coach": "Enzo Maresca",
+        "appointed": "29 June 2026 (three-year contract; first press conference followed in July)",
+        "replaced": "Pep Guardiola",
+        "replaced_reason": "Guardiola stepped down after a 10-year spell at the Etihad (Premier League site). Al Jazeera dates his departure to May 2026.",
+        "institution_quote": {
+          "quote": "We know his personality and his vision for the way football should be played.",
+          "speaker": "Ferran Soriano, Man City chief executive",
+          "source": "Manchester City official site, 'City appoint Enzo Maresca as manager'",
+          "url": "https://www.mancity.com/news/mens/enzo-maresca-manchester-city-manager-63918331"
+        },
+        "coach_promise": {
+          "quote": "I'm not here to copy someone, I'm here to do my job, to install my football, the way I see football.",
+          "source": "Maresca, first press conference as City manager (Yahoo Sports, carrying the club's report)",
+          "url": "https://sports.yahoo.com/articles/maresca-says-won-t-copy-213000110.html"
+        },
+        "key_choices": [
+          {
+            "text": "Maresca dropped Guardiola's system of players voting for the captain. He chose to appoint the leadership group himself.",
+            "source": "The Daily Cannon",
+            "url": "https://dailycannon.com/2026/08/man-city-captain/"
+          },
+          {
+            "text": "He named Rúben Dias, Erling Haaland, Marc Guéhi and Gianluigi Donnarumma as City's four captains for 2026/27.",
+            "source": "Read Man City",
+            "url": "https://readmancity.com/2026/09/04/man-city-captains-maresca-dias-haaland-guehi-donnarumma/"
+          },
+          {
+            "text": "Maresca left Phil Foden out of the four-man captaincy group. He said Guéhi had been captain at Palace and Donnarumma captains Italy.",
+            "source": "Goal",
+            "url": "https://www.goal.com/en-gb/lists/enzo-maresca-phil-foden-man-city-captain/blt373d22feacdeb18c"
+          },
+          {
+            "text": "After pre-season he said 18-year-old winger Ryan McAidoo would likely stay with the first team this season. He described him as 'the kind of winger I love'.",
+            "source": "Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/enzo-maresca-delays-manchester-city-143541631.html"
+          },
+          {
+            "text": "He said three academy players would be part of his 2026/27 first-team squad, alongside around 20 senior players.",
+            "source": "City Xtra",
+            "url": "https://cityxtra.co.uk/news/enzo-maresca-confirms-manchester-city-academy-trio-to-join-2026-27-first-team-squad"
+          }
+        ],
+        "links": [
+          {
+            "text": "This is Maresca's third spell at City. He was Elite Development Squad coach (won the PL2 title in 2020/21), then Guardiola's assistant from June 2022, and is now head coach. He left Chelsea on 1 January 2026.",
+            "source": "Premier League",
+            "url": "https://www.premierleague.com/en/news/4032682/enzo-maresca"
+          },
+          {
+            "text": "Chelsea said Maresca asked to leave mid-contract after being told of the City opportunity. Maresca said he 'unexpectedly and abruptly resigned' in December 2025, and that this was neither his intention nor his wish. Chelsea have since appointed Xabi Alonso, who was replaced at Real Madrid by Fulham's Arbeloa.",
+            "source": "Al Jazeera",
+            "url": "https://www.aljazeera.com/sports/2026/6/29/enzo-maresca-appointed-man-city-manager-to-succeed-pep-guardiola"
+          }
+        ]
+      },
+      {
+        "team": "Fulham",
+        "coach": "Álvaro Arbeloa",
+        "appointed": "7 July 2026 (three-year contract to summer 2029)",
+        "replaced": "Marco Silva",
+        "replaced_reason": "Silva left Fulham at the end of his contract to take charge of Benfica, after five years at the club (Yahoo Sports; beIN Sports).",
+        "institution_quote": {
+          "quote": "I loved hearing that from Álvaro, as well as his intent on playing attacking football.",
+          "speaker": "Shahid Khan, Fulham owner",
+          "source": "Fulham FC official site, 'Álvaro Arbeloa appointed Fulham Head Coach'",
+          "url": "https://www.fulhamfc.com/news/2026/july/07/alvaro-arbeloa-appointed-fulham-head-coach/"
+        },
+        "coach_promise": {
+          "quote": "We want to be a really offensive team, really brave with the ball, and aggressive when we lose it, and ready to attack.",
+          "source": "Arbeloa, as quoted by CoachNotes (a blog; the date and occasion of the quote are not given, and it may not be from his presentation). His official appointment statement said 'I am sure we are going to enjoy an incredible journey together'.",
+          "url": "https://coachnotes.co.uk/blogs/coaching-analysis/alvaro-arbeloa"
+        },
+        "key_choices": [
+          {
+            "text": "In his first league game, a 3-2 home defeat to Chelsea, Arbeloa said Fulham would keep pressing high and playing in the opponent's half 'no matter who is in front of us'.",
+            "source": "Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/arbeloa-defends-system-despite-defeat-160037040.html"
+          },
+          {
+            "text": "After the Crystal Palace defeat he shifted towards a more balanced approach on transitions. Fulham then drew 0-0 at Liverpool.",
+            "source": "CoachNotes",
+            "url": "https://coachnotes.co.uk/blogs/coaching-analysis/alvaro-arbeloa"
+          },
+          {
+            "text": "Arbeloa calls Calvin Bassey 'one of my captains'. Bassey also wore the armband in Fulham's last two pre-season games.",
+            "source": "Yahoo Sports / Afrik-Foot",
+            "url": "https://sports.yahoo.com/articles/fulham-boss-alvaro-arbeloa-delivers-080427290.html"
+          },
+          {
+            "text": "Arbeloa has backed younger attackers such as Bobb, Josh King and Gonzalo García, rather than the experienced forwards Fulham leaned on last season.",
+            "source": "Dave.sport",
+            "url": "https://dave.sport/news/alvaro-arbeloa-fulham-turnaround/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Arbeloa took over Real Madrid's first team in January 2026 after Xabi Alonso left. Alonso is now Chelsea manager, and Arbeloa's Fulham opened the season against him.",
+            "source": "beIN Sports",
+            "url": "https://prod.beinsports.com/en-us/soccer/premier-league/articles/official-%C3%A1lvaro-arbeloa-named-fulham-head-coach-2026-07-08"
+          },
+          {
+            "text": "José Mourinho returned to Real Madrid to fill the"
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "outlet": "BBC Sport",
+      "author": "Shamoon Hafez",
+      "date": "2026-11-21",
+      "url": "https://sports.yahoo.com/articles/anderson-steps-berge-impresses-player-142135703.html",
+      "headline": "Anderson steps up, Berge impresses - player ratings for Man City v Fulham",
+      "quote": "Elliot Anderson's stunning second-half volley rescued a point against Fulham, but Manchester City extend their winless run to four games in the Premier League.",
+      "quote_en": "",
+      "point": "Anderson was City's best player and his equalising volley saved a point, but the draw extended City's winless league run to four games.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_1_para.png",
+        "head": "press_1_head.png"
+      },
+      "rects": [
+        {
+          "x": 0,
+          "y": 4,
+          "w": 41,
+          "h": 21
+        },
+        {
+          "x": 46,
+          "y": 4,
+          "w": 91,
+          "h": 21
+        },
+        {
+          "x": 142,
+          "y": 4,
+          "w": 70,
+          "h": 21
+        },
+        {
+          "x": 217,
+          "y": 4,
+          "w": 97,
+          "h": 21
+        },
+        {
+          "x": 319,
+          "y": 4,
+          "w": 48,
+          "h": 21
+        },
+        {
+          "x": 372,
+          "y": 4,
+          "w": 65,
+          "h": 21
+        },
+        {
+          "x": 442,
+          "y": 4,
+          "w": 10,
+          "h": 21
+        },
+        {
+          "x": 457,
+          "y": 4,
+          "w": 43,
+          "h": 21
+        },
+        {
+          "x": 505,
+          "y": 4,
+          "w": 60,
+          "h": 21
+        },
+        {
+          "x": 570,
+          "y": 4,
+          "w": 63,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 34.046875,
+          "w": 28,
+          "h": 21
+        },
+        {
+          "x": 33,
+          "y": 34.046875,
+          "w": 98,
+          "h": 21
+        },
+        {
+          "x": 136,
+          "y": 34.046875,
+          "w": 32,
+          "h": 21
+        },
+        {
+          "x": 173,
+          "y": 34.046875,
+          "w": 58,
+          "h": 21
+        },
+        {
+          "x": 236,
+          "y": 34.046875,
+          "w": 39,
+          "h": 21
+        },
+        {
+          "x": 280,
+          "y": 34.046875,
+          "w": 57,
+          "h": 21
+        },
+        {
+          "x": 342,
+          "y": 34.046875,
+          "w": 27,
+          "h": 21
+        },
+        {
+          "x": 374,
+          "y": 34.046875,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "x": 398,
+          "y": 34.046875,
+          "w": 36,
+          "h": 21
+        },
+        {
+          "x": 439,
+          "y": 34.046875,
+          "w": 53,
+          "h": 21
+        },
+        {
+          "x": 497,
+          "y": 34.046875,
+          "w": 14,
+          "h": 21
+        },
+        {
+          "x": 516,
+          "y": 34.046875,
+          "w": 28,
+          "h": 21
+        },
+        {
+          "x": 549,
+          "y": 34.046875,
+          "w": 64,
+          "h": 21
+        },
+        {
+          "x": 0,
+          "y": 64.09375,
+          "w": 60,
+          "h": 21
+        }
+      ],
+      "box": {
+        "w": 640,
+        "h": 90.140625
+      },
+      "verified": true
+    }
+  ]
+}
