@@ -75,4 +75,14 @@ def ai_pack(pack: dict) -> dict:
         out["momentum_note"] = ("FotMob momentum: percent of minutes in which the HOME team was on top "
                                 "(the rest the away team)")
         out["momentum_home_on_top_pct"] = {"first_half": share(0, 46), "second_half": share(46, 200)}
+        # around each substitution: 15 minutes before vs 15 minutes after (only if both windows have data)
+        around = []
+        for s_ in pack.get("subs") or []:
+            m = s_["minute"]
+            b, a = share(max(0, m - 15), m), share(m, m + 15)
+            if b is not None and a is not None:
+                around.append({"minute": m, "team": s_["team"], "on": ", ".join(s_["on"]),
+                               "home_on_top_pct_15_before": b, "home_on_top_pct_15_after": a})
+        if around:
+            out["momentum_around_subs"] = around
     return out

@@ -34,6 +34,7 @@ def allowed_numbers(pack: dict) -> set[float]:
     for shot in pack.get("shots", []):  # Understat shot list (minute, xG)
         allowed.update(_numbers_in({"minute": shot.get("minute"), "xg": shot.get("xg")}))
     allowed.update(_numbers_in(ai_pack(pack).get("momentum_home_on_top_pct", {})))
+    allowed.update(_numbers_in(ai_pack(pack).get("momentum_around_subs", [])))
     allowed.update(_numbers_in(pack.get("press", [])))
     allowed.update(_numbers_in([p.get("stats") for p in pack.get("player_stats") or []]))
     allowed.update(_numbers_in([{k: r.get(k) for k in ("quote", "quote_en", "headline", "point")}

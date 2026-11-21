@@ -190,6 +190,10 @@ HARD RULES
    (needs line-ups), one "threat_map" in the diagnosis (needs shots; side = the team whose danger
    explains the result, add "player" only for the one player who made the difference), and a
    "momentum" shot when a substitution changed the game. Say the shape of the danger in words too.
+   Whether a change shifted the game: use only "momentum_around_subs" (share of minutes the home team
+   was on top, 15 minutes before vs after). No entry for a change -> do not claim anything about it.
+5f. League table: home_position / away_position are the places AFTER this match only. Never say a team
+   "stays", "climbs", "drops" or "moves": the pack has no earlier table. Say "City are third".
 6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a
    short chapter title in story words (2-5 words, e.g. "The night Dumfries won't forget"), not a stat.
 7. For each scene list the fact ids you used in "fact_ids" (use "shots" for numbers from the shot list).
