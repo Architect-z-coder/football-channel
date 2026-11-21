@@ -1,11 +1,11 @@
 {
-  "request_id": "mci-ful-prepare-2",
+  "request_id": "mci-ful-prepare-3",
   "mode": "prepare",
   "match": "Manchester City Fulham",
   "trigger": "push",
-  "state": "failed",
-  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44914917611",
-  "started": "2026-11-21T14:37:53Z",
-  "finished": "2026-11-21T14:43:06Z",
-  "reason": "Script failed fact-checking after retries:\n- Scene 7 narration: number 0.89 is not in the data pack."
+  "state": "running",
+  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/44915467058",
+  "started": "2026-11-21T14:44:18Z",
+  "finished": null,
+  "reason": null
 }
