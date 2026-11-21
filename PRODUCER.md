@@ -31,6 +31,11 @@ GitHub does the heavy work (data, research, script, render); the producer adds t
    "duration": durationSeconds, "starts": [start of each word, in order]}]}`.
    The number of starts must equal the number of words in `text` (split on spaces); check before committing.
    Never change the text. One call per item, no retries of a call that succeeded.
+6b. **Match music:** make one original instrumental for this match with Everygen `generate_audio`
+   (model lyria-3.5): instrumental only, completely original melody (never quote or imitate a real song,
+   club anthem or chant), restrained and steady under a narrator, ~95 BPM, coloured by the two clubs'
+   or countries' musical character (e.g. Bavarian brass + stadium-chant rhythm; Cologne carnival).
+   Add it to config.yaml music.tracks as `{name: <slug>, kind: main, fixture: "<fixture_id>", url: <audioUrl>}`.
 7. **Render on GitHub:** if `youtube.upload_ready` in config.yaml is true, use `"mode": "full"` (uploads as
    PRIVATE); otherwise `"mode": "no-upload"` (files only, kept 14 days on the run page). Same match; commit
    the manifest and request.json, push; poll status (max 25 min). After a successful no-upload run, remove

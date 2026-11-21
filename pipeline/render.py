@@ -48,12 +48,15 @@ def assemble(images: list[Path], audios: list[Path], workdir: Path) -> tuple[Pat
 MUSIC_CACHE = ASSETS_DIR / "music" / "cache"
 
 
-def _music_track(kind: str, team: str = "") -> Path | None:
+def _music_track(kind: str, team: str = "", fixture: str = "") -> Path | None:
     """The bed for this video: tracks listed in config.yaml (music.tracks), downloaded once and cached.
     kind = "main" or "short"; a track whose "teams" list names the home team is preferred."""
     import requests
     from .common import load_config
-    tracks = [t for t in (load_config().get("music") or {}).get("tracks", []) if t.get("kind") == kind]
+    alltracks = (load_config().get("music") or {}).get("tracks", [])
+    # a track made for this exact match wins (used for the main video and its Shorts)
+    match = [t for t in alltracks if fixture and str(t.get("fixture")) == str(fixture)]
+    tracks = match or [t for t in alltracks if t.get("kind") == kind and not t.get("fixture")]
     if not tracks:
         local = sorted((ASSETS_DIR / "music").glob("*.mp3"))
         return random.choice(local) if local else None
@@ -82,11 +85,11 @@ def _duration(path: Path) -> float:
         return 0.0
 
 
-def add_music(src: Path, dst: Path, kind: str = "main", team: str = "") -> Path:
+def add_music(src: Path, dst: Path, kind: str = "main", team: str = "", fixture: str = "") -> Path:
     """Mix the music bed under the narration: it ducks while the voice speaks, fades in and out."""
     from .common import load_config
     mcfg = load_config().get("music") or {}
-    track = _music_track(kind, team) if mcfg.get("enabled", True) else None
+    track = _music_track(kind, team, fixture) if mcfg.get("enabled", True) else None
     if not track:
         src.rename(dst)
         return dst

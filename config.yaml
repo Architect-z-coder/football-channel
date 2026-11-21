@@ -94,3 +94,5 @@ music:
   tracks:
     - {name: doc_bed_1, kind: main, url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/91c03899-ec45-498a-8629-c364e9d9afb5.mp3"}
     - {name: short_bed_1, kind: short, url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/f937cb8c-71f7-446d-a9fb-90861147d204.mp3"}
+    # match themes: made for one match (Bavarian brass + terrace rhythm + Cologne carnival), used by its video and Shorts
+    - {name: bayern_koln_2026_11_20, kind: main, fixture: "fotmob-5881226", url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/16c25f3e-ea20-48fe-89b8-d6b0bed3857f.mp3"}
