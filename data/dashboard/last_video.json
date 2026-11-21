@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T23:38:21Z",
+  "updated": "2026-11-21T00:15:36Z",
   "home": "Bayern München",
   "away": "1. FC Köln",
   "competition": "Bundesliga",
@@ -10,7 +10,7 @@
     "72% possession, 17 shots, 1 point: Bayern 1-1 Köln"
   ],
   "minutes": 5.2,
-  "files": "20261120-bayern-m-nchen-1-fc-k-ln",
+  "files": "20261121-bayern-m-nchen-1-fc-k-ln",
   "uploaded": false,
   "youtube": null,
   "critic": null,
@@ -21,14 +21,14 @@
       "hook": "Tah: 8.3, best on the pitch",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-21"
+      "suggested_publish": "2026-11-22"
     },
     {
       "title": "Köln's fast breaks should have won it",
       "hook": "Two breaks. One goal. One point.",
       "format": "turning_point",
       "youtube": null,
-      "suggested_publish": "2026-11-22"
+      "suggested_publish": "2026-11-23"
     }
   ],
   "voice": "everygen:astro"
