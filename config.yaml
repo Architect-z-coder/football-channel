@@ -86,6 +86,13 @@ banned_topics:
   - injuries speculation
   - referees' or players' private lives
 
+sfx:
+  crowd_volume: 0.32      # stadium reactions under the voice (original sounds made with Everygen)
+  files:
+    crowd_ooh: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/seed-audio/9ead3b2f-0181-4638-a314-0b689a79b8ef.mp3"
+    crowd_roar: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/seed-audio/b9c1ea97-f989-4973-9e1a-437e28a9971e.mp3"
+    crowd_sing: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/seed-audio/99a56e6a-6e88-4d79-ad9e-d0542d7a0af5.mp3"
+
 music:
   enabled: true
   volume: 0.16          # bed level before ducking (the voice stays on top)

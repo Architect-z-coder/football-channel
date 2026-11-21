@@ -4,6 +4,7 @@ import {
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
 import { NameTags } from "./NameTag";
+import { Crowd, CrowdSinging } from "./Crowd";
 import { Headline } from "./Newspaper";
 import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
@@ -202,6 +203,7 @@ export const Match = (props) => {
           <Sequence key={scene.id} from={from} durationInFrames={scene.durationInFrames}>
             <SceneShell scene={scene} props={props} />
             {scene.audio ? <Audio src={staticFile(scene.audio)} /> : null}
+            <Crowd cues={scene.crowd} volume={props.crowdVolume} />
             <Audio src={staticFile("sfx/whoosh.wav")} volume={0.35} />
             {["key_number", "scoreline", "halftime_fulltime"].includes(scene.visual?.type) ? (
               <Sequence from={14}><Audio src={staticFile("sfx/hit.wav")} volume={0.45} /></Sequence>
@@ -211,6 +213,7 @@ export const Match = (props) => {
         from += scene.durationInFrames;
         return seq;
       })}
+      <CrowdSinging total={total} volume={props.crowdVolume} />
       <TopBar channel={props.channel} competition={props.competition} home={props.home}
               away={props.away} total={total} />
       <div style={{ position: "absolute", bottom: 26, right: 60, color: C.muted,

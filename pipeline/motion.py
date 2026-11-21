@@ -58,6 +58,42 @@ def _quote_frames(pack: dict, vis: dict, tokens: list[str], starts, shot_from: i
     return []
 
 
+import re as _re2
+
+_OOH = _re2.compile(r"^(saves?|saved|miss(es|ed)?|wide|post|crossbar|bar|blocked|denied|keeps?)$")
+_ROAR = _re2.compile(r"^(scores?|scored|equalises?|equalizes?|equaliser|winner)$")
+
+
+def crowd_cues(narration: str, starts, frames: int, visuals=()) -> list[dict]:
+    """Where a stadium 'ooh' (save, miss) or roar (goal) plays: at the spoken word, max 2 per scene."""
+    toks = narration.split()
+    if not starts or len(starts) != len(toks):
+        starts = [i / max(1, len(toks)) * frames / FPS for i in range(len(toks))]
+    cues, last = [], -999
+    for w, t in zip(toks, starts):
+        k = _re2.sub(r"[^a-z]", "", w.lower())
+        kind = "roar" if _ROAR.match(k) else "ooh" if _OOH.match(k) else None
+        f = int(t * FPS)
+        if kind and f - last > 4 * FPS and f + 30 < frames:
+            cues.append({"from": f, "kind": kind}); last = f
+        if len(cues) >= 2:
+            break
+    return cues
+
+
+def ensure_sfx(cfg: dict) -> None:
+    """Download the crowd sounds (made once with Everygen) into the video's public folder."""
+    import requests
+    for name, url in ((cfg.get("sfx") or {}).get("files") or {}).items():
+        dest = VIDEO_DIR / "public" / "sfx" / f"{name}.mp3"
+        if dest.exists():
+            continue
+        try:
+            r = requests.get(url, timeout=60); r.raise_for_status(); dest.write_bytes(r.content)
+        except Exception as e:
+            log.warning("Sound %s not downloaded (%s)", name, e)
+
+
 def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tuple[dict, list[float]]:
     run_dir = VIDEO_DIR / "public" / "run"
     if run_dir.exists():
@@ -101,6 +137,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
                                          for s, o in zip(scenes, offs)])
     for s, t in zip(scenes, tag_lists):
         s["tags"] = t
+        s["crowd"] = crowd_cues(s["narration"], s["wordStarts"], s["durationInFrames"])
     props = {
         "channel": cfg["channel"]["name"],
         "competition": pack["competition"],
@@ -116,6 +153,7 @@ def build_props(cfg: dict, script: dict, pack: dict, audios: list[Path]) -> tupl
         "photos": pack.get("photos") or [],
         "press": pack.get("press") or [],
         "reviews": pack.get("reviews") or [],
+        "crowdVolume": (cfg.get("sfx") or {}).get("crowd_volume", 0.32),
         "diagnosis": pack.get("diagnosis") or {},
         "goals": [f["value"] for f in pack["facts"] if f["id"].startswith("goal_") and isinstance(f["value"], dict)],
         "history": history.used_in(script),
@@ -139,6 +177,7 @@ def _remotion(composition: str, props_file: Path, out: Path) -> None:
 
 
 def render(cfg: dict, script: dict, pack: dict, audios: list[Path], workdir: Path):
+    ensure_sfx(cfg)
     props, durs = build_props(cfg, script, pack, audios)
     from .common import slugify as _slug
     press_dir = Path(__file__).resolve().parent.parent / "data" / "cache" / "press" / _slug(str(pack["fixture_id"]))
@@ -184,6 +223,8 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
     from . import nametags
     short_tags = nametags.tags_for(pack, [{"narration": short["narration"], "word_starts": word_starts,
                                            "frames": speak}])[0]
+    short_crowd = crowd_cues(short["narration"], word_starts, speak)
+    ensure_sfx(cfg)
     fake_script = {"scenes": [{"visual": short.get("visual", {})}]}
     props = {
         "channel": cfg["channel"]["name"], "competition": pack["competition"],
@@ -195,10 +236,11 @@ def render_short(cfg: dict, short: dict, pack: dict, audio: Path, outdir: Path) 
         "photos": pack.get("photos") or [], "press": pack.get("press") or [],
         "goals": [f["value"] for f in pack["facts"] if f["id"].startswith("goal_") and isinstance(f["value"], dict)],
         "history": history.used_in(fake_script),
+        "crowdVolume": (cfg.get("sfx") or {}).get("crowd_volume", 0.32),
         "scenes": [],
         "short": {"hook": short["hook"], "narration": short["narration"], "visual": short.get("visual", {}),
                   "audio": f"run/short_{short['id']}.mp3", "wordStarts": word_starts, "shots": shots,
-                  "tags": short_tags,
+                  "tags": short_tags, "crowd": short_crowd,
                   "durationInFrames": frames},
     }
     props_file = outdir / f"short_{short['id']}_props.json"
