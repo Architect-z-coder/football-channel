@@ -192,6 +192,10 @@ HARD RULES
    "momentum" shot when a substitution changed the game. Say the shape of the danger in words too.
    Whether a change shifted the game: use only "momentum_around_subs" (share of minutes the home team
    was on top, 15 minutes before vs after). No entry for a change -> do not claim anything about it.
+5g. Work rate ("player_form", form_* facts): distance, sprints and top speed over recent matches. Compare
+   the player with himself across those games, and say minutes played (fewer minutes = less distance).
+   A striker runs less than a midfielder by role: never call anyone lazy or say he "did not try". Say
+   what changed and leave the judgement as a question.
 5f. League table: home_position / away_position are the places AFTER this match only. Never say a team
    "stays", "climbs", "drops" or "moves": the pack has no earlier table. Say "City are third".
 6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a

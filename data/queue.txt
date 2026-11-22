@@ -4,4 +4,4 @@
 #   - the two team names, e.g.   Arsenal Chelsea
 #   - or the match number from the "list" run, e.g.   575383
 # Lines starting with # are ignored. If the queue is empty, nothing is made.
-Manchester City Fulham
+fotmob:5795522

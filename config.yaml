@@ -14,6 +14,7 @@ data_source: football-data
 # Add shot maps and xG from Understat (unofficial source; big five leagues only).
 # If Understat is unavailable, videos are made without shot data.
 fotmob: true          # extra post-match detail from FotMob match pages (no key)
+focus_players: ["Erling Haaland"]   # FotMob work-rate numbers over their last 5 matches (when they play)
 understat: true       # backup shot data if FotMob has none
 
 # How videos are drawn:

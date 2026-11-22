@@ -433,6 +433,10 @@ def _apply(pack: dict, data: dict, mid: int) -> dict:
         pack["momentum"] = mom
 
     pack["fotmob_id"] = mid
+    try:
+        _focus_form(pack, data, add)
+    except Exception as e:  # never stop a video for this extra
+        log.warning("Player form (last matches) skipped: %s", e)
     pack["source"] = pack.get("source", "") + " + FotMob"
     log.info("FotMob: match %s, %d facts, %s shots, momentum %s", mid, len(facts),
              len(pack.get("shots", [])) if added_shots else "no new", "yes" if mom else "no")
@@ -489,3 +493,78 @@ def build_pack(mid: int) -> dict:
     pack = _apply(pack, data, mid)
     pack["source"] = "FotMob"
     return pack
+
+
+# Work-rate numbers for chosen players (config.yaml fotmob.focus_players) across their recent matches.
+FORM_STATS = ["Minutes played", "Distance covered", "Running", "Sprinting", "Number of sprints", "Top speed",
+              "Touches", "Touches in opposition box", "Total shots", "Expected goals (xG)", "Goals",
+              "Duels won", "Recoveries"]
+
+
+def _plain(t: str) -> str:
+    import unicodedata
+    return unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower().strip()
+
+
+def _find_player(data: dict, name: str):
+    for p in ((data.get("content") or {}).get("playerStats") or {}).values():
+        if isinstance(p, dict) and _plain(name) in _plain(p.get("name")):
+            row = {}
+            for grp in p.get("stats") or []:
+                for label, st in ((grp or {}).get("stats") or {}).items():
+                    if label in FORM_STATS:
+                        val, tot = _stat_value(st)
+                        if val is not None:
+                            row[label] = f"{val}/{tot}" if tot else val
+            return p, row
+    return None, None
+
+
+def _form_match_ids(game: dict):
+    import re
+    for k in ("id", "matchId"):
+        if str(game.get(k) or "").isdigit():
+            return int(game[k])
+    m = re.search(r"(\d{6,})", str(game.get("linkToMatch") or game.get("pageUrl") or ""))
+    return int(m.group(1)) if m else None
+
+
+def _focus_form(pack: dict, data: dict, add) -> None:
+    from .common import load_config
+    names = load_config().get("focus_players") or []
+    form = (data.get("content", {}).get("matchFacts") or {}).get("teamForm") or []
+    if not names or len(form) != 2:
+        return
+    general = data.get("general", {})
+    home_id = (general.get("homeTeam") or {}).get("id")
+    if form[0] and form[0][0]:
+        log.info("teamForm game keys: %s", sorted(form[0][0].keys()))
+    for name in names:
+        p, today = _find_player(data, name)
+        if not p:
+            continue
+        side = 0 if p.get("teamId") == home_id else 1
+        games = []
+        for g in form[side][-5:]:
+            mid = _form_match_ids(g)
+            if not mid:
+                continue
+            try:
+                d = _get("matchDetails", {"matchId": mid})
+            except Exception as e:
+                log.warning("Form match %s not read: %s", mid, e)
+                continue
+            _, row = _find_player(d, name)
+            tt = g.get("tooltipText") or {}
+            games.append({"date": (d.get("general", {}).get("matchTimeUTCDate") or "")[:10],
+                          "match": f"{tt.get('homeTeam')} {tt.get('homeScore')}-{tt.get('awayScore')} {tt.get('awayTeam')}",
+                          "played": bool(row), "stats": row or {}})
+        games.append({"date": (general.get("matchTimeUTCDate") or "")[:10], "match": "this match",
+                      "played": True, "stats": today})
+        full = p.get("name") or name
+        pack.setdefault("player_form", []).append({"player": full, "games": games})
+        add(f"form_{_plain(full).replace(' ', '_')}",
+            f"{full}: work rate and output, previous {len(games) - 1} matches then this one, oldest first "
+            f"(FotMob; distance in km, top speed in km/h)", games)
+        import json as _json
+        log.info("Player form: %s %s", full, _json.dumps(games, ensure_ascii=False))
