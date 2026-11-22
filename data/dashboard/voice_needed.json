@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-22T09:38:57Z",
-  "fixture_id": "fotmob-5795522",
-  "match": "fotmob:5795522",
-  "slug": "fotmob-5795522",
-  "home": "Manchester City",
-  "away": "Fulham",
+  "updated": "2026-11-22T19:14:43Z",
+  "fixture_id": 564749,
+  "match": "Barcelona Villarreal",
+  "slug": "564749",
+  "home": "Barça",
+  "away": "Villarreal",
   "voice": "astro",
   "items": [
     {
       "key": "scene_01",
-      "text": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain. Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\" A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?"
+      "text": "Hansi Flick has a problem. Injuries have hit his defence, so Frenkie de Jong, a midfielder, will start at centre-back, with Eric García at right-back. Spotify Camp Nou, Barcelona. Barça lead La Liga after this round, with 12 wins in 13 games, and Flick has promised attacking football. Then, at minute 5, Villarreal score. At minute 7, they score again. Two goals in 7 minutes. What went wrong at the back, and was Barça already beaten?"
     },
     {
       "key": "scene_02",
-      "text": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws. There is also a cloud over the club. In September, a commission found City guilty of 114 of the 115 Premier League financial charges. City are appealing, and no sanction is set yet. So a question hangs over this run: is the case weighing on the players? Maresca, the day before: \"I don't think the players are focused on the noise.\" Former City midfielder Didi Hamann disagrees. He tells Sports Mole the uncertainty is a factor. Fulham's Álvaro Arbeloa calls his team's 20 straight defeats against City not relevant."
+      "text": "Before kick-off, the absences. Barça were without Rodri and 3 more injured players. Villarreal had 4 injured, among them Ilias Akhomach. Form was mixed. Barça had lost to PSG and Real Madrid, then won 3 in a row. Villarreal had lost 6-0 to PSG, then beaten Getafe 2-0. Hansi Flick, at his pre-match press conference, on a squad playing nine matches in 27 days. Íñigo Pérez had a different plan. According to Comuniate, he wanted Villarreal to press high, and said defending deep at Camp Nou would not be comfortable."
     },
     {
       "key": "scene_03",
-      "text": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\". The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score. The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour."
+      "text": "Flick arrived in May 2024 to replace Xavi. At his presentation, reported by CGTN, he promised \"all possession and really attacking football.\" Our reading: that promise leans on the back line. Tonight that line has a midfielder at its centre, Frenkie de Jong, with Eric García at right-back. If it cracks, the whole idea is exposed. Ahead of them, Lamine Yamal, the most valuable starter on the pitch at 221 million euros. He is the one asked to make that risk pay."
     },
     {
       "key": "scene_04",
-      "text": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide. Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1. FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail."
+      "text": "Minute 5. Tajon Buchanan scores with his right foot, from open play. Minute 7. A fast break, and Tani Oluwaseyi finishes with his left. Two shots, two goals. Early on, it looks like Pérez's plan is working. Then the match tilts. FotMob's momentum graph has Barça on top for 77 percent of the first half. Minute 23, a penalty. Yamal hits the post. Shot after shot is blocked. Half-time: 0-2."
     },
     {
       "key": "scene_05",
-      "text": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team. Haaland ends with 4 shots worth 1.03 xG in total, and no goal."
+      "text": "57 minutes of attack have found nothing. Then one corner. Minute 57. Gerard Martín rises, and heads it in. Minute 61. Fermín López, left foot, from open play. Two goals in 4 minutes. An own goal also came after the break, and Barça had turned the game. Flick, afterwards, on the second half."
     },
     {
       "key": "scene_06",
-      "text": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1. Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 27 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal."
+      "text": "Pedri is the name the numbers pick out. FotMob rates him 9.0, the highest on the pitch, with 6 chances created. At the other end, Villarreal's lowest-rated starter is Pau Navarro, who won 1 of his 5 ground duels. The numbers suggest a night spent under pressure. Flick put it simply after the match: \"If we play like this, the opponent gets tired.\" Barça had 70 percent of the ball, and 10 corners to Villarreal's none."
     },
     {
       "key": "scene_07",
-      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper."
+      "text": "Expected goals, or xG, is learned from past shots: distance, angle, foot or head. It says how often a chance like it is scored. FotMob supplies the numbers. Villarreal's two goals were worth 0.04 and 0.06 xG. Almost nothing. Barça's penalty at minute 23 was worth 0.79, and it hit the post. Over the night, Barça finish on 3.29 xG to Villarreal's 0.17. 93 percent of it came through the centre, and many of those shots were blocked. Replay these chances 20,000 times, and Barça win 97 in 100. So the 0-2 half did lie. Barça's chances were not the problem. Luck and finishing were."
     },
     {
       "key": "scene_08",
-      "text": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal. So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too. The effort is there. The finishing is not. Against Fulham, Haaland's problem was the last touch, not the running."
+      "text": "Flick, to ESPN: \"We took too long with the ball, made two mistakes and they scored two goals.\" The numbers agree on two early goals. ESPN Deportes writes, in translation, \"Although the Dutchman has played in that position, he has not mastered it, and against attackers as quick as Villarreal's he was exposed.\" The second goal came on a fast break, which fits. Who was beaten, the data cannot show. Sports Illustrated: \"Unsurprisingly, Yamal was the chief architect, dazzling yellow jerseys with his electric feet and supreme precision, and he more than made up for his penalty miss.\" He had 9 shots, only 1 on target."
     },
     {
       "key": "scene_09",
-      "text": "Maresca asked for fewer avoidable goals. So who let this one in? It began with a Fulham throw-in deep in their own half. Muniz won the ball in the air, then ran the length of the pitch on the counter. Bobb beat his man and found him in the box. Squawka's analysis says City's midfield faltered. So not the defence alone. In our reading, City lost the ball in the air, and no one stopped the break. One chance, worth only 0.14 xG, was enough. Two questions for the comments. Was Muniz's goal avoidable? And is the case weighing on City's players? Tell us below, and subscribe."
+      "text": "So, was Barça beaten in that first half? No. They finished 3-2 winners. They were unlucky at one end and shaky at the other, and the chances were enough to win anyway. Flick's promise of possession and attacking football held, at 70 percent of the ball. But the first 7 minutes show what the risk can cost. One question for you. Was Frenkie de Jong at centre-back a risk worth taking, or the cause of the 0-2? Tell us in the comments. And subscribe for the next match."
     },
     {
       "key": "short_1",
-      "text": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel."
+      "text": "Pedri finished with a 9.0 rating, the highest of anyone on the pitch. He created 6 chances, gave 1 assist and completed 81 of 92 passes. 15 of those passes went into the final third. He also won 7 of his 8 duels. Barça's 2010/11 side kept 70.9% of the ball. This one kept 70%, and Pedri was the midfielder who made that possession useful. The numbers cannot show how he moved without the ball. Does a 9.0 sound fair to you? Full story on the channel."
     },
     {
       "key": "short_2",
-      "text": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest. Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel."
+      "text": "Barça won 10 corners. Villarreal won none. Villarreal's coach wanted a high press. With 30% of the ball, they ended up defending their own box. At minute 53, a corner gave Marc Bernal a header, and it went wide. At minute 57, another corner gave Gerard Martín a header, and it went in. Four minutes later, Fermín López scored again. The wall had a crack, and Barça kept pushing on it. One caution: 0.79 of the 1.65 set-piece xG was the penalty Yamal hit against the post. So dead balls opened the door, and volume finished the job. Was it the corners or the pressure that won it? Full story on the channel."
     }
   ],
-  "characters": 5699
+  "characters": 5238
 }
