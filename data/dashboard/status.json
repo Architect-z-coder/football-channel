@@ -1,11 +1,11 @@
 {
-  "request_id": "mci-ful-render-1",
+  "request_id": "mci-ful-render-2",
   "mode": "no-upload",
   "match": "fotmob:5795522",
   "trigger": "push",
-  "state": "failed",
-  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/45011238352",
-  "started": "2026-11-22T10:11:57Z",
-  "finished": "2026-11-22T10:14:28Z",
-  "reason": "The run stopped with an error. Open the run log for details."
+  "state": "running",
+  "run_url": "https://github.com/Architect-z-coder/football-channel/actions/runs/45011469505",
+  "started": "2026-11-22T10:14:44Z",
+  "finished": null,
+  "reason": null
 }
