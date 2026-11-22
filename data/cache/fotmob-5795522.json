@@ -1,927 +1,948 @@
 {
-  "saved": "2026-11-21T14:47:30Z",
-  "press": [
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "Still from the Forest game, we have Matheus and Khusa are still a doubt for tomorrow",
-      "is_paraphrase": false,
-      "when": "before",
-      "topic": "absence",
-      "source": "Manchester City official website (mancity.com), pre-match news conference, 20 Nov 2026",
-      "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+ "saved": "2026-11-21T14:47:30Z",
+ "press": [
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "Still from the Forest game, we have Matheus and Khusa are still a doubt for tomorrow",
+   "is_paraphrase": false,
+   "when": "before",
+   "topic": "absence",
+   "source": "Manchester City official website (mancity.com), pre-match news conference, 20 Nov 2026",
+   "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+  },
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "Maresca said Matheus Nunes and Abdukodir Khusanov still had some problems from the Nottingham Forest game and would be assessed over the next hours. Marc Guéhi had missed the England squad because of a small issue, not because he needed a break.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "absence",
+   "source": "Manchester City official website (mancity.com)",
+   "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+  },
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "Maresca confirmed Nunes and Khusanov were doubtful, Guéhi was available, and Antoine Semenyo was the only other absentee.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "absence",
+   "source": "City Xtra (via Yahoo Sports), pre-match press conference report",
+   "url": "https://cityxtra.co.uk/news/enzo-maresca-press-conference-two-manchester-city-stars-doubtful-for-fulham-premier-league-clash"
+  },
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "We are conceding too many goals. Most of them are avoidable.",
+   "is_paraphrase": false,
+   "when": "before",
+   "topic": "tactics",
+   "source": "Yahoo Sports (Football Muse), report of pre-match press conference",
+   "url": "https://sports.yahoo.com/articles/too-many-avoidable-goals-maresca-070500319.html"
+  },
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "We reviewed things during the international break that we need to do better",
+   "is_paraphrase": false,
+   "when": "before",
+   "topic": "tactics",
+   "source": "Yahoo Sports (City Xtra), report of pre-match press conference",
+   "url": "https://sports.yahoo.com/articles/revealed-manchester-city-worked-behind-174500453.html"
+  },
+  {
+   "speaker": "Álvaro Arbeloa",
+   "role": "Fulham head coach",
+   "team": "Fulham",
+   "quote": "Arbeloa said Fulham's record against City (20 straight defeats) was not relevant because this was a different game, season, players and coach. He said Fulham would need their best performance to get a result.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "tactics",
+   "source": "AllFootballApp, translated report of pre-match press conference. Treat the wording as secondary and confirm it against Fulham's official site.",
+   "url": "https://www.allfootballapp.com/articles/6016726-arbeloa-city-lose-three-row-they"
+  },
+  {
+   "speaker": "Álvaro Arbeloa",
+   "role": "Fulham head coach",
+   "team": "Fulham",
+   "quote": "Arbeloa said City were not the worst team in any of their three defeats. He praised their aggression when they lose the ball and compared Maresca's ideas to Pep Guardiola's.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "tactics",
+   "source": "Dave.Sport live blog summarising Arbeloa's pre-match press conference. Secondary source.",
+   "url": "https://dave.sport/live/man-city-v-fulham/"
+  },
+  {
+   "speaker": "Enzo Maresca",
+   "role": "Manchester City head coach",
+   "team": "Manchester City",
+   "quote": "I don't think the players are focused on the noise",
+   "is_paraphrase": false,
+   "when": "before",
+   "topic": "financial case",
+   "source": "Sports Mole, pre-match news conference, 20 Nov 2026",
+   "url": "https://www.sportsmole.co.uk/football/man-city/news/115-charges-distraction-maresca-addresses-man-citys-slump-in-form_609524.html"
+  },
+  {
+   "speaker": "Didi Hamann",
+   "role": "former Manchester City midfielder",
+   "team": "Manchester City",
+   "quote": "Hamann said uncertainty over City's 115 charges is a contributing factor to their Premier League struggles.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "financial case",
+   "source": "Sports Mole exclusive interview, 21 Nov 2026",
+   "url": "https://sportsmole.co.uk/football/man-city/news/exclusive-hamann-shoots-down-maresca-man-city-charges-claim_609523.html"
+  },
+  {
+   "speaker": "Reuters (report)",
+   "role": "news agency",
+   "team": "Manchester City",
+   "quote": "An independent commission in September found City guilty of 114 of the 115 Premier League financial charges. The club deny wrongdoing and are appealing. No sanction has yet been imposed.",
+   "is_paraphrase": true,
+   "when": "before",
+   "topic": "financial case",
+   "source": "Reuters, 21 Nov 2026",
+   "url": "https://citizen.digital/article/maresca-shrugs-off-links-between-man-citys-slump-and-financial-case-n394290"
+  },
+  {
+   "speaker": "Squawka (analysis)",
+   "role": "stats and analysis site",
+   "team": "Manchester City",
+   "quote": "Squawka's analysis says City's midfield faltered. Fulham's opening goal began with a Fulham throw-in deep in their own half; Muniz won the ball in the air, then ran the length of the pitch on the counter to receive the ball from Oscar Bobb in the box.",
+   "is_paraphrase": true,
+   "when": "after",
+   "topic": "goal analysis",
+   "source": "Squawka post-match analysis, 21 Nov 2026",
+   "url": "https://www.squawka.com/en/features/post-match-analysis-man-city-vs-fulham-21-11-26/"
+  },
+  {
+   "speaker": "NBC Sports (live report)",
+   "role": "broadcaster",
+   "team": "Fulham",
+   "quote": "NBC Sports called it poor defending from City; after good work from Josh King, Oscar Bobb got free, beat his man and set up Muniz.",
+   "is_paraphrase": true,
+   "when": "after",
+   "topic": "goal analysis",
+   "source": "NBC Sports live updates, 21 Nov 2026",
+   "url": "https://www.nbcsports.com/soccer/live/manchester-city-vs-fulham-live-updates-score-goals-highlights-stats-2026-november-21"
+  }
+ ],
+ "context": {
+  "teams": [
+   {
+    "team": "Manchester City",
+    "coach": "Enzo Maresca",
+    "appointed": "29 June 2026 (announced by the club; three-year contract)",
+    "replaced": "Pep Guardiola",
+    "replaced_reason": "Guardiola announced on 22 May 2026 that he was stepping down after ten years. He said he could not give a specific reason, only that it was his time. His contract ran to 2027 and he agreed to leave 12 months early.",
+    "institution_quote": {
+     "quote": "we have the same ambition to keep Manchester City competing to the highest level",
+     "speaker": "Hugo Viana, Manchester City director of football (September 2026 club interview, not appointment day; I found no official appointment-day quote on what City wanted)",
+     "source": "mancity.com",
+     "url": "https://www.mancity.com/news/mens/hugo-viana-enzo-maresca-shared-manhester-city-ambitions-63925168"
     },
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "Maresca said Matheus Nunes and Abdukodir Khusanov still had some problems from the Nottingham Forest game and would be assessed over the next hours. Marc Guéhi had missed the England squad because of a small issue, not because he needed a break.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "absence",
-      "source": "Manchester City official website (mancity.com)",
-      "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+    "coach_promise": {
+     "quote": "my job, in the way I want",
+     "source": "Sky Sports, report of Maresca's first press conference as City manager (August 2026). He said he would not be a 'copy and paste' coach.",
+     "url": "https://www.skysports.com/football/news/13566644/enzo-maresca-insists-he-is-not-a-copy-and-paste-coach-after-taking-over-from-pep-guardiola-at-man-city"
     },
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "Maresca confirmed Nunes and Khusanov were doubtful, Guéhi was available, and Antoine Semenyo was the only other absentee.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "absence",
-      "source": "City Xtra (via Yahoo Sports), pre-match press conference report",
-      "url": "https://cityxtra.co.uk/news/enzo-maresca-press-conference-two-manchester-city-stars-doubtful-for-fulham-premier-league-clash"
-    },
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "We are conceding too many goals. Most of them are avoidable.",
-      "is_paraphrase": false,
-      "when": "before",
-      "topic": "tactics",
-      "source": "Yahoo Sports (Football Muse), report of pre-match press conference",
-      "url": "https://sports.yahoo.com/articles/too-many-avoidable-goals-maresca-070500319.html"
-    },
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "We reviewed things during the international break that we need to do better",
-      "is_paraphrase": false,
-      "when": "before",
-      "topic": "tactics",
-      "source": "Yahoo Sports (City Xtra), report of pre-match press conference",
-      "url": "https://sports.yahoo.com/articles/revealed-manchester-city-worked-behind-174500453.html"
-    },
-    {
-      "speaker": "Álvaro Arbeloa",
-      "role": "Fulham head coach",
-      "team": "Fulham",
-      "quote": "Arbeloa said Fulham's record against City (20 straight defeats) was not relevant because this was a different game, season, players and coach. He said Fulham would need their best performance to get a result.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "tactics",
-      "source": "AllFootballApp, translated report of pre-match press conference. Treat the wording as secondary and confirm it against Fulham's official site.",
-      "url": "https://www.allfootballapp.com/articles/6016726-arbeloa-city-lose-three-row-they"
-    },
-    {
-      "speaker": "Álvaro Arbeloa",
-      "role": "Fulham head coach",
-      "team": "Fulham",
-      "quote": "Arbeloa said City were not the worst team in any of their three defeats. He praised their aggression when they lose the ball and compared Maresca's ideas to Pep Guardiola's.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "tactics",
-      "source": "Dave.Sport live blog summarising Arbeloa's pre-match press conference. Secondary source.",
-      "url": "https://dave.sport/live/man-city-v-fulham/"
-    },
-    {
-      "speaker": "Enzo Maresca",
-      "role": "Manchester City head coach",
-      "team": "Manchester City",
-      "quote": "I don't think the players are focused on the noise",
-      "is_paraphrase": false,
-      "when": "before",
-      "topic": "financial case",
-      "source": "Sports Mole, pre-match news conference, 20 Nov 2026",
-      "url": "https://www.sportsmole.co.uk/football/man-city/news/115-charges-distraction-maresca-addresses-man-citys-slump-in-form_609524.html"
-    },
-    {
-      "speaker": "Didi Hamann",
-      "role": "former Manchester City midfielder",
-      "team": "Manchester City",
-      "quote": "Hamann said uncertainty over City's 115 charges is a contributing factor to their Premier League struggles.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "financial case",
-      "source": "Sports Mole exclusive interview, 21 Nov 2026",
-      "url": "https://sportsmole.co.uk/football/man-city/news/exclusive-hamann-shoots-down-maresca-man-city-charges-claim_609523.html"
-    },
-    {
-      "speaker": "Reuters (report)",
-      "role": "news agency",
-      "team": "Manchester City",
-      "quote": "An independent commission in September found City guilty of 114 of the 115 Premier League financial charges. The club deny wrongdoing and are appealing. No sanction has yet been imposed.",
-      "is_paraphrase": true,
-      "when": "before",
-      "topic": "financial case",
-      "source": "Reuters, 21 Nov 2026",
-      "url": "https://citizen.digital/article/maresca-shrugs-off-links-between-man-citys-slump-and-financial-case-n394290"
-    }
-  ],
-  "context": {
-    "teams": [
-      {
-        "team": "Manchester City",
-        "coach": "Enzo Maresca",
-        "appointed": "29 June 2026 (announced by the club; three-year contract)",
-        "replaced": "Pep Guardiola",
-        "replaced_reason": "Guardiola announced on 22 May 2026 that he was stepping down after ten years. He said he could not give a specific reason, only that it was his time. His contract ran to 2027 and he agreed to leave 12 months early.",
-        "institution_quote": {
-          "quote": "we have the same ambition to keep Manchester City competing to the highest level",
-          "speaker": "Hugo Viana, Manchester City director of football (September 2026 club interview, not appointment day; I found no official appointment-day quote on what City wanted)",
-          "source": "mancity.com",
-          "url": "https://www.mancity.com/news/mens/hugo-viana-enzo-maresca-shared-manhester-city-ambitions-63925168"
-        },
-        "coach_promise": {
-          "quote": "my job, in the way I want",
-          "source": "Sky Sports, report of Maresca's first press conference as City manager (August 2026). He said he would not be a 'copy and paste' coach.",
-          "url": "https://www.skysports.com/football/news/13566644/enzo-maresca-insists-he-is-not-a-copy-and-paste-coach-after-taking-over-from-pep-guardiola-at-man-city"
-        },
-        "key_choices": [
-          {
-            "text": "In August 2026 Maresca said he would wait until the end of the transfer window to finalise his leadership group, and cast doubt on Erling Haaland as captain.",
-            "source": "ESPN; Yahoo Sports",
-            "url": "https://www.espn.com/soccer/story/_/id/49621757/enzo-maresca-pick-man-city-leaders-end-transfer-window-moment-ruben-erling"
-          },
-          {
-            "text": "Rúben Dias is the captain in today's line-up against Fulham, which has three changes: Fernández, Cherki and Gvardiol drop to the bench for Bouaddi, O'Reilly and Foden.",
-            "source": "mancity.com team news, 21 November 2026",
-            "url": "https://www.mancity.com/news/mens/man-city-v-fulham-team-news-and-tactics-premier-league-21-november-63930856"
-          },
-          {
-            "text": "Maresca picked out 18-year-old winger Ryan McAidoo as one of preseason's 'real surprises' and said the best thing for him was to stay with the first team.",
-            "source": "ESPN",
-            "url": "https://www.espn.com/soccer/story/_/id/49621757/enzo-maresca-pick-man-city-leaders-end-transfer-window-moment-ruben-erling"
-          },
-          {
-            "text": "Maresca said the age of Academy players will not decide selection. He named Kaden Braithwaite, Ryan McAidoo and Floyd Samba as training daily with the first team.",
-            "source": "mancity.com",
-            "url": "https://www.mancity.com/news/mens/enzo-maresca-norwich-embargo-preview-63925159"
-          },
-          {
-            "text": "In the opening-day win over Bournemouth, Maresca paired Marc Guéhi with Elliot Anderson in central midfield and left Rayan Cherki out of the starting XI.",
-            "source": "Yahoo Sports (UK)",
-            "url": "https://uk.sports.yahoo.com/news/one-man-city-problem-enzo-030000082.html"
-          },
-          {
-            "text": "Maresca left 19-year-old Ayyoub Bouaddi on the bench for the 2-1 defeat at Aston Villa. He started Bouaddi, Enzo Fernández and Anderson together in midfield the following week against Brighton.",
-            "source": "CityXtra",
-            "url": "https://cityxtra.co.uk/news/enzo-maresca-explains-rayan-cherki-bench-decision-and-midfield-selection-in-latest-manchester-city-defeat"
-          }
-        ],
-        "links": [
-          {
-            "text": "Maresca succeeds the man he assisted. He was Guardiola's first-team assistant at City in 2022-23, and earlier coached City's Elite Development Squad.",
-            "source": "ESPN",
-            "url": "https://www.espn.com/soccer/story/_/id/48898245/enzo-maresca-confirmed-pep-guardiola-man-city-successor"
-          },
-          {
-            "text": "Maresca arrived after leaving Chelsea mid-season. He said the decision to leave was his own and that his resignation opened the path to City. Chelsea said a settlement including compensation was reached with City.",
-            "source": "ESPN",
-            "url": "https://www.espn.com/soccer/story/_/id/48898245/enzo-maresca-confirmed-pep-guardiola-man-city-successor"
-          },
-          {
-            "text": "Fulham's line-up includes two City academy graduates, Shea Charles and Oscar Bobb, who were expected to play in midfield and on the right wing.",
-            "source": "Sports Mole preview",
-            "url": "https://www.sportsmole.co.uk/football/man-city/preview/man-city-vs-fulham-prediction-team-news-lineups_609367.html"
-          }
-        ]
-      }
+    "key_choices": [
+     {
+      "text": "In August 2026 Maresca said he would wait until the end of the transfer window to finalise his leadership group, and cast doubt on Erling Haaland as captain.",
+      "source": "ESPN; Yahoo Sports",
+      "url": "https://www.espn.com/soccer/story/_/id/49621757/enzo-maresca-pick-man-city-leaders-end-transfer-window-moment-ruben-erling"
+     },
+     {
+      "text": "Rúben Dias is the captain in today's line-up against Fulham, which has three changes: Fernández, Cherki and Gvardiol drop to the bench for Bouaddi, O'Reilly and Foden.",
+      "source": "mancity.com team news, 21 November 2026",
+      "url": "https://www.mancity.com/news/mens/man-city-v-fulham-team-news-and-tactics-premier-league-21-november-63930856"
+     },
+     {
+      "text": "Maresca picked out 18-year-old winger Ryan McAidoo as one of preseason's 'real surprises' and said the best thing for him was to stay with the first team.",
+      "source": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49621757/enzo-maresca-pick-man-city-leaders-end-transfer-window-moment-ruben-erling"
+     },
+     {
+      "text": "Maresca said the age of Academy players will not decide selection. He named Kaden Braithwaite, Ryan McAidoo and Floyd Samba as training daily with the first team.",
+      "source": "mancity.com",
+      "url": "https://www.mancity.com/news/mens/enzo-maresca-norwich-embargo-preview-63925159"
+     },
+     {
+      "text": "In the opening-day win over Bournemouth, Maresca paired Marc Guéhi with Elliot Anderson in central midfield and left Rayan Cherki out of the starting XI.",
+      "source": "Yahoo Sports (UK)",
+      "url": "https://uk.sports.yahoo.com/news/one-man-city-problem-enzo-030000082.html"
+     },
+     {
+      "text": "Maresca left 19-year-old Ayyoub Bouaddi on the bench for the 2-1 defeat at Aston Villa. He started Bouaddi, Enzo Fernández and Anderson together in midfield the following week against Brighton.",
+      "source": "CityXtra",
+      "url": "https://cityxtra.co.uk/news/enzo-maresca-explains-rayan-cherki-bench-decision-and-midfield-selection-in-latest-manchester-city-defeat"
+     }
+    ],
+    "links": [
+     {
+      "text": "Maresca succeeds the man he assisted. He was Guardiola's first-team assistant at City in 2022-23, and earlier coached City's Elite Development Squad.",
+      "source": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/48898245/enzo-maresca-confirmed-pep-guardiola-man-city-successor"
+     },
+     {
+      "text": "Maresca arrived after leaving Chelsea mid-season. He said the decision to leave was his own and that his resignation opened the path to City. Chelsea said a settlement including compensation was reached with City.",
+      "source": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/48898245/enzo-maresca-confirmed-pep-guardiola-man-city-successor"
+     },
+     {
+      "text": "Fulham's line-up includes two City academy graduates, Shea Charles and Oscar Bobb, who were expected to play in midfield and on the right wing.",
+      "source": "Sports Mole preview",
+      "url": "https://www.sportsmole.co.uk/football/man-city/preview/man-city-vs-fulham-prediction-team-news-lineups_609367.html"
+     }
     ]
-  },
-  "reviews": [
+   }
+  ]
+ },
+ "reviews": [
+  {
+   "outlet": "AP",
+   "author": "Steve Douglas",
+   "date": "2026-11-21",
+   "url": "https://www.clickorlando.com/sports/2026/11/21/man-citys-14-year-winning-run-against-fulham-is-over-after-draw-in-premier-league/",
+   "headline": "Man City's 14-year winning run against Fulham is over after draw in Premier League",
+   "quote": "City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.",
+   "quote_en": "",
+   "point": "Douglas says City were poor again and only escaped defeat through Anderson's superb equaliser, with Haaland wasting good chances and having a goal ruled out in contentious circumstances.",
+   "free": true,
+   "kind": "screenshot",
+   "files": {
+    "para": "press_1_para.png",
+    "head": "press_1_head.png"
+   },
+   "rects": [
     {
-      "outlet": "AP",
-      "author": "Steve Douglas",
-      "date": "2026-11-21",
-      "url": "https://www.clickorlando.com/sports/2026/11/21/man-citys-14-year-winning-run-against-fulham-is-over-after-draw-in-premier-league/",
-      "headline": "Man City's 14-year winning run against Fulham is over after draw in Premier League",
-      "quote": "City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.",
-      "quote_en": "",
-      "point": "Douglas says City were poor again and only escaped defeat through Anderson's superb equaliser, with Haaland wasting good chances and having a goal ruled out in contentious circumstances.",
-      "free": true,
-      "kind": "screenshot",
-      "files": {
-        "para": "press_1_para.png",
-        "head": "press_1_head.png"
-      },
-      "rects": [
-        {
-          "x": 0,
-          "y": 5,
-          "w": 28,
-          "h": 22
-        },
-        {
-          "x": 32,
-          "y": 5,
-          "w": 57,
-          "h": 22
-        },
-        {
-          "x": 93,
-          "y": 5,
-          "w": 9,
-          "h": 22
-        },
-        {
-          "x": 106,
-          "y": 5,
-          "w": 71,
-          "h": 22
-        },
-        {
-          "x": 181,
-          "y": 5,
-          "w": 126,
-          "h": 22
-        },
-        {
-          "x": 311,
-          "y": 5,
-          "w": 43,
-          "h": 22
-        },
-        {
-          "x": 358,
-          "y": 5,
-          "w": 18,
-          "h": 22
-        },
-        {
-          "x": 380,
-          "y": 5,
-          "w": 37,
-          "h": 22
-        },
-        {
-          "x": 421,
-          "y": 5,
-          "w": 74,
-          "h": 22
-        },
-        {
-          "x": 499,
-          "y": 5,
-          "w": 14,
-          "h": 22
-        },
-        {
-          "x": 517,
-          "y": 5,
-          "w": 25,
-          "h": 22
-        },
-        {
-          "x": 546,
-          "y": 5,
-          "w": 34,
-          "h": 22
-        },
-        {
-          "x": 584,
-          "y": 5,
-          "w": 54,
-          "h": 22
-        },
-        {
-          "x": 642,
-          "y": 5,
-          "w": 16,
-          "h": 22
-        },
-        {
-          "x": 0,
-          "y": 37,
-          "w": 56,
-          "h": 22
-        },
-        {
-          "x": 60,
-          "y": 37,
-          "w": 9,
-          "h": 22
-        },
-        {
-          "x": 73,
-          "y": 37,
-          "w": 40,
-          "h": 22
-        },
-        {
-          "x": 117,
-          "y": 37,
-          "w": 15,
-          "h": 22
-        },
-        {
-          "x": 136,
-          "y": 37,
-          "w": 48,
-          "h": 22
-        },
-        {
-          "x": 188,
-          "y": 37,
-          "w": 67,
-          "h": 22
-        },
-        {
-          "x": 259,
-          "y": 37,
-          "w": 36,
-          "h": 22
-        },
-        {
-          "x": 299,
-          "y": 37,
-          "w": 60,
-          "h": 22
-        },
-        {
-          "x": 363,
-          "y": 37,
-          "w": 45,
-          "h": 22
-        },
-        {
-          "x": 412,
-          "y": 37,
-          "w": 35,
-          "h": 22
-        },
-        {
-          "x": 451,
-          "y": 37,
-          "w": 56,
-          "h": 22
-        },
-        {
-          "x": 511,
-          "y": 37,
-          "w": 25,
-          "h": 22
-        },
-        {
-          "x": 540,
-          "y": 37,
-          "w": 32,
-          "h": 22
-        },
-        {
-          "x": 576,
-          "y": 37,
-          "w": 14,
-          "h": 22
-        },
-        {
-          "x": 594,
-          "y": 37,
-          "w": 25,
-          "h": 22
-        },
-        {
-          "x": 623,
-          "y": 37,
-          "w": 34,
-          "h": 22
-        }
-      ],
-      "box": {
-        "w": 693.34375,
-        "h": 64
-      },
-      "verified": true
-    }
-  ],
-  "script": {
-    "title_options": [
-      "Maresca's Avoidable Goal: City 1-1 Fulham",
-      "City Had 1.87 xG. Here Is Why It Ended 1-1",
-      "Why Maresca's City Could Not Beat Fulham"
-    ],
-    "thumbnail_texts": [
-      "AVOIDABLE GOALS?",
-      "HAALAND'S BIG MISS",
-      "1.87 xG, 1 GOAL"
-    ],
-    "description": "Manchester City 1-1 Fulham at the Etihad, round 11 of the Premier League. Enzo Maresca said before the match that City concede too many goals and that most are avoidable. We follow that one question through the match: Maresca, Erling Haaland and Oscar Bobb, the miss at minute 24, Elliot Anderson's equaliser, and what the expected goals say about the 1-1.\n\nSources quoted: Yahoo Sports (Football Muse and City Xtra), Sky Sports, a translated AllFootballApp report, Sports Mole and AP (Steve Douglas). Photos from Wikimedia Commons, credited on screen.\n\nData: FotMob.",
-    "tags": [
-      "Manchester City",
-      "Fulham",
-      "Premier League",
-      "Enzo Maresca",
-      "Erling Haaland",
-      "Elliot Anderson",
-      "expected goals",
-      "xG",
-      "football analysis",
-      "match review",
-      "Oscar Bobb",
-      "Rodrigo Muniz"
-    ],
-    "scenes": [
-      {
-        "id": 1,
-        "beat": "THE QUESTION",
-        "on_screen": "Maresca in Pep's seat",
-        "fact_ids": [
-          "home_coach",
-          "score_home",
-          "score_away"
-        ],
-        "shots": [
-          {
-            "text": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain.",
-            "visual": {
-              "type": "photo",
-              "photo": "Enzo Maresca",
-              "caption": "Enzo Maresca, City head coach"
-            }
-          },
-          {
-            "text": "Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\"",
-            "visual": {
-              "type": "quote_card",
-              "quote": "We are conceding too many goals. Most of them are avoidable.",
-              "speaker": "Enzo Maresca",
-              "role": "Manchester City head coach",
-              "outlet": "Yahoo Sports (Football Muse)"
-            }
-          },
-          {
-            "text": "A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?",
-            "visual": {
-              "type": "scoreline"
-            }
-          }
-        ],
-        "narration": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain. Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\" A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?",
-        "visual": {
-          "type": "quote_card",
-          "quote": "We are conceding too many goals. Most of them are avoidable.",
-          "speaker": "Enzo Maresca",
-          "role": "Manchester City head coach",
-          "outlet": "Yahoo Sports (Football Muse)"
-        }
-      },
-      {
-        "id": 2,
-        "beat": "WHAT WAS EXPECTED",
-        "on_screen": "A leak to fix",
-        "fact_ids": [
-          "home_form_record",
-          "away_form_record",
-          "home_absent_1",
-          "press"
-        ],
-        "shots": [
-          {
-            "text": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws.",
-            "visual": {
-              "type": "form_compare"
-            }
-          },
-          {
-            "text": "There is also a cloud over the club. In September, a commission found City guilty of 114 of the 115 Premier League financial charges. City are appealing, and no sanction is set yet. So a question hangs over this run: is the case weighing on the players?",
-            "visual": {
-              "type": "text_card",
-              "heading": "The case",
-              "lines": [
-                "Guilty: 114 of 115 charges",
-                "City are appealing",
-                "No sanction yet"
-              ]
-            }
-          },
-          {
-            "text": "Maresca, the day before: \"I don't think the players are focused on the noise.\" Former City midfielder Didi Hamann disagrees. He tells Sports Mole the uncertainty is a factor.",
-            "visual": {
-              "type": "quote_card",
-              "quote": "I don't think the players are focused on the noise",
-              "speaker": "Enzo Maresca",
-              "role": "Man City head coach",
-              "outlet": "Sports Mole"
-            }
-          },
-          {
-            "text": "Fulham's Álvaro Arbeloa calls his team's 20 straight defeats against City not relevant.",
-            "visual": {
-              "type": "text_card",
-              "heading": "Arbeloa's view",
-              "lines": [
-                "20 defeats: not relevant"
-              ]
-            }
-          }
-        ],
-        "narration": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws. There is also a cloud over the club. In September, a commission found City guilty of 114 of the 115 Premier League financial charges. City are appealing, and no sanction is set yet. So a question hangs over this run: is the case weighing on the players? Maresca, the day before: \"I don't think the players are focused on the noise.\" Former City midfielder Didi Hamann disagrees. He tells Sports Mole the uncertainty is a factor. Fulham's Álvaro Arbeloa calls his team's 20 straight defeats against City not relevant.",
-        "visual": {
-          "type": "form_compare"
-        }
-      },
-      {
-        "id": 3,
-        "beat": "THE CHARACTERS",
-        "on_screen": "Three names to remember",
-        "fact_ids": [
-          "home_coach",
-          "home_formation",
-          "away_formation"
-        ],
-        "shots": [
-          {
-            "text": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\".",
-            "visual": {
-              "type": "photo",
-              "photo": "Enzo Maresca",
-              "caption": "Enzo Maresca, City head coach"
-            }
-          },
-          {
-            "text": "The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score.",
-            "visual": {
-              "type": "lineups"
-            }
-          },
-          {
-            "text": "The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour.",
-            "visual": {
-              "type": "photo",
-              "photo": "Oscar Bobb",
-              "caption": "Oscar Bobb, Fulham"
-            }
-          }
-        ],
-        "narration": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\". The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score. The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour.",
-        "visual": {
-          "type": "lineups"
-        }
-      },
-      {
-        "id": 4,
-        "beat": "ACT ONE",
-        "on_screen": "City press, Fulham score",
-        "fact_ids": [
-          "goal_1",
-          "momentum_home_on_top_pct",
-          "ht_home",
-          "ht_away"
-        ],
-        "shots": [
-          {
-            "text": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide.",
-            "visual": {
-              "type": "photo",
-              "photo": "Etihad Stadium, Manchester (inside, view 1)",
-              "caption": "Etihad Stadium, Manchester"
-            }
-          },
-          {
-            "text": "Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1.",
-            "visual": {
-              "type": "goal_replay",
-              "minute": 16
-            }
-          },
-          {
-            "text": "FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail.",
-            "visual": {
-              "type": "halftime_fulltime"
-            }
-          }
-        ],
-        "narration": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide. Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1. FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail.",
-        "visual": {
-          "type": "goal_replay",
-          "minute": 16
-        }
-      },
-      {
-        "id": 5,
-        "beat": "THE TURNING POINT",
-        "on_screen": "The miss at minute 24",
-        "fact_ids": [
-          "home_best_chance",
-          "shots"
-        ],
-        "shots": [
-          {
-            "text": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved.",
-            "visual": {
-              "type": "threat_map",
-              "side": "home",
-              "player": "Erling Haaland",
-              "kicker": "MINUTE 24",
-              "title": "Haaland's shots"
-            }
-          },
-          {
-            "text": "Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team.",
-            "visual": {
-              "type": "xg_explainer"
-            }
-          },
-          {
-            "text": "Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
-            "visual": {
-              "type": "key_number",
-              "value": "1.03",
-              "label": "Haaland's xG, no goal"
-            }
-          }
-        ],
-        "narration": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team. Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
-        "visual": {
-          "type": "threat_map",
-          "side": "home",
-          "player": "Erling Haaland",
-          "kicker": "MINUTE 24",
-          "title": "Haaland's shots"
-        }
-      },
-      {
-        "id": 6,
-        "beat": "ACT TWO",
-        "on_screen": "Anderson answers",
-        "fact_ids": [
-          "goal_2",
-          "sub_1",
-          "sub_2",
-          "momentum_around_subs",
-          "shots"
-        ],
-        "shots": [
-          {
-            "text": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1.",
-            "visual": {
-              "type": "photo",
-              "photo": "Elliot Anderson",
-              "caption": "Elliot Anderson, City"
-            }
-          },
-          {
-            "text": "Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 27 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal.",
-            "visual": {
-              "type": "momentum"
-            }
-          }
-        ],
-        "narration": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1. Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 27 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal.",
-        "visual": {
-          "type": "momentum"
-        }
-      },
-      {
-        "id": 7,
-        "beat": "WHAT THE NUMBERS REVEAL",
-        "on_screen": "Chances that never arrived",
-        "fact_ids": [
-          "home_xg",
-          "away_xg",
-          "home_shots",
-          "home_shots_on_target",
-          "away_keeper_goals_prevented",
-          "diag_home_big_chances",
-          "shots"
-        ],
-        "shots": [
-          {
-            "text": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little.",
-            "visual": {
-              "type": "stat_bars",
-              "stats": [
-                "expected_goals",
-                "total_shots",
-                "shots_on_goal"
-              ]
-            }
-          },
-          {
-            "text": "So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target.",
-            "visual": {
-              "type": "diagnosis",
-              "side": "home"
-            }
-          },
-          {
-            "text": "The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
-            "visual": {
-              "type": "threat_map",
-              "side": "home",
-              "kicker": "CITY'S SHOTS",
-              "title": "Where City's shots went"
-            }
-          }
-        ],
-        "narration": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
-        "visual": {
-          "type": "stat_bars",
-          "stats": [
-            "expected_goals",
-            "total_shots",
-            "shots_on_goal"
-          ]
-        }
-      },
-      {
-        "id": 8,
-        "beat": "THE VERDICT",
-        "on_screen": "A point, saved late",
-        "fact_ids": [
-          "best_player_1",
-          "worst_player_3",
-          "home_best_chance"
-        ],
-        "shots": [
-          {
-            "text": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal.",
-            "visual": {
-              "type": "player_ratings"
-            }
-          },
-          {
-            "text": "So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too.",
-            "visual": {
-              "type": "text_card",
-              "heading": "Haaland's work, last 5 games",
-              "lines": [
-                "Distance: 9377 to 9866 m",
-                "vs Fulham: 13 sprints, the most",
-                "vs Fulham: 24 touches, the most"
-              ]
-            }
-          },
-          {
-            "text": "The effort is there. The finishing is not. So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel.",
-            "visual": {
-              "type": "text_card",
-              "heading": "Fixed?",
-              "lines": [
-                "Effort: there",
-                "Finishing: not"
-              ]
-            }
-          }
-        ],
-        "narration": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal. So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too. The effort is there. The finishing is not. So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel.",
-        "visual": {
-          "type": "press_cut",
-          "review_index": 0
-        }
-      },
-      {
-        "id": 9,
-        "beat": "WHAT IT MEANS",
-        "on_screen": "The goal he asked to avoid",
-        "fact_ids": [
-          "goal_1",
-          "home_xg",
-          "home_form_record",
-          "shots"
-        ],
-        "shots": [
-          {
-            "text": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance.",
-            "visual": {
-              "type": "photo",
-              "photo": "Enzo Maresca",
-              "caption": "Enzo Maresca"
-            }
-          },
-          {
-            "text": "At the other end, City's 1.87 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over.",
-            "visual": {
-              "type": "key_number",
-              "value": "1.87",
-              "label": "City's xG, one goal"
-            }
-          },
-          {
-            "text": "Two questions for the comments. Was Muniz's goal an avoidable goal, or just football? And is the case weighing on City's players? Tell us below. And if you like football told as a story, subscribe.",
-            "visual": {
-              "type": "text_card",
-              "heading": "Your verdict?",
-              "lines": [
-                "Avoidable goal,",
-                "or just football?"
-              ]
-            }
-          }
-        ],
-        "narration": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance. At the other end, City's 1.87 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over. Two questions for the comments. Was Muniz's goal an avoidable goal, or just football? And is the case weighing on City's players? Tell us below. And if you like football told as a story, subscribe.",
-        "visual": {
-          "type": "key_number",
-          "value": "1.87",
-          "label": "City's xG, one goal"
-        }
-      }
-    ]
-  },
-  "report": {
-    "ok": true,
-    "problems": []
-  },
-  "saved_script": "2026-11-21T14:53:54Z",
-  "shorts": [
-    {
-      "id": 1,
-      "format": "player_spotlight",
-      "title": "Elliot Anderson: City's best-rated player vs Fulham",
-      "hook": "Anderson, 8.1, best on the pitch",
-      "shots": [
-        {
-          "text": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal.",
-          "visual": {
-            "type": "photo",
-            "photo": "Elliot Anderson",
-            "caption": "Elliot Anderson, Manchester City"
-          }
-        },
-        {
-          "text": "His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley.",
-          "visual": {
-            "type": "shot_map"
-          }
-        },
-        {
-          "text": "He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night.",
-          "visual": {
-            "type": "player_ratings"
-          }
-        },
-        {
-          "text": "Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker.",
-          "visual": {
-            "type": "stat_bars"
-          }
-        },
-        {
-          "text": "Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
-          "visual": {
-            "type": "scoreline"
-          }
-        }
-      ],
-      "fact_ids": [
-        "best_player_1",
-        "player_of_the_match",
-        "goal_2",
-        "score_home",
-        "score_away"
-      ],
-      "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
-      "visual": {
-        "type": "shot_map"
-      }
+     "x": 0,
+     "y": 5,
+     "w": 28,
+     "h": 22
     },
     {
-      "id": 2,
-      "format": "turning_point",
-      "title": "City 1-1 Fulham: better chances, fewer goals",
-      "hook": "1.87 expected goals, one goal",
-      "shots": [
-        {
-          "text": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores.",
-          "visual": {
-            "type": "stat_bars"
-          }
-        },
-        {
-          "text": "City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target.",
-          "visual": {
-            "type": "shot_map"
-          }
-        },
-        {
-          "text": "City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest.",
-          "visual": {
-            "type": "diagnosis"
-          }
-        },
-        {
-          "text": "Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result.",
-          "visual": {
-            "type": "result_odds"
-          }
-        },
-        {
-          "text": "The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
-          "visual": {
-            "type": "scoreline"
-          }
-        }
-      ],
-      "fact_ids": [
-        "home_xg",
-        "away_xg",
-        "home_shots",
-        "away_shots",
-        "home_shots_on_target",
-        "away_shots_on_target",
-        "diag_home_big_chances",
-        "diag_home_goals_minus_xg",
-        "diag_sim_result"
-      ],
-      "narration": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest. Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
-      "visual": {
-        "type": "stat_bars"
-      }
+     "x": 32,
+     "y": 5,
+     "w": 57,
+     "h": 22
+    },
+    {
+     "x": 93,
+     "y": 5,
+     "w": 9,
+     "h": 22
+    },
+    {
+     "x": 106,
+     "y": 5,
+     "w": 71,
+     "h": 22
+    },
+    {
+     "x": 181,
+     "y": 5,
+     "w": 126,
+     "h": 22
+    },
+    {
+     "x": 311,
+     "y": 5,
+     "w": 43,
+     "h": 22
+    },
+    {
+     "x": 358,
+     "y": 5,
+     "w": 18,
+     "h": 22
+    },
+    {
+     "x": 380,
+     "y": 5,
+     "w": 37,
+     "h": 22
+    },
+    {
+     "x": 421,
+     "y": 5,
+     "w": 74,
+     "h": 22
+    },
+    {
+     "x": 499,
+     "y": 5,
+     "w": 14,
+     "h": 22
+    },
+    {
+     "x": 517,
+     "y": 5,
+     "w": 25,
+     "h": 22
+    },
+    {
+     "x": 546,
+     "y": 5,
+     "w": 34,
+     "h": 22
+    },
+    {
+     "x": 584,
+     "y": 5,
+     "w": 54,
+     "h": 22
+    },
+    {
+     "x": 642,
+     "y": 5,
+     "w": 16,
+     "h": 22
+    },
+    {
+     "x": 0,
+     "y": 37,
+     "w": 56,
+     "h": 22
+    },
+    {
+     "x": 60,
+     "y": 37,
+     "w": 9,
+     "h": 22
+    },
+    {
+     "x": 73,
+     "y": 37,
+     "w": 40,
+     "h": 22
+    },
+    {
+     "x": 117,
+     "y": 37,
+     "w": 15,
+     "h": 22
+    },
+    {
+     "x": 136,
+     "y": 37,
+     "w": 48,
+     "h": 22
+    },
+    {
+     "x": 188,
+     "y": 37,
+     "w": 67,
+     "h": 22
+    },
+    {
+     "x": 259,
+     "y": 37,
+     "w": 36,
+     "h": 22
+    },
+    {
+     "x": 299,
+     "y": 37,
+     "w": 60,
+     "h": 22
+    },
+    {
+     "x": 363,
+     "y": 37,
+     "w": 45,
+     "h": 22
+    },
+    {
+     "x": 412,
+     "y": 37,
+     "w": 35,
+     "h": 22
+    },
+    {
+     "x": 451,
+     "y": 37,
+     "w": 56,
+     "h": 22
+    },
+    {
+     "x": 511,
+     "y": 37,
+     "w": 25,
+     "h": 22
+    },
+    {
+     "x": 540,
+     "y": 37,
+     "w": 32,
+     "h": 22
+    },
+    {
+     "x": 576,
+     "y": 37,
+     "w": 14,
+     "h": 22
+    },
+    {
+     "x": 594,
+     "y": 37,
+     "w": 25,
+     "h": 22
+    },
+    {
+     "x": 623,
+     "y": 37,
+     "w": 34,
+     "h": 22
     }
+   ],
+   "box": {
+    "w": 693.34375,
+    "h": 64
+   },
+   "verified": true
+  }
+ ],
+ "script": {
+  "title_options": [
+   "Maresca's Avoidable Goal: City 1-1 Fulham",
+   "City Had 1.87 xG. Here Is Why It Ended 1-1",
+   "Why Maresca's City Could Not Beat Fulham"
   ],
-  "edited": false
+  "thumbnail_texts": [
+   "AVOIDABLE GOALS?",
+   "HAALAND'S BIG MISS",
+   "1.87 xG, 1 GOAL"
+  ],
+  "description": "Manchester City 1-1 Fulham at the Etihad, round 11 of the Premier League. Enzo Maresca said before the match that City concede too many goals and that most are avoidable. We follow that one question through the match: Maresca, Erling Haaland and Oscar Bobb, the miss at minute 24, Elliot Anderson's equaliser, and what the expected goals say about the 1-1.\n\nSources quoted: Yahoo Sports (Football Muse and City Xtra), Sky Sports, a translated AllFootballApp report, Sports Mole and AP (Steve Douglas). Photos from Wikimedia Commons, credited on screen.\n\nData: FotMob.",
+  "tags": [
+   "Manchester City",
+   "Fulham",
+   "Premier League",
+   "Enzo Maresca",
+   "Erling Haaland",
+   "Elliot Anderson",
+   "expected goals",
+   "xG",
+   "football analysis",
+   "match review",
+   "Oscar Bobb",
+   "Rodrigo Muniz"
+  ],
+  "scenes": [
+   {
+    "id": 1,
+    "beat": "THE QUESTION",
+    "on_screen": "Maresca in Pep's seat",
+    "fact_ids": [
+     "home_coach",
+     "score_home",
+     "score_away"
+    ],
+    "shots": [
+     {
+      "text": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain.",
+      "visual": {
+       "type": "photo",
+       "photo": "Enzo Maresca",
+       "caption": "Enzo Maresca, City head coach"
+      }
+     },
+     {
+      "text": "Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\"",
+      "visual": {
+       "type": "quote_card",
+       "quote": "We are conceding too many goals. Most of them are avoidable.",
+       "speaker": "Enzo Maresca",
+       "role": "Manchester City head coach",
+       "outlet": "Yahoo Sports (Football Muse)"
+      }
+     },
+     {
+      "text": "A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?",
+      "visual": {
+       "type": "scoreline"
+      }
+     }
+    ],
+    "narration": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain. Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\" A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?",
+    "visual": {
+     "type": "quote_card",
+     "quote": "We are conceding too many goals. Most of them are avoidable.",
+     "speaker": "Enzo Maresca",
+     "role": "Manchester City head coach",
+     "outlet": "Yahoo Sports (Football Muse)"
+    }
+   },
+   {
+    "id": 2,
+    "beat": "WHAT WAS EXPECTED",
+    "on_screen": "A leak to fix",
+    "fact_ids": [
+     "home_form_record",
+     "away_form_record",
+     "home_absent_1",
+     "press"
+    ],
+    "shots": [
+     {
+      "text": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws.",
+      "visual": {
+       "type": "form_compare"
+      }
+     },
+     {
+      "text": "There is also a cloud over the club. In September, a commission found City guilty of 114 of the 115 Premier League financial charges. City are appealing, and no sanction is set yet. So a question hangs over this run: is the case weighing on the players?",
+      "visual": {
+       "type": "text_card",
+       "heading": "The case",
+       "lines": [
+        "Guilty: 114 of 115 charges",
+        "City are appealing",
+        "No sanction yet"
+       ]
+      }
+     },
+     {
+      "text": "Maresca, the day before: \"I don't think the players are focused on the noise.\" Former City midfielder Didi Hamann disagrees. He tells Sports Mole the uncertainty is a factor.",
+      "visual": {
+       "type": "quote_card",
+       "quote": "I don't think the players are focused on the noise",
+       "speaker": "Enzo Maresca",
+       "role": "Man City head coach",
+       "outlet": "Sports Mole"
+      }
+     },
+     {
+      "text": "Fulham's Álvaro Arbeloa calls his team's 20 straight defeats against City not relevant.",
+      "visual": {
+       "type": "text_card",
+       "heading": "Arbeloa's view",
+       "lines": [
+        "20 defeats: not relevant"
+       ]
+      }
+     }
+    ],
+    "narration": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws. There is also a cloud over the club. In September, a commission found City guilty of 114 of the 115 Premier League financial charges. City are appealing, and no sanction is set yet. So a question hangs over this run: is the case weighing on the players? Maresca, the day before: \"I don't think the players are focused on the noise.\" Former City midfielder Didi Hamann disagrees. He tells Sports Mole the uncertainty is a factor. Fulham's Álvaro Arbeloa calls his team's 20 straight defeats against City not relevant.",
+    "visual": {
+     "type": "form_compare"
+    }
+   },
+   {
+    "id": 3,
+    "beat": "THE CHARACTERS",
+    "on_screen": "Three names to remember",
+    "fact_ids": [
+     "home_coach",
+     "home_formation",
+     "away_formation"
+    ],
+    "shots": [
+     {
+      "text": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\".",
+      "visual": {
+       "type": "photo",
+       "photo": "Enzo Maresca",
+       "caption": "Enzo Maresca, City head coach"
+      }
+     },
+     {
+      "text": "The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score.",
+      "visual": {
+       "type": "lineups"
+      }
+     },
+     {
+      "text": "The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour.",
+      "visual": {
+       "type": "photo",
+       "photo": "Oscar Bobb",
+       "caption": "Oscar Bobb, Fulham"
+      }
+     }
+    ],
+    "narration": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\". The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score. The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour.",
+    "visual": {
+     "type": "lineups"
+    }
+   },
+   {
+    "id": 4,
+    "beat": "ACT ONE",
+    "on_screen": "City press, Fulham score",
+    "fact_ids": [
+     "goal_1",
+     "momentum_home_on_top_pct",
+     "ht_home",
+     "ht_away"
+    ],
+    "shots": [
+     {
+      "text": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide.",
+      "visual": {
+       "type": "photo",
+       "photo": "Etihad Stadium, Manchester (inside, view 1)",
+       "caption": "Etihad Stadium, Manchester"
+      }
+     },
+     {
+      "text": "Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1.",
+      "visual": {
+       "type": "goal_replay",
+       "minute": 16
+      }
+     },
+     {
+      "text": "FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail.",
+      "visual": {
+       "type": "halftime_fulltime"
+      }
+     }
+    ],
+    "narration": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide. Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1. FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail.",
+    "visual": {
+     "type": "goal_replay",
+     "minute": 16
+    }
+   },
+   {
+    "id": 5,
+    "beat": "THE TURNING POINT",
+    "on_screen": "The miss at minute 24",
+    "fact_ids": [
+     "home_best_chance",
+     "shots"
+    ],
+    "shots": [
+     {
+      "text": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved.",
+      "visual": {
+       "type": "threat_map",
+       "side": "home",
+       "player": "Erling Haaland",
+       "kicker": "MINUTE 24",
+       "title": "Haaland's shots"
+      }
+     },
+     {
+      "text": "Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team.",
+      "visual": {
+       "type": "xg_explainer"
+      }
+     },
+     {
+      "text": "Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
+      "visual": {
+       "type": "key_number",
+       "value": "1.03",
+       "label": "Haaland's xG, no goal"
+      }
+     }
+    ],
+    "narration": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team. Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
+    "visual": {
+     "type": "threat_map",
+     "side": "home",
+     "player": "Erling Haaland",
+     "kicker": "MINUTE 24",
+     "title": "Haaland's shots"
+    }
+   },
+   {
+    "id": 6,
+    "beat": "ACT TWO",
+    "on_screen": "Anderson answers",
+    "fact_ids": [
+     "goal_2",
+     "sub_1",
+     "sub_2",
+     "momentum_around_subs",
+     "shots"
+    ],
+    "shots": [
+     {
+      "text": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1.",
+      "visual": {
+       "type": "photo",
+       "photo": "Elliot Anderson",
+       "caption": "Elliot Anderson, City"
+      }
+     },
+     {
+      "text": "Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 27 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal.",
+      "visual": {
+       "type": "momentum"
+      }
+     }
+    ],
+    "narration": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1. Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 27 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal.",
+    "visual": {
+     "type": "momentum"
+    }
+   },
+   {
+    "id": 7,
+    "beat": "WHAT THE NUMBERS REVEAL",
+    "on_screen": "Chances that never arrived",
+    "fact_ids": [
+     "home_xg",
+     "away_xg",
+     "home_shots",
+     "home_shots_on_target",
+     "away_keeper_goals_prevented",
+     "diag_home_big_chances",
+     "shots"
+    ],
+    "shots": [
+     {
+      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little.",
+      "visual": {
+       "type": "stat_bars",
+       "stats": [
+        "expected_goals",
+        "total_shots",
+        "shots_on_goal"
+       ]
+      }
+     },
+     {
+      "text": "So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target.",
+      "visual": {
+       "type": "diagnosis",
+       "side": "home"
+      }
+     },
+     {
+      "text": "The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
+      "visual": {
+       "type": "threat_map",
+       "side": "home",
+       "kicker": "CITY'S SHOTS",
+       "title": "Where City's shots went"
+      }
+     }
+    ],
+    "narration": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
+    "visual": {
+     "type": "stat_bars",
+     "stats": [
+      "expected_goals",
+      "total_shots",
+      "shots_on_goal"
+     ]
+    }
+   },
+   {
+    "id": 8,
+    "beat": "THE VERDICT",
+    "on_screen": "A point, saved late",
+    "fact_ids": [
+     "best_player_1",
+     "worst_player_3",
+     "home_best_chance"
+    ],
+    "shots": [
+     {
+      "text": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal.",
+      "visual": {
+       "type": "player_ratings"
+      }
+     },
+     {
+      "text": "So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too.",
+      "visual": {
+       "type": "text_card",
+       "heading": "Haaland's work, last 5 games",
+       "lines": [
+        "Distance: 9377 to 9866 m",
+        "vs Fulham: 13 sprints, the most",
+        "vs Fulham: 24 touches, the most"
+       ]
+      }
+     },
+     {
+      "text": "The effort is there. The finishing is not. Against Fulham, Haaland's problem was the last touch, not the running.",
+      "visual": {
+       "type": "text_card",
+       "heading": "Haaland",
+       "lines": [
+        "Effort: there",
+        "Finishing: not"
+       ]
+      }
+     }
+    ],
+    "narration": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal. So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too. The effort is there. The finishing is not. Against Fulham, Haaland's problem was the last touch, not the running.",
+    "visual": {
+     "type": "press_cut",
+     "review_index": 0
+    }
+   },
+   {
+    "id": 9,
+    "beat": "WHAT IT MEANS",
+    "on_screen": "Who let it in?",
+    "fact_ids": [
+     "goal_1",
+     "home_xg",
+     "home_form_record",
+     "shots"
+    ],
+    "shots": [
+     {
+      "text": "Maresca asked for fewer avoidable goals. So who let this one in? It began with a Fulham throw-in deep in their own half. Muniz won the ball in the air, then ran the length of the pitch on the counter. Bobb beat his man and found him in the box. Squawka's analysis says City's midfield faltered.",
+      "visual": {
+       "type": "goal_replay",
+       "minute": 16
+      }
+     },
+     {
+      "text": "So not the defence alone. In our reading, City lost the ball in the air, and no one stopped the break. One chance, worth only 0.14 xG, was enough.",
+      "visual": {
+       "type": "key_number",
+       "value": "0.14",
+       "label": "xG, Muniz, minute 16"
+      }
+     },
+     {
+      "text": "Two questions for the comments. Was Muniz's goal avoidable? And is the case weighing on City's players? Tell us below, and subscribe.",
+      "visual": {
+       "type": "text_card",
+       "heading": "Your call",
+       "lines": [
+        "Avoidable goal?",
+        "Is the case weighing on them?"
+       ]
+      }
+     }
+    ],
+    "narration": "Maresca asked for fewer avoidable goals. So who let this one in? It began with a Fulham throw-in deep in their own half. Muniz won the ball in the air, then ran the length of the pitch on the counter. Bobb beat his man and found him in the box. Squawka's analysis says City's midfield faltered. So not the defence alone. In our reading, City lost the ball in the air, and no one stopped the break. One chance, worth only 0.14 xG, was enough. Two questions for the comments. Was Muniz's goal avoidable? And is the case weighing on City's players? Tell us below, and subscribe.",
+    "visual": {
+     "type": "key_number",
+     "value": "1.87",
+     "label": "City's xG, one goal"
+    }
+   }
+  ]
+ },
+ "report": {
+  "ok": true,
+  "problems": []
+ },
+ "saved_script": "2026-11-21T14:53:54Z",
+ "shorts": [
+  {
+   "id": 1,
+   "format": "player_spotlight",
+   "title": "Elliot Anderson: City's best-rated player vs Fulham",
+   "hook": "Anderson, 8.1, best on the pitch",
+   "shots": [
+    {
+     "text": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal.",
+     "visual": {
+      "type": "photo",
+      "photo": "Elliot Anderson",
+      "caption": "Elliot Anderson, Manchester City"
+     }
+    },
+    {
+     "text": "His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley.",
+     "visual": {
+      "type": "shot_map"
+     }
+    },
+    {
+     "text": "He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night.",
+     "visual": {
+      "type": "player_ratings"
+     }
+    },
+    {
+     "text": "Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker.",
+     "visual": {
+      "type": "stat_bars"
+     }
+    },
+    {
+     "text": "Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
+     "visual": {
+      "type": "scoreline"
+     }
+    }
+   ],
+   "fact_ids": [
+    "best_player_1",
+    "player_of_the_match",
+    "goal_2",
+    "score_home",
+    "score_away"
+   ],
+   "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
+   "visual": {
+    "type": "shot_map"
+   }
+  },
+  {
+   "id": 2,
+   "format": "turning_point",
+   "title": "City 1-1 Fulham: better chances, fewer goals",
+   "hook": "1.87 expected goals, one goal",
+   "shots": [
+    {
+     "text": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores.",
+     "visual": {
+      "type": "stat_bars"
+     }
+    },
+    {
+     "text": "City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target.",
+     "visual": {
+      "type": "shot_map"
+     }
+    },
+    {
+     "text": "City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest.",
+     "visual": {
+      "type": "diagnosis"
+     }
+    },
+    {
+     "text": "Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result.",
+     "visual": {
+      "type": "result_odds"
+     }
+    },
+    {
+     "text": "The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
+     "visual": {
+      "type": "scoreline"
+     }
+    }
+   ],
+   "fact_ids": [
+    "home_xg",
+    "away_xg",
+    "home_shots",
+    "away_shots",
+    "home_shots_on_target",
+    "away_shots_on_target",
+    "diag_home_big_chances",
+    "diag_home_goals_minus_xg",
+    "diag_sim_result"
+   ],
+   "narration": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest. Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
+   "visual": {
+    "type": "stat_bars"
+   }
+  }
+ ],
+ "edited": false
 }
