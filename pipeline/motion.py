@@ -61,22 +61,27 @@ def _quote_frames(pack: dict, vis: dict, tokens: list[str], starts, shot_from: i
 import re as _re2
 
 _OOH = _re2.compile(r"^(saves?|saved|miss(es|ed)?|wide|post|crossbar|bar|blocked|denied|keeps?)$")
+_NOT = {"not", "never", "must", "usually", "often", "no", "didn't", "cannot", "can't", "to", "without", "could", "would", "neither", "nor"}
 _ROAR = _re2.compile(r"^(scores?|scored|equalises?|equalizes?|equaliser|winner)$")
 
 
 def crowd_cues(narration: str, starts, frames: int, visuals=()) -> list[dict]:
-    """Where a stadium 'ooh' (save, miss) or roar (goal) plays: at the spoken word, max 2 per scene."""
+    """Where a stadium 'ooh' (save, miss) or roar (goal) plays: at the spoken word, max 3 per scene."""
     toks = narration.split()
     if not starts or len(starts) != len(toks):
         starts = [i / max(1, len(toks)) * frames / FPS for i in range(len(toks))]
     cues, last = [], -999
-    for w, t in zip(toks, starts):
+    plain = [_re2.sub(r"[^a-z']", "", w.lower()) for w in toks]
+    for i, (w, t) in enumerate(zip(toks, starts)):
         k = _re2.sub(r"[^a-z]", "", w.lower())
         kind = "roar" if _ROAR.match(k) else "ooh" if _OOH.match(k) else None
+        # "must score", "did not save", "scored from neither": no real moment, no crowd
+        if kind and (set(plain[max(0, i - 3):i]) & _NOT or set(plain[i + 1:i + 3]) & {"neither", "nothing", "none"}):
+            kind = None
         f = int(t * FPS)
         if kind and f - last > 4 * FPS and f + 30 < frames:
             cues.append({"from": f, "kind": kind}); last = f
-        if len(cues) >= 2:
+        if len(cues) >= 3:
             break
     return cues
 

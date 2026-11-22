@@ -5,7 +5,7 @@ import { C, HEAD, BODY } from "./theme";
 import { SceneVisual, findPhoto } from "./scenes";
 import { Captions } from "./Match";
 import { NameTags } from "./NameTag";
-import { Crowd } from "./Crowd";
+import { Crowd, CrowdSinging } from "./Crowd";
 import { ShortFront } from "./Newspaper";
 
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
@@ -111,6 +111,7 @@ export const Short = (props) => {
       </div>
       <Audio src={staticFile(short.audio)} />
       <Crowd cues={short.crowd} volume={props.crowdVolume} />
+      <CrowdSinging total={0} volume={(props.crowdVolume ?? 0.32) * 0.8} />
       <Audio src={staticFile("sfx/whoosh.wav")} volume={0.35} />
       <Sequence from={speak}><Audio src={staticFile("sfx/hit.wav")} volume={0.45} /></Sequence>
     </AbsoluteFill>

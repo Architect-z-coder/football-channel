@@ -15,7 +15,7 @@ export const Crowd = ({ cues, volume = 0.32 }) => (
   </>
 );
 
-// Fans singing (voices only, original wordless chant): under the opening and the ending, ~10 s each.
+// Fans singing (voices only, original wordless chant): opening, middle (long videos) and ending, ~10 s each.
 const SING = 300;
 const singVol = (v) => (f) => interpolate(f, [0, 45, SING - 75, SING], [0, v, v, 0],
                                           { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -25,6 +25,11 @@ export const CrowdSinging = ({ total, volume = 0.3 }) => (
     <Sequence from={0} durationInFrames={SING} layout="none">
       <Audio src={staticFile("sfx/crowd_sing.mp3")} volume={singVol(volume)} />
     </Sequence>
+    {total > SING * 6 ? (
+      <Sequence from={Math.round(total / 2 - SING / 2)} durationInFrames={SING} layout="none">
+        <Audio src={staticFile("sfx/crowd_sing.mp3")} volume={singVol(volume * 0.8)} />
+      </Sequence>
+    ) : null}
     {total > SING * 3 ? (
       <Sequence from={total - SING} durationInFrames={SING} layout="none">
         <Audio src={staticFile("sfx/crowd_sing.mp3")} volume={singVol(volume)} />
