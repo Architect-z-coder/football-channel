@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-21T14:55:15Z",
-  "fixture_id": "fotmob-5795522",
+  "updated": "2026-11-22T09:14:31Z",
+  "fixture_id": 560643,
   "match": "Manchester City Fulham",
-  "slug": "fotmob-5795522",
-  "home": "Manchester City",
+  "slug": "560643",
+  "home": "Man City",
   "away": "Fulham",
   "voice": "astro",
   "items": [
     {
       "key": "scene_01",
-      "text": "Enzo Maresca sits in the seat Pep Guardiola held for ten years. Before Fulham arrive at the Etihad, he says something plain. Yahoo Sports reports his words. \"We are conceding too many goals. Most of them are avoidable.\" A new era, a new coach, and a problem he has named himself. The match ends 1-1. But a draw hides the real question. Can Maresca stop his team giving goals away?"
+      "text": "Etihad Stadium, Manchester. 60,038 people in the stands, and one question for Enzo Maresca. Can his City still win at home? He is the man who followed Pep Guardiola, who left after 10 years. His side have lost 3 of their last 5. Fulham are the visitors. It finishes 1-1. And City made more chances than Fulham. So this is Maresca's problem. His team made the chances... so why did they not win?"
     },
     {
       "key": "scene_02",
-      "text": "City arrive with 1 win in their last 5 matches, and without the injured Antoine Semenyo. Fulham have 2 wins and 2 draws. Maresca says the international break was used for review. Yahoo Sports, citing City Xtra, reports: \"We reviewed things during the international break that we need to do better\". Fulham's coach, Álvaro Arbeloa, in a translated report, calls his team's 20 straight defeats against City not relevant. He says Fulham will need their best performance. So the stakes are clear. City must fix a leak. Fulham must forget a record."
+      "text": "Before the match, Maresca spoke about his squad. Manchester City's website quotes him. In the end, Nunes was out and Khusanov started. Yahoo Sports reported Antoine Semenyo was out too, with a knee injury. The club's site said Maresca spoke of balance between attacking and defending. At Fulham, Álvaro Arbeloa said, in AllFootballApp's summary, that his defence was solid but his attack must be sharper. City had lost 3 of their last 5. Fulham had lost 1. Even so, City's eleven was valued at 928 million euros, Fulham's at 265. The natural expectation was a City win."
     },
     {
       "key": "scene_03",
-      "text": "Three people carry this story. The first is Enzo Maresca. He was Guardiola's assistant in 2022-23, and he took over on 29 June 2026. Sky Sports reports his promise: to do \"my job, in the way I want\". The second is Erling Haaland, alone at the top of City's 4-2-3-1. If City are to fix their night, he is the man who must score. The third is Oscar Bobb. A City academy graduate, he lines up on Fulham's right wing against his old club, as Sports Mole's preview expected. Remember his name. He matters before the half hour."
+      "text": "Three people carry this story. Enzo Maresca came in after Guardiola. At his first press conference he said: \"I'm not here to copy someone, I'm here to do my job, to install my football, the way I see football.\" Elliot Anderson starts in midfield. A midfielder, not a striker. Remember his name. He is the one who will save City's night. Oscar Bobb is one of the young attackers Arbeloa has backed, says Dave.sport. His night crosses with Erling Haaland's, City's centre-forward, who will get the chances and not the goal."
     },
     {
       "key": "scene_04",
-      "text": "Etihad Stadium. Minute 7. Haaland shoots, blocked. Minute 8, O'Reilly shoots, blocked. Minute 9, a Dias header from a corner goes wide. Minute 16. Fulham answer, with their first shot. Oscar Bobb makes the pass, and Rodrigo Muniz scores with his right foot, in open play. 0-1. FotMob's momentum graph has City on top for 60 percent of the first half. Yet at half-time, it is 0-1. City dominate, and they trail."
+      "text": "Etihad Stadium. Minute 7. City start on the front foot. Haaland shoots, blocked. Minute 8, O'Reilly, blocked. Minute 9, a corner, and Rúben Dias heads wide. Three shots. None reach the goalkeeper. Then, minute 16, Fulham's first shot. Rodrigo Muniz, right foot, from open play. It is 0-1. Bobb is credited with the assist. Arbeloa had talked about attacking efficiency, and Fulham take the lead with their first attempt."
     },
     {
       "key": "scene_05",
-      "text": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob puts this one at 0.75. Three times in four. It is the best chance of the match for either team. Haaland ends with 4 shots worth 1.0 xG in total, and no goal."
+      "text": "Minute 24. Haaland, from close range, left foot. Saved. FotMob's expected goals, or xG, is learned from past shots, and says how often a chance like this is scored. This one is worth 0.7. About 7 in 10. Minute 42. Dias heads a corner over from close range. Another big chance, gone. Fulham's goal came from a chance worth 0.14. City's best one was 5 times bigger. Half-time: Fulham 1, City 0. Our reading: the turning point is not a goal. It is a chance not taken. City have the better of the chances, and still must find a way through."
     },
     {
       "key": "scene_06",
-      "text": "Just before the hour, City finally score. From a corner, Elliot Anderson hits a right-footed shot from the edge of the area. AP calls it a stunning volley. 1-1. Then both benches move at minute 70. City bring on Rayan Cherki for Phil Foden; Fulham change two players. FotMob's momentum had City on top for 80 percent of the 15 minutes before, and 20 percent of the 15 after. Both sides changed, so the numbers cannot split the cause. The match tilts toward Fulham, and City never find a second goal."
+      "text": "Minute 57. A corner. Elliot Anderson, right foot, and it is 1-1. BBC Sport calls it a \"stunning second-half volley\". FotMob gave it 0.03 xG. About 3 in 100. Here is the goal again. Then the match turns. Both coaches make changes at minute 70. In the next 15 minutes, City are on top for just 27 percent of the minutes. Fulham take 3 shots between minute 68 and 75. Our reading: City's point is now under threat. City reply late. Minute 83, Cherki shoots, blocked. It is City's last shot, and the 8th one blocked."
     },
     {
       "key": "scene_07",
-      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.88 xG, and Fulham 0.72. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper."
+      "text": "Now the opening question. xG: City 1.87, Fulham 0.74. So why only 1-1? One cause stands out. Follow City's 15 shots. 8 were blocked. 4 more missed. Only 3 were on target, and 1 went in. Fulham's goalkeeper was not the hero: Leno's goals prevented is minus 0.54. Our reading: 83 percent of City's danger came through the centre, and Fulham's defenders made 7 blocks to City's 1. That points to a crowded middle. The data cannot show where anyone stood. Replay these chances 20,000 times and City win 69 in 100. They made enough. The wall took it away."
     },
     {
       "key": "scene_08",
-      "text": "Steve Douglas of AP writes: \"City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.\" FotMob agrees on one thing. It rates Anderson 8.1, the highest of any player. The lowest rating among City's starters is Haaland, on 6.5. His shots explain it: 4 attempts, 1 on target, no goal. So, did Maresca fix the avoidable goals? Only in part. Fulham got little, yet one shot still went in. We have no post-match words from either coach, so we cannot hear how he read it."
+      "text": "BBC Sport's Shamoon Hafez writes: \"Elliot Anderson's stunning second-half volley rescued a point against Fulham, but Manchester City extend their winless run to four games in the Premier League.\" The numbers agree on the first half: Anderson has the top rating, 8.1. Haaland is City's lowest-rated starter, on 6.5. He had 4 shots worth 1.03 xG. 2 were blocked, 1 was saved, 1 missed. The numbers do not say how the rating is built. Bobb, with the assist, is on 7.6. A VAVEL USA live blog quotes Arbeloa, but does not say when he said it. Before the match he wanted sharper attacking. Our reading: Fulham's 0.74 xG became 1 goal."
     },
     {
       "key": "scene_09",
-      "text": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance. At the other end, City's 1.88 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over. So here is the question for the comments. Was Muniz's goal an avoidable goal, or just football? Tell us below. And if you like football told as a story, subscribe."
+      "text": "So, the answer. City did not lack chances. They lacked a way through: 8 of their 15 shots were blocked. City are third on 22 points, but winless in four league games, says BBC Sport. Our reading: Maresca's City can create. His test now is turning chances into shots that reach the goalkeeper. One match cannot prove a pattern. What should Maresca change first? Tell us in the comments, and subscribe to The Other Touchline."
     },
     {
       "key": "short_1",
-      "text": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.00 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel."
+      "text": "8.1 rating. A 3% chance. A goal. Elliot Anderson was the best-rated player on the pitch. At minute 57, City trailed 1-0. His right-foot shot, from a corner, had an expected goals value of 0.03. It went in. He also had 4 shots, created 3 chances and made 9 defensive actions, as one of City's two deep midfielders. He lost 9 duels and was dispossessed 3 times, so not flawless. But he saved a point on a night Haaland, with 1.03 xG, scored none. Is Anderson City's most important midfielder right now? Full story on the channel."
     },
     {
       "key": "short_2",
-      "text": "City created 1.88 expected goals. Fulham created 0.72. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.89 goals below what their chances suggest. Replay these chances 20,000 times and City win 70%, draw 20%, Fulham win 9%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel."
+      "text": "Minute 70 changed how this match felt. Before it, City had taken 14 of their 15 shots. They had trailed since minute 16 and equalised at 57. Then both coaches changed things. City swapped Foden for Cherki. Fulham brought on Robinson and Larsson. City had been on top in 80% of the 15 minutes before. In the 15 after, only 27%. They took one more shot all game, blocked, worth 0.05 xG. The numbers show the swing, not whether the changes caused it. On chance quality, City won 69% of 20,000 replays. A draw came in 21%. Did the substitutions cost City the win? Full story on the channel."
     }
   ],
-  "characters": 5704
+  "characters": 5666
 }

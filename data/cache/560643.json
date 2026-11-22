@@ -369,5 +369,598 @@
       },
       "verified": true
     }
+  ],
+  "script": {
+    "title_options": [
+      "Man City 1-1 Fulham: 8 of 15 shots were blocked",
+      "Why Maresca's City could not beat Fulham",
+      "Maresca's City made the chances. Fulham made the blocks"
+    ],
+    "thumbnail_texts": [
+      "8 OF 15 BLOCKED",
+      "THE WALL AT ETIHAD",
+      "MARESCA'S TEST"
+    ],
+    "description": "Manchester City 1-1 Fulham at the Etihad. City made the chances, Fulham scored first, and Elliot Anderson's volley saved a point. We follow Enzo Maresca, Anderson and Oscar Bobb, and ask one question: if City made the chances, why did they not win? The answer sits in what happened to their shots before they reached the goalkeeper. Sources quoted: BBC Sport, Yahoo Sports, AllFootballApp, Dave.sport, a VAVEL USA live blog and Manchester City's official site.\n\nThe Other Touchline: modern football, explained. What should Maresca change first? Tell us in the comments.\n\nData: football-data.org + FotMob.",
+    "tags": [
+      "Man City",
+      "Fulham",
+      "Premier League",
+      "Enzo Maresca",
+      "Arbeloa",
+      "Elliot Anderson",
+      "Haaland",
+      "xG",
+      "football analysis",
+      "match analysis"
+    ],
+    "scenes": [
+      {
+        "id": 1,
+        "beat": "THE QUESTION",
+        "on_screen": "Maresca's home test",
+        "fact_ids": [
+          "stadium",
+          "attendance",
+          "home_last5_losses",
+          "score_home",
+          "score_away"
+        ],
+        "shots": [
+          {
+            "text": "Etihad Stadium, Manchester. 60,038 people in the stands, and one question for Enzo Maresca. Can his City still win at home?",
+            "visual": {
+              "type": "photo",
+              "photo": "Etihad Stadium, Manchester",
+              "caption": "Etihad Stadium, Manchester"
+            }
+          },
+          {
+            "text": "He is the man who followed Pep Guardiola, who left after 10 years. His side have lost 3 of their last 5. Fulham are the visitors.",
+            "visual": {
+              "type": "photo",
+              "photo": "Pep Guardiola",
+              "caption": "Former City coach"
+            }
+          },
+          {
+            "text": "It finishes 1-1. And City made more chances than Fulham. So this is Maresca's problem. His team made the chances... so why did they not win?",
+            "visual": {
+              "type": "scoreline"
+            }
+          }
+        ],
+        "narration": "Etihad Stadium, Manchester. 60,038 people in the stands, and one question for Enzo Maresca. Can his City still win at home? He is the man who followed Pep Guardiola, who left after 10 years. His side have lost 3 of their last 5. Fulham are the visitors. It finishes 1-1. And City made more chances than Fulham. So this is Maresca's problem. His team made the chances... so why did they not win?",
+        "visual": {
+          "type": "scoreline"
+        }
+      },
+      {
+        "id": 2,
+        "beat": "WHAT WAS EXPECTED",
+        "on_screen": "What City said before",
+        "fact_ids": [
+          "home_absent_1",
+          "home_absent_2",
+          "home_starting_xi",
+          "home_xi_market_value_m_eur",
+          "away_xi_market_value_m_eur",
+          "home_last5_losses",
+          "away_last5_losses"
+        ],
+        "shots": [
+          {
+            "text": "Before the match, Maresca spoke about his squad. Manchester City's website quotes him. In the end, Nunes was out and Khusanov started.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "Still from the Forest game, we have Matheus and Khusa are still a doubt for tomorrow",
+              "speaker": "Enzo Maresca",
+              "role": "Man City head coach",
+              "outlet": "Manchester City official website"
+            }
+          },
+          {
+            "text": "Yahoo Sports reported Antoine Semenyo was out too, with a knee injury. The club's site said Maresca spoke of balance between attacking and defending.",
+            "visual": {
+              "type": "photo",
+              "photo": "Antoine Semenyo",
+              "caption": "Missing through injury"
+            }
+          },
+          {
+            "text": "At Fulham, Álvaro Arbeloa said, in AllFootballApp's summary, that his defence was solid but his attack must be sharper. City had lost 3 of their last 5. Fulham had lost 1. Even so, City's eleven was valued at 928 million euros, Fulham's at 265. The natural expectation was a City win.",
+            "visual": {
+              "type": "form_compare"
+            }
+          }
+        ],
+        "narration": "Before the match, Maresca spoke about his squad. Manchester City's website quotes him. In the end, Nunes was out and Khusanov started. Yahoo Sports reported Antoine Semenyo was out too, with a knee injury. The club's site said Maresca spoke of balance between attacking and defending. At Fulham, Álvaro Arbeloa said, in AllFootballApp's summary, that his defence was solid but his attack must be sharper. City had lost 3 of their last 5. Fulham had lost 1. Even so, City's eleven was valued at 928 million euros, Fulham's at 265. The natural expectation was a City win.",
+        "visual": {
+          "type": "quote_card",
+          "quote": "Still from the Forest game, we have Matheus and Khusa are still a doubt for tomorrow",
+          "speaker": "Enzo Maresca",
+          "role": "Man City head coach",
+          "outlet": "Manchester City official website"
+        }
+      },
+      {
+        "id": 3,
+        "beat": "THE CHARACTERS",
+        "on_screen": "Three roles, one night",
+        "fact_ids": [
+          "home_coach",
+          "away_coach",
+          "home_starting_xi",
+          "away_starting_xi"
+        ],
+        "shots": [
+          {
+            "text": "Three people carry this story. Enzo Maresca came in after Guardiola. At his first press conference he said: \"I'm not here to copy someone, I'm here to do my job, to install my football, the way I see football.\"",
+            "visual": {
+              "type": "photo",
+              "photo": "Enzo Maresca",
+              "caption": "City head coach"
+            }
+          },
+          {
+            "text": "Elliot Anderson starts in midfield. A midfielder, not a striker. Remember his name. He is the one who will save City's night.",
+            "visual": {
+              "type": "photo",
+              "photo": "Elliot Anderson",
+              "caption": "Manchester City midfielder"
+            }
+          },
+          {
+            "text": "Oscar Bobb is one of the young attackers Arbeloa has backed, says Dave.sport. His night crosses with Erling Haaland's, City's centre-forward, who will get the chances and not the goal.",
+            "visual": {
+              "type": "photo",
+              "photo": "Oscar Bobb",
+              "caption": "Fulham forward"
+            }
+          }
+        ],
+        "narration": "Three people carry this story. Enzo Maresca came in after Guardiola. At his first press conference he said: \"I'm not here to copy someone, I'm here to do my job, to install my football, the way I see football.\" Elliot Anderson starts in midfield. A midfielder, not a striker. Remember his name. He is the one who will save City's night. Oscar Bobb is one of the young attackers Arbeloa has backed, says Dave.sport. His night crosses with Erling Haaland's, City's centre-forward, who will get the chances and not the goal.",
+        "visual": {
+          "type": "photo",
+          "photo": "Enzo Maresca",
+          "caption": "City head coach"
+        }
+      },
+      {
+        "id": 4,
+        "beat": "ACT ONE",
+        "on_screen": "City press, Fulham strike",
+        "fact_ids": [
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Etihad Stadium. Minute 7. City start on the front foot.",
+            "visual": {
+              "type": "photo",
+              "photo": "Etihad Stadium, Manchester (inside, view 1)",
+              "caption": "Etihad Stadium, Manchester"
+            }
+          },
+          {
+            "text": "Haaland shoots, blocked. Minute 8, O'Reilly, blocked. Minute 9, a corner, and Rúben Dias heads wide. Three shots. None reach the goalkeeper.",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 7,
+                  "text": "Haaland shot blocked"
+                },
+                {
+                  "minute": 8,
+                  "text": "O'Reilly shot blocked"
+                },
+                {
+                  "minute": 9,
+                  "text": "Dias header wide"
+                },
+                {
+                  "minute": 16,
+                  "text": "Muniz puts Fulham ahead"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Then, minute 16, Fulham's first shot. Rodrigo Muniz, right foot, from open play. It is 0-1. Bobb is credited with the assist. Arbeloa had talked about attacking efficiency, and Fulham take the lead with their first attempt.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 16
+            }
+          }
+        ],
+        "narration": "Etihad Stadium. Minute 7. City start on the front foot. Haaland shoots, blocked. Minute 8, O'Reilly, blocked. Minute 9, a corner, and Rúben Dias heads wide. Three shots. None reach the goalkeeper. Then, minute 16, Fulham's first shot. Rodrigo Muniz, right foot, from open play. It is 0-1. Bobb is credited with the assist. Arbeloa had talked about attacking efficiency, and Fulham take the lead with their first attempt.",
+        "visual": {
+          "type": "key_moments",
+          "moments": [
+            {
+              "minute": 7,
+              "text": "Haaland shot blocked"
+            },
+            {
+              "minute": 8,
+              "text": "O'Reilly shot blocked"
+            },
+            {
+              "minute": 9,
+              "text": "Dias header wide"
+            },
+            {
+              "minute": 16,
+              "text": "Muniz puts Fulham ahead"
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "beat": "THE TURNING POINT",
+        "on_screen": "The chance that stayed out",
+        "fact_ids": [
+          "home_best_chance",
+          "shots",
+          "ht_home",
+          "ht_away"
+        ],
+        "shots": [
+          {
+            "text": "Minute 24. Haaland, from close range, left foot. Saved. FotMob's expected goals, or xG, is learned from past shots, and says how often a chance like this is scored. This one is worth 0.7. About 7 in 10.",
+            "visual": {
+              "type": "xg_explainer"
+            }
+          },
+          {
+            "text": "Minute 42. Dias heads a corner over from close range. Another big chance, gone. Fulham's goal came from a chance worth 0.14. City's best one was 5 times bigger.",
+            "visual": {
+              "type": "shot_map"
+            }
+          },
+          {
+            "text": "Half-time: Fulham 1, City 0. Our reading: the turning point is not a goal. It is a chance not taken. City have the better of the chances, and still must find a way through.",
+            "visual": {
+              "type": "halftime_fulltime"
+            }
+          }
+        ],
+        "narration": "Minute 24. Haaland, from close range, left foot. Saved. FotMob's expected goals, or xG, is learned from past shots, and says how often a chance like this is scored. This one is worth 0.7. About 7 in 10. Minute 42. Dias heads a corner over from close range. Another big chance, gone. Fulham's goal came from a chance worth 0.14. City's best one was 5 times bigger. Half-time: Fulham 1, City 0. Our reading: the turning point is not a goal. It is a chance not taken. City have the better of the chances, and still must find a way through.",
+        "visual": {
+          "type": "xg_explainer"
+        }
+      },
+      {
+        "id": 6,
+        "beat": "ACT TWO",
+        "on_screen": "Anderson answers",
+        "fact_ids": [
+          "shots",
+          "sub_1",
+          "sub_2",
+          "momentum_around_subs"
+        ],
+        "shots": [
+          {
+            "text": "Minute 57. A corner. Elliot Anderson, right foot, and it is 1-1. BBC Sport calls it a \"stunning second-half volley\". FotMob gave it 0.03 xG. About 3 in 100.",
+            "visual": {
+              "type": "photo",
+              "photo": "Elliot Anderson",
+              "caption": "Anderson, City midfielder"
+            }
+          },
+          {
+            "text": "Here is the goal again.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 57
+            }
+          },
+          {
+            "text": "Then the match turns. Both coaches make changes at minute 70. In the next 15 minutes, City are on top for just 27 percent of the minutes. Fulham take 3 shots between minute 68 and 75. Our reading: City's point is now under threat.",
+            "visual": {
+              "type": "momentum"
+            }
+          },
+          {
+            "text": "City reply late. Minute 83, Cherki shoots, blocked. It is City's last shot, and the 8th one blocked.",
+            "visual": {
+              "type": "key_number",
+              "value": "8 of 15",
+              "label": "City shots blocked"
+            }
+          }
+        ],
+        "narration": "Minute 57. A corner. Elliot Anderson, right foot, and it is 1-1. BBC Sport calls it a \"stunning second-half volley\". FotMob gave it 0.03 xG. About 3 in 100. Here is the goal again. Then the match turns. Both coaches make changes at minute 70. In the next 15 minutes, City are on top for just 27 percent of the minutes. Fulham take 3 shots between minute 68 and 75. Our reading: City's point is now under threat. City reply late. Minute 83, Cherki shoots, blocked. It is City's last shot, and the 8th one blocked.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 57
+        }
+      },
+      {
+        "id": 7,
+        "beat": "WHAT THE NUMBERS REVEAL",
+        "on_screen": "The wall in front of goal",
+        "fact_ids": [
+          "home_xg",
+          "away_xg",
+          "home_shots",
+          "home_shots_on_target",
+          "away_keeper_goals_prevented",
+          "home_defenders_blocks",
+          "away_defenders_blocks",
+          "diag_home_main_channel",
+          "diag_sim_result",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Now the opening question. xG: City 1.87, Fulham 0.74. So why only 1-1? One cause stands out.",
+            "visual": {
+              "type": "stat_bars",
+              "stats": [
+                "expected_goals",
+                "total_shots",
+                "shots_on_goal"
+              ]
+            }
+          },
+          {
+            "text": "Follow City's 15 shots. 8 were blocked. 4 more missed. Only 3 were on target, and 1 went in. Fulham's goalkeeper was not the hero: Leno's goals prevented is minus 0.54.",
+            "visual": {
+              "type": "diagnosis",
+              "side": "home"
+            }
+          },
+          {
+            "text": "Our reading: 83 percent of City's danger came through the centre, and Fulham's defenders made 7 blocks to City's 1. That points to a crowded middle. The data cannot show where anyone stood.",
+            "visual": {
+              "type": "threat_map",
+              "side": "home",
+              "kicker": "Where City's danger came from",
+              "title": "Through the middle"
+            }
+          },
+          {
+            "text": "Replay these chances 20,000 times and City win 69 in 100. They made enough. The wall took it away.",
+            "visual": {
+              "type": "result_odds"
+            }
+          }
+        ],
+        "narration": "Now the opening question. xG: City 1.87, Fulham 0.74. So why only 1-1? One cause stands out. Follow City's 15 shots. 8 were blocked. 4 more missed. Only 3 were on target, and 1 went in. Fulham's goalkeeper was not the hero: Leno's goals prevented is minus 0.54. Our reading: 83 percent of City's danger came through the centre, and Fulham's defenders made 7 blocks to City's 1. That points to a crowded middle. The data cannot show where anyone stood. Replay these chances 20,000 times and City win 69 in 100. They made enough. The wall took it away.",
+        "visual": {
+          "type": "stat_bars",
+          "stats": [
+            "expected_goals",
+            "total_shots",
+            "shots_on_goal"
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "beat": "THE VERDICT",
+        "on_screen": "What they said",
+        "fact_ids": [
+          "best_player_1",
+          "worst_player_1",
+          "away_top_rated",
+          "diag_away_goals_minus_xg",
+          "away_xg"
+        ],
+        "shots": [
+          {
+            "text": "BBC Sport's Shamoon Hafez writes: \"Elliot Anderson's stunning second-half volley rescued a point against Fulham, but Manchester City extend their winless run to four games in the Premier League.\" The numbers agree on the first half: Anderson has the top rating, 8.1.",
+            "visual": {
+              "type": "press_cut",
+              "review_index": 0
+            }
+          },
+          {
+            "text": "Haaland is City's lowest-rated starter, on 6.5. He had 4 shots worth 1.03 xG. 2 were blocked, 1 was saved, 1 missed. The numbers do not say how the rating is built. Bobb, with the assist, is on 7.6.",
+            "visual": {
+              "type": "player_ratings"
+            }
+          },
+          {
+            "text": "A VAVEL USA live blog quotes Arbeloa, but does not say when he said it. Before the match he wanted sharper attacking. Our reading: Fulham's 0.74 xG became 1 goal.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "It’s another point; we wanted to win, but we need to keep working hard.",
+              "speaker": "Álvaro Arbeloa",
+              "role": "Fulham head coach",
+              "outlet": "VAVEL USA live blog"
+            }
+          }
+        ],
+        "narration": "BBC Sport's Shamoon Hafez writes: \"Elliot Anderson's stunning second-half volley rescued a point against Fulham, but Manchester City extend their winless run to four games in the Premier League.\" The numbers agree on the first half: Anderson has the top rating, 8.1. Haaland is City's lowest-rated starter, on 6.5. He had 4 shots worth 1.03 xG. 2 were blocked, 1 was saved, 1 missed. The numbers do not say how the rating is built. Bobb, with the assist, is on 7.6. A VAVEL USA live blog quotes Arbeloa, but does not say when he said it. Before the match he wanted sharper attacking. Our reading: Fulham's 0.74 xG became 1 goal.",
+        "visual": {
+          "type": "press_cut",
+          "review_index": 0
+        }
+      },
+      {
+        "id": 9,
+        "beat": "WHAT IT MEANS",
+        "on_screen": "Getting through the wall",
+        "fact_ids": [
+          "home_position",
+          "home_points",
+          "home_shots",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "So, the answer. City did not lack chances. They lacked a way through: 8 of their 15 shots were blocked. City are third on 22 points, but winless in four league games, says BBC Sport.",
+            "visual": {
+              "type": "table_snapshot"
+            }
+          },
+          {
+            "text": "Our reading: Maresca's City can create. His test now is turning chances into shots that reach the goalkeeper. One match cannot prove a pattern.",
+            "visual": {
+              "type": "text_card",
+              "heading": "The lesson",
+              "lines": [
+                "Chances are not goals",
+                "Shots must get through"
+              ]
+            }
+          },
+          {
+            "text": "What should Maresca change first? Tell us in the comments, and subscribe to The Other Touchline.",
+            "visual": {
+              "type": "scoreline"
+            }
+          }
+        ],
+        "narration": "So, the answer. City did not lack chances. They lacked a way through: 8 of their 15 shots were blocked. City are third on 22 points, but winless in four league games, says BBC Sport. Our reading: Maresca's City can create. His test now is turning chances into shots that reach the goalkeeper. One match cannot prove a pattern. What should Maresca change first? Tell us in the comments, and subscribe to The Other Touchline.",
+        "visual": {
+          "type": "table_snapshot"
+        }
+      }
+    ]
+  },
+  "report": {
+    "ok": true,
+    "problems": [],
+    "critic": {
+      "hook": 5,
+      "payoff": 4,
+      "pace": 5,
+      "clarity": 6,
+      "notes": [
+        "Scene 1 opens with \"Manchester City are third in the table, but they arrive having lost 3 of their last 5 matches\" and \"a Fulham side with 2 wins and 5 draws\", which is a table and form recap. Open on the human situation instead: Maresca, the first coach after Guardiola's 10 years, hosting a struggling side, and ask whether his City can still win at home.",
+        "Scene 1 gives away the result (\"It ends 1-1\") and then asks \"what really cost them the win?\" with no human stakes. Keep the question, but state it as Maresca's problem: City made the chances, so why did they not win?",
+        "Scene 3 (\"Three people carry this story\") spends its time on the reporter's double-pivot reading and a hedge (\"That is the reporter's reading, not Maresca's words\"). It is repeated and wooden, and Haaland is tacked on as a fourth character. Cut it to one line per character and give each a role in the story: Maresca under pressure, Anderson the rescuer, Bobb the assist-maker against a frustrated Haaland.",
+        "Scene 7 runs through chance quality, finishing, blocks, goalkeeping and luck as a checklist of stats (0.12 xG per shot, minus 0.87, 8 blocked, minus 0.54, 83 percent). It reads like a report and ends on \"the numbers cannot rank blocks against finishing\", so the opening question never gets an answer. Pick one cause that the data supports best, such as 8 of 15 shots blocked with only 3 on target, and build the reveal around it.",
+        "Scene 6 jumps from the equaliser to the swing around minute 70 and ends on \"They cannot say why\". The story stalls at its turning point. Cut the \"80 percent / 27 percent\" momentum line, or tie it to what happened next so it moves the story on, and do not end the scene on a shrug.",
+        "The ending (\"Was this finishing, or a defence that did exactly enough?\") hands the question back to the viewer. Also, \"A draw was a less likely result than a City win\" is a weak point, since 69 percent to 21 percent is plain. Close with one clear answer to the opening question, tied to Maresca's first big test, and keep the comment prompt as a light add-on."
+      ]
+    },
+    "rewritten": true
+  },
+  "saved_script": "2026-11-22T09:13:50Z",
+  "shorts": [
+    {
+      "id": 1,
+      "format": "player_spotlight",
+      "title": "Anderson's 3% volley saved City a point",
+      "hook": "A 3% chance. A goal.",
+      "shots": [
+        {
+          "text": "8.1 rating. A 3% chance. A goal.",
+          "visual": {
+            "type": "photo",
+            "photo": "Elliot Anderson",
+            "caption": "Elliot Anderson, Man City midfielder"
+          }
+        },
+        {
+          "text": "Elliot Anderson was the best-rated player on the pitch.",
+          "visual": {
+            "type": "player_ratings"
+          }
+        },
+        {
+          "text": "At minute 57, City trailed 1-0. His right-foot shot, from a corner, had an expected goals value of 0.03. It went in.",
+          "visual": {
+            "type": "goal_replay",
+            "minute": 57
+          }
+        },
+        {
+          "text": "He also had 4 shots, created 3 chances and made 9 defensive actions, as one of City's two deep midfielders.",
+          "visual": {
+            "type": "stat_bars"
+          }
+        },
+        {
+          "text": "He lost 9 duels and was dispossessed 3 times, so not flawless. But he saved a point on a night Haaland, with 1.03 xG, scored none.",
+          "visual": {
+            "type": "key_number"
+          }
+        },
+        {
+          "text": "Is Anderson City's most important midfielder right now? Full story on the channel.",
+          "visual": {
+            "type": "photo",
+            "photo": "Elliot Anderson",
+            "caption": "Elliot Anderson, Man City midfielder"
+          }
+        }
+      ],
+      "fact_ids": [
+        "best_player_1",
+        "player_of_the_match",
+        "home_top_rated",
+        "home_best_chance",
+        "home_xg",
+        "home_formation"
+      ],
+      "narration": "8.1 rating. A 3% chance. A goal. Elliot Anderson was the best-rated player on the pitch. At minute 57, City trailed 1-0. His right-foot shot, from a corner, had an expected goals value of 0.03. It went in. He also had 4 shots, created 3 chances and made 9 defensive actions, as one of City's two deep midfielders. He lost 9 duels and was dispossessed 3 times, so not flawless. But he saved a point on a night Haaland, with 1.03 xG, scored none. Is Anderson City's most important midfielder right now? Full story on the channel.",
+      "visual": {
+        "type": "player_ratings"
+      }
+    },
+    {
+      "id": 2,
+      "format": "turning_point",
+      "title": "Minute 70: when Man City's grip on Fulham broke",
+      "hook": "Minute 70 changed everything",
+      "shots": [
+        {
+          "text": "Minute 70 changed how this match felt.",
+          "visual": {
+            "type": "momentum"
+          }
+        },
+        {
+          "text": "Before it, City had taken 14 of their 15 shots. They had trailed since minute 16 and equalised at 57.",
+          "visual": {
+            "type": "shot_map"
+          }
+        },
+        {
+          "text": "Then both coaches changed things. City swapped Foden for Cherki. Fulham brought on Robinson and Larsson.",
+          "visual": {
+            "type": "lineups"
+          }
+        },
+        {
+          "text": "City had been on top in 80% of the 15 minutes before. In the 15 after, only 27%. They took one more shot all game, blocked, worth 0.05 xG.",
+          "visual": {
+            "type": "key_number"
+          }
+        },
+        {
+          "text": "The numbers show the swing, not whether the changes caused it. On chance quality, City won 69% of 20,000 replays. A draw came in 21%.",
+          "visual": {
+            "type": "result_odds"
+          }
+        },
+        {
+          "text": "Did the substitutions cost City the win? Full story on the channel.",
+          "visual": {
+            "type": "momentum"
+          }
+        }
+      ],
+      "fact_ids": [
+        "sub_1",
+        "sub_2",
+        "home_shots",
+        "ht_away",
+        "diag_sim_result",
+        "home_xg"
+      ],
+      "narration": "Minute 70 changed how this match felt. Before it, City had taken 14 of their 15 shots. They had trailed since minute 16 and equalised at 57. Then both coaches changed things. City swapped Foden for Cherki. Fulham brought on Robinson and Larsson. City had been on top in 80% of the 15 minutes before. In the 15 after, only 27%. They took one more shot all game, blocked, worth 0.05 xG. The numbers show the swing, not whether the changes caused it. On chance quality, City won 69% of 20,000 replays. A draw came in 21%. Did the substitutions cost City the win? Full story on the channel.",
+      "visual": {
+        "type": "momentum"
+      }
+    }
   ]
 }
