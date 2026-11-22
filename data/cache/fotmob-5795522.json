@@ -848,13 +848,13 @@
      }
     },
     {
-     "text": "His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley.",
+     "text": "His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley.",
      "visual": {
       "type": "shot_map"
      }
     },
     {
-     "text": "He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night.",
+     "text": "He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night.",
      "visual": {
       "type": "player_ratings"
      }
@@ -879,7 +879,7 @@
     "score_home",
     "score_away"
    ],
-   "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
+   "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.03 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 52 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
    "visual": {
     "type": "shot_map"
    }
