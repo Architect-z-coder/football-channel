@@ -1,34 +1,34 @@
 {
-  "updated": "2026-11-21T00:15:36Z",
-  "home": "Bayern München",
-  "away": "1. FC Köln",
-  "competition": "Bundesliga",
-  "fixture_id": "fotmob-5881226",
+  "updated": "2026-11-22T10:28:15Z",
+  "home": "Manchester City",
+  "away": "Fulham",
+  "competition": "Premier League",
+  "fixture_id": "fotmob-5795522",
   "titles": [
-    "Bayern had the ball. Köln had the chances.",
-    "Why Kompany said Köln deserved the draw",
-    "72% possession, 17 shots, 1 point: Bayern 1-1 Köln"
+    "Maresca's Avoidable Goal: City 1-1 Fulham",
+    "City Had 1.87 xG. Here Is Why It Ended 1-1",
+    "Why Maresca's City Could Not Beat Fulham"
   ],
   "minutes": 5.2,
-  "files": "20261121-bayern-m-nchen-1-fc-k-ln",
+  "files": "20261122-manchester-city-fulham",
   "uploaded": false,
   "youtube": null,
   "critic": null,
   "rewritten": false,
   "shorts": [
     {
-      "title": "Jonathan Tah: best rated, in a 1-1 draw",
-      "hook": "Tah: 8.3, best on the pitch",
+      "title": "Elliot Anderson: City's best-rated player vs Fulham",
+      "hook": "Anderson, 8.1, best on the pitch",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-22"
+      "suggested_publish": "2026-11-23"
     },
     {
-      "title": "Köln's fast breaks should have won it",
-      "hook": "Two breaks. One goal. One point.",
+      "title": "City 1-1 Fulham: better chances, fewer goals",
+      "hook": "1.87 expected goals, one goal",
       "format": "turning_point",
       "youtube": null,
-      "suggested_publish": "2026-11-23"
+      "suggested_publish": "2026-11-24"
     }
   ],
   "voice": "everygen:astro"
