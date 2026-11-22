@@ -565,6 +565,6 @@ def _focus_form(pack: dict, data: dict, add) -> None:
         pack.setdefault("player_form", []).append({"player": full, "games": games})
         add(f"form_{_plain(full).replace(' ', '_')}",
             f"{full}: work rate and output, previous {len(games) - 1} matches then this one, oldest first "
-            f"(FotMob; distance in km, top speed in km/h)", games)
+            f"(FotMob; distance, running and sprinting in metres, top speed in km/h)", games)
         import json as _json
         log.info("Player form: %s %s", full, _json.dumps(games, ensure_ascii=False))

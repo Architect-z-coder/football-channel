@@ -391,13 +391,13 @@
  "script": {
   "title_options": [
    "Maresca's Avoidable Goal: City 1-1 Fulham",
-   "City Had 1.88 xG. Here Is Why It Ended 1-1",
+   "City Had 1.87 xG. Here Is Why It Ended 1-1",
    "Why Maresca's City Could Not Beat Fulham"
   ],
   "thumbnail_texts": [
    "AVOIDABLE GOALS?",
-   "HAALAND'S 0.75",
-   "1.88 xG, 1 GOAL"
+   "HAALAND'S BIG MISS",
+   "1.87 xG, 1 GOAL"
   ],
   "description": "Manchester City 1-1 Fulham at the Etihad, round 11 of the Premier League. Enzo Maresca said before the match that City concede too many goals and that most are avoidable. We follow that one question through the match: Maresca, Erling Haaland and Oscar Bobb, the miss at minute 24, Elliot Anderson's equaliser, and what the expected goals say about the 1-1.\n\nSources quoted: Yahoo Sports (Football Muse and City Xtra), Sky Sports, a translated AllFootballApp report, Sports Mole and AP (Steve Douglas). Photos from Wikimedia Commons, credited on screen.\n\nData: FotMob.",
   "tags": [
@@ -611,21 +611,21 @@
       }
      },
      {
-      "text": "Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob puts this one at 0.75.",
+      "text": "Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team.",
       "visual": {
        "type": "xg_explainer"
       }
      },
      {
-      "text": "Three times in four. It is the best chance of the match for either team. Haaland ends with 4 shots worth 1.0 xG in total, and no goal.",
+      "text": "Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
       "visual": {
        "type": "key_number",
-       "value": "0.75",
-       "label": "xG, Haaland, minute 24"
+       "value": "1.03",
+       "label": "Haaland's xG, no goal"
       }
      }
     ],
-    "narration": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob puts this one at 0.75. Three times in four. It is the best chance of the match for either team. Haaland ends with 4 shots worth 1.0 xG in total, and no goal.",
+    "narration": "The turning point is a miss. Minute 24. Haaland shoots with his left foot, very close to goal, down the middle. Saved. Expected goals, or xG, is learned from many past shots: distance, angle, foot or head, and the kind of pass. It tells you how often a shot like that goes in. FotMob rates this one the best chance of the match, for either team. Haaland ends with 4 shots worth 1.03 xG in total, and no goal.",
     "visual": {
      "type": "threat_map",
      "side": "home",
@@ -681,7 +681,7 @@
     ],
     "shots": [
      {
-      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.88 xG, and Fulham 0.72. Whatever Maresca feared at the back, Fulham got little.",
+      "text": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little.",
       "visual": {
        "type": "stat_bars",
        "stats": [
@@ -708,7 +708,7 @@
       }
      }
     ],
-    "narration": "Here is what the scoreline hides. FotMob's numbers give City 1.88 xG, and Fulham 0.72. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
+    "narration": "Here is what the scoreline hides. FotMob's numbers give City 1.87 xG, and Fulham 0.74. Whatever Maresca feared at the back, Fulham got little. So why only one goal? Not the goalkeeper. Bernd Leno's goals prevented figure is below zero, so he did not save Fulham. The cause is simpler. Only 3 of City's 15 shots were on target. The other 12 were blocked or missed the goal. Two big chances, none scored. Haaland's was saved, and Rúben Dias's header at minute 42 missed the target. The numbers point to shots that never tested the keeper.",
     "visual": {
      "type": "stat_bars",
      "stats": [
@@ -729,31 +729,36 @@
     ],
     "shots": [
      {
-      "text": "Steve Douglas of AP writes: \"City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.\" FotMob agrees on one thing. It rates Anderson 8.1, the highest of any player.",
-      "visual": {
-       "type": "press_cut",
-       "review_index": 0
-      }
-     },
-     {
-      "text": "The lowest rating among City's starters is Haaland, on 6.5. His shots explain it: 4 attempts, 1 on target, no goal.",
+      "text": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal.",
       "visual": {
        "type": "player_ratings"
       }
      },
      {
-      "text": "So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel. The numbers only show a team that made chances and did not finish them.",
+      "text": "So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too.",
+      "visual": {
+       "type": "text_card",
+       "heading": "Haaland's work, last 5 games",
+       "lines": [
+        "Distance: 9377 to 9866 m",
+        "vs Fulham: 13 sprints, the most",
+        "vs Fulham: 24 touches, the most"
+       ]
+      }
+     },
+     {
+      "text": "The effort is there. The finishing is not. So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel.",
       "visual": {
        "type": "text_card",
        "heading": "Fixed?",
        "lines": [
-        "Fulham got little",
-        "City did not finish"
+        "Effort: there",
+        "Finishing: not"
        ]
       }
      }
     ],
-    "narration": "Steve Douglas of AP writes: \"City needed a stunning, edge-of-the-area volley by Elliot Anderson in the 57th minute to salvage a point at Etihad Stadium, after Rodrigo Muniz gave Fulham the lead in the 16th.\" FotMob agrees on one thing. It rates Anderson 8.1, the highest of any player. The lowest rating among City's starters is Haaland, on 6.5. His shots explain it: 4 attempts, 1 on target, no goal. So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel. The numbers only show a team that made chances and did not finish them.",
+    "narration": "FotMob rates Elliot Anderson 8.1, the highest of any player. The lowest among City's starters is Haaland, on 6.5: 4 shots, 1 on target, no goal. So is Haaland working less? In the 5 games he has played since 24 October, he ran between 9377 and 9866 metres in each. Against Fulham he ran 9654, and made 13 sprints, his most in that run. His 24 touches were his most too. The effort is there. The finishing is not. So, did Maresca fix the avoidable goals? Only in part. And the case? One match cannot show what players feel.",
     "visual": {
      "type": "press_cut",
      "review_index": 0
@@ -779,10 +784,10 @@
       }
      },
      {
-      "text": "At the other end, City's 1.88 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over.",
+      "text": "At the other end, City's 1.87 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over.",
       "visual": {
        "type": "key_number",
-       "value": "1.88",
+       "value": "1.87",
        "label": "City's xG, one goal"
       }
      },
@@ -798,10 +803,10 @@
       }
      }
     ],
-    "narration": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance. At the other end, City's 1.88 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over. Two questions for the comments. Was Muniz's goal an avoidable goal, or just football? And is the case weighing on City's players? Tell us below. And if you like football told as a story, subscribe.",
+    "narration": "Maresca asked for fewer avoidable goals. His defence gave Fulham 5 shots, and one of them, rated at only 0.14 xG, was enough. Muniz's finish was well placed. It still came from a small chance. At the other end, City's 1.87 xG produced one goal. In our reading, the back did enough and the front did not finish. AP reports that City's 14-year winning run against Fulham is over. Two questions for the comments. Was Muniz's goal an avoidable goal, or just football? And is the case weighing on City's players? Tell us below. And if you like football told as a story, subscribe.",
     "visual": {
      "type": "key_number",
-     "value": "1.88",
+     "value": "1.87",
      "label": "City's xG, one goal"
     }
    }
@@ -855,7 +860,7 @@
      }
     },
     {
-     "text": "Erling Haaland had 4 shots worth 1.00 expected goals and did not score. City's best-rated player was a midfielder, not the striker.",
+     "text": "Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker.",
      "visual": {
       "type": "stat_bars"
      }
@@ -874,7 +879,7 @@
     "score_home",
     "score_away"
    ],
-   "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.00 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
+   "narration": "Elliot Anderson had the highest rating of the match: 8.1. He scored City's only goal. His goal came from a corner situation. The shot was worth just 0.04 expected goals, so a very small chance. AP called it a stunning, edge-of-the-area volley. He also took 4 shots, created 3 chances and completed 47 of 51 passes. He won 8 duels and lost 9, so it was not a flawless night. Erling Haaland had 4 shots worth 1.03 expected goals and did not score. City's best-rated player was a midfielder, not the striker. Was Anderson the right man of the match? Tell us in the comments. Full story on the channel.",
    "visual": {
     "type": "shot_map"
    }
@@ -883,10 +888,10 @@
    "id": 2,
    "format": "turning_point",
    "title": "City 1-1 Fulham: better chances, fewer goals",
-   "hook": "1.88 expected goals, one goal",
+   "hook": "1.87 expected goals, one goal",
    "shots": [
     {
-     "text": "City created 1.88 expected goals. Fulham created 0.72. Expected goals, or xG, rates each shot by how often it usually scores.",
+     "text": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores.",
      "visual": {
       "type": "stat_bars"
      }
@@ -898,13 +903,13 @@
      }
     },
     {
-     "text": "City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.89 goals below what their chances suggest.",
+     "text": "City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest.",
      "visual": {
       "type": "diagnosis"
      }
     },
     {
-     "text": "Replay these chances 20,000 times and City win 70%, draw 20%, Fulham win 9%. This draw was the less likely result.",
+     "text": "Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result.",
      "visual": {
       "type": "result_odds"
      }
@@ -927,7 +932,7 @@
     "diag_home_goals_minus_xg",
     "diag_sim_result"
    ],
-   "narration": "City created 1.88 expected goals. Fulham created 0.72. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.89 goals below what their chances suggest. Replay these chances 20,000 times and City win 70%, draw 20%, Fulham win 9%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
+   "narration": "City created 1.87 expected goals. Fulham created 0.74. Expected goals, or xG, rates each shot by how often it usually scores. City took 15 shots, and 3 were on target. Fulham took 5, and 4 were on target. City had 2 chances worth 0.3 xG or more, and scored from neither. Overall they finished 0.87 goals below what their chances suggest. Replay these chances 20,000 times and City win 69%, draw 21%, Fulham win 10%. This draw was the less likely result. The numbers show the gap. They cannot show whether the cause was shooting, defending or luck. City earned more, and converted less. Do you blame the finishing or the luck? Full story on the channel.",
    "visual": {
     "type": "stat_bars"
    }
