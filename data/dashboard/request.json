@@ -1,6 +1,6 @@
 {
-  "id": "mci-ful-prepare-9",
-  "mode": "prepare",
+  "id": "mci-ful-render-1",
+  "mode": "no-upload",
   "match": "fotmob:5795522",
   "look_back_days": ""
 }
