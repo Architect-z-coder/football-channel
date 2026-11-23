@@ -86,6 +86,11 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    With "player": only that player's shots (where HE was
                                                    dangerous). We have no heat maps or positions: never
                                                    call it a heat map or say where a player was.
+- {"type": "verdict", "cause": "2-4 words", "number": "the key number", "detail": "one short line"}
+                                                -> "THE VERDICT" card: the ONE main reason the match went
+                                                   the way it did, with the number that proves it.
+- {"type": "outro", "next": "optional: Next: <team> v <team>"}
+                                                -> ad-style end card: "NEXT DATA BREAKDOWN", subscribe, bell.
 - {"type": "goal_replay", "minute": int, "player": str, "lost": "own_half"|"midfield"|"final_third",
    "lost_label": str}                           -> MOVING 3D replay of one goal or big chance: the ball
                                                    travels (from the corner flag on a corner, the assist
@@ -167,8 +172,8 @@ HARD RULES
      ratings), not a list.
    8 THE VERDICT - what the coaches said AFTER and what the papers wrote (press_cut shots), set against
      the numbers.
-   9 WHAT IT MEANS - what happens next, the lesson, and one question for the comments. Short subscribe
-     line here only.
+   9 WHAT IT MEANS - the lesson and one question for the comments, then THE VERDICT and the outro
+     (rule 5i). The subscribe line lives only in the outro.
    ANGLES: first find the single strongest STORY of this match, then use only the 3-4 angles that prove
    it: the match (what happened), the hidden truth (xG, shots, ratings), the people (best/worst
    players), the absences (who was missing and did it matter), the coaches' words (before and after,
@@ -210,6 +215,13 @@ HARD RULES
    the player with himself across those games, and say minutes played (fewer minutes = less distance).
    A striker runs less than a midfielder by role: never call anyone lazy or say he "did not try". Say
    what changed and leave the judgement as a question.
+5i. The LAST scene always ends with these two shots, in this order:
+   (1) The verdict: "So what won it?" (or "what decided it?" for a draw) then ONE sentence naming the
+       principal cause, with its key number from the pack, e.g. "Relentless pressure: 3.29 expected goals
+       to 0.17, and the wall finally cracked." visual "verdict" (cause, number, detail). Pick the single
+       biggest cause the diagnosis supports; no list of reasons.
+   (2) The outro, ad style, short and upbeat: "Stay tuned: the next data breakdown is on its way.
+       Subscribe and hit the bell." visual "outro". The comments question goes BEFORE the verdict.
 5h. Sources are SHOWN, never spoken. Do not say "FotMob", "according to <outlet>", "<outlet> says" or
    "<outlet> writes" in the narration. Put the source name in the shot's visual as "source" (e.g.
    "source": "FotMob" for numbers, "source": "Khel Now" for a report); it appears on screen. Say
