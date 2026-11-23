@@ -1,35 +1,35 @@
 {
-  "updated": "2026-11-22T10:28:15Z",
-  "home": "Manchester City",
-  "away": "Fulham",
-  "competition": "Premier League",
-  "fixture_id": "fotmob-5795522",
+  "updated": "2026-11-23T11:46:25Z",
+  "home": "Barça",
+  "away": "Villarreal",
+  "competition": "Primera Division",
+  "fixture_id": 564749,
   "titles": [
-    "Maresca's Avoidable Goal: City 1-1 Fulham",
-    "City Had 1.87 xG. Here Is Why It Ended 1-1",
-    "Why Maresca's City Could Not Beat Fulham"
+    "Barça 3-2 Villarreal: The 0-2 Half That Lied",
+    "Two Goals in 7 Minutes: What Went Wrong at Barça?",
+    "Barça vs Villarreal: De Jong at Centre-Back"
   ],
-  "minutes": 5.2,
-  "files": "20261122-manchester-city-fulham",
+  "minutes": 5.3,
+  "files": "20261123-bar-a-villarreal",
   "uploaded": false,
   "youtube": null,
   "critic": null,
   "rewritten": false,
   "shorts": [
     {
-      "title": "Elliot Anderson: City's best-rated player vs Fulham",
-      "hook": "Anderson, 8.1, best on the pitch",
+      "title": "Pedri's 9.0: the midfielder who ran Camp Nou",
+      "hook": "Pedri: a 9.0 night",
       "format": "player_spotlight",
       "youtube": null,
-      "suggested_publish": "2026-11-23"
+      "suggested_publish": "2026-11-24"
     },
     {
-      "title": "City 1-1 Fulham: better chances, fewer goals",
-      "hook": "1.87 expected goals, one goal",
+      "title": "10 corners to 0: how Barça cracked Villarreal",
+      "hook": "10 corners to 0",
       "format": "turning_point",
       "youtube": null,
-      "suggested_publish": "2026-11-24"
+      "suggested_publish": "2026-11-25"
     }
   ],
-  "voice": "everygen:astro"
+  "voice": "everygen:brian"
 }
