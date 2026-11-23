@@ -498,7 +498,9 @@ def build_pack(mid: int) -> dict:
 # Work-rate numbers for chosen players (config.yaml fotmob.focus_players) across their recent matches.
 FORM_STATS = ["Minutes played", "Distance covered", "Running", "Sprinting", "Number of sprints", "Top speed",
               "Touches", "Touches in opposition box", "Total shots", "Expected goals (xG)", "Goals",
-              "Duels won", "Recoveries"]
+              "Duels won", "Duels lost", "Recoveries", "Tackles won", "Interceptions", "Clearances", "Blocks",
+              "Dribbled past", "Aerial duels won", "Ground duels won", "Accurate passes", "Accurate long balls",
+              "Passes into final third", "Line breaking passes", "Dispossessed", "Fouls committed", "FotMob rating"]
 
 
 def _plain(t: str) -> str:
