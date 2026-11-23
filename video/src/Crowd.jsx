@@ -37,3 +37,20 @@ export const CrowdSinging = ({ total, volume = 0.3 }) => (
     ) : null}
   </>
 );
+
+// Transition sounds: a soft whoosh when the picture changes, a low hit when a number or a goal lands.
+const HIT_TYPES = new Set(["key_number", "scoreline", "goal_replay", "result_odds", "halftime_fulltime"]);
+export const ShotSfx = ({ index, type, volume = 0.32 }) => (
+  <>
+    {index > 0 ? (
+      <Sequence from={0} durationInFrames={30} layout="none">
+        <Audio src={staticFile("sfx/whoosh.mp3")} volume={volume} />
+      </Sequence>
+    ) : null}
+    {HIT_TYPES.has(type) ? (
+      <Sequence from={6} durationInFrames={45} layout="none">
+        <Audio src={staticFile("sfx/hit.mp3")} volume={(f) => volume * 1.2 * Math.max(0, 1 - f / 45)} />
+      </Sequence>
+    ) : null}
+  </>
+);

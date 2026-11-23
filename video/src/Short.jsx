@@ -5,7 +5,7 @@ import { C, HEAD, BODY } from "./theme";
 import { SceneVisual, findPhoto } from "./scenes";
 import { Captions } from "./Match";
 import { NameTags } from "./NameTag";
-import { Crowd, CrowdSinging } from "./Crowd";
+import { Crowd, CrowdSinging, ShotSfx } from "./Crowd";
 import { ShortFront } from "./Newspaper";
 
 // Vertical short (1080x1920): hook on top, the match graphic in the middle, big captions below.
@@ -78,6 +78,7 @@ export const Short = (props) => {
         const z = ZOOM[sh.visual?.type] || 0.6;
         return (
           <Sequence key={i} from={sh.from} durationInFrames={len}>
+            <ShotSfx index={i} type={sh.visual.type} />
             <VShot len={len}>
               {ph ? <VPhoto ph={ph} visual={sh.visual} len={len} /> : (
                 <div style={{ position: "absolute", top: BOX_TOP, left: 0, width: 1080, height: BOX_H, overflow: "hidden",

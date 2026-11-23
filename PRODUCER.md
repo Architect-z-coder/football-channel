@@ -24,7 +24,7 @@ GitHub does the heavy work (data, research, script, render); the producer adds t
    - **Approve:** continue with step 6.
 6. **Voice with Everygen:** read `data/dashboard/voice_needed.json`. Check the Everygen balance; it must be
    at least the number of items + 5, otherwise stop and tell the owner. For each item, call
-   `generate_voiceover_batch` (up to 12 lines per call, one locked voice) with each item's exact `text`
+   `generate_voiceover_batch` (up to 12 lines per call, one locked voice) with each item's exact `text`, `voiceId` = config `voice.everygen_voice` and `voiceSettings` = config `voice.everygen_settings`
    and `voiceId` = the file's `voice`.
    Save `data/voice/<slug>.json`:
    `{"fixture_id": ..., "provider": "everygen", "items": [{"key", "text", "url": audioUrl, "voice": "<voice>",

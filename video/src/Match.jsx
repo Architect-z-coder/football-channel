@@ -4,7 +4,7 @@ import {
 } from "remotion";
 import { C, HEAD, BODY } from "./theme";
 import { NameTags } from "./NameTag";
-import { Crowd, CrowdSinging } from "./Crowd";
+import { Crowd, CrowdSinging, ShotSfx } from "./Crowd";
 import { Headline } from "./Newspaper";
 import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
@@ -168,6 +168,7 @@ const SceneShell = ({ scene, props }) => {
         const isPhoto = sh.visual.type === "photo" && findPhoto(props, sh.visual);
         return (
           <Sequence key={i} from={sh.from} durationInFrames={Math.max(len, 10)}>
+            <ShotSfx index={i} type={sh.visual.type} />
             <ShotFade len={Math.max(len, 10)} last={i + 1 === shots.length} exit={exit}>
               {isPhoto ? <FullPhoto visual={sh.visual} props={props} dur={len} /> : (
                 <AbsoluteFill>
