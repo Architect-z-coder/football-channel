@@ -57,16 +57,23 @@ Allowed visual types (use only these; the renderer supports nothing else):
 - {"type": "result_odds"}                       -> the chances replayed 20,000 times: win / draw / win %
                                                    (fact diag_sim_result).
 - {"type": "tactics_board", "team": "home"|"away"|"both", "kicker": str, "title": str,
-   "steps": [{"word": "<a word from this shot's text>", "side": "home"|"away",
-              "shirts": [shirt numbers], "label": "BACK FOUR"}]}
-                                                -> a tilted tactics board of the REAL starting line-ups
-                                                   (pack "lineups": formation, shirt numbers, positions).
-                                                   Each step lights a group of players with a short
-                                                   capital label exactly when its word is spoken. Use it
-                                                   to explain a shape or a plan ("the back three", "five in
-                                                   midfield", "three behind Kane"). Only the starting
-                                                   formation is real: never draw movement, runs or
-                                                   positions the data does not have.
+   "steps": [{"word": "<a word from this shot's text>", "side": "home"|"away", "shirts": [shirt numbers],
+              "kicker": "IN MIDFIELD", "label": "FIVE ACROSS", "camera": "iso"|"top"|"low", "focus": bool,
+              "zone": bool, "link": bool, "tone": "gold"|"warn",
+              "arrows": [{"shirt": n, "to": "shot:<minute of that player's real shot>"}]}]}
+                                                -> a 3D tactics board of the REAL starting line-ups (pack
+                                                   "lineups"), in the style of modern tactics explainers.
+                                                   Each step lands when its word is spoken: the camera moves
+                                                   (iso = angled, top = flat overview, low = close and
+                                                   dramatic; focus = zoom on the lit players), the left side
+                                                   shows kicker (small, 1-3 words) + label (big, 1-3 words),
+                                                   zone = glowing box around the unit, link = a line joining
+                                                   them (a back line, a midfield three), tone "warn" = orange
+                                                   for a weakness or a risk. arrows: ONLY from a player to
+                                                   his own real shot ("shot:57" = his shot at minute 57),
+                                                   e.g. the goal. 2-5 steps; vary the camera.
+                                                   Only the starting formation and the shot spots are real:
+                                                   never draw runs, passes or positions the data does not have.
 - {"type": "threat_map", "side": "home"|"away", "player": "<exact name, optional>", "kicker": str, "title": str}
                                                 -> where one team's threat came from: its shots appear in
                                                    time order on the attacking half, sized by xG and
@@ -186,8 +193,9 @@ HARD RULES
 5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
    numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
 5d. Explain a term (xG) BEFORE you first use it, in one short sentence.
-5e. Use these pictures when the pack allows: one "tactics_board" where the plan or line-ups are told
-   (needs line-ups), one "threat_map" in the diagnosis (needs shots; side = the team whose danger
+5e. Use these pictures when the pack allows: two or three "tactics_board" shots (needs line-ups):
+   the plan or shape early on, the goal or the key chance (arrow to the real shot spot), and the
+   weakness that was exposed (tone "warn"), one "threat_map" in the diagnosis (needs shots; side = the team whose danger
    explains the result, add "player" only for the one player who made the difference), and a
    "momentum" shot when a substitution changed the game. Say the shape of the danger in words too.
    Whether a change shifted the game: use only "momentum_around_subs" (share of minutes the home team
