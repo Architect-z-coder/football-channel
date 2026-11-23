@@ -1,1371 +1,1371 @@
 {
- "saved": "2026-11-22T19:04:28Z",
- "press": [
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "Dani Olmo is available again, while Christensen is expected to miss around two matches (club report of the pre-match press conference).",
-   "is_paraphrase": true,
-   "when": "before",
-   "topic": "absence",
-   "source": "FC Barcelona official site",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "We have to look after him. He's 19 years old and has played a lot of games.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "selection",
-   "source": "FC Barcelona official site (on Cubarsí, who has felt some discomfort)",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "We have a good squad and we need to manage playing time.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "selection",
-   "source": "FC Barcelona official site (context: nine matches in 27 days)",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "Flick said the focus was on Villarreal rather than the previous Real Madrid game. He called Villarreal a very good team and Iñigo Pérez a great young coach.",
-   "is_paraphrase": true,
-   "when": "before",
-   "topic": "other",
-   "source": "AllFootballApp (pre-match press conference report)",
-   "url": "https://www.allfootballapp.com/articles/6025522-flick-i-dont-care-how-real"
-  },
-  {
-   "speaker": "Iñigo Pérez",
-   "role": "Head coach, Villarreal",
-   "team": "Villarreal",
-   "quote": "Los jugadores que estaban lesionados permanecen en ese estado.",
-   "is_paraphrase": false,
-   "when": "before",
-   "topic": "absence",
-   "source": "FútbolFantasy (pre-match press conference transcript)",
-   "url": "https://www.futbolfantasy.com/laliga/noticias/155131-inigo-perez-analiza-las-bajas-el-plan-contra-el-barcelona-y-las-opciones-de-tani-y-mikautadze"
-  },
-  {
-   "speaker": "Iñigo Pérez",
-   "role": "Head coach, Villarreal",
-   "team": "Villarreal",
-   "quote": "Pérez confirmed no injured players returned, so Gerard Moreno, Foyth and Akhomach were out. Other outlets also list Diatta as absent.",
-   "is_paraphrase": true,
-   "when": "before",
-   "topic": "absence",
-   "source": "Jornada Perfecta / Biwenger",
-   "url": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-barcelona-villarreal-j13-26-27/"
-  },
-  {
-   "speaker": "Iñigo Pérez",
-   "role": "Head coach, Villarreal",
-   "team": "Villarreal",
-   "quote": "Pérez wanted Villarreal to press high and play away from their own area. He said defending deep at Camp Nou would not be comfortable, and he left Tani Oluwaseyi's starting place open.",
-   "is_paraphrase": true,
-   "when": "before",
-   "topic": "tactics",
-   "source": "Comuniate (pre-match press conference report)",
-   "url": "https://www.comuniate.com/noticias/39250/inigo-perez-mantiene-las-bajas-ante-el-barcelona-y-deja-abierta-la-titularidad-de-tani-oluwaseyi-y-mikautadze"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
-   "is_paraphrase": false,
-   "when": "after",
-   "topic": "result",
-   "source": "ESPN (syndicated copy on 10bmnews.com)",
-   "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "In the second half, we looked what we want to do better: better structure, a clear structure.",
-   "is_paraphrase": false,
-   "when": "after",
-   "topic": "tactics",
-   "source": "ESPN (syndicated copy on 10bmnews.com)",
-   "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "If we play like this, the opponent gets tired.",
-   "is_paraphrase": false,
-   "when": "after",
-   "topic": "tactics",
-   "source": "ESPN (syndicated copy on 10bmnews.com)",
-   "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
-  },
-  {
-   "speaker": "Goal (report)",
-   "role": "news site",
-   "team": "Barcelona",
-   "quote": "The penalty came in the 21st minute: Lamine Yamal went down in the box after a challenge from Villarreal forward Tani Oluwaseyi. The referee Alejandro Hernández Hernández did not give it at first; VAR sent him to the pitchside monitor and he awarded it. Yamal hit the post. Archivo VAR, a site that rates refereeing, said the penalty was correct, and rated the referee 2.5 out of 10 for the match.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "refereeing",
-   "source": "Goal, 22 Nov 2026",
-   "url": "https://www.goal.com/en/news/disastrous-rating-for-barcelona-v-villarreal-referee-after-controversial-decisions/bltaec9652040890442"
-  },
-  {
-   "speaker": "Goal, citing Sport (referee's report)",
-   "role": "news site",
-   "team": "Barcelona",
-   "quote": "Fermín López was substituted in the 68th minute. The referee's report says he sent Fermín off in the 74th minute, from the bench, for protesting to the fourth official, after the referee refused Barcelona a penalty for a challenge on Anthony Gordon, and that the player left for the dressing room before the red card could be shown. The TV broadcast did not show the incident.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "refereeing",
-   "source": "Goal / Sport, 22 Nov 2026",
-   "url": "https://www.goal.com/en/news/don-t-mess-with-me-sparks-crisis-at-barcelona-painful-blow-awaits-flick-before-atletico-clash/blt296a767bd06af8d1"
-  },
-  {
-   "speaker": "Hansi Flick",
-   "role": "Head coach, FC Barcelona",
-   "team": "Barcelona",
-   "quote": "We always have this sort of problem with this referee",
-   "is_paraphrase": false,
-   "when": "after",
-   "topic": "refereeing",
-   "source": "Barca Universal, post-match, 22 Nov 2026",
-   "url": "https://barcauniversal.com/hansi-flick-hits-out-at-referee-over-fermin-red-card-vs-villarreal-we-always-have-problems-with-him/"
-  },
-  {
-   "speaker": "Yahoo Sports, citing Sport",
-   "role": "news site",
-   "team": "Barcelona",
-   "quote": "Barcelona intend to appeal against Fermín López's red card; he could face a two-match suspension.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "refereeing",
-   "source": "Yahoo Sports / Barca Universal, 22 Nov 2026",
-   "url": "https://sports.yahoo.com/articles/barcelona-appeal-key-midfielder-red-180000222.html"
-  },
-  {
-   "speaker": "ESPN (match report)",
-   "role": "broadcaster",
-   "team": "Barcelona",
-   "quote": "Pau Navarro scored an own goal in the 67th minute to make it 3-2, and was sent off with a second yellow card in stoppage time for bringing down Raphinha. Barcelona scored three goals in 10 second-half minutes.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "match",
-   "source": "ESPN, 22 Nov 2026",
-   "url": "https://www.espn.com/soccer/report/_/gameId/401882804"
-  },
-  {
-   "speaker": "Khel Now (analysis)",
-   "role": "football site",
-   "team": "Barcelona",
-   "quote": "Khel Now says De Jong was caught completely out of position for Oluwaseyi's goal at minute 7, the second goal, which left Eric García to race the forward and lose; it says he struggled to get on the same wavelength as Gerard Martín, especially in the first half.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "De Jong",
-   "source": "Khel Now, 22 Nov 2026",
-   "url": "https://khelnow.com/football/barcelona-villarreal-key-takeaways-laliga-202611"
-  },
-  {
-   "speaker": "Pedri",
-   "role": "Barcelona midfielder",
-   "team": "Barcelona",
-   "quote": "For me, Frenkie is an extraordinary player. He's spectacular, top-class.",
-   "is_paraphrase": false,
-   "when": "after",
-   "topic": "De Jong",
-   "source": "Goal, 22 Nov 2026",
-   "url": "https://www.goal.com/en-au/news/pedri-defends-frenkie-de-jong-critics-barcelona-villarreal-comeback/bltd6c71f6366590e16"
-  },
-  {
-   "speaker": "Khel Now / 101 Great Goals (reports)",
-   "role": "football sites",
-   "team": "Barcelona",
-   "quote": "Villarreal's first goal, at minute 5: Tajon Buchanan intercepted a wayward pass from Fermín López and scored from long range.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "goal",
-   "source": "Khel Now and 101 Great Goals, 22 Nov 2026",
-   "url": "https://www.101greatgoals.com/football/la-liga/barcelona-villarreal-report-result-goals-lamine-yamal-penalty-goal-real-madrid/"
-  },
-  {
-   "speaker": "Sports Illustrated (player ratings)",
-   "role": "magazine",
-   "team": "Barcelona",
-   "quote": "Fermín López passed straight into Buchanan's feet deep inside his own half before the first goal.",
-   "is_paraphrase": true,
-   "when": "after",
-   "topic": "goal",
-   "source": "Sports Illustrated, 22 Nov 2026",
-   "url": "https://www.si.com/soccer/barcelona-player-ratings-vs-villarreal-comeback-buffer-la-liga-summit"
-  }
- ],
- "context": {
-  "teams": [
-   {
-    "team": "FC Barcelona",
-    "coach": "Hans-Dieter (Hansi) Flick",
-    "appointed": "29 May 2024. Barça confirmed him as head coach.",
-    "replaced": "Xavi Hernández",
-    "replaced_reason": "Barça sacked Xavi after a season without a trophy, only weeks after he and president Laporta had agreed he would stay. Laporta later said doubts about whether Xavi truly believed in the squad led to the change.",
-    "institution_quote": {
-     "quote": "he believes in our playing style and the potential in the squad",
-     "speaker": "Joan Laporta, Barça president (May 2024, on Flick's appointment; partial quote from the club's English text)",
-     "source": "FC Barcelona official website",
-     "url": "https://fcbarcelona.com/en/club/news/4033204/joan-laporta-hansi-flick-will-bring-fresh-competitive-impetus"
+  "saved": "2026-11-22T19:04:28Z",
+  "press": [
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "Dani Olmo is available again, while Christensen is expected to miss around two matches (club report of the pre-match press conference).",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "FC Barcelona official site",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
     },
-    "coach_promise": {
-     "quote": "The philosophy they have, it's similar like mine, all possession and really attacking football.",
-     "source": "Hansi Flick at his Barça presentation, reported by CGTN (29/30 May 2024)",
-     "url": "https://news.cgtn.com/news/2024-05-30/Hansi-Flick-appointed-coach-of-FC-Barcelona-1u1wjz0brjO/index.html"
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "We have to look after him. He's 19 years old and has played a lot of games.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "selection",
+      "source": "FC Barcelona official site (on Cubarsí, who has felt some discomfort)",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
     },
-    "key_choices": [
-     {
-      "text": "Flick decided Barcelona would no longer have a fixed starting XI ahead of a run of five matches in 15 days that included PSG and El Clásico, as reported by Sport.",
-      "source": "Heavy.com (citing Sport)",
-      "url": "https://heavy.com/sports/soccer/barcelona-hansi-flick-big-decision-psg-real-madrid-games/"
-     },
-     {
-      "text": "For the Champions League match against Aston Villa, Flick turned to the academy amid several absences, which opened the door for four youth-team players to join the first-team squad.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/confirmed-barcelona-announce-squad-list-125800961.html"
-     },
-     {
-      "text": "For the Villarreal match, Flick started Frenkie de Jong at centre-back and Eric Garcia at right-back. Barcelona had to reshape their defence because of injuries.",
-      "source": "Africa Soccer",
-      "url": "https://africasoccer.com/barcelona-boss-flick-explains-surprise-defensive-set-up-for-villarreal/"
-     },
-     {
-      "text": "Flick said Karim Adeyemi started against Villarreal because Anthony had played two matches for his national team, while Karim trained extremely well and deserved the chance.",
-      "source": "Africa Soccer",
-      "url": "https://africasoccer.com/barcelona-boss-flick-explains-surprise-defensive-set-up-for-villarreal/"
-     },
-     {
-      "text": "After the defeats by Real Madrid and Paris Saint-Germain, Flick said he had complete faith in Barcelona and the playing style he is trying to establish.",
-      "source": "Africa Soccer",
-      "url": "https://africasoccer.com/flick-backs-barcelona-philosophy-after-real-madrid-and-paris-saint-germain-defeats/"
-     }
-    ],
-    "links": [
-     {
-      "text": "Flick's Bayern won the 2020 treble, which included an 8-2 thrashing of Barcelona in the Champions League quarter-finals.",
-      "source": "Soccerway / Flashscore",
-      "url": "https://www.soccerway.com/news/soccer-laliga-barcelona-announce-departure-of-manager-xavi-with-flick-reportedly-lined-up/0zAflIBU"
-     },
-     {
-      "text": "ESPN reported in 2021 that Laporta had sounded out Flick's availability while he was still at Bayern. Flick had already committed to the Germany job. Laporta stayed a fan, and talks with Flick's camp were constant after Xavi said in January 2024 that he would step down.",
-      "source": "ESPN",
-      "url": "https://global.espn.com/football/story/_/id/40221741/barcelona-appoint-hansi-flick-manager-replace-xavi"
-     }
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "We have a good squad and we need to manage playing time.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "selection",
+      "source": "FC Barcelona official site (context: nine matches in 27 days)",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
+    },
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "Flick said the focus was on Villarreal rather than the previous Real Madrid game. He called Villarreal a very good team and Iñigo Pérez a great young coach.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "other",
+      "source": "AllFootballApp (pre-match press conference report)",
+      "url": "https://www.allfootballapp.com/articles/6025522-flick-i-dont-care-how-real"
+    },
+    {
+      "speaker": "Iñigo Pérez",
+      "role": "Head coach, Villarreal",
+      "team": "Villarreal",
+      "quote": "Los jugadores que estaban lesionados permanecen en ese estado.",
+      "is_paraphrase": false,
+      "when": "before",
+      "topic": "absence",
+      "source": "FútbolFantasy (pre-match press conference transcript)",
+      "url": "https://www.futbolfantasy.com/laliga/noticias/155131-inigo-perez-analiza-las-bajas-el-plan-contra-el-barcelona-y-las-opciones-de-tani-y-mikautadze"
+    },
+    {
+      "speaker": "Iñigo Pérez",
+      "role": "Head coach, Villarreal",
+      "team": "Villarreal",
+      "quote": "Pérez confirmed no injured players returned, so Gerard Moreno, Foyth and Akhomach were out. Other outlets also list Diatta as absent.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "absence",
+      "source": "Jornada Perfecta / Biwenger",
+      "url": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-barcelona-villarreal-j13-26-27/"
+    },
+    {
+      "speaker": "Iñigo Pérez",
+      "role": "Head coach, Villarreal",
+      "team": "Villarreal",
+      "quote": "Pérez wanted Villarreal to press high and play away from their own area. He said defending deep at Camp Nou would not be comfortable, and he left Tani Oluwaseyi's starting place open.",
+      "is_paraphrase": true,
+      "when": "before",
+      "topic": "tactics",
+      "source": "Comuniate (pre-match press conference report)",
+      "url": "https://www.comuniate.com/noticias/39250/inigo-perez-mantiene-las-bajas-ante-el-barcelona-y-deja-abierta-la-titularidad-de-tani-oluwaseyi-y-mikautadze"
+    },
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "result",
+      "source": "ESPN (syndicated copy on 10bmnews.com)",
+      "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
+    },
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "In the second half, we looked what we want to do better: better structure, a clear structure.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "tactics",
+      "source": "ESPN (syndicated copy on 10bmnews.com)",
+      "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
+    },
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "If we play like this, the opponent gets tired.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "tactics",
+      "source": "ESPN (syndicated copy on 10bmnews.com)",
+      "url": "https://10bmnews.com/flick-barcelona-comeback-against-villarreal-unbelievable-but-not-happy-with-ref/"
+    },
+    {
+      "speaker": "Goal (report)",
+      "role": "news site",
+      "team": "Barcelona",
+      "quote": "The penalty came in the 21st minute: Lamine Yamal went down in the box after a challenge from Villarreal forward Tani Oluwaseyi. The referee Alejandro Hernández Hernández did not give it at first; VAR sent him to the pitchside monitor and he awarded it. Yamal hit the post. Archivo VAR, a site that rates refereeing, said the penalty was correct, and rated the referee 2.5 out of 10 for the match.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "refereeing",
+      "source": "Goal, 22 Nov 2026",
+      "url": "https://www.goal.com/en/news/disastrous-rating-for-barcelona-v-villarreal-referee-after-controversial-decisions/bltaec9652040890442"
+    },
+    {
+      "speaker": "Goal, citing Sport (referee's report)",
+      "role": "news site",
+      "team": "Barcelona",
+      "quote": "Fermín López was substituted in the 68th minute. The referee's report says he sent Fermín off in the 74th minute, from the bench, for protesting to the fourth official, after the referee refused Barcelona a penalty for a challenge on Anthony Gordon, and that the player left for the dressing room before the red card could be shown. The TV broadcast did not show the incident.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "refereeing",
+      "source": "Goal / Sport, 22 Nov 2026",
+      "url": "https://www.goal.com/en/news/don-t-mess-with-me-sparks-crisis-at-barcelona-painful-blow-awaits-flick-before-atletico-clash/blt296a767bd06af8d1"
+    },
+    {
+      "speaker": "Hansi Flick",
+      "role": "Head coach, FC Barcelona",
+      "team": "Barcelona",
+      "quote": "We always have this sort of problem with this referee",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "refereeing",
+      "source": "Barca Universal, post-match, 22 Nov 2026",
+      "url": "https://barcauniversal.com/hansi-flick-hits-out-at-referee-over-fermin-red-card-vs-villarreal-we-always-have-problems-with-him/"
+    },
+    {
+      "speaker": "Yahoo Sports, citing Sport",
+      "role": "news site",
+      "team": "Barcelona",
+      "quote": "Barcelona intend to appeal against Fermín López's red card; he could face a two-match suspension.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "refereeing",
+      "source": "Yahoo Sports / Barca Universal, 22 Nov 2026",
+      "url": "https://sports.yahoo.com/articles/barcelona-appeal-key-midfielder-red-180000222.html"
+    },
+    {
+      "speaker": "ESPN (match report)",
+      "role": "broadcaster",
+      "team": "Barcelona",
+      "quote": "Pau Navarro scored an own goal in the 67th minute to make it 3-2, and was sent off with a second yellow card in stoppage time for bringing down Raphinha. Barcelona scored three goals in 10 second-half minutes.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "match",
+      "source": "ESPN, 22 Nov 2026",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401882804"
+    },
+    {
+      "speaker": "Khel Now (analysis)",
+      "role": "football site",
+      "team": "Barcelona",
+      "quote": "Khel Now says De Jong was caught completely out of position for Oluwaseyi's goal at minute 7, the second goal, which left Eric García to race the forward and lose; it says he struggled to get on the same wavelength as Gerard Martín, especially in the first half.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "De Jong",
+      "source": "Khel Now, 22 Nov 2026",
+      "url": "https://khelnow.com/football/barcelona-villarreal-key-takeaways-laliga-202611"
+    },
+    {
+      "speaker": "Pedri",
+      "role": "Barcelona midfielder",
+      "team": "Barcelona",
+      "quote": "For me, Frenkie is an extraordinary player. He's spectacular, top-class.",
+      "is_paraphrase": false,
+      "when": "after",
+      "topic": "De Jong",
+      "source": "Goal, 22 Nov 2026",
+      "url": "https://www.goal.com/en-au/news/pedri-defends-frenkie-de-jong-critics-barcelona-villarreal-comeback/bltd6c71f6366590e16"
+    },
+    {
+      "speaker": "Khel Now / 101 Great Goals (reports)",
+      "role": "football sites",
+      "team": "Barcelona",
+      "quote": "Villarreal's first goal, at minute 5: Tajon Buchanan intercepted a wayward pass from Fermín López and scored from long range.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "goal",
+      "source": "Khel Now and 101 Great Goals, 22 Nov 2026",
+      "url": "https://www.101greatgoals.com/football/la-liga/barcelona-villarreal-report-result-goals-lamine-yamal-penalty-goal-real-madrid/"
+    },
+    {
+      "speaker": "Sports Illustrated (player ratings)",
+      "role": "magazine",
+      "team": "Barcelona",
+      "quote": "Fermín López passed straight into Buchanan's feet deep inside his own half before the first goal.",
+      "is_paraphrase": true,
+      "when": "after",
+      "topic": "goal",
+      "source": "Sports Illustrated, 22 Nov 2026",
+      "url": "https://www.si.com/soccer/barcelona-player-ratings-vs-villarreal-comeback-buffer-la-liga-summit"
+    }
+  ],
+  "context": {
+    "teams": [
+      {
+        "team": "FC Barcelona",
+        "coach": "Hans-Dieter (Hansi) Flick",
+        "appointed": "29 May 2024. Barça confirmed him as head coach.",
+        "replaced": "Xavi Hernández",
+        "replaced_reason": "Barça sacked Xavi after a season without a trophy, only weeks after he and president Laporta had agreed he would stay. Laporta later said doubts about whether Xavi truly believed in the squad led to the change.",
+        "institution_quote": {
+          "quote": "he believes in our playing style and the potential in the squad",
+          "speaker": "Joan Laporta, Barça president (May 2024, on Flick's appointment; partial quote from the club's English text)",
+          "source": "FC Barcelona official website",
+          "url": "https://fcbarcelona.com/en/club/news/4033204/joan-laporta-hansi-flick-will-bring-fresh-competitive-impetus"
+        },
+        "coach_promise": {
+          "quote": "The philosophy they have, it's similar like mine, all possession and really attacking football.",
+          "source": "Hansi Flick at his Barça presentation, reported by CGTN (29/30 May 2024)",
+          "url": "https://news.cgtn.com/news/2024-05-30/Hansi-Flick-appointed-coach-of-FC-Barcelona-1u1wjz0brjO/index.html"
+        },
+        "key_choices": [
+          {
+            "text": "Flick decided Barcelona would no longer have a fixed starting XI ahead of a run of five matches in 15 days that included PSG and El Clásico, as reported by Sport.",
+            "source": "Heavy.com (citing Sport)",
+            "url": "https://heavy.com/sports/soccer/barcelona-hansi-flick-big-decision-psg-real-madrid-games/"
+          },
+          {
+            "text": "For the Champions League match against Aston Villa, Flick turned to the academy amid several absences, which opened the door for four youth-team players to join the first-team squad.",
+            "source": "Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/confirmed-barcelona-announce-squad-list-125800961.html"
+          },
+          {
+            "text": "For the Villarreal match, Flick started Frenkie de Jong at centre-back and Eric Garcia at right-back. Barcelona had to reshape their defence because of injuries.",
+            "source": "Africa Soccer",
+            "url": "https://africasoccer.com/barcelona-boss-flick-explains-surprise-defensive-set-up-for-villarreal/"
+          },
+          {
+            "text": "Flick said Karim Adeyemi started against Villarreal because Anthony had played two matches for his national team, while Karim trained extremely well and deserved the chance.",
+            "source": "Africa Soccer",
+            "url": "https://africasoccer.com/barcelona-boss-flick-explains-surprise-defensive-set-up-for-villarreal/"
+          },
+          {
+            "text": "After the defeats by Real Madrid and Paris Saint-Germain, Flick said he had complete faith in Barcelona and the playing style he is trying to establish.",
+            "source": "Africa Soccer",
+            "url": "https://africasoccer.com/flick-backs-barcelona-philosophy-after-real-madrid-and-paris-saint-germain-defeats/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Flick's Bayern won the 2020 treble, which included an 8-2 thrashing of Barcelona in the Champions League quarter-finals.",
+            "source": "Soccerway / Flashscore",
+            "url": "https://www.soccerway.com/news/soccer-laliga-barcelona-announce-departure-of-manager-xavi-with-flick-reportedly-lined-up/0zAflIBU"
+          },
+          {
+            "text": "ESPN reported in 2021 that Laporta had sounded out Flick's availability while he was still at Bayern. Flick had already committed to the Germany job. Laporta stayed a fan, and talks with Flick's camp were constant after Xavi said in January 2024 that he would step down.",
+            "source": "ESPN",
+            "url": "https://global.espn.com/football/story/_/id/40221741/barcelona-appoint-hansi-flick-manager-replace-xavi"
+          }
+        ]
+      },
+      {
+        "team": "Villarreal CF",
+        "coach": "Iñigo Pérez",
+        "appointed": "1 June 2026, when Villarreal officially confirmed him as head coach. He signed a three-year contract running to June 2029. He was presented the following Tuesday at the Estadio de la Cerámica.",
+        "replaced": "Marcelino García Toral",
+        "replaced_reason": "Marcelino left the club at the end of the 2025-26 season even though he had led Villarreal to third in La Liga and Champions League qualification. The club did not officially detail the reasons for the separation.",
+        "institution_quote": {
+          "quote": "apuesta muy importante",
+          "speaker": "Fernando Roig, Villarreal president (at Pérez's presentation, describing the signing; partial quote in Spanish)",
+          "source": "EFE via La Red 106.1 FM",
+          "url": "https://www.lared1061.com/posts/inigo-perez-entrenar-al-villarreal-es-un-desafio-importante-en-mi-carrera"
+        },
+        "coach_promise": {
+          "quote": "We cannot promise results, but I strongly identify with family values, ambition, sacrifice and hard work.",
+          "source": "I"
+        }
+      }
     ]
-   },
-   {
-    "team": "Villarreal CF",
-    "coach": "Iñigo Pérez",
-    "appointed": "1 June 2026, when Villarreal officially confirmed him as head coach. He signed a three-year contract running to June 2029. He was presented the following Tuesday at the Estadio de la Cerámica.",
-    "replaced": "Marcelino García Toral",
-    "replaced_reason": "Marcelino left the club at the end of the 2025-26 season even though he had led Villarreal to third in La Liga and Champions League qualification. The club did not officially detail the reasons for the separation.",
-    "institution_quote": {
-     "quote": "apuesta muy importante",
-     "speaker": "Fernando Roig, Villarreal president (at Pérez's presentation, describing the signing; partial quote in Spanish)",
-     "source": "EFE via La Red 106.1 FM",
-     "url": "https://www.lared1061.com/posts/inigo-perez-entrenar-al-villarreal-es-un-desafio-importante-en-mi-carrera"
-    },
-    "coach_promise": {
-     "quote": "We cannot promise results, but I strongly identify with family values, ambition, sacrifice and hard work.",
-     "source": "I"
-    }
-   }
-  ]
- },
- "reviews": [
-  {
-   "outlet": "ESPN Deportes",
-   "author": "",
-   "date": "2026-11-22",
-   "url": "https://espndeportes.espn.com/futbol/espana/nota/_/id/17547693/barcelona-villarreal-claves-laliga-jornada-13",
-   "headline": "Claves de la victoria del Barcelona vs Villarreal en LaLiga",
-   "quote": "Si bien el neerlandés se ha desempeñado en dicha posición, no la domina y ante atacantes tan rápidos como los del Villarreal quedó exhibido.",
-   "quote_en": "Although the Dutchman has played in that position, he has not mastered it, and against attackers as quick as Villarreal's he was exposed.",
-   "point": "The writer says Flick took a big risk by starting Frenkie de Jong at centre-back and underestimated Villarreal, whose pace exposed him early. Barcelona's pressure and Pedri's influence in the second half then turned the game.",
-   "free": true,
-   "kind": "screenshot",
-   "files": {
-    "para": "press_1_para.png",
-    "head": "press_1_head.png"
-   },
-   "rects": [
-    {
-     "x": 417.1875,
-     "y": 29.59375,
-     "w": 13.34375,
-     "h": 17
-    },
-    {
-     "x": 434.53125,
-     "y": 29.59375,
-     "w": 27.546875,
-     "h": 17
-    },
-    {
-     "x": 466.078125,
-     "y": 29.59375,
-     "w": 11.546875,
-     "h": 17
-    },
-    {
-     "x": 481.625,
-     "y": 29.59375,
-     "w": 68.40625,
-     "h": 17
-    },
-    {
-     "x": 554.03125,
-     "y": 29.59375,
-     "w": 13.328125,
-     "h": 17
-    },
-    {
-     "x": 571.359375,
-     "y": 29.59375,
-     "w": 15.109375,
-     "h": 17
-    },
-    {
-     "x": 0,
-     "y": 55.1875,
-     "w": 87.078125,
-     "h": 17
-    },
-    {
-     "x": 91.078125,
-     "y": 55.1875,
-     "w": 15.109375,
-     "h": 17
-    },
-    {
-     "x": 110.171875,
-     "y": 55.1875,
-     "w": 34.65625,
-     "h": 17
-    },
-    {
-     "x": 148.828125,
-     "y": 55.1875,
-     "w": 58.21875,
-     "h": 17
-    },
-    {
-     "x": 211.046875,
-     "y": 55.1875,
-     "w": 16,
-     "h": 17
-    },
-    {
-     "x": 231.046875,
-     "y": 55.1875,
-     "w": 11.546875,
-     "h": 17
-    },
-    {
-     "x": 246.59375,
-     "y": 55.1875,
-     "w": 48,
-     "h": 17
-    },
-    {
-     "x": 298.578125,
-     "y": 55.1875,
-     "w": 8.015625,
-     "h": 17
-    },
-    {
-     "x": 310.578125,
-     "y": 55.1875,
-     "w": 26.65625,
-     "h": 17
-    },
-    {
-     "x": 341.234375,
-     "y": 55.1875,
-     "w": 58.625,
-     "h": 17
-    },
-    {
-     "x": 403.859375,
-     "y": 55.1875,
-     "w": 19.546875,
-     "h": 17
-    },
-    {
-     "x": 427.40625,
-     "y": 55.1875,
-     "w": 47.109375,
-     "h": 17
-    },
-    {
-     "x": 478.5,
-     "y": 55.1875,
-     "w": 35.5625,
-     "h": 17
-    },
-    {
-     "x": 518.046875,
-     "y": 55.1875,
-     "w": 18.6875,
-     "h": 17
-    },
-    {
-     "x": 540.71875,
-     "y": 55.1875,
-     "w": 19.5625,
-     "h": 17
-    },
-    {
-     "x": 0,
-     "y": 80.78125,
-     "w": 60.34375,
-     "h": 17
-    },
-    {
-     "x": 64.328125,
-     "y": 80.78125,
-     "w": 39.109375,
-     "h": 17
-    },
-    {
-     "x": 107.4375,
-     "y": 80.78125,
-     "w": 56,
-     "h": 17
-    }
-   ],
-   "box": {
-    "w": 599,
-    "h": 102.375
-   },
-   "verified": true
   },
-  {
-   "outlet": "Sports Illustrated",
-   "author": "",
-   "date": "2026-11-22",
-   "url": "https://www.si.com/soccer/barcelona-player-ratings-vs-villarreal-comeback-buffer-la-liga-summit",
-   "headline": "Barcelona Player Ratings vs. Villarreal: Inspired Comeback Creates Buffer at La Liga Summit",
-   "quote": "Unsurprisingly, Yamal was the chief architect, dazzling yellow jerseys with his electric feet and supreme precision, and he more than made up for his penalty miss.",
-   "quote_en": "",
-   "point": "The piece says Barcelona's defending in the opening minutes was abysmal, but their attacking play saved them. It names Lamine Yamal as the main creator and says he made up for his missed penalty, with Pedri also elegant in midfield. SI is not on your outlet list, so use it only if you accept it as being of the same standing.",
-   "free": true,
-   "kind": "screenshot",
-   "files": {
-    "para": "press_3_para.png",
-    "head": "press_3_head.png"
-   },
-   "rects": [
+  "reviews": [
     {
-     "x": 150,
-     "y": 25,
-     "w": 109,
-     "h": 22
-    },
-    {
-     "x": 263,
-     "y": 25,
-     "w": 48,
-     "h": 22
-    },
-    {
-     "x": 315,
-     "y": 25,
-     "w": 27,
-     "h": 22
-    },
-    {
-     "x": 346,
-     "y": 25,
-     "w": 23,
-     "h": 22
-    },
-    {
-     "x": 373,
-     "y": 25,
-     "w": 34,
-     "h": 22
-    },
-    {
-     "x": 411,
-     "y": 25,
-     "w": 66,
-     "h": 22
-    },
-    {
-     "x": 481,
-     "y": 25,
-     "w": 61,
-     "h": 22
-    },
-    {
-     "x": 546,
-     "y": 25,
-     "w": 47,
-     "h": 22
-    },
-    {
-     "x": 597,
-     "y": 25,
-     "w": 49,
-     "h": 22
-    },
-    {
-     "x": 650,
-     "y": 25,
-     "w": 32,
-     "h": 22
-    },
-    {
-     "x": 0,
-     "y": 49,
-     "w": 21,
-     "h": 22
-    },
-    {
-     "x": 25,
-     "y": 49,
-     "w": 52,
-     "h": 22
-    },
-    {
-     "x": 81,
-     "y": 49,
-     "w": 27,
-     "h": 22
-    },
-    {
-     "x": 112,
-     "y": 49,
-     "w": 27,
-     "h": 22
-    },
-    {
-     "x": 143,
-     "y": 49,
-     "w": 61,
-     "h": 22
-    },
-    {
-     "x": 208,
-     "y": 49,
-     "w": 70,
-     "h": 22
-    },
-    {
-     "x": 282,
-     "y": 49,
-     "w": 27,
-     "h": 22
-    },
-    {
-     "x": 313,
-     "y": 49,
-     "w": 17,
-     "h": 22
-    },
-    {
-     "x": 334,
-     "y": 49,
-     "w": 37,
-     "h": 22
-    },
-    {
-     "x": 375,
-     "y": 49,
-     "w": 33,
-     "h": 22
-    },
-    {
-     "x": 412,
-     "y": 49,
-     "w": 39,
-     "h": 22
-    },
-    {
-     "x": 455,
-     "y": 49,
-     "w": 18,
-     "h": 22
-    },
-    {
-     "x": 477,
-     "y": 49,
-     "w": 20,
-     "h": 22
-    },
-    {
-     "x": 501,
-     "y": 49,
-     "w": 21,
-     "h": 22
-    },
-    {
-     "x": 526,
-     "y": 49,
-     "w": 54,
-     "h": 22
-    },
-    {
-     "x": 584,
-     "y": 49,
-     "w": 33,
-     "h": 22
-    }
-   ],
-   "box": {
-    "w": 704,
-    "h": 72
-   },
-   "verified": true
-  }
- ],
- "script": {
-  "title_options": [
-   "Barça 3-2 Villarreal: The 0-2 Half That Lied",
-   "Two Goals in 7 Minutes: What Went Wrong at Barça?",
-   "Barça vs Villarreal: De Jong at Centre-Back"
-  ],
-  "thumbnail_texts": [
-   "0-2 AFTER 7 MINUTES",
-   "THE HALF THAT LIED",
-   "97 IN 100"
-  ],
-  "description": "Frenkie de Jong starts at centre-back, and Barça are 0-2 down inside 7 minutes. We follow the story through Flick's reshaped defence, Pérez's plan and Pedri's night, then ask what the numbers say about whether Barça were really beaten.\n\nQuotes and reports come from FC Barcelona's official site, CGTN, Comuniate, ESPN, ESPN Deportes and Sports Illustrated. Data: football-data.org + FotMob.",
-  "tags": [
-   "Barcelona",
-   "Villarreal",
-   "La Liga",
-   "Hansi Flick",
-   "Pedri",
-   "Lamine Yamal",
-   "Frenkie de Jong",
-   "xG",
-   "football analysis",
-   "match analysis",
-   "Iñigo Pérez"
-  ],
-  "scenes": [
-   {
-    "id": 1,
-    "beat": "THE QUESTION",
-    "on_screen": "Seven minutes at Camp Nou",
-    "fact_ids": [
-     "stadium",
-     "home_position",
-     "home_won",
-     "home_played_games",
-     "context",
-     "ht_home",
-     "ht_away"
-    ],
-    "shots": [
-     {
-      "text": "Hansi Flick has a problem. Injuries have hit his defence, so Frenkie de Jong, a midfielder, will start at centre-back, with Eric García at right-back.",
-      "visual": {
-       "type": "photo",
-       "photo": "Hans-Dieter Flick",
-       "caption": "Hansi Flick, Barça head coach"
-      }
-     },
-     {
-      "text": "Spotify Camp Nou, Barcelona. Barça lead La Liga after this round, with 12 wins in 13 games, and Flick has promised attacking football. Then, at minute 5, Villarreal score. At minute 7, they score again.",
-      "visual": {
-       "type": "photo",
-       "photo": "Spotify Camp Nou, Barcelona",
-       "caption": "Spotify Camp Nou"
-      }
-     },
-     {
-      "text": "Two goals in 7 minutes. What went wrong at the back, and was Barça already beaten?",
-      "visual": {
-       "type": "key_moments",
-       "moments": [
+      "outlet": "ESPN Deportes",
+      "author": "",
+      "date": "2026-11-22",
+      "url": "https://espndeportes.espn.com/futbol/espana/nota/_/id/17547693/barcelona-villarreal-claves-laliga-jornada-13",
+      "headline": "Claves de la victoria del Barcelona vs Villarreal en LaLiga",
+      "quote": "Si bien el neerlandés se ha desempeñado en dicha posición, no la domina y ante atacantes tan rápidos como los del Villarreal quedó exhibido.",
+      "quote_en": "Although the Dutchman has played in that position, he has not mastered it, and against attackers as quick as Villarreal's he was exposed.",
+      "point": "The writer says Flick took a big risk by starting Frenkie de Jong at centre-back and underestimated Villarreal, whose pace exposed him early. Barcelona's pressure and Pedri's influence in the second half then turned the game.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_1_para.png",
+        "head": "press_1_head.png"
+      },
+      "rects": [
         {
-         "minute": 5,
-         "text": "Buchanan scores"
+          "x": 417.1875,
+          "y": 29.59375,
+          "w": 13.34375,
+          "h": 17
         },
         {
-         "minute": 7,
-         "text": "Tani scores on the break"
+          "x": 434.53125,
+          "y": 29.59375,
+          "w": 27.546875,
+          "h": 17
         },
         {
-         "minute": 23,
-         "text": "Yamal penalty hits post"
+          "x": 466.078125,
+          "y": 29.59375,
+          "w": 11.546875,
+          "h": 17
         },
         {
-         "minute": 45,
-         "text": "Half-time: 0-2"
+          "x": 481.625,
+          "y": 29.59375,
+          "w": 68.40625,
+          "h": 17
+        },
+        {
+          "x": 554.03125,
+          "y": 29.59375,
+          "w": 13.328125,
+          "h": 17
+        },
+        {
+          "x": 571.359375,
+          "y": 29.59375,
+          "w": 15.109375,
+          "h": 17
+        },
+        {
+          "x": 0,
+          "y": 55.1875,
+          "w": 87.078125,
+          "h": 17
+        },
+        {
+          "x": 91.078125,
+          "y": 55.1875,
+          "w": 15.109375,
+          "h": 17
+        },
+        {
+          "x": 110.171875,
+          "y": 55.1875,
+          "w": 34.65625,
+          "h": 17
+        },
+        {
+          "x": 148.828125,
+          "y": 55.1875,
+          "w": 58.21875,
+          "h": 17
+        },
+        {
+          "x": 211.046875,
+          "y": 55.1875,
+          "w": 16,
+          "h": 17
+        },
+        {
+          "x": 231.046875,
+          "y": 55.1875,
+          "w": 11.546875,
+          "h": 17
+        },
+        {
+          "x": 246.59375,
+          "y": 55.1875,
+          "w": 48,
+          "h": 17
+        },
+        {
+          "x": 298.578125,
+          "y": 55.1875,
+          "w": 8.015625,
+          "h": 17
+        },
+        {
+          "x": 310.578125,
+          "y": 55.1875,
+          "w": 26.65625,
+          "h": 17
+        },
+        {
+          "x": 341.234375,
+          "y": 55.1875,
+          "w": 58.625,
+          "h": 17
+        },
+        {
+          "x": 403.859375,
+          "y": 55.1875,
+          "w": 19.546875,
+          "h": 17
+        },
+        {
+          "x": 427.40625,
+          "y": 55.1875,
+          "w": 47.109375,
+          "h": 17
+        },
+        {
+          "x": 478.5,
+          "y": 55.1875,
+          "w": 35.5625,
+          "h": 17
+        },
+        {
+          "x": 518.046875,
+          "y": 55.1875,
+          "w": 18.6875,
+          "h": 17
+        },
+        {
+          "x": 540.71875,
+          "y": 55.1875,
+          "w": 19.5625,
+          "h": 17
+        },
+        {
+          "x": 0,
+          "y": 80.78125,
+          "w": 60.34375,
+          "h": 17
+        },
+        {
+          "x": 64.328125,
+          "y": 80.78125,
+          "w": 39.109375,
+          "h": 17
+        },
+        {
+          "x": 107.4375,
+          "y": 80.78125,
+          "w": 56,
+          "h": 17
         }
-       ]
-      }
-     }
-    ],
-    "narration": "Hansi Flick has a problem. Injuries have hit his defence, so Frenkie de Jong, a midfielder, will start at centre-back, with Eric García at right-back. Spotify Camp Nou, Barcelona. Barça lead La Liga after this round, with 12 wins in 13 games, and Flick has promised attacking football. Then, at minute 5, Villarreal score. At minute 7, they score again. Two goals in 7 minutes. What went wrong at the back, and was Barça already beaten?",
-    "visual": {
-     "type": "key_moments",
-     "moments": [
-      {
-       "minute": 5,
-       "text": "Buchanan scores"
+      ],
+      "box": {
+        "w": 599,
+        "h": 102.375
       },
-      {
-       "minute": 7,
-       "text": "Tani scores on the break"
+      "verified": true
+    },
+    {
+      "outlet": "Sports Illustrated",
+      "author": "",
+      "date": "2026-11-22",
+      "url": "https://www.si.com/soccer/barcelona-player-ratings-vs-villarreal-comeback-buffer-la-liga-summit",
+      "headline": "Barcelona Player Ratings vs. Villarreal: Inspired Comeback Creates Buffer at La Liga Summit",
+      "quote": "Unsurprisingly, Yamal was the chief architect, dazzling yellow jerseys with his electric feet and supreme precision, and he more than made up for his penalty miss.",
+      "quote_en": "",
+      "point": "The piece says Barcelona's defending in the opening minutes was abysmal, but their attacking play saved them. It names Lamine Yamal as the main creator and says he made up for his missed penalty, with Pedri also elegant in midfield. SI is not on your outlet list, so use it only if you accept it as being of the same standing.",
+      "free": true,
+      "kind": "screenshot",
+      "files": {
+        "para": "press_3_para.png",
+        "head": "press_3_head.png"
       },
-      {
-       "minute": 23,
-       "text": "Yamal penalty hits post"
-      },
-      {
-       "minute": 45,
-       "text": "Half-time: 0-2"
-      }
-     ]
-    }
-   },
-   {
-    "id": 2,
-    "beat": "WHAT WAS EXPECTED",
-    "on_screen": "What everyone expected",
-    "fact_ids": [
-     "home_absent_1",
-     "home_absent_2",
-     "home_absent_3",
-     "home_absent_4",
-     "away_absent_1",
-     "home_form_last5",
-     "away_form_last5",
-     "home_form_games",
-     "away_form_games",
-     "press"
-    ],
-    "shots": [
-     {
-      "text": "Before kick-off, the absences. Barça were without Rodri and 3 more injured players. Villarreal had 4 injured, among them Ilias Akhomach.",
-      "visual": {
-       "type": "photo",
-       "photo": "Rodri",
-       "caption": "Rodri, out injured"
-      }
-     },
-     {
-      "text": "Form was mixed. Barça had lost to PSG and Real Madrid, then won 3 in a row. Villarreal had lost 6-0 to PSG, then beaten Getafe 2-0.",
-      "visual": {
-       "type": "form_compare"
-      }
-     },
-     {
-      "text": "Hansi Flick, before the game, on nine matches in 27 days: \"We have a good squad and we need to manage playing time.\"",
-      "visual": {
-       "type": "quote_card",
-       "quote": "We have a good squad and we need to manage playing time.",
-       "speaker": "Hansi Flick",
-       "role": "Head coach, FC Barcelona",
-       "outlet": "FC Barcelona official site"
-      }
-     },
-     {
-      "text": "Íñigo Pérez had a different plan. According to Comuniate, he wanted Villarreal to press high, and said defending deep at Camp Nou would not be comfortable.",
-      "visual": {
-       "type": "text_card",
-       "heading": "Pérez's plan",
-       "lines": [
-        "Press high",
-        "Play away from their own area",
-        "Deep defending: not comfortable"
-       ],
-       "source": "Comuniate"
-      }
-     }
-    ],
-    "narration": "Before kick-off, the absences. Barça were without Rodri and 3 more injured players. Villarreal had 4 injured, among them Ilias Akhomach. Form was mixed. Barça had lost to PSG and Real Madrid, then won 3 in a row. Villarreal had lost 6-0 to PSG, then beaten Getafe 2-0. Hansi Flick, before the game, on nine matches in 27 days: \"We have a good squad and we need to manage playing time.\" Íñigo Pérez had a different plan. According to Comuniate, he wanted Villarreal to press high, and said defending deep at Camp Nou would not be comfortable.",
-    "visual": {
-     "type": "form_compare"
-    }
-   },
-   {
-    "id": 3,
-    "beat": "THE CHARACTERS",
-    "on_screen": "A promise and a risk",
-    "fact_ids": [
-     "home_coach",
-     "home_formation",
-     "home_starting_xi",
-     "context"
-    ],
-    "shots": [
-     {
-      "text": "Flick arrived in May 2024 to replace Xavi. At his presentation, reported by CGTN, he promised \"all possession and really attacking football.\"",
-      "visual": {
-       "type": "photo",
-       "photo": "Hans-Dieter Flick",
-       "caption": "Hansi Flick",
-       "source": "CGTN"
-      }
-     },
-     {
-      "text": "Our reading: that promise leans on the back line. Tonight that line has a midfielder at its centre, Frenkie de Jong, with Eric García at right-back. If it cracks, the whole idea is exposed.",
-      "visual": {
-       "type": "tactics_board",
-       "team": "home",
-       "kicker": "THE SHAPE",
-       "title": "Barça's reshaped back four",
-       "steps": [
+      "rects": [
         {
-         "word": "Frenkie",
-         "side": "home",
-         "shirts": [
-          21
-         ],
-         "kicker": "At centre-back",
-         "label": "De Jong",
-         "camera": "low",
-         "focus": true,
-         "zone": true
+          "x": 150,
+          "y": 25,
+          "w": 109,
+          "h": 22
         },
         {
-         "word": "Eric",
-         "side": "home",
-         "shirts": [
-          24
-         ],
-         "kicker": "At right-back",
-         "label": "Eric García",
-         "camera": "iso",
-         "zone": true
+          "x": 263,
+          "y": 25,
+          "w": 48,
+          "h": 22
         },
         {
-         "word": "cracks",
-         "side": "home",
-         "shirts": [
-          21,
-          24
-         ],
-         "kicker": "If it cracks",
-         "label": "Idea exposed",
-         "camera": "top",
-         "tone": "warn",
-         "zone": true,
-         "link": true
+          "x": 315,
+          "y": 25,
+          "w": 27,
+          "h": 22
+        },
+        {
+          "x": 346,
+          "y": 25,
+          "w": 23,
+          "h": 22
+        },
+        {
+          "x": 373,
+          "y": 25,
+          "w": 34,
+          "h": 22
+        },
+        {
+          "x": 411,
+          "y": 25,
+          "w": 66,
+          "h": 22
+        },
+        {
+          "x": 481,
+          "y": 25,
+          "w": 61,
+          "h": 22
+        },
+        {
+          "x": 546,
+          "y": 25,
+          "w": 47,
+          "h": 22
+        },
+        {
+          "x": 597,
+          "y": 25,
+          "w": 49,
+          "h": 22
+        },
+        {
+          "x": 650,
+          "y": 25,
+          "w": 32,
+          "h": 22
+        },
+        {
+          "x": 0,
+          "y": 49,
+          "w": 21,
+          "h": 22
+        },
+        {
+          "x": 25,
+          "y": 49,
+          "w": 52,
+          "h": 22
+        },
+        {
+          "x": 81,
+          "y": 49,
+          "w": 27,
+          "h": 22
+        },
+        {
+          "x": 112,
+          "y": 49,
+          "w": 27,
+          "h": 22
+        },
+        {
+          "x": 143,
+          "y": 49,
+          "w": 61,
+          "h": 22
+        },
+        {
+          "x": 208,
+          "y": 49,
+          "w": 70,
+          "h": 22
+        },
+        {
+          "x": 282,
+          "y": 49,
+          "w": 27,
+          "h": 22
+        },
+        {
+          "x": 313,
+          "y": 49,
+          "w": 17,
+          "h": 22
+        },
+        {
+          "x": 334,
+          "y": 49,
+          "w": 37,
+          "h": 22
+        },
+        {
+          "x": 375,
+          "y": 49,
+          "w": 33,
+          "h": 22
+        },
+        {
+          "x": 412,
+          "y": 49,
+          "w": 39,
+          "h": 22
+        },
+        {
+          "x": 455,
+          "y": 49,
+          "w": 18,
+          "h": 22
+        },
+        {
+          "x": 477,
+          "y": 49,
+          "w": 20,
+          "h": 22
+        },
+        {
+          "x": 501,
+          "y": 49,
+          "w": 21,
+          "h": 22
+        },
+        {
+          "x": 526,
+          "y": 49,
+          "w": 54,
+          "h": 22
+        },
+        {
+          "x": 584,
+          "y": 49,
+          "w": 33,
+          "h": 22
         }
-       ]
-      }
-     },
-     {
-      "text": "Ahead of them, Lamine Yamal, the most valuable starter on the pitch at 221 million euros. He is the one asked to make that risk pay.",
-      "visual": {
-       "type": "photo",
-       "photo": "Lamine Yamal",
-       "caption": "Lamine Yamal"
-      }
-     }
+      ],
+      "box": {
+        "w": 704,
+        "h": 72
+      },
+      "verified": true
+    }
+  ],
+  "script": {
+    "title_options": [
+      "Barça 3-2 Villarreal: The 0-2 Half That Lied",
+      "Two Goals in 7 Minutes: What Went Wrong at Barça?",
+      "Barça vs Villarreal: De Jong at Centre-Back"
     ],
-    "narration": "Flick arrived in May 2024 to replace Xavi. At his presentation, reported by CGTN, he promised \"all possession and really attacking football.\" Our reading: that promise leans on the back line. Tonight that line has a midfielder at its centre, Frenkie de Jong, with Eric García at right-back. If it cracks, the whole idea is exposed. Ahead of them, Lamine Yamal, the most valuable starter on the pitch at 221 million euros. He is the one asked to make that risk pay.",
-    "visual": {
-     "type": "tactics_board",
-     "team": "home",
-     "kicker": "THE SHAPE",
-     "title": "Barça's reshaped back four",
-     "steps": [
+    "thumbnail_texts": [
+      "0-2 AFTER 7 MINUTES",
+      "THE HALF THAT LIED",
+      "97 IN 100"
+    ],
+    "description": "Frenkie de Jong starts at centre-back, and Barça are 0-2 down inside 7 minutes. We follow the story through Flick's reshaped defence, Pérez's plan and Pedri's night, then ask what the numbers say about whether Barça were really beaten.\n\nQuotes and reports come from FC Barcelona's official site, CGTN, Comuniate, ESPN, ESPN Deportes and Sports Illustrated. Data: football-data.org + FotMob.",
+    "tags": [
+      "Barcelona",
+      "Villarreal",
+      "La Liga",
+      "Hansi Flick",
+      "Pedri",
+      "Lamine Yamal",
+      "Frenkie de Jong",
+      "xG",
+      "football analysis",
+      "match analysis",
+      "Iñigo Pérez"
+    ],
+    "scenes": [
       {
-       "word": "Frenkie",
-       "side": "home",
-       "shirts": [
-        21
-       ],
-       "label": "CENTRE-BACK"
+        "id": 1,
+        "beat": "THE QUESTION",
+        "on_screen": "Seven minutes at Camp Nou",
+        "fact_ids": [
+          "stadium",
+          "home_position",
+          "home_won",
+          "home_played_games",
+          "context",
+          "ht_home",
+          "ht_away"
+        ],
+        "shots": [
+          {
+            "text": "Hansi Flick has a problem. Injuries have hit his defence, so Frenkie de Jong, a midfielder, will start at centre-back, with Eric García at right-back.",
+            "visual": {
+              "type": "photo",
+              "photo": "Hans-Dieter Flick",
+              "caption": "Hansi Flick, Barça head coach"
+            }
+          },
+          {
+            "text": "Spotify Camp Nou, Barcelona. Barça lead La Liga after this round, with 12 wins in 13 games, and Flick has promised attacking football. Then, at minute 5, Villarreal score. At minute 7, they score again.",
+            "visual": {
+              "type": "photo",
+              "photo": "Spotify Camp Nou, Barcelona",
+              "caption": "Spotify Camp Nou"
+            }
+          },
+          {
+            "text": "Two goals in 7 minutes. What went wrong at the back, and was Barça already beaten?",
+            "visual": {
+              "type": "key_moments",
+              "moments": [
+                {
+                  "minute": 5,
+                  "text": "Buchanan scores"
+                },
+                {
+                  "minute": 7,
+                  "text": "Tani scores on the break"
+                },
+                {
+                  "minute": 23,
+                  "text": "Yamal penalty hits post"
+                },
+                {
+                  "minute": 45,
+                  "text": "Half-time: 0-2"
+                }
+              ]
+            }
+          }
+        ],
+        "narration": "Hansi Flick has a problem. Injuries have hit his defence, so Frenkie de Jong, a midfielder, will start at centre-back, with Eric García at right-back. Spotify Camp Nou, Barcelona. Barça lead La Liga after this round, with 12 wins in 13 games, and Flick has promised attacking football. Then, at minute 5, Villarreal score. At minute 7, they score again. Two goals in 7 minutes. What went wrong at the back, and was Barça already beaten?",
+        "visual": {
+          "type": "key_moments",
+          "moments": [
+            {
+              "minute": 5,
+              "text": "Buchanan scores"
+            },
+            {
+              "minute": 7,
+              "text": "Tani scores on the break"
+            },
+            {
+              "minute": 23,
+              "text": "Yamal penalty hits post"
+            },
+            {
+              "minute": 45,
+              "text": "Half-time: 0-2"
+            }
+          ]
+        }
       },
       {
-       "word": "Eric",
-       "side": "home",
-       "shirts": [
-        24
-       ],
-       "label": "RIGHT-BACK"
-      }
-     ]
-    }
-   },
-   {
-    "id": 4,
-    "beat": "ACT ONE",
-    "on_screen": "Seven minutes, two goals",
-    "fact_ids": [
-     "shots",
-     "momentum_home_on_top_pct",
-     "ht_home",
-     "ht_away"
-    ],
-    "shots": [
-     {
-      "text": "Minute 5. Fermín López gives the ball away, and Tajon Buchanan scores from distance with his right foot.",
-      "visual": {
-       "type": "goal_replay",
-       "minute": 5,
-       "lost": "own_half",
-       "lost_label": "ball lost in own half, as reported",
-       "source": "FotMob · Sports Illustrated"
-      }
-     },
-     {
-      "text": "Minute 7. A fast break, and Tani Oluwaseyi finishes with his left. Two shots, two goals.",
-      "visual": {
-       "type": "goal_replay",
-       "minute": 7,
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "Early on, it looks like Pérez's plan is working.",
-      "visual": {
-       "type": "events_timeline"
-      }
-     },
-     {
-      "text": "Then the match tilts. FotMob's momentum graph has Barça on top for 77 percent of the first half. Minute 21, Yamal goes down under a challenge from Oluwaseyi. Play goes on, until VAR sends the referee to the monitor. Penalty. Yamal hits the post. Half-time: 0-2.",
-      "visual": {
-       "type": "momentum",
-       "source": "FotMob"
-      }
-     }
-    ],
-    "narration": "Minute 5. Fermín López gives the ball away, and Tajon Buchanan scores from distance with his right foot. Minute 7. A fast break, and Tani Oluwaseyi finishes with his left. Two shots, two goals. Early on, it looks like Pérez's plan is working. Then the match tilts. FotMob's momentum graph has Barça on top for 77 percent of the first half. Minute 21, Yamal goes down under a challenge from Oluwaseyi. Play goes on, until VAR sends the referee to the monitor. Penalty. Yamal hits the post. Half-time: 0-2.",
-    "visual": {
-     "type": "goal_replay",
-     "minute": 7
-    }
-   },
-   {
-    "id": 5,
-    "beat": "THE TURNING POINT",
-    "on_screen": "Minute 57",
-    "fact_ids": [
-     "shots",
-     "diag_own_goals",
-     "ht_home",
-     "score_home",
-     "press"
-    ],
-    "shots": [
-     {
-      "text": "57 minutes of attack have found nothing. Then one corner. Minute 57. Gerard Martín rises, and heads it in.",
-      "visual": {
-       "type": "goal_replay",
-       "minute": 57
-      }
-     },
-     {
-      "text": "Minute 61. Fermín López, left foot, from open play. 2-2. Minute 67, Pau Navarro turns the ball into his own net. 3-2. Three goals in 10 minutes.",
-      "visual": {
-       "type": "key_number",
-       "value": "10 minutes",
-       "label": "three goals, 57' to 67'"
-      }
-     },
-     {
-      "text": "Flick, afterwards: \"In the second half, we looked what we want to do better: better structure, a clear structure.\"",
-      "visual": {
-       "type": "quote_card",
-       "quote": "In the second half, we looked what we want to do better: better structure, a clear structure.",
-       "speaker": "Hansi Flick",
-       "role": "Head coach, FC Barcelona",
-       "outlet": "ESPN"
-      }
-     }
-    ],
-    "narration": "57 minutes of attack have found nothing. Then one corner. Minute 57. Gerard Martín rises, and heads it in. Minute 61. Fermín López, left foot, from open play. 2-2. Minute 67, Pau Navarro turns the ball into his own net. 3-2. Three goals in 10 minutes. Flick, afterwards: \"In the second half, we looked what we want to do better: better structure, a clear structure.\"",
-    "visual": {
-     "type": "goal_replay",
-     "minute": 57
-    }
-   },
-   {
-    "id": 6,
-    "beat": "ACT TWO",
-    "on_screen": "A wall at Camp Nou",
-    "fact_ids": [
-     "best_player_1",
-     "worst_player_1",
-     "home_possession",
-     "home_corners",
-     "away_corners",
-     "player_stats",
-     "press"
-    ],
-    "shots": [
-     {
-      "text": "Pedri is the name the numbers pick out. FotMob rates him 9.0, the highest on the pitch, with 6 chances created. FotMob has no running data for La Liga games, so look at the ball: 107 touches and 10 recoveries, his most in his last 6 games.",
-      "visual": {
-       "type": "text_card",
-       "heading": "Pedri, last 6 games",
-       "lines": [
-        "Rating tonight: 9.0",
-        "107 touches: his most",
-        "10 recoveries: his most"
-       ],
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "And Fermín López, who gave the ball away for the first goal: 4 goals in his last 4 games, one of them tonight, in 68 minutes on the pitch.",
-      "visual": {
-       "type": "photo",
-       "photo": "Fermín López",
-       "caption": "Fermín López, 4 goals in 4 games"
-      }
-     },
-     {
-      "text": "Flick put it simply after the match: \"If we play like this, the opponent gets tired.\" Barça had 70 percent of the ball, and 10 corners to Villarreal's none.",
-      "visual": {
-       "type": "stat_bars",
-       "stats": [
-        "ball_possession",
-        "corner_kicks",
-        "total_shots"
-       ],
-       "source": "FotMob"
-      }
-     }
-    ],
-    "narration": "Pedri is the name the numbers pick out. FotMob rates him 9.0, the highest on the pitch, with 6 chances created. FotMob has no running data for La Liga games, so look at the ball: 107 touches and 10 recoveries, his most in his last 6 games. And Fermín López, who gave the ball away for the first goal: 4 goals in his last 4 games, one of them tonight, in 68 minutes on the pitch. Flick put it simply after the match: \"If we play like this, the opponent gets tired.\" Barça had 70 percent of the ball, and 10 corners to Villarreal's none.",
-    "visual": {
-     "type": "player_ratings"
-    }
-   },
-   {
-    "id": 7,
-    "beat": "WHAT THE NUMBERS REVEAL",
-    "on_screen": "The half that lied",
-    "fact_ids": [
-     "home_xg",
-     "away_xg",
-     "home_best_chance",
-     "diag_home_main_channel",
-     "diag_sim_result",
-     "diag_home_goals_minus_xg",
-     "shots"
-    ],
-    "shots": [
-     {
-      "text": "Expected goals, or xG, is learned from past shots: distance, angle, foot or head. It says how often a chance like it is scored. FotMob supplies the numbers.",
-      "visual": {
-       "type": "xg_explainer",
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "Villarreal's two goals were worth 0.04 and 0.06 xG. Almost nothing. Barça's penalty at minute 23 was worth 0.79, and it hit the post.",
-      "visual": {
-       "type": "diagnosis",
-       "side": "home",
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "Over the night, Barça finish on 3.29 xG to Villarreal's 0.17. 93 percent of it came through the centre, and many of those shots were blocked.",
-      "visual": {
-       "type": "threat_map",
-       "side": "home",
-       "kicker": "WHERE THE DANGER CAME FROM",
-       "title": "Barça's threat, nearly all central",
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "Replay these chances 20,000 times, and Barça win 97 in 100. So the 0-2 half did lie. Barça's chances were not the problem. Luck and finishing were.",
-      "visual": {
-       "type": "result_odds"
-      }
-     }
-    ],
-    "narration": "Expected goals, or xG, is learned from past shots: distance, angle, foot or head. It says how often a chance like it is scored. FotMob supplies the numbers. Villarreal's two goals were worth 0.04 and 0.06 xG. Almost nothing. Barça's penalty at minute 23 was worth 0.79, and it hit the post. Over the night, Barça finish on 3.29 xG to Villarreal's 0.17. 93 percent of it came through the centre, and many of those shots were blocked. Replay these chances 20,000 times, and Barça win 97 in 100. So the 0-2 half did lie. Barça's chances were not the problem. Luck and finishing were.",
-    "visual": {
-     "type": "xg_explainer"
-    }
-   },
-   {
-    "id": 8,
-    "beat": "THE VERDICT",
-    "on_screen": "What they said after",
-    "fact_ids": [
-     "press",
-     "reviews",
-     "shots"
-    ],
-    "shots": [
-     {
-      "text": "Flick, to ESPN: \"We took too long with the ball, made two mistakes and they scored two goals.\"",
-      "visual": {
-       "type": "quote_card",
-       "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
-       "speaker": "Hansi Flick",
-       "role": "Head coach, FC Barcelona",
-       "outlet": "ESPN",
-       "source": "ESPN"
-      }
-     },
-     {
-      "text": "Then the referee. Fermín, already substituted, protested when no penalty was given for a challenge on Anthony Gordon. The referee's report says he sent Fermín off from the bench at minute 74, and Fermín left before the card was shown.",
-      "visual": {
-       "type": "text_card",
-       "heading": "Minute 74",
-       "lines": [
-        "Fermín sent off from the bench",
-        "for protesting",
-        "Barça plan to appeal"
-       ],
-       "source": "Sport · Goal"
-      }
-     },
-     {
-      "text": "Flick: \"We always have this sort of problem with this referee.\" Barça plan to appeal. Archivo VAR, a site that rates referees, gave him 2.5 out of 10, but says the Yamal penalty was correct.",
-      "visual": {
-       "type": "quote_card",
-       "quote": "We always have this sort of problem with this referee",
-       "speaker": "Hansi Flick",
-       "role": "Head coach, FC Barcelona",
-       "outlet": "Barca Universal",
-       "source": "Archivo VAR · Goal"
-      }
-     }
-    ],
-    "narration": "Flick, to ESPN: \"We took too long with the ball, made two mistakes and they scored two goals.\" Then the referee. Fermín, already substituted, protested when no penalty was given for a challenge on Anthony Gordon. The referee's report says he sent Fermín off from the bench at minute 74, and Fermín left before the card was shown. Flick: \"We always have this sort of problem with this referee.\" Barça plan to appeal. Archivo VAR, a site that rates referees, gave him 2.5 out of 10, but says the Yamal penalty was correct.",
-    "visual": {
-     "type": "quote_card",
-     "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
-     "speaker": "Hansi Flick",
-     "role": "Head coach, FC Barcelona",
-     "outlet": "ESPN"
-    }
-   },
-   {
-    "id": 9,
-    "beat": "WHAT IT MEANS",
-    "on_screen": "Unlucky, shaky, still winners",
-    "fact_ids": [
-     "score_home",
-     "score_away",
-     "home_possession",
-     "home_coach",
-     "context",
-     "diag_sim_result"
-    ],
-    "shots": [
-     {
-      "text": "So, was De Jong the weak point? Khel Now says he was caught out of position for the second goal, leaving Eric García to chase Oluwaseyi. Pedri calls him \"extraordinary\".",
-      "visual": {
-       "type": "tactics_board",
-       "team": "home",
-       "steps": [
-        {
-         "word": "De",
-         "side": "home",
-         "shirts": [
-          21
-         ],
-         "kicker": "The weak point?",
-         "label": "De Jong",
-         "camera": "low",
-         "focus": true,
-         "zone": true,
-         "tone": "warn"
-        },
-        {
-         "word": "Eric",
-         "side": "home",
-         "shirts": [
-          21,
-          24
-         ],
-         "kicker": "Second goal",
-         "label": "García left to chase",
-         "camera": "top",
-         "zone": true,
-         "link": true,
-         "tone": "warn"
-        },
-        {
-         "word": "Pedri",
-         "side": "home",
-         "shirts": [
-          21
-         ],
-         "kicker": "Pedri's view",
-         "label": "Extraordinary",
-         "camera": "iso"
+        "id": 2,
+        "beat": "WHAT WAS EXPECTED",
+        "on_screen": "What everyone expected",
+        "fact_ids": [
+          "home_absent_1",
+          "home_absent_2",
+          "home_absent_3",
+          "home_absent_4",
+          "away_absent_1",
+          "home_form_last5",
+          "away_form_last5",
+          "home_form_games",
+          "away_form_games",
+          "press"
+        ],
+        "shots": [
+          {
+            "text": "Before kick-off, the absences. Barça were without Rodri and 3 more injured players. Villarreal had 4 injured, among them Ilias Akhomach.",
+            "visual": {
+              "type": "photo",
+              "photo": "Rodri",
+              "caption": "Rodri, out injured"
+            }
+          },
+          {
+            "text": "Form was mixed. Barça had lost to PSG and Real Madrid, then won 3 in a row. Villarreal had lost 6-0 to PSG, then beaten Getafe 2-0.",
+            "visual": {
+              "type": "form_compare"
+            }
+          },
+          {
+            "text": "Hansi Flick, before the game, on nine matches in 27 days: \"We have a good squad and we need to manage playing time.\"",
+            "visual": {
+              "type": "quote_card",
+              "quote": "We have a good squad and we need to manage playing time.",
+              "speaker": "Hansi Flick",
+              "role": "Head coach, FC Barcelona",
+              "outlet": "FC Barcelona official site"
+            }
+          },
+          {
+            "text": "Íñigo Pérez had a different plan. According to Comuniate, he wanted Villarreal to press high, and said defending deep at Camp Nou would not be comfortable.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Pérez's plan",
+              "lines": [
+                "Press high",
+                "Play away from their own area",
+                "Deep defending: not comfortable"
+              ],
+              "source": "Comuniate"
+            }
+          }
+        ],
+        "narration": "Before kick-off, the absences. Barça were without Rodri and 3 more injured players. Villarreal had 4 injured, among them Ilias Akhomach. Form was mixed. Barça had lost to PSG and Real Madrid, then won 3 in a row. Villarreal had lost 6-0 to PSG, then beaten Getafe 2-0. Hansi Flick, before the game, on nine matches in 27 days: \"We have a good squad and we need to manage playing time.\" Íñigo Pérez had a different plan. According to Comuniate, he wanted Villarreal to press high, and said defending deep at Camp Nou would not be comfortable.",
+        "visual": {
+          "type": "form_compare"
         }
-       ],
-       "source": "Khel Now"
+      },
+      {
+        "id": 3,
+        "beat": "THE CHARACTERS",
+        "on_screen": "A promise and a risk",
+        "fact_ids": [
+          "home_coach",
+          "home_formation",
+          "home_starting_xi",
+          "context"
+        ],
+        "shots": [
+          {
+            "text": "Flick arrived in May 2024 to replace Xavi. At his presentation, reported by CGTN, he promised \"all possession and really attacking football.\"",
+            "visual": {
+              "type": "photo",
+              "photo": "Hans-Dieter Flick",
+              "caption": "Hansi Flick",
+              "source": "CGTN"
+            }
+          },
+          {
+            "text": "Our reading: that promise leans on the back line. Tonight that line has a midfielder at its centre, Frenkie de Jong, with Eric García at right-back. If it cracks, the whole idea is exposed.",
+            "visual": {
+              "type": "tactics_board",
+              "team": "home",
+              "kicker": "THE SHAPE",
+              "title": "Barça's reshaped back four",
+              "steps": [
+                {
+                  "word": "Frenkie",
+                  "side": "home",
+                  "shirts": [
+                    21
+                  ],
+                  "kicker": "At centre-back",
+                  "label": "De Jong",
+                  "camera": "low",
+                  "focus": true,
+                  "zone": true
+                },
+                {
+                  "word": "Eric",
+                  "side": "home",
+                  "shirts": [
+                    24
+                  ],
+                  "kicker": "At right-back",
+                  "label": "Eric García",
+                  "camera": "iso",
+                  "zone": true
+                },
+                {
+                  "word": "cracks",
+                  "side": "home",
+                  "shirts": [
+                    21,
+                    24
+                  ],
+                  "kicker": "If it cracks",
+                  "label": "Idea exposed",
+                  "camera": "top",
+                  "tone": "warn",
+                  "zone": true,
+                  "link": true
+                }
+              ]
+            }
+          },
+          {
+            "text": "Ahead of them, Lamine Yamal, the most valuable starter on the pitch at 221 million euros. He is the one asked to make that risk pay.",
+            "visual": {
+              "type": "photo",
+              "photo": "Lamine Yamal",
+              "caption": "Lamine Yamal"
+            }
+          }
+        ],
+        "narration": "Flick arrived in May 2024 to replace Xavi. At his presentation, reported by CGTN, he promised \"all possession and really attacking football.\" Our reading: that promise leans on the back line. Tonight that line has a midfielder at its centre, Frenkie de Jong, with Eric García at right-back. If it cracks, the whole idea is exposed. Ahead of them, Lamine Yamal, the most valuable starter on the pitch at 221 million euros. He is the one asked to make that risk pay.",
+        "visual": {
+          "type": "tactics_board",
+          "team": "home",
+          "kicker": "THE SHAPE",
+          "title": "Barça's reshaped back four",
+          "steps": [
+            {
+              "word": "Frenkie",
+              "side": "home",
+              "shirts": [
+                21
+              ],
+              "label": "CENTRE-BACK"
+            },
+            {
+              "word": "Eric",
+              "side": "home",
+              "shirts": [
+                24
+              ],
+              "label": "RIGHT-BACK"
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "beat": "ACT ONE",
+        "on_screen": "Seven minutes, two goals",
+        "fact_ids": [
+          "shots",
+          "momentum_home_on_top_pct",
+          "ht_home",
+          "ht_away"
+        ],
+        "shots": [
+          {
+            "text": "Minute 5. Fermín López gives the ball away, and Tajon Buchanan scores from distance with his right foot.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 5,
+              "lost": "own_half",
+              "lost_label": "ball lost in own half, as reported",
+              "source": "FotMob · Sports Illustrated"
+            }
+          },
+          {
+            "text": "Minute 7. A fast break, and Tani Oluwaseyi finishes with his left. Two shots, two goals.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 7,
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "Early on, it looks like Pérez's plan is working.",
+            "visual": {
+              "type": "events_timeline"
+            }
+          },
+          {
+            "text": "Then the match tilts. FotMob's momentum graph has Barça on top for 77 percent of the first half. Minute 21, Yamal goes down under a challenge from Oluwaseyi. Play goes on, until VAR sends the referee to the monitor. Penalty. Yamal hits the post. Half-time: 0-2.",
+            "visual": {
+              "type": "momentum",
+              "source": "FotMob"
+            }
+          }
+        ],
+        "narration": "Minute 5. Fermín López gives the ball away, and Tajon Buchanan scores from distance with his right foot. Minute 7. A fast break, and Tani Oluwaseyi finishes with his left. Two shots, two goals. Early on, it looks like Pérez's plan is working. Then the match tilts. FotMob's momentum graph has Barça on top for 77 percent of the first half. Minute 21, Yamal goes down under a challenge from Oluwaseyi. Play goes on, until VAR sends the referee to the monitor. Penalty. Yamal hits the post. Half-time: 0-2.",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 7
+        }
+      },
+      {
+        "id": 5,
+        "beat": "THE TURNING POINT",
+        "on_screen": "Minute 57",
+        "fact_ids": [
+          "shots",
+          "diag_own_goals",
+          "ht_home",
+          "score_home",
+          "press"
+        ],
+        "shots": [
+          {
+            "text": "57 minutes of attack have found nothing. Then one corner. Minute 57. Gerard Martín rises, and heads it in.",
+            "visual": {
+              "type": "goal_replay",
+              "minute": 57
+            }
+          },
+          {
+            "text": "Minute 61. Fermín López, left foot, from open play. 2-2. Minute 67, Pau Navarro turns the ball into his own net. 3-2. Three goals in 10 minutes.",
+            "visual": {
+              "type": "key_number",
+              "value": "10 minutes",
+              "label": "three goals, 57' to 67'"
+            }
+          },
+          {
+            "text": "Flick, afterwards: \"In the second half, we looked what we want to do better: better structure, a clear structure.\"",
+            "visual": {
+              "type": "quote_card",
+              "quote": "In the second half, we looked what we want to do better: better structure, a clear structure.",
+              "speaker": "Hansi Flick",
+              "role": "Head coach, FC Barcelona",
+              "outlet": "ESPN"
+            }
+          }
+        ],
+        "narration": "57 minutes of attack have found nothing. Then one corner. Minute 57. Gerard Martín rises, and heads it in. Minute 61. Fermín López, left foot, from open play. 2-2. Minute 67, Pau Navarro turns the ball into his own net. 3-2. Three goals in 10 minutes. Flick, afterwards: \"In the second half, we looked what we want to do better: better structure, a clear structure.\"",
+        "visual": {
+          "type": "goal_replay",
+          "minute": 57
+        }
+      },
+      {
+        "id": 6,
+        "beat": "ACT TWO",
+        "on_screen": "A wall at Camp Nou",
+        "fact_ids": [
+          "best_player_1",
+          "worst_player_1",
+          "home_possession",
+          "home_corners",
+          "away_corners",
+          "player_stats",
+          "press"
+        ],
+        "shots": [
+          {
+            "text": "Pedri is the name the numbers pick out. FotMob rates him 9.0, the highest on the pitch, with 6 chances created. FotMob has no running data for La Liga games, so look at the ball: 107 touches and 10 recoveries, his most in his last 6 games.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Pedri, last 6 games",
+              "lines": [
+                "Rating tonight: 9.0",
+                "107 touches: his most",
+                "10 recoveries: his most"
+              ],
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "And Fermín López, who gave the ball away for the first goal: 4 goals in his last 4 games, one of them tonight, in 68 minutes on the pitch.",
+            "visual": {
+              "type": "photo",
+              "photo": "Fermín López",
+              "caption": "Fermín López, 4 goals in 4 games"
+            }
+          },
+          {
+            "text": "Flick put it simply after the match: \"If we play like this, the opponent gets tired.\" Barça had 70 percent of the ball, and 10 corners to Villarreal's none.",
+            "visual": {
+              "type": "stat_bars",
+              "stats": [
+                "ball_possession",
+                "corner_kicks",
+                "total_shots"
+              ],
+              "source": "FotMob"
+            }
+          }
+        ],
+        "narration": "Pedri is the name the numbers pick out. FotMob rates him 9.0, the highest on the pitch, with 6 chances created. FotMob has no running data for La Liga games, so look at the ball: 107 touches and 10 recoveries, his most in his last 6 games. And Fermín López, who gave the ball away for the first goal: 4 goals in his last 4 games, one of them tonight, in 68 minutes on the pitch. Flick put it simply after the match: \"If we play like this, the opponent gets tired.\" Barça had 70 percent of the ball, and 10 corners to Villarreal's none.",
+        "visual": {
+          "type": "player_ratings"
+        }
+      },
+      {
+        "id": 7,
+        "beat": "WHAT THE NUMBERS REVEAL",
+        "on_screen": "The half that lied",
+        "fact_ids": [
+          "home_xg",
+          "away_xg",
+          "home_best_chance",
+          "diag_home_main_channel",
+          "diag_sim_result",
+          "diag_home_goals_minus_xg",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Expected goals, or xG, is learned from past shots: distance, angle, foot or head. It says how often a chance like it is scored. FotMob supplies the numbers.",
+            "visual": {
+              "type": "xg_explainer",
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "Villarreal's two goals were worth 0.04 and 0.06 xG. Almost nothing. Barça's penalty at minute 23 was worth 0.79, and it hit the post.",
+            "visual": {
+              "type": "diagnosis",
+              "side": "home",
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "Over the night, Barça finish on 3.29 xG to Villarreal's 0.17. 93 percent of it came through the centre, and many of those shots were blocked.",
+            "visual": {
+              "type": "threat_map",
+              "side": "home",
+              "kicker": "WHERE THE DANGER CAME FROM",
+              "title": "Barça's threat, nearly all central",
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "Replay these chances 20,000 times, and Barça win 97 in 100. So the 0-2 half did lie. Barça's chances were not the problem. Luck and finishing were.",
+            "visual": {
+              "type": "result_odds"
+            }
+          }
+        ],
+        "narration": "Expected goals, or xG, is learned from past shots: distance, angle, foot or head. It says how often a chance like it is scored. FotMob supplies the numbers. Villarreal's two goals were worth 0.04 and 0.06 xG. Almost nothing. Barça's penalty at minute 23 was worth 0.79, and it hit the post. Over the night, Barça finish on 3.29 xG to Villarreal's 0.17. 93 percent of it came through the centre, and many of those shots were blocked. Replay these chances 20,000 times, and Barça win 97 in 100. So the 0-2 half did lie. Barça's chances were not the problem. Luck and finishing were.",
+        "visual": {
+          "type": "xg_explainer"
+        }
+      },
+      {
+        "id": 8,
+        "beat": "THE VERDICT",
+        "on_screen": "What they said after",
+        "fact_ids": [
+          "press",
+          "reviews",
+          "shots"
+        ],
+        "shots": [
+          {
+            "text": "Flick, to ESPN: \"We took too long with the ball, made two mistakes and they scored two goals.\"",
+            "visual": {
+              "type": "quote_card",
+              "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
+              "speaker": "Hansi Flick",
+              "role": "Head coach, FC Barcelona",
+              "outlet": "ESPN",
+              "source": "ESPN"
+            }
+          },
+          {
+            "text": "Then the referee. Fermín, already substituted, protested when no penalty was given for a challenge on Anthony Gordon. The referee's report says he sent Fermín off from the bench at minute 74, and Fermín left before the card was shown.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Minute 74",
+              "lines": [
+                "Fermín sent off from the bench",
+                "for protesting",
+                "Barça plan to appeal"
+              ],
+              "source": "Sport · Goal"
+            }
+          },
+          {
+            "text": "Flick: \"We always have this sort of problem with this referee.\" Barça plan to appeal. Archivo VAR, a site that rates referees, gave him 2.5 out of 10, but says the Yamal penalty was correct.",
+            "visual": {
+              "type": "quote_card",
+              "quote": "We always have this sort of problem with this referee",
+              "speaker": "Hansi Flick",
+              "role": "Head coach, FC Barcelona",
+              "outlet": "Barca Universal",
+              "source": "Archivo VAR · Goal"
+            }
+          }
+        ],
+        "narration": "Flick, to ESPN: \"We took too long with the ball, made two mistakes and they scored two goals.\" Then the referee. Fermín, already substituted, protested when no penalty was given for a challenge on Anthony Gordon. The referee's report says he sent Fermín off from the bench at minute 74, and Fermín left before the card was shown. Flick: \"We always have this sort of problem with this referee.\" Barça plan to appeal. Archivo VAR, a site that rates referees, gave him 2.5 out of 10, but says the Yamal penalty was correct.",
+        "visual": {
+          "type": "quote_card",
+          "quote": "We took too long with the ball, made two mistakes and they scored two goals.",
+          "speaker": "Hansi Flick",
+          "role": "Head coach, FC Barcelona",
+          "outlet": "ESPN"
+        }
+      },
+      {
+        "id": 9,
+        "beat": "WHAT IT MEANS",
+        "on_screen": "Unlucky, shaky, still winners",
+        "fact_ids": [
+          "score_home",
+          "score_away",
+          "home_possession",
+          "home_coach",
+          "context",
+          "diag_sim_result"
+        ],
+        "shots": [
+          {
+            "text": "So, was De Jong the weak point? Khel Now says he was caught out of position for the second goal, leaving Eric García to chase Oluwaseyi. Pedri calls him \"extraordinary\".",
+            "visual": {
+              "type": "tactics_board",
+              "team": "home",
+              "steps": [
+                {
+                  "word": "De",
+                  "side": "home",
+                  "shirts": [
+                    21
+                  ],
+                  "kicker": "The weak point?",
+                  "label": "De Jong",
+                  "camera": "low",
+                  "focus": true,
+                  "zone": true,
+                  "tone": "warn"
+                },
+                {
+                  "word": "Eric",
+                  "side": "home",
+                  "shirts": [
+                    21,
+                    24
+                  ],
+                  "kicker": "Second goal",
+                  "label": "García left to chase",
+                  "camera": "top",
+                  "zone": true,
+                  "link": true,
+                  "tone": "warn"
+                },
+                {
+                  "word": "Pedri",
+                  "side": "home",
+                  "shirts": [
+                    21
+                  ],
+                  "kicker": "Pedri's view",
+                  "label": "Extraordinary",
+                  "camera": "iso"
+                }
+              ],
+              "source": "Khel Now"
+            }
+          },
+          {
+            "text": "FotMob's numbers lean his way: 104 of 110 passes, 7 recoveries, 3 of 3 ground duels won, never dribbled past. They cannot show where he stood when that pass was played.",
+            "visual": {
+              "type": "text_card",
+              "heading": "De Jong at centre-back",
+              "lines": [
+                "Passes: 104 of 110",
+                "Recoveries: 7",
+                "Ground duels: 3 of 3",
+                "Dribbled past: 0"
+              ],
+              "source": "FotMob"
+            }
+          },
+          {
+            "text": "Barça were unlucky at one end, shaky at the other, and still won 3-2.",
+            "visual": {
+              "type": "scoreline"
+            }
+          },
+          {
+            "text": "Two questions for you. Was De Jong at centre-back a risk worth taking? And was Fermín's red card fair? Tell us in the comments, and subscribe for the next match.",
+            "visual": {
+              "type": "text_card",
+              "heading": "Your turn",
+              "lines": [
+                "De Jong at centre-back?",
+                "Fermín's red card?",
+                "Tell us below"
+              ]
+            }
+          }
+        ],
+        "narration": "So, was De Jong the weak point? Khel Now says he was caught out of position for the second goal, leaving Eric García to chase Oluwaseyi. Pedri calls him \"extraordinary\". FotMob's numbers lean his way: 104 of 110 passes, 7 recoveries, 3 of 3 ground duels won, never dribbled past. They cannot show where he stood when that pass was played. Barça were unlucky at one end, shaky at the other, and still won 3-2. Two questions for you. Was De Jong at centre-back a risk worth taking? And was Fermín's red card fair? Tell us in the comments, and subscribe for the next match.",
+        "visual": {
+          "type": "scoreline"
+        },
+        "title": "De Jong, and still winners"
       }
-     },
-     {
-      "text": "FotMob's numbers lean his way: 104 of 110 passes, 7 recoveries, 3 of 3 ground duels won, never dribbled past. They cannot show where he stood when that pass was played.",
-      "visual": {
-       "type": "text_card",
-       "heading": "De Jong at centre-back",
-       "lines": [
-        "Passes: 104 of 110",
-        "Recoveries: 7",
-        "Ground duels: 3 of 3",
-        "Dribbled past: 0"
-       ],
-       "source": "FotMob"
-      }
-     },
-     {
-      "text": "Barça were unlucky at one end, shaky at the other, and still won 3-2.",
-      "visual": {
-       "type": "scoreline"
-      }
-     },
-     {
-      "text": "Two questions for you. Was De Jong at centre-back a risk worth taking? And was Fermín's red card fair? Tell us in the comments, and subscribe for the next match.",
-      "visual": {
-       "type": "text_card",
-       "heading": "Your turn",
-       "lines": [
-        "De Jong at centre-back?",
-        "Fermín's red card?",
-        "Tell us below"
-       ]
-      }
-     }
-    ],
-    "narration": "So, was De Jong the weak point? Khel Now says he was caught out of position for the second goal, leaving Eric García to chase Oluwaseyi. Pedri calls him \"extraordinary\". FotMob's numbers lean his way: 104 of 110 passes, 7 recoveries, 3 of 3 ground duels won, never dribbled past. They cannot show where he stood when that pass was played. Barça were unlucky at one end, shaky at the other, and still won 3-2. Two questions for you. Was De Jong at centre-back a risk worth taking? And was Fermín's red card fair? Tell us in the comments, and subscribe for the next match.",
-    "visual": {
-     "type": "scoreline"
-    },
-    "title": "De Jong, and still winners"
-   }
-  ]
- },
- "report": {
-  "ok": true,
-  "problems": []
- },
- "saved_script": "2026-11-22T19:14:03Z",
- "shorts": [
-  {
-   "id": 1,
-   "format": "player_spotlight",
-   "title": "Pedri's 9.0: the midfielder who ran Camp Nou",
-   "hook": "Pedri: a 9.0 night",
-   "shots": [
-    {
-     "text": "Pedri finished with a 9.0 rating, the highest of anyone on the pitch.",
-     "visual": {
-      "type": "photo",
-      "photo": "Pedri",
-      "caption": "Pedri, Barça midfielder"
-     }
-    },
-    {
-     "text": "He created 6 chances, gave 1 assist and completed 81 of 92 passes.",
-     "visual": {
-      "type": "stat_bars"
-     }
-    },
-    {
-     "text": "15 of those passes went into the final third. He also won 7 of his 8 duels.",
-     "visual": {
-      "type": "player_ratings"
-     }
-    },
-    {
-     "text": "He had 107 touches and 10 recoveries, his most in his last 6 games.",
-     "visual": {
-      "type": "key_number",
-      "value": "107",
-      "label": "touches, his most in 6 games"
-     }
-    },
-    {
-     "text": "The numbers cannot show how he moved without the ball. Does a 9.0 sound fair to you? Full story on the channel.",
-     "visual": {
-      "type": "key_number"
-     }
-    }
-   ],
-   "fact_ids": [
-    "best_player_1",
-    "home_possession",
-    "player_of_the_match"
-   ],
-   "narration": "Pedri finished with a 9.0 rating, the highest of anyone on the pitch. He created 6 chances, gave 1 assist and completed 81 of 92 passes. 15 of those passes went into the final third. He also won 7 of his 8 duels. He had 107 touches and 10 recoveries, his most in his last 6 games. The numbers cannot show how he moved without the ball. Does a 9.0 sound fair to you? Full story on the channel.",
-   "visual": {
-    "type": "stat_bars"
-   }
+    ]
   },
-  {
-   "id": 2,
-   "format": "turning_point",
-   "title": "10 corners to 0: how Barça cracked Villarreal",
-   "hook": "10 corners to 0",
-   "shots": [
+  "report": {
+    "ok": true,
+    "problems": []
+  },
+  "saved_script": "2026-11-22T19:14:03Z",
+  "shorts": [
     {
-     "text": "Barça won 10 corners. Villarreal won none.",
-     "visual": {
-      "type": "key_number"
-     }
+      "id": 1,
+      "format": "player_spotlight",
+      "title": "Pedri's 9.0: the midfielder who ran Camp Nou",
+      "hook": "Pedri: a 9.0 night",
+      "shots": [
+        {
+          "text": "Pedri finished with a 9.0 rating, the highest of anyone on the pitch.",
+          "visual": {
+            "type": "photo",
+            "photo": "Pedri",
+            "caption": "Pedri, Barça midfielder"
+          }
+        },
+        {
+          "text": "He created 6 chances, gave 1 assist and completed 81 of 92 passes.",
+          "visual": {
+            "type": "stat_bars"
+          }
+        },
+        {
+          "text": "15 of those passes went into the final third. He also won 7 of his 8 duels.",
+          "visual": {
+            "type": "player_ratings"
+          }
+        },
+        {
+          "text": "He had 107 touches and 10 recoveries, his most in his last 6 games.",
+          "visual": {
+            "type": "key_number",
+            "value": "107",
+            "label": "touches, his most in 6 games"
+          }
+        },
+        {
+          "text": "The numbers cannot show how he moved without the ball. Does a 9.0 sound fair to you? Full story on the channel.",
+          "visual": {
+            "type": "key_number"
+          }
+        }
+      ],
+      "fact_ids": [
+        "best_player_1",
+        "home_possession",
+        "player_of_the_match"
+      ],
+      "narration": "Pedri finished with a 9.0 rating, the highest of anyone on the pitch. He created 6 chances, gave 1 assist and completed 81 of 92 passes. 15 of those passes went into the final third. He also won 7 of his 8 duels. He had 107 touches and 10 recoveries, his most in his last 6 games. The numbers cannot show how he moved without the ball. Does a 9.0 sound fair to you? Full story on the channel.",
+      "visual": {
+        "type": "stat_bars"
+      }
     },
     {
-     "text": "Villarreal's coach wanted a high press. With 30% of the ball, they ended up defending their own box.",
-     "visual": {
-      "type": "shot_map"
-     }
-    },
-    {
-     "text": "At minute 53, a corner gave Marc Bernal a header, and it went wide. At minute 57, another corner gave Gerard Martín a header, and it went in.",
-     "visual": {
-      "type": "goal_replay",
-      "minute": 57
-     }
-    },
-    {
-     "text": "Four minutes later, Fermín López scored too. The wall had a crack, and Barça kept pushing on it.",
-     "visual": {
-      "type": "momentum"
-     }
-    },
-    {
-     "text": "One caution: 0.79 of the 1.65 set-piece xG was the penalty Yamal hit against the post. So dead balls opened the door, and volume finished the job. Was it the corners or the pressure that won it? Full story on the channel.",
-     "visual": {
-      "type": "diagnosis",
-      "source": "FotMob"
-     }
+      "id": 2,
+      "format": "turning_point",
+      "title": "10 corners to 0: how Barça cracked Villarreal",
+      "hook": "10 corners to 0",
+      "shots": [
+        {
+          "text": "Barça won 10 corners. Villarreal won none.",
+          "visual": {
+            "type": "key_number"
+          }
+        },
+        {
+          "text": "Villarreal's coach wanted a high press. With 30% of the ball, they ended up defending their own box.",
+          "visual": {
+            "type": "shot_map"
+          }
+        },
+        {
+          "text": "At minute 53, a corner gave Marc Bernal a header, and it went wide. At minute 57, another corner gave Gerard Martín a header, and it went in.",
+          "visual": {
+            "type": "goal_replay",
+            "minute": 57
+          }
+        },
+        {
+          "text": "Four minutes later, Fermín López scored too. The wall had a crack, and Barça kept pushing on it.",
+          "visual": {
+            "type": "momentum"
+          }
+        },
+        {
+          "text": "One caution: 0.79 of the 1.65 set-piece xG was the penalty Yamal hit against the post. So dead balls opened the door, and volume finished the job. Was it the corners or the pressure that won it? Full story on the channel.",
+          "visual": {
+            "type": "diagnosis",
+            "source": "FotMob"
+          }
+        }
+      ],
+      "fact_ids": [
+        "home_corners",
+        "away_corners",
+        "away_possession",
+        "diag_home_setpiece_xg",
+        "home_best_chance",
+        "diag_sim_result"
+      ],
+      "narration": "Barça won 10 corners. Villarreal won none. Villarreal's coach wanted a high press. With 30% of the ball, they ended up defending their own box. At minute 53, a corner gave Marc Bernal a header, and it went wide. At minute 57, another corner gave Gerard Martín a header, and it went in. Four minutes later, Fermín López scored too. The wall had a crack, and Barça kept pushing on it. One caution: 0.79 of the 1.65 set-piece xG was the penalty Yamal hit against the post. So dead balls opened the door, and volume finished the job. Was it the corners or the pressure that won it? Full story on the channel.",
+      "visual": {
+        "type": "key_number"
+      }
     }
-   ],
-   "fact_ids": [
-    "home_corners",
-    "away_corners",
-    "away_possession",
-    "diag_home_setpiece_xg",
-    "home_best_chance",
-    "diag_sim_result"
-   ],
-   "narration": "Barça won 10 corners. Villarreal won none. Villarreal's coach wanted a high press. With 30% of the ball, they ended up defending their own box. At minute 53, a corner gave Marc Bernal a header, and it went wide. At minute 57, another corner gave Gerard Martín a header, and it went in. Four minutes later, Fermín López scored too. The wall had a crack, and Barça kept pushing on it. One caution: 0.79 of the 1.65 set-piece xG was the penalty Yamal hit against the post. So dead balls opened the door, and volume finished the job. Was it the corners or the pressure that won it? Full story on the channel.",
-   "visual": {
-    "type": "key_number"
-   }
-  }
- ],
- "edited": false
+  ],
+  "edited": false
 }
