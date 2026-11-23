@@ -238,9 +238,10 @@ def _pick_person(person: dict) -> dict | None:
     import time
     name = person["name"]
     last = name.split()[-1].lower()
+    team_name = (person.get("team") or "").strip()
     queries = ([f'"{name}" press conference', f'"{name}" coach', f'"{name}"']
                if "coach" in (person.get("role") or "").lower()
-               else [f'"{name}" football', f'"{name}"'])
+               else ([f'"{name}" {team_name}'] if team_name else []) + [f'"{name}" football', f'"{name}"'])
     cands, seen = [], set()
     import unicodedata
 
@@ -280,10 +281,35 @@ def _pick_person(person: dict) -> dict | None:
         t = " " + plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " ")) + " "
         return any(w in t for w in FOOTBALL) or any(w in t for w in team_words)
 
+    GENERIC = {"fc", "cf", "sc", "ac", "afc", "club", "de", "the", "munchen", "munich", "cd", "ud", "rc", "sv"}
+    tw = [w for w in plain(team_name).replace("-", " ").split() if w not in GENERIC and len(w) > 2]
+    PRESS = ("press conference", "pressekonferenz", "rueda de prensa", "conference de presse", "conferencia",
+             "interview")
+    NOT_NOW = ("youth", "juvenil", "cantera", "academy", "akademie",
+               "u15", "u16", "u17", "u18", "u19", "u20", "u21", "u23", "u-17", "u-19", "u-21", "u-23", "junior",
+               "jugend", "child", "kid", "young", "award", "gala", "ceremony", "event", "visit", "portrait session")
+
+    def current_team_photo(c) -> bool:
+        """A player is shown only as he is now: in his current team's colours or at a recent press
+        conference, never in an old photo or from his youth days."""
+        t = " " + plain((c.get("title") or "") + " " + (c.get("page") or "").replace("_", " ")
+                        + " " + (c.get("description") or "")) + " "
+        if any(w in t for w in NOT_NOW):
+            return False
+        from datetime import date
+        y = _year(c.get("title", "")) or _year(c.get("description", ""))
+        if y and y < date.today().year - 2:
+            return False
+        if any(w in t for w in PRESS):
+            return bool(y)                       # a press conference only when dated and recent
+        if not tw:
+            return bool(y)                       # no team known: only a dated, recent photo
+        return all(w in t for w in tw)           # his current team named in the photo
+
     def add(c):
         if is_coach and c and not as_coach(c):
             return
-        if not is_coach and c and c.get("via") != "Wikidata portrait" and not football_photo(c):
+        if not is_coach and c and not current_team_photo(c):
             return
         if c and c.get("url") and c["url"] not in seen and right_person(c):
             seen.add(c["url"]); cands.append(c)

@@ -905,11 +905,25 @@ export const findPhoto = (props, visual) => {
   return list[visual.photo_index || 0];
 };
 
+// No photo passed the rules (current team, recent): show the name as a card rather than an old picture.
+const NoPhoto = ({ visual }) => {
+  const f = useCurrentFrame();
+  const p = spring({ frame: f - 2, fps: 30, config: { damping: 16 } });
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: p }}>
+      <div style={{ fontFamily: HEAD, fontSize: 110, color: "#fff", lineHeight: 1, textAlign: "center",
+                    transform: `translateY(${(1 - p) * 30}px)` }}>{visual.photo}</div>
+      {visual.caption ? <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 40, color: C.accent, marginTop: 18 }}>
+        {visual.caption}</div> : null}
+    </AbsoluteFill>
+  );
+};
+
 // Full-screen photo with a slow move, for shots where the words are about a person or a place.
 export const FullPhoto = ({ visual, props, dur }) => {
   const f = useCurrentFrame();
   const ph = findPhoto(props, visual);
-  if (!ph) return null;
+  if (!ph) return visual.photo ? <NoPhoto visual={visual} /> : null;
   const zoom = interpolate(f, [0, Math.max(dur, 30)], [1.04, 1.14]);
   const pan = interpolate(f, [0, Math.max(dur, 30)], [-1.5, 1.5]);
   const lab = spring({ frame: f - 6, fps: 30, config: { damping: 16 } });
@@ -938,7 +952,7 @@ export const FullPhoto = ({ visual, props, dur }) => {
 const PhotoCard = ({ visual, props, scene }) => {
   const f = useCurrentFrame();
   const ph = findPhoto(props, visual);
-  if (!ph) return null;
+  if (!ph) return visual.photo ? <NoPhoto visual={visual} /> : null;
   const p = spring({ frame: f - 2, fps: 30, config: { damping: 16 } });
   const zoom = interpolate(f, [0, scene.durationInFrames], [1.0, 1.08]);   // slow Ken Burns
   return (
