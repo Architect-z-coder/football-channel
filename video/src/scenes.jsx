@@ -2,6 +2,7 @@ import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, us
 import { C, HEAD, BODY, parseNum, fmt } from "./theme";
 import { PressCut } from "./Newspaper";
 import { TacticsBoard } from "./TacticsBoard";
+import { Replay3D } from "./Replay3D";
 import { ThreatMap } from "./ThreatMap";
 import { XgExplainer, DiagnosisFunnel, ResultOdds } from "./Diagnosis";
 
@@ -985,7 +986,7 @@ const MAP = {
   diagnosis: DiagnosisFunnel,
   result_odds: ResultOdds,
   press_cut: PressCut,
-  goal_replay: GoalReplay,
+  goal_replay: Replay3D, goal_replay_2d: GoalReplay,
   key_moments: KeyMoments,
   photo: PhotoCard,
   lineups: Lineups,

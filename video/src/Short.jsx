@@ -89,6 +89,11 @@ export const Short = (props) => {
                   </div>
                 </div>
               )}
+              {sh.visual.source ? (
+                <div style={{ position: "absolute", left: 60, top: BOX_TOP + BOX_H + 14, fontFamily: BODY, fontSize: 28,
+                              fontWeight: 700, color: "rgba(255,255,255,0.75)", background: "rgba(0,0,0,0.45)",
+                              padding: "6px 14px", borderRadius: 8 }}>Source: {sh.visual.source}</div>
+              ) : null}
             </VShot>
           </Sequence>
         );

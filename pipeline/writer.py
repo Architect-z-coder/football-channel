@@ -86,12 +86,18 @@ Allowed visual types (use only these; the renderer supports nothing else):
                                                    With "player": only that player's shots (where HE was
                                                    dangerous). We have no heat maps or positions: never
                                                    call it a heat map or say where a player was.
-- {"type": "goal_replay", "minute": int}        -> animated replay of one goal on a 2D pitch: where the
-                                                   shot came from, where it went in, scorer, assist, xG.
-                                                   "minute" = the goal's minute exactly as in the pack
-                                                   (the shot with result "Goal" at that minute). Only if
-                                                   the pack has a "shots" list. Never for an own goal
-                                                   (there is no shot to replay); use key_moments instead.
+- {"type": "goal_replay", "minute": int, "player": str, "lost": "own_half"|"midfield"|"final_third",
+   "lost_label": str}                           -> MOVING 3D replay of one goal or big chance: the ball
+                                                   travels (from the corner flag on a corner, the assist
+                                                   pass, or the scorer's run on a fast break) to the REAL
+                                                   shot spot, then into the goal; the type of play, scorer,
+                                                   assist, body part and xG appear on the left. "minute" =
+                                                   the shot's minute as in the pack; "player" when two shots
+                                                   share a minute. "lost" ONLY when a report in the pack says
+                                                   where the ball was lost before the goal (e.g. "deep in
+                                                   his own half"): that area glows orange, and lost_label
+                                                   says it is as reported. Use it on every goal shot and on
+                                                   the turning-point chance. Never for an own goal.
 - {"type": "key_moments", "moments": [{"minute": int, "text": str}, ...]}
                                                 -> 4-6 key moments on an animated timeline (goals, red
                                                    cards, big misses, substitutions), text 2-6 words each,
@@ -190,8 +196,8 @@ HARD RULES
      We have NO position or heat-map data: never claim where a player stood. Say what supports the
      reading, and say plainly when the data cannot tell.
    Use visuals xg_explainer, diagnosis and result_odds here.
-5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "FotMob's
-   numbers", or just state the fact. If something is unknown, say "it is not clear from the data".
+5c. Never say "the pack", "the data pack" or "the facts" to the viewer: say "the match data", "the
+   numbers", or just state the fact (the source goes on screen, 5h). If something is unknown, say "it is not clear from the data".
 5d. Explain a term (xG) BEFORE you first use it, in one short sentence.
 5e. Use these pictures when the pack allows: two or three "tactics_board" shots (needs line-ups):
    the plan or shape early on, the goal or the key chance (arrow to the real shot spot), and the
@@ -204,6 +210,10 @@ HARD RULES
    the player with himself across those games, and say minutes played (fewer minutes = less distance).
    A striker runs less than a midfielder by role: never call anyone lazy or say he "did not try". Say
    what changed and leave the judgement as a question.
+5h. Sources are SHOWN, never spoken. Do not say "FotMob", "according to <outlet>", "<outlet> says" or
+   "<outlet> writes" in the narration. Put the source name in the shot's visual as "source" (e.g.
+   "source": "FotMob" for numbers, "source": "Khel Now" for a report); it appears on screen. Say
+   "the numbers", "one report", "a Spanish newspaper" instead. People keep their names: Flick said...
 5f. League table: home_position / away_position are the places AFTER this match only. Never say a team
    "stays", "climbs", "drops" or "moves": the pack has no earlier table. Say "City are third".
 6. Exactly 9 scenes, 40-110 words of narration each. "on_screen" is a
@@ -214,7 +224,7 @@ HARD RULES
    Tactical readings (a player's role, a coach's plan) are welcome but must be marked as our reading and
    rest on a pack number or a quoted source: "his 4 key passes suggest he was the outlet", never "he is
    the player they need" as bare fact. Say "expected goals, or xG" the first time and explain
-   it in one short sentence. Credit the data source named in the pack's "source" once in the narration.
+   it in one short sentence. Credit the data source on screen ("source" in the visual), not in the narration (5h).
 10. Players and press: the pack may hold FotMob ratings (best_player_*, worst_player_*) and
    "press": what coaches and players said after the match, each with its source. Name the best and
    the lowest-rated starters and explain WITH THE DATA why (shots, chances, duels...), never as

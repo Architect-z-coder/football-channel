@@ -8,6 +8,15 @@ import { Crowd, CrowdSinging } from "./Crowd";
 import { Headline } from "./Newspaper";
 import { SceneVisual, FullPhoto, findPhoto } from "./scenes";
 
+// 3D boards and replays use the whole frame
+const FULL = new Set(["tactics_board", "goal_replay"]);
+// Where the numbers or the report come from: shown, never spoken
+const SourceTag = ({ text }) => (
+  <div style={{ position: "absolute", left: 60, bottom: 236, fontFamily: BODY, fontSize: 22, fontWeight: 700,
+                color: "rgba(255,255,255,0.75)", background: "rgba(0,0,0,0.45)", padding: "6px 14px", borderRadius: 8,
+                letterSpacing: 1 }}>Source: {text}</div>
+);
+
 const TAIL = 12; // frames of silence at the end of each scene (matches Python PAD)
 
 // ---------- background: slow-moving light and faint pitch markings ----------
@@ -163,9 +172,11 @@ const SceneShell = ({ scene, props }) => {
               {isPhoto ? <FullPhoto visual={sh.visual} props={props} dur={len} /> : (
                 <AbsoluteFill>
                   <Backdrop props={props} sceneId={scene.id} />
-                  <div style={{ position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
+                  <div style={FULL.has(sh.visual.type) ? { position: "absolute", top: 110, bottom: 0, left: 0, right: 0 }
+                                                       : { position: "absolute", top: 160, bottom: 230, left: 0, right: 0 }}>
                     <SceneVisual scene={{ ...scene, visual: sh.visual, durationInFrames: len }} props={props} />
                   </div>
+                  {sh.visual.source ? <SourceTag text={sh.visual.source} /> : null}
                 </AbsoluteFill>
               )}
             </ShotFade>
