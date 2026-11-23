@@ -67,7 +67,7 @@ shorts:              # vertical clips made from each match video, uploaded as pr
 
 voice:
   model_id: "eleven_multilingual_v2"
-  everygen_voice: astro  # channel voice (British storyteller), made by the producer task through Everygen
+  everygen_voice: brian  # channel voice (smooth, authoritative), made by the producer task through Everygen
   backup:            # free Microsoft Edge neural voice, used when ElevenLabs credits run out
     voice: en-US-AndrewMultilingualNeural   # most natural free voice; alternatives: en-GB-RyanNeural
     rate: "-4%"
@@ -105,3 +105,4 @@ music:
     # match themes: made for one match (Bavarian brass + terrace rhythm + Cologne carnival), used by its video and Shorts
     - {name: bayern_koln_2026_11_20, kind: main, fixture: "fotmob-5881226", url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/16c25f3e-ea20-48fe-89b8-d6b0bed3857f.mp3"}
     - {name: city_fulham_2026_11_21, kind: main, fixture: "fotmob-5795522", url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/b256fa58-eb2e-49b8-88ef-48a741f884e5.mp3"}
+    - {name: barca_villarreal_2026_11_22, kind: main, fixture: "564749", url: "https://media.viewmax.io/users/7RRunw8K5Hq1WuIqMTzGxHdTQZ5z8lPX/lyria/492ed741-693d-472a-a2eb-cf0952fc15cd.mp3"}
