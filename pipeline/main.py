@@ -323,8 +323,21 @@ def run(dry_run: bool, upload: bool, pick: str | None = None, prepare: bool = Fa
             credits.append(f"Photo of {ph['name']}: {ph['author']}, {ph['licence']}, via {ph.get('via', 'Wikimedia Commons')} ({ph['page']})")
     for q in pack.get("press") or []:
         credits.append(f"{q['speaker']} quote: {q.get('source') or ''} {q['url']}".strip())
+    # chapters (YouTube needs 0:00 first, 3+ chapters, each 10 s or more)
+    t, chap = 0.0, []
+    for sc, d in zip(script["scenes"], durs):
+        if not chap or t - chap[-1][0] >= 10:
+            chap.append((t, sc.get("title") or f"Part {sc['id']}"))
+        t += d
+    if len(chap) >= 3:
+        script["description"] = script["description"].rstrip() + "\n\nChapters:\n" + "\n".join(
+            f"{int(a // 60)}:{int(a % 60):02d} {title}" for a, title in chap)
+    credits.append("Music, crowd sounds and narration: original, made for this channel.")
     if credits:
         script["description"] = script["description"].rstrip() + "\n\nSources and credits:\n" + "\n".join(credits)
+    tags_h = " ".join("#" + "".join(w.title() for w in x.split()) for x in
+                      [pack.get("home", ""), pack.get("away", ""), pack.get("competition", "")] if x)
+    script["description"] = script["description"].rstrip() + f"\n\n{tags_h} #FootballAnalysis #xG"
     made_shorts = (shorts.make(cfg, pack, script, workdir, placeholder=dry_run and not secret("ELEVENLABS_API_KEY"),
                                preset=None if os.environ.get("NEW_SCRIPT") else cached.get("shorts"))
                    if secret("ANTHROPIC_API_KEY") else [])
