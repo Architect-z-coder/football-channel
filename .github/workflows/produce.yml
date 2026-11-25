@@ -7,7 +7,7 @@ on:
         description: "list = show matches to choose from, data-only = show one match's data, full = make + upload as private, no-upload = make files only, dry-run = sample match"
         default: "list"
         type: choice
-        options: [list, data-only, prepare, full, no-upload, dry-run]
+        options: [list, data-only, prepare, full, no-upload, dry-run, yt-check]
       match:
         description: "Which match? Team names (e.g. Arsenal Chelsea) or the match number from the list. Empty = next in data/queue.txt"
         default: ""
@@ -50,7 +50,7 @@ jobs:
               mode, match, days, rid = os.environ["IN_MODE"], os.environ["IN_MATCH"], os.environ["IN_DAYS"], ""
           else:
               mode, match, days, rid = "full", "", "", ""
-          if mode not in ("list", "data-only", "prepare", "full", "no-upload", "dry-run"):
+          if mode not in ("list", "data-only", "prepare", "full", "no-upload", "dry-run", "yt-check"):
               mode = "list"
           clean = lambda v: " ".join(str(v or "").split())[:80]
           days = clean(days) if clean(days).isdigit() else ""
@@ -111,7 +111,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           REMOTION_CONCURRENCY: "4"
         run: |
-          if [ "$MODE" = "list" ]; then python -m pipeline.main --list
+          if [ "$MODE" = "yt-check" ]; then python -m pipeline.publish check
+          elif [ "$MODE" = "list" ]; then python -m pipeline.main --list
           elif [ "$MODE" = "data-only" ]; then python -m pipeline.main --data-only --pick "$MATCH"
           elif [ "$MODE" = "prepare" ]; then python -m pipeline.main --prepare --pick "$MATCH"
           elif [ "$MODE" = "dry-run" ]; then python -m pipeline.main --dry-run

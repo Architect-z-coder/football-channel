@@ -86,3 +86,22 @@ def upload_short(cfg: dict, short: dict, video: Path, main_video_id: str | None)
         _, resp = req.next_chunk()
     log.info("Short uploaded as private: %s", resp["id"])
     return resp["id"]
+
+
+def check() -> str:
+    """Prove the YouTube keys work without uploading anything: read the channel's own name."""
+    yt = _youtube()
+    r = yt.channels().list(part="snippet,statistics", mine=True).execute()
+    items = r.get("items") or []
+    if not items:
+        raise RuntimeError("The keys work but no YouTube channel is attached to that Google account")
+    ch = items[0]
+    msg = f"YouTube keys OK: channel '{ch['snippet']['title']}' ({ch['statistics'].get('videoCount', '?')} videos)"
+    log.info(msg)
+    return msg
+
+
+if __name__ == "__main__":
+    import sys
+    if sys.argv[1:] == ["check"]:
+        check()
