@@ -1,6 +1,6 @@
 {
-  "id": "bay-kol-upload-1",
-  "mode": "full",
-  "match": "fotmob:5881226",
-  "look_back_days": "14"
+  "id": "yt-check-3",
+  "mode": "yt-check",
+  "match": "",
+  "look_back_days": ""
 }
