@@ -75,7 +75,7 @@ voice:
     fallback_voice: en-GB-RyanNeural
 
 youtube:
-  upload_ready: false   # set true once the YT_* secrets are in GitHub; until then the producer makes files only
+  upload_ready: true    # YT_* secrets checked 25 Nov 2026: uploads go up as PRIVATE, you publish
   category_id: "17"        # Sports
   privacy: "private"       # always private: you approve before publishing
   made_for_kids: false
